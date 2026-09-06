@@ -20,18 +20,11 @@
     width: 100%;
     background-color: rgba(15, 23, 42, 0.9);
     border-bottom: 1px solid #1e293b;
-    padding: 12px 20px;
+    padding: 6px 16px;
     box-sizing: border-box;
   }
-  .top-left {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .top-right {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-  }
+  .top-left { display: table-cell; vertical-align: middle; }
+  .top-right { display: table-cell; vertical-align: middle; text-align: right; }
   .dot {
     display: inline-block;
     width: 9px;
@@ -42,79 +35,60 @@
     margin-right: 8px;
     vertical-align: middle;
   }
-  .top-titulo {
-    font-size: 16px;
-    font-weight: 700;
-    color: #f8fafc;
-    vertical-align: middle;
-  }
-  .top-sub {
-    font-size: 12px;
-    color: #64748b;
-    margin-top: 2px;
-  }
-  .actualizado {
-    font-size: 12px;
-    color: #94a3b8;
-  }
-  .wrap {
-    padding: 16px;
-  }
+  .top-titulo { font-size: 14px; font-weight: 700; color: #f8fafc; vertical-align: middle; }
+  .top-sub { font-size: 10px; color: #64748b; }
+  .actualizado { font-size: 11px; color: #94a3b8; }
+  .wrap { padding: 8px; }
   .grid {
     display: table;
     width: 100%;
     table-layout: fixed;
     border-collapse: separate;
-    border-spacing: 12px;
-    margin: -12px;
+    border-spacing: 8px;
+    margin: -8px;
   }
-  .fila {
-    display: table-row;
-  }
+  .fila { display: table-row; }
   .card {
     display: table-cell;
     background-color: rgba(15, 23, 42, 0.7);
     border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 16px;
+    border-radius: 14px;
+    padding: 10px;
     vertical-align: top;
     width: 25%;
   }
-  .card-head {
-    display: table;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .card-icon {
-    display: table-cell;
-    width: 32px;
-    font-size: 20px;
-    vertical-align: middle;
-  }
+  .card-head { display: table; width: 100%; margin-bottom: 4px; }
+  .card-icon { display: table-cell; width: 24px; font-size: 15px; vertical-align: middle; }
   .card-label {
     display: table-cell;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #94a3b8;
     vertical-align: middle;
   }
-  .card-valor {
-    font-size: 30px;
-    font-weight: 800;
-    white-space: nowrap;
+  .card-valor { font-size: 22px; font-weight: 800; white-space: nowrap; }
+  .card-unidad { font-size: 12px; color: #64748b; margin-left: 3px; font-weight: 600; }
+  .stats {
+    display: table;
+    width: 100%;
+    margin-top: 4px;
+    border-spacing: 0;
   }
-  .card-unidad {
-    font-size: 14px;
+  .stats .fila2 { display: table-row; }
+  .stats .k {
+    display: table-cell;
+    font-size: 9px;
     color: #64748b;
-    margin-left: 3px;
-    font-weight: 600;
+    padding-top: 3px;
   }
-  .subfila {
-    margin-top: 8px;
-    font-size: 12px;
-    color: #94a3b8;
-    line-height: 1.5;
+  .stats .v {
+    display: table-cell;
+    font-size: 11px;
+    color: #cbd5e1;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 3px;
   }
   .amber { color: #fbbf24; }
   .emerald { color: #34d399; }
@@ -125,17 +99,23 @@
     display: inline-block;
     padding: 5px 12px;
     border-radius: 999px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
   }
   .pill-on { background: rgba(52, 211, 153, 0.15); color: #34d399; }
   .pill-off { background: rgba(100, 116, 139, 0.15); color: #64748b; }
-  .error {
-    text-align: center;
-    color: #f87171;
-    padding: 20px;
-    font-size: 14px;
+  .tabs { margin-top: 4px; font-size: 9px; }
+  .tab {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 999px;
+    color: #64748b;
+    margin-right: 3px;
+    border: 1px solid #1e293b;
   }
+  .tab-on { background: #1e293b; color: #e2e8f0; }
+  canvas { display: block; margin-top: 4px; width: 100%; height: 40px; }
+  .error { text-align: center; color: #f87171; padding: 10px; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -153,41 +133,57 @@
 <div class="wrap">
   <div class="grid">
     <div class="fila">
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">🔋</div>
-          <div class="card-label">Batería</div>
-        </div>
+
+      <div class="card" data-card="bateria">
+        <div class="card-head"><div class="card-icon">🔋</div><div class="card-label">Batería</div></div>
         <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
-        <div class="subfila">
-          <span id="voltaje">--</span> V &nbsp;&middot;&nbsp;
-          <span id="corrienteLabel">Carga</span> <span id="corriente">--</span> A
+        <canvas id="chart-bateria" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="bateria">
+          <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
+        </div>
+        <div class="stats">
+          <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
+          <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
+          <div class="fila2"><span class="k">Capacidad est.</span><span class="v" id="capacidadAh">-- Ah</span></div>
+          <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">☀️</div>
-          <div class="card-label">Solar</div>
-        </div>
+
+      <div class="card" data-card="solar">
+        <div class="card-head"><div class="card-icon">☀️</div><div class="card-label">Solar</div></div>
         <span class="card-valor amber" id="solar">--</span><span class="card-unidad">W</span>
-        <div class="subfila">Generación instantánea</div>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">🏠</div>
-          <div class="card-label">Consumo</div>
+        <canvas id="chart-solar" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="solar">
+          <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
         </div>
+        <div class="stats">
+          <div class="fila2"><span class="k">Horas de sol hoy</span><span class="v" id="horasSol">--</span></div>
+          <div class="fila2"><span class="k">Generado hoy</span><span class="v" id="solarKwh">-- kWh</span></div>
+        </div>
+      </div>
+
+      <div class="card" data-card="consumo">
+        <div class="card-head"><div class="card-icon">🏠</div><div class="card-label">Consumo</div></div>
         <span class="card-valor sky" id="consumo">--</span><span class="card-unidad">W</span>
-        <div class="subfila">Potencia de la vivienda</div>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">⚡</div>
-          <div class="card-label">Red / Generador</div>
+        <canvas id="chart-consumo" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="consumo">
+          <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
         </div>
-        <div><span class="estado-pill pill-off" id="red">--</span></div>
-        <div class="subfila">&nbsp;</div>
+        <div class="stats">
+          <div class="fila2"><span class="k">Consumido hoy</span><span class="v" id="consumoKwh">-- kWh</span></div>
+        </div>
       </div>
+
+      <div class="card" data-card="red">
+        <div class="card-head"><div class="card-icon">⚡</div><div class="card-label">Red / Generador</div></div>
+        <div><span class="estado-pill pill-off" id="red">--</span></div>
+        <div class="stats">
+          <div class="fila2"><span class="k">Horas de generador</span><span class="v" id="horasGenerador">--</span></div>
+          <div class="fila2"><span class="k">Diésel restante</span><span class="v" id="dieselRestante">-- L</span></div>
+          <div class="fila2"><span class="k">Diésel consumido</span><span class="v" id="dieselConsumido">-- L</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -202,9 +198,20 @@
   var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista';
   var REFRESCO_MS = 10000;
 
-  // Avisa a la estación de que hay alguien mirando (igual que hace la app en modo remoto) — sin
-  // esto, la estación no publica nada nuevo y esta pantalla se queda con el último dato de cuando
-  // alguien tuvo la app abierta.
+  var timeframes = { bateria: 'dia', solar: 'dia', consumo: 'dia' };
+  var ultimoDoc = null;
+
+  var METRIC_KEY = {
+    bateria: 'battery-soc',
+    solar: 'solar-power',
+    consumo: 'consumption-power'
+  };
+  var METRIC_COLOR = {
+    bateria: '#34d399',
+    solar: '#fbbf24',
+    consumo: '#38bdf8'
+  };
+
   function avisarPresencia() {
     var xhr = new XMLHttpRequest();
     xhr.open('PATCH', PRESENCIA_URL, true);
@@ -212,26 +219,67 @@
     xhr.send(JSON.stringify({ fields: { ultimaVista: { integerValue: String(Date.now()) } } }));
   }
 
-  function getField(fields, name) {
-    if (!fields || !fields[name]) return null;
-    var f = fields[name];
-    if (f.doubleValue !== undefined) return parseFloat(f.doubleValue);
-    if (f.integerValue !== undefined) return parseInt(f.integerValue, 10);
-    if (f.stringValue !== undefined) return f.stringValue;
-    if (f.nullValue !== undefined) return null;
+  function firestoreValue(v) {
+    if (!v) return null;
+    if (v.doubleValue !== undefined) return parseFloat(v.doubleValue);
+    if (v.integerValue !== undefined) return parseInt(v.integerValue, 10);
+    if (v.stringValue !== undefined) return v.stringValue;
+    if (v.nullValue !== undefined) return null;
     return null;
+  }
+
+  function getField(fields, name) {
+    return fields && fields[name] !== undefined ? firestoreValue(fields[name]) : null;
+  }
+
+  /** Convierte un arrayValue de Firestore (lista de SamplePoint o DailyBucket) en objetos JS planos. */
+  function getArray(fields, name) {
+    if (!fields || !fields[name] || !fields[name].arrayValue || !fields[name].arrayValue.values) return [];
+    var raw = fields[name].arrayValue.values;
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var mv = raw[i].mapValue;
+      if (!mv || !mv.fields) continue;
+      var obj = {};
+      for (var k in mv.fields) {
+        if (mv.fields.hasOwnProperty(k)) obj[k] = firestoreValue(mv.fields[k]);
+      }
+      out.push(obj);
+    }
+    return out;
+  }
+
+  /** `todaySnapshots`/`dailyBuckets` son mapValue con una clave por métrica (arrayValue dentro). */
+  function getMapOfArrays(fields, name) {
+    if (!fields || !fields[name] || !fields[name].mapValue || !fields[name].mapValue.fields) return {};
+    var inner = fields[name].mapValue.fields;
+    var out = {};
+    for (var key in inner) {
+      if (!inner.hasOwnProperty(key)) continue;
+      var arr = inner[key].arrayValue && inner[key].arrayValue.values ? inner[key].arrayValue.values : [];
+      var points = [];
+      for (var i = 0; i < arr.length; i++) {
+        var mv = arr[i].mapValue;
+        if (!mv || !mv.fields) continue;
+        var obj = {};
+        for (var k in mv.fields) {
+          if (mv.fields.hasOwnProperty(k)) obj[k] = firestoreValue(mv.fields[k]);
+        }
+        points.push(obj);
+      }
+      out[key] = points;
+    }
+    return out;
   }
 
   function setText(id, text) {
     var el = document.getElementById(id);
     if (el) el.innerHTML = text;
   }
-
   function setClass(id, className) {
     var el = document.getElementById(id);
     if (el) el.className = className;
   }
-
   function segundosDesde(ms) {
     var s = Math.round((Date.now() - ms) / 1000);
     if (s < 60) return 'hace ' + s + 's';
@@ -240,11 +288,100 @@
     var h = Math.round(m / 60);
     return 'hace ' + h + ' h';
   }
-
   function colorSoc(percent) {
     if (percent >= 80) return 'card-valor emerald';
     if (percent >= 60) return 'card-valor amber';
     return 'card-valor red';
+  }
+
+  /** Dibuja una gráfica de área simple (línea + relleno) en un <canvas>, escalando min/max. */
+  function drawChart(canvasId, values, color) {
+    var canvas = document.getElementById(canvasId);
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    if (!values || values.length < 2) {
+      ctx.fillStyle = '#334155';
+      ctx.font = '11px sans-serif';
+      ctx.fillText('Sin datos suficientes', 4, h / 2);
+      return;
+    }
+    var min = values[0], max = values[0];
+    for (var i = 1; i < values.length; i++) {
+      if (values[i] < min) min = values[i];
+      if (values[i] > max) max = values[i];
+    }
+    if (max === min) { max = min + 1; }
+    var pad = 4;
+    var stepX = (w - pad * 2) / (values.length - 1);
+
+    function yFor(v) {
+      return h - pad - ((v - min) / (max - min)) * (h - pad * 2);
+    }
+
+    ctx.beginPath();
+    ctx.moveTo(pad, yFor(values[0]));
+    for (var j = 1; j < values.length; j++) {
+      ctx.lineTo(pad + j * stepX, yFor(values[j]));
+    }
+    ctx.lineTo(pad + (values.length - 1) * stepX, h);
+    ctx.lineTo(pad, h);
+    ctx.closePath();
+    ctx.fillStyle = color + '33';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(pad, yFor(values[0]));
+    for (var k = 1; k < values.length; k++) {
+      ctx.lineTo(pad + k * stepX, yFor(values[k]));
+    }
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+
+  function valuesForTimeframe(tarjeta) {
+    if (!ultimoDoc) return [];
+    var key = METRIC_KEY[tarjeta];
+    var tf = timeframes[tarjeta];
+    if (tf === 'dia') {
+      var hoy = ultimoDoc.todaySnapshots[key] || [];
+      var out = [];
+      for (var i = 0; i < hoy.length; i++) out.push(hoy[i].value);
+      return out;
+    }
+    var buckets = ultimoDoc.dailyBuckets[key] || [];
+    var n = tf === 'semana' ? 7 : tf === 'mes' ? 30 : 365;
+    var slice = buckets.slice(Math.max(0, buckets.length - n));
+    var vals = [];
+    for (var j = 0; j < slice.length; j++) vals.push(slice[j].avg);
+    return vals;
+  }
+
+  function redibujarGraficas() {
+    for (var tarjeta in METRIC_KEY) {
+      if (!METRIC_KEY.hasOwnProperty(tarjeta)) continue;
+      drawChart('chart-' + tarjeta, valuesForTimeframe(tarjeta), METRIC_COLOR[tarjeta]);
+    }
+  }
+
+  // Pestañas Día/Semana/Mes/Año por tarjeta.
+  var tabGroups = document.querySelectorAll('[data-tabs]');
+  for (var g = 0; g < tabGroups.length; g++) {
+    (function (group) {
+      var tarjeta = group.getAttribute('data-tabs');
+      var tabs = group.querySelectorAll('.tab');
+      for (var t = 0; t < tabs.length; t++) {
+        tabs[t].addEventListener('click', function (event) {
+          var tf = event.target.getAttribute('data-tf');
+          timeframes[tarjeta] = tf;
+          for (var u = 0; u < tabs.length; u++) tabs[u].className = 'tab';
+          event.target.className = 'tab tab-on';
+          redibujarGraficas();
+        });
+      }
+    })(tabGroups[g]);
   }
 
   function pintar(doc) {
@@ -252,12 +389,10 @@
     var actualizadoEn = getField(fields, 'actualizadoEn');
     var latestSample = fields.latestSample && fields.latestSample.mapValue ? fields.latestSample.mapValue.fields : null;
 
-    if (actualizadoEn) {
-      setText('actualizado', 'Actualizado ' + segundosDesde(actualizadoEn));
-    }
+    if (actualizadoEn) setText('actualizado', 'Actualizado ' + segundosDesde(actualizadoEn));
 
     if (!latestSample) {
-      setText('errorBox', 'Todavia no hay datos publicados por la estacion.');
+      setText('errorBox', 'Todavía no hay datos publicados por la estación.');
       document.getElementById('errorBox').style.display = 'block';
       return;
     }
@@ -273,17 +408,18 @@
 
     setText('soc', soc !== null ? Math.round(soc) : '--');
     setClass('soc', soc !== null ? colorSoc(soc) : 'card-valor');
-    setText('voltaje', voltaje !== null ? voltaje.toFixed(1) : '--');
-    setText('solar', solar !== null ? Math.round(solar) : '--');
-    setText('consumo', consumo !== null ? Math.round(consumo) : '--');
+    setText('voltaje', (voltaje !== null ? voltaje.toFixed(1) : '--') + ' V');
 
     if (descargaA !== null && descargaA > 0.5) {
       setText('corrienteLabel', 'Descarga');
-      setText('corriente', descargaA.toFixed(1));
+      setText('corriente', descargaA.toFixed(1) + ' A');
     } else {
       setText('corrienteLabel', 'Carga');
-      setText('corriente', cargaA !== null ? cargaA.toFixed(1) : '--');
+      setText('corriente', (cargaA !== null ? cargaA.toFixed(1) : '--') + ' A');
     }
+
+    setText('solar', solar !== null ? Math.round(solar) : '--');
+    setText('consumo', consumo !== null ? Math.round(consumo) : '--');
 
     if (gridVoltage !== null && gridVoltage > 30) {
       setText('red', 'ENCENDIDO &middot; ' + gridVoltage.toFixed(0) + ' V');
@@ -292,6 +428,40 @@
       setText('red', 'APAGADO');
       setClass('red', 'estado-pill pill-off');
     }
+
+    var capacidadAh = getField(fields, 'estimatedCapacityAh');
+    var ciclos = getField(fields, 'totalEstimatedCycles');
+    var horasGenerador = getField(fields, 'generatorTotalHours');
+    setText('capacidadAh', capacidadAh !== null ? capacidadAh.toFixed(0) + ' Ah' : 'Sin medir');
+    setText('ciclos', ciclos !== null ? ciclos.toFixed(1) : '--');
+    setText('horasGenerador', horasGenerador !== null ? horasGenerador.toFixed(1) + ' h' : '--');
+
+    var fuelState = fields.fuelState && fields.fuelState.mapValue ? fields.fuelState.mapValue.fields : null;
+    if (fuelState) {
+      var currentLiters = getField(fuelState, 'currentLiters');
+      var totalConsumedLiters = getField(fuelState, 'totalConsumedLiters');
+      setText('dieselRestante', (currentLiters !== null ? currentLiters.toFixed(1) : '--') + ' L');
+      setText('dieselConsumido', (totalConsumedLiters !== null ? totalConsumedLiters.toFixed(1) : '--') + ' L');
+    }
+
+    var todaySnapshots = getMapOfArrays(fields, 'todaySnapshots');
+    var dailyBuckets = getMapOfArrays(fields, 'dailyBuckets');
+    ultimoDoc = { todaySnapshots: todaySnapshots, dailyBuckets: dailyBuckets };
+
+    var horasSolHoy = todaySnapshots['solar-sun-hours-v3'];
+    if (horasSolHoy && horasSolHoy.length > 0) {
+      setText('horasSol', horasSolHoy[horasSolHoy.length - 1].value.toFixed(1) + ' h');
+    }
+    var solarKwhHoy = todaySnapshots['solar-energy-kwh-v2'];
+    if (solarKwhHoy && solarKwhHoy.length > 0) {
+      setText('solarKwh', solarKwhHoy[solarKwhHoy.length - 1].value.toFixed(1) + ' kWh');
+    }
+    var consumoKwhHoy = todaySnapshots['consumption-energy-kwh-v2'];
+    if (consumoKwhHoy && consumoKwhHoy.length > 0) {
+      setText('consumoKwh', consumoKwhHoy[consumoKwhHoy.length - 1].value.toFixed(1) + ' kWh');
+    }
+
+    redibujarGraficas();
   }
 
   function cargar() {
@@ -301,14 +471,13 @@
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
         try {
-          var doc = JSON.parse(xhr.responseText);
-          pintar(doc);
+          pintar(JSON.parse(xhr.responseText));
         } catch (e) {
           setText('errorBox', 'Error leyendo los datos.');
           document.getElementById('errorBox').style.display = 'block';
         }
       } else {
-        setText('errorBox', 'No se pudo conectar (codigo ' + xhr.status + ').');
+        setText('errorBox', 'No se pudo conectar (código ' + xhr.status + ').');
         document.getElementById('errorBox').style.display = 'block';
       }
     };
