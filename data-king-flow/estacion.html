@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Estacion Flow</title>
 <style>
@@ -12,29 +15,50 @@
     color: #f1f5f9;
     font-family: -apple-system, Helvetica, Arial, sans-serif;
   }
-  .wrap {
-    padding: 16px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .cabecera {
+  .top {
     display: table;
     width: 100%;
-    margin-bottom: 16px;
+    background-color: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid #1e293b;
+    padding: 12px 20px;
+    box-sizing: border-box;
   }
-  .cabecera .titulo {
+  .top-left {
     display: table-cell;
-    font-size: 22px;
-    font-weight: bold;
+    vertical-align: middle;
+  }
+  .top-right {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ef4444;
+    box-shadow: 0 0 8px #ef4444;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .top-titulo {
+    font-size: 16px;
+    font-weight: 700;
     color: #f8fafc;
     vertical-align: middle;
   }
-  .cabecera .actualizado {
-    display: table-cell;
-    text-align: right;
-    font-size: 13px;
+  .top-sub {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+  .actualizado {
+    font-size: 12px;
     color: #94a3b8;
-    vertical-align: middle;
+  }
+  .wrap {
+    padding: 16px;
   }
   .grid {
     display: table;
@@ -52,30 +76,45 @@
     background-color: rgba(15, 23, 42, 0.7);
     border: 1px solid #1e293b;
     border-radius: 16px;
-    padding: 18px;
+    padding: 16px;
     vertical-align: top;
+    width: 25%;
+  }
+  .card-head {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card-icon {
+    display: table-cell;
+    width: 32px;
+    font-size: 20px;
+    vertical-align: middle;
   }
   .card-label {
+    display: table-cell;
     font-size: 12px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #94a3b8;
-    margin-bottom: 8px;
+    vertical-align: middle;
   }
   .card-valor {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 800;
+    white-space: nowrap;
   }
   .card-unidad {
-    font-size: 15px;
+    font-size: 14px;
     color: #64748b;
     margin-left: 3px;
     font-weight: 600;
   }
   .subfila {
-    margin-top: 10px;
-    font-size: 13px;
+    margin-top: 8px;
+    font-size: 12px;
     color: #94a3b8;
+    line-height: 1.5;
   }
   .amber { color: #fbbf24; }
   .emerald { color: #34d399; }
@@ -84,11 +123,10 @@
   .gris { color: #64748b; }
   .estado-pill {
     display: inline-block;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 999px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    margin-top: 4px;
   }
   .pill-on { background: rgba(52, 211, 153, 0.15); color: #34d399; }
   .pill-off { background: rgba(100, 116, 139, 0.15); color: #64748b; }
@@ -96,42 +134,59 @@
     text-align: center;
     color: #f87171;
     padding: 20px;
-    font-size: 15px;
+    font-size: 14px;
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="cabecera">
-    <div class="titulo">Data King Flow &middot; Estación</div>
+
+<div class="top">
+  <div class="top-left">
+    <span class="dot"></span><span class="top-titulo">En directo desde tu estación</span>
+    <div class="top-sub">Data King Flow Monitor</div>
+  </div>
+  <div class="top-right">
     <div class="actualizado" id="actualizado">Cargando...</div>
   </div>
+</div>
 
+<div class="wrap">
   <div class="grid">
     <div class="fila">
       <div class="card">
-        <div class="card-label">Batería</div>
+        <div class="card-head">
+          <div class="card-icon">🔋</div>
+          <div class="card-label">Batería</div>
+        </div>
         <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
         <div class="subfila">
-          <span id="voltajeLabel">Voltaje</span>: <span id="voltaje">--</span> V &nbsp;&middot;&nbsp;
-          <span id="corrienteLabel">Corriente</span>: <span id="corriente">--</span> A
+          <span id="voltaje">--</span> V &nbsp;&middot;&nbsp;
+          <span id="corrienteLabel">Carga</span> <span id="corriente">--</span> A
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Solar</div>
+        <div class="card-head">
+          <div class="card-icon">☀️</div>
+          <div class="card-label">Solar</div>
+        </div>
         <span class="card-valor amber" id="solar">--</span><span class="card-unidad">W</span>
         <div class="subfila">Generación instantánea</div>
       </div>
-    </div>
-    <div class="fila">
       <div class="card">
-        <div class="card-label">Consumo vivienda</div>
+        <div class="card-head">
+          <div class="card-icon">🏠</div>
+          <div class="card-label">Consumo</div>
+        </div>
         <span class="card-valor sky" id="consumo">--</span><span class="card-unidad">W</span>
-        <div class="subfila">Potencia activa de salida</div>
+        <div class="subfila">Potencia de la vivienda</div>
       </div>
       <div class="card">
-        <div class="card-label">Red / Generador</div>
+        <div class="card-head">
+          <div class="card-icon">⚡</div>
+          <div class="card-label">Red / Generador</div>
+        </div>
         <div><span class="estado-pill pill-off" id="red">--</span></div>
+        <div class="subfila">&nbsp;</div>
       </div>
     </div>
   </div>
@@ -241,7 +296,7 @@
 
   function cargar() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', URL, true);
+    xhr.open('GET', URL + '?_=' + Date.now(), true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
