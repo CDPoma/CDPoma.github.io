@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Estacion Flow</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .wrap {
+    padding: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 8px 0 4px 0;
+    color: #f8fafc;
+  }
+  .actualizado {
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 16px;
+  }
+  .card {
+    background: #1e293b;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #334155;
+  }
+  .label {
+    font-size: 13px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .valor {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f8fafc;
+  }
+  .unidad {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-left: 4px;
+  }
+  .fila {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .col {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    padding: 6px;
+  }
+  .col .valor {
+    font-size: 26px;
+  }
+  .estado {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  .verde { color: #34d399; }
+  .amarillo { color: #fbbf24; }
+  .rojo { color: #f87171; }
+  .gris { color: #64748b; }
+  .error {
+    text-align: center;
+    color: #f87171;
+    padding: 20px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Bateria y Solar</h1>
+  <div class="actualizado" id="actualizado">Cargando...</div>
+
+  <div class="card" style="text-align:center;">
+    <div class="label">Bateria</div>
+    <span class="valor" id="soc">--</span><span class="unidad">%</span>
+    <div class="fila" style="margin-top:8px;">
+      <div class="col">
+        <div class="label">Voltaje</div>
+        <span class="valor" id="voltaje">--</span><span class="unidad">V</span>
+      </div>
+      <div class="col">
+        <div class="label" id="corrienteLabel">Corriente</div>
+        <span class="valor" id="corriente">--</span><span class="unidad">A</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="col">
+      <div class="card">
+        <div class="label">Solar</div>
+        <span class="valor" id="solar">--</span><span class="unidad">W</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="label">Consumo</div>
+        <span class="valor" id="consumo">--</span><span class="unidad">W</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <div class="label">Red / Generador</div>
+    <div class="estado" id="red">--</div>
+  </div>
+
+  <div class="error" id="errorBox" style="display:none;"></div>
+</div>
+
+<script>
+(function () {
+  var PROJECT_ID = 'tu-lista-8f52a';
+  var CODIGO = 'ESTFLW';
+  var URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow/' + CODIGO;
+  var REFRESCO_MS = 10000;
+
+  function getField(fields, name) {
+    if (!fields || !fields[name]) return null;
+    var f = fields[name];
+    if (f.doubleValue !== undefined) return parseFloat(f.doubleValue);
+    if (f.integerValue !== undefined) return parseInt(f.integerValue, 10);
+    if (f.stringValue !== undefined) return f.stringValue;
+    if (f.nullValue !== undefined) return null;
+    return null;
+  }
+
+  function setText(id, text) {
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = text;
+  }
+
+  function segundosDesde(ms) {
+    var s = Math.round((Date.now() - ms) / 1000);
+    if (s < 60) return 'hace ' + s + 's';
+    var m = Math.round(s / 60);
+    if (m < 60) return 'hace ' + m + ' min';
+    var h = Math.round(m / 60);
+    return 'hace ' + h + ' h';
+  }
+
+  function pintar(doc) {
+    var fields = doc.fields || {};
+    var actualizadoEn = getField(fields, 'actualizadoEn');
+    var latestSample = fields.latestSample && fields.latestSample.mapValue ? fields.latestSample.mapValue.fields : null;
+
+    if (actualizadoEn) {
+      setText('actualizado', 'Actualizado ' + segundosDesde(actualizadoEn));
+    }
+
+    if (!latestSample) {
+      setText('errorBox', 'Todavia no hay datos publicados por la estacion.');
+      document.getElementById('errorBox').style.display = 'block';
+      return;
+    }
+    document.getElementById('errorBox').style.display = 'none';
+
+    var soc = getField(latestSample, 'batteryCapacity');
+    var voltaje = getField(latestSample, 'batteryVoltage');
+    var cargaA = getField(latestSample, 'batteryChargingCurrent');
+    var descargaA = getField(latestSample, 'batteryDischargeCurrent');
+    var solar = getField(latestSample, 'pvChargingPower');
+    var consumo = getField(latestSample, 'acOutputActivePower');
+    var gridVoltage = getField(latestSample, 'gridVoltage');
+
+    setText('soc', soc !== null ? Math.round(soc) : '--');
+    setText('voltaje', voltaje !== null ? voltaje.toFixed(1) : '--');
+    setText('solar', solar !== null ? Math.round(solar) : '--');
+    setText('consumo', consumo !== null ? Math.round(consumo) : '--');
+
+    if (descargaA !== null && descargaA > 0.5) {
+      setText('corrienteLabel', 'Descargando');
+      setText('corriente', descargaA.toFixed(1));
+    } else {
+      setText('corrienteLabel', 'Cargando');
+      setText('corriente', cargaA !== null ? cargaA.toFixed(1) : '--');
+    }
+
+    var redDiv = document.getElementById('red');
+    if (gridVoltage !== null && gridVoltage > 30) {
+      redDiv.innerHTML = 'ENCENDIDO (' + gridVoltage.toFixed(0) + ' V)';
+      redDiv.className = 'estado verde';
+    } else {
+      redDiv.innerHTML = 'APAGADO';
+      redDiv.className = 'estado gris';
+    }
+  }
+
+  function cargar() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', URL, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200) {
+        try {
+          var doc = JSON.parse(xhr.responseText);
+          pintar(doc);
+        } catch (e) {
+          setText('errorBox', 'Error leyendo los datos.');
+          document.getElementById('errorBox').style.display = 'block';
+        }
+      } else {
+        setText('errorBox', 'No se pudo conectar (codigo ' + xhr.status + ').');
+        document.getElementById('errorBox').style.display = 'block';
+      }
+    };
+    xhr.send();
+  }
+
+  cargar();
+  setInterval(cargar, REFRESCO_MS);
+})();
+</script>
+</body>
+</html>
