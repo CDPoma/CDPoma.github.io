@@ -8,76 +8,90 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: #0f172a;
-    color: #e2e8f0;
-    font-family: Helvetica, Arial, sans-serif;
+    background-color: #020617;
+    color: #f1f5f9;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
   }
   .wrap {
-    padding: 16px;
-    max-width: 480px;
+    padding: 16px 20px;
+    max-width: 1100px;
     margin: 0 auto;
   }
-  h1 {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 8px 0 4px 0;
-    color: #f8fafc;
-  }
-  .actualizado {
-    text-align: center;
-    font-size: 13px;
-    color: #94a3b8;
+  .cabecera {
+    display: table;
+    width: 100%;
     margin-bottom: 16px;
   }
-  .card {
-    background: #1e293b;
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 12px;
-    border: 1px solid #334155;
-  }
-  .label {
-    font-size: 13px;
-    color: #94a3b8;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .valor {
-    font-size: 40px;
+  .cabecera .titulo {
+    display: table-cell;
+    font-size: 22px;
     font-weight: bold;
     color: #f8fafc;
+    vertical-align: middle;
   }
-  .unidad {
-    font-size: 18px;
+  .cabecera .actualizado {
+    display: table-cell;
+    text-align: right;
+    font-size: 13px;
     color: #94a3b8;
-    margin-left: 4px;
+    vertical-align: middle;
   }
-  .fila {
+  .grid {
     display: table;
     width: 100%;
     table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 12px;
+    margin: -12px;
   }
-  .col {
+  .fila {
+    display: table-row;
+  }
+  .card {
     display: table-cell;
-    width: 50%;
-    text-align: center;
-    padding: 6px;
+    background-color: rgba(15, 23, 42, 0.7);
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 18px;
+    vertical-align: top;
   }
-  .col .valor {
-    font-size: 26px;
+  .card-label {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 8px;
   }
-  .estado {
-    text-align: center;
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 8px;
-    margin-top: 8px;
+  .card-valor {
+    font-size: 34px;
+    font-weight: 800;
   }
-  .verde { color: #34d399; }
-  .amarillo { color: #fbbf24; }
-  .rojo { color: #f87171; }
+  .card-unidad {
+    font-size: 15px;
+    color: #64748b;
+    margin-left: 3px;
+    font-weight: 600;
+  }
+  .subfila {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #94a3b8;
+  }
+  .amber { color: #fbbf24; }
+  .emerald { color: #34d399; }
+  .sky { color: #38bdf8; }
+  .red { color: #f87171; }
   .gris { color: #64748b; }
+  .estado-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .pill-on { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+  .pill-off { background: rgba(100, 116, 139, 0.15); color: #64748b; }
   .error {
     text-align: center;
     color: #f87171;
@@ -88,42 +102,38 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Bateria y Solar</h1>
-  <div class="actualizado" id="actualizado">Cargando...</div>
-
-  <div class="card" style="text-align:center;">
-    <div class="label">Bateria</div>
-    <span class="valor" id="soc">--</span><span class="unidad">%</span>
-    <div class="fila" style="margin-top:8px;">
-      <div class="col">
-        <div class="label">Voltaje</div>
-        <span class="valor" id="voltaje">--</span><span class="unidad">V</span>
-      </div>
-      <div class="col">
-        <div class="label" id="corrienteLabel">Corriente</div>
-        <span class="valor" id="corriente">--</span><span class="unidad">A</span>
-      </div>
-    </div>
+  <div class="cabecera">
+    <div class="titulo">Data King Flow &middot; Estación</div>
+    <div class="actualizado" id="actualizado">Cargando...</div>
   </div>
 
-  <div class="fila">
-    <div class="col">
+  <div class="grid">
+    <div class="fila">
       <div class="card">
-        <div class="label">Solar</div>
-        <span class="valor" id="solar">--</span><span class="unidad">W</span>
+        <div class="card-label">Batería</div>
+        <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
+        <div class="subfila">
+          <span id="voltajeLabel">Voltaje</span>: <span id="voltaje">--</span> V &nbsp;&middot;&nbsp;
+          <span id="corrienteLabel">Corriente</span>: <span id="corriente">--</span> A
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Solar</div>
+        <span class="card-valor amber" id="solar">--</span><span class="card-unidad">W</span>
+        <div class="subfila">Generación instantánea</div>
       </div>
     </div>
-    <div class="col">
+    <div class="fila">
       <div class="card">
-        <div class="label">Consumo</div>
-        <span class="valor" id="consumo">--</span><span class="unidad">W</span>
+        <div class="card-label">Consumo vivienda</div>
+        <span class="card-valor sky" id="consumo">--</span><span class="card-unidad">W</span>
+        <div class="subfila">Potencia activa de salida</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Red / Generador</div>
+        <div><span class="estado-pill pill-off" id="red">--</span></div>
       </div>
     </div>
-  </div>
-
-  <div class="card" style="text-align:center;">
-    <div class="label">Red / Generador</div>
-    <div class="estado" id="red">--</div>
   </div>
 
   <div class="error" id="errorBox" style="display:none;"></div>
@@ -162,6 +172,11 @@
     if (el) el.innerHTML = text;
   }
 
+  function setClass(id, className) {
+    var el = document.getElementById(id);
+    if (el) el.className = className;
+  }
+
   function segundosDesde(ms) {
     var s = Math.round((Date.now() - ms) / 1000);
     if (s < 60) return 'hace ' + s + 's';
@@ -169,6 +184,12 @@
     if (m < 60) return 'hace ' + m + ' min';
     var h = Math.round(m / 60);
     return 'hace ' + h + ' h';
+  }
+
+  function colorSoc(percent) {
+    if (percent >= 80) return 'card-valor emerald';
+    if (percent >= 60) return 'card-valor amber';
+    return 'card-valor red';
   }
 
   function pintar(doc) {
@@ -196,25 +217,25 @@
     var gridVoltage = getField(latestSample, 'gridVoltage');
 
     setText('soc', soc !== null ? Math.round(soc) : '--');
+    setClass('soc', soc !== null ? colorSoc(soc) : 'card-valor');
     setText('voltaje', voltaje !== null ? voltaje.toFixed(1) : '--');
     setText('solar', solar !== null ? Math.round(solar) : '--');
     setText('consumo', consumo !== null ? Math.round(consumo) : '--');
 
     if (descargaA !== null && descargaA > 0.5) {
-      setText('corrienteLabel', 'Descargando');
+      setText('corrienteLabel', 'Descarga');
       setText('corriente', descargaA.toFixed(1));
     } else {
-      setText('corrienteLabel', 'Cargando');
+      setText('corrienteLabel', 'Carga');
       setText('corriente', cargaA !== null ? cargaA.toFixed(1) : '--');
     }
 
-    var redDiv = document.getElementById('red');
     if (gridVoltage !== null && gridVoltage > 30) {
-      redDiv.innerHTML = 'ENCENDIDO (' + gridVoltage.toFixed(0) + ' V)';
-      redDiv.className = 'estado verde';
+      setText('red', 'ENCENDIDO &middot; ' + gridVoltage.toFixed(0) + ' V');
+      setClass('red', 'estado-pill pill-on');
     } else {
-      redDiv.innerHTML = 'APAGADO';
-      redDiv.className = 'estado gris';
+      setText('red', 'APAGADO');
+      setClass('red', 'estado-pill pill-off');
     }
   }
 
