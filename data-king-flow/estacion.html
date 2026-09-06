@@ -55,7 +55,7 @@
     border-radius: 14px;
     padding: 10px;
     vertical-align: top;
-    width: 25%;
+    width: 50%;
   }
   .card-head { display: table; width: 100%; margin-bottom: 4px; }
   .card-icon { display: table-cell; width: 24px; font-size: 15px; vertical-align: middle; }
@@ -134,21 +134,6 @@
   <div class="grid">
     <div class="fila">
 
-      <div class="card" data-card="bateria">
-        <div class="card-head"><div class="card-icon">🔋</div><div class="card-label">Batería</div></div>
-        <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
-        <canvas id="chart-bateria" width="220" height="40"></canvas>
-        <div class="tabs" data-tabs="bateria">
-          <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
-        </div>
-        <div class="stats">
-          <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
-          <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
-          <div class="fila2"><span class="k">Capacidad est.</span><span class="v" id="capacidadAh">-- Ah</span></div>
-          <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
-        </div>
-      </div>
-
       <div class="card" data-card="solar">
         <div class="card-head"><div class="card-icon">☀️</div><div class="card-label">Solar</div></div>
         <span class="card-valor amber" id="solar">--</span><span class="card-unidad">W</span>
@@ -171,6 +156,24 @@
         </div>
         <div class="stats">
           <div class="fila2"><span class="k">Consumido hoy</span><span class="v" id="consumoKwh">-- kWh</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fila">
+
+      <div class="card" data-card="bateria">
+        <div class="card-head"><div class="card-icon">🔋</div><div class="card-label">Batería</div></div>
+        <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
+        <canvas id="chart-bateria" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="bateria">
+          <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
+        </div>
+        <div class="stats">
+          <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
+          <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
+          <div class="fila2"><span class="k">Capacidad est.</span><span class="v" id="capacidadAh">-- Ah</span></div>
+          <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
         </div>
       </div>
 
