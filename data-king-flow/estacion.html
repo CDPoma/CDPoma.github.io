@@ -134,7 +134,18 @@
   var PROJECT_ID = 'tu-lista-8f52a';
   var CODIGO = 'ESTFLW';
   var URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow/' + CODIGO;
+  var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista';
   var REFRESCO_MS = 10000;
+
+  // Avisa a la estación de que hay alguien mirando (igual que hace la app en modo remoto) — sin
+  // esto, la estación no publica nada nuevo y esta pantalla se queda con el último dato de cuando
+  // alguien tuvo la app abierta.
+  function avisarPresencia() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('PATCH', PRESENCIA_URL, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ fields: { ultimaVista: { integerValue: String(Date.now()) } } }));
+  }
 
   function getField(fields, name) {
     if (!fields || !fields[name]) return null;
@@ -228,8 +239,13 @@
     xhr.send();
   }
 
-  cargar();
-  setInterval(cargar, REFRESCO_MS);
+  function ciclo() {
+    avisarPresencia();
+    cargar();
+  }
+
+  ciclo();
+  setInterval(ciclo, REFRESCO_MS);
 })();
 </script>
 </body>
