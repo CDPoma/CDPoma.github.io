@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tu Lista Compartida — Soporte y privacidad</title>
+<title>Mi Lista Compartida — Soporte y privacidad</title>
 <style>
   :root{
     --paper:#FBF2DC; --paper-dark:#F3E7C9; --paper-line:#E4D3A7;
@@ -36,15 +36,15 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Tu Lista Compartida</h1>
+  <h1>Mi Lista Compartida</h1>
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista concreta (y solo esa) se sube a un servidor para poder sincronizarla en tiempo real con quien se la mandes. No hay cuentas, ni registro, ni anuncios, ni venta de datos a nadie.</p>
+    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista concreta (y solo esa) se sube a un servidor para poder sincronizarla en tiempo real con quien se la mandes. No hay cuentas, ni registro, ni venta de datos a nadie. La versión gratuita muestra un banner de anuncios no personalizados, que la compra Pro elimina.</p>
   </div>
 
   <h2>Qué datos se guardan y dónde</h2>
-  <p>Tu Lista Compartida guarda tus listas de la compra, recados y quehaceres localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente "Compartir" en una lista concreta.</p>
+  <p>Mi Lista guarda tus listas de la compra, recados y quehaceres localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente "Compartir" en una lista concreta.</p>
   <ul>
     <li>Al compartir una lista, su contenido (nombre y artículos) se guarda en Firebase Firestore (Google) para que se sincronice en tiempo real entre los dispositivos que se unan a ella.</li>
     <li>Solo se sube la lista que decides compartir, nunca el resto de tus listas.</li>
@@ -52,7 +52,13 @@
   </ul>
 
   <h2>Compras dentro de la app</h2>
-  <p>La sincronización en la nube es una función de pago (1 mes de prueba gratis y después un pago único), gestionada mediante RevenueCat sobre el sistema de compras de Apple. RevenueCat procesa el estado de la compra pero no recibe el contenido de tus listas.</p>
+  <p>La sincronización en la nube es una función de pago (1 mes de prueba gratis y después un pago único), gestionada mediante RevenueCat sobre el sistema de compras de Apple (en iPhone y iPad) o de Google Play (en Android). RevenueCat procesa el estado de la compra pero no recibe el contenido de tus listas.</p>
+
+  <h2>Fotos de fechas de caducidad</h2>
+  <p>En la despensa puedes ponerle a un producto su fecha de caducidad. Puedes escribirla a mano, o hacerle una foto al envase para que la app la lea por ti. Si eliges la foto, esa imagen se envía a la API de Gemini de Google, que devuelve únicamente la fecha que ha encontrado. La foto no se guarda en ningún servidor, ni nuestro ni de terceros, y no se usa para nada más. Es una función opcional: la app funciona igual escribiendo la fecha a mano.</p>
+
+  <h2>Anuncios</h2>
+  <p>La versión gratuita muestra un banner de Google AdMob. Son anuncios no personalizados. Para servirlos, AdMob usa el identificador de publicidad del dispositivo, que no va asociado a tu nombre ni a ningún dato tuyo, porque la app no recoge ninguno. La compra Pro quita los anuncios por completo.</p>
 
   <h2>Notificaciones</h2>
   <p>Los recordatorios que programas se gestionan de forma local en tu propio dispositivo — no se envían a ningún servidor.</p>
@@ -61,12 +67,14 @@
   <ul>
     <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase / Google Cloud</a> — sincronización de listas compartidas.</li>
     <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — gestión de la compra de la sincronización.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a> — anuncios de la versión gratuita.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini</a> — lectura de la fecha de caducidad de una foto, solo si usas esa función.</li>
   </ul>
 
   <h2>Contacto y soporte</h2>
   <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">Tu Lista Compartida · Gabriel Micó Victoria</div>
+  <div class="foot">Mi Lista Compartida · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
