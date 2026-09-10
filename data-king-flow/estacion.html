@@ -157,6 +157,94 @@
     .top-titulo { font-size: 12px; }
     .top-sub, .actualizado { font-size: 9px; }
   }
+
+  /*
+   * MODO ACOSTADO (tablet en horizontal) — reparto 2 / 1 / 2.
+   *
+   * Arriba generación y consumo, en medio la ficha de flujo a lo ancho y bien grande, abajo batería
+   * y generador. Es la misma lectura que la app de iOS: lo que importa en el centro y con el número
+   * gordo, y los cuatro contextos alrededor.
+   *
+   * Todo ajustado al alto de la pantalla: una tablet apoyada mirando la instalación no se toca, así
+   * que no puede haber scroll ni nada cortado por abajo.
+   */
+  @media (orientation: landscape) {
+    html, body { height: 100%; overflow: hidden; }
+    .wrap { padding: 8px; height: calc(100% - 40px); box-sizing: border-box; }
+    .grid-acostado { display: flex; flex-direction: column; gap: 8px; height: 100%; }
+    .grid { display: contents; }
+    .fila {
+      display: flex;
+      gap: 8px;
+      flex: 1 1 0;
+      min-height: 0;
+    }
+    /* La del medio manda: se lleva casi el doble de alto que las de los lados. */
+    .fila-flujo { flex: 1.6 1 0; }
+    .card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 0;
+      width: auto;
+      min-width: 0;
+      padding: 10px 14px;
+      overflow: hidden;
+    }
+    .card canvas { width: 100%; height: 30px; }
+    .card-valor { font-size: 40px; line-height: 1; }
+    .card-unidad { font-size: 15px; }
+    .stats { margin-top: auto; }
+    .fila2 { font-size: 12px; padding: 1px 0; }
+    .tabs { margin: 3px 0; }
+    .tab { font-size: 10px; padding: 1px 6px; }
+    .top { padding: 4px 14px; }
+    .top-titulo { font-size: 13px; }
+    .top-sub, .actualizado { font-size: 10px; }
+
+    /* La ficha de flujo: número enorme a la izquierda, los cuatro datos a la derecha. */
+    .card-flujo .flujo-cuerpo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+      min-height: 0;
+    }
+    .card-flujo .flujo-principal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1.3;
+      min-width: 0;
+    }
+    .card-flujo .flujo-horas {
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1;
+      color: #34d399;
+      white-space: nowrap;
+    }
+    .card-flujo .flujo-kwh { font-size: 22px; font-weight: 700; color: #34d399; margin-top: 4px; }
+    .card-flujo .flujo-pie { font-size: 12px; color: #64748b; margin-top: 6px; }
+    .card-flujo .flujo-lados {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 18px;
+      flex: 1;
+      align-content: center;
+    }
+    .card-flujo .flujo-dato { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+    .card-flujo .flujo-dato .v { font-weight: 700; color: #f1f5f9; }
+  }
+
+  /* En vertical la ficha de flujo se comporta como una más, a lo ancho. */
+  .card-flujo .flujo-cuerpo { display: block; }
+  .card-flujo .flujo-horas { font-size: 30px; font-weight: 800; color: #34d399; display: block; }
+  .card-flujo .flujo-kwh { font-size: 15px; font-weight: 700; color: #34d399; }
+  .card-flujo .flujo-pie { font-size: 11px; color: #64748b; display: block; margin-top: 4px; }
+  .card-flujo .flujo-lados { margin-top: 8px; }
+  .card-flujo .flujo-dato { display: flex; justify-content: space-between; font-size: 12px; padding: 1px 0; }
+  .card-flujo .flujo-dato .k { color: #94a3b8; }
+  .card-flujo .flujo-dato .v { font-weight: 700; color: #f1f5f9; }
 </style>
 </head>
 <body>
@@ -201,6 +289,25 @@
         </div>
       </div>
 
+    </div>
+    <div class="fila fila-flujo">
+
+      <div class="card card-flujo" data-card="flujo">
+        <div class="card-head"><div class="card-icon">&#9203;</div><div class="card-label">Autonom&iacute;a restante</div></div>
+        <div class="flujo-cuerpo">
+          <div class="flujo-principal">
+            <span class="flujo-horas" id="flujoHoras">--</span>
+            <span class="flujo-kwh" id="flujoKwh">-- kWh</span>
+            <span class="flujo-pie" id="flujoPie">&nbsp;</span>
+          </div>
+          <div class="flujo-lados">
+            <div class="flujo-dato"><span class="k">Bater&iacute;a</span><span class="v" id="flujoSoc">--</span></div>
+            <div class="flujo-dato"><span class="k">Voltaje</span><span class="v" id="flujoVoltaje">-- V</span></div>
+            <div class="flujo-dato"><span class="k">Quedan</span><span class="v" id="flujoAh">-- Ah</span></div>
+            <div class="flujo-dato"><span class="k">Hasta generador</span><span class="v" id="flujoGen">--</span></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="fila">
 
@@ -533,6 +640,26 @@
       ? ahRestantes.toFixed(0) + ' / ' + capacidadBancoAh.toFixed(0) + ' Ah'
       : (capacidadAh !== null ? capacidadAh.toFixed(0) + ' Ah' : 'Sin medir'));
     setText('autonomia', horasAutonomia !== null ? formatHoras(horasAutonomia) : '--');
+
+    /*
+     * Ficha de flujo (la del medio): los mismos números que enseña la app de iOS en su cara
+     * delantera. Todos vienen de `calculados`, es decir, de la estación — aquí no se calcula nada,
+     * solo se pinta. Si la estación no manda un dato, va un guion: mejor no saberlo que inventarlo.
+     */
+    var horasGen = calculados ? getField(calculados, 'horasHastaGenerador') : null;
+    setText('flujoHoras', horasAutonomia !== null ? formatHoras(horasAutonomia) : '--');
+    setText('flujoKwh', ahRestantes !== null && voltaje !== null
+      ? (ahRestantes * voltaje / 1000).toFixed(2) + ' kWh'
+      : '-- kWh');
+    setText('flujoPie', consumo !== null
+      ? 'Con ' + Math.round(consumo).toLocaleString('es-ES') + ' W de consumo de la casa \u00b7 hasta agotar el pack'
+      : '\u00a0');
+    setText('flujoSoc', soc !== null ? Math.round(soc) + ' %' : '--');
+    setText('flujoVoltaje', (voltaje !== null ? voltaje.toFixed(1) : '--') + ' V');
+    setText('flujoAh', ahRestantes !== null && capacidadBancoAh
+      ? ahRestantes.toFixed(0) + ' / ' + capacidadBancoAh.toFixed(0) + ' Ah'
+      : '-- Ah');
+    setText('flujoGen', horasGen !== null ? formatHoras(horasGen) : '--');
     setText('ciclos', ciclos !== null ? ciclos.toFixed(1) : '--');
     setText('horasGenerador', horasGenerador !== null ? horasGenerador.toFixed(1) + ' h' : '--');
 
