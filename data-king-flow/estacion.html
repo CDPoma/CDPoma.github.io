@@ -242,8 +242,10 @@
   var PROJECT_ID = 'tu-lista-8f52a';
   var CODIGO = 'ESTFLW';
   var URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow/' + CODIGO;
-  var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista';
+  var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista&updateMask.fieldPaths=enPrimerPlano&updateMask.fieldPaths=sesion';
   var REFRESCO_MS = 10000;
+  /** Identifica esta apertura de la página: la estación lo usa para volver a publicar al segundo. */
+  var SESION = String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
 
   var timeframes = { bateria: 'dia', solar: 'dia', consumo: 'dia' };
   var ultimoDoc = null;
@@ -263,7 +265,22 @@
     var xhr = new XMLHttpRequest();
     xhr.open('PATCH', PRESENCIA_URL, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({ fields: { ultimaVista: { integerValue: String(Date.now()) } } }));
+    /*
+     * Hay que mandar `enPrimerPlano` y `sesion`, no solo la hora.
+     *
+     * La estación no publica a menos que vea `enPrimerPlano: true` — mirar sin decirlo no cuenta. Esta
+     * página escribía únicamente `ultimaVista`, así que podía estar abierta delante toda la noche y la
+     * estación seguía creyendo que no la miraba nadie: solo mandaba su latido de fondo cada cinco
+     * minutos y aquí se veían datos viejos. Costó una tarde entera darse cuenta (10/09/2026).
+     *
+     * `sesion` es lo que le dice a la estación que este visor acaba de abrir, para que reinicie su
+     * escalera y vuelva a publicar cada segundo en vez de heredar la separación de horas sin nadie.
+     */
+    xhr.send(JSON.stringify({ fields: {
+      ultimaVista: { integerValue: String(Date.now()) },
+      enPrimerPlano: { booleanValue: document.visibilityState === 'visible' },
+      sesion: { stringValue: SESION }
+    } }));
   }
 
   function firestoreValue(v) {
