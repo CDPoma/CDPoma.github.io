@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SafeCar — Soporte y privacidad</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SafeCar</h1>
+  <p class="sub">Soporte y privacidad</p>
+
+  <div class="card">
+    <p><strong>Resumen rápido:</strong> SafeCar detecta si has tenido un accidente y avisa a las personas que tú elijas, con tu posición. Para eso necesita saber dónde estás mientras conduces. Esa información se usa solo para eso, se comparte solo con los contactos que tú añades, y puedes borrarla entera cuando quieras.</p>
+  </div>
+
+  <h2>Qué hace la app</h2>
+  <p>SafeCar vigila tu viaje en segundo plano. Si detecta un impacto —por el acelerómetro del teléfono, por el sonido, o por la información del vehículo si tienes un adaptador OBD2 conectado— te da unos segundos para cancelar la alarma. Si no cancelas, avisa a tus contactos de emergencia con tu última posición conocida. También lleva el ordenador de a bordo: kilómetros, consumo y avisos de mantenimiento.</p>
+
+  <h2>Qué datos se recogen</h2>
+  <table>
+    <thead><tr><th>Dato</th><th>Para qué</th><th>Dónde va</th></tr></thead>
+    <tbody>
+      <tr><td>Correo electrónico y contraseña</td><td>Crear tu cuenta y que tu familia pueda vincularse contigo</td><td>Supabase (servidor de la app)</td></tr>
+      <tr><td>Ubicación, también en segundo plano</td><td>Saber dónde estás si hay un accidente, y calcular el recorrido del viaje</td><td>Se procesa en el teléfono; solo se envía al servidor si salta una alerta o si guardas el viaje</td></tr>
+      <tr><td>Datos del vehículo por OBD2</td><td>Velocidad, revoluciones, consumo y códigos de avería que muestra el ordenador de a bordo</td><td>Se procesa en el teléfono; los kilómetros y el mantenimiento se guardan en tu cuenta</td></tr>
+      <tr><td>Micrófono</td><td>Detectar el ruido de un impacto</td><td><strong>No sale del teléfono.</strong> El audio se analiza en el momento y se descarta; no se graba, ni se guarda, ni se envía a ningún sitio</td></tr>
+      <tr><td>Teléfonos de tus contactos de emergencia</td><td>Poder avisarles si tienes un accidente</td><td>Tu cuenta, y el SMS de aviso cuando salta la alerta</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Qué NO se hace</h2>
+  <ul>
+    <li>No se vende ni se cede tu ubicación a nadie, ni a anunciantes, ni a aseguradoras, ni a terceros de ningún tipo.</li>
+    <li>No se graba audio. El micrófono se usa para reconocer un patrón de sonido en el instante y nada más.</li>
+    <li>No se rastrea tu posición cuando no estás conduciendo. El seguimiento arranca al empezar un viaje y se para al terminarlo.</li>
+    <li>No se comparte tu posición con nadie salvo con los contactos de emergencia que tú hayas añadido, y solo cuando salta una alerta.</li>
+  </ul>
+
+  <h2>Servicios de terceros</h2>
+  <table>
+    <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></td><td>Tu cuenta, tus vehículos, tus viajes y las alertas de accidente. Es la base de datos de la app.</td></tr>
+      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Firebase</a></td><td>Notificaciones push a los familiares vinculados.</td></tr>
+      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Banner de publicidad en la versión gratuita. No recibe tu ubicación ni ningún dato del vehículo.</td></tr>
+      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple / Google</td><td>Gestiona la compra opcional que desbloquea el OBD2 y quita los anuncios.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Permisos</h2>
+  <ul>
+    <li><code>Ubicación, incluida en segundo plano</code> — para poder avisar de dónde estás si tienes un accidente con la pantalla apagada. Sin este permiso la función de emergencia no puede funcionar.</li>
+    <li><code>Micrófono</code> — para detectar el ruido de un impacto. No se graba nada.</li>
+    <li><code>Bluetooth</code> — para hablar con el adaptador OBD2 del coche.</li>
+    <li><code>Enviar SMS</code> (solo Android) — para avisar a tus contactos si no hay datos móviles. En iPhone esto no es posible y el aviso va solo por internet.</li>
+    <li><code>Notificaciones</code> — para la cuenta atrás de la alarma y los avisos de mantenimiento.</li>
+  </ul>
+
+  <h2>Cuánto se guarda y cómo se borra</h2>
+  <p>Tus viajes y alertas se guardan mientras tengas la cuenta abierta. Puedes borrar cualquier viaje desde la app, y puedes pedir la eliminación completa de tu cuenta y de todo lo asociado escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Se elimina todo en un plazo máximo de 30 días.</p>
+
+  <h2>Privacidad infantil</h2>
+  <p>SafeCar está pensada para personas con permiso de conducir y no está dirigida a menores. No se recogen datos de menores de edad a sabiendas.</p>
+
+  <h2>Aviso importante</h2>
+  <p>SafeCar es una ayuda, no un sistema de emergencia homologado. La detección de accidentes puede fallar, tanto por no detectar un impacto real como por saltar sin motivo. No sustituye a llamar al 112. No dependas de ella como único medio de auxilio.</p>
+
+  <h2>Contacto y soporte</h2>
+  <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <div class="foot">SafeCar v1.0 · Vigente desde 2026-09-09 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
