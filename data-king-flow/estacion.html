@@ -116,6 +116,47 @@
   .tab-on { background: #1e293b; color: #e2e8f0; }
   canvas { display: block; margin-top: 4px; width: 100%; height: 40px; }
   .error { text-align: center; color: #f87171; padding: 10px; font-size: 12px; }
+
+  /*
+   * MODO ACOSTADO (tablet o móvil en horizontal).
+   *
+   * El montaje de arriba es una tabla 2x2 pensada para vertical. Girado, esa rejilla deja las
+   * fichas altas y estrechas y obliga a hacer scroll justo cuando lo que quieres es tenerlo todo
+   * delante de un vistazo — que es para lo que se deja una pantalla puesta mirando la instalación.
+   *
+   * Aquí se rompe la tabla y las cuatro fichas pasan a una sola fila, repartidas a partes iguales
+   * y ajustadas al alto de la pantalla. Ni una barra de scroll.
+   */
+  @media (orientation: landscape) {
+    html, body { height: 100%; overflow: hidden; }
+    .wrap { padding: 6px; height: calc(100% - 42px); box-sizing: border-box; }
+    .grid, .fila { display: contents; }
+    .grid-acostado {
+      display: flex;
+      gap: 6px;
+      height: 100%;
+      align-items: stretch;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 0;
+      width: auto;
+      min-width: 0;
+      padding: 8px 10px;
+      overflow: hidden;
+    }
+    .card canvas { width: 100%; height: 34px; }
+    .card-valor { font-size: 34px; line-height: 1.05; }
+    .card-unidad { font-size: 13px; }
+    .stats { margin-top: auto; }
+    .fila2 { font-size: 11px; }
+    .tabs { margin: 2px 0; }
+    .tab { font-size: 10px; padding: 1px 5px; }
+    .top { padding: 3px 12px; }
+    .top-titulo { font-size: 12px; }
+    .top-sub, .actualizado { font-size: 9px; }
+  }
 </style>
 </head>
 <body>
@@ -131,6 +172,7 @@
 </div>
 
 <div class="wrap">
+  <div class="grid-acostado">
   <div class="grid">
     <div class="fila">
 
@@ -172,7 +214,8 @@
         <div class="stats">
           <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
           <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
-          <div class="fila2"><span class="k">Capacidad est.</span><span class="v" id="capacidadAh">-- Ah</span></div>
+          <div class="fila2"><span class="k">Quedan</span><span class="v" id="capacidadAh">-- Ah</span></div>
+          <div class="fila2"><span class="k">Autonom&iacute;a</span><span class="v" id="autonomia">--</span></div>
           <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
         </div>
       </div>
@@ -188,6 +231,7 @@
       </div>
 
     </div>
+  </div>
   </div>
 
   <div class="error" id="errorBox" style="display:none;"></div>
@@ -283,6 +327,15 @@
     var el = document.getElementById(id);
     if (el) el.className = className;
   }
+  /** Horas decimales a "3 h 55 min", igual que lo pinta la app. */
+  function formatHoras(horas) {
+    if (!isFinite(horas) || horas < 0) return '--';
+    var h = Math.floor(horas);
+    var m = Math.round((horas - h) * 60);
+    if (m === 60) { h += 1; m = 0; }
+    return h > 0 ? h + ' h ' + m + ' min' : m + ' min';
+  }
+
   function segundosDesde(ms) {
     var s = Math.round((Date.now() - ms) / 1000);
     if (s < 60) return 'hace ' + s + 's';
@@ -401,7 +454,25 @@
     }
     document.getElementById('errorBox').style.display = 'none';
 
-    var soc = getField(latestSample, 'batteryCapacity');
+    /*
+     * El porcentaje sale de lo que YA HA CALCULADO LA ESTACIÓN (`calculados.fraccionPack`), no de
+     * `batteryCapacity`, que es el SOC del propio inversor.
+     *
+     * Ese SOC es una recta entre el voltaje de corte y el de lleno, y en LiFePO4 miente donde más
+     * importa: medido en la instalación el 09/09/2026 anunciaba un 48 % con el pack a 49 V cuando
+     * de los 250 Ah instalados solo quedaban 46 — un 18 % real. Esta página lo estuvo enseñando
+     * desde el 06/09 hasta que se corrigió.
+     *
+     * Aquí no se calcula nada: la estación tiene la curva del pack aprendida de la instalación y el
+     * contador de amperios-hora, y esta ventana solo pinta lo que ella dice.
+     */
+    var calculados = fields.calculados && fields.calculados.mapValue ? fields.calculados.mapValue.fields : null;
+    var fraccionPack = calculados ? getField(calculados, 'fraccionPack') : null;
+    // Firestore la guarda como texto, así que hay que pasarla a número antes de multiplicar.
+    var capacidadBancoAh = calculados ? Number(getField(calculados, 'capacidadBancoAh')) : NaN;
+    if (!isFinite(capacidadBancoAh) || capacidadBancoAh <= 0) capacidadBancoAh = null;
+    var horasAutonomia = calculados ? getField(calculados, 'horasAutonomia') : null;
+    var soc = fraccionPack !== null ? fraccionPack * 100 : null;
     var voltaje = getField(latestSample, 'batteryVoltage');
     var cargaA = getField(latestSample, 'batteryChargingCurrent');
     var descargaA = getField(latestSample, 'batteryDischargeCurrent');
@@ -432,10 +503,19 @@
       setClass('red', 'estado-pill pill-off');
     }
 
+    /*
+     * Ah que quedan: el porcentaje de la estación por la capacidad instalada que ella misma manda.
+     * Antes se enseñaba `estimatedCapacityAh`, que es otra cosa —la salud del banco, cuánto llega a
+     * entregar— y se leía como si fuera lo que queda.
+     */
+    var ahRestantes = fraccionPack !== null && capacidadBancoAh ? fraccionPack * capacidadBancoAh : null;
     var capacidadAh = getField(fields, 'estimatedCapacityAh');
     var ciclos = getField(fields, 'totalEstimatedCycles');
     var horasGenerador = getField(fields, 'generatorTotalHours');
-    setText('capacidadAh', capacidadAh !== null ? capacidadAh.toFixed(0) + ' Ah' : 'Sin medir');
+    setText('capacidadAh', ahRestantes !== null
+      ? ahRestantes.toFixed(0) + ' / ' + capacidadBancoAh.toFixed(0) + ' Ah'
+      : (capacidadAh !== null ? capacidadAh.toFixed(0) + ' Ah' : 'Sin medir'));
+    setText('autonomia', horasAutonomia !== null ? formatHoras(horasAutonomia) : '--');
     setText('ciclos', ciclos !== null ? ciclos.toFixed(1) : '--');
     setText('horasGenerador', horasGenerador !== null ? horasGenerador.toFixed(1) + ' h' : '--');
 
