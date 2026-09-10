@@ -40,11 +40,11 @@
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista concreta (y solo esa) se sube a un servidor para poder sincronizarla en tiempo real con quien se la mandes. No hay cuentas, ni registro, ni venta de datos a nadie. La versión gratuita muestra un banner de anuncios no personalizados, que la compra Pro elimina.</p>
+    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista concreta (y solo esa) se sube a un servidor para poder sincronizarla en tiempo real con quien se la mandes. Y si usas el lector de fechas de caducidad, la foto que haces pasa por un servidor nuestro camino de Google, y se descarta ahí mismo. No hay cuentas, ni registro, ni venta de datos a nadie. La versión gratuita muestra un banner de anuncios no personalizados, que la compra Pro elimina.</p>
   </div>
 
   <h2>Qué datos se guardan y dónde</h2>
-  <p>Mi Lista guarda tus listas de la compra, recados y quehaceres localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente "Compartir" en una lista concreta.</p>
+  <p>Mi Lista guarda tus listas de la compra y tus listas de tareas localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente "Compartir" en una lista concreta.</p>
   <ul>
     <li>Al compartir una lista, su contenido (nombre y artículos) se guarda en Firebase Firestore (Google) para que se sincronice en tiempo real entre los dispositivos que se unan a ella.</li>
     <li>Solo se sube la lista que decides compartir, nunca el resto de tus listas.</li>
@@ -52,23 +52,27 @@
   </ul>
 
   <h2>Compras dentro de la app</h2>
-  <p>La sincronización en la nube es una función de pago (1 mes de prueba gratis y después un pago único), gestionada mediante RevenueCat sobre el sistema de compras de Apple (en iPhone y iPad) o de Google Play (en Android). RevenueCat procesa el estado de la compra pero no recibe el contenido de tus listas.</p>
+  <p>La versión Pro (1 mes de prueba gratis y después un pago único, sin suscripción) añade tres cosas: la pestaña de Tareas, compartir listas y sincronizarlas en tiempo real, y quitar los anuncios. La versión gratuita se queda en la lista de la compra, con una lista activa a la vez. La compra se gestiona mediante RevenueCat sobre el sistema de pagos de Apple (en iPhone y iPad) o de Google Play (en Android). RevenueCat procesa el estado de la compra pero no recibe el contenido de tus listas.</p>
 
   <h2>Fotos de fechas de caducidad</h2>
-  <p>En la despensa puedes ponerle a un producto su fecha de caducidad. Puedes escribirla a mano, o hacerle una foto al envase para que la app la lea por ti. Si eliges la foto, esa imagen se envía a la API de Gemini de Google, que devuelve únicamente la fecha que ha encontrado. La foto no se guarda en ningún servidor, ni nuestro ni de terceros, y no se usa para nada más. Es una función opcional: la app funciona igual escribiendo la fecha a mano.</p>
+  <p>En la despensa puedes ponerle a un producto su fecha de caducidad. Puedes escribirla a mano, o hacerle una foto al envase para que la app la lea por ti.</p>
+  <p>Si eliges la foto, esa imagen se envía a una función de servidor que gestionamos nosotros (alojada en Supabase), y es esa función la que se la pasa a la API de Gemini de Google y te devuelve únicamente la fecha que ha encontrado. La foto va por ahí, y no directamente a Google, para no tener que llevar la clave de Gemini dentro de la app. <strong>La foto no se guarda en ningún sitio</strong> — ni en nuestro servidor ni en ninguna base de datos: se descarta en cuanto se devuelve la fecha.</p>
+  <p>Lo único que ese servidor sí anota es la dirección IP desde la que llega cada lectura, junto al número de lecturas de la hora en curso, para poder cortar los abusos. No se asocia a tus listas ni a ningún otro dato tuyo, porque la app no guarda ninguno.</p>
+  <p>Es una función opcional: la app funciona igual escribiendo la fecha a mano, y no se envía nada a ninguna parte salvo que pulses tú ese botón.</p>
 
   <h2>Anuncios</h2>
   <p>La versión gratuita muestra un banner de Google AdMob. Son anuncios no personalizados. Para servirlos, AdMob usa el identificador de publicidad del dispositivo, que no va asociado a tu nombre ni a ningún dato tuyo, porque la app no recoge ninguno. La compra Pro quita los anuncios por completo.</p>
 
   <h2>Notificaciones</h2>
-  <p>Los recordatorios que programas se gestionan de forma local en tu propio dispositivo — no se envían a ningún servidor.</p>
+  <p>Todas las notificaciones de la app son locales: las programa tu propio dispositivo y no pasan por ningún servidor. Hay tres clases: los recordatorios que pones tú en una lista, dos avisos al día para que apuntes lo que se te haya terminado en la despensa, y un aviso semanal para recordarte ir a la compra. Los avisos automáticos se pueden apagar desde los Ajustes de la app.</p>
 
   <h2>Terceros</h2>
   <ul>
     <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase / Google Cloud</a> — sincronización de listas compartidas.</li>
     <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — gestión de la compra de la sincronización.</li>
     <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a> — anuncios de la versión gratuita.</li>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini</a> — lectura de la fecha de caducidad de una foto, solo si usas esa función.</li>
+    <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> — aloja la función de servidor por la que pasa la foto de la fecha de caducidad, y donde se guarda el contador de lecturas por IP.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini</a> — lee la fecha de la foto que le reenvía esa función, solo si usas esa función.</li>
   </ul>
 
   <h2>Contacto y soporte</h2>
