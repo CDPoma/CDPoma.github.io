@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt AI — Soporte y privacidad</title>
+<style>
+  :root{
+    --base:#0B0C10; --surface:#191B23; --raised:#22242F; --line:#2C2F3B;
+    --ink:#F2F1F7; --ink-dim:#9A9AAB; --accent:#9C8FFF;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --base:#F7F6FB; --surface:#FFFFFF; --raised:#FFFFFF; --line:#E2E0EC;
+      --ink:#191B23; --ink-dim:#63636F; --accent:#6B5BE0;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--base);color:var(--ink);margin:0;
+       font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-family:'Unbounded','Inter',system-ui,sans-serif;font-size:2.1rem;font-weight:700;margin:0 0 .3rem;
+     background:linear-gradient(90deg,#9C8FFF,#C08CFF,#F857A6);-webkit-background-clip:text;
+     background-clip:text;-webkit-text-fill-color:transparent;text-wrap:balance}
+  .sub{color:var(--ink-dim);margin:0 0 2.5rem}
+  h2{font-size:1.25rem;margin:2.4rem 0 .7rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  .card{background:var(--raised);border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.5rem;margin:0 0 1.5rem}
+  a{color:var(--accent)}
+  code{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:.1rem .35rem;font-size:.9em}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-dim);font-size:.92rem}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@400;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <h1>Prompt AI</h1>
+  <p class="sub">Soporte y privacidad</p>
+
+  <div class="card">
+    <p><strong>Resumen rápido:</strong> sin cuenta, la app funciona entera y todo se queda en tu dispositivo. Solo si creas una cuenta y compartes un proyecto sale algo de ahí. El texto que escribes para generar un prompt pasa por un servidor nuestro camino de Google, y no se guarda. No hay publicidad, ni seguimiento, ni analítica, ni compras dentro de la app.</p>
+  </div>
+
+  <h2>Qué datos se guardan y dónde</h2>
+  <p>Prompt AI guarda tus proyectos, tus notas y tus prompts en tu propio dispositivo. Esa información no sale de ahí salvo que hagas dos cosas concretas: crear una cuenta, o compartir algo a propósito.</p>
+  <ul>
+    <li><strong>Sin cuenta:</strong> todo es local. No se sube nada a ningún servidor.</li>
+    <li><strong>Con cuenta:</strong> se guardan tu correo y el alias que elijas, en Firebase (Google). Sirven para identificarte dentro de un proyecto compartido.</li>
+    <li><strong>Proyecto compartido:</strong> su contenido se guarda en Firebase para que se sincronice entre quienes tengan el código de invitación. Solo el proyecto que conviertes en compartido, nunca el resto.</li>
+    <li><strong>Compartir una nota o un prompt por enlace:</strong> se guarda una copia de solo lectura para que quien reciba el enlace pueda abrirla.</li>
+  </ul>
+
+  <h2>La generación de prompts</h2>
+  <p>Cuando escribes una idea y pulsas para generar, ese texto se envía a una función de servidor que gestionamos nosotros (alojada en Supabase), y es esa función la que se lo pasa a la API de Gemini de Google y te devuelve el prompt ordenado.</p>
+  <p>Va por ahí, y no directamente a Google, para no tener que llevar la clave de Gemini dentro de la app. <strong>Tu texto no se guarda en ningún sitio</strong>: ni en ese servidor ni en ninguna base de datos nuestra. Se descarta en cuanto se devuelve el resultado.</p>
+  <p>Google trata esos datos según sus condiciones para desarrolladores, así que <strong>no escribas ahí información confidencial o datos personales de otras personas</strong>. Si no usas esa función, no se envía nada.</p>
+
+  <h2>Lo que la app NO hace</h2>
+  <ul>
+    <li>No lleva publicidad ni sistemas de seguimiento.</li>
+    <li>No tiene analítica: no registramos qué haces dentro de la app.</li>
+    <li>No vendemos ni cedemos tus datos a nadie.</li>
+    <li>No tiene compras dentro de la app. Es gratis y completa.</li>
+    <li>No pide acceso a la cámara, el micrófono, los contactos ni la ubicación. Si dictas, lo hace el teclado de tu propio dispositivo.</li>
+  </ul>
+
+  <h2>Borrar tu cuenta y tus datos</h2>
+  <p>Desde la app: <strong>Perfil → Borrar mi cuenta</strong>. Te pedirá la contraseña y borrará tu cuenta y tu perfil. Los proyectos compartidos de los que seas dueño se eliminan con todo su contenido; de aquellos en los que solo colaborabas, sales tú y los demás los conservan.</p>
+  <p>Lo que esté guardado únicamente en el dispositivo desaparece al desinstalar la app.</p>
+  <p>Si no puedes acceder a la app, escribe a la dirección de abajo indicando el correo de tu cuenta y la borraremos.</p>
+
+  <h2>Cuánto tiempo se guarda</h2>
+  <p>Los datos de tu cuenta, mientras la cuenta exista. En los proyectos compartidos se conservan los <strong>300 prompts más recientes</strong> de cada proyecto; los más antiguos se borran solos. Las notas no se borran automáticamente.</p>
+
+  <h2>Menores</h2>
+  <p>La app no está dirigida a menores de 13 años y no recoge datos de ellos a sabiendas.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes acceder, rectificar, portar o suprimir tus datos, y presentar una reclamación ante la Agencia Española de Protección de Datos. La base legal del tratamiento es la ejecución del servicio que solicitas al crear una cuenta.</p>
+
+  <h2>Con quién se comparten</h2>
+  <p>Solo con los servicios necesarios para que la app funcione: Firebase de Google (cuentas y sincronización) y la API de Gemini de Google, a través de nuestro servidor en Supabase. No hay más terceros.</p>
+
+  <h2>Soporte</h2>
+  <p>¿Algo no funciona, o se te ocurre algo que falta? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <p class="foot">Última actualización: 11 de septiembre de 2026 · Prompt AI</p>
+</div>
+</body>
+</html>
