@@ -210,7 +210,7 @@
   /* --- Diagrama de flujo de la ficha central --- */
   .flujo-diagrama { width: 100%; }
   .flujo-diagrama svg { width: 100%; height: 100%; display: block; }
-  .flujo-diagrama .ln { stroke: #1e293b; stroke-width: 2.5; }
+  .flujo-diagrama .ln { stroke: #1e293b; stroke-width: 3; }
   .flujo-diagrama .ln.on-amber { stroke: #fbbf24; }
   .flujo-diagrama .ln.on-emerald { stroke: #34d399; }
   .flujo-diagrama .ln.on-sky { stroke: #38bdf8; }
@@ -218,9 +218,9 @@
   .flujo-diagrama .nodo { fill: rgba(15,23,42,0.9); stroke: #1e293b; stroke-width: 2; }
   .flujo-diagrama .nodo.viva { stroke-width: 2.5; }
   .flujo-diagrama .nodo-centro { fill: #334155; }
-  .flujo-diagrama .ico { font-size: 17px; text-anchor: middle; }
-  .flujo-diagrama .et { font-size: 8.5px; fill: #64748b; text-anchor: middle; letter-spacing: .5px; }
-  .flujo-diagrama .vl { font-size: 11px; font-weight: 700; text-anchor: middle; fill: #f1f5f9; }
+  .flujo-diagrama .ico { font-size: 26px; text-anchor: middle; }
+  .flujo-diagrama .et { font-size: 11px; fill: #64748b; text-anchor: middle; letter-spacing: .5px; }
+  .flujo-diagrama .vl { font-size: 15px; font-weight: 700; text-anchor: middle; fill: #f1f5f9; }
   .flujo-diagrama .vl.amber { fill: #fbbf24; }
   .flujo-diagrama .vl.emerald { fill: #34d399; }
   .flujo-diagrama .vl.sky { fill: #38bdf8; }
@@ -285,28 +285,34 @@
             Sol arriba, red/generador a la izquierda, casa a la derecha, batería abajo.
           -->
           <div class="flujo-diagrama">
-            <svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid meet">
-              <line id="ln-solar" x1="130" y1="100" x2="130" y2="40" class="ln"/>
-              <line id="ln-red"   x1="130" y1="100" x2="40"  y2="140" class="ln"/>
-              <line id="ln-casa"  x1="130" y1="100" x2="220" y2="140" class="ln"/>
-              <line id="ln-bat"   x1="130" y1="100" x2="130" y2="168" class="ln"/>
-              <circle cx="130" cy="100" r="9" class="nodo-centro"/>
-              <circle id="nd-solar" cx="130" cy="40"  r="20" class="nodo"/>
-              <circle id="nd-red"   cx="40"  cy="140" r="20" class="nodo"/>
-              <circle id="nd-casa"  cx="220" cy="140" r="20" class="nodo"/>
-              <circle id="nd-bat"   cx="130" cy="168" r="20" class="nodo"/>
-              <text x="130" y="46" class="ico">&#9728;</text>
-              <text x="40"  y="146" class="ico">&#9889;</text>
-              <text x="220" y="146" class="ico">&#127968;</text>
-              <text x="130" y="174" class="ico">&#128267;</text>
-              <text x="130" y="14"  class="et">SOLAR</text>
-              <text id="tx-solar" x="130" y="28" class="vl amber">-- W</text>
-              <text x="40"  y="181" class="et">RED/GEN</text>
-              <text id="tx-red" x="40" y="195" class="vl emerald">--</text>
-              <text x="220" y="181" class="et">CASA</text>
-              <text id="tx-casa" x="220" y="195" class="vl sky">-- W</text>
-              <text x="70"  y="168" class="et">BATER&#205;A</text>
-              <text id="tx-bat" x="70" y="182" class="vl" >-- W</text>
+            <!--
+              Mismas coordenadas que `EnergyFlowDiagram.tsx` de la app: lienzo 320x270, centro en
+              (160,135) y los cuatro nodos en cuadrado — solar arriba izquierda, casa arriba derecha,
+              bateria abajo izquierda, generador abajo derecha. Que esten en el mismo sitio que en el
+              movil no es capricho: se mira igual y se lee sin pensar.
+            -->
+            <svg viewBox="0 0 320 270" preserveAspectRatio="xMidYMid meet">
+              <line id="ln-solar" x1="89"  y1="64"  x2="160" y2="135" class="ln"/>
+              <line id="ln-casa"  x1="160" y1="135" x2="231" y2="64"  class="ln"/>
+              <line id="ln-bat"   x1="89"  y1="206" x2="160" y2="135" class="ln"/>
+              <line id="ln-red"   x1="231" y1="206" x2="160" y2="135" class="ln"/>
+              <circle cx="160" cy="135" r="10" class="nodo-centro"/>
+              <circle id="nd-solar" cx="89"  cy="64"  r="32" class="nodo"/>
+              <circle id="nd-casa"  cx="231" cy="64"  r="32" class="nodo"/>
+              <circle id="nd-bat"   cx="89"  cy="206" r="32" class="nodo"/>
+              <circle id="nd-red"   cx="231" cy="206" r="32" class="nodo"/>
+              <text x="89"  y="72"  class="ico">&#9728;</text>
+              <text x="231" y="72"  class="ico">&#127968;</text>
+              <text x="89"  y="214" class="ico">&#128267;</text>
+              <text x="231" y="214" class="ico">&#9889;</text>
+              <text x="89"  y="20"  class="et">SOLAR</text>
+              <text id="tx-solar" x="89" y="34" class="vl amber">-- W</text>
+              <text x="231" y="20"  class="et">CASA</text>
+              <text id="tx-casa" x="231" y="34" class="vl sky">-- W</text>
+              <text x="89"  y="254" class="et">BATER&#205;A</text>
+              <text id="tx-bat" x="89" y="268" class="vl">-- W</text>
+              <text x="231" y="254" class="et">RED/GEN</text>
+              <text id="tx-red" x="231" y="268" class="vl emerald">--</text>
             </svg>
           </div>
           <div class="flujo-principal">
