@@ -169,10 +169,15 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 10px;
       flex: 1;
       min-height: 0;
     }
+    /* El diagrama se lleva la mitad de alto de la ficha; los números, el resto. */
+    .card-flujo .flujo-diagrama { flex: 1 1 0; min-height: 0; }
+    .card-flujo .flujo-horas { font-size: 44px; }
+    .card-flujo .flujo-kwh { font-size: 19px; margin-top: 2px; }
+    .card-flujo .flujo-pie { font-size: 11px; margin-top: 4px; }
     .card-flujo .flujo-principal { display: flex; flex-direction: column; align-items: center; }
     .card-flujo .flujo-horas {
       font-size: 62px;
@@ -201,6 +206,25 @@
   .card-flujo .flujo-dato { display: flex; justify-content: space-between; font-size: 12px; padding: 1px 0; }
   .card-flujo .flujo-dato .k { color: #94a3b8; }
   .card-flujo .flujo-dato .v { font-weight: 700; color: #f1f5f9; }
+
+  /* --- Diagrama de flujo de la ficha central --- */
+  .flujo-diagrama { width: 100%; }
+  .flujo-diagrama svg { width: 100%; height: 100%; display: block; }
+  .flujo-diagrama .ln { stroke: #1e293b; stroke-width: 2.5; }
+  .flujo-diagrama .ln.on-amber { stroke: #fbbf24; }
+  .flujo-diagrama .ln.on-emerald { stroke: #34d399; }
+  .flujo-diagrama .ln.on-sky { stroke: #38bdf8; }
+  .flujo-diagrama .ln.on-red { stroke: #f87171; }
+  .flujo-diagrama .nodo { fill: rgba(15,23,42,0.9); stroke: #1e293b; stroke-width: 2; }
+  .flujo-diagrama .nodo.viva { stroke-width: 2.5; }
+  .flujo-diagrama .nodo-centro { fill: #334155; }
+  .flujo-diagrama .ico { font-size: 17px; text-anchor: middle; }
+  .flujo-diagrama .et { font-size: 8.5px; fill: #64748b; text-anchor: middle; letter-spacing: .5px; }
+  .flujo-diagrama .vl { font-size: 11px; font-weight: 700; text-anchor: middle; fill: #f1f5f9; }
+  .flujo-diagrama .vl.amber { fill: #fbbf24; }
+  .flujo-diagrama .vl.emerald { fill: #34d399; }
+  .flujo-diagrama .vl.sky { fill: #38bdf8; }
+  .flujo-diagrama .vl.red { fill: #f87171; }
 </style>
 </head>
 <body>
@@ -233,15 +257,19 @@
         </div>
       </div>
 
-      <div class="card" data-card="consumo">
-        <div class="card-head"><div class="card-icon">🏠</div><div class="card-label">Consumo</div></div>
-        <span class="card-valor sky" id="consumo">--</span><span class="card-unidad">W</span>
-        <canvas id="chart-consumo" width="220" height="40"></canvas>
-        <div class="tabs" data-tabs="consumo">
+      <div class="card" data-card="bateria">
+        <div class="card-head"><div class="card-icon">🔋</div><div class="card-label">Batería</div></div>
+        <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
+        <canvas id="chart-bateria" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="bateria">
           <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
         </div>
         <div class="stats">
-          <div class="fila2"><span class="k">Consumido hoy</span><span class="v" id="consumoKwh">-- kWh</span></div>
+          <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
+          <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
+          <div class="fila2"><span class="k">Quedan</span><span class="v" id="capacidadAh">-- Ah</span></div>
+          <div class="fila2"><span class="k">Autonom&iacute;a</span><span class="v" id="autonomia">--</span></div>
+          <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
         </div>
       </div>
 
@@ -251,6 +279,36 @@
       <div class="card card-flujo" data-card="flujo">
         <div class="card-head"><div class="card-icon">&#9203;</div><div class="card-label">Autonom&iacute;a restante</div></div>
         <div class="flujo-cuerpo">
+          <!--
+            El diagrama de flujo, igual que la cara delantera de la app: cuatro nodos alrededor de un
+            centro, y las líneas se encienden en la dirección en la que va la energía ahora mismo.
+            Sol arriba, red/generador a la izquierda, casa a la derecha, batería abajo.
+          -->
+          <div class="flujo-diagrama">
+            <svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid meet">
+              <line id="ln-solar" x1="130" y1="100" x2="130" y2="40" class="ln"/>
+              <line id="ln-red"   x1="130" y1="100" x2="40"  y2="140" class="ln"/>
+              <line id="ln-casa"  x1="130" y1="100" x2="220" y2="140" class="ln"/>
+              <line id="ln-bat"   x1="130" y1="100" x2="130" y2="168" class="ln"/>
+              <circle cx="130" cy="100" r="9" class="nodo-centro"/>
+              <circle id="nd-solar" cx="130" cy="40"  r="20" class="nodo"/>
+              <circle id="nd-red"   cx="40"  cy="140" r="20" class="nodo"/>
+              <circle id="nd-casa"  cx="220" cy="140" r="20" class="nodo"/>
+              <circle id="nd-bat"   cx="130" cy="168" r="20" class="nodo"/>
+              <text x="130" y="46" class="ico">&#9728;</text>
+              <text x="40"  y="146" class="ico">&#9889;</text>
+              <text x="220" y="146" class="ico">&#127968;</text>
+              <text x="130" y="174" class="ico">&#128267;</text>
+              <text x="130" y="14"  class="et">SOLAR</text>
+              <text id="tx-solar" x="130" y="28" class="vl amber">-- W</text>
+              <text x="40"  y="181" class="et">RED/GEN</text>
+              <text id="tx-red" x="40" y="195" class="vl emerald">--</text>
+              <text x="220" y="181" class="et">CASA</text>
+              <text id="tx-casa" x="220" y="195" class="vl sky">-- W</text>
+              <text x="70"  y="168" class="et">BATER&#205;A</text>
+              <text id="tx-bat" x="70" y="182" class="vl" >-- W</text>
+            </svg>
+          </div>
           <div class="flujo-principal">
             <span class="flujo-horas" id="flujoHoras">--</span>
             <span class="flujo-kwh" id="flujoKwh">-- kWh</span>
@@ -267,19 +325,15 @@
     </div>
     <div class="fila">
 
-      <div class="card" data-card="bateria">
-        <div class="card-head"><div class="card-icon">🔋</div><div class="card-label">Batería</div></div>
-        <span class="card-valor" id="soc">--</span><span class="card-unidad">%</span>
-        <canvas id="chart-bateria" width="220" height="40"></canvas>
-        <div class="tabs" data-tabs="bateria">
+      <div class="card" data-card="consumo">
+        <div class="card-head"><div class="card-icon">🏠</div><div class="card-label">Consumo</div></div>
+        <span class="card-valor sky" id="consumo">--</span><span class="card-unidad">W</span>
+        <canvas id="chart-consumo" width="220" height="40"></canvas>
+        <div class="tabs" data-tabs="consumo">
           <span class="tab tab-on" data-tf="dia">Día</span><span class="tab" data-tf="semana">Sem</span><span class="tab" data-tf="mes">Mes</span><span class="tab" data-tf="anio">Año</span>
         </div>
         <div class="stats">
-          <div class="fila2"><span class="k">Voltaje</span><span class="v" id="voltaje">-- V</span></div>
-          <div class="fila2"><span class="k" id="corrienteLabel">Carga</span><span class="v" id="corriente">-- A</span></div>
-          <div class="fila2"><span class="k">Quedan</span><span class="v" id="capacidadAh">-- Ah</span></div>
-          <div class="fila2"><span class="k">Autonom&iacute;a</span><span class="v" id="autonomia">--</span></div>
-          <div class="fila2"><span class="k">Ciclos</span><span class="v" id="ciclos">--</span></div>
+          <div class="fila2"><span class="k">Consumido hoy</span><span class="v" id="consumoKwh">-- kWh</span></div>
         </div>
       </div>
 
@@ -616,6 +670,37 @@
       ? ahRestantes.toFixed(0) + ' / ' + capacidadBancoAh.toFixed(0) + ' Ah'
       : '-- Ah');
     setText('flujoGen', horasGen !== null ? formatHoras(horasGen) : '--');
+
+    /*
+     * Diagrama de flujo: cada línea se enciende en el color de por donde va la energía AHORA.
+     *
+     * Mismo criterio que la app: el sol y la red entran al centro, la casa sale del centro, y la
+     * batería o entra (cargando, verde) o sale (descargando, rojo). Una línea apagada significa
+     * cero vatios por ahí, no un fallo.
+     */
+    var UMBRAL_W = 5;
+    var cargando = cargaA !== null && cargaA > 0.2 && (descargaA === null || descargaA <= 0.5);
+    var batW = voltaje !== null && cargaA !== null && descargaA !== null
+      ? Math.round(Math.abs((cargando ? cargaA : descargaA)) * voltaje)
+      : null;
+    var hayRed = gridVoltage !== null && gridVoltage > 30;
+
+    function pintaLinea(id, encendida, clase) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.setAttribute('class', 'ln' + (encendida ? ' ' + clase : ''));
+    }
+    pintaLinea('ln-solar', (solar || 0) > UMBRAL_W, 'on-amber');
+    pintaLinea('ln-red', hayRed, 'on-emerald');
+    pintaLinea('ln-casa', (consumo || 0) > UMBRAL_W, 'on-sky');
+    pintaLinea('ln-bat', (batW || 0) > UMBRAL_W, cargando ? 'on-emerald' : 'on-red');
+
+    setText('tx-solar', (solar !== null ? Math.round(solar).toLocaleString('es-ES') : '--') + ' W');
+    setText('tx-red', hayRed ? gridVoltage.toFixed(0) + ' V' : 'Sin red');
+    setText('tx-casa', (consumo !== null ? Math.round(consumo).toLocaleString('es-ES') : '--') + ' W');
+    setText('tx-bat', (batW !== null ? batW.toLocaleString('es-ES') : '--') + ' W');
+    var txBat = document.getElementById('tx-bat');
+    if (txBat) txBat.setAttribute('class', 'vl ' + (cargando ? 'emerald' : 'red'));
     setText('ciclos', ciclos !== null ? ciclos.toFixed(1) : '--');
     setText('horasGenerador', horasGenerador !== null ? horasGenerador.toFixed(1) + ' h' : '--');
 
