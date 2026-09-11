@@ -758,10 +758,36 @@
     xhr.send();
   }
 
+  /*
+   * Con la pestaña detrás, esta página no gasta NADA.
+   *
+   * Antes el ciclo corría cada diez segundos para siempre: una pestaña olvidada en el portátil
+   * escribía 8.640 veces al día —el 43 % de la cuota diaria, que comparten todas las apps— sin que
+   * nadie mirase. Mandaba `enPrimerPlano: false`, sí, pero mandarlo también es escribir.
+   *
+   * Ahora: visible, ciclo normal; oculta, ni un aviso ni una lectura.
+   */
   function ciclo() {
+    if (document.visibilityState !== 'visible') return;
     avisarPresencia();
     cargar();
   }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') {
+      /*
+       * Volver a mirar estrena sesión: es lo que hace que la estación publique al instante en vez de
+       * esperar a su siguiente turno, así que al volver hay dato fresco enseguida y no una pantalla
+       * con lo de hace rato.
+       */
+      SESION = String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+      ciclo();
+      return;
+    }
+    // Un ÚNICO aviso de "me voy" al irse. Esa escritura se paga una vez y a cambio la estación deja
+    // de publicar al momento, en lugar de seguir a todo ritmo hasta que caduque el visor (60 s).
+    avisarPresencia();
+  });
 
   ciclo();
   setInterval(ciclo, REFRESCO_MS);
