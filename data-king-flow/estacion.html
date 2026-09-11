@@ -366,7 +366,30 @@
   var CODIGO = 'ESTFLW';
   var URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow/' + CODIGO;
   var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista&updateMask.fieldPaths=enPrimerPlano&updateMask.fieldPaths=sesion';
-  var REFRESCO_MS = 10000;
+  /*
+   * LA RAMPA. Arranca preguntando cada 2 segundos y cada 10 segundos de pestaña abierta espera un
+   * segundo más, hasta los diez minutos.
+   *
+   * Cada vuelta cuesta una escritura (el aviso de presencia) y una lectura (el dato). A ritmo fijo de
+   * 10 segundos eran 360 escrituras por hora — y con la estación publicando ya en rampa, el aviso
+   * salía cuatro veces más caro que los datos que venía a buscar. Peor aún: una pestaña dejada de
+   * adorno en la pared costaba lo mismo que alguien mirando de verdad.
+   *
+   * Sube tan despacio que mirando no se nota —a los dos minutos va por 14 segundos— y quien abre la
+   * página, mira y la cierra vive siempre en los primeros peldaños. Cambiar de pestaña y volver la
+   * devuelve al principio, igual que cerrar y abrir la app en el móvil.
+   */
+  var REFRESCO_INICIAL_MS = 2000;
+  var PELDANO_CADA_MS = 10000;
+  var PELDANO_MS = 1000;
+  var REFRESCO_MAXIMO_MS = 600000;
+  var visitaDesde = Date.now();
+
+  function refrescoAhora() {
+    var abierto = Date.now() - visitaDesde;
+    var subida = Math.floor(abierto / PELDANO_CADA_MS) * PELDANO_MS;
+    return Math.min(REFRESCO_MAXIMO_MS, REFRESCO_INICIAL_MS + subida);
+  }
   /** Identifica esta apertura de la página: la estación lo usa para volver a publicar al segundo. */
   var SESION = String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
 
@@ -781,6 +804,8 @@
        * con lo de hace rato.
        */
       SESION = String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+      // Volver a la pestaña devuelve la rampa al principio: es la misma regla que en las apps.
+      visitaDesde = Date.now();
       ciclo();
       return;
     }
@@ -789,8 +814,19 @@
     avisarPresencia();
   });
 
+  /*
+   * Temporizador que se reprograma solo, en vez de un `setInterval` fijo: el peldaño cambia con el
+   * rato que lleve abierta, así que cada vuelta decide cuándo es la siguiente.
+   */
+  function programar() {
+    setTimeout(function () {
+      ciclo();
+      programar();
+    }, refrescoAhora());
+  }
+
   ciclo();
-  setInterval(ciclo, REFRESCO_MS);
+  programar();
 })();
 </script>
 </body>
