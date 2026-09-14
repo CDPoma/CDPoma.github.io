@@ -49,7 +49,7 @@
     <li><strong>Tu alias, si pones uno.</strong> Es el nombre con el que te ven en los proyectos compartidos. Es opcional y se guarda en Firebase. Si no pones ninguno, apareces como «Anónimo».</li>
     <li><strong>Los proyectos que compartes</strong> (Pro). Al compartir un proyecto, su nombre, sus notas y sus prompts se guardan en Cloud Firestore (Google), junto con el alias y el identificador anónimo de quien escribió cada cosa. Así se sincroniza entre sus miembros. Solo pueden leerlo quienes hayan entrado con su código de seis caracteres. El resto de tus proyectos se queda en tu dispositivo.</li>
     <li><strong>Las notas o prompts que compartes por enlace.</strong> Se guarda una copia de solo lectura, con el título y el texto, para que quien reciba el enlace pueda abrirla. Puede verla cualquiera que tenga el enlace.</li>
-    <li><strong>Las denuncias.</strong> Si denuncias un contenido, se guarda para revisarla: una copia de ese contenido tal como estaba, el motivo, y los identificadores anónimos y alias de quien lo escribió y de quien lo denuncia.</li>
+    <li><strong>Las denuncias.</strong> Si denuncias un contenido, deja de verse en tu dispositivo y queda un registro de la denuncia: una copia de ese contenido tal como estaba, el motivo, y los identificadores anónimos y alias de quien lo escribió y de quien lo denuncia. Nadie revisa las denuncias una a una; el registro sirve para atender una reclamación si llega.</li>
   </ul>
 
   <h2>La generación de prompts</h2>
@@ -97,7 +97,7 @@
   <ul>
     <li><strong>Proyectos compartidos:</strong> hasta que se borren. De cada uno se conservan los <strong>300 prompts más recientes</strong>, y los más antiguos se borran solos. Las notas no se borran automáticamente.</li>
     <li><strong>Copias por enlace:</strong> hasta que nos pidas retirarlas.</li>
-    <li><strong>Denuncias:</strong> el tiempo necesario para revisarlas.</li>
+    <li><strong>Denuncias:</strong> hasta que nos pidas borrarlas, o mientras hagan falta para atender una reclamación sobre ese contenido.</li>
   </ul>
 
   <h2>Menores</h2>
