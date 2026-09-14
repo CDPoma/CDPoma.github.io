@@ -43,39 +43,48 @@
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> no se recoge ningún dato personal. Tus rutinas, tus pesos y tu historial se guardan solo en tu teléfono. No hay cuenta, ni registro, ni servidor nuestro donde acabe nada tuyo.</p>
+    <p><strong>Resumen rápido:</strong> no hay cuentas ni registro. Tus rutinas, tus pesos y tu historial se guardan en tu teléfono. Solo sale algo de él en tres casos: los anuncios de la versión gratuita (Google AdMob), la suscripción Pro (RevenueCat, con Apple o Google) y, si eres Pro y usas <strong>Compañeros</strong>, lo que compartes con quien tenga tu código. Los datos de Apple Salud no salen nunca de tu dispositivo.</p>
   </div>
 
   <h2>Qué hace la app</h2>
-  <p>GymFuel te arma la rutina del día: eliges qué músculos quieres entrenar y con cuánta intensidad, y la app calcula los ejercicios, las series y el peso que te toca, a partir de tus máximos y de lo que llevas entrenado. Vas anotando el peso real que has movido y ella ajusta las sesiones siguientes. Incluye historial, calendario de entrenamiento y diagramas de cada ejercicio.</p>
+  <p>GymFuel te arma la rutina: eliges qué músculos quieres entrenar y con cuánta intensidad, y la app calcula los ejercicios, las series y el peso que te toca, a partir de tus máximos y de lo que llevas entrenado. Incluye diagramas de cada ejercicio y puntos Fuel. Con <strong>GymFuel Pro</strong> (suscripción de 1,99 €/mes o 14,99 €/año) tienes planes largos con calendario, elección de material, intensidad Hardcore, historial completo, Compañeros, el Apple Watch (en iPhone) y sin anuncios.</p>
 
   <h2>Qué datos se guardan y dónde</h2>
-  <p>No se pide ni se guarda nombre, correo, contraseña ni ningún dato que te identifique. La app no tiene cuentas.</p>
-  <p>Lo que anotas —tu perfil de entrenamiento, tus máximos, el programa generado y el historial de sesiones— se guarda <strong>en el almacenamiento local de tu propio dispositivo</strong>, con el sistema de preferencias del teléfono. No se sube a ningún servidor, ni nuestro ni de terceros. Si desinstalas la app, esos datos desaparecen contigo; no tenemos copia.</p>
-  <p>Los datos de peso corporal, altura o medidas que introduzcas para calcular tus porcentajes no salen del teléfono en ningún momento.</p>
+  <p><strong>En tu teléfono.</strong> Tu perfil de entrenamiento, tus máximos, el programa generado, el historial de sesiones y tus puntos Fuel se guardan en el almacenamiento local del dispositivo. No se suben a ningún servidor. Si desinstalas la app, desaparecen; no tenemos copia.</p>
+  <p><strong>Apple Watch y Salud</strong> (solo iPhone, Pro, con tu permiso). Durante el entrenamiento el reloj lee tus pulsaciones y la energía activa y guarda el entreno en Apple Salud. Esos datos pasan del reloj a tu iPhone y se quedan en tu dispositivo y en Salud: no se envían a ningún servidor, no se comparten en Compañeros y no se usan para publicidad.</p>
+  <p><strong>Compañeros</strong> (Pro y opcional). Solo si añades al menos un compañero, al entrenar se publica en Google Firebase (Cloud Firestore) una ficha ligada a tu código aleatorio de 6 caracteres, sin cuenta, correo ni teléfono. Lleva el nombre o apodo que elijas (si no pones ninguno, tu código), el plan del día (nombre de cada ejercicio, series y kilos) y por dónde vas (ejercicio, serie, kilos, descanso y hora de la última actualización). La puede ver cualquiera que tenga tu código. No incluye pulsaciones, calorías ni ningún dato de Salud.</p>
 
   <h2>Servicios de terceros</h2>
   <table>
     <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
     <tbody>
-      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Muestra un banner de publicidad en la versión gratuita. Puede usar el identificador publicitario del dispositivo para servir el anuncio, sujeto a los ajustes de seguimiento de tu sistema operativo. No recibe ninguno de tus datos de entrenamiento.</td></tr>
-      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple / Google</td><td>Gestiona la compra opcional de pago único que quita los anuncios. Solo procesa el estado de la compra.</td></tr>
+      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Muestra un banner de publicidad en la versión gratuita. Antes pide tu consentimiento (formulario de Google en el Espacio Económico Europeo, Reino Unido y Suiza) y, en iPhone, el permiso de rastreo de Apple. Si no lo das, los anuncios siguen, pero sin personalizar. No recibe tus datos de entrenamiento ni de Salud.</td></tr>
+      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple / Google</td><td>Gestiona la suscripción Pro: comprobar si está activa y restaurarla. Solo procesa el estado de la compra; el pago lo hace Apple o Google.</td></tr>
+      <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a></td><td>Solo para Compañeros: guarda y reparte la ficha descrita arriba entre quienes tienen tu código.</td></tr>
     </tbody>
   </table>
 
+  <h2>Borrar tus datos</h2>
+  <ul>
+    <li><strong>Lo del teléfono:</strong> se borra al desinstalar la app.</li>
+    <li><strong>Salud:</strong> los entrenos guardados se gestionan y se borran desde la app Salud de tu iPhone.</li>
+    <li><strong>Compañeros:</strong> si quitas a todos tus compañeros, la app deja de publicar. Para borrar la ficha que ya esté publicada, escríbenos con tu código a la dirección de abajo y la borramos.</li>
+  </ul>
+  <p>La ficha de Compañeros se reescribe en cada entrenamiento y se guarda hasta que pidas borrarla.</p>
+
   <h2>Permisos</h2>
-  <p>La app no pide permiso de cámara, micrófono, ubicación, contactos, fotos ni salud. No lee datos de Apple Salud ni de Google Fit.</p>
+  <p>En iPhone, solo si usas el Apple Watch, la app pide permiso para leer pulsaciones y energía activa y para guardar entrenos en Salud. No pide cámara, micrófono, ubicación, contactos ni fotos.</p>
 
   <h2>Privacidad infantil</h2>
-  <p>GymFuel es una herramienta de entrenamiento con pesos y no está dirigida a menores de edad. No recoge datos personales de nadie, de ninguna edad, a sabiendas.</p>
+  <p>GymFuel es una herramienta de entrenamiento con pesos y no está dirigida a menores de edad. No recoge a sabiendas datos de menores.</p>
 
   <h2>Aviso</h2>
   <p>GymFuel es una herramienta de organización del entrenamiento, no un consejo médico ni deportivo profesional. Las cargas que sugiere son un cálculo a partir de lo que tú mismo has introducido. Consulta con un profesional antes de empezar cualquier programa de fuerza, y para si notas dolor.</p>
 
   <h2>Contacto y soporte</h2>
-  <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  <p>¿Dudas, fallos, sugerencias o quieres borrar tu ficha de Compañeros? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">GymFuel v1.0 · Vigente desde 2026-09-09 · Gabriel Micó Victoria</div>
+  <div class="foot">GymFuel · Vigente desde 2026-09-14 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
