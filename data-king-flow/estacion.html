@@ -362,10 +362,16 @@
 
 <script>
 (function () {
-  var PROJECT_ID = 'tu-lista-8f52a';
+  /*
+   * Proyecto «Casa» (mi-cita-xativa), Realtime Database. La casa publica ahí desde el 15/09/2026, y lo
+   * vivo va en puentes_flow/<código>/vivo como { json, actualizadoEn }, con el aviso de presencia en
+   * puentes_flow/<código>/visor. Esta página seguía leyendo el Firestore del proyecto viejo
+   * (tu-lista-8f52a) y por eso ya no se conectaba (25/09/2026).
+   */
+  var RTDB = 'https://mi-cita-xativa-default-rtdb.europe-west1.firebasedatabase.app';
   var CODIGO = 'ESTFLW';
-  var URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow/' + CODIGO;
-  var PRESENCIA_URL = 'https://firestore.googleapis.com/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/puentes_flow_viewers/' + CODIGO + '?updateMask.fieldPaths=ultimaVista&updateMask.fieldPaths=enPrimerPlano&updateMask.fieldPaths=sesion';
+  var URL = RTDB + '/puentes_flow/' + CODIGO + '/vivo.json';
+  var PRESENCIA_URL = RTDB + '/puentes_flow/' + CODIGO + '/visor.json';
   /*
    * LA RAMPA. Arranca preguntando cada 2 segundos y cada 10 segundos de pestaña abierta espera un
    * segundo más, hasta los diez minutos.
@@ -409,7 +415,7 @@
 
   function avisarPresencia() {
     var xhr = new XMLHttpRequest();
-    xhr.open('PATCH', PRESENCIA_URL, true);
+    xhr.open('PUT', PRESENCIA_URL, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     /*
      * Hay que mandar `enPrimerPlano` y `sesion`, no solo la hora.
@@ -422,11 +428,26 @@
      * `sesion` es lo que le dice a la estación que este visor acaba de abrir, para que reinicie su
      * escalera y vuelva a publicar cada segundo en vez de heredar la separación de horas sin nadie.
      */
-    xhr.send(JSON.stringify({ fields: {
-      ultimaVista: { integerValue: String(Date.now()) },
-      enPrimerPlano: { booleanValue: document.visibilityState === 'visible' },
-      sesion: { stringValue: SESION }
-    } }));
+    xhr.send(JSON.stringify({
+      ultimaVista: Date.now(),
+      enPrimerPlano: document.visibilityState === 'visible',
+      sesion: SESION
+    }));
+  }
+
+  /*
+   * pintar() se escribió para documentos de Firestore; lo de Realtime Database llega en JSON plano y se
+   * le da la misma forma para no tocar nada de lo que pinta.
+   */
+  function aValor(v) {
+    if (v === null || v === undefined) return { nullValue: null };
+    if (typeof v === 'boolean') return { booleanValue: v };
+    if (typeof v === 'number') return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+    if (typeof v === 'string') return { stringValue: v };
+    if (Array.isArray(v)) return { arrayValue: { values: v.map(aValor) } };
+    var f = {};
+    for (var k in v) if (v.hasOwnProperty(k)) f[k] = aValor(v[k]);
+    return { mapValue: { fields: f } };
   }
 
   function firestoreValue(v) {
@@ -768,7 +789,9 @@
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
         try {
-          pintar(JSON.parse(xhr.responseText));
+          var vivo = JSON.parse(xhr.responseText);
+          if (!vivo || !vivo.json) throw new Error('sin dato');
+          pintar({ fields: aValor(JSON.parse(vivo.json)).mapValue.fields });
         } catch (e) {
           setText('errorBox', 'Error leyendo los datos.');
           document.getElementById('errorBox').style.display = 'block';
