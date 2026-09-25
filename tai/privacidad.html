@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAI — Política de privacidad</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>TAI</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> TAI es un juego de mascotas virtuales para todos los públicos. Se juega sin registrarse y no pide nombre real, correo, teléfono, ubicación, fotos ni contactos; la cuenta es opcional y sin correo. Las criaturas se guardan en nuestro servidor (en la Unión Europea) para que los amigos puedan cuidarlas. Los amigos se añaden solo con un código: no hay chat ni forma de encontrarse con desconocidos. Los anuncios de Google solo se personalizan si das tu consentimiento. Las compras y los enlaces que salen de la app están detrás de una comprobación para adultos. Todo se borra al momento desde Ajustes.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de TAI. Para cualquier duda sobre los datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Jugar sin registrarse</h2>
+  <p>Al abrir TAI por primera vez, la app crea una identidad <strong>anónima</strong> en nuestro servidor (Supabase): un identificador aleatorio, sin correo, teléfono ni contraseña. La sesión se guarda en el propio móvil y con ella se juega.</p>
+  <p><strong>Cuenta opcional.</strong> Desde Ajustes se puede crear una cuenta con un <strong>usuario</strong> (de 3 a 20 letras, números o guiones bajos) y una <strong>contraseña</strong> (6 caracteres o más), para recuperar las criaturas en otro móvil o después de borrar la app. <strong>No se pide correo</strong>: por eso, si se olvida la contraseña, no se puede recuperar. La contraseña la guarda el sistema de acceso de Supabase cifrada (solo su huella, no la contraseña en sí); nosotros no podemos verla.</p>
+
+  <h2>Qué se guarda en el servidor</h2>
+  <p>Todo se guarda en <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, en servidores de la Unión Europea (Fráncfort, Alemania).</p>
+  <ul>
+    <li><strong>Identidad:</strong> el identificador aleatorio y, si se crea la cuenta opcional, el usuario y la contraseña cifrada. La fecha de alta.</li>
+    <li><strong>Nombre de jugador:</strong> el que se escribe en la pantalla de Amigos (hasta 24 caracteres; mientras no escribe ninguno, sale «Alguien»). Lo ven sus amigos. Recomendamos usar un apodo y no el nombre y apellidos.</li>
+    <li><strong>Código de amigo:</strong> 6 letras y números al azar, para que otros jugadores puedan vincularse.</li>
+    <li><strong>Criaturas:</strong> el nombre que les pone, su especie, su estado (hambre, felicidad, higiene, energía, peso, edad, si duerme), el mundo donde viven y la lista de las criaturas anteriores (Historial).</li>
+    <li><strong>Amistades:</strong> con quién está vinculado y desde cuándo.</li>
+    <li><strong>Parejas:</strong> las propuestas de pareja entre criaturas de amigos, si se aceptaron y cuál se mudó al mundo de la otra.</li>
+    <li><strong>Cuidados:</strong> quién dio de comer, limpió, jugó o acostó a cada criatura, y cuándo (así el juego sabe quién la ha cuidado más).</li>
+    <li><strong>Partidas de tres en raya</strong> con amigos: el tablero, los turnos y quién ganó.</li>
+    <li><strong>Compras:</strong> qué criaturas se han desbloqueado. Ningún dato de pago.</li>
+    <li><strong>Idioma y zona horaria</strong> del móvil (por ejemplo, «Europe/Madrid»): para que la criatura duerma de noche en su país y los avisos lleguen en su idioma.</li>
+    <li><strong>Token de notificaciones</strong> y tipo de móvil (Android o iPhone), solo si se aceptan los avisos: es la dirección a la que se envían.</li>
+  </ul>
+  <p><strong>En el propio móvil</strong> se guardan la sesión, el idioma elegido, si el sonido está activado, la última criatura abierta y si los paneles del juego están escondidos.</p>
+  <p>No recogemos la ubicación, los contactos, fotos, audio ni el nombre real. Aparte de los anuncios de Google descritos más abajo, no usamos herramientas de analítica ni de seguimiento, y no vendemos ni cedemos datos a nadie.</p>
+
+  <h2>Amigos: solo por código, sin chat</h2>
+  <ul>
+    <li>Solo se puede ser amigo de alguien <strong>conociendo su código</strong>. No hay buscador, lista de jugadores ni emparejamiento con desconocidos. Al meter un código, los dos jugadores quedan vinculados, y cualquiera de los dos puede desvincularse cuando quiera.</li>
+    <li>Los amigos ven el nombre de jugador y las criaturas del otro con su estado, y pueden cuidarlas, retarse a tres en raya y proponer que dos criaturas sean pareja (el otro acepta o no).</li>
+    <li>Si dos criaturas son pareja, una se muda al mundo de la otra. Allí la pueden ver los amigos del anfitrión, pero no cuidarla, y no ven el nombre de su dueño si no son amigos suyos.</li>
+    <li><strong>No hay chat</strong> ni mensajes entre jugadores. Lo único escrito por un jugador que ven otros es su nombre de jugador y los nombres de sus criaturas.</li>
+    <li>Las frases de la criatura están <strong>escritas de antemano</strong> en la app: no hay inteligencia artificial y nada de lo que pasa en el juego se envía a un servicio de IA.</li>
+    <li>Al visitar la criatura de un amigo que no está bien, hay un botón «Avisar por WhatsApp». Está detrás de la pregunta para adultos y solo abre WhatsApp con un mensaje ya escrito; es la persona adulta quien elige si lo envía y a quién. TAI no manda nada ni sabe a quién se envió.</li>
+  </ul>
+
+  <h2>Anuncios</h2>
+  <p>La versión gratuita muestra anuncios de <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: un banner en la parte de arriba y, a veces, un anuncio a pantalla completa justo antes de una sorpresa (cuando nace una criatura, en un viaje o en una evolución), como mucho uno cada 90 segundos y nunca al abrir la app.</p>
+  <p><strong>Consentimiento.</strong> En el Espacio Económico Europeo, el Reino Unido y Suiza, antes de pedir ningún anuncio la app muestra el formulario de consentimiento de Google. En iPhone, además, pide el permiso de rastreo de Apple (ATT). <strong>Si das tu consentimiento</strong>, Google puede mostrar anuncios personalizados y usar el <strong>identificador publicitario del dispositivo</strong> (IDFA en iPhone, ID de publicidad en Android), junto con datos técnicos como la dirección IP y el modelo de móvil, según la <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">política de Google</a>. <strong>Si no lo das</strong>, los anuncios siguen apareciendo, pero sin personalizar. Google no recibe nada del juego: ni nombres, ni criaturas, ni amigos.</p>
+  <p>Puedes cambiar tu elección cuando quieras: en iPhone, en Ajustes → Privacidad y seguridad → Rastreo; en Android, en los ajustes de Google del móvil (Anuncios), donde se puede borrar o restablecer el ID de publicidad; y, en Europa, en los Ajustes de TAI → «Privacidad de los anuncios».</p>
+  <p><strong>Cualquier compra quita los anuncios para siempre.</strong></p>
+
+  <h2>Compras dentro de la app</h2>
+  <p>Se pueden comprar criaturas (una compra única cada una). Antes de comprar, la app hace una <strong>pregunta para adultos</strong> (una multiplicación). El pago lo hacen Apple o Google con la cuenta de la tienda; nosotros nunca vemos datos de pago. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> comprueba la compra con la tienda y nos avisa de qué criatura se ha desbloqueado; para eso conoce el identificador aleatorio del jugador y el estado de sus compras. En Ajustes está «Restaurar compras».</p>
+
+  <h2>Avisos</h2>
+  <p>Si se aceptan las notificaciones, TAI avisa cuando una criatura necesita ayuda: al dueño cuando algo le falta, a sus amigos si el dueño no aparece y a todos si está muy débil. Nunca mientras duerme. El aviso lleva el nombre de la criatura (y, a los amigos, el nombre de jugador del dueño). Se envían con <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Cloud Messaging</a> de Google y, en iPhone, a través del servicio de notificaciones de Apple. Se pueden desactivar en cualquier momento en los ajustes del móvil.</p>
+
+  <h2>Borrar la cuenta y todos los datos</h2>
+  <p>En <strong>Ajustes → «Borrar mi cuenta y todo lo mío»</strong>, tras la pregunta para adultos y una confirmación. El borrado es <strong>inmediato y definitivo</strong>: se eliminan la identidad (y el usuario y la contraseña, si los había), el nombre de jugador, el código de amigo, las criaturas y su historial, las amistades, las parejas y propuestas, las partidas, las compras apuntadas, el idioma, la zona horaria y el token de notificaciones.</p>
+  <ul>
+    <li>Las criaturas de amigos que vivían en su mundo vuelven a su casa.</li>
+    <li>Los cuidados que dio a criaturas de sus amigos siguen contando para esas criaturas, pero sin nada que le identifique.</li>
+    <li>Los justificantes de compra los conservan Apple o Google en su cuenta de la tienda, según sus propias políticas.</li>
+  </ul>
+  <p>Mientras no se borren, los datos se guardan mientras exista la cuenta. <strong>Si se desinstala la app sin borrar antes la cuenta</strong>, los datos siguen en el servidor: escríbenos con el código de amigo y los borramos.</p>
+
+  <h2>Menores y derechos</h2>
+  <p>TAI es para todos los públicos y también la usan niños. Por eso no pide datos personales, la cuenta es opcional y sin correo, no hay chat, los amigos solo se añaden con código, y las compras y los enlaces que salen de la app están detrás de una comprobación para adultos. Cualquier usuario, y en el caso de un menor sus madres, padres o tutores, puede pedir en cualquier momento ver, corregir o borrar sus datos, y ejercer el resto de derechos del RGPD (acceso, rectificación, supresión, oposición, limitación y portabilidad), escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. También se puede reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <p>Base legal: los datos se tratan para prestar el juego que se ha pedido (ejecución del servicio); los anuncios personalizados, con tu consentimiento, que puedes retirar cuando quieras; y los no personalizados, por interés legítimo en financiar la versión gratuita.</p>
+
+  <h2>Seguridad</h2>
+  <p>Las comunicaciones van cifradas (HTTPS). En el servidor, cada jugador solo puede leer lo suyo y lo que le enseñan sus amigos, y las reglas del juego las aplica el servidor, no el móvil.</p>
+
+  <h2>Cambios</h2>
+  <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
+
+  <div class="foot">TAI · Vigente desde 2026-09-26 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
