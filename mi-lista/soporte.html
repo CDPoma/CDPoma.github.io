@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mi Lista Compartida — Soporte y privacidad</title>
+<title>Mi Lista — Soporte y privacidad</title>
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/mi-lista/support.html">
 <style>
   :root{
     --paper:#FBF2DC; --paper-dark:#F3E7C9; --paper-line:#E4D3A7;
@@ -22,6 +23,7 @@
   *{box-sizing:border-box}
   body{background:var(--paper);color:var(--ink);margin:0;font-family:'Patrick Hand',ui-rounded,'Segoe UI',sans-serif;font-size:17px;line-height:1.6}
   .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;margin-top:.6rem;font-size:1rem}
   h1{font-family:'Caveat',cursive;font-size:3rem;font-weight:700;margin:0 0 .25rem;text-wrap:balance}
   .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
   h2{font-family:'Caveat',cursive;font-size:2rem;margin:2.2rem 0 .6rem;color:var(--ink)}
@@ -36,49 +38,69 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Mi Lista Compartida</h1>
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
+  <h1>Mi Lista</h1>
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista concreta (y solo esa) se sube a un servidor para poder sincronizarla en tiempo real con quien se la mandes. Y si usas el lector de fechas de caducidad, la foto que haces pasa por un servidor nuestro camino de Google, y se descarta ahí mismo. No hay cuentas, ni registro, ni venta de datos a nadie. La versión gratuita muestra un banner de anuncios, que Pro quita.</p>
+    <p><strong>Resumen rápido:</strong> tus listas se guardan en tu propio móvil. Solo si decides compartir una lista, esa lista y su despensa se suben a un servidor (Firebase, de Google) para sincronizarlas en tiempo real con quien se la mandes, y quien la creó la borra de ahí cuando quiera desde la app. Si usas el lector de fechas de caducidad, la foto pasa por un servidor nuestro camino de Google y se descarta ahí mismo. No hay cuentas, ni registro, ni venta de datos a nadie. La versión gratuita muestra anuncios (un banner abajo y, al agotarse un producto de la despensa, uno a pantalla completa); Pro los quita todos.</p>
   </div>
 
   <h2>Qué datos se guardan y dónde</h2>
-  <p>Mi Lista guarda tus listas de la compra y tus listas de tareas localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente "Compartir" en una lista concreta.</p>
+  <p>Mi Lista guarda tus listas de la compra, tu despensa y tus listas de tareas localmente en tu dispositivo. Esa información no sale de tu móvil salvo que actives explícitamente «Compartir» en una lista concreta.</p>
   <ul>
-    <li>Al compartir una lista, su contenido (nombre y artículos) se guarda en Firebase Firestore (Google) para que se sincronice en tiempo real entre los dispositivos que se unan a ella.</li>
+    <li>Al compartir una lista, se guarda en Firebase Cloud Firestore (Google) su contenido —nombre, productos, cantidades y marcas de tachado— y, si es una lista de la compra, también su despensa (productos, cantidades y fechas de caducidad), para que se vea igual en todos los móviles que se unan.</li>
+    <li>Junto a la lista se guarda un identificador aleatorio del móvil que la compartió, generado por la app. Sirve solo para que ese móvil, y ningún otro, pueda borrarla para todos.</li>
     <li>Solo se sube la lista que decides compartir, nunca el resto de tus listas.</li>
-    <li>No pedimos ni guardamos nombre, email, teléfono ni ningún dato que te identifique. Compartir se hace por un código o enlace, no por cuenta de usuario.</li>
+    <li>No pedimos ni guardamos nombre, email, teléfono ni ningún dato que te identifique. Para compartir se usa un código: lo copias en la app, se lo mandas a quien quieras y esa persona lo pega en «Unirme».</li>
+  </ul>
+
+  <h2>Cómo borrar tus datos</h2>
+  <ul>
+    <li><strong>Lo que está en tu móvil</strong>: borra cada lista con el icono de la papelera de su ficha, y las cerradas desde Historial. Al desinstalar la app se borra todo lo que guardaba.</li>
+    <li><strong>Una lista compartida que creaste tú</strong>: en su ficha, la papelera es «Eliminar para todos». Al pulsarla se borran del servidor la lista y su despensa en ese momento, y desaparece sola de los demás móviles. También vale borrarla desde Historial si ya estaba cerrada.</li>
+    <li><strong>Una lista compartida a la que te uniste</strong>: en su ficha, en lugar de la papelera hay un icono de salir, «Salir de la lista». Quita tu copia y deja de sincronizarse contigo; la lista sigue para los demás hasta que quien la creó la borre.</li>
+    <li>Si necesitas que borremos algo que ya no puedes borrar desde la app (por ejemplo, porque desinstalaste la app sin borrar una lista que habías compartido), escríbenos con su código.</li>
   </ul>
 
   <h2>Compras dentro de la app</h2>
-  <p>La versión gratuita se queda en la lista de la compra: una sola lista activa a la vez, con su despensa y el lector de fechas de caducidad, y muestra un banner de anuncios. Mi Lista Pro es una suscripción de 1,99 €/mes o 14,99 €/año, que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play: quita los anuncios y añade varias listas de la compra a la vez, compartirlas y sincronizarlas en tiempo real, y la pestaña de Tareas. La compra se gestiona mediante RevenueCat sobre el sistema de pagos de Apple (en iPhone y iPad) o de Google Play (en Android). RevenueCat procesa el estado de la compra pero no recibe el contenido de tus listas.</p>
+  <p>La versión gratuita se queda en la lista de la compra: una sola lista activa a la vez, con su despensa y el lector de fechas de caducidad, y muestra anuncios. Mi Lista Pro es una suscripción de 1,99 €/mes o 14,99 €/año en España (el precio de tu país aparece en la app antes de pagar), que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play: quita los anuncios y añade varias listas de la compra a la vez, compartirlas en tiempo real (compartir y unirse a una lista compartida son funciones Pro), la pestaña de Tareas y, en iPhone, la app de Apple Watch. La compra se gestiona mediante RevenueCat sobre el sistema de pagos de Apple (en iPhone y iPad) o de Google Play (en Android). RevenueCat comprueba si tienes la suscripción, pero no recibe el contenido de tus listas.</p>
 
   <h2>Fotos de fechas de caducidad</h2>
   <p>En la despensa puedes ponerle a un producto su fecha de caducidad. Puedes escribirla a mano, o hacerle una foto al envase para que la app la lea por ti.</p>
-  <p>Si eliges la foto, esa imagen se envía a una función de servidor que gestionamos nosotros (alojada en Supabase), y es esa función la que se la pasa a la API de Gemini de Google y te devuelve únicamente la fecha que ha encontrado. La foto va por ahí, y no directamente a Google, para no tener que llevar la clave de Gemini dentro de la app. <strong>La foto no se guarda en ningún sitio</strong> — ni en nuestro servidor ni en ninguna base de datos: se descarta en cuanto se devuelve la fecha.</p>
+  <p>Si eliges la foto —hecha en ese momento con la cámara o elegida de tu galería—, esa imagen se envía a una función de servidor que gestionamos nosotros (alojada en Supabase), y es esa función la que se la pasa a la API de Gemini de Google y te devuelve únicamente la fecha que ha encontrado, que tú confirmas o corriges antes de guardarla. La foto va por ahí, y no directamente a Google, para no tener que llevar la clave de Gemini dentro de la app. <strong>La foto no se guarda en ningún sitio</strong> — ni en nuestro servidor ni en ninguna base de datos: se descarta en cuanto se devuelve la fecha.</p>
   <p>Lo único que ese servidor sí anota es la dirección IP desde la que llega cada lectura, junto al número de lecturas de la hora en curso, para poder cortar los abusos. No se asocia a tus listas ni a ningún otro dato tuyo, porque la app no guarda ninguno.</p>
   <p>Es una función opcional: la app funciona igual escribiendo la fecha a mano, y no se envía nada a ninguna parte salvo que pulses tú ese botón.</p>
 
   <h2>Anuncios</h2>
-  <p>La versión gratuita muestra un banner de Google AdMob. Antes de mostrar ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google; en iPhone y iPad, con el aviso de Apple de seguimiento. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios; si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP. Puedes cambiarlo en Ajustes → Privacidad y seguridad → Rastreo (iPhone) o en Ajustes → Google → Anuncios (Android). Pro quita los anuncios por completo.</p>
+  <p>La versión gratuita muestra anuncios de Google AdMob de dos tipos: un banner fijo en la parte de abajo de la pantalla y, cuando un producto de la despensa llega a cero, un anuncio a pantalla completa (como mucho uno cada 90 segundos). Antes de mostrar ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, primero con el formulario de Google; después, en iPhone y iPad, con el aviso de Apple de seguimiento, que sale al abrir la app tengas Pro o no. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios; si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP.</p>
+  <p>Lo que elegiste en el formulario de Google se cambia en la app, en Ajustes → «Privacidad de los anuncios» (desde la versión 1.0.1; solo aparece donde ese formulario se aplica). El permiso de seguimiento se cambia en Ajustes → Privacidad y seguridad → Rastreo (iPhone) o en Ajustes → Google → Anuncios (Android). Pro quita los anuncios por completo.</p>
 
   <h2>Notificaciones</h2>
-  <p>Todas las notificaciones de la app son locales: las programa tu propio dispositivo y no pasan por ningún servidor. Hay tres clases: los recordatorios que pones tú en una lista, dos avisos al día para que apuntes lo que se te haya terminado en la despensa, y un aviso semanal para recordarte ir a la compra. Los avisos automáticos se pueden apagar desde los Ajustes de la app.</p>
+  <p>Todas las notificaciones de la app son locales: las programa tu propio dispositivo y no pasan por ningún servidor. Hay cuatro clases: los recordatorios que pones tú en una lista, un aviso al momento cuando un producto de la despensa se agota, dos avisos al día (12:00 y 20:00) para que apuntes lo que se te haya terminado, y un aviso el sábado por la mañana para recordarte ir a la compra. El permiso se pide la primera vez que pones un recordatorio o se agota algo, no al abrir la app. Se apagan desde Ajustes de la app con dos interruptores: uno para los recordatorios y el aviso semanal, y otro para los de la despensa.</p>
+
+  <h2>Apple Watch</h2>
+  <p>Desde la versión 1.0.1, con Mi Lista Pro, la app del Apple Watch enseña tus listas activas (la de la compra ordenada por secciones de la tienda) y te deja tachar y destachar con un toque. Los datos van del iPhone al reloj y del reloj al iPhone directamente, por la conexión entre los dos dispositivos que da Apple (WatchConnectivity): no pasan por ningún servidor nuestro. Sin Pro, el reloj enseña un candado.</p>
+
+  <h2>Idiomas</h2>
+  <p>La app está en español de España, español de Latinoamérica e inglés. Se cambia en Ajustes → Idioma y se aplica al momento, también en el Apple Watch; los productos que ya habías apuntado no se traducen. Esta página también está <a href="support.html" hreflang="en" lang="en">en inglés</a>.</p>
 
   <h2>Terceros</h2>
   <ul>
-    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase / Google Cloud</a> — sincronización de listas compartidas.</li>
-    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — gestión de la compra de la sincronización.</li>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase / Google Cloud</a> — sincronización de las listas compartidas y de su despensa.</li>
+    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — comprobación de la suscripción Pro.</li>
     <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a> — anuncios de la versión gratuita.</li>
     <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> — aloja la función de servidor por la que pasa la foto de la fecha de caducidad, y donde se guarda el contador de lecturas por IP.</li>
     <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini</a> — lee la fecha de la foto que le reenvía esa función, solo si usas esa función.</li>
   </ul>
 
+  <h2>Condiciones de uso</h2>
+  <p>En iPhone, iPad y Apple Watch se aplica el <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">contrato de licencia estándar de Apple (EULA)</a>; en Android, las <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">condiciones de servicio de Google Play</a>.</p>
+
   <h2>Contacto y soporte</h2>
   <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">Mi Lista Compartida · Gabriel Micó Victoria</div>
+  <div class="foot">Mi Lista · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>

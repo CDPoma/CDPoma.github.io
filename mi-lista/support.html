@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi Lista — Support and privacy</title>
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/mi-lista/soporte.html">
+<style>
+  :root{
+    --paper:#FBF2DC; --paper-dark:#F3E7C9; --paper-line:#E4D3A7;
+    --ink:#3A2E1F; --ink-light:#8A7A5C; --accent:#B5502E;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#221B12; --paper-dark:#2B2318; --paper-line:#3A2E1F;
+      --ink:#F3E7C9; --ink-light:#B5A780; --accent:#E08A63;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#221B12; --paper-dark:#2B2318; --paper-line:#3A2E1F;
+    --ink:#F3E7C9; --ink-light:#B5A780; --accent:#E08A63;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);margin:0;font-family:'Patrick Hand',ui-rounded,'Segoe UI',sans-serif;font-size:17px;line-height:1.6}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;margin-top:.6rem;font-size:1rem}
+  h1{font-family:'Caveat',cursive;font-size:3rem;font-weight:700;margin:0 0 .25rem;text-wrap:balance}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-family:'Caveat',cursive;font-size:2rem;margin:2.2rem 0 .6rem;color:var(--ink)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--paper-dark);border:2px solid var(--paper-line);border-radius:18px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent);text-decoration:underline}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:2px solid var(--paper-line);color:var(--ink-light);font-size:.95rem}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>Mi Lista</h1>
+  <p class="sub">Support and privacy</p>
+
+  <div class="card">
+    <p><strong>In short:</strong> your lists are stored on your own phone. Only if you decide to share a list are that list and its pantry uploaded to a server (Firebase, by Google) to sync them in real time with the people you send it to, and whoever created it can delete it from there at any time from the app. If you use the expiration date reader, the photo goes through a server of ours on its way to Google and is discarded right there. There are no accounts, no sign-up and no selling of data to anyone. The free version shows ads (a banner at the bottom and, when a pantry item runs out, a full-screen one); Pro removes them all.</p>
+  </div>
+
+  <h2>What data is stored and where</h2>
+  <p>Mi Lista stores your shopping lists, your pantry and your to-do lists locally on your device. That information never leaves your phone unless you explicitly turn on “Share” for a specific list.</p>
+  <ul>
+    <li>When you share a list, its content —name, items, quantities and check marks— is stored in Firebase Cloud Firestore (Google), and, if it is a shopping list, its pantry too (items, quantities and expiration dates), so it looks the same on every phone that joins it.</li>
+    <li>Next to the list we store a random identifier of the phone that shared it, created by the app. Its only purpose is to let that phone, and no other, delete the list for everyone.</li>
+    <li>Only the list you decide to share is uploaded, never the rest of your lists.</li>
+    <li>We do not ask for or store your name, email, phone number or anything that identifies you. Sharing works with a code: you copy it in the app, send it to whoever you want, and they paste it in “Join”.</li>
+  </ul>
+
+  <h2>How to delete your data</h2>
+  <ul>
+    <li><strong>What is on your phone</strong>: delete each list with the trash icon on its card, and closed lists from History. Uninstalling the app deletes everything it stored.</li>
+    <li><strong>A shared list you created</strong>: on its card, the trash icon is “Delete for everyone”. Tapping it deletes the list and its pantry from the server at that moment, and it disappears from the other phones on its own. You can also delete it from History if it was already closed.</li>
+    <li><strong>A shared list you joined</strong>: on its card, instead of the trash icon there is a leave icon, “Leave list”. It removes your copy and stops syncing with you; the list stays for the others until whoever created it deletes it.</li>
+    <li>If you need us to delete something you can no longer delete from the app (for example, because you uninstalled the app without deleting a list you had shared), write to us with its code.</li>
+  </ul>
+
+  <h2>In-app purchases</h2>
+  <p>The free version covers the shopping list: one active list at a time, with its pantry and the expiration date reader, and it shows ads. Mi Lista Pro is a monthly or yearly subscription (the price in your currency is shown in the app before you pay) that renews automatically until you cancel it from your Apple or Google Play account: it removes the ads and adds several shopping lists at once, real-time sharing (sharing and joining a shared list are Pro features), the To-do tab and, on iPhone, the Apple Watch app. Purchases are handled by RevenueCat on top of Apple's payment system (on iPhone and iPad) or Google Play's (on Android). RevenueCat checks whether you have the subscription, but never receives the content of your lists.</p>
+
+  <h2>Photos of expiration dates</h2>
+  <p>In the pantry you can give an item its expiration date. You can type it in, or take a photo of the package so the app reads it for you.</p>
+  <p>If you choose the photo —taken with the camera at that moment or picked from your photo library—, the image is sent to a server function we run (hosted on Supabase), and that function passes it to Google's Gemini API and sends you back only the date it found, which you confirm or correct before saving it. The photo goes that way, and not straight to Google, so the Gemini key does not have to live inside the app. <strong>The photo is not stored anywhere</strong> — not on our server and not in any database: it is discarded as soon as the date is returned.</p>
+  <p>The only thing that server does record is the IP address each reading comes from, together with the number of readings in the current hour, to be able to stop abuse. It is not linked to your lists or to any other data of yours, because the app does not store any.</p>
+  <p>It is optional: the app works the same if you type the date in, and nothing is sent anywhere unless you tap that button yourself.</p>
+
+  <h2>Ads</h2>
+  <p>The free version shows Google AdMob ads of two kinds: a banner fixed at the bottom of the screen and, when a pantry item reaches zero, a full-screen ad (at most one every 90 seconds). Before showing any, consent is requested: in the European Economic Area, the United Kingdom and Switzerland, first with Google's form; then, on iPhone and iPad, with Apple's tracking prompt, which appears when you open the app whether you have Pro or not. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads keep showing without personalization. In both cases it receives technical data from the device, such as the IP address.</p>
+  <p>What you chose in Google's form can be changed in the app, under Settings → “Ad privacy options” (from version 1.0.1; it only appears where that form applies). The tracking permission is changed in Settings → Privacy &amp; Security → Tracking (iPhone) or in Settings → Google → Ads (Android). Pro removes ads completely.</p>
+
+  <h2>Notifications</h2>
+  <p>All of the app's notifications are local: your own device schedules them and they never go through a server. There are four kinds: the reminders you set on a list, an instant alert when a pantry item runs out, two alerts a day (12:00 and 20:00) so you jot down whatever ran out, and an alert on Saturday morning to remind you to go shopping. Permission is requested the first time you set a reminder or something runs out, not when you open the app. They are turned off from the app's Settings with two switches: one for reminders and the weekly alert, and another for the pantry ones.</p>
+
+  <h2>Apple Watch</h2>
+  <p>From version 1.0.1, with Mi Lista Pro, the Apple Watch app shows your active lists (the shopping one sorted by store section) and lets you check and uncheck items with a tap. Data goes from the iPhone to the watch and back directly, over the link Apple provides between both devices (WatchConnectivity): it never goes through any server of ours. Without Pro, the watch shows a lock.</p>
+
+  <h2>Languages</h2>
+  <p>The app is available in Spanish (Spain), Spanish (Latin America) and English. You change it in Settings → Language and it applies at once, on the Apple Watch too; items you had already written down are not translated. This page is also available <a href="soporte.html" hreflang="es" lang="es">in Spanish</a>.</p>
+
+  <h2>Third parties</h2>
+  <ul>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase / Google Cloud</a> — syncing shared lists and their pantry.</li>
+    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> — checking the Pro subscription.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a> — ads in the free version.</li>
+    <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> — hosts the server function the expiration date photo goes through, and where the per-IP reading counter is kept.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini</a> — reads the date from the photo that function forwards, only if you use that feature.</li>
+  </ul>
+
+  <h2>Terms of use</h2>
+  <p>On iPhone, iPad and Apple Watch, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">standard license agreement (EULA)</a> applies; on Android, the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</p>
+
+  <h2>Contact and support</h2>
+  <p>Questions, bugs or suggestions? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <div class="foot">Mi Lista · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
