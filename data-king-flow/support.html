@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data King Flow Monitor — Support and privacy</title>
+<meta name="description" content="Help, FAQ and privacy policy for Data King Flow Monitor, the Bluetooth monitor for solar inverters that speak the Voltronic protocol.">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/data-king-flow/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/data-king-flow/support.html">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>Data King Flow Monitor</h1>
+  <p class="sub">Support and privacy</p>
+  <nav class="enlaces"><a href="#faq">FAQ</a> · <a href="#privacy">Privacy policy</a> · <a href="#contact">Contact</a></nav>
+
+  <div class="card">
+    <p><strong>In short:</strong> the app talks directly to your solar inverter over Bluetooth. There is no account or sign-up, and no personal data is collected. Your system's data stays on your phone; it only leaves it if you turn on station mode to watch it remotely, and then it travels under a random code, without your name or email.</p>
+  </div>
+
+  <h2>What the app does</h2>
+  <p>Data King Flow Monitor connects over Bluetooth Low Energy (BLE) to solar inverters that speak the Voltronic/PI30 protocol and shows what your system is doing right now: what the panels are producing, whether the battery is charging or discharging, what comes in from the grid or the generator, and what the home is using.</p>
+  <p><strong>Compatible inverters:</strong> those that speak the Voltronic/PI30 protocol over Bluetooth, either with built-in Bluetooth (such as the Axpert King or the Inverter King) or with a serial Bluetooth adapter (HM-10, JDY and similar): Axpert, Inverter King, MPP Solar, EASUN, PowMr, Must, Effekta and other compatible models. The app is <strong>compatible with</strong> that equipment; it is not an official app of any of those brands and is not affiliated with them.</p>
+
+  <h3>Free</h3>
+  <ul>
+    <li><strong>Solar generation:</strong> live watts, panel voltage and current, when the sun started and stopped, and today's sun hours. The bar splits what comes in between the home and the battery.</li>
+    <li><strong>Home consumption:</strong> watts, inverter load, output voltage and frequency, and inverter temperature.</li>
+    <li><strong>Battery pack:</strong> percentage, voltage, charge or discharge current and power, today's peaks and the amp-hours left. The app works out the percentage by counting the amp-hours going in and out; it is not the inverter's figure, which comes from a voltage formula.</li>
+    <li><strong>Grid or generator:</strong> estimated input power, voltage, current, frequency and the diesel left in the tank, estimated from running time. When you refuel, press and hold the fuel-pump button for 2 seconds.</li>
+    <li>Your battery bank capacity, which you enter in Settings, and the language.</li>
+  </ul>
+
+  <h3>Data King Flow Pro (subscription)</h3>
+  <ul>
+    <li><strong>History charts</strong> for each card by day, week, month and year (tap <strong>+</strong> on the card).</li>
+    <li><strong>Center card:</strong> the runtime left (kWh and hours at the current load) and, on its back, the animated <strong>energy flow diagram</strong>. With it, the generator card also shows how long until the generator has to start.</li>
+    <li><strong>Station mode and remote view:</strong> one phone stays next to the inverter and publishes under a 6-character code; on another phone, with that code, you watch your system live without being nearby.</li>
+    <li><strong>Inverter settings</strong> (read-only) and generator settings: oil changes, running hours, tank and fuel use.</li>
+    <li><strong>No ads.</strong></li>
+  </ul>
+  <p>It is a monthly or yearly auto-renewing subscription; the price is shown in the app and in the store, in your currency, before you pay. Your Apple or Google Play account is charged when you confirm, and it renews unless you cancel at least 24 hours before the end of the period. You manage and cancel it in your store account settings. Apple's terms of use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">standard EULA</a>.</p>
+
+  <h3>Languages</h3>
+  <p>The app is available in English, Spanish (Spain) and Spanish (Latin America). The first time it follows your phone's language; in <strong>Settings → Language</strong> you can switch instantly, and your choice is kept.</p>
+
+  <h2 id="faq">FAQ</h2>
+
+  <h3>How do I connect?</h3>
+  <p>Tap <strong>Connect</strong> and pick your inverter from the list of Bluetooth devices. Opening the app doesn't connect anything by itself; once connected, if the connection drops, the app reconnects on its own until you tap <strong>Disconnect</strong>. If your phone asks for a PIN, it's usually <code>123456</code> or <code>000000</code>; if neither works, check the inverter's manual.</p>
+
+  <h3>Why doesn't the percentage match the inverter's?</h3>
+  <p>The inverter's figure comes from a voltage formula and is far off with lithium batteries (it can show 0% with the battery half full). The app counts the amp-hours going in and out and learns your battery's curve. For it to be right, enter your bank's real capacity in <strong>Settings</strong>: the sum of the amp-hours of the batteries connected in parallel.</p>
+
+  <h3>How does station mode work?</h3>
+  <p>On the phone that stays next to the inverter (for example an old one, plugged in), connect to the inverter and tap the antenna icon → <strong>Turn on station mode</strong>. On your phone, tap the satellite icon and enter the 6-character code. While station mode is on, that phone's screen stays on. From the remote view, after refueling the generator, the app asks how many liters are in the tank.</p>
+
+  <h3>Why doesn't the screen turn off?</h3>
+  <p>On purpose: while the app is open it keeps the screen on, so a phone working as a station doesn't fall asleep and stop reading the inverter. When you close the app, the phone turns the screen off as usual.</p>
+
+  <h3>Can I see a card bigger?</h3>
+  <p>Yes: double-tap a card and it goes full screen; another double tap puts it back.</p>
+
+  <h3>I paid for Pro and it doesn't show</h3>
+  <p>Open the Pro screen (the <strong>Pro</strong> button) and tap <strong>Restore purchases</strong>, with the same store account you paid with.</p>
+
+  <h2 id="privacy">Privacy policy</h2>
+
+  <h3>What is stored on your phone</h3>
+  <p>The inverter readings are stored only on your device: one point per minute for today and one summary per day (up to 400 days) for each measurement, for the charts. The app also stores the settings you enter (bank capacity, generator details, language), the learned curve of your battery, the Bluetooth identifier of the last inverter (to reconnect without picking it again) and, if you use station mode or remote view, its code. Everything is deleted when you uninstall the app.</p>
+
+  <h3>What leaves your phone, and only if you use station mode or remote view</h3>
+  <p>With station mode on, the station phone publishes to <strong>Google Firebase</strong> (Realtime Database, on servers in the European Union, and Cloud Firestore) under its random 6-character code:</p>
+  <ul>
+    <li>the current inverter reading (watts, volts, amps, percentages and the app's calculations, such as the runtime hours);</li>
+    <li>today's history and the daily summary for the last 120 days, the generator's hours, the estimated diesel, the cycles and the measured battery capacity;</li>
+    <li>a technical status of the station (whether it is publishing and the last error), so it can be diagnosed if it goes silent.</li>
+  </ul>
+  <p>The phone watching remotely writes, under that same code, an "I'm watching" signal (the time, whether the app is in front and a random session number), so the station only publishes when someone is watching, and the "tank refilled" command with the liters when you use it.</p>
+  <p>None of this includes your name, email, account, location or device identifiers: the app has none of that data. What is published is replaced with each update and stays under the code until the next one; if you want us to delete it, email us the code and we will.</p>
+
+  <h3>Third-party services</h3>
+  <table>
+    <thead><tr><th>Service</th><th>What for</th></tr></thead>
+    <tbody>
+      <tr><td>Google AdMob</td><td>Ads for users without Pro: a banner in the center card's slot and, on iPhone and iPad, a full-screen ad when the app is opened (not when you come back to it from the background). Consent is asked before any ad is shown: in the European Economic Area, the UK and Switzerland, with Google's consent form, which you can change later in <strong>Settings → Ad privacy options</strong>; on iPhone and iPad, also with Apple's tracking prompt. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads are still shown, just not personalized. In both cases it receives technical device data, such as the IP address. With Pro no ads are loaded.</td></tr>
+      <tr><td>RevenueCat, Apple and Google Play</td><td>They charge for and verify the Pro subscription. RevenueCat receives an anonymous app identifier and the store's purchase history; there is no account or email.</td></tr>
+      <tr><td>Google Firebase</td><td>Only with station mode or remote view, as described above.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Permissions</h3>
+  <ul>
+    <li><strong>Bluetooth</strong>: to find the inverter and read it.</li>
+    <li><strong>Location</strong> (Android before version 12 only): the system requires it to scan for Bluetooth devices; the app doesn't read or use your location.</li>
+    <li><strong>Tracking</strong> (iPhone and iPad): Apple's prompt to personalize ads. Saying no doesn't remove any feature.</li>
+    <li><strong>Wi-Fi state</strong> (Android): only used by an installation set up by hand as the device owner, to restart the Wi-Fi of a station that loses its connection. On a normal phone it does nothing.</li>
+  </ul>
+  <p>The app doesn't ask for camera, microphone, contacts or photos.</p>
+
+  <h3>Children</h3>
+  <p>This is a technical tool for solar installations, not directed at children, and it does not knowingly collect data from children.</p>
+
+  <h2 id="contact">Contact and support</h2>
+  <p>Questions, bugs, an inverter that won't connect, or want us to delete the data under your code? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <div class="foot">Data King Flow Monitor 1.0.5 · Gabriel Micó Victoria · Updated October 2, 2026</div>
+</div>
+</body>
+</html>
