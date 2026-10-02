@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Prompt AI — Soporte y privacidad</title>
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/prompt-ai/support.html">
 <style>
   :root{
     --base:#0B0C10; --surface:#191B23; --raised:#22242F; --line:#2C2F3B;
@@ -24,6 +25,7 @@
      background-clip:text;-webkit-text-fill-color:transparent;text-wrap:balance}
   .sub{color:var(--ink-dim);margin:0 0 2.5rem}
   h2{font-size:1.25rem;margin:2.4rem 0 .7rem}
+  h3{font-size:1.05rem;margin:1.4rem 0 .3rem}
   p{margin:0 0 1rem}
   ul{margin:0 0 1rem;padding-left:1.3rem}
   li{margin-bottom:.45rem}
@@ -31,49 +33,73 @@
   a{color:var(--accent)}
   code{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:.1rem .35rem;font-size:.9em}
   .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-dim);font-size:.92rem}
+  .idioma{float:right;font-size:.92rem;margin-top:.5rem}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@400;600&display=swap">
 </head>
 <body>
 <div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
   <h1>Prompt AI</h1>
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> no hay cuentas. Ni registro, ni correo, ni contraseña. Tus proyectos, notas y prompts se guardan en tu dispositivo. Solo sale algo de ahí en cuatro casos: cuando generas un prompt con la IA, cuando compartes un proyecto o un enlace, cuando denuncias un contenido y, en la versión gratuita, lo que necesitan los anuncios. Tú decides si los anuncios pueden ser personalizados, y la compra Pro los quita. No hay analítica.</p>
+    <p><strong>Resumen rápido:</strong> no hay cuentas. Ni registro, ni correo, ni contraseña. Tus proyectos, notas y prompts se guardan en tu dispositivo. Solo sale algo de ahí en cuatro casos: cuando generas un prompt con la IA, cuando compartes un proyecto o un enlace, cuando denuncias un contenido y, en la versión gratuita, lo que necesitan los anuncios. Tú decides si los anuncios pueden ser personalizados, y la suscripción Pro los quita. No hay analítica.</p>
+    <p>¿Algo no funciona o tienes una duda? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿Cómo funciona?</h3>
+  <p>Crea un proyecto y, dentro, escribe o dicta tu idea en la pestaña Prompts. Al guardar, la IA la convierte en un encargo ordenado: contexto, objetivo, modelo de datos, requisitos, pasos y las decisiones que ha dado por supuestas. La idea original se guarda con el prompt: pulsa «Idea» para darle la vuelta a la tarjeta, editarla y regenerarlo. La pestaña Notas es para lo que no hay que convertir.</p>
+
+  <h3>¿En qué idioma escribe la IA?</h3>
+  <p>En el idioma en que escribes tu idea. Los menús y los avisos de la app están en español de España, español de Latinoamérica e inglés: la primera vez usa el idioma de tu dispositivo, y lo cambias en <strong>Ajustes</strong> (la rueda dentada, arriba a la derecha) → <strong>Idioma</strong>.</p>
+
+  <h3>La IA no responde o dice que está saturada</h3>
+  <p>La generación tarda entre unos segundos y un minuto, y la app enseña cuánto lleva. Si la IA no contesta, la app te lo dice en vez de guardar un prompt a medias: puedes reintentar al cabo de un minuto o guardar tu texto tal cual con «Guardar sin IA». Al regenerar, si falla, el prompt que ya tenías no se toca.</p>
+
+  <h3>¿Cómo comparto un proyecto? (Pro)</h3>
+  <p>Abre el proyecto → botón <strong>«…»</strong> de arriba (o mantén pulsado su icono en el inicio) → <strong>Compartir</strong> → <strong>Convertir en proyecto compartido</strong>. Sale un código de seis caracteres; pásaselo a quien quieras, por WhatsApp o enseñándoselo. Esa persona lo escribe en <strong>Ajustes → Unirse a un proyecto compartido</strong>. Unirse también es de Pro.</p>
+
+  <h3>He cambiado de móvil y no tengo Pro</h3>
+  <p>En <strong>Ajustes → Hazte Pro → Restaurar compras</strong>, con la misma cuenta de Apple o de Google Play con la que pagaste. Quien compró el pago único de las primeras versiones conserva Pro.</p>
+
+  <h3>¿Cómo cancelo la suscripción?</h3>
+  <p>Desde tu cuenta de la tienda, no desde la app. En iPhone: Ajustes → tu nombre → Suscripciones. En Android: Google Play → tu perfil → Pagos y suscripciones → Suscripciones.</p>
 
   <h2>Qué datos salen de tu dispositivo y para qué</h2>
   <ul>
-    <li><strong>Un identificador anónimo.</strong> Al abrir la app con conexión, Firebase Authentication (Google) le asigna a tu dispositivo un identificador aleatorio. No lleva nombre, correo, teléfono ni contraseña, y no ves ningún formulario. Sirve para que un proyecto compartido solo lo puedan leer sus miembros, y para poder denunciar o expulsar a quien escriba algo inapropiado.</li>
-    <li><strong>Tu alias, si pones uno.</strong> Es el nombre con el que te ven en los proyectos compartidos. Es opcional y se guarda en Firebase. Si no pones ninguno, apareces como «Anónimo».</li>
-    <li><strong>Los proyectos que compartes</strong> (Pro). Al compartir un proyecto, su nombre, sus notas y sus prompts se guardan en Cloud Firestore (Google), junto con el alias y el identificador anónimo de quien escribió cada cosa. Así se sincroniza entre sus miembros. Solo pueden leerlo quienes hayan entrado con su código de seis caracteres. El resto de tus proyectos se queda en tu dispositivo.</li>
+    <li><strong>Un identificador anónimo.</strong> Al abrir la app con conexión, Firebase Authentication (Google) le asigna a tu dispositivo un identificador aleatorio. No lleva nombre, correo, teléfono ni contraseña, y no ves ningún formulario. Sirve para que un proyecto compartido solo lo puedan leer sus miembros, y para poder denunciar o sacar del proyecto a quien escriba algo inapropiado.</li>
+    <li><strong>Tu nombre en los proyectos compartidos, si pones uno.</strong> Es opcional y se guarda en Firebase. Si no pones ninguno, apareces como «Anónimo».</li>
+    <li><strong>Los proyectos que compartes</strong> (Pro). Al compartir un proyecto, su nombre, sus notas y sus prompts se guardan en Cloud Firestore (Google), junto con el nombre y el identificador anónimo de quien escribió cada cosa. Así se sincroniza entre sus miembros. Solo pueden leerlo quienes hayan entrado con su código de seis caracteres. El resto de tus proyectos se queda en tu dispositivo.</li>
     <li><strong>Las notas o prompts que compartes por enlace.</strong> Se guarda una copia de solo lectura, con el título y el texto, para que quien reciba el enlace pueda abrirla. Puede verla cualquiera que tenga el enlace.</li>
-    <li><strong>Las denuncias.</strong> Si denuncias un contenido, se guarda para revisarla: una copia de ese contenido tal como estaba, el motivo, y los identificadores anónimos y alias de quien lo escribió y de quien lo denuncia.</li>
+    <li><strong>Las denuncias.</strong> Si denuncias un contenido, deja de verse en tu dispositivo al momento, y si el proyecto es tuyo puedes sacar a quien lo escribió (el proyecto cambia de código). Queda un registro de la denuncia: una copia de ese contenido tal como estaba, el motivo, y los identificadores anónimos y nombres de quien lo escribió y de quien lo denuncia. Sirve para atender una reclamación sobre ese contenido; si quieres que retiremos algo, escríbenos.</li>
   </ul>
 
   <h2>La generación de prompts</h2>
-  <p>Cuando escribes una idea y pulsas para generar, ese texto se envía a una función de servidor que gestionamos nosotros, alojada en Supabase. Esa función se lo pasa a la API de Gemini de Google y te devuelve el prompt ordenado.</p>
+  <p>Cuando escribes una idea y la guardas, ese texto se envía, junto con el idioma que tienes elegido en la app, a una función de servidor que gestionamos nosotros, alojada en Supabase. Esa función se lo pasa a la API de Gemini de Google y te devuelve el prompt ordenado.</p>
   <p>Pasa por ahí, y no directamente a Google, para no tener que llevar la clave de Gemini dentro de la app. <strong>Nosotros no guardamos tu texto</strong>: ni en ese servidor ni en ninguna base de datos. Se descarta en cuanto se devuelve el resultado.</p>
-  <p>Google trata esos datos según sus condiciones para desarrolladores, así que <strong>no escribas ahí información confidencial ni datos personales de otras personas</strong>. Si no usas esa función, no se envía nada.</p>
+  <p>Google trata esos datos según sus condiciones para desarrolladores, así que <strong>no escribas ahí información confidencial ni datos personales de otras personas</strong>. Las notas no pasan por la IA: solo se envía lo que escribes en un prompt.</p>
 
   <h2>Anuncios (versión gratuita)</h2>
-  <p>La versión gratuita muestra un banner de Google AdMob. Antes de mostrar ninguno:</p>
+  <p>La versión gratuita muestra anuncios de Google AdMob: un banner en la parte de abajo y, cuando generas o regeneras un prompt con la IA, un anuncio a pantalla completa (como mucho uno cada 90 segundos; la generación sigue por debajo mientras tanto). Antes de mostrar ninguno:</p>
   <ul>
     <li>En el Espacio Económico Europeo, el Reino Unido y Suiza, Google te enseña su formulario de consentimiento.</li>
-    <li>En iPhone y iPad, Apple te pregunta si permites que la app rastree tu actividad.</li>
+    <li>Después, en iPhone y iPad, Apple te pregunta si permites que la app rastree tu actividad.</li>
   </ul>
-  <p>Si lo permites, Google puede usar el identificador de publicidad de tu dispositivo para personalizar y medir los anuncios. Si no lo permites, los anuncios siguen saliendo, pero sin personalizar. En Android fuera de Europa no se pregunta: Google aplica la configuración de anuncios de tu dispositivo. En los dos casos AdMob recibe datos técnicos del dispositivo, como la dirección IP, el modelo o el sistema. Los usa para mostrar el anuncio, limitar cuántas veces sale y evitar fraudes. Cómo los usa Google: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+  <p>Si lo permites, Google puede usar el identificador de publicidad de tu dispositivo para personalizar y medir los anuncios. Si no lo permites, los anuncios siguen saliendo, pero sin personalizar. En Android fuera de Europa no se pregunta: Google aplica la configuración de anuncios de tu dispositivo. En todos los casos AdMob recibe datos técnicos del dispositivo, como la dirección IP, el modelo o el sistema. Los usa para mostrar el anuncio, limitar cuántas veces sale y evitar fraudes. Cómo los usa Google: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
   <p>Puedes cambiar de opinión cuando quieras:</p>
   <ul>
-    <li>En Europa, desde la app: icono de personas, arriba a la derecha → <strong>Privacidad de los anuncios</strong>.</li>
+    <li>En Europa, desde la app: <strong>Ajustes</strong> (la rueda dentada, arriba a la derecha) → <strong>Privacidad de los anuncios</strong>.</li>
     <li>En iPhone: Ajustes → Privacidad y seguridad → Rastreo.</li>
     <li>En Android: Ajustes → Google → Anuncios, donde puedes borrar el identificador de publicidad.</li>
   </ul>
-  <p>Con Pro no hay anuncios.</p>
+  <p>Con Pro no hay anuncios, ni el banner ni el de pantalla completa.</p>
 
-  <h2>La compra Pro</h2>
-  <p><strong>Prompt AI Pro</strong> es una suscripción de 1,99 €/mes o 14,99 €/año, que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play. Incluye todos los proyectos que quieras, todas las notas y prompts, vincularlos entre sí, compartir proyectos y quitar los anuncios. El pago lo procesan Apple o Google Play. RevenueCat lo valida y recibe un identificador aleatorio de la app y los datos de la compra. No recibe tu nombre ni el contenido de tus proyectos. «Restaurar compra» está en la misma pantalla, para recuperar Pro al cambiar de dispositivo.</p>
+  <h2>Prompt AI Pro</h2>
+  <p><strong>Prompt AI Pro</strong> es una suscripción mensual o anual (en España, 1,99 €/mes o 14,99 €/año; en otros países, la app enseña el precio en tu moneda antes de pagar), que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play. Hace tres cosas: quita los anuncios, deja compartir proyectos (y unirse a ellos con un código) y deja vincular cada prompt con las notas que le dan contexto. Todo lo demás es gratis, sin límite de proyectos, prompts ni notas.</p>
+  <p>El pago lo procesan Apple o Google Play. RevenueCat lo valida y recibe un identificador aleatorio de la app y los datos de la compra. No recibe tu nombre ni el contenido de tus proyectos. «Restaurar compras» está en la misma pantalla, para recuperar Pro al cambiar de dispositivo.</p>
 
   <h2>Lo que la app NO hace</h2>
   <ul>
@@ -84,11 +110,11 @@
   </ul>
 
   <h2>Borrar tus datos</h2>
-  <p>No hay cuenta que borrar. Para retirar lo que hayas compartido, en la app ve al icono de personas, arriba a la derecha → <strong>Borrar mis datos compartidos</strong>:</p>
+  <p>No hay cuenta que borrar. Para retirar lo que hayas compartido, en la app ve a <strong>Ajustes</strong> (la rueda dentada, arriba a la derecha) → <strong>Borrar mis datos compartidos</strong>:</p>
   <ul>
-    <li>Los proyectos compartidos que creaste se borran con todo su contenido y su código.</li>
-    <li>De los proyectos de otras personas sales tú, y ellas los conservan.</li>
-    <li>Se borra tu alias y tu dispositivo empieza de cero, con un identificador nuevo.</li>
+    <li>Los proyectos compartidos que creaste se borran para todos, con todo su contenido y su código.</li>
+    <li>De los proyectos de otras personas sales, y se borra lo que escribiste en ellos; el resto lo conservan ellas.</li>
+    <li>Se borra tu nombre y tu dispositivo empieza de cero, con un identificador nuevo.</li>
   </ul>
   <p>Lo que está solo en tu dispositivo no se toca, y desaparece al desinstalar la app.</p>
   <p>Las copias compartidas por enlace y las denuncias no se pueden borrar desde la app. Escríbenos a la dirección de abajo con el enlace o lo que quieras retirar, y lo borramos.</p>
@@ -97,14 +123,14 @@
   <ul>
     <li><strong>Proyectos compartidos:</strong> hasta que se borren. De cada uno se conservan los <strong>300 prompts más recientes</strong>, y los más antiguos se borran solos. Las notas no se borran automáticamente.</li>
     <li><strong>Copias por enlace:</strong> hasta que nos pidas retirarlas.</li>
-    <li><strong>Denuncias:</strong> el tiempo necesario para revisarlas.</li>
+    <li><strong>Denuncias:</strong> hasta que nos pidas borrarlas, o mientras hagan falta para atender una reclamación sobre ese contenido.</li>
   </ul>
 
   <h2>Menores</h2>
   <p>La app no está dirigida a menores de 14 años y no recoge datos de ellos a sabiendas.</p>
 
   <h2>Base legal y tus derechos</h2>
-  <p>Tratamos los datos por tres motivos. El primero es darte el servicio que pides: generar prompts, compartir y la compra. El segundo, tu consentimiento, para los anuncios personalizados. El tercero, nuestro interés legítimo en moderar el contenido compartido y evitar abusos.</p>
+  <p>Tratamos los datos por tres motivos. El primero es darte el servicio que pides: generar prompts, compartir y la suscripción. El segundo, tu consentimiento, para los anuncios personalizados. El tercero, nuestro interés legítimo en moderar el contenido compartido y evitar abusos.</p>
   <p>Puedes acceder a tus datos, rectificarlos, suprimirlos, oponerte a su uso, limitarlo o pedir una copia. También puedes retirar tu consentimiento en cualquier momento. Para cualquiera de esas cosas, escríbenos. Y puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">aepd.es</a>).</p>
 
   <h2>Con quién se comparten</h2>
@@ -112,7 +138,7 @@
   <ul>
     <li>Google: Firebase Authentication y Cloud Firestore, la API de Gemini y AdMob.</li>
     <li>Supabase: el servidor intermedio de la IA.</li>
-    <li>RevenueCat: la validación de la compra.</li>
+    <li>RevenueCat: la validación de la suscripción.</li>
     <li>Apple y Google Play: el pago.</li>
   </ul>
   <p>Algunos tratan datos fuera del Espacio Económico Europeo, con las garantías que exige el RGPD: cláusulas contractuales tipo o el Marco de Privacidad de Datos UE-EE. UU.</p>
@@ -120,7 +146,7 @@
   <h2>Responsable y soporte</h2>
   <p>El responsable es el desarrollador de Prompt AI que figura en su ficha de la App Store y de Google Play. ¿Tienes dudas sobre tus datos, algo no funciona o se te ocurre algo que falta? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <p class="foot">Última actualización: 13 de septiembre de 2026 · Prompt AI</p>
+  <p class="foot">Última actualización: 2 de octubre de 2026 · Prompt AI · <a href="support.html" hreflang="en" lang="en">English</a></p>
 </div>
 </body>
 </html>

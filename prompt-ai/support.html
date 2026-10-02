@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt AI — Support and privacy</title>
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/prompt-ai/soporte.html">
+<style>
+  :root{
+    --base:#0B0C10; --surface:#191B23; --raised:#22242F; --line:#2C2F3B;
+    --ink:#F2F1F7; --ink-dim:#9A9AAB; --accent:#9C8FFF;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --base:#F7F6FB; --surface:#FFFFFF; --raised:#FFFFFF; --line:#E2E0EC;
+      --ink:#191B23; --ink-dim:#63636F; --accent:#6B5BE0;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--base);color:var(--ink);margin:0;
+       font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-family:'Unbounded','Inter',system-ui,sans-serif;font-size:2.1rem;font-weight:700;margin:0 0 .3rem;
+     background:linear-gradient(90deg,#9C8FFF,#C08CFF,#F857A6);-webkit-background-clip:text;
+     background-clip:text;-webkit-text-fill-color:transparent;text-wrap:balance}
+  .sub{color:var(--ink-dim);margin:0 0 2.5rem}
+  h2{font-size:1.25rem;margin:2.4rem 0 .7rem}
+  h3{font-size:1.05rem;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  .card{background:var(--raised);border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.5rem;margin:0 0 1.5rem}
+  a{color:var(--accent)}
+  code{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:.1rem .35rem;font-size:.9em}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-dim);font-size:.92rem}
+  .idioma{float:right;font-size:.92rem;margin-top:.5rem}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@400;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>Prompt AI</h1>
+  <p class="sub">Support and privacy</p>
+
+  <div class="card">
+    <p><strong>In short:</strong> there are no accounts. No sign-up, no email, no password. Your projects, notes and prompts are stored on your device. Something only leaves it in four cases: when you generate a prompt with the AI, when you share a project or a link, when you report content and, in the free version, what the ads need. You decide whether ads can be personalized, and the Pro subscription removes them. There are no analytics.</p>
+    <p>Something not working, or have a question? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>How does it work?</h3>
+  <p>Create a project and, inside it, type or dictate your idea in the Prompts tab. When you save, the AI turns it into a structured brief: context, goal, data model, requirements, steps and the decisions it assumed. The original idea is kept with the prompt: tap “Idea” to flip the card, edit it and regenerate the prompt. The Notes tab is for things that don't need converting.</p>
+
+  <h3>What language does the AI write in?</h3>
+  <p>The language you write your idea in. The app's menus and messages are in English, Spanish (Spain) and Latin American Spanish: the first time it uses your device's language, and you can change it in <strong>Settings</strong> (the gear, top right) → <strong>Language</strong>.</p>
+
+  <h3>The AI doesn't respond or says it's overloaded</h3>
+  <p>Generating takes from a few seconds to a minute, and the app shows how long it has been. If the AI doesn't answer, the app tells you instead of saving a half-finished prompt: you can try again in a minute, or keep your text as it is with “Save without AI”. When you regenerate and it fails, the prompt you already had is left untouched.</p>
+
+  <h3>How do I share a project? (Pro)</h3>
+  <p>Open the project → the <strong>“…”</strong> button at the top (or touch and hold its icon on the home screen) → <strong>Share</strong> → <strong>Turn into a shared project</strong>. You get a six-character code; send it to anyone you like, by WhatsApp or by showing it to them. They enter it in <strong>Settings → Join a shared project</strong>. Joining is also a Pro feature.</p>
+
+  <h3>I got a new phone and I don't have Pro</h3>
+  <p>Go to <strong>Settings → Go Pro → Restore purchases</strong>, signed in with the same Apple or Google Play account you paid with. Anyone who bought the one-time purchase from the first versions keeps Pro.</p>
+
+  <h3>How do I cancel the subscription?</h3>
+  <p>From your store account, not from the app. On iPhone: Settings → your name → Subscriptions. On Android: Google Play → your profile → Payments &amp; subscriptions → Subscriptions.</p>
+
+  <h2>What data leaves your device, and why</h2>
+  <ul>
+    <li><strong>An anonymous identifier.</strong> When you open the app online, Firebase Authentication (Google) gives your device a random identifier. It has no name, email, phone number or password, and you don't see any form. It's used so that only the members of a shared project can read it, and so that someone who writes something inappropriate can be reported or removed from the project.</li>
+    <li><strong>Your name in shared projects, if you set one.</strong> It's optional and stored in Firebase. If you don't set one, you appear as “Anonymous”.</li>
+    <li><strong>The projects you share</strong> (Pro). When you share a project, its name, notes and prompts are stored in Cloud Firestore (Google), along with the name and anonymous identifier of whoever wrote each item. That's how it syncs between its members. Only people who joined with its six-character code can read it. The rest of your projects stay on your device.</li>
+    <li><strong>The notes or prompts you share by link.</strong> A read-only copy with the title and text is stored so that whoever receives the link can open it. Anyone with the link can see it.</li>
+    <li><strong>Reports.</strong> When you report content, it disappears from your device right away, and if the project is yours you can remove the person who wrote it (the project gets a new code). A record of the report is kept: a copy of that content as it was, the reason, and the anonymous identifiers and names of who wrote it and who reported it. It's used to handle a complaint about that content; if you want us to remove something, email us.</li>
+  </ul>
+
+  <h2>Prompt generation</h2>
+  <p>When you write an idea and save it, that text is sent, together with the language you chose in the app, to a server function that we run, hosted on Supabase. That function passes it to Google's Gemini API and returns the structured prompt to you.</p>
+  <p>It goes through there, rather than straight to Google, so that the Gemini key doesn't have to ship inside the app. <strong>We don't store your text</strong>: not on that server and not in any database. It's discarded as soon as the result is returned.</p>
+  <p>Google handles that data under its developer terms, so <strong>don't write confidential information or other people's personal data there</strong>. Notes don't go through the AI: only what you write in a prompt is sent.</p>
+
+  <h2>Ads (free version)</h2>
+  <p>The free version shows Google AdMob ads: a banner at the bottom and, when you generate or regenerate a prompt with the AI, a full-screen ad (at most one every 90 seconds; the generation keeps running underneath). Before any ad is shown:</p>
+  <ul>
+    <li>In the European Economic Area, the United Kingdom and Switzerland, Google shows you its consent form.</li>
+    <li>Then, on iPhone and iPad, Apple asks whether you allow the app to track your activity.</li>
+  </ul>
+  <p>If you allow it, Google can use your device's advertising identifier to personalize and measure ads. If you don't, ads still appear, but they aren't personalized. On Android outside Europe you aren't asked: Google applies your device's ad settings. In every case AdMob receives technical data from the device, such as the IP address, model or operating system. It uses it to show the ad, limit how often it appears and prevent fraud. How Google uses it: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+  <p>You can change your mind at any time:</p>
+  <ul>
+    <li>In Europe, from the app: <strong>Settings</strong> (the gear, top right) → <strong>Ad privacy options</strong>.</li>
+    <li>On iPhone: Settings → Privacy &amp; Security → Tracking.</li>
+    <li>On Android: Settings → Google → Ads, where you can delete the advertising ID.</li>
+  </ul>
+  <p>With Pro there are no ads, neither the banner nor the full-screen one.</p>
+
+  <h2>Prompt AI Pro</h2>
+  <p><strong>Prompt AI Pro</strong> is a monthly or yearly subscription (the app shows the price in your currency before you pay) that renews automatically until you cancel it from your Apple or Google Play account. It does three things: removes the ads, lets you share projects (and join them with a code), and lets you link each prompt to the notes that give it context. Everything else is free, with no limit on projects, prompts or notes.</p>
+  <p>Payment is processed by Apple or Google Play. RevenueCat validates it and receives a random app identifier and the purchase details. It doesn't receive your name or the content of your projects. “Restore purchases” is on the same screen, to get Pro back when you change devices.</p>
+
+  <h2>What the app does NOT do</h2>
+  <ul>
+    <li>It has no analytics: we don't record what you do in the app.</li>
+    <li>It has no tracking of its own: the only tracking is Google's, for ads, explained above.</li>
+    <li>We don't sell or hand over your data to anyone.</li>
+    <li>It doesn't ask for access to your camera, microphone, contacts or location. If you dictate, your device's keyboard does it.</li>
+  </ul>
+
+  <h2>Deleting your data</h2>
+  <p>There's no account to delete. To remove what you've shared, in the app go to <strong>Settings</strong> (the gear, top right) → <strong>Delete my shared data</strong>:</p>
+  <ul>
+    <li>Shared projects you created are deleted for everyone, with all their content and their code.</li>
+    <li>You leave other people's projects, and what you wrote in them is deleted; they keep the rest.</li>
+    <li>Your name is deleted and your device starts over with a new identifier.</li>
+  </ul>
+  <p>Anything that's only on your device isn't touched, and it disappears when you uninstall the app.</p>
+  <p>Copies shared by link and reports can't be deleted from the app. Email us at the address below with the link or whatever you want removed, and we'll delete it.</p>
+
+  <h2>How long data is kept</h2>
+  <ul>
+    <li><strong>Shared projects:</strong> until they're deleted. Each one keeps its <strong>300 most recent prompts</strong>; older ones are deleted automatically. Notes are never deleted automatically.</li>
+    <li><strong>Link copies:</strong> until you ask us to remove them.</li>
+    <li><strong>Reports:</strong> until you ask us to delete them, or for as long as they're needed to handle a complaint about that content.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The app isn't directed at children under 14 and doesn't knowingly collect their data.</p>
+
+  <h2>Legal basis and your rights</h2>
+  <p>We process data for three reasons. First, to provide the service you ask for: generating prompts, sharing and the subscription. Second, your consent, for personalized ads. Third, our legitimate interest in moderating shared content and preventing abuse.</p>
+  <p>You can access, correct or delete your data, object to or restrict its use, or ask for a copy. You can also withdraw your consent at any time. For any of these, email us. You can also file a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>).</p>
+
+  <h2>Who it's shared with</h2>
+  <p>Only with the services that make the app work:</p>
+  <ul>
+    <li>Google: Firebase Authentication and Cloud Firestore, the Gemini API and AdMob.</li>
+    <li>Supabase: the AI's intermediate server.</li>
+    <li>RevenueCat: subscription validation.</li>
+    <li>Apple and Google Play: payment.</li>
+  </ul>
+  <p>Some of them process data outside the European Economic Area, with the safeguards required by the GDPR: standard contractual clauses or the EU-U.S. Data Privacy Framework.</p>
+
+  <h2>Controller and support</h2>
+  <p>The controller is the developer of Prompt AI listed on its App Store and Google Play pages. Questions about your data, something not working, or a feature you'd like? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <p class="foot">Last updated: October 2, 2026 · Prompt AI · <a href="soporte.html" hreflang="es" lang="es">Español</a></p>
+</div>
+</body>
+</html>

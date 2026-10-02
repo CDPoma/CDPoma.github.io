@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMS Monitor — Support and privacy</title>
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/bms-monitor/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/bms-monitor/support.html">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .4rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>BMS Monitor</h1>
+  <p class="sub">Support and privacy</p>
+
+  <div class="card">
+    <p><strong>In short:</strong> BMS Monitor reads the BMS in your lithium battery over Bluetooth and shows what it measures. There's no account or sign-up, and readings never leave your phone unless you turn on station mode (Pro) to watch them from another one. The free version shows ads; Pro removes them.</p>
+  </div>
+
+  <h2>What the app does</h2>
+  <p>It connects over Bluetooth Low Energy (BLE) to a BMS (battery management system) that uses the JBD/Xiaoxiang protocol and shows the live status of your LiFePO4 or lithium-ion battery.</p>
+  <h3>Free</h3>
+  <ul>
+    <li>State of charge, pack voltage, charge or discharge current, and power.</li>
+    <li>Today's maximum charge and discharge current.</li>
+    <li>Capacity: amp-hours remaining out of the nominal capacity.</li>
+    <li>Average temperature and each sensor's reading.</li>
+    <li>Protection: charge and discharge MOSFETs, how many cells the BMS is balancing, and any active alarm.</li>
+  </ul>
+  <h3>With BMS Monitor Pro</h3>
+  <ul>
+    <li>Pack details: every cell's voltage (highest and lowest marked, red below 2.9 V, with a bolt on the cells being balanced), cycle count and the battery's measured health.</li>
+    <li>Charts of voltage, charge and discharge, and remaining capacity, by day, week, month or year.</li>
+    <li>BMS information: cells in series, sensors, configured nominal capacity, cycles and MOSFET status.</li>
+    <li>Station and remote modes, to watch the battery from another phone (both phones with Pro).</li>
+    <li>No ads.</li>
+  </ul>
+  <p>While the app is open, the screen stays on, so the phone acting as a station doesn't go to sleep. If you don't need it on, close the app.</p>
+
+  <h2>Compatibility</h2>
+  <p>BMS Monitor reads JBD (Jiabaida) "Smart BMS" units, the Xiaoxiang family, with Bluetooth: the hardware inside many batteries from Overkill Solar, ECO-WORTHY, Vatrer Power, LIONTRON, Epoch or Datou, and many DIY packs. It is not an official app of any of those brands. Other BMS families use different protocols, and the app can't read them.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>My battery doesn't show up or won't connect</h3>
+  <p>Make sure your phone's Bluetooth is on and you're within a few meters of the BMS. The BMS accepts only one connection at a time: if another phone or app is connected to it, close it first. On Android the app also needs the location permission, which the system requires to scan for Bluetooth devices.</p>
+  <h3>How is battery health measured?</h3>
+  <p>Automatically, the next time the battery reaches 100% and stops taking charge for a few minutes. If it had gone nearly empty before, the app counts the amp-hours that went in; otherwise it takes the amp-hours the BMS reports with the pack full. Until then you'll see "health not measured".</p>
+  <h3>How do station and remote modes work? (Pro)</h3>
+  <p>Leave one phone next to the battery, with Bluetooth, an internet connection and a charger, and turn on station mode there: it gives you a 6-character code. On another phone, "View remotely" with that code shows the battery live. The station publishes its readings while someone is watching and, when nobody is, one every five minutes.</p>
+  <h3>How do I change the language?</h3>
+  <p>In Settings → Language (the gear at the top): Spanish (Spain), Spanish (Latin America) or English. The first time, the app follows your phone's language.</p>
+
+  <h2>What data is stored, and where</h2>
+  <p>No personal data is collected: the app doesn't ask for a name, email, phone number or any kind of account.</p>
+  <ul>
+    <li><strong>On your phone</strong>: the chart history (kept for everyone and shown with Pro), the measured health, the name and identifier of the last BMS you connected, the language you chose and your station code.</li>
+    <li><strong>On Google Firebase, only with station or remote mode</strong>: the station publishes the latest BMS reading (voltages, current, temperatures, percentages and protection status) to Realtime Database, and the chart history and measured health to Cloud Firestore, all under its random code. The phone watching remotely only writes an "I'm still here" signal (the time, whether the app is in the foreground and a random session identifier), so the station knows when to publish.</li>
+  </ul>
+  <h3>How to delete your data</h3>
+  <ul>
+    <li><strong>What's on your phone</strong>: it's deleted when you uninstall the app.</li>
+    <li><strong>What station mode published</strong>: it's overwritten with every reading and isn't tied to any identity, only to the code. The app doesn't have a button to delete it from the server yet: email us your station code and we'll delete it.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>Bluetooth</code>: to find and connect to your BMS.</li>
+    <li><code>Location</code> (Android only): the system requires it to scan for nearby Bluetooth devices. The app doesn't read or store your location.</li>
+    <li><code>Tracking</code> (iPhone and iPad): Apple's prompt before ads are personalized.</li>
+  </ul>
+  <p>The app doesn't ask for camera, microphone, contacts or photos.</p>
+
+  <h2>Ads</h2>
+  <p>The free version shows Google AdMob ads: a banner at the bottom and, on iPhone and iPad, a full-screen ad when the app opens. Consent is asked before any of them is shown: in the European Economic Area, the UK and Switzerland, with Google's form; on iPhone and iPad, with Apple's tracking prompt. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads still show, but not personalized. Either way it receives technical data from the device, such as the IP address.</p>
+  <p>What you chose in Google's form can be changed in the app, in Settings → "Ad privacy options" (it only appears where that form applies). The tracking permission is changed in Settings → Privacy &amp; Security → Tracking (iPhone) or in Settings → Google → Ads (Android). Pro has no ads at all.</p>
+
+  <h2>In-app purchases</h2>
+  <p>BMS Monitor Pro is a monthly or yearly subscription (€1.99/month or €14.99/year in Spain; the price for your country and store is shown in the app before you pay) that renews automatically until you cancel it in your Apple or Google Play account. RevenueCat handles the purchase on top of Apple's payment system (iPhone and iPad) or Google Play's (Android); it checks whether you have the subscription but doesn't receive your battery data. To get it back on another device, use "Restore purchases" on the Pro screen.</p>
+
+  <h2>Third parties</h2>
+  <ul>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a>: station and remote modes.</li>
+    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>: Pro subscription check.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: ads in the free version.</li>
+  </ul>
+
+  <h2>Languages</h2>
+  <p>The app is available in English, Spanish (Spain) and Spanish (Latin America). This page is also available <a href="soporte.html" hreflang="es" lang="es">in Spanish</a>.</p>
+
+  <h2>Terms of use</h2>
+  <p>On iPhone and iPad, <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple's standard license agreement (EULA)</a> applies; on Android, the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</p>
+
+  <h2>Children's privacy</h2>
+  <p>This app is a technical tool for monitoring batteries and isn't directed at children. It doesn't knowingly collect data from children.</p>
+
+  <h2>Contact and support</h2>
+  <p>Questions, bugs or suggestions? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it's about a connection, include your phone model and the name your BMS shows in the Bluetooth list.</p>
+
+  <div class="foot">BMS Monitor 1.0.5 · Effective 2026-10-02 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

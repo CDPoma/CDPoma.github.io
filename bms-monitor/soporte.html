@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BMS Monitor — Soporte y privacidad</title>
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/bms-monitor/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/bms-monitor/support.html">
 <style>
   :root{
     --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
@@ -22,9 +24,11 @@
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
   .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
   h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
   .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
   h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .4rem}
   p{margin:0 0 1rem}
   ul{margin:0 0 1rem;padding-left:1.3rem}
   li{margin-bottom:.4rem}
@@ -39,47 +43,94 @@
 </head>
 <body>
 <div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
   <h1>BMS Monitor</h1>
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> no se recoge ningún dato personal. La app habla directamente con tu batería por Bluetooth; no hay cuenta, ni servidor propio salvo que actives tú mismo el "Modo estación" para verla en remoto.</p>
+    <p><strong>Resumen rápido:</strong> BMS Monitor lee por Bluetooth el BMS de tu batería de litio y te enseña lo que mide. No hay cuentas ni registro, y las lecturas no salen de tu teléfono salvo que actives tú el modo estación (Pro) para verlas desde otro. La versión gratuita muestra anuncios; Pro los quita.</p>
   </div>
 
   <h2>Qué hace la app</h2>
-  <p>BMS Monitor se conecta por Bluetooth Low Energy (BLE) a un BMS (sistema de gestión de batería) compatible JBD/Xiaoxiang para mostrar en vivo voltajes de celda, estado de carga y temperatura de tu banco de baterías LiFePO4/Li-ion. Con una suscripción opcional («Pro», 1,99 €/mes o 14,99 €/año, que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play) se desbloquean las gráficas de histórico (día/semana/mes/año) y el modo estación/remoto, y se quita la publicidad — toda la monitorización básica funciona sin comprarla.</p>
+  <p>Se conecta por Bluetooth Low Energy (BLE) a un BMS (sistema de gestión de batería) con protocolo JBD/Xiaoxiang y enseña en directo el estado de tu batería LiFePO4 o de iones de litio.</p>
+  <h3>Gratis</h3>
+  <ul>
+    <li>Estado de carga, voltaje del pack, corriente de carga o descarga y potencia.</li>
+    <li>El máximo de carga y de descarga del día.</li>
+    <li>Capacidad: amperios-hora restantes sobre los nominales.</li>
+    <li>Temperatura media y la de cada sonda.</li>
+    <li>Protecciones: MOSFET de carga y de descarga, cuántas celdas está balanceando el BMS y cualquier alarma activa.</li>
+  </ul>
+  <h3>Con BMS Monitor Pro</h3>
+  <ul>
+    <li>Detalle del pack: el voltaje de cada celda (la más alta y la más baja marcadas, en rojo por debajo de 2,9 V, con el rayo de balanceo), los ciclos y la salud medida de la batería.</li>
+    <li>Gráficas de voltaje, carga y descarga, y de capacidad restante, por día, semana, mes o año.</li>
+    <li>Información del BMS: celdas en serie, sondas, capacidad nominal configurada, ciclos y estado de los MOSFET.</li>
+    <li>Modo estación y modo remoto, para ver la batería desde otro teléfono (los dos con Pro).</li>
+    <li>Sin anuncios.</li>
+  </ul>
+  <p>Mientras la app está abierta, la pantalla no se apaga: así el teléfono que hace de estación no se duerme. Si no la necesitas encendida, cierra la app.</p>
+
+  <h2>Compatibilidad</h2>
+  <p>BMS Monitor lee los BMS «Smart BMS» de JBD (Jiabaida), la familia Xiaoxiang, con Bluetooth: el hardware que llevan dentro muchas baterías de Overkill Solar, ECO-WORTHY, Vatrer Power, LIONTRON, Epoch o Datou, y muchos packs montados a mano. No es una app oficial de ninguna de esas marcas. Los BMS de otras familias usan protocolos distintos y la app no los lee.</p>
+
+  <h2>Preguntas frecuentes</h2>
+  <h3>Mi batería no aparece o no conecta</h3>
+  <p>Comprueba que el Bluetooth del teléfono está encendido y que estás a pocos metros del BMS. El BMS solo admite una conexión a la vez: si otro teléfono u otra app está conectado a él, ciérrala antes. En Android, la app necesita además el permiso de ubicación, que el sistema exige para buscar dispositivos Bluetooth.</p>
+  <h3>¿Cómo se mide la salud de la batería?</h3>
+  <p>Sola, la próxima vez que la batería llegue al 100 % y deje de admitir carga durante unos minutos. Si antes había bajado casi hasta vacía, la app cuenta los amperios-hora que le han entrado; si no, toma los que el BMS dice tener con el pack lleno. Hasta entonces verás «salud sin medir».</p>
+  <h3>¿Cómo funcionan el modo estación y el modo remoto? (Pro)</h3>
+  <p>Deja un teléfono junto a la batería, con Bluetooth, conexión a internet y enchufado, y activa en él el modo estación: te dará un código de 6 caracteres. En otro teléfono, «Ver en remoto» con ese código enseña la batería en directo. La estación publica sus lecturas mientras alguien las mira y, si no las mira nadie, una cada cinco minutos.</p>
+  <h3>¿Cómo cambio el idioma?</h3>
+  <p>En Ajustes → Idioma (la rueda de arriba): español de España, español de Latinoamérica o inglés. La primera vez la app sigue al idioma del teléfono.</p>
 
   <h2>Qué datos se guardan y dónde</h2>
-  <p>No se recoge ningún dato personal — no se crea ni pide nombre, email ni cuenta de ningún tipo. Los datos de la batería (voltajes, corriente, temperatura, ciclos, SOC) se muestran en pantalla y, para usuarios Pro, se guardan como histórico local (gráficas día/semana/mes/año) solo en tu propio dispositivo — nunca se suben a un servidor nuestro.</p>
-  <p>Si activas "Modo estación" para ver tu batería en remoto desde otro dispositivo, las lecturas se retransmiten a través de Google Firebase (Cloud Firestore) para que ese segundo dispositivo las vea en vivo — vinculado a un código corto que tú mismo generas, no a tu identidad.</p>
-
-  <h2>Servicios de terceros</h2>
-  <table>
-    <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
-    <tbody>
-      <tr><td>Google AdMob</td><td>Muestra publicidad a quien no tiene "Pro": un banner y, en iPhone, un anuncio a pantalla completa al abrir la app. Antes de mostrar ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google; en iPhone y iPad, con el aviso de Apple de seguimiento. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios; si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP. Puedes cambiarlo en Ajustes → Privacidad y seguridad → Rastreo (iPhone) o en Ajustes → Google → Anuncios (Android).</td></tr>
-      <tr><td>RevenueCat + Apple/Google (compras)</td><td>Gestiona la suscripción opcional "Pro".</td></tr>
-      <tr><td>Google Firebase / Cloud Firestore</td><td>Solo se usa si activas "Modo estación" — retransmite lecturas en vivo a un segundo dispositivo mediante un código corto.</td></tr>
-    </tbody>
-  </table>
+  <p>No se recoge ningún dato personal: la app no pide nombre, correo, teléfono ni cuenta de ningún tipo.</p>
+  <ul>
+    <li><strong>En tu teléfono</strong>: el historial de las gráficas (lo guarda para todos, y con Pro lo enseña), la salud medida, el nombre y el identificador del último BMS conectado, el idioma elegido y el código de tu estación.</li>
+    <li><strong>En Google Firebase, solo con el modo estación o el remoto</strong>: la estación publica en Realtime Database la última lectura del BMS (voltajes, corriente, temperaturas, porcentajes y estado de las protecciones) y en Cloud Firestore el historial de las gráficas y la salud medida, todo bajo su código aleatorio. El teléfono que mira en remoto escribe solo un aviso de «sigo aquí» (la hora, si tiene la app delante y un identificador de sesión aleatorio), para que la estación sepa cuándo publicar.</li>
+  </ul>
+  <h3>Cómo borrar tus datos</h3>
+  <ul>
+    <li><strong>Lo que está en tu teléfono</strong>: se borra al desinstalar la app.</li>
+    <li><strong>Lo publicado por el modo estación</strong>: se sobrescribe con cada lectura y no está ligado a ninguna identidad, solo al código. La app todavía no tiene un botón para borrarlo del servidor: escríbenos con el código de tu estación y lo borramos.</li>
+  </ul>
 
   <h2>Permisos</h2>
   <ul>
-    <li><code>Bluetooth</code> — para buscar y conectar con tu BMS.</li>
-    <li><code>Ubicación</code> (solo Android anterior a la versión 12) — exigido por el sistema para poder buscar dispositivos Bluetooth en esas versiones; la app no lee ni usa tu ubicación.</li>
+    <li><code>Bluetooth</code>: para buscar y conectar con tu BMS.</li>
+    <li><code>Ubicación</code> (solo Android): el sistema la exige para buscar dispositivos Bluetooth cercanos. La app no lee ni guarda tu ubicación.</li>
+    <li><code>Seguimiento</code> (iPhone y iPad): el aviso de Apple antes de personalizar los anuncios.</li>
   </ul>
   <p>No se pide permiso de cámara, micrófono, contactos ni fotos.</p>
 
-  <h2>Almacenamiento</h2>
-  <p>Las lecturas en vivo solo existen en memoria mientras la app está abierta y conectada. El histórico de usuarios Pro se guarda localmente en el dispositivo y nunca se sube a ningún sitio, salvo de forma transitoria mientras "Modo estación" está activo.</p>
+  <h2>Anuncios</h2>
+  <p>La versión gratuita muestra anuncios de Google AdMob: un banner en la parte de abajo y, en iPhone y iPad, un anuncio a pantalla completa al abrir la app. Antes de mostrar ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google; en iPhone y iPad, con el aviso de Apple de seguimiento. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios; si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP.</p>
+  <p>Lo que elegiste en el formulario de Google se cambia en la app, en Ajustes → «Privacidad de los anuncios» (solo aparece donde ese formulario se aplica). El permiso de seguimiento se cambia en Ajustes → Privacidad y seguridad → Rastreo (iPhone) o en Ajustes → Google → Anuncios (Android). Con Pro no hay ningún anuncio.</p>
+
+  <h2>Compras dentro de la app</h2>
+  <p>BMS Monitor Pro es una suscripción de 1,99 €/mes o 14,99 €/año en España (el precio de tu país aparece en la app antes de pagar), que se renueva sola hasta que la canceles desde tu cuenta de Apple o de Google Play. La compra la gestiona RevenueCat sobre el sistema de pagos de Apple (iPhone y iPad) o de Google Play (Android); RevenueCat comprueba si tienes la suscripción, pero no recibe los datos de tu batería. Para recuperarla en otro dispositivo, usa «Restaurar compras» en la pantalla de Pro.</p>
+
+  <h2>Terceros</h2>
+  <ul>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a>: modo estación y modo remoto.</li>
+    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>: comprobación de la suscripción Pro.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: anuncios de la versión gratuita.</li>
+  </ul>
+
+  <h2>Idiomas</h2>
+  <p>La app está en español de España, español de Latinoamérica e inglés. Esta página también está <a href="support.html" hreflang="en" lang="en">en inglés</a>.</p>
+
+  <h2>Condiciones de uso</h2>
+  <p>En iPhone y iPad se aplica el <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">contrato de licencia estándar de Apple (EULA)</a>; en Android, las <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">condiciones de servicio de Google Play</a>.</p>
 
   <h2>Privacidad infantil</h2>
   <p>Esta app es una herramienta técnica de monitorización de baterías y no está dirigida a menores. No recoge a sabiendas datos de menores.</p>
 
   <h2>Contacto y soporte</h2>
-  <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si es sobre una conexión, di el modelo de tu teléfono y el nombre con el que aparece tu BMS en la lista de Bluetooth.</p>
 
-  <div class="foot">BMS Monitor v1.0 · Vigente desde 2026-09-23 · Gabriel Micó Victoria</div>
+  <div class="foot">BMS Monitor 1.0.5 · Vigente desde 2026-10-02 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
