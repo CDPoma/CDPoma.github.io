@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TapMusic — Ayuda y soporte</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#c4511a; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#ff8a4c; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#ff8a4c; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>TapMusic</h1>
+  <p class="sub">Ayuda y soporte</p>
+  <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a></nav>
+
+  <div class="card">
+    <p><strong>TapMusic</strong> es un sintetizador y caja de ritmos de bolsillo: secuenciador de 16 pasos, 4 pistas, síntesis en tiempo real y diseño de sonido, con aspecto de aparato de verdad. Funciona sin cuenta y sin internet. ¿Algo no funciona? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿Por dónde empiezo?</h3>
+  <p>Toca <strong>▶ MARCHA</strong> para oír la canción de ejemplo. Las 16 teclas son los pasos de la pista elegida: toca una para poner o quitar una nota. Con los botones de pista (1 a 4) eliges cuál editas y, en la pestaña <strong>SONIDO</strong>, qué suena en ella. El botón <strong>?</strong> abre la hoja con todos los gestos.</p>
+
+  <h3>¿Cómo toco en directo y grabo?</h3>
+  <p>Toca <strong>♪ TECLAS</strong>: las 16 teclas pasan a ser un teclado, con la nota más grave abajo a la izquierda, y se pueden tocar acordes. Con <strong>REC</strong> armado, <strong>MARCHA</strong> da un compás de cuenta atrás con metrónomo y luego graba lo que tocas en el paso más cercano. Con la música parada, graba nota a nota.</p>
+
+  <h3>¿Cómo cambio el volumen de una pista o la silencio?</h3>
+  <p>Desliza el dedo sobre el botón de la pista (a la derecha o hacia arriba sube); la barra de abajo enseña el nivel. Mantén pulsada la pista para silenciarla o volver a encenderla.</p>
+
+  <h3>¿Puedo crear mis propios sonidos?</h3>
+  <p>Sí. En la pestaña SONIDO, <strong>✎ EDITAR</strong> cambia la forma de onda, la afinación, el ataque, la caída, el timbre, el golpe, el filtro de la pista y cuánto va al eco. Lo que hagas se puede guardar en <strong>★ MÍOS</strong> con nombre y usar en cualquier canción.</p>
+
+  <h3>¿Cómo encadeno patrones o hago una canción?</h3>
+  <p>Cada canción tiene 16 patrones. En la pestaña PATRONES, toca dos patrones a la vez con dos dedos para encadenar ese rango; mantén un patrón para copiarlo y mantén otro para pegarlo. En la pestaña CANCIÓN pones los patrones en el orden que quieras, repitiéndolos las veces que haga falta, y <strong>● CANCIÓN</strong> la reproduce entera.</p>
+
+  <h3>¿Cómo paso mi canción a otra app?</h3>
+  <p>En <strong>⚙</strong>, exporta la canción o el patrón en <strong>WAV</strong>, las 4 pistas sueltas en WAV, un archivo <strong>MIDI</strong> para cualquier programa de música (con el tempo de cada patrón y la batería en el canal 10) o el patrón en JSON para importarlo en otra canción. Se abre la hoja de compartir del iPhone y eliges dónde va.</p>
+
+  <h3>¿Se guardan mis canciones? ¿Y si cambio de iPhone?</h3>
+  <p>Todo se guarda solo. Con iCloud activado, las canciones y los sonidos aparecen en tus otros dispositivos con el mismo Apple ID. También puedes exportar una <strong>copia completa</strong> en un archivo y restaurarla cuando quieras.</p>
+
+  <h3>¿Por qué sale un anuncio al exportar?</h3>
+  <p>En la versión gratuita, cada vez que se genera un archivo para guardar (WAV, MIDI, JSON o copia) sale un anuncio a pantalla completa, avisado antes y como mucho uno cada 90 segundos; el archivo se sigue generando mientras lo ves. Además hay un banner debajo del aparato. La suscripción anual <strong>Sin anuncios</strong> los quita todos; no desbloquea nada más, porque todo lo demás ya es gratis.</p>
+
+  <h3>Me he suscrito y siguen saliendo anuncios</h3>
+  <p>Ve a <strong>⚙ → Sin anuncios → Restaurar compras</strong> con el mismo Apple ID con el que te suscribiste. Sirve también al cambiar de iPhone o reinstalar la app.</p>
+
+  <h3>¿Cómo cancelo la suscripción?</h3>
+  <p>En Ajustes del iPhone → tu nombre → Suscripciones → TapMusic. Se renueva sola cada año salvo que la canceles al menos 24 horas antes de que termine el periodo.</p>
+
+  <h3>No suena con el iPhone en silencio</h3>
+  <p>TapMusic es un instrumento y suena aunque el interruptor de silencio esté puesto. Si no oyes nada, sube el volumen del iPhone y comprueba que la pista no está en MUTE ni con el volumen a cero.</p>
+
+  <h2>Contacto</h2>
+  <p>Dudas, fallos o sugerencias: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si es un fallo, di el modelo de iPhone y qué estabas haciendo.</p>
+
+  <div class="foot">TapMusic · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
