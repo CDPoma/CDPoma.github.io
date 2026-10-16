@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BikeFuel — Contraseña nueva</title>
+<style>
+  :root{
+    --bg:#f6f8f1; --surface:#ffffff; --ink:#131a12; --ink-light:#5a6556;
+    --accent:#4f6f00; --line:#e1e8d8; --card:#eef3e4;
+    --warm:#b5500b; --sky:#0a76ad; --danger:#c0262b; --on-accent:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+      --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+      --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+    --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+    --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .card.calido{border-left-color:var(--warm)}
+  .card.peligro{border-left-color:var(--danger)}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
+  .tabla{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--sky)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .aviso-rojo{color:var(--danger);font-weight:700}
+  @media (max-width:520px){
+    body{font-size:16px}
+    .wrap{padding:2rem 1rem 4rem}
+    h1{font-size:2rem}
+    .card{padding:1.1rem 1.1rem}
+    th,td{padding:.45rem .35rem;font-size:.88rem}
+  }
+
+  .en{display:block;color:var(--ink-light);font-size:.9em;margin-top:.15rem;font-weight:400}
+  label{display:block;font-weight:600;margin:1rem 0 .3rem}
+  input[type=password],input[type=text]{width:100%;font:inherit;padding:.7rem .8rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+  input:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+  button.principal{margin-top:1.4rem;width:100%;font:inherit;font-weight:700;padding:.85rem 1rem;border-radius:12px;border:0;background:var(--accent);color:var(--on-accent);cursor:pointer}
+  button.principal:disabled{opacity:.55;cursor:not-allowed}
+  .oculto{display:none !important}
+  .error{color:var(--danger);font-weight:600;margin:.8rem 0 0}
+  .error .en{color:var(--danger);opacity:.85;font-weight:400}
+  .tecnico{font-size:.85rem;color:var(--ink-light);overflow-wrap:anywhere;margin-top:.4rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BikeFuel</h1>
+  <p class="sub">Contraseña nueva<span class="en">New password</span></p>
+
+  <!-- Estado: comprobando el enlace -->
+  <div id="vista-cargando" class="card">
+    <p>Comprobando el enlace…<span class="en">Checking the link…</span></p>
+  </div>
+
+  <!-- Estado: enlace inválido, caducado o sin token. Aquí no se enseña el formulario -->
+  <div id="vista-invalido" class="card peligro oculto">
+    <p id="invalido-es"></p>
+    <p id="invalido-en" class="en"></p>
+    <p id="invalido-tecnico" class="tecnico oculto"></p>
+  </div>
+
+  <!-- Estado: formulario -->
+  <form id="vista-form" class="oculto" novalidate autocomplete="off">
+    <div class="card">
+      <p>Elige tu contraseña nueva. Tiene que tener al menos 6 caracteres.<span class="en">Choose your new password. It must be at least 6 characters long.</span></p>
+    </div>
+    <label for="pw1">Contraseña nueva<span class="en">New password</span></label>
+    <input id="pw1" type="password" autocomplete="new-password" minlength="6" required>
+    <label for="pw2">Repite la contraseña<span class="en">Repeat the password</span></label>
+    <input id="pw2" type="password" autocomplete="new-password" minlength="6" required>
+    <div id="form-error" class="error oculto" role="alert"></div>
+    <button id="btn" type="submit" class="principal">Guardar contraseña · Save password</button>
+  </form>
+
+  <!-- Estado: hecho -->
+  <div id="vista-ok" class="card oculto">
+    <p><strong>Listo: tu contraseña ya está cambiada.</strong> Vuelve a la app de BikeFuel y entra con la contraseña nueva.<span class="en"><strong>Done: your password has been changed.</strong> Go back to the BikeFuel app and sign in with the new password.</span></p>
+  </div>
+
+  <div class="foot">BikeFuel · <a href="soporte.html">Soporte y privacidad</a> · <a href="support.html">Support and privacy</a><br>Última actualización: 16 de octubre de 2026 · Last updated: 16 October 2026</div>
+</div>
+<script type="module">
+// Esta página solo usa Auth de Supabase: no lee ni escribe ninguna tabla.
+// La clave publishable es pública por diseño (viaja igual dentro de la app).
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.47.10/+esm';
+
+const SUPABASE_URL = 'https://rvtyzxvkdzpinspvsvxr.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_DVf9U1R7oPxt-ss2_2PeVg_aK87iFNN';
+
+// No persistimos nada: es una sesión de un solo uso, solo para cambiar la contraseña.
+// detectSessionInUrl a false porque procesamos el enlace a mano (sirve para las dos formas).
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+  auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false }
+});
+
+const $ = (id) => document.getElementById(id);
+const MIN_CARACTERES = 6; // el mínimo de Supabase
+
+function mostrar(vista) {
+  for (const id of ['vista-cargando', 'vista-invalido', 'vista-form', 'vista-ok']) {
+    $(id).classList.toggle('oculto', id !== vista);
+  }
+}
+
+function enlaceInvalido(es, en, tecnico) {
+  $('invalido-es').textContent = es;
+  $('invalido-en').textContent = en;
+  if (tecnico) {
+    $('invalido-tecnico').textContent = tecnico;
+    $('invalido-tecnico').classList.remove('oculto');
+  }
+  mostrar('vista-invalido');
+}
+
+const MSG_CADUCADO = [
+  'El enlace ha caducado o ya se ha usado. Pide otro desde la app.',
+  'The link has expired or has already been used. Request a new one from the app.'
+];
+const MSG_SIN_TOKEN = [
+  'Este enlace se pide desde la app: abre BikeFuel, pulsa «¿Has olvidado la contraseña?» y te llegará un correo con el enlace.',
+  'This link is requested from the app: open BikeFuel, tap “Forgot your password?” and you will get an email with the link.'
+];
+
+// Traduce los errores conocidos de Supabase y siempre deja el texto original debajo,
+// para que el motivo real nunca se pierda.
+function traducirError(mensaje) {
+  const m = (mensaje || '').toLowerCase();
+  if (m.includes('different from the old')) {
+    return ['La contraseña nueva tiene que ser distinta de la anterior.',
+            'The new password must be different from the old one.'];
+  }
+  if (m.includes('at least') && m.includes('character')) {
+    return ['La contraseña es demasiado corta: mínimo 6 caracteres.',
+            'The password is too short: minimum 6 characters.'];
+  }
+  if (m.includes('weak') || m.includes('pwned') || m.includes('easy to guess')) {
+    return ['Esa contraseña es demasiado fácil de adivinar. Prueba con otra.',
+            'That password is too easy to guess. Try another one.'];
+  }
+  if (m.includes('session missing') || m.includes('expired') || m.includes('invalid') || m.includes('verifier')) {
+    return MSG_CADUCADO;
+  }
+  if (m.includes('failed to fetch') || m.includes('network')) {
+    return ['No hay conexión con el servidor. Comprueba tu internet e inténtalo de nuevo.',
+            'Could not reach the server. Check your connection and try again.'];
+  }
+  return ['No se ha podido guardar la contraseña.', 'The password could not be saved.'];
+}
+
+// Lee el enlace una sola vez y limpia la URL enseguida, para que ni el token
+// ni el código se queden en el historial del navegador.
+function leerEnlace() {
+  const query = new URLSearchParams(window.location.search);
+  const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+  const datos = {
+    code: query.get('code'),
+    accessToken: hash.get('access_token'),
+    refreshToken: hash.get('refresh_token'),
+    error: hash.get('error_description') || hash.get('error') || query.get('error_description') || query.get('error'),
+    errorCode: hash.get('error_code') || query.get('error_code')
+  };
+  if (window.location.search || window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
+  }
+  return datos;
+}
+
+async function iniciar() {
+  const enlace = leerEnlace();
+
+  // 1. El enlace trae un error (caducado, ya usado...).
+  if (enlace.error) {
+    enlaceInvalido(MSG_CADUCADO[0], MSG_CADUCADO[1], enlace.error.replace(/\+/g, ' '));
+    return;
+  }
+
+  try {
+    if (enlace.code) {
+      // 2. Forma nueva (PKCE): ?code=...
+      const { error } = await supabase.auth.exchangeCodeForSession(enlace.code);
+      if (error) throw error;
+    } else if (enlace.accessToken && enlace.refreshToken) {
+      // 3. Forma antigua: #access_token=...&refresh_token=...&type=recovery
+      const { error } = await supabase.auth.setSession({
+        access_token: enlace.accessToken,
+        refresh_token: enlace.refreshToken
+      });
+      if (error) throw error;
+    } else {
+      // 4. Alguien ha entrado sin enlace: no hay formulario que enseñar.
+      enlaceInvalido(MSG_SIN_TOKEN[0], MSG_SIN_TOKEN[1]);
+      return;
+    }
+  } catch (e) {
+    const [es, en] = traducirError(e && e.message);
+    enlaceInvalido(es, en, e && e.message);
+    return;
+  }
+
+  mostrar('vista-form');
+  $('pw1').focus();
+}
+
+let guardando = false; // evita enviar dos veces aunque se pulse deprisa
+
+function errorForm(es, en, tecnico) {
+  const caja = $('form-error');
+  caja.replaceChildren();
+  caja.append(es);
+  const ing = document.createElement('span');
+  ing.className = 'en';
+  ing.textContent = en;
+  caja.append(ing);
+  if (tecnico) {
+    const t = document.createElement('div');
+    t.className = 'tecnico';
+    t.textContent = tecnico;
+    caja.append(t);
+  }
+  caja.classList.remove('oculto');
+}
+
+$('vista-form').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  if (guardando) return;
+
+  const pw1 = $('pw1').value;
+  const pw2 = $('pw2').value;
+  $('form-error').classList.add('oculto');
+
+  if (pw1.length < MIN_CARACTERES) {
+    errorForm('La contraseña tiene que tener al menos 6 caracteres.', 'The password must be at least 6 characters long.');
+    return;
+  }
+  if (pw1 !== pw2) {
+    errorForm('Las dos contraseñas no coinciden.', 'The two passwords do not match.');
+    return;
+  }
+
+  guardando = true;
+  $('btn').disabled = true;
+  $('btn').textContent = 'Guardando… · Saving…';
+  try {
+    const { error } = await supabase.auth.updateUser({ password: pw1 });
+    if (error) throw error;
+    // La sesión ya no hace falta: la cerramos solo aquí, en este navegador.
+    try { await supabase.auth.signOut({ scope: 'local' }); } catch (_) { /* da igual si falla */ }
+    mostrar('vista-ok');
+  } catch (e) {
+    const [es, en] = traducirError(e && e.message);
+    errorForm(es, en, e && e.message);
+    guardando = false;
+    $('btn').disabled = false;
+    $('btn').textContent = 'Guardar contraseña · Save password';
+  }
+});
+
+iniciar();
+</script>
+</body>
+</html>

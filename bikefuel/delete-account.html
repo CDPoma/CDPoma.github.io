@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BikeFuel — Delete my account</title>
+<style>
+  :root{
+    --bg:#f6f8f1; --surface:#ffffff; --ink:#131a12; --ink-light:#5a6556;
+    --accent:#4f6f00; --line:#e1e8d8; --card:#eef3e4;
+    --warm:#b5500b; --sky:#0a76ad; --danger:#c0262b; --on-accent:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+      --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+      --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+    --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+    --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .card.calido{border-left-color:var(--warm)}
+  .card.peligro{border-left-color:var(--danger)}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
+  .tabla{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--sky)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .aviso-rojo{color:var(--danger);font-weight:700}
+  @media (max-width:520px){
+    body{font-size:16px}
+    .wrap{padding:2rem 1rem 4rem}
+    h1{font-size:2rem}
+    .card{padding:1.1rem 1.1rem}
+    th,td{padding:.45rem .35rem;font-size:.88rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="borrar-cuenta.html" hreflang="es" lang="es">Español</a>
+  <h1>BikeFuel</h1>
+  <p class="sub">Delete my account</p>
+  <nav class="enlaces"><a href="support.html">Support and privacy</a></nav>
+
+  <div class="card">
+    <p><strong>You can delete your BikeFuel account and all your data whenever you want, with or without the app installed.</strong> There are two ways. The first is instant; the second is for people who no longer have the app.</p>
+  </div>
+
+  <h2>Option 1 · Inside the app (instant)</h2>
+  <ol>
+    <li>Open BikeFuel and go to <strong>Tu cuenta</strong> (Your account).</li>
+    <li>Tap <strong>Eliminar mi cuenta</strong> (Delete my account) and confirm.</li>
+  </ol>
+  <p>It is deleted immediately and you don't need to write to anyone.</p>
+
+  <h2>Option 2 · Without the app installed</h2>
+  <p>Send an email to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> <strong>from the same address you registered with</strong>, with the subject:</p>
+  <p><code>Borrar mi cuenta de BikeFuel</code></p>
+  <p>That is how we check the account is yours. We will reply and delete your account within <strong>30 days at the most</strong>; in practice, much sooner.</p>
+
+  <h2>What is deleted</h2>
+  <p>Everything, with nothing left half-done:</p>
+  <ul>
+    <li>Your account and profile (email, name and phone number).</li>
+    <li>Your bikes.</li>
+    <li>Your routes and their tracks, with all their points.</li>
+    <li>Sensor readings.</li>
+    <li>Your alerts.</li>
+    <li>The notification tokens of your phones.</li>
+    <li>Guardian links <strong>in both directions</strong>: the riders you were watching over and the guardians who were watching over you.</li>
+  </ul>
+  <p>Your guardians stop seeing you in their circle.</p>
+
+  <div class="card calido">
+    <p><strong>What is NOT deleted: the Pro purchase.</strong> Pro lives in your App Store or Google Play account, not in your BikeFuel account. Deleting the account <strong>does not cancel or refund</strong> the purchase. For that you have to go to the store where you bought it (App Store or Google Play) and manage it there.</p>
+  </div>
+
+  <div class="card peligro">
+    <p><strong class="aviso-rojo">This cannot be undone.</strong> Once the account is deleted nothing can be recovered: not your routes, not your history, not your guardian circles. If you want to use BikeFuel again later, you will have to create a new account from scratch.</p>
+  </div>
+
+  <h2>Questions</h2>
+  <p>If anything is unclear, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Details of what data is collected are in <a href="support.html">Support and privacy</a>.</p>
+
+  <div class="foot">BikeFuel · Last updated: 16 October 2026 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

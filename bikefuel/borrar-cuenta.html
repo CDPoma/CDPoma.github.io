@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BikeFuel — Borrar mi cuenta</title>
+<style>
+  :root{
+    --bg:#f6f8f1; --surface:#ffffff; --ink:#131a12; --ink-light:#5a6556;
+    --accent:#4f6f00; --line:#e1e8d8; --card:#eef3e4;
+    --warm:#b5500b; --sky:#0a76ad; --danger:#c0262b; --on-accent:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+      --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+      --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+    --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+    --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .card.calido{border-left-color:var(--warm)}
+  .card.peligro{border-left-color:var(--danger)}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
+  .tabla{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--sky)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .aviso-rojo{color:var(--danger);font-weight:700}
+  @media (max-width:520px){
+    body{font-size:16px}
+    .wrap{padding:2rem 1rem 4rem}
+    h1{font-size:2rem}
+    .card{padding:1.1rem 1.1rem}
+    th,td{padding:.45rem .35rem;font-size:.88rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="delete-account.html" hreflang="en" lang="en">English</a>
+  <h1>BikeFuel</h1>
+  <p class="sub">Borrar mi cuenta</p>
+  <nav class="enlaces"><a href="soporte.html">Soporte y privacidad</a></nav>
+
+  <div class="card">
+    <p><strong>Puedes borrar tu cuenta de BikeFuel y todos tus datos cuando quieras, con o sin la app instalada.</strong> Hay dos formas. La primera es inmediata; la segunda es para quien ya no tiene la app.</p>
+  </div>
+
+  <h2>Opción 1 · Dentro de la app (inmediata)</h2>
+  <ol>
+    <li>Abre BikeFuel y entra en <strong>Tu cuenta</strong>.</li>
+    <li>Pulsa <strong>Eliminar mi cuenta</strong> y confirma.</li>
+  </ol>
+  <p>Se borra al instante y no hace falta escribir a nadie.</p>
+
+  <h2>Opción 2 · Sin la app instalada</h2>
+  <p>Escribe un correo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> <strong>desde la misma dirección con la que te registraste</strong>, con el asunto:</p>
+  <p><code>Borrar mi cuenta de BikeFuel</code></p>
+  <p>Así comprobamos que la cuenta es tuya. Responderemos y borraremos tu cuenta en un plazo <strong>máximo de 30 días</strong>; en la práctica, mucho antes.</p>
+
+  <h2>Qué se borra</h2>
+  <p>Todo, sin que quede nada a medias:</p>
+  <ul>
+    <li>Tu cuenta y tu perfil (correo, nombre y teléfono).</li>
+    <li>Tus bicis.</li>
+    <li>Tus rutas y sus recorridos, con todos sus puntos.</li>
+    <li>Las lecturas de sensores.</li>
+    <li>Tus alertas.</li>
+    <li>Los tokens de aviso de tus móviles.</li>
+    <li>Los enlaces de guardianes <strong>en los dos sentidos</strong>: los ciclistas a los que vigilabas y los guardianes que te vigilaban a ti.</li>
+  </ul>
+  <p>Tus guardianes dejan de ver a esa persona en su círculo.</p>
+
+  <div class="card calido">
+    <p><strong>Qué NO se borra: la compra Pro.</strong> Pro vive en tu cuenta de App Store o de Google Play, no en la de BikeFuel. Borrar la cuenta <strong>no cancela ni devuelve</strong> la compra. Para eso tienes que ir a la tienda donde la hiciste (App Store o Google Play) y gestionarlo allí.</p>
+  </div>
+
+  <div class="card peligro">
+    <p><strong class="aviso-rojo">Es irreversible.</strong> Una vez borrada la cuenta no se puede recuperar nada: ni las rutas, ni el histórico, ni los círculos de guardianes. Si más adelante quieres volver a usar BikeFuel, tendrás que crear una cuenta nueva desde cero.</p>
+  </div>
+
+  <h2>Dudas</h2>
+  <p>Si algo no queda claro, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Los detalles de qué datos se recogen están en <a href="soporte.html">Soporte y privacidad</a>.</p>
+
+  <div class="foot">BikeFuel · Última actualización: 16 de octubre de 2026 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

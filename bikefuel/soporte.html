@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BikeFuel — Soporte y privacidad</title>
+<style>
+  :root{
+    --bg:#f6f8f1; --surface:#ffffff; --ink:#131a12; --ink-light:#5a6556;
+    --accent:#4f6f00; --line:#e1e8d8; --card:#eef3e4;
+    --warm:#b5500b; --sky:#0a76ad; --danger:#c0262b; --on-accent:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+      --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+      --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0B0F0C; --surface:#121813; --ink:#e9f0e6; --ink-light:#93a08e;
+    --accent:#D4FF3A; --line:#1f2a21; --card:#141b15;
+    --warm:#FF8A3D; --sky:#5CC8FF; --danger:#ff6b6b; --on-accent:#0B0F0C;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .card.calido{border-left-color:var(--warm)}
+  .card.peligro{border-left-color:var(--danger)}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
+  .tabla{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--sky)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .aviso-rojo{color:var(--danger);font-weight:700}
+  @media (max-width:520px){
+    body{font-size:16px}
+    .wrap{padding:2rem 1rem 4rem}
+    h1{font-size:2rem}
+    .card{padding:1.1rem 1.1rem}
+    th,td{padding:.45rem .35rem;font-size:.88rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
+  <h1>BikeFuel</h1>
+  <p class="sub">Soporte y privacidad</p>
+  <nav class="enlaces"><a href="borrar-cuenta.html">Borrar mi cuenta</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen rápido:</strong> BikeFuel detecta si te has caído en la bici y avisa a tus guardianes, con tu última posición. Para eso necesita tu ubicación mientras pedaleas, también con el móvil bloqueado. Esa información se usa solo para eso, solo la ve quien tú aceptes como guardián y puedes borrarla entera cuando quieras. No se graba audio y no se vende ningún dato.</p>
+  </div>
+
+  <h2>Qué hace la app</h2>
+  <p>BikeFuel es seguridad para ciclistas de carretera y de montaña, con dos modos:</p>
+  <ul>
+    <li><strong>Modo ruta</strong>: tú vas en bici. La app vigila el recorrido y, si detecta una caída, te da unos segundos para cancelar la alerta manteniendo pulsado «Estoy bien» durante 1,5 segundos (o diciendo «estoy bien»). Si no la cancelas, avisa a tus guardianes con tu última posición conocida. Los umbrales de detección son distintos en carretera y en montaña.</li>
+    <li><strong>Modo guardián</strong>: recibes el aviso si alguien de tu círculo se cae. Es el estado por defecto de cualquier instalación, y puedes usar la app solo como guardián sin hacer bici nunca.</li>
+  </ul>
+  <p>La detección se apoya en el acelerómetro, el giroscopio, el GPS, el nivel de sonido del micrófono y, si los tienes, los sensores Bluetooth de la bici.</p>
+
+  <h2>Qué datos se recogen</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Dato</th><th>Para qué</th><th>Dónde va</th></tr></thead>
+    <tbody>
+      <tr><td>Correo electrónico y contraseña</td><td>Crear tu cuenta (obligatoria) y entrar en ella</td><td>Supabase (servidor de la app). La contraseña se guarda cifrada; nadie puede leerla</td></tr>
+      <tr><td>Nombre y teléfono</td><td>Que tus guardianes sepan quién eres. El teléfono es además el canal de respaldo por SMS cuando no hay datos</td><td>Tu cuenta, en Supabase</td></tr>
+      <tr><td>Ubicación, también en segundo plano</td><td>Vigilar el recorrido, saber dónde estás si hay una caída y guardar tus rutas</td><td>Se procesa en el teléfono; se envía al servidor al guardar una ruta, si salta una alerta o si activas el modo tiempo real</td></tr>
+      <tr><td>Movimiento (acelerómetro y giroscopio)</td><td>Detectar la caída</td><td><strong>Se procesa en el teléfono.</strong> Las lecturas de los sensores solo se guardan en tu cuenta si forman parte de una ruta o una alerta</td></tr>
+      <tr><td>Micrófono</td><td>Medir el nivel de ruido para ayudar a detectar un golpe</td><td><strong>No sale del teléfono.</strong> El nivel de sonido se analiza en el momento y se descarta; no se graba, ni se guarda, ni se envía audio nunca</td></tr>
+      <tr><td>Reconocimiento de voz</td><td>Solo durante la cuenta atrás de una alerta, para que puedas decir «estoy bien» y cancelar. Solo entiende español</td><td>Lo hace el servicio de voz de tu propio sistema (Apple en iPhone, Google en Android). BikeFuel no guarda el audio</td></tr>
+      <tr><td>Sensores Bluetooth de ciclismo</td><td>Pulso, velocidad, cadencia y potencia, de cualquier marca estándar</td><td>Se leen en el teléfono; se guardan en tu cuenta como parte de la ruta</td></tr>
+      <tr><td>Rutas y puntos del recorrido, bicis</td><td>Tu histórico y tus datos de cada salida</td><td>Tu cuenta, en Supabase. <strong>Solo las lee su dueño</strong></td></tr>
+      <tr><td>Alertas y guardianes</td><td>Avisar a tu círculo y saber quién vigila a quién</td><td>Tu cuenta, en Supabase</td></tr>
+      <tr><td>Token de avisos</td><td>Que te llegue la notificación cuando un ciclista de tu círculo se cae</td><td>Supabase, y Apple (APNs) o Google (Firebase Cloud Messaging) para entregarla</td></tr>
+      <tr><td>Identificador de publicidad</td><td>Mostrar anuncios personalizados en la versión gratis, solo si lo permites</td><td>Google AdMob. Si no lo permites, los anuncios se siguen viendo pero sin personalizar</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Quién ve tu ubicación</h2>
+  <ul>
+    <li><strong>Tus rutas son privadas.</strong> Las rutas y los puntos de cada recorrido solo los lee su dueño, es decir, tú.</li>
+    <li>Un guardián recibe tu ubicación <strong>únicamente dentro de una alerta</strong>, o en directo si tú activas el modo tiempo real y le autorizas a él en concreto.</li>
+    <li><strong>Nadie entra en tu círculo sin permiso.</strong> Si alguien mete tu código de 8 caracteres, se crea una solicitud que tú aceptas o rechazas. Hasta que aceptes, esa persona no ve nada tuyo.</li>
+  </ul>
+
+  <h2>Cuando no hay datos</h2>
+  <p>En bici es habitual quedarse sin cobertura, así que hay un aviso de respaldo:</p>
+  <ul>
+    <li><strong>Android</strong>: la app manda un SMS a tus guardianes desde tu propio teléfono.</li>
+    <li><strong>iPhone</strong>: Apple no permite mandar un SMS sin que lo toque el usuario, así que ahí el respaldo es un aviso por Bluetooth a los móviles cercanos que lleven BikeFuel. Es un relé firmado que reenvía la alerta; <strong>nunca lleva contenido personal</strong>.</li>
+  </ul>
+
+  <h2>Qué NO se hace</h2>
+  <ul>
+    <li>No se vende ni se cede tu ubicación a nadie, ni a anunciantes, ni a aseguradoras, ni a terceros de ningún tipo.</li>
+    <li><strong>No se graba audio.</strong> El micrófono mide el nivel de ruido en el instante y nada más. Tampoco se graba tu voz durante la cuenta atrás.</li>
+    <li>No se rastrea tu posición cuando no estás en una ruta. El seguimiento arranca al empezar el modo ruta y se para al terminarlo.</li>
+    <li>No se comparte tu posición con nadie salvo con los guardianes que tú hayas aceptado, y solo en una alerta o en el modo tiempo real que tú actives.</li>
+  </ul>
+
+  <h2>Servicios de terceros</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></td><td>Tu cuenta, tus bicis, tus rutas, tus guardianes y las alertas. Es la base de datos de la app.</td></tr>
+      <tr><td><a href="https://www.apple.com/legal/privacy/es-ww/" target="_blank" rel="noopener">Apple (APNs)</a> y <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google (Firebase Cloud Messaging)</a></td><td>Entregar los avisos push a tus guardianes.</td></tr>
+      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Banner y un anuncio al iniciar el modo ruta, solo en la versión gratis. Recibe el identificador de publicidad si lo permites. No recibe tus rutas ni tu ubicación. Se pide tu consentimiento con el formulario de Google (UMP) y, en iPhone, con el aviso de seguimiento de Apple (ATT).</td></tr>
+      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple / Google</td><td>Gestionan la compra Pro y comprueban en la tienda que está activa.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Gratis y Pro</h2>
+  <p><strong>La detección de caídas y el aviso a tus guardianes son gratis, siempre.</strong> Pro es un pago único que quita los anuncios y añade la ruta en directo, el histórico y los sensores Bluetooth. Que seas Pro lo comprueba RevenueCat contra la tienda; no depende de nada que se pueda cambiar en el teléfono.</p>
+
+  <h2>Permisos</h2>
+  <ul>
+    <li><code>Ubicación, siempre</code> — hace falta en segundo plano porque en ruta llevas el móvil bloqueado o en el maillot, y es justo entonces cuando tiene que saber dónde estás. Sin este permiso la detección no puede funcionar con la pantalla apagada.</li>
+    <li><code>Movimiento</code> (acelerómetro y giroscopio) — para detectar la caída.</li>
+    <li><code>Micrófono</code> — para medir el nivel de ruido de un golpe. No se graba nada.</li>
+    <li><code>Reconocimiento de voz</code> — solo durante la cuenta atrás, para cancelar la alerta diciendo «estoy bien».</li>
+    <li><code>Bluetooth</code> — para los sensores de ciclismo y, en iPhone, el aviso de respaldo a móviles cercanos.</li>
+    <li><code>Identificador de publicidad</code> (ATT, solo iPhone) — para anuncios personalizados en la versión gratis. Puedes decir que no.</li>
+    <li><code>Enviar SMS</code> (solo Android) — para el aviso de respaldo cuando no hay datos.</li>
+    <li><code>Notificaciones</code> — para la cuenta atrás de la alarma y los avisos de tus ciclistas.</li>
+  </ul>
+
+  <h2>Cuánto se guarda y cómo se borra</h2>
+  <p>Tus rutas y alertas se guardan mientras tengas la cuenta abierta. Puedes borrar una bici desde la app y, con ella, se van sus rutas y su histórico. Para borrar la cuenta entera y todo lo asociado tienes una página específica, que funciona también sin tener la app instalada: <a href="borrar-cuenta.html">cómo borrar mi cuenta</a>.</p>
+
+  <h2>Privacidad infantil</h2>
+  <p>BikeFuel no está dirigida a menores de edad y no se recogen datos de menores a sabiendas. Si crees que un menor se ha registrado, escríbenos y borraremos su cuenta.</p>
+
+  <div class="card calido">
+    <p><strong>Aviso importante.</strong> BikeFuel es una ayuda, no un sistema de emergencia homologado. La detección de caídas puede fallar, tanto por no detectar una caída real como por saltar sin motivo, y el aviso depende de que haya cobertura o de que haya otro móvil con la app cerca. No sustituye a llamar al 112. No dependas de ella como único medio de auxilio.</p>
+  </div>
+
+  <h2>Contacto y soporte</h2>
+  <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <div class="foot">BikeFuel · Última actualización: 16 de octubre de 2026 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
