@@ -47,7 +47,7 @@
   <nav class="enlaces"><a href="index.html#english">Home</a><a href="support.html">Help &amp; support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> My Coop keeps everything on your phone. There are no accounts and it never asks for your email, real name, location or contacts. Only if you turn on «My Farm» (Pro) is the coop data also stored in Google's cloud (Firebase, servers in the European Union) under a farm code that you share yourself. The free version shows Google AdMob ads, personalized only if you consent. Purchases are handled by Apple or Google.</p>
+    <p><strong>Summary:</strong> My Coop keeps everything on your phone. There are no accounts and it never asks for your email, real name, location or contacts. Only if you turn on «My Farm» (Pro) is the coop data also stored in Google's cloud (Firebase, servers in the European Union) under a farm code that you share yourself. Only if you are Pro and use «Count with a photo» is that photo sent, to count the eggs, to an artificial intelligence service (Google Gemini or NVIDIA), and it is not stored. The free version shows Google AdMob ads, personalized only if you consent. Purchases are handled by Apple or Google.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -56,9 +56,18 @@
   <h2>What stays on your phone</h2>
   <p>Hens (breed, dates, leg band, notes and photo), eggs collected, eggs given out and their prices, feed records, feed and water levels and settings are stored <strong>only in the app's own storage</strong> (IndexedDB). They do not leave your phone unless you turn on «My Farm». If you uninstall the app they are deleted with it.</p>
   <ul>
-    <li><strong>Hen photos.</strong> When you choose «Camera» or «Gallery» to set a hen's photo, the app asks for permission and uses the image only for that: it crops it, shrinks it (about 400 pixels) and stores it inside the app. The camera and gallery are not used for anything else.</li>
+    <li><strong>Hen photos.</strong> When you choose «Camera» or «Gallery» to set a hen's photo, the app asks for permission and uses the image only for that: it crops it, shrinks it (about 400 pixels) and stores it inside the app. The camera and gallery are used only for this and for the «Count with a photo» feature (Pro), explained below.</li>
     <li><strong>Feed and water reminders.</strong> These are <strong>local</strong> notifications scheduled by your own phone from the estimated remaining supply. There is no notification server and nothing is sent for this. If you do not grant permission, the app works the same, without reminders.</li>
     <li><strong>Backup.</strong> If you export your data, the app creates a file and lets you choose where to save it or who to share it with. We never receive it.</li>
+  </ul>
+
+  <h2>«Count with a photo» (Pro): the egg photo</h2>
+  <p>When collecting eggs, Pro users have a «Count with a photo» button. <strong>This only happens if you tap that button and accept the notice</strong> the app shows the first time («Accept and continue»); if you do not accept, nothing is sent. Without Pro, the button takes you to the Pro screen and nothing is sent either.</p>
+  <ul>
+    <li><strong>What is sent.</strong> The photo you take with the camera or pick from the gallery (reduced to a maximum of 1280 pixels) and, so the eggs can be matched to your hens, the <strong>egg color and size and the name</strong> of each hen in your flock. No other coop data is sent.</li>
+    <li><strong>To whom.</strong> First to our relay server, a <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> function that <strong>does not store the photo</strong> and only forwards it. From there it goes to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gemini API</a> (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API terms</a>) and, if that does not respond, to the <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank" rel="noopener">NVIDIA</a> API. Google and NVIDIA act as processors and their servers may be outside the European Union.</li>
+    <li><strong>What for.</strong> Only to count how many eggs are in the photo and to suggest which hen each one seems to come from, based on the color and size of her egg. It is not used for advertising or anything else.</li>
+    <li><strong>What remains.</strong> The app does not keep the photo, and neither do we on our servers. The answer fills in the collection screen, you review it, and <strong>nothing is saved until you tap «Confirm»</strong>. Each service may process the photo under its own policy, linked above.</li>
   </ul>
 
   <h2>«My Farm» (Pro): data in the cloud</h2>
@@ -81,7 +90,7 @@
   </ul>
 
   <h2>Ads (free version)</h2>
-  <p>The free version shows a banner from <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a>. In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's consent form before requesting any ad; on iPhone it also asks for Apple's tracking permission (ATT). <strong>If you consent</strong>, Google may show personalized ads and use the device's <strong>advertising identifier</strong> (IDFA on iPhone, advertising ID on Android), together with technical data such as the IP address and phone model. <strong>If you do not</strong>, ads still appear but are not personalized. Google does not receive your coop data: no hens, eggs or photos.</p>
+  <p>The free version shows a banner and, now and then (1 in every 4 app openings), a full-screen app-open ad from <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a>. In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's consent form before requesting any ad; on iPhone it also asks for Apple's tracking permission (ATT). <strong>If you consent</strong>, Google may show personalized ads and use the device's <strong>advertising identifier</strong> (IDFA on iPhone, advertising ID on Android), together with technical data such as the IP address and phone model. <strong>If you do not</strong>, ads still appear but are not personalized. AdMob does not receive your coop data: no hens, eggs or photos.</p>
   <p>You can change your choice at any time: on iPhone, Settings → Privacy &amp; Security → Tracking; on Android, in your phone's Google settings (Ads), where you can delete or reset the advertising ID.</p>
 
   <h2>In-app purchases</h2>
@@ -92,12 +101,12 @@
   <p>Legal basis: data is processed to provide the app you asked for (performance of the service); personalized ads, with your consent, which you can withdraw at any time; and non-personalized ads, under our legitimate interest in funding the free version.</p>
 
   <h2>Security</h2>
-  <p>Communication with the cloud is encrypted (HTTPS). The server rules only allow reading and writing a farm to someone who knows its exact code, and do not allow listing farms.</p>
+  <p>Communication with the cloud and with the photo server is encrypted (HTTPS). The server rules only allow reading and writing a farm to someone who knows its exact code, and do not allow listing farms.</p>
 
   <h2>Changes</h2>
   <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
 
-  <div class="foot">My Coop · Effective 2026-10-17 · Gabriel Micó Victoria</div>
+  <div class="foot">My Coop · Effective 2026-10-18 · Gabriel Micó Victoria</div>
 
 </div>
 </body>
