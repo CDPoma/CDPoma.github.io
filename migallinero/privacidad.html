@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi Gallinero — Política de privacidad</title>
+<link rel="icon" href="icono.png">
+<style>
+  :root{
+    --bg:#F7EFE0; --surface:#fffaf0; --ink:#3a2a1c; --ink-light:#7a6552;
+    --accent:#C2552D; --olive:#5E7A2E; --yema:#E9B949; --line:#e6d6b8; --card:#f1e5cc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1e1710; --surface:#2a2017; --ink:#f3e8d4; --ink-light:#b9a78d;
+      --accent:#ec8a63; --olive:#a3c46a; --yema:#e9b949; --line:#3d2f20; --card:#32261a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--olive)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--yema);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .cabecera{display:flex;align-items:center;gap:1.1rem;margin:0 0 1.5rem}
+  .cabecera img{width:84px;height:84px;border-radius:19px;box-shadow:0 2px 8px rgba(58,42,28,.25)}
+  .cabecera h1{margin:0}
+  .cabecera .sub{margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>Mi Gallinero</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="index.html">Inicio</a><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> Mi Gallinero guarda todo en tu móvil, no tiene cuentas ni te pide correo, nombre real, ubicación ni contactos. Solo si activas «Mi granja» (Pro) los datos del gallinero se guardan también en la nube de Google (Firebase, servidores en la Unión Europea) bajo un código de granja que tú compartes. La versión gratuita muestra anuncios de Google AdMob, solo personalizados si das tu consentimiento. Las compras las gestionan Apple o Google.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de Mi Gallinero. Para cualquier duda sobre los datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Lo que se guarda en tu móvil</h2>
+  <p>Las gallinas (con raza, fechas, anilla, notas y foto), los huevos recogidos, los repartos y sus precios, la alimentación, los niveles de pienso y agua y los ajustes se guardan <strong>solo en el almacenamiento de la propia app</strong> (IndexedDB). No salen del móvil mientras no actives «Mi granja». Si desinstalas la app, se borran con ella.</p>
+  <ul>
+    <li><strong>Fotos de las gallinas.</strong> Cuando eliges «Cámara» o «Galería» para poner la foto a una gallina, la app te pide permiso y usa la imagen solo para eso: la recorta, la reduce (unos 400 píxeles) y la guarda dentro de la app. La cámara y la galería no se usan para nada más.</li>
+    <li><strong>Avisos de pienso y agua.</strong> Son notificaciones <strong>locales</strong>: las programa el propio móvil con la autonomía calculada. No hay ningún servidor de notificaciones y no enviamos nada para ello. Si no das el permiso, la app funciona igual, sin avisos.</li>
+    <li><strong>Copia de seguridad.</strong> Si exportas tus datos, la app genera un archivo y te deja elegir dónde guardarlo o con quién compartirlo. Nosotros no lo recibimos.</li>
+  </ul>
+
+  <h2>«Mi granja» (Pro): datos en la nube</h2>
+  <p>Si, con la suscripción Pro, <strong>creas una granja o te unes a la de otra persona</strong>, los datos del gallinero se guardan también en <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase (Cloud Firestore)</a>, en servidores de la Unión Europea (<code>eur3</code>), para que todos los móviles de la granja los vean al momento. Se sincronizan:</p>
+  <ul>
+    <li>las gallinas, <strong>con su foto</strong>;</li>
+    <li>los huevos recogidos, los repartos y sus precios;</li>
+    <li>la alimentación y los niveles de pienso y agua, y los ajustes del gallinero;</li>
+    <li>el <strong>nombre de perfil</strong> que cada persona elige al entrar (recomendamos un apodo, no el nombre y apellidos).</li>
+  </ul>
+  <p><strong>Sin cuentas ni correo.</strong> La granja se identifica con un código de 10 caracteres que genera la app. Quien tiene el código puede ver y modificar los datos de esa granja, así que compártelo solo con personas de confianza. No existe forma de listar ni buscar granjas.</p>
+  <p>Google, como proveedor de la nube, puede tratar datos técnicos de la conexión (como la dirección IP) para prestar el servicio, según su política. No usamos los datos de la granja para publicidad ni los vendemos.</p>
+
+  <h2>Dejar de compartir y borrar los datos de la nube</h2>
+  <ul>
+    <li><strong>Salir de la granja</strong> (Ajustes → Mi granja) deja de compartir: tu móvil deja de enviar y de recibir. Tus datos se quedan en tu móvil y los de la granja siguen en la nube mientras haya otras personas en ella.</li>
+    <li><strong>Borrar un dato</strong> (una gallina, un apunte…) desde la app sustituye ese registro en la nube por una marca vacía, sin su contenido, y desaparece también de los demás móviles de la granja.</li>
+    <li><strong>Borrar todos los datos de la granja en la nube:</strong> escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> indicando el código de la granja y los borramos por completo. Sin el código no podemos localizarlos, porque no hay cuentas.</li>
+  </ul>
+
+  <h2>Anuncios (versión gratuita)</h2>
+  <p>La versión gratuita muestra un banner de <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a>. En el Espacio Económico Europeo, el Reino Unido y Suiza, antes de pedir ningún anuncio la app muestra el formulario de consentimiento de Google; en iPhone, además, pide el permiso de rastreo de Apple (ATT). <strong>Si das tu consentimiento</strong>, Google puede mostrar anuncios personalizados y usar el <strong>identificador publicitario del dispositivo</strong> (IDFA en iPhone, ID de publicidad en Android), junto con datos técnicos como la dirección IP y el modelo del móvil. <strong>Si no lo das</strong>, los anuncios siguen apareciendo, pero sin personalizar. Google no recibe los datos de tu gallinero: ni gallinas, ni huevos, ni fotos.</p>
+  <p>Puedes cambiar tu elección cuando quieras: en iPhone, en Ajustes → Privacidad y seguridad → Rastreo; en Android, en los ajustes de Google del móvil (Anuncios), donde se puede borrar o restablecer el ID de publicidad.</p>
+
+  <h2>Compras dentro de la app</h2>
+  <p>La suscripción Pro (1,99 €/mes o 14,99 €/año) la cobran Apple o Google con la cuenta de tu tienda; nosotros nunca vemos datos de pago. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> comprueba la suscripción con la tienda y le dice a la app si eres Pro; para ello conoce un identificador aleatorio de la instalación y el estado de tus compras. Puedes cancelar cuando quieras desde los ajustes de suscripciones de tu cuenta de Apple o Google. En Ajustes está «Restaurar compras».</p>
+
+  <h2>Menores y derechos</h2>
+  <p>Mi Gallinero no va dirigida a menores de 13 años ni recoge conscientemente datos personales de menores. Puedes pedir en cualquier momento ver, corregir o borrar los datos que tengamos de ti y ejercer el resto de derechos del RGPD (acceso, rectificación, supresión, oposición, limitación y portabilidad) escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <p>Base legal: los datos se tratan para prestar la app que has pedido (ejecución del servicio); los anuncios personalizados, con tu consentimiento, que puedes retirar cuando quieras; y los no personalizados, por interés legítimo en financiar la versión gratuita.</p>
+
+  <h2>Seguridad</h2>
+  <p>Las comunicaciones con la nube van cifradas (HTTPS). Las reglas del servidor solo dejan leer y escribir en la granja a quien conoce su código exacto, y no permiten listar granjas.</p>
+
+  <h2>Cambios</h2>
+  <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
+
+  <div class="foot">Mi Gallinero · Vigente desde 2026-10-17 · Gabriel Micó Victoria</div>
+
+</div>
+</body>
+</html>

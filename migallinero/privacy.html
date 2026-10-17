@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Coop — Privacy Policy</title>
+<link rel="icon" href="icono.png">
+<style>
+  :root{
+    --bg:#F7EFE0; --surface:#fffaf0; --ink:#3a2a1c; --ink-light:#7a6552;
+    --accent:#C2552D; --olive:#5E7A2E; --yema:#E9B949; --line:#e6d6b8; --card:#f1e5cc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1e1710; --surface:#2a2017; --ink:#f3e8d4; --ink-light:#b9a78d;
+      --accent:#ec8a63; --olive:#a3c46a; --yema:#e9b949; --line:#3d2f20; --card:#32261a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--olive)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--yema);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .cabecera{display:flex;align-items:center;gap:1.1rem;margin:0 0 1.5rem}
+  .cabecera img{width:84px;height:84px;border-radius:19px;box-shadow:0 2px 8px rgba(58,42,28,.25)}
+  .cabecera h1{margin:0}
+  .cabecera .sub{margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
+  <h1>My Coop</h1>
+  <p class="sub">Privacy Policy (Spanish name: Mi Gallinero)</p>
+  <nav class="enlaces"><a href="index.html#english">Home</a><a href="support.html">Help &amp; support</a></nav>
+
+  <div class="card">
+    <p><strong>Summary:</strong> My Coop keeps everything on your phone. There are no accounts and it never asks for your email, real name, location or contacts. Only if you turn on «My Farm» (Pro) is the coop data also stored in Google's cloud (Firebase, servers in the European Union) under a farm code that you share yourself. The free version shows Google AdMob ads, personalized only if you consent. Purchases are handled by Apple or Google.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Gabriel Micó Victoria, developer of My Coop. For any question about your data, or to exercise your rights, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>Hens (breed, dates, leg band, notes and photo), eggs collected, eggs given out and their prices, feed records, feed and water levels and settings are stored <strong>only in the app's own storage</strong> (IndexedDB). They do not leave your phone unless you turn on «My Farm». If you uninstall the app they are deleted with it.</p>
+  <ul>
+    <li><strong>Hen photos.</strong> When you choose «Camera» or «Gallery» to set a hen's photo, the app asks for permission and uses the image only for that: it crops it, shrinks it (about 400 pixels) and stores it inside the app. The camera and gallery are not used for anything else.</li>
+    <li><strong>Feed and water reminders.</strong> These are <strong>local</strong> notifications scheduled by your own phone from the estimated remaining supply. There is no notification server and nothing is sent for this. If you do not grant permission, the app works the same, without reminders.</li>
+    <li><strong>Backup.</strong> If you export your data, the app creates a file and lets you choose where to save it or who to share it with. We never receive it.</li>
+  </ul>
+
+  <h2>«My Farm» (Pro): data in the cloud</h2>
+  <p>If, with a Pro subscription, you <strong>create a farm or join someone else's</strong>, the coop data is also stored in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase (Cloud Firestore)</a>, on servers in the European Union (<code>eur3</code>), so every phone in the farm sees it right away. What is synchronized:</p>
+  <ul>
+    <li>hens, <strong>including their photo</strong>;</li>
+    <li>eggs collected, eggs given out and their prices;</li>
+    <li>feed records, feed and water levels, and the coop settings;</li>
+    <li>the <strong>profile name</strong> each person chooses on joining (we recommend a nickname, not a full name).</li>
+  </ul>
+  <p><strong>No accounts, no email.</strong> A farm is identified by a 10-character code generated by the app. Anyone who has the code can see and change that farm's data, so share it only with people you trust. There is no way to list or search farms.</p>
+  <p>Google, as the cloud provider, may process technical connection data (such as the IP address) to provide the service, under its own policy. We do not use farm data for advertising and we do not sell it.</p>
+
+  <h2>Stop sharing and delete the cloud data</h2>
+  <ul>
+    <li><strong>Leaving the farm</strong> (Settings → My Farm) stops sharing: your phone stops sending and receiving. Your data stays on your phone, and the farm's data stays in the cloud while other people remain in it.</li>
+    <li><strong>Deleting an item</strong> (a hen, an entry…) in the app replaces that cloud record with an empty marker, without its content, and it disappears from the other phones in the farm too.</li>
+    <li><strong>Deleting all of a farm's data in the cloud:</strong> write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> with the farm code and we will delete it completely. Without the code we cannot locate it, because there are no accounts.</li>
+  </ul>
+
+  <h2>Ads (free version)</h2>
+  <p>The free version shows a banner from <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a>. In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's consent form before requesting any ad; on iPhone it also asks for Apple's tracking permission (ATT). <strong>If you consent</strong>, Google may show personalized ads and use the device's <strong>advertising identifier</strong> (IDFA on iPhone, advertising ID on Android), together with technical data such as the IP address and phone model. <strong>If you do not</strong>, ads still appear but are not personalized. Google does not receive your coop data: no hens, eggs or photos.</p>
+  <p>You can change your choice at any time: on iPhone, Settings → Privacy &amp; Security → Tracking; on Android, in your phone's Google settings (Ads), where you can delete or reset the advertising ID.</p>
+
+  <h2>In-app purchases</h2>
+  <p>The Pro subscription (€1.99/month or €14.99/year) is charged by Apple or Google through your store account; we never see payment details. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> verifies the subscription with the store and tells the app whether you are Pro; for that it knows a random installation identifier and your purchase status. You can cancel at any time from your Apple or Google subscription settings. «Restore purchases» is in Settings.</p>
+
+  <h2>Children and your rights</h2>
+  <p>My Coop is not directed at children under 13 and does not knowingly collect personal data from them. At any time you can ask to see, correct or delete the data we hold about you, and exercise the rest of your GDPR rights (access, rectification, erasure, objection, restriction and portability) by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. You may also complain to your data protection authority (in Spain, the <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</p>
+  <p>Legal basis: data is processed to provide the app you asked for (performance of the service); personalized ads, with your consent, which you can withdraw at any time; and non-personalized ads, under our legitimate interest in funding the free version.</p>
+
+  <h2>Security</h2>
+  <p>Communication with the cloud is encrypted (HTTPS). The server rules only allow reading and writing a farm to someone who knows its exact code, and do not allow listing farms.</p>
+
+  <h2>Changes</h2>
+  <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
+
+  <div class="foot">My Coop · Effective 2026-10-17 · Gabriel Micó Victoria</div>
+
+</div>
+</body>
+</html>
