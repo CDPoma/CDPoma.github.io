@@ -71,12 +71,23 @@
 
   <h2>What data is stored and where</h2>
   <p>Your videos are stored only on your iPhone, inside the app. The app has no server of its own and no accounts, and it never uploads your recordings anywhere. Like the rest of your apps' data, the app's gallery is included in your iPhone backup (iCloud or your computer) if you have backups turned on.</p>
-  <p>Two third-party services are built into the app, each for one specific purpose:</p>
+  <p>Three third-party services are built into the app, each for one specific purpose:</p>
   <ul>
-    <li><strong>Google AdMob</strong> — free version only. It shows a banner at the bottom (not while you record) and, when each recording ends and the video is already saved, one full-screen ad (at most one every 90 seconds). Before any ad is requested, Google's consent form appears in the European Economic Area, the UK and Switzerland, and on iPhone, Apple's tracking permission (ATT). If you don't allow it, ads still appear, but they aren't personalized. To serve and measure ads and prevent fraud, AdMob may process device identifiers (the advertising identifier only if you allow it), your IP address and basic technical data. With Pro the app doesn't request any ads.</li>
-    <li><strong>RevenueCat</strong> — handles the optional one-time “Pro” purchase, which removes all ads. It processes the App Store purchase receipt and an anonymous identifier created by the app to confirm the purchase is valid. No payment details go through the app: Apple takes care of that.</li>
+    <li><strong>Google AdMob</strong> — free version only. It shows a banner at the bottom (not while you record) and, one full-screen ad while your videos are being saved after each recording, announced on screen beforehand (at most one every 90 seconds), and, 1 out of every 5 times you open the app, a full-screen app-open ad; that ad never appears while the camera is active or recording, nor on the day you install the app. Before any ad is requested, Google's consent form appears in the European Economic Area, the UK and Switzerland, and on iPhone, Apple's tracking permission (ATT). If you don't allow it, ads still appear, but they aren't personalized. To serve and measure ads and prevent fraud, AdMob may process device identifiers (the advertising identifier only if you allow it), your IP address and basic technical data. With Pro the app doesn't request any ads.</li>
+    <li><strong>RevenueCat</strong> — handles the optional one-time “Pro” purchase, which removes all ads. It processes the App Store purchase receipt and an anonymous identifier created by the app to confirm the purchase is valid. No payment details go through the app: Apple takes care of that. If analytics consent exists, RevenueCat also receives the Google Analytics installation identifier so purchases show up in those same statistics.</li>
+    <li><strong>Google Analytics for Firebase</strong> — anonymous usage analytics: see “Usage analytics” below.</li>
   </ul>
-  <p>Neither is linked to your name, your email or any account, because the app has no accounts. Your videos are not shared with either of them.</p>
+  <p>None is linked to your name, your email or any account, because the app has no accounts. Your videos are not shared with any of them.</p>
+
+  <h2>Usage analytics</h2>
+  <p>Doble Cam Pro uses <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> to find out how many people use the app and when, so we can improve it.</p>
+  <ul>
+    <li><strong>What is collected:</strong> app usage data, that is, automatic events for opening, session and screens viewed (first open, session start, time in the app, screen shown); an identifier of the app installation on your device, which is not your name, your email or the advertising identifier; and basic technical data: approximate country, operating system, app version and device model.</li>
+    <li><strong>What is not collected:</strong> we do not collect the advertising identifier (IDFA) with Analytics, we assign no user ID or personal properties, and nothing from your videos, your recordings or your photos is sent. Analytics does not ask for Apple's tracking permission.</li>
+    <li><strong>What for:</strong> only for usage statistics (active users, versions and countries of use). This data is not linked to your name, your email or any account (Doble Cam Pro has no accounts), is not used to track you across other companies' apps or websites, and is not used for advertising. For Apple, the installation identifier is a device identifier, which is why it appears that way in the App Store privacy label.</li>
+    <li><strong>With whom:</strong> Google processes it as a data processor. In addition, the installation identifier is shared with RevenueCat so purchases appear in the same statistics.</li>
+  </ul>
+  <p><strong>Consent and control.</strong> In the European Economic Area, the UK and Switzerland, analytics stays <strong>off until you answer</strong> Google's consent form that appears when you open the app (the same one used for ads): it is only turned on if you accept storing data on your device, and if you decline, no usage data is collected. Outside that area, where prior consent is not required, analytics is on by default. You can ask us to stop using it by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; you can also delete the app and reinstall it, and the form will appear again in the European area.</p>
 
   <h2>Permissions</h2>
   <ul>
@@ -96,7 +107,7 @@
   <h2>Contact and support</h2>
   <p>Questions, bugs or suggestions about the app or this policy? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it's a bug, please include your iPhone model and iOS version.</p>
 
-  <div class="foot">Doble Cam Pro 1.0.3 · Last updated: October 2, 2026 · Gabriel Micó Victoria</div>
+  <div class="foot">Doble Cam Pro 1.0.5 · Last updated: October 21, 2026 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>

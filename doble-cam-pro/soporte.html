@@ -71,12 +71,23 @@
 
   <h2>Qué datos se guardan y dónde</h2>
   <p>Tus vídeos se guardan solo en tu iPhone, dentro de la app. La app no tiene servidor propio ni cuentas, y nunca sube tus grabaciones a ningún sitio. Como el resto de datos de tus apps, la galería interna entra en la copia de seguridad del iPhone (iCloud o el ordenador) si la tienes activada.</p>
-  <p>Hay dos servicios de terceros integrados en la app, cada uno con un propósito concreto:</p>
+  <p>Hay tres servicios de terceros integrados en la app, cada uno con un propósito concreto:</p>
   <ul>
-    <li><strong>Google AdMob</strong> — solo en la versión gratuita. Muestra un banner en la parte de abajo (no mientras grabas) y, al terminar cada grabación, con el vídeo ya guardado, un anuncio a pantalla completa (como mucho uno cada 90 segundos). Antes de pedir ningún anuncio, en el Espacio Económico Europeo, Reino Unido y Suiza sale el formulario de consentimiento de Google, y en el iPhone, el permiso de rastreo de Apple (ATT). Si no das permiso, los anuncios siguen saliendo, pero sin personalizar. Para servir y medir los anuncios y evitar fraudes, AdMob puede procesar identificadores del dispositivo (el identificador de publicidad solo si lo permites), la dirección IP y datos técnicos básicos. Con Pro la app no pide ningún anuncio.</li>
-    <li><strong>RevenueCat</strong> — gestiona la compra única opcional «Pro», que quita todos los anuncios. Procesa el recibo de compra de la App Store y un identificador anónimo generado por la app para confirmar que la compra es válida. Ningún dato de pago pasa por la app: de eso se encarga Apple.</li>
+    <li><strong>Google AdMob</strong> — solo en la versión gratuita. Muestra un banner en la parte de abajo (no mientras grabas) y, un anuncio a pantalla completa mientras se guardan los vídeos tras cada grabación, avisado antes en pantalla (como mucho uno cada 90 segundos) y, 1 de cada 5 veces que abres la app, un anuncio de apertura a pantalla completa; ese anuncio no sale nunca mientras la cámara está activa o grabando, ni el día en que instalas la app. Antes de pedir ningún anuncio, en el Espacio Económico Europeo, Reino Unido y Suiza sale el formulario de consentimiento de Google, y en el iPhone, el permiso de rastreo de Apple (ATT). Si no das permiso, los anuncios siguen saliendo, pero sin personalizar. Para servir y medir los anuncios y evitar fraudes, AdMob puede procesar identificadores del dispositivo (el identificador de publicidad solo si lo permites), la dirección IP y datos técnicos básicos. Con Pro la app no pide ningún anuncio.</li>
+    <li><strong>RevenueCat</strong> — gestiona la compra única opcional «Pro», que quita todos los anuncios. Procesa el recibo de compra de la App Store y un identificador anónimo generado por la app para confirmar que la compra es válida. Ningún dato de pago pasa por la app: de eso se encarga Apple. Si hay consentimiento de analítica, RevenueCat recibe también el identificador de instalación de Google Analytics para enviar las compras a esas mismas estadísticas.</li>
+    <li><strong>Google Analytics para Firebase</strong> — analítica de uso anónima: ver «Analítica de uso» más abajo.</li>
   </ul>
-  <p>Ninguno de los dos está vinculado a tu nombre, a tu correo ni a ninguna cuenta, porque la app no tiene cuentas. Tus vídeos no se comparten con ninguno de ellos.</p>
+  <p>Ninguno está vinculado a tu nombre, a tu correo ni a ninguna cuenta, porque la app no tiene cuentas. Tus vídeos no se comparten con ninguno de ellos.</p>
+
+  <h2>Analítica de uso</h2>
+  <p>Doble Cam Pro usa <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics para Firebase</a> para saber cuánta gente usa la app y cuándo, y así poder mejorarla.</p>
+  <ul>
+    <li><strong>Qué se recoge:</strong> datos de uso de la app, es decir, eventos automáticos de apertura, sesión y pantallas vistas (primera apertura, inicio de sesión, tiempo de uso, pantalla mostrada); un identificador de la instalación de la app en tu dispositivo, que no es tu nombre, ni tu correo, ni el identificador publicitario; y datos técnicos básicos: país aproximado, sistema operativo, versión de la app y modelo de dispositivo.</li>
+    <li><strong>Qué no se recoge:</strong> no recogemos el identificador publicitario (IDFA) con Analytics, no asignamos identificador de usuario ni propiedades personales, y no se envía nada de tus vídeos, tus grabaciones ni tus fotos. La analítica no pide el permiso de rastreo de Apple.</li>
+    <li><strong>Para qué:</strong> solo para estadísticas de uso (usuarios activos, versiones y países de uso). Estos datos no se vinculan a tu nombre, a tu correo ni a ninguna cuenta (en Doble Cam Pro no hay cuentas), ni se usan para seguirte entre apps o webs de otras empresas, ni para publicidad. El identificador de la instalación es, para Apple, un identificador de dispositivo, y por eso figura así en la etiqueta de privacidad de la App Store.</li>
+    <li><strong>Con quién:</strong> los procesa Google como encargado de tratamiento. Además, el identificador de la instalación se comparte con RevenueCat para que las compras aparezcan en las mismas estadísticas.</li>
+  </ul>
+  <p><strong>Consentimiento y control.</strong> En el Espacio Económico Europeo, el Reino Unido y Suiza la analítica queda <strong>desactivada hasta que contestes</strong> al formulario de consentimiento de Google que sale al abrir la app (el mismo de los anuncios): solo se activa si aceptas el almacenamiento de datos en tu dispositivo, y si lo rechazas no se recoge ningún dato de uso. Fuera de esa zona, donde no hace falta consentimiento previo, la analítica está activa por defecto. Puedes pedir que se deje de usar escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; también puedes borrar la app y volver a instalarla, y el formulario volverá a salir en la zona europea.</p>
 
   <h2>Permisos</h2>
   <ul>
@@ -96,7 +107,7 @@
   <h2>Contacto y soporte</h2>
   <p>¿Dudas, fallos o sugerencias sobre la app o esta política? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si es un fallo, di el modelo de iPhone y la versión de iOS.</p>
 
-  <div class="foot">Doble Cam Pro 1.0.3 · Última actualización: 2 de octubre de 2026 · Gabriel Micó Victoria</div>
+  <div class="foot">Doble Cam Pro 1.0.5 · Última actualización: 21 de octubre de 2026 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
