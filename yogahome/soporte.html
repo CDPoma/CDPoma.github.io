@@ -42,7 +42,7 @@
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> no hay cuentas ni registro. Tus secuencias, tu plan y tu registro de práctica se guardan en tu teléfono. Solo sale algo de él en tres casos: los anuncios de la versión gratuita (Google AdMob), la suscripción Pro (RevenueCat, con Apple) y, si eres Pro y usas <strong>Compañeros</strong>, lo que compartes con los compañeros que aceptas. Los datos de Apple Salud no salen nunca de tu dispositivo.</p>
+    <p><strong>Resumen rápido:</strong> no hay cuentas ni registro. Tus secuencias, tu plan y tu registro de práctica se guardan en tu teléfono. Solo sale algo de él en cuatro casos: los anuncios de la versión gratuita (Google AdMob), la analítica de uso anónima (Google Analytics para Firebase, con tu consentimiento donde la ley lo exige), la suscripción Pro (RevenueCat, con Apple) y, si eres Pro y usas <strong>Compañeros</strong>, lo que compartes con los compañeros que aceptas. Los datos de Apple Salud no salen nunca de tu dispositivo.</p>
   </div>
 
   <h2>Qué hace la app</h2>
@@ -57,15 +57,26 @@
   <table>
     <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
     <tbody>
-      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Muestra publicidad en la versión gratuita: un banner abajo y, al generar la práctica del día, a veces un anuncio a pantalla completa (como mucho uno cada minuto y medio). Durante la práctica no se muestra ninguno. Antes pide tu consentimiento (formulario de Google en el Espacio Económico Europeo, Reino Unido y Suiza) y, en iPhone, el permiso de rastreo de Apple. Si no lo das, los anuncios siguen, pero sin personalizar. No recibe tus datos de práctica ni de Salud.</td></tr>
-      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple</td><td>Gestiona la suscripción Pro: comprobar si está activa y restaurarla. Solo procesa el estado de la compra; el pago lo hace Apple.</td></tr>
-      <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a></td><td>Solo para Compañeros: la sesión anónima (Authentication) y la ficha descrita arriba (Cloud Firestore), que solo reciben los compañeros que has aceptado.</td></tr>
+      <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Muestra publicidad en la versión gratuita: un banner abajo, al generar la práctica del día, a veces un anuncio a pantalla completa (como mucho uno cada minuto y medio) y, de vez en cuando, un anuncio a pantalla completa al abrir la app (una de cada cinco aperturas, y ninguna el día en que la instalas). Durante la práctica no se muestra ninguno. Antes pide tu consentimiento (formulario de Google en el Espacio Económico Europeo, Reino Unido y Suiza) y, en iPhone, el permiso de rastreo de Apple. Si no lo das, los anuncios siguen, pero sin personalizar. No recibe tus datos de práctica ni de Salud.</td></tr>
+      <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> + Apple</td><td>Gestiona la suscripción Pro: comprobar si está activa y restaurarla. Solo procesa el estado de la compra; el pago lo hace Apple. Si hay consentimiento de analítica, recibe también el identificador de instalación de Google Analytics para enviar las compras a esas mismas estadísticas.</td></tr>
+      <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a></td><td>Compañeros: la sesión anónima (Authentication) y la ficha descrita arriba (Cloud Firestore), que solo reciben los compañeros que has aceptado. Y, aparte, la analítica de uso anónima (Google Analytics para Firebase), descrita más abajo.</td></tr>
     </tbody>
   </table>
+
+  <h2>Analítica de uso</h2>
+  <p>YogaHome usa <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics para Firebase</a> para saber cuánta gente usa la app y cuándo, y así poder mejorarla.</p>
+  <ul>
+    <li><strong>Qué se recoge:</strong> datos de uso de la app, es decir, eventos automáticos de apertura, sesión y pantallas vistas (primera apertura, inicio de sesión, tiempo de uso, pantalla mostrada); un identificador de la instalación de la app en tu dispositivo, que no es tu nombre, ni tu correo, ni el identificador publicitario; y datos técnicos básicos: país aproximado, sistema operativo, versión de la app y modelo de dispositivo.</li>
+    <li><strong>Qué no se recoge:</strong> no recogemos el identificador publicitario (IDFA) con Analytics, no asignamos identificador de usuario ni propiedades personales, y no se envía nada de tus secuencias, tu plan, tu registro de práctica, tus compañeros ni de Apple Salud. La analítica no pide el permiso de rastreo de Apple.</li>
+    <li><strong>Para qué:</strong> solo para estadísticas de uso (usuarios activos, versiones y países de uso). Estos datos no se vinculan a tu nombre, a tu correo ni a ninguna cuenta, ni se usan para seguirte entre apps o webs de otras empresas, ni para publicidad. El identificador de la instalación es, para Apple, un identificador de dispositivo, y por eso figura así en la etiqueta de privacidad de la App Store.</li>
+    <li><strong>Con quién:</strong> los procesa Google como encargado de tratamiento. Además, el identificador de la instalación se comparte con RevenueCat (ver arriba) para que las compras aparezcan en las mismas estadísticas.</li>
+  </ul>
+  <p><strong>Consentimiento y control.</strong> En el Espacio Económico Europeo, el Reino Unido y Suiza la analítica queda <strong>desactivada hasta que contestes</strong> al formulario de consentimiento de Google que sale al abrir la app (el mismo de los anuncios): solo se activa si aceptas el almacenamiento de datos en tu dispositivo, y si lo rechazas no se recoge ningún dato de uso. Con Pro no hay anuncios ni formulario: en esa zona la analítica se queda desactivada. Fuera de esa zona, donde no hace falta consentimiento previo, la analítica está activa por defecto. Puedes pedir que se deje de usar escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; también puedes borrar la app y volver a instalarla, y el formulario volverá a salir en la zona europea.</p>
 
   <h2>Borrar tus datos</h2>
   <ul>
     <li><strong>Lo del teléfono:</strong> se borra al desinstalar la app.</li>
+    <li><strong>Analítica:</strong> los datos de uso anónimos no están ligados a ti; para que dejen de recogerse, ver «Consentimiento y control» más arriba.</li>
     <li><strong>Salud:</strong> las sesiones guardadas se gestionan y se borran desde la app Salud de tu iPhone.</li>
     <li><strong>Compañeros:</strong> si quitas a todos tus compañeros, dejan de ver tu ficha y la app deja de publicar. Para borrarlo todo del servidor (tu ficha, tu código, las solicitudes y tu identificador anónimo), pulsa <strong>«Borrar mis datos de Compañeros»</strong> al final de esa pantalla. Si ya no tienes la app, escríbenos con tu código a la dirección de abajo y lo borramos nosotros.</li>
   </ul>
@@ -83,7 +94,7 @@
   <h2>Contacto y soporte</h2>
   <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">YogaHome · Vigente desde 2026-10-16 · Gabriel Micó Victoria</div>
+  <div class="foot">YogaHome · Vigente desde 2026-10-21 (analítica de uso y anuncio de apertura) · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
