@@ -74,7 +74,7 @@
     <li><strong>Notification token</strong> and device type (Android or iPhone), only if notifications are allowed: it is the address they are sent to.</li>
   </ul>
   <p><strong>On the device itself</strong> the app keeps the session, the chosen language, whether sound is on, the last creature opened and whether the game panels are hidden.</p>
-  <p>We do not collect location, contacts, photos, audio or real names. Apart from the Google ads described below, we use no analytics or tracking tools, and we do not sell or share data with anyone.</p>
+  <p>We do not collect location, contacts, photos, audio or real names. Apart from the Google ads described below, we use no analytics or tracking tools other than the usage analytics described below, and we do not sell or share data with anyone.</p>
 
   <h2>Friends: by code only, no chat</h2>
   <ul>
@@ -87,13 +87,23 @@
   </ul>
 
   <h2>Ads</h2>
-  <p>The free version shows ads from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: a banner at the top and, sometimes, a full-screen ad right before a surprise (when a creature hatches, on a trip or on an evolution), at most one every 90 seconds and never when the app opens.</p>
+  <p>The free version shows ads from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: a banner at the top and, sometimes, a full-screen ad right before a surprise (when a creature hatches, on a trip or on an evolution), at most one every 90 seconds and, once in a while (1 in every 5 openings of the app, never on the day you install it), a full-screen ad when you open it.</p>
   <p><strong>Consent.</strong> In the European Economic Area, the United Kingdom and Switzerland, before requesting any ad the app shows Google's consent form. On iPhone it also asks for Apple's tracking permission (ATT). <strong>If you consent</strong>, Google may show personalized ads and use the <strong>device's advertising identifier</strong> (IDFA on iPhone, advertising ID on Android), together with technical data such as the IP address and device model, as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's policy</a>. <strong>If you don't</strong>, ads still appear, but non-personalized. Google receives nothing from the game: no names, no creatures, no friends.</p>
   <p>You can change your choice at any time: on iPhone, in Settings → Privacy &amp; Security → Tracking; on Android, in the device's Google settings (Ads), where the advertising ID can be deleted or reset; and, in Europe, in TAI's Settings → “Ad privacy”.</p>
   <p><strong>Any purchase removes the ads forever.</strong></p>
 
+  <h2>Usage analytics</h2>
+  <p>TAI uses <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> on iPhone to learn how many people play and when, so we can improve the game. It is separate from the creatures and friends: analytics does not read or send what you do in the game.</p>
+  <ul>
+    <li><strong>What is collected:</strong> app usage data, meaning automatic events for opening, session and screens viewed; an identifier of the app installation on your device, which is not your name, an email or the advertising identifier; and basic technical data: approximate country, operating system and app version.</li>
+    <li><strong>What is not collected:</strong> we do not collect the advertising identifier (IDFA) with Analytics, we assign no user ID or personal properties, and nothing about your creatures, friends or purchases is sent. Analytics does not ask for Apple's tracking permission.</li>
+    <li><strong>What for:</strong> only for usage statistics (active users, versions and countries). This data is not linked to your name, your email or any account, and is not used to follow you across other companies' apps or sites, nor for advertising. For Apple, the installation identifier counts as a device identifier, which is why it appears that way in the App Store privacy label.</li>
+    <li><strong>With whom:</strong> Google processes it as a data processor. The installation identifier is also shared with RevenueCat (see below) so purchases appear in the same statistics.</li>
+  </ul>
+  <p><strong>Consent and control.</strong> In the European Economic Area, the United Kingdom and Switzerland analytics stays <strong>off until you answer</strong> Google's consent form shown when you open the app (the same one as for ads): it only turns on if you accept data storage on your device, and if you refuse, no usage data is collected. Outside that area, where prior consent is not required, analytics is on by default. You can ask us to stop using it by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; you can also delete the app and reinstall it, and the form will appear again in Europe.</p>
+
   <h2>In-app purchases</h2>
-  <p>Creatures can be bought (a one-time purchase each). Before buying, the app asks a <strong>grown-up question</strong> (a multiplication). Payment is handled by Apple or Google with the store account; we never see payment details. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> checks the purchase with the store and tells us which creature was unlocked; for that it knows the player's random identifier and the state of their purchases. Settings has a “Restore purchases” button.</p>
+  <p>Creatures can be bought (a one-time purchase each). Before buying, the app asks a <strong>grown-up question</strong> (a multiplication). Payment is handled by Apple or Google with the store account; we never see payment details. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> checks the purchase with the store and tells us which creature was unlocked; for that it knows the player's random identifier and the state of their purchases. Settings has a “Restore purchases” button. If analytics consent was given, RevenueCat also receives the Google Analytics installation identifier so purchases appear in the same statistics.</p>
 
   <h2>Notifications</h2>
   <p>If notifications are allowed, TAI sends one when a creature needs help: to the owner when it is missing something, to their friends if the owner doesn't show up, and to everyone if it is very weak. Never while it is asleep. The notification carries the creature's name (and, for friends, the owner's player name). They are sent with Google's <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Cloud Messaging</a> and, on iPhone, through Apple's notification service. They can be turned off at any time in the device settings.</p>
@@ -109,7 +119,7 @@
 
   <h2>Minors and your rights</h2>
   <p>TAI is for all ages and children use it too. That is why it asks for no personal data, the account is optional and needs no email, there is no chat, friends are added only by code, and purchases and links out of the app sit behind a grown-up check. Any user, and for a minor their parents or guardians, can ask at any time to see, correct or delete their data, and exercise the other GDPR rights (access, rectification, erasure, objection, restriction and portability), by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. You can also complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) or your local authority.</p>
-  <p>Legal basis: data is processed to provide the game that was requested (performance of the service); personalized ads, on your consent, which you can withdraw at any time; and non-personalized ads, on a legitimate interest in funding the free version.</p>
+  <p>Legal basis: data is processed to provide the game that was requested (performance of the service); personalized ads, on your consent, which you can withdraw at any time; non-personalized ads, on a legitimate interest in funding the free version; and usage analytics, on your consent in the EEA, the UK and Switzerland (which you can withdraw at any time) and, outside that area, on a legitimate interest in improving the game.</p>
 
   <h2>Security</h2>
   <p>All communication is encrypted (HTTPS). On the server, each player can only read their own data and what their friends show them, and the game rules are enforced by the server, not the device.</p>
@@ -117,7 +127,7 @@
   <h2>Changes</h2>
   <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
 
-  <div class="foot">TAI · Effective 2026-09-26 · Gabriel Micó Victoria</div>
+  <div class="foot">TAI · Effective 2026-10-21 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
