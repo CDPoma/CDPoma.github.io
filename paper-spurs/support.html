@@ -46,7 +46,7 @@
   <p class="sub">Support and privacy</p>
 
   <div class="card">
-    <p><strong>In short:</strong> the game doesn't ask for or keep any personal data. There is no account, no sign-up and no server of ours, and the whole game plays offline. The only things that go online are the ads in the free version (Google AdMob) and the purchase check (RevenueCat).</p>
+    <p><strong>In short:</strong> the game doesn't ask for or keep any personal data. There is no account, no sign-up and no server of ours, and the whole game plays offline. The only things that go online are the ads in the free version (Google AdMob), the purchase check (RevenueCat) and minimal usage analytics on iPhone and iPad (Google Analytics for Firebase), which only switch on with your consent where the law requires it.</p>
   </div>
 
   <h2>About the game</h2>
@@ -63,6 +63,7 @@
   <ul>
     <li>a <strong>banner at the top</strong> while you play a level;</li>
     <li>a <strong>full-screen ad</strong> when you leave the end-of-level screen, after clearing the level or after your squad falls, <strong>at most one every 75 seconds</strong>. Never in the middle of play.</li>
+    <li>an <strong>app-open ad</strong> when you open the game, or come back to it after 30 minutes or more away: on <strong>1 in every 5 openings</strong>, never on the day you install it and never with the "No ads" purchase.</li>
   </ul>
   <p>The first time you open the game, and before any ad is requested, this happens, in this order:</p>
   <ol>
@@ -73,15 +74,27 @@
   <p>If you allow it, AdMob may use the device's advertising identifier to personalise and measure ads; if you don't, ads still show, but not personalised or limited to what your choice allows. Either way Google receives technical device data such as the IP address. Saying no is perfectly fine: the game works exactly the same.</p>
   <p><strong>Changing your choice:</strong> in the European Economic Area, the UK and Switzerland, the <strong>"Ad privacy options"</strong> button in the game's Settings (on the title screen or in the pause menu) reopens Google's form so you can change your choice; from then on, ads follow your new choice. Tracking permission is changed in iPhone or iPad Settings → Privacy &amp; Security → Tracking. The game's Settings also link to this page.</p>
 
+  <h2>Usage analytics</h2>
+  <p>Paper Spurs uses <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> on iPhone and iPad to learn how many people play and when, so the game can be improved.</p>
+  <ul>
+    <li><strong>What is collected:</strong> app usage data, namely automatic open, session and screen-view events (first open, session start, time in the app, screen shown); an identifier for the app installation on your device, which is not your name, not your email and not the advertising identifier; and basic technical data: approximate country, operating system, app version and device model.</li>
+    <li><strong>What is not collected:</strong> we do not collect the advertising identifier (IDFA) with Analytics, we assign no user ID or personal properties, and nothing from your game progress is sent. Analytics does not ask for Apple's tracking permission.</li>
+    <li><strong>What for:</strong> usage statistics only (active users, versions and countries of use). This data is not linked to your name, your email or any account (Paper Spurs has no accounts), is not used to track you across other companies' apps or websites, and is not used for advertising. The installation identifier counts as a device identifier for Apple, which is why it is declared that way in the App Store privacy label.</li>
+    <li><strong>Who receives it:</strong> Google processes it as a data processor. The installation identifier is also shared with RevenueCat (see below) so purchases show up in the same statistics.</li>
+  </ul>
+  <p><strong>Consent and control.</strong> In the European Economic Area, the UK and Switzerland, analytics stays <strong>off until you answer</strong> Google's consent form shown when you open the game (the same one used for ads): it only switches on if you accept data storage on your device, and if you refuse, no usage data is collected. If you change your mind, the "Ad privacy options" button in Settings reopens that form and analytics follows your new choice. Outside that area, where no prior consent is required, analytics is on by default. You can ask for it to stop by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; you can also delete the game and install it again, and the form will show again in the European area.</p>
+  <p><strong>Legal basis:</strong> usage analytics, with your consent in the EEA, the UK and Switzerland (which you can withdraw at any time) and, outside that area, legitimate interest in improving the game.</p>
+
   <h2>Third-party services</h2>
   <table>
     <thead><tr><th>Service</th><th>What for</th></tr></thead>
     <tbody>
       <tr><td>Google AdMob and its consent form</td><td>The ads in the free version, as described above. Not used once you buy "No ads".</td></tr>
-      <tr><td>RevenueCat + Apple / Google (purchases)</td><td>Checks with the store whether you bought "No ads". It receives an anonymous app identifier and the Apple or Google purchase receipt; it doesn't receive your name or email.</td></tr>
+      <tr><td>RevenueCat + Apple / Google (purchases)</td><td>Checks with the store whether you bought "No ads". It receives an anonymous app identifier and the Apple or Google purchase receipt; it doesn't receive your name or email. If analytics consent is given, it also receives the Google Analytics installation identifier so purchases can be sent to those same statistics.</td></tr>
+      <tr><td>Google Analytics for Firebase (iPhone and iPad only)</td><td>Minimal usage statistics, as described in "Usage analytics". With consent where the law requires it.</td></tr>
     </tbody>
   </table>
-  <p>No Firebase, no usage analytics, no social networks and no other services.</p>
+  <p>No other usage-analytics tools, no social networks and no other services.</p>
 
   <h2>Permissions</h2>
   <p>The game <strong>asks for no system permissions</strong>: no camera, microphone, location, contacts, photos or notifications. The only prompt is Apple's tracking prompt described above.</p>
@@ -96,7 +109,7 @@
   <h2>Contact and support</h2>
   <p>Questions, bugs or suggestions? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">Paper Spurs v1.0.1 · Effective from 2026-10-02 · Gabriel Micó Victoria</div>
+  <div class="foot">Paper Spurs v1.1.3 · Effective from 2026-10-21 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
