@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cdpoma.github.io/camphone/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/camphone/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/en.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/camphone/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/privacidad.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/privacy.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/soporte.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/support.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html"/>
+  </url>
+</urlset>

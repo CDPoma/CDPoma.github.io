@@ -6,6 +6,11 @@
 <title>CamPhone — Política de privacidad</title>
 <meta name="description" content="Política de privacidad de CamPhone: sin cuentas, el vídeo va directo entre tus dispositivos, las grabaciones se quedan en la cámara y los anuncios y la analítica anónima dependen de tu consentimiento.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/privacidad.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/camphone/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   :root{
     --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
@@ -48,7 +53,7 @@
   <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
   <h1>CamPhone</h1>
   <p class="sub">Política de privacidad</p>
-  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+  <nav class="enlaces"><a href="index.html">Sobre CamPhone</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
     <p><strong>Resumen:</strong> CamPhone convierte un móvil en cámara y otro en visor, enlazados con un código. El vídeo y el sonido van <strong>directos de un móvil a otro, cifrados</strong>, y no se guardan en ningún servidor. Las grabaciones se quedan en el móvil de la cámara y las borras tú desde la app. No hay cuentas ni registro. Los anuncios de Google solo se personalizan si das tu consentimiento, y la analítica de uso (sin identificador publicitario) solo se activa si lo aceptas en el formulario de Google.</p>
@@ -69,7 +74,7 @@
     <tr><th>Servicio</th><th>Para qué</th><th>Qué recibe</th></tr>
     <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (Realtime, servidores de la Unión Europea, Fráncfort)</td><td>Hace de «casamentero»: deja que la cámara y el visor se encuentren y se pasen los mensajes para conectarse. No tiene tablas ni base de datos de CamPhone.</td><td>Un nombre de canal que es una huella (hash) del código, no el código; si la cámara está en línea (presencia); y mensajes de conexión efímeros: un identificador aleatorio del visor y los datos técnicos de WebRTC, que incluyen las direcciones de red de los móviles. No se guarda nada de eso; solo los registros técnicos habituales de cualquier servidor (como la dirección IP de la conexión).</td></tr>
     <tr><td>Servidores STUN de <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> y <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a></td><td>Ayudan a cada móvil a descubrir su propia dirección de red para poder conectarse.</td><td>La dirección IP del móvil. No ven el vídeo ni el sonido.</td></tr>
-    <tr><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (relé TURN)</td><td>Solo cuando la red no deja la conexión directa entre los dos móviles (4G con CGNAT, wifis de empresa…): reenvía los paquetes de un móvil al otro.</td><td>Paquetes cifrados de extremo a extremo (DTLS-SRTP) que no puede leer, las direcciones IP y el volumen de tráfico. Las credenciales son temporales (1 hora) y las reparte una función de Supabase; el token de Cloudflare nunca va en la app.</td></tr>
+    <tr><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (relé TURN)</td><td>Solo cuando la red no deja la conexión directa entre los dos móviles (4G con CGNAT, wifis de empresa…): reenvía los paquetes de un móvil al otro.</td><td>Paquetes cifrados con DTLS-SRTP, el cifrado estándar de WebRTC, que no puede leer, las direcciones IP y el volumen de tráfico. Las credenciales son temporales (1 hora) y las reparte una función de Supabase; el token de Cloudflare nunca va en la app.</td></tr>
     <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Anuncios (ver más abajo).</td><td>Datos técnicos del móvil y, solo si lo aceptas, el identificador publicitario.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Comprobar la compra «Sin banner».</td><td>Un identificador anónimo y el estado de la compra.</td></tr>
     <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics para Firebase</a></td><td>Estadísticas de uso (ver «Analítica de uso»).</td><td>Eventos de uso sin datos personales, solo con tu consentimiento.</td></tr>

@@ -6,6 +6,11 @@
 <title>CamPhone — Privacy policy</title>
 <meta name="description" content="CamPhone privacy policy: no accounts, video goes directly between your devices, recordings stay on the camera, and ads and anonymous analytics depend on your consent.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/privacy.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/camphone/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   :root{
     --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
@@ -48,7 +53,7 @@
   <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
   <h1>CamPhone</h1>
   <p class="sub">Privacy policy</p>
-  <nav class="enlaces"><a href="support.html">Help and support</a></nav>
+  <nav class="enlaces"><a href="en.html">About CamPhone</a> · <a href="support.html">Help and support</a></nav>
 
   <div class="card">
     <p><strong>Summary:</strong> CamPhone turns one phone into a camera and another into a viewer, linked with a code. Video and sound travel <strong>directly from one phone to the other, encrypted</strong>, and are not stored on any server. Recordings stay on the camera phone and you delete them from the app. There are no accounts or sign-up. Google ads are only personalized if you give your consent, and usage analytics (without the advertising identifier) only turns on if you accept it in Google's form.</p>
@@ -69,7 +74,7 @@
     <tr><th>Service</th><th>What for</th><th>What it receives</th></tr>
     <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (Realtime, European Union servers, Frankfurt)</td><td>Acts as a matchmaker: lets the camera and the viewer find each other and pass the messages needed to connect. It has no CamPhone tables or database.</td><td>A channel name that is a hash of the code, not the code; whether the camera is online (presence); and short-lived connection messages: a random viewer identifier and WebRTC technical data, which includes the phones' network addresses. None of it is stored; only the usual technical logs of any server (such as the connection's IP address).</td></tr>
     <tr><td>STUN servers from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a></td><td>Help each phone discover its own network address so it can connect.</td><td>The phone's IP address. They do not see video or sound.</td></tr>
-    <tr><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (TURN relay)</td><td>Only when the network does not allow a direct connection between the two phones (4G with CGNAT, company wifi…): forwards packets from one phone to the other.</td><td>End-to-end encrypted packets (DTLS-SRTP) that it cannot read, IP addresses and traffic volume. Credentials are temporary (1 hour) and handed out by a Supabase function; the Cloudflare token never ships in the app.</td></tr>
+    <tr><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (TURN relay)</td><td>Only when the network does not allow a direct connection between the two phones (4G with CGNAT, company wifi…): forwards packets from one phone to the other.</td><td>Packets encrypted with DTLS-SRTP, WebRTC's standard encryption, that it cannot read, IP addresses and traffic volume. Credentials are temporary (1 hour) and handed out by a Supabase function; the Cloudflare token never ships in the app.</td></tr>
     <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Ads (see below).</td><td>Technical device data and, only if you accept, the advertising identifier.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Checking the “No Banner” purchase.</td><td>An anonymous identifier and the purchase status.</td></tr>
     <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></td><td>Usage statistics (see “Usage analytics”).</td><td>Usage events with no personal data, only with your consent.</td></tr>
