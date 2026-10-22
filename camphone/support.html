@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CamPhone — Help and support</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b7a75; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>CamPhone</h1>
+  <p class="sub">Help and support</p>
+  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+
+  <div class="card">
+    <p><strong>CamPhone</strong> turns one phone into a camera and another into a viewer, linked with a code. Video goes straight from one phone to the other, without passing through any video server. Something not working? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>How to pair the camera and the viewer</h2>
+  <ol>
+    <li>On the phone that will be the camera, open CamPhone and tap <strong>“Use this phone as the camera”</strong>. Accept the camera and microphone permissions. You will see a 10-character <strong>link code</strong> of letters and numbers (format XXXXX-XXXXX); you can copy it.</li>
+    <li>On the other phone, open CamPhone and tap <strong>“Use this phone as the viewer”</strong>. Type the code and tap <strong>“Connect”</strong>.</li>
+    <li>The viewer remembers the code: next time it connects by itself. To watch another camera, use “Change camera”.</li>
+  </ol>
+  <p>Only one viewer at a time can watch a camera; if another one is connected, you will see “Camera in use”.</p>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li><strong>The camera:</strong> leave the iPhone or iPad <strong>plugged into the charger</strong> with <strong>CamPhone open in the foreground</strong>: on iPhone the camera stops if you leave the app. The app keeps the screen on (it turns off Auto-Lock while the camera is active).</li>
+    <li><strong>Internet:</strong> both phones need wifi or mobile data.</li>
+    <li>Some networks (company wifi, hotels, some 4G connections) block direct connections. CamPhone uses an encrypted relay when needed, but if it still does not connect, try another wifi or mobile data on one of the two phones.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>The viewer says “no connection” or “Camera not on”</h3>
+  <p>Check that the camera has CamPhone open in camera mode (the screen shows “Waiting for the viewer”), that it is plugged in and online, and that the viewer's code is the one the camera shows now. If it says “No direct connection”, try another wifi or mobile data. The viewer keeps trying by itself.</p>
+
+  <h3>How do I change the code?</h3>
+  <p>On the camera, tap <strong>“Change code”</strong>. A new code is generated and the current viewer is cut off immediately; it will have to type the new code. Use it if you think someone who should not has the code.</p>
+
+  <h3>Where are the recordings saved?</h3>
+  <p>Always <strong>on the camera phone</strong>, in the app's library, never on the viewer. From the viewer tap <strong>“Recordings”</strong> to see the list and play one: the camera plays it and sends it over the direct connection. On the camera, <strong>“Recordings”</strong> lets you watch them, <strong>“Save to the phone’s photo library”</strong> (that copies them to Photos) or delete them.</p>
+
+  <h3>How do I delete recordings?</h3>
+  <p>On the camera phone: <strong>“Recordings” → “Delete”</strong> on each one. They are also deleted if you uninstall the app. The library has a 6 GB limit: when it fills up, the oldest are deleted. If a viewer is watching a recording, it cannot be deleted at that moment.</p>
+
+  <h3>I start a recording from the viewer and it stops</h3>
+  <p>A recording started from the viewer ends when the viewer disconnects (with a few seconds' grace in case it reconnects). If you want it to keep going without a viewer, start the recording from the camera; that one runs until you stop it.</p>
+
+  <h3>How do I remove the banner? How do I restore the purchase?</h3>
+  <p>On the home screen tap <strong>“No Banner”</strong> (or go to Settings → “No Banner”): a one-time €1.99 purchase, no subscription. It removes the banner in the viewer and on the home screen; the camera's banner and the ad shown when you stop a recording in the viewer remain. If you change phones or reinstall, tap <strong>“Restore Purchases”</strong> on that same screen, with the same store account.</p>
+
+  <h3>I paid and the banner still shows</h3>
+  <p>Payment is confirmed with the store and sometimes takes a few minutes. Tap “Restore Purchases”. If nothing changes, write to us with your phone model and the purchase date.</p>
+
+  <h3>Why does an ad appear when I stop a recording?</h3>
+  <p>It is the viewer's full-screen ad: it shows while the camera saves the video, after a notice, and at most one every 90 seconds. It helps keep the app free.</p>
+
+  <h3>The viewer has no sound</h3>
+  <p>On the viewer tap “Turn sound on”. The camera must have microphone permission granted.</p>
+
+  <h3>The camera does not turn on</h3>
+  <p>Close other apps that use the camera and check in the phone's settings that CamPhone has camera and microphone permission.</p>
+
+  <h3>Privacy and responsible use</h3>
+  <p>Video is not stored on any server. Use the camera only to watch your home, your business or your pets, with the knowledge of anyone who may appear. More details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Tell us which phone is the camera and which the viewer (model and iOS version), and what message you see on screen.</p>
+
+  <div class="foot">CamPhone · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

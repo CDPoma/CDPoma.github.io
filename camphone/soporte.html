@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CamPhone — Ayuda y soporte</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b7a75; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
+  <h1>CamPhone</h1>
+  <p class="sub">Ayuda y soporte</p>
+  <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a></nav>
+
+  <div class="card">
+    <p><strong>CamPhone</strong> convierte un móvil en cámara y otro en visor, enlazados con un código. El vídeo va directo de un móvil a otro, sin pasar por ningún servidor de vídeo. ¿Algo no funciona? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Cómo emparejar la cámara y el visor</h2>
+  <ol>
+    <li>En el móvil que hará de cámara, abre CamPhone y toca <strong>«Usar este móvil como cámara»</strong>. Acepta los permisos de cámara y micrófono. Verás un <strong>código de enlace</strong> de 10 letras y números (formato XXXXX-XXXXX); puedes copiarlo.</li>
+    <li>En el otro móvil, abre CamPhone y toca <strong>«Usar este móvil como visor»</strong>. Escribe el código y toca <strong>«Conectar»</strong>.</li>
+    <li>El visor se acuerda del código: la próxima vez se conecta solo. Para ver otra cámara, usa «Cambiar de cámara».</li>
+  </ol>
+  <p>Solo un visor a la vez puede ver una cámara; si hay otro conectado, verás «Cámara ocupada».</p>
+
+  <h2>Requisitos</h2>
+  <ul>
+    <li><strong>La cámara:</strong> deja el iPhone o iPad <strong>enchufado al cargador</strong> y con <strong>CamPhone abierta en primer plano</strong>: en iPhone la cámara se para si sales de la app. La app mantiene la pantalla encendida (desactiva el Auto-Bloqueo mientras la cámara está activa).</li>
+    <li><strong>Internet:</strong> los dos móviles necesitan wifi o datos móviles.</li>
+    <li>Algunas redes (wifis de empresa, hoteles, algunas conexiones 4G) bloquean las conexiones directas. CamPhone usa un relé cifrado cuando hace falta, pero si aun así no conecta, prueba con otra wifi o con datos móviles en uno de los dos móviles.</li>
+  </ul>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>El visor dice «sin conexión» o «Cámara no encendida»</h3>
+  <p>Comprueba que la cámara tiene CamPhone abierta en modo cámara (en la pantalla se ve «Esperando al visor»), que está enchufada y con internet, y que el código del visor es el que muestra la cámara ahora. Si dice «Sin conexión directa», prueba con otra wifi o con datos móviles. El visor sigue intentándolo solo.</p>
+
+  <h3>¿Cómo cambio el código?</h3>
+  <p>En la cámara, toca <strong>«Cambiar código»</strong>. Se genera un código nuevo y el visor actual queda fuera al instante; tendrá que escribir el código nuevo. Úsalo si crees que alguien que no debe conoce el código.</p>
+
+  <h3>¿Dónde se guardan las grabaciones?</h3>
+  <p>Siempre <strong>en el móvil de la cámara</strong>, en la biblioteca de la app, nunca en el visor. Desde el visor toca <strong>«Grabaciones»</strong> para ver la lista y reproducir una: la cámara la reproduce y la manda por la conexión directa. En la cámara, <strong>«Grabaciones»</strong> permite verlas, <strong>«Guardar en la galería del móvil»</strong> (así se copian a Fotos) o borrarlas.</p>
+
+  <h3>¿Cómo borro las grabaciones?</h3>
+  <p>En el móvil de la cámara: <strong>«Grabaciones» → «Borrar»</strong> en cada una. También se borran si desinstalas la app. La biblioteca tiene un tope de 6 GB: al llenarse, se borran las más antiguas. Si un visor está viendo una grabación, no se puede borrar en ese momento.</p>
+
+  <h3>Empiezo una grabación desde el visor y se corta</h3>
+  <p>Una grabación iniciada desde el visor termina cuando el visor se desconecta (con unos segundos de margen por si reconecta). Si quieres que siga sin visor, inicia la grabación desde la cámara; esa sigue hasta que la pares.</p>
+
+  <h3>¿Cómo quito el banner? ¿Cómo restauro la compra?</h3>
+  <p>En la pantalla de inicio, toca <strong>«Sin banner»</strong> (o entra en Ajustes → «Sin banner»): compra única de 1,99 €, sin suscripción. Quita el banner del visor y de la pantalla de inicio; el banner de la cámara y el anuncio que sale al parar una grabación en el visor se mantienen. Si cambias de móvil o reinstalas, toca <strong>«Restaurar compras»</strong> en esa misma pantalla, con la misma cuenta de la tienda.</p>
+
+  <h3>He pagado y sigue saliendo el banner</h3>
+  <p>El pago se confirma con la tienda y a veces tarda unos minutos. Toca «Restaurar compras». Si sigue igual, escríbenos con el modelo de móvil y la fecha de la compra.</p>
+
+  <h3>¿Por qué sale un anuncio al parar una grabación?</h3>
+  <p>Es el anuncio a pantalla completa del visor: sale mientras la cámara guarda el vídeo, tras un aviso, y como mucho uno cada 90 segundos. Ayuda a mantener la app gratuita.</p>
+
+  <h3>El visor no tiene sonido</h3>
+  <p>En el visor toca «Activar sonido». La cámara debe tener concedido el permiso de micrófono.</p>
+
+  <h3>La cámara no se enciende</h3>
+  <p>Cierra otras apps que usen la cámara y comprueba en los ajustes del móvil que CamPhone tiene permiso de cámara y micrófono.</p>
+
+  <h3>Privacidad y uso responsable</h3>
+  <p>El vídeo no se guarda en ningún servidor. Usa la cámara solo para vigilar tu casa, tu negocio o a tus mascotas, con conocimiento de quien pueda aparecer. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <h2>Contacto</h2>
+  <p>Dudas, fallos o sugerencias: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Cuéntanos qué móvil hace de cámara y cuál de visor (modelo y versión de iOS), y qué mensaje ves en pantalla.</p>
+
+  <div class="foot">CamPhone · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

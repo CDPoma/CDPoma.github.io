@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CamPhone — Política de privacidad</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b7a75; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>CamPhone</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> CamPhone convierte un móvil en cámara y otro en visor, enlazados con un código. El vídeo y el sonido van <strong>directos de un móvil a otro, cifrados</strong>, y no se guardan en ningún servidor. Las grabaciones se quedan en el móvil de la cámara y las borras tú desde la app. No hay cuentas ni registro. Los anuncios de Google solo se personalizan si das tu consentimiento, y la analítica de uso (sin identificador publicitario) solo se activa si lo aceptas en el formulario de Google.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de CamPhone. Para cualquier duda sobre los datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Uso responsable: avisa a quien aparezca</h2>
+  <div class="card">
+    <p>CamPhone está pensada para vigilar <strong>tu casa, tu negocio o a tus mascotas</strong>, con conocimiento de las personas que puedan aparecer en la imagen. <strong>No es para grabar a nadie sin que lo sepa</strong>, ni para espiar a otra persona, ni para grabar donde haya una expectativa razonable de intimidad (baños, dormitorios ajenos, vestuarios…).</p>
+    <p>La cámara <strong>muestra siempre su estado en pantalla</strong> («Esperando al visor», «Emitiendo al visor», «Grabando»), y mientras espera tiene el sensor de la cámara apagado: solo se enciende cuando un visor se conecta o cuando se graba. Quien instala y usa la cámara es el responsable de cumplir la ley de su país (avisar con un cartel o de palabra, respetar a vecinos, empleados y visitantes, y no grabar en la vía pública más de lo que permita la ley).</p>
+  </div>
+
+  <h2>Cómo funciona y qué sale de tu móvil</h2>
+  <p>Un móvil se pone en modo <strong>cámara</strong> y muestra un <strong>código de enlace</strong> de 10 letras y números. En el otro móvil, en modo <strong>visor</strong>, se escribe ese código. Con él los dos móviles se encuentran y se conectan entre sí. <strong>El código es lo único que protege la cámara</strong>: quien lo conozca puede conectarse como visor (solo uno a la vez), así que no lo compartas con quien no deba ver tu cámara. Con «Cambiar código» en la cámara se genera uno nuevo y el visor actual queda fuera al momento.</p>
+  <table>
+    <tr><th>Servicio</th><th>Para qué</th><th>Qué recibe</th></tr>
+    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (Realtime, servidores de la Unión Europea, Fráncfort)</td><td>Hace de «casamentero»: deja que la cámara y el visor se encuentren y se pasen los mensajes para conectarse. No tiene tablas ni base de datos de CamPhone.</td><td>Un nombre de canal que es una huella (hash) del código, no el código; si la cámara está en línea (presencia); y mensajes de conexión efímeros: un identificador aleatorio del visor y los datos técnicos de WebRTC, que incluyen las direcciones de red de los móviles. No se guarda nada de eso; solo los registros técnicos habituales de cualquier servidor (como la dirección IP de la conexión).</td></tr>
+    <tr><td>Servidores STUN de <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> y <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a></td><td>Ayudan a cada móvil a descubrir su propia dirección de red para poder conectarse.</td><td>La dirección IP del móvil. No ven el vídeo ni el sonido.</td></tr>
+    <tr><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (relé TURN)</td><td>Solo cuando la red no deja la conexión directa entre los dos móviles (4G con CGNAT, wifis de empresa…): reenvía los paquetes de un móvil al otro.</td><td>Paquetes cifrados de extremo a extremo (DTLS-SRTP) que no puede leer, las direcciones IP y el volumen de tráfico. Las credenciales son temporales (1 hora) y las reparte una función de Supabase; el token de Cloudflare nunca va en la app.</td></tr>
+    <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a></td><td>Anuncios (ver más abajo).</td><td>Datos técnicos del móvil y, solo si lo aceptas, el identificador publicitario.</td></tr>
+    <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Comprobar la compra «Sin banner».</td><td>Un identificador anónimo y el estado de la compra.</td></tr>
+    <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics para Firebase</a></td><td>Estadísticas de uso (ver «Analítica de uso»).</td><td>Eventos de uso sin datos personales, solo con tu consentimiento.</td></tr>
+  </table>
+
+  <h2>El vídeo y el sonido no se guardan en ningún servidor</h2>
+  <ul>
+    <li>El vídeo y el audio de la cámara van <strong>directos de móvil a móvil</strong> (WebRTC), cifrados con DTLS-SRTP, el cifrado estándar de WebRTC. <strong>Nunca pasan por Supabase</strong>. Si hace falta el relé de Cloudflare, este solo reenvía paquetes cifrados que no puede descifrar y no los almacena.</li>
+    <li>El desarrollador no tiene ningún servidor donde se vea, se copie o se guarde lo que emite tu cámara, y no puede acceder a él.</li>
+    <li>Mientras no hay ningún visor conectado, la cámara <strong>no emite ni graba</strong>.</li>
+  </ul>
+
+  <h2>Grabaciones: viven en el móvil de la cámara</h2>
+  <ul>
+    <li>Una grabación puede iniciarla el visor (con el botón «Grabar») o quien tenga la cámara en la mano. <strong>Siempre se guarda en el móvil de la cámara</strong>, nunca en el visor.</li>
+    <li>Se guardan en la <strong>biblioteca de la propia app</strong>. A la galería de Fotos del móvil solo va lo que tú exportes a mano desde «Grabaciones» en la cámara; entonces CamPhone puede pedirte el permiso de Fotos.</li>
+    <li>El visor puede ver una grabación: la cámara la reproduce y la manda por la misma conexión directa. El visor no se queda con ninguna copia.</li>
+    <li><strong>Cómo se borran:</strong> en la cámara, en «Grabaciones» → «Borrar» (una a una). También se borran al desinstalar la app. La biblioteca tiene un tope de 6 GB: al llenarse, la app borra las grabaciones más antiguas.</li>
+    <li>Si la grabación la inició el visor, termina cuando el visor se desconecta (con un margen de unos segundos por si reconecta); si la iniciaste tú en la cámara, sigue hasta que la pares.</li>
+  </ul>
+
+  <h2>Sin cuentas ni registro</h2>
+  <p>CamPhone no tiene cuentas, usuarios, correos ni contraseñas, y no pide nombre, teléfono, ubicación, contactos ni fotos. <strong>En el propio móvil</strong> se guardan solo: el idioma elegido, el código de la cámara (en la cámara) o el último código usado (en el visor, para reconectar), si la cámara estaba encendida, qué cámara del móvil usa, un identificador aleatorio del visor y el índice de las grabaciones. Se borra al desinstalar la app.</p>
+
+  <h2>Permisos del móvil</h2>
+  <ul>
+    <li><strong>Cámara y micrófono:</strong> para emitir y grabar. Se piden al arrancar la cámara.</li>
+    <li><strong>Fotos:</strong> solo si exportas una grabación a la galería.</li>
+    <li><strong>Rastreo (ATT):</strong> el aviso de Apple para el identificador publicitario, solo para los anuncios.</li>
+  </ul>
+
+  <h2>Anuncios</h2>
+  <p>La app es gratuita y muestra anuncios de <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: un <strong>banner</strong> en la pantalla de inicio, en el visor y en la cámara, y <strong>un anuncio a pantalla completa en el visor al parar una grabación</strong>, mientras la cámara guarda el vídeo (precedido de un aviso y como mucho uno cada 90 segundos).</p>
+  <p><strong>Consentimiento.</strong> Antes de pedir ningún anuncio, la app muestra el formulario de consentimiento de Google (donde la ley lo exige: Espacio Económico Europeo, Reino Unido y Suiza) y, en iPhone y iPad, pide además el permiso de rastreo de Apple (ATT). <strong>Si das tu consentimiento</strong>, Google puede mostrar anuncios personalizados y usar el <strong>identificador publicitario del dispositivo</strong> (IDFA en iPhone y iPad; ID de publicidad en Android), junto con datos técnicos como la dirección IP y el modelo del móvil, según la <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">política de Google</a>. <strong>Si no lo das</strong>, los anuncios que se muestren no estarán personalizados; si no hay consentimiento válido donde es obligatorio, la app no pide anuncios. Google no recibe nada del vídeo, del sonido ni de las grabaciones.</p>
+  <p>Puedes cambiar tu elección cuando quieras: en iPhone y iPad, en Ajustes → Privacidad y seguridad → Rastreo; en Android, en los ajustes de Google del móvil (Anuncios); y, en Europa, en CamPhone → Ajustes → «Privacidad de los anuncios».</p>
+
+  <h2>Compra «Sin banner»</h2>
+  <p>La compra única <strong>«Sin banner» (1,99 €, sin suscripción)</strong> quita el banner del visor y de la pantalla de inicio. <strong>No quita</strong> el banner de la cámara ni el anuncio a pantalla completa que sale al parar una grabación en el visor. El pago lo gestiona la tienda de aplicaciones con tu cuenta de la tienda; nosotros nunca vemos datos de pago. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> comprueba la compra con la tienda; para ello usa un <strong>identificador anónimo</strong> de la instalación, sin nombre ni correo, y conoce el estado de la compra. Hay un botón «Restaurar compras» en la pantalla de la compra. Si has dado el consentimiento de analítica, RevenueCat recibe también el identificador de instalación de Google Analytics, para que las compras salgan en las mismas estadísticas.</p>
+
+  <h2>Analítica de uso</h2>
+  <p>CamPhone usa <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics para Firebase</a> en iPhone y iPad para saber cuánta gente usa la app y cómo, y así mejorarla. No está disponible en otras plataformas.</p>
+  <ul>
+    <li><strong>Qué se recoge:</strong> eventos automáticos de uso (primera apertura, sesión, pantallas vistas: inicio, cámara y visor); cinco eventos propios, sin ningún dato personal: que se abre el modo cámara, que se abre el modo visor, que un visor recibe su primer vídeo, y que una grabación empieza o termina (con «visor» o «cámara» como quien la pidió); un identificador de la instalación de la app, que no es tu nombre, ni un correo, ni el identificador publicitario; y datos técnicos básicos: país aproximado, sistema operativo y versión de la app.</li>
+    <li><strong>Qué no se recoge:</strong> <strong>no se usa el identificador publicitario (IDFA)</strong> ni el permiso de rastreo de Apple para la analítica, no se asigna identificador de usuario ni propiedades personales, y <strong>no se envía nunca</strong> el código de enlace, el canal, el contenido de las grabaciones ni nada que identifique a una persona o a una cámara.</li>
+    <li><strong>Para qué:</strong> solo estadísticas de uso (usuarios activos, versiones, países y qué funciones se usan). No se vinculan a tu nombre ni a ninguna cuenta, ni se usan para seguirte entre apps o webs de otras empresas, ni para publicidad. Para Apple, el identificador de la instalación cuenta como identificador de dispositivo, y por eso figura así en la etiqueta de privacidad de la App Store.</li>
+    <li><strong>Con quién:</strong> los procesa Google como encargado de tratamiento. El identificador de la instalación se comparte además con RevenueCat (ver arriba).</li>
+  </ul>
+  <p><strong>Consentimiento y control.</strong> Al arrancar, la analítica está <strong>desactivada</strong>. En el Espacio Económico Europeo, el Reino Unido y Suiza solo se activa si aceptas el almacenamiento de datos en tu dispositivo en el formulario de consentimiento de Google (el mismo de los anuncios), y si lo rechazas no se recoge ningún dato de uso. Fuera de esa zona, donde no se exige consentimiento previo, se activa sin formulario. Puedes cambiar tu elección en Ajustes → «Privacidad de los anuncios» (donde aparece) o pedir que se deje de usar escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Cuánto tiempo se guardan los datos</h2>
+  <ul>
+    <li><strong>Vídeo y sonido en directo:</strong> no se guardan; solo existen mientras se transmiten.</li>
+    <li><strong>Grabaciones:</strong> en el móvil de la cámara, hasta que las borres, hasta que la biblioteca llegue a su tope de 6 GB (se borran las más antiguas) o hasta que desinstales la app.</li>
+    <li><strong>Datos locales de la app</strong> (idioma, códigos…): hasta que desinstales la app o cambies el código.</li>
+    <li><strong>Supabase y Cloudflare:</strong> CamPhone no guarda nada; solo conservan los registros técnicos habituales según sus propias políticas.</li>
+    <li><strong>Analítica y publicidad:</strong> según los plazos de Google (Analytics, AdMob) y de RevenueCat.</li>
+  </ul>
+
+  <h2>Menores</h2>
+  <p>CamPhone <strong>no está dirigida a niños</strong> y no recoge conscientemente datos de menores. Si crees que un menor ha facilitado datos, escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> y los borraremos.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir en cualquier momento acceso, rectificación, supresión, oposición, limitación y portabilidad de tus datos (RGPD) escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Como CamPhone no tiene cuentas ni guarda datos tuyos en sus propios servidores, casi todo está en tu móvil, donde puedes borrarlo tú (grabaciones, o desinstalar la app). También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) o ante la autoridad de tu país.</p>
+  <p>Base legal: los datos necesarios para conectar la cámara y el visor se tratan para prestar el servicio que has pedido (ejecución del servicio); los anuncios personalizados y la analítica de uso, con tu consentimiento, que puedes retirar cuando quieras; los anuncios no personalizados, por interés legítimo en financiar la versión gratuita.</p>
+
+  <h2>Seguridad</h2>
+  <p>Todas las comunicaciones van cifradas: HTTPS/WSS hacia Supabase y DTLS-SRTP entre los móviles. El código de enlace tiene 10 símbolos elegidos al azar (50 bits) y el canal de conexión se deriva de él con una huella, así que el código no aparece en los servidores. Aun así, quien conozca el código puede conectarse: guárdalo como una contraseña y cámbialo si dudas.</p>
+
+  <h2>Cambios</h2>
+  <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
+
+  <div class="foot">CamPhone · Vigente desde 2026-10-22 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
