@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CamPhone — Help and support</title>
-<meta name="description" content="CamPhone help: how to pair the camera and the viewer, requirements, recordings, changing the code and the “No Banner” purchase.">
+<meta name="description" content="CamPhone help: how to pair the camera and the viewer, motion watch and alerts, requirements, recordings, changing the code and the “No Banner” purchase.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/support.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html">
@@ -56,7 +56,7 @@
   <nav class="enlaces"><a href="en.html">About CamPhone</a> · <a href="privacy.html">Privacy policy</a></nav>
 
   <div class="card">
-    <p><strong>CamPhone</strong> turns one phone into a camera and another into a viewer, linked with a code. The developer runs no video server: video goes straight from one phone to the other and, if the network does not allow it, through a relay that only forwards encrypted packets. Something not working? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+    <p><strong>CamPhone</strong> turns one phone into a camera and another into a viewer, linked with a code. The developer runs no video server: video goes straight from one phone to the other and, if the network does not allow it, through a relay that only forwards encrypted packets. The camera detects motion and records on its own; the viewer can get an alert when it saves a clip (if you switch it on). Something not working? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
   <h2>How to pair the camera and the viewer</h2>
@@ -64,20 +64,49 @@
     <li>On the phone that will be the camera, open CamPhone and tap <strong>“Use this phone as the camera”</strong>. Accept the camera and microphone permissions. You will see a 10-character <strong>link code</strong> of letters and numbers (format XXXXX-XXXXX); you can copy it.</li>
     <li>On the other phone, open CamPhone and tap <strong>“Use this phone as the viewer”</strong>. Type the code and tap <strong>“Connect”</strong>.</li>
     <li>The viewer remembers the code: next time it connects by itself. To watch another camera, use “Change camera”.</li>
+    <li>The camera starts watching on its own (“Watching”). You can change the sensitivity (low, medium, high) or turn motion watch off on its screen.</li>
+    <li>On the viewer, the “Motion watch” switch turns the camera's motion watch on and off without touching it; the viewer shows the camera's real state, not the last command. For alerts, switch on “Notify me when the camera records” and allow iOS notifications.</li>
   </ol>
   <p>Only one viewer at a time can watch a camera; if another one is connected, you will see “Camera in use”.</p>
 
   <h2>Requirements</h2>
   <ul>
-    <li><strong>The camera:</strong> leave the iPhone or iPad <strong>plugged into the charger</strong> with <strong>CamPhone open in the foreground</strong>: on iPhone the camera stops if you leave the app. The app keeps the screen on (it turns off Auto-Lock while the camera is active). The camera screen never turns off: after 20 seconds without a touch it drops to a low but visible brightness, and a touch brings it back. The camera's banner always stays in view, even with “No Banner”.</li>
-    <li><strong>Internet:</strong> both phones need wifi or mobile data.</li>
-    <li>Some networks (company wifi, hotels, some 4G connections) block direct connections. CamPhone uses an encrypted relay when needed, but if it still does not connect, try another wifi or mobile data on one of the two phones.</li>
+    <li><strong>The camera:</strong> leave the iPhone or iPad <strong>plugged into the charger</strong> with <strong>CamPhone open in the foreground</strong>: iOS doesn't allow using the camera in the background, so if you leave the app or lock the device, the camera stops watching. With motion watch on, the camera is on all the time and iOS shows its indicator; the device runs warmer and uses more battery than at rest. The microphone is only used while recording or watching live. The app keeps the screen on (it turns off Auto-Lock while the camera is active). The camera screen never turns off: after 20 seconds without a touch it drops to a low but visible brightness, and a touch brings it back. The camera's banner always stays in view, even with “No Banner”.</li>
+    <li><strong>Internet:</strong> both phones need Wi-Fi or mobile data (4G and 5G); the camera only needs a phone with a SIM, no Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data.</li>
+    <li>Some networks (company wifi, hotels, some 4G connections) block direct connections. CamPhone uses an encrypted Cloudflare relay when needed, but if it still does not connect, try another wifi or mobile data on one of the two phones.</li>
   </ul>
 
   <h2>Frequently asked questions</h2>
 
   <h3>The viewer says “no connection” or “Camera not on”</h3>
-  <p>Check that the camera has CamPhone open in camera mode (the screen shows “Waiting for the viewer”), that it is plugged in and online, and that the viewer's code is the one the camera shows now. If it says “No direct connection”, try another wifi or mobile data. The viewer keeps trying by itself.</p>
+  <p>Check that the camera has CamPhone open in camera mode (the screen shows “Watching” or “Motion watch turned off…”), that it is plugged in and online, and that the viewer's code is the one the camera shows now. If it says “No direct connection”, try another wifi or mobile data. The viewer keeps trying by itself.</p>
+
+  <h3>I get no alerts on the viewer</h3>
+  <p>Check you've switched on “Notify me when the camera records” on the viewer, that iOS allows CamPhone notifications (Settings → Notifications), that the viewer is online and that the camera has motion watch on and the app open. At most one alert per 30 seconds per camera is sent; alerts depend on iOS and can be delayed. Open the viewer and check “Recordings”.</p>
+
+  <h3>The camera records too much or alerts on shadows or light changes</h3>
+  <p>Lower the sensitivity on the camera's screen and avoid pointing at windows, fans or screens. Light changes across the whole image are ignored, but moving shadows can count as motion.</p>
+
+  <h3>It didn't detect something that moved</h3>
+  <p>Detection compares reduced images and may miss slow, distant or low-light movement. CamPhone doesn't replace an alarm or a person's supervision. Raise the sensitivity or move the camera closer.</p>
+
+  <h3>How do I turn motion watch off without going to the camera?</h3>
+  <p>On the viewer, use the “Motion watch” switch. The camera stays open and connected; the viewer waits for the camera to confirm (“Waiting for the camera to confirm…”) and says so if it doesn't answer. You can also turn it off on the camera itself.</p>
+
+  <h3>The viewer says it can't tell how the camera is</h3>
+  <p>The camera isn't connected right now: check it is open in camera mode, plugged in and online.</p>
+
+  <h3>Where do I see what motion watch recorded?</h3>
+  <p>On the viewer, “Recordings”: motion clips are marked “By motion” alongside the others and play from the camera.</p>
+
+  <h3>What happens to recordings when the library is full?</h3>
+  <p>6 GB cap: the oldest are deleted, motion clips included.</p>
+
+  <h3>I want to stop alerts</h3>
+  <p>Switch off “Notify me when the camera records” on the viewer (your token is deleted from the server) or use iOS Settings → Notifications → CamPhone.</p>
+
+  <h3>Does it work on mobile data? Does it use data?</h3>
+  <p>Yes, it works on Wi-Fi and on mobile data (4G and 5G); the camera only needs a phone with a SIM, no Wi-Fi. On mobile data the video uses your plan's data: pick the “Low” quality to save. If the network doesn't allow a direct connection, the video goes encrypted through a Cloudflare relay server (for example, with the camera on 5G and the viewer on Wi-Fi).</p>
 
   <h3>How do I change the code?</h3>
   <p>On the camera, tap <strong>“Change code”</strong>. A new code is generated and the current viewer is cut off immediately; it will have to type the new code. Use it if you think someone who should not has the code.</p>
@@ -107,7 +136,7 @@
   <p>Close other apps that use the camera and check in the phone's settings that CamPhone has camera and microphone permission.</p>
 
   <h3>Privacy and responsible use</h3>
-  <p>Video is not stored on any server. Use the camera only to watch your home, your business or your pets, with the knowledge of anyone who may appear. More details in the <a href="privacy.html">privacy policy</a>.</p>
+  <p>Video is not stored on any server. The camera always shows that it is in use (fixed notice and on-screen state); if motion watch records other people, let them know. Use the camera only to watch your home, your business or your pets, with the knowledge of anyone who may appear. More details in the <a href="privacy.html">privacy policy</a>.</p>
 
   <h2>Contact</h2>
   <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Tell us which phone is the camera and which the viewer (model and iOS version), and what message you see on screen.</p>

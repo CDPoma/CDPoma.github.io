@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CamPhone — Ayuda y soporte</title>
-<meta name="description" content="Ayuda de CamPhone: cómo enlazar la cámara y el visor, requisitos, grabaciones, cambiar el código y la compra «Sin banner».">
+<meta name="description" content="Ayuda de CamPhone: cómo enlazar la cámara y el visor, vigilancia por movimiento y avisos, requisitos, grabaciones, cambiar el código y la compra «Sin banner».">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html">
@@ -56,7 +56,7 @@
   <nav class="enlaces"><a href="index.html">Sobre CamPhone</a> · <a href="privacidad.html">Política de privacidad</a></nav>
 
   <div class="card">
-    <p><strong>CamPhone</strong> convierte un móvil en cámara y otro en visor, enlazados con un código. El desarrollador no tiene ningún servidor de vídeo: el vídeo va directo de un móvil a otro y, si la red no lo permite, por un relé que solo reenvía paquetes cifrados. ¿Algo no funciona? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+    <p><strong>CamPhone</strong> convierte un móvil en cámara y otro en visor, enlazados con un código. El desarrollador no tiene ningún servidor de vídeo: el vídeo va directo de un móvil a otro y, si la red no lo permite, por un relé que solo reenvía paquetes cifrados. La cámara detecta movimiento y graba sola; el visor puede recibir un aviso cuando guarda un clip (si lo activas). ¿Algo no funciona? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
   <h2>Cómo emparejar la cámara y el visor</h2>
@@ -64,20 +64,49 @@
     <li>En el móvil que hará de cámara, abre CamPhone y toca <strong>«Usar este móvil como cámara»</strong>. Acepta los permisos de cámara y micrófono. Verás un <strong>código de enlace</strong> de 10 letras y números (formato XXXXX-XXXXX); puedes copiarlo.</li>
     <li>En el otro móvil, abre CamPhone y toca <strong>«Usar este móvil como visor»</strong>. Escribe el código y toca <strong>«Conectar»</strong>.</li>
     <li>El visor se acuerda del código: la próxima vez se conecta solo. Para ver otra cámara, usa «Cambiar de cámara».</li>
+    <li>La cámara empieza a vigilar sola («Vigilando»). Puedes cambiar la sensibilidad (baja, media, alta) o desactivar la vigilancia en su pantalla.</li>
+    <li>En el visor, el interruptor «Vigilancia» enciende y apaga la vigilancia de la cámara sin tocarla; el visor muestra el estado real de la cámara, no la última orden. Para avisos, activa «Avisarme cuando la cámara grabe» y concede el permiso de iOS.</li>
   </ol>
   <p>Solo un visor a la vez puede ver una cámara; si hay otro conectado, verás «Cámara ocupada».</p>
 
   <h2>Requisitos</h2>
   <ul>
-    <li><strong>La cámara:</strong> deja el iPhone o iPad <strong>enchufado al cargador</strong> y con <strong>CamPhone abierta en primer plano</strong>: en iPhone la cámara se para si sales de la app. La app mantiene la pantalla encendida (desactiva el Auto-Bloqueo mientras la cámara está activa). La pantalla de la cámara nunca se apaga: tras 20 segundos sin tocarla baja el brillo a un nivel bajo pero visible, y un toque lo devuelve. El banner de la cámara se queda siempre a la vista, también con «Sin banner».</li>
-    <li><strong>Internet:</strong> los dos móviles necesitan wifi o datos móviles.</li>
-    <li>Algunas redes (wifis de empresa, hoteles, algunas conexiones 4G) bloquean las conexiones directas. CamPhone usa un relé cifrado cuando hace falta, pero si aun así no conecta, prueba con otra wifi o con datos móviles en uno de los dos móviles.</li>
+    <li><strong>La cámara:</strong> deja el iPhone o iPad <strong>enchufado al cargador</strong> y con <strong>CamPhone abierta en primer plano</strong>: iOS no permite usar la cámara en segundo plano, así que si sales de la app o bloqueas el dispositivo, la cámara deja de vigilar. Con la vigilancia activada la cámara está encendida todo el rato y iOS muestra su indicador; el dispositivo se calienta más y gasta más batería que en reposo. El micrófono solo se usa al grabar o al ver en directo. La app mantiene la pantalla encendida (desactiva el Auto-Bloqueo mientras la cámara está activa). La pantalla de la cámara nunca se apaga: tras 20 segundos sin tocarla baja el brillo a un nivel bajo pero visible, y un toque lo devuelve. El banner de la cámara se queda siempre a la vista, también con «Sin banner».</li>
+    <li><strong>Internet:</strong> los dos móviles necesitan wifi o datos móviles (4G y 5G); a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa del plan; la calidad «Baja» ahorra datos.</li>
+    <li>Algunas redes (wifis de empresa, hoteles, algunas conexiones 4G) bloquean las conexiones directas. CamPhone usa un relé cifrado de Cloudflare cuando hace falta, pero si aun así no conecta, prueba con otra wifi o con datos móviles en uno de los dos móviles.</li>
   </ul>
 
   <h2>Preguntas frecuentes</h2>
 
   <h3>El visor dice «sin conexión» o «Cámara no encendida»</h3>
-  <p>Comprueba que la cámara tiene CamPhone abierta en modo cámara (en la pantalla se ve «Esperando al visor»), que está enchufada y con internet, y que el código del visor es el que muestra la cámara ahora. Si dice «Sin conexión directa», prueba con otra wifi o con datos móviles. El visor sigue intentándolo solo.</p>
+  <p>Comprueba que la cámara tiene CamPhone abierta en modo cámara (en la pantalla se ve «Vigilando» o «Vigilancia desactivada…»), que está enchufada y con internet, y que el código del visor es el que muestra la cámara ahora. Si dice «Sin conexión directa», prueba con otra wifi o con datos móviles. El visor sigue intentándolo solo.</p>
+
+  <h3>No recibo avisos en el visor</h3>
+  <p>Comprueba que has activado «Avisarme cuando la cámara grabe» en el visor, que iOS permite las notificaciones de CamPhone (Ajustes → Notificaciones), que el visor tiene internet y que la cámara tiene la vigilancia activada y la app abierta. Se envía como mucho un aviso cada 30 segundos por cámara; los avisos dependen de iOS y pueden retrasarse. Abre el visor y mira «Grabaciones».</p>
+
+  <h3>La cámara graba demasiado o avisa por sombras o cambios de luz</h3>
+  <p>Baja la sensibilidad en la pantalla de la cámara y evita apuntar a ventanas, ventiladores o pantallas. Los cambios de luz de toda la imagen se ignoran, pero las sombras que se mueven pueden contar como movimiento.</p>
+
+  <h3>No detecta algo que se movió</h3>
+  <p>La detección compara imágenes reducidas y puede no captar movimientos lentos, lejanos o con poca luz. CamPhone no sustituye a una alarma ni a la supervisión de una persona. Sube la sensibilidad o acerca la cámara.</p>
+
+  <h3>¿Cómo apago la vigilancia sin ir a la cámara?</h3>
+  <p>En el visor, usa el interruptor «Vigilancia». La cámara sigue abierta y conectada; el visor espera a que la cámara lo confirme («Esperando a que la cámara lo confirme…») y, si no contesta, lo dice. También puedes apagarla en la propia cámara.</p>
+
+  <h3>El visor dice que no se puede saber cómo está la cámara</h3>
+  <p>La cámara no está conectada ahora: comprueba que está abierta en modo cámara, enchufada y con internet.</p>
+
+  <h3>¿Dónde veo lo que ha grabado la vigilancia?</h3>
+  <p>En el visor, «Grabaciones»: los clips de movimiento aparecen marcados «Por movimiento» junto a las demás y se reproducen desde la cámara.</p>
+
+  <h3>¿Qué pasa con las grabaciones cuando se llena la biblioteca?</h3>
+  <p>Tope de 6 GB: se borran las más antiguas, también las de movimiento.</p>
+
+  <h3>Quiero dejar de recibir avisos</h3>
+  <p>Apaga «Avisarme cuando la cámara grabe» en el visor (se borra tu token del servidor) o, en iOS, Ajustes → Notificaciones → CamPhone.</p>
+
+  <h3>¿Funciona con datos móviles? ¿Gasta datos?</h3>
+  <p>Sí, funciona con wifi y con datos móviles (4G y 5G); a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa del plan: elige la calidad «Baja» para ahorrar. Si la red no permite la conexión directa, el vídeo va cifrado por un servidor de relevo de Cloudflare (por ejemplo, con la cámara en 5G y el visor en wifi).</p>
 
   <h3>¿Cómo cambio el código?</h3>
   <p>En la cámara, toca <strong>«Cambiar código»</strong>. Se genera un código nuevo y el visor actual queda fuera al instante; tendrá que escribir el código nuevo. Úsalo si crees que alguien que no debe conoce el código.</p>
@@ -107,7 +136,7 @@
   <p>Cierra otras apps que usen la cámara y comprueba en los ajustes del móvil que CamPhone tiene permiso de cámara y micrófono.</p>
 
   <h3>Privacidad y uso responsable</h3>
-  <p>El vídeo no se guarda en ningún servidor. Usa la cámara solo para vigilar tu casa, tu negocio o a tus mascotas, con conocimiento de quien pueda aparecer. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
+  <p>El vídeo no se guarda en ningún servidor. La cámara muestra siempre que está en uso (aviso fijo y estado en pantalla); si la vigilancia graba a otras personas, avísalas. Usa la cámara solo para vigilar tu casa, tu negocio o a tus mascotas, con conocimiento de quien pueda aparecer. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
 
   <h2>Contacto</h2>
   <p>Dudas, fallos o sugerencias: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Cuéntanos qué móvil hace de cámara y cuál de visor (modelo y versión de iOS), y qué mensaje ves en pantalla.</p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CamPhone: usa tu móvil viejo como cámara de seguridad</title>
-<meta name="description" content="Convierte un iPhone o iPad viejo en cámara de seguridad, vigilabebés o cámara para mascotas y míralo en directo desde tu móvil. Sin cuentas. Gratis.">
+<title>CamPhone: cámara de vigilancia con móvil viejo y movimiento</title>
+<meta name="description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/en.html">
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CamPhone">
 <meta property="og:url" content="https://cdpoma.github.io/camphone/">
-<meta property="og:title" content="CamPhone: usa tu móvil viejo como cámara de seguridad">
-<meta property="og:description" content="Convierte un iPhone o iPad viejo en cámara de seguridad, vigilabebés o cámara para mascotas y míralo en directo desde tu móvil. Sin cuentas. Gratis.">
+<meta property="og:title" content="CamPhone: cámara de vigilancia con móvil viejo y movimiento">
+<meta property="og:description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://cdpoma.github.io/camphone/icon.png">
@@ -27,8 +27,8 @@
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="Icono de CamPhone">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CamPhone: usa tu móvil viejo como cámara de seguridad">
-<meta name="twitter:description" content="Convierte un iPhone o iPad viejo en cámara de seguridad, vigilabebés o cámara para mascotas y míralo en directo desde tu móvil. Sin cuentas. Gratis.">
+<meta name="twitter:title" content="CamPhone: cámara de vigilancia con móvil viejo y movimiento">
+<meta name="twitter:description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
 <meta name="twitter:image" content="https://cdpoma.github.io/camphone/icon.png">
 <meta name="twitter:image:alt" content="Icono de CamPhone">
 <script type="application/ld+json">
@@ -45,19 +45,23 @@
       "operatingSystem": "iOS, iPadOS",
       "inLanguage": "es",
       "dateModified": "2026-10-22",
-      "description": "CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia, vigilabebés o cámara para mascotas, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.",
+      "description": "CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.",
       "featureList": [
         "Convierte un iPhone o iPad viejo en cámara de vigilancia, vigilabebés o cámara para mascotas",
-        "Vídeo y sonido directos de dispositivo a dispositivo con WebRTC, cifrados con DTLS-SRTP",
-        "Sin cuentas: enlace con un código de 10 símbolos",
-        "Graba en la cámara y reproduce las grabaciones desde el visor",
+        "Detección de movimiento dentro del propio dispositivo de la cámara: graba un clip cuando hay movimiento y sigue vigilando",
+        "Aviso opcional al visor cuando la cámara ha guardado un clip (notificación del sistema, sin imagen ni vídeo)",
+        "Enciende y apaga la vigilancia desde el visor, sin tocar el dispositivo de la cámara y sin cerrar su app",
+        "Vídeo y sonido en directo cuando quieras, directos de dispositivo a dispositivo con WebRTC (DTLS-SRTP); relevo cifrado si la red no permite la conexión directa",
+        "Funciona con wifi y con datos móviles (4G y 5G): a la cámara le basta un móvil con SIM",
+        "Sin cuentas: enlace con un código de 10 símbolos; sin suscripción ni funciones de pago",
+        "Las grabaciones se quedan en la cámara (hasta 6 GB) y se reproducen desde el visor sin copiarlas",
         "Funciona entre iPhone y iPad, en español e inglés"
       ],
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "EUR",
-        "description": "Gratis con banner de anuncios. Compra única opcional «Sin banner» de 1,99 € dentro de la app (sin suscripción), que quita el banner del visor y de la pantalla de inicio; la pantalla de la cámara mantiene su banner."
+        "description": "Gratis con banner de anuncios. Compra única opcional «Sin banner» de 1,99 € dentro de la app (sin suscripción), que quita el banner del visor y de la pantalla de inicio; la pantalla de la cámara mantiene su banner. Vigilar, grabar y recibir avisos no tienen coste."
       },
       "author": {
         "@type": "Person",
@@ -90,74 +94,106 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo convertir un móvil viejo en cámara de seguridad?",
+          "name": "¿Cómo usar un móvil viejo como cámara de vigilancia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Con CamPhone: instalas la app en el móvil viejo (modo Cámara) y en el tuyo (modo Visor), los enlazas con un código de 10 símbolos y ves la cámara en directo con sonido. No requiere cuenta ni suscripción, y es gratis con anuncios."
+            "text": "Instala CamPhone en el móvil viejo y elige «Cámara»: te da un código de 10 símbolos. En tu móvil elige «Visor» y escribe el código. El móvil viejo debe estar enchufado y con la app abierta delante; desde el visor lo ves en directo y gestionas la vigilancia."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Hay una app de vigilabebés entre dos móviles sin cuentas?",
+          "name": "¿Hay una app de cámara con detección de movimiento y sin suscripción?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí: CamPhone enlaza dos iPhone o iPad con un código, sin registro, y transmite imagen y sonido directamente de uno a otro, cifrado, sin guardar el vídeo en servidores. El dispositivo de la cámara tiene que estar enchufado y con la app abierta delante."
+            "text": "CamPhone detecta movimiento, graba clips y avisa al visor sin suscripción ni funciones de pago. Es gratis con un banner de anuncios; la compra única «Sin banner» (1,99 €) solo quita el banner. No afirmamos que sea la única: compara antes de elegir."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué app de cámara de vigilancia no necesita nube ni suscripción?",
+          "name": "¿La cámara graba sola cuando detecta movimiento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CamPhone: el vídeo viaja directo entre los dos dispositivos, las grabaciones se quedan en el móvil que hace de cámara y no hay suscripción; la compra única opcional de 1,99 € solo quita el banner."
+            "text": "Sí. Con la vigilancia activada, la cámara graba un clip cuando detecta movimiento y deja de grabar cuando cesa; después sigue vigilando. Los clips se guardan en el dispositivo de la cámara, nunca en el visor ni en una nube. La detección y la grabación automática están probadas en un iPhone real."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo usar un iPhone viejo como cámara para mi perro o gato?",
+          "name": "¿Recibo una notificación en mi móvil cuando se detecta movimiento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Con CamPhone dejas el iPhone o iPad viejo enchufado y con la app abierta, haciendo de cámara para tu perro o gato, y lo ves en directo, con sonido, desde tu otro dispositivo. Sirve igual para el bebé, la casa o el negocio."
+            "text": "Sí, si lo activas: en el visor, el interruptor «Avisarme cuando la cámara grabe» (apagado de fábrica) y el permiso de iOS. Llega un aviso por clip guardado, también con la app del visor cerrada, como mucho uno cada 30 s; sin imagen ni vídeo. Se ha comprobado en un iPhone real con la app en segundo plano. Depende de iOS y de tu conexión."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Dónde se guardan las grabaciones?",
+          "name": "¿Puedo apagar la vigilancia al llegar a casa sin tocar el móvil de la cámara?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En el dispositivo que hace de cámara, nunca en el visor ni en una nube. Desde el visor puedes verlas reproduciéndose desde la cámara, y en la cámara puedes pasarlas a la galería; guarda hasta 6 GB y, al llenarse, borra las más antiguas."
+            "text": "Sí. Desde el visor desactivas la vigilancia y la vuelves a activar cuando salgas. La app de la cámara no se cierra: sigue abierta y conectada. El visor muestra el estado real de la cámara, no la última orden enviada. También se puede apagar en la propia cámara."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con datos móviles o desde otra ciudad?",
+          "name": "¿Funciona con la app cerrada o con la pantalla apagada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Hace falta internet en los dos dispositivos, con wifi o con datos móviles, pero no tienen que estar en la misma wifi. Si la red no permite la conexión directa, un servidor de reenvío retransmite los paquetes ya cifrados. El vídeo gasta datos y puedes elegir calidad baja, media o alta."
+            "text": "No. iOS no permite usar la cámara en segundo plano, así que el iPhone o iPad de la cámara debe estar enchufado y con CamPhone abierta delante. Su pantalla no se apaga: baja el brillo tras unos segundos sin tocarla."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Gasta mucha batería?",
+          "name": "¿Necesito cuenta o registro?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mientras nadie mira, la cámara no está abierta: se calienta menos y gasta menos batería, y el sensor se enciende solo cuando el visor se conecta o se graba. La pantalla de la cámara nunca se apaga: tras 20 segundos sin tocarla baja el brillo a un nivel bajo pero visible, y un toque lo devuelve. El dispositivo debe estar enchufado."
+            "text": "No. Los dos dispositivos se enlazan con un código de 10 símbolos. Con «Cambiar código» generas uno nuevo y el visor anterior queda fuera. Quien tenga el código puede ver la cámara, así que no lo compartas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se puede ver con un iPad?",
+          "name": "¿Dónde se guardan los vídeos? ¿Van a la nube?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. CamPhone funciona entre iPhone y iPad en cualquier combinación, como cámara o como visor, y en vertical u horizontal."
+            "text": "En el dispositivo de la cámara, en una biblioteca de hasta 6 GB (al llenarse borra las más antiguas). No se suben a ninguna nube. Desde el visor puedes verlos reproduciéndose desde la cámara, sin copiarlos al visor."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro? ¿Quién puede ver mi vídeo, y puedo echar a alguien que tenga el código?",
+          "name": "¿Funciona con wifi y con datos móviles (4G/5G), o fuera de casa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La imagen y el sonido van directos de la cámara al visor, cifrados con DTLS-SRTP (el cifrado estándar de WebRTC), y no se suben a ninguna nube. Solo puede ver quien tenga el código, un único visor a la vez; «Cambiar código» lo renueva y el visor anterior no puede entrar."
+            "text": "Sí, con wifi y con datos móviles (4G y 5G). Hace falta internet en los dos dispositivos, pero no la misma wifi, y a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Gasta mucha batería? ¿Hay que dejarlo enchufado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con la vigilancia activada la cámara del dispositivo está encendida todo el rato (el micrófono solo al grabar o al ver en directo), así que debe estar enchufado. Con la vigilancia desactivada, el sensor queda cerrado hasta que ves en directo o grabas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve como vigilabebés o cámara para mascotas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, es un uso habitual: dejas el dispositivo viejo en la habitación y lo ves en directo, con sonido, desde el visor. Detecta movimiento, no sonidos ni llanto, y no sustituye la supervisión de una persona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Detecta personas o solo movimiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo movimiento: compara imágenes reducidas dentro del dispositivo de la cámara y no distingue personas, animales o sombras. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro? ¿Quién puede ver mi vídeo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La imagen y el sonido van directos de la cámara al visor, cifrados con DTLS-SRTP, y no se guardan en ningún servidor (si la red lo impide, un relevo reenvía paquetes ya cifrados). Un solo visor a la vez ve cada cámara en directo, y solo ve quien tenga el código."
           }
         },
         {
@@ -165,7 +201,23 @@
           "name": "¿Es legal grabar con ella?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CamPhone está pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca, no para grabar a nadie sin que lo sepa. Quien usa la cámara es responsable de cumplir la ley de su país."
+            "text": "CamPhone está pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca en la imagen. Quien la usa es responsable de cumplir la ley de su país (avisar, respetar la intimidad, no grabar en la vía pública más de lo permitido)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es gratis, con un banner de anuncios. «Sin banner» es una compra única de 1,99 €, sin suscripción, que solo quita el banner del visor y del inicio; vigilar, grabar y recibir avisos no tienen coste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede usar con un iPad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. CamPhone funciona entre iPhone y iPad en cualquier combinación, como cámara o como visor, y en vertical u horizontal."
           }
         }
       ]
@@ -215,21 +267,23 @@
 <main class="wrap">
 
   <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
-  <h1>CamPhone: tu móvil viejo como cámara de seguridad y vigilabebés</h1>
+  <h1>CamPhone: tu móvil viejo como cámara de vigilancia que detecta movimiento</h1>
   <p class="sub">Un dispositivo hace de cámara y otro de visor, enlazados con un código<br><small>Actualizado el <time datetime="2026-10-22">22 de octubre de 2026</time></small></p>
   <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
 
   <h2>Qué es CamPhone</h2>
   <div class="card">
-    <p>CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia, vigilabebés o cámara para mascotas, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.</p>
+    <p>CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.</p>
   </div>
 
   <h2>Ficha rápida</h2>
   <ul>
     <li><strong>Precio:</strong> gratis con anuncios (un banner). Compra única opcional «Sin banner» de 1,99 €, sin suscripción.</li>
     <li><strong>Dispositivos:</strong> iPhone y iPad, en cualquier combinación de cámara y visor.</li>
+    <li><strong>Red:</strong> wifi o datos móviles (4G y 5G), en cualquiera de los dos dispositivos.</li>
     <li><strong>Cuentas:</strong> ninguna. Se enlazan con un código de 10 símbolos.</li>
     <li><strong>Nube:</strong> ninguna. El vídeo va directo entre los dos dispositivos y las grabaciones se quedan en la cámara.</li>
+    <li><strong>Avisos:</strong> notificación del sistema, opcional y apagada de fábrica, cuando la cámara guarda un clip.</li>
     <li><strong>Idiomas:</strong> español e inglés.</li>
   </ul>
 
@@ -237,63 +291,113 @@
   <ol>
     <li><strong>Elige «Cámara»</strong> en el iPhone o iPad viejo: te enseña un código de 10 símbolos. Déjalo enchufado y con la app abierta.</li>
     <li><strong>Elige «Visor»</strong> en tu otro iPhone o iPad y escribe el código una vez.</li>
-    <li><strong>Mira en directo</strong>, con sonido, elige la calidad y graba cuando quieras; las grabaciones se quedan en la cámara.</li>
+    <li><strong>Vigila, mira y revisa</strong>: la cámara graba sola un clip cuando detecta movimiento, tú la ves en directo cuando quieras, enciendes o apagas su vigilancia desde el visor y revisas las grabaciones, que se quedan en la cámara.</li>
   </ol>
+
+  <h2>Vigilancia con detección de movimiento</h2>
+  <p>Con la vigilancia activada, la cámara mira todo el rato. Si detecta movimiento graba un clip; cuando el movimiento cesa, deja de grabar y sigue vigilando. En la cámara puedes ajustar la sensibilidad (Baja, Media o Alta).</p>
+  <p>La detección se hace dentro del dispositivo de la cámara: ninguna imagen se envía a un servidor para analizarla. Solo detecta movimiento: no distingue personas, animales o sombras, y puede dar avisos de más o no captar algún movimiento. La detección de movimiento y la grabación automática están probadas en un iPhone real.</p>
+  <p>Si en el visor activas «Avisarme cuando la cámara grabe» (viene apagado) y permites las notificaciones de iOS, recibes un aviso cada vez que la cámara guarda un clip, también con la app del visor cerrada, como mucho uno cada 30 segundos. El aviso no lleva imagen ni vídeo. Se ha comprobado en un iPhone real con la app del visor en segundo plano; los avisos dependen de iOS y de tu conexión.</p>
+
+  <h2>Enciende y apaga la vigilancia desde el visor</h2>
+  <p>Desde el visor apagas y enciendes la vigilancia sin tocar la cámara: por ejemplo, apágala al llegar a casa y enciéndela al salir. La app de la cámara no se cierra: sigue abierta y conectada. El visor muestra el estado real de la cámara, no la última orden enviada. Con la vigilancia desactivada, el sensor queda cerrado y solo se abre si ves en directo o pulsas «Grabar».</p>
+
+  <h2>Ver en directo cuando quieras</h2>
+  <p>La imagen y el sonido van directos de la cámara al visor (WebRTC, cifrado), con calidad a elegir (Baja, Media o Alta). Funciona con wifi y con datos móviles (4G y 5G): a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa del plan; la calidad «Baja» ahorra datos. Si la red no permite la conexión directa, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos.</p>
+
+  <h2>Grabaciones: se quedan en la cámara</h2>
+  <p>Los clips de movimiento y las grabaciones manuales se guardan siempre en el dispositivo de la cámara, nunca en el visor ni en una nube. Desde el visor abres «Grabaciones» y reproduces una desde la cámara; en la cámara puedes pasarla a la galería o borrarla. La biblioteca guarda hasta 6 GB y borra las más antiguas.</p>
 
   <h2>Vigilabebés, cámara para mascotas y cámara de seguridad</h2>
   <p>Como vigilabebés con móvil viejo, cámara para mascotas con un iPhone, o cámara de vigilancia sin suscripción para la casa o un pequeño negocio: cualquier sitio donde un dispositivo viejo, enchufado, pueda mirar mientras tú ves la imagen desde otro.</p>
 
-  <h2>Qué hace</h2>
+  <h2>Qué hace y qué no hace (límites)</h2>
   <ul>
-    <li><strong>Cámara:</strong> déjala enchufada y con la app abierta. El sensor se apaga mientras espera y se enciende solo cuando el visor se conecta.</li>
-    <li><strong>Visor:</strong> escribe el código una vez y mira en directo, con sonido, elige la calidad y cambia entre cámara trasera y delantera.</li>
-    <li><strong>Grabaciones:</strong> pídelas desde el visor; se guardan en el dispositivo de la cámara y puedes verlas desde el visor o pasarlas a la galería.</li>
+    <li><strong>Cámara:</strong> déjala enchufada y con la app abierta. Vigila, graba un clip cuando hay movimiento y dice siempre qué hace en pantalla (vigilando, grabando o desactivada).</li>
+    <li><strong>Visor:</strong> escribe el código una vez y mira en directo, con sonido, elige la calidad, cambia entre cámara trasera y delantera, enciende o apaga la vigilancia y activa los avisos.</li>
     <li><strong>Código seguro:</strong> 10 símbolos al azar; «Cambiar código» echa al visor al instante.</li>
-  </ul>
-
-  <h2>Qué NO hace</h2>
-  <ul>
-    <li>No detecta movimiento.</li>
-    <li>No manda notificaciones.</li>
-    <li>No sube vídeos a ninguna nube: las grabaciones se quedan en la cámara.</li>
-    <li>No sustituye la supervisión de una persona ni a un sistema de seguridad profesional.</li>
+    <li>No sustituye a una alarma, a un sistema de seguridad profesional ni a la supervisión de una persona.</li>
+    <li>No sube vídeo a ninguna nube: las grabaciones se quedan en la cámara.</li>
+    <li>No funciona con la app cerrada en iOS: la cámara solo vigila con CamPhone abierta delante.</li>
+    <li>La detección puede fallar o dar avisos de más, y detecta movimiento, no sonidos ni llanto.</li>
+    <li>Solo funciona entre dispositivos con CamPhone. Un solo visor a la vez ve cada cámara en directo.</li>
   </ul>
 
   <h2>Requisitos</h2>
   <ul>
     <li>Un iPhone o iPad como cámara y otro como visor, en cualquier combinación.</li>
-    <li>iOS no permite usar la cámara con la app cerrada o en segundo plano: el dispositivo de la cámara tiene que estar <strong>enchufado, con la pantalla encendida y CamPhone abierta delante</strong>.</li>
+    <li>iOS no permite usar la cámara con la app cerrada o en segundo plano: el dispositivo de la cámara tiene que estar <strong>enchufado, con la pantalla encendida y CamPhone abierta delante</strong>. Con la vigilancia activada su cámara está encendida (iOS muestra el indicador de uso); el micrófono solo se usa al grabar o al ver en directo.</li>
     <li>La pantalla de la cámara nunca se apaga: tras 20 segundos sin tocarla baja el brillo a un nivel bajo pero visible, y un toque lo devuelve. El banner de la cámara se queda siempre a la vista, también con «Sin banner».</li>
-    <li>Internet en los dos dispositivos (wifi o datos móviles). Solo puede haber un visor conectado a cada cámara.</li>
+    <li>Internet en los dos dispositivos (wifi o datos móviles; a la cámara le basta un móvil con SIM). Solo puede haber un visor conectado a cada cámara.</li>
   </ul>
 
   <h2>Uso responsable</h2>
   <p>Pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca; no para grabar a nadie sin que lo sepa. La cámara muestra su estado y un aviso de uso responsable en pantalla; el brillo baja tras unos segundos sin tocarla, pero la pantalla nunca se apaga.</p>
 
   <h2>Gratis y «Sin banner»</h2>
-  <p>La app es gratuita con anuncios. La compra única «Sin banner» (1,99 €, sin suscripción) quita el banner del visor y de la pantalla de inicio. La pantalla de la cámara mantiene su banner también con «Sin banner», y al parar una grabación desde el visor puede salir un anuncio a pantalla completa, como mucho uno cada 90 segundos.</p>
+  <p>La app es gratuita con anuncios; vigilar, grabar y recibir avisos no se paga. La compra única «Sin banner» (1,99 €, sin suscripción) quita el banner del visor y de la pantalla de inicio. La pantalla de la cámara mantiene su banner también con «Sin banner», y al parar una grabación desde el visor puede salir un anuncio a pantalla completa, como mucho uno cada 90 segundos.</p>
+
+  <h2>Respuestas rápidas</h2>
+  <h3>¿Cómo usar un móvil viejo como cámara de vigilancia?</h3>
+  <p>Puedes usar un iPhone o iPad viejo como cámara con la app CamPhone: instálala, elige «Cámara» y apunta el código de 10 símbolos que muestra. En tu móvil elige «Visor» y escribe el código. El móvil viejo debe quedar enchufado, con la app abierta y con internet.</p>
+  <h3>¿Hay cámaras con detección de movimiento sin suscripción?</h3>
+  <p>Sí, hay opciones. CamPhone, para iPhone y iPad, detecta movimiento, graba un clip y avisa al visor sin suscripción: es gratis con un banner y su compra única de 1,99 € solo lo quita. No es la única app de este tipo; conviene comparar funciones y límites.</p>
+  <h3>¿Cómo grabar solo cuando hay movimiento con un móvil viejo?</h3>
+  <p>Con una app de vigilancia como CamPhone, el móvil viejo compara imágenes reducidas y graba un clip cuando detecta movimiento; al cesar, deja de grabar y sigue mirando. La detección ocurre en el propio dispositivo, sin enviar imágenes a un servidor, y puede fallar o dar falsas alertas.</p>
+  <h3>¿Cómo recibir un aviso cuando la cámara graba algo?</h3>
+  <p>En CamPhone, el móvil visor puede avisarte cuando la cámara guarda un clip si activas «Avisarme cuando la cámara grabe» y permites las notificaciones de iOS. El aviso no incluye imagen ni vídeo, funciona con la app del visor cerrada o en segundo plano y no está garantizado en todos los casos.</p>
+  <h3>¿Puedo usar un iPhone viejo como vigilabebés?</h3>
+  <p>Sí. Dejas el iPhone viejo en la habitación, enchufado y con CamPhone abierta como «Cámara», y lo ves en directo con sonido desde otro móvil como «Visor». Detecta movimiento, no llanto ni sonidos, y no sustituye en ningún caso la supervisión de una persona.</p>
+  <h3>¿Puedo usar un móvil viejo como cámara para mascotas?</h3>
+  <p>Sí. Con CamPhone dejas el iPhone o iPad viejo apuntando a donde esté tu perro o gato y lo ves en directo, con sonido, desde otro dispositivo. Si hay movimiento, graba un clip y avisa al visor. Debe estar enchufado y con la app abierta.</p>
+  <h3>¿Se puede tener una cámara de seguridad casera sin cuentas ni nube?</h3>
+  <p>Sí: CamPhone no usa cuentas, se enlaza con un código de 10 símbolos. El vídeo va directo entre los dos dispositivos, cifrado, y las grabaciones quedan en el móvil de la cámara, con tope de 6 GB. Si la red lo impide, un servidor de relevo reenvía paquetes ya cifrados.</p>
+  <h3>¿Puedo apagar la cámara de vigilancia al llegar a casa sin tocarla?</h3>
+  <p>Con CamPhone sí: desde el móvil visor desactivas y vuelves a activar la vigilancia sin tocar el dispositivo de la cámara, que sigue con la app abierta. El visor muestra el estado real de la cámara, no solo la última orden que enviaste.</p>
+  <h3>¿Una app de cámara de vigilancia funciona con la pantalla apagada en iPhone?</h3>
+  <p>No. iOS no permite usar la cámara en segundo plano, así que el iPhone o iPad que vigila debe estar enchufado, con la app abierta y la pantalla encendida. CamPhone la mantiene encendida y solo baja el brillo tras unos segundos sin tocarla.</p>
+  <h3>¿Qué pasa si la red no permite conectar dos móviles directamente?</h3>
+  <p>Algunas redes (wifis de empresa, datos móviles con CGNAT) bloquean la conexión directa. En ese caso CamPhone usa un servidor de relevo de Cloudflare que reenvía los paquetes de vídeo ya cifrados con DTLS-SRTP, sin poder verlos; si aun así no conecta, prueba otra wifi o datos móviles.</p>
+  <h3>¿Funciona con datos móviles, sin wifi?</h3>
+  <p>Sí. CamPhone funciona con wifi y con datos móviles (4G y 5G); a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa del plan y la calidad «Baja» ahorra datos. Si la red no permite la conexión directa, un relevo cifrado de Cloudflare reenvía el vídeo.</p>
+  <h3>¿Es legal vigilar con una cámara casera?</h3>
+  <p>Depende del país y de lo que grabes. En general es admisible vigilar tu propia casa, negocio o mascotas informando a quien pueda aparecer, y no lo es grabar espacios íntimos ni a personas sin que lo sepan. CamPhone pide usarla con conocimiento de quien salga en imagen.</p>
+  <h3>¿Cuánto cuesta usar un móvil viejo como cámara con CamPhone?</h3>
+  <p>CamPhone es gratis, con un banner de anuncios. Una compra única de 1,99 €, «Sin banner», quita el banner del visor y del inicio, sin suscripción. Vigilar, grabar y recibir avisos no tienen coste. Hace falta un segundo dispositivo, iPhone o iPad.</p>
 
   <h2>Preguntas frecuentes</h2>
-  <h3>¿Cómo convertir un móvil viejo en cámara de seguridad?</h3>
-  <p>Con CamPhone: instalas la app en el móvil viejo (modo Cámara) y en el tuyo (modo Visor), los enlazas con un código de 10 símbolos y ves la cámara en directo con sonido. No requiere cuenta ni suscripción, y es gratis con anuncios.</p>
-  <h3>¿Hay una app de vigilabebés entre dos móviles sin cuentas?</h3>
-  <p>Sí: CamPhone enlaza dos iPhone o iPad con un código, sin registro, y transmite imagen y sonido directamente de uno a otro, cifrado, sin guardar el vídeo en servidores. El dispositivo de la cámara tiene que estar enchufado y con la app abierta delante.</p>
-  <h3>¿Qué app de cámara de vigilancia no necesita nube ni suscripción?</h3>
-  <p>CamPhone: el vídeo viaja directo entre los dos dispositivos, las grabaciones se quedan en el móvil que hace de cámara y no hay suscripción; la compra única opcional de 1,99 € solo quita el banner.</p>
-  <h3>¿Puedo usar un iPhone viejo como cámara para mi perro o gato?</h3>
-  <p>Sí. Con CamPhone dejas el iPhone o iPad viejo enchufado y con la app abierta, haciendo de cámara para tu perro o gato, y lo ves en directo, con sonido, desde tu otro dispositivo. Sirve igual para el bebé, la casa o el negocio.</p>
-  <h3>¿Dónde se guardan las grabaciones?</h3>
-  <p>En el dispositivo que hace de cámara, nunca en el visor ni en una nube. Desde el visor puedes verlas reproduciéndose desde la cámara, y en la cámara puedes pasarlas a la galería; guarda hasta 6 GB y, al llenarse, borra las más antiguas.</p>
-  <h3>¿Funciona con datos móviles o desde otra ciudad?</h3>
-  <p>Sí. Hace falta internet en los dos dispositivos, con wifi o con datos móviles, pero no tienen que estar en la misma wifi. Si la red no permite la conexión directa, un servidor de reenvío retransmite los paquetes ya cifrados. El vídeo gasta datos y puedes elegir calidad baja, media o alta.</p>
-  <h3>¿Gasta mucha batería?</h3>
-  <p>Mientras nadie mira, la cámara no está abierta: se calienta menos y gasta menos batería, y el sensor se enciende solo cuando el visor se conecta o se graba. La pantalla de la cámara nunca se apaga: tras 20 segundos sin tocarla baja el brillo a un nivel bajo pero visible, y un toque lo devuelve. El dispositivo debe estar enchufado.</p>
-  <h3>¿Se puede ver con un iPad?</h3>
-  <p>Sí. CamPhone funciona entre iPhone y iPad en cualquier combinación, como cámara o como visor, y en vertical u horizontal.</p>
-  <h3>¿Es seguro? ¿Quién puede ver mi vídeo, y puedo echar a alguien que tenga el código?</h3>
-  <p>La imagen y el sonido van directos de la cámara al visor, cifrados con DTLS-SRTP (el cifrado estándar de WebRTC), y no se suben a ninguna nube. Solo puede ver quien tenga el código, un único visor a la vez; «Cambiar código» lo renueva y el visor anterior no puede entrar.</p>
+  <h3>¿Cómo usar un móvil viejo como cámara de vigilancia?</h3>
+  <p>Instala CamPhone en el móvil viejo y elige «Cámara»: te da un código de 10 símbolos. En tu móvil elige «Visor» y escribe el código. El móvil viejo debe estar enchufado y con la app abierta delante; desde el visor lo ves en directo y gestionas la vigilancia.</p>
+  <h3>¿Hay una app de cámara con detección de movimiento y sin suscripción?</h3>
+  <p>CamPhone detecta movimiento, graba clips y avisa al visor sin suscripción ni funciones de pago. Es gratis con un banner de anuncios; la compra única «Sin banner» (1,99 €) solo quita el banner. No afirmamos que sea la única: compara antes de elegir.</p>
+  <h3>¿La cámara graba sola cuando detecta movimiento?</h3>
+  <p>Sí. Con la vigilancia activada, la cámara graba un clip cuando detecta movimiento y deja de grabar cuando cesa; después sigue vigilando. Los clips se guardan en el dispositivo de la cámara, nunca en el visor ni en una nube. La detección y la grabación automática están probadas en un iPhone real.</p>
+  <h3>¿Recibo una notificación en mi móvil cuando se detecta movimiento?</h3>
+  <p>Sí, si lo activas: en el visor, el interruptor «Avisarme cuando la cámara grabe» (apagado de fábrica) y el permiso de iOS. Llega un aviso por clip guardado, también con la app del visor cerrada, como mucho uno cada 30 s; sin imagen ni vídeo. Se ha comprobado en un iPhone real con la app en segundo plano. Depende de iOS y de tu conexión.</p>
+  <h3>¿Puedo apagar la vigilancia al llegar a casa sin tocar el móvil de la cámara?</h3>
+  <p>Sí. Desde el visor desactivas la vigilancia y la vuelves a activar cuando salgas. La app de la cámara no se cierra: sigue abierta y conectada. El visor muestra el estado real de la cámara, no la última orden enviada. También se puede apagar en la propia cámara.</p>
+  <h3>¿Funciona con la app cerrada o con la pantalla apagada?</h3>
+  <p>No. iOS no permite usar la cámara en segundo plano, así que el iPhone o iPad de la cámara debe estar enchufado y con CamPhone abierta delante. Su pantalla no se apaga: baja el brillo tras unos segundos sin tocarla.</p>
+  <h3>¿Necesito cuenta o registro?</h3>
+  <p>No. Los dos dispositivos se enlazan con un código de 10 símbolos. Con «Cambiar código» generas uno nuevo y el visor anterior queda fuera. Quien tenga el código puede ver la cámara, así que no lo compartas.</p>
+  <h3>¿Dónde se guardan los vídeos? ¿Van a la nube?</h3>
+  <p>En el dispositivo de la cámara, en una biblioteca de hasta 6 GB (al llenarse borra las más antiguas). No se suben a ninguna nube. Desde el visor puedes verlos reproduciéndose desde la cámara, sin copiarlos al visor.</p>
+  <h3>¿Funciona con wifi y con datos móviles (4G/5G), o fuera de casa?</h3>
+  <p>Sí, con wifi y con datos móviles (4G y 5G). Hace falta internet en los dos dispositivos, pero no la misma wifi, y a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo).</p>
+  <h3>¿Gasta mucha batería? ¿Hay que dejarlo enchufado?</h3>
+  <p>Con la vigilancia activada la cámara del dispositivo está encendida todo el rato (el micrófono solo al grabar o al ver en directo), así que debe estar enchufado. Con la vigilancia desactivada, el sensor queda cerrado hasta que ves en directo o grabas.</p>
+  <h3>¿Sirve como vigilabebés o cámara para mascotas?</h3>
+  <p>Sí, es un uso habitual: dejas el dispositivo viejo en la habitación y lo ves en directo, con sonido, desde el visor. Detecta movimiento, no sonidos ni llanto, y no sustituye la supervisión de una persona.</p>
+  <h3>¿Detecta personas o solo movimiento?</h3>
+  <p>Solo movimiento: compara imágenes reducidas dentro del dispositivo de la cámara y no distingue personas, animales o sombras. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena.</p>
+  <h3>¿Es seguro? ¿Quién puede ver mi vídeo?</h3>
+  <p>La imagen y el sonido van directos de la cámara al visor, cifrados con DTLS-SRTP, y no se guardan en ningún servidor (si la red lo impide, un relevo reenvía paquetes ya cifrados). Un solo visor a la vez ve cada cámara en directo, y solo ve quien tenga el código.</p>
   <h3>¿Es legal grabar con ella?</h3>
-  <p>CamPhone está pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca, no para grabar a nadie sin que lo sepa. Quien usa la cámara es responsable de cumplir la ley de su país.</p>
+  <p>CamPhone está pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca en la imagen. Quien la usa es responsable de cumplir la ley de su país (avisar, respetar la intimidad, no grabar en la vía pública más de lo permitido).</p>
+  <h3>¿Cuánto cuesta?</h3>
+  <p>Es gratis, con un banner de anuncios. «Sin banner» es una compra única de 1,99 €, sin suscripción, que solo quita el banner del visor y del inicio; vigilar, grabar y recibir avisos no tienen coste.</p>
+  <h3>¿Se puede usar con un iPad?</h3>
+  <p>Sí. CamPhone funciona entre iPhone y iPad en cualquier combinación, como cámara o como visor, y en vertical u horizontal.</p>
 
   <div class="foot">CamPhone · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></div>
 
