@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paper Tanks: paper tank strategy with online rooms of up to 10</title>
+<meta name="description" content="Paper Tanks is a round-based strategy auto-battler with paper tanks: equip your column, watch it fight on its own and play online in rooms of up to 10 players. Solo is free, no accounts.">
+<link rel="canonical" href="https://cdpoma.github.io/papertank/en.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/papertank/index.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/papertank/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/papertank/index.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#efe6d2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1913" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Paper Tanks">
+<meta property="og:url" content="https://cdpoma.github.io/papertank/en.html">
+<meta property="og:title" content="Paper Tanks: paper tank strategy with online rooms of up to 10">
+<meta property="og:description" content="Paper Tanks is a round-based strategy auto-battler with paper tanks: equip your column, watch it fight on its own and play online in rooms of up to 10 players. Solo is free, no accounts.">
+<meta property="og:image" content="https://cdpoma.github.io/papertank/icon.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://cdpoma.github.io/papertank/#app",
+   "name": "Paper Tanks",
+   "url": "https://cdpoma.github.io/papertank/",
+   "image": "https://cdpoma.github.io/papertank/icon.png",
+   "applicationCategory": "GameApplication",
+   "operatingSystem": "iOS, iPadOS",
+   "inLanguage": "en",
+   "dateModified": "2026-10-23",
+   "description": "Paper Tanks is a round-based strategy auto-battler with paper tanks: equip your column, watch it fight on its own and play online in rooms of up to 10 players. Solo is free, no accounts.",
+   "author": {
+    "@type": "Person",
+    "name": "Gabriel Micó Victoria"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do I need an account?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Neither to play solo nor to play online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work offline?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Solo mode does. The online modes need a connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I play online without other players?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes: any seat nobody takes is filled by a bot, so a whole game can be played alone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which devices?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "iPhone and iPad (iOS), in English and Spanish."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  :root{
+    --bg:#efe6d2; --surface:#f8f3e6; --ink:#2a2118; --ink-light:#6b5d4a;
+    --accent:#a82f25; --accent-ink:#ffffff; --line:#d9ccb0; --card:#f4ecd9; --slate:#2b3532;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1d1913; --surface:#26211a; --ink:#f1e8d6; --ink-light:#b3a58c;
+      --accent:#e0675a; --accent-ink:#1d1913; --line:#3b3326; --card:#2d271d; --slate:#0f1514;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1d1913; --surface:#26211a; --ink:#f1e8d6; --ink-light:#b3a58c;
+    --accent:#e0675a; --accent-ink:#1d1913; --line:#3b3326; --card:#2d271d; --slate:#0f1514;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .hero{display:flex;gap:1.4rem;align-items:center;margin:0 0 1.6rem}
+  .hero img{width:112px;height:112px;border-radius:24px;border:1px solid var(--line);flex:none;object-fit:cover}
+  .hero h1{margin:0}
+  .hero .sub{margin:.2rem 0 0}
+  .pronto{display:inline-block;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:.35rem .95rem;font-weight:700;font-size:.95rem;margin:0 0 1.6rem}
+  .modos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.9rem;margin:0 0 1.4rem}
+  .modos .card{margin:0}
+  .modos h3{margin-top:0}
+  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:.9rem;margin:0 0 1.4rem}
+  .galeria figure{margin:0}
+  .galeria img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .galeria figcaption{font-size:.9rem;color:var(--ink-light);margin:.35rem 0 0}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
+  <div class="hero"><img src="icon.png" alt="Paper Tanks" width="112" height="112"><div><h1>Paper Tanks</h1><p class="sub">Round-based strategy with paper tanks</p></div></div>
+  <p class="pronto">Coming soon to the App Store · iPhone and iPad</p>
+  <nav class="enlaces"><a href="support.html">Help &amp; support</a> · <a href="privacy.html">Privacy policy</a></nav>
+  <div class="card"><p>Build a column of paper tanks, kit it out round by round and watch it fight on its own on a cardboard battlefield. Against computer-controlled generals or in online rooms of up to 10 players. No accounts.</p></div>
+  <h2>Three modes</h2>
+  <div class="modos">
+    <div class="card"><h3>Solo</h3><p>A 15-round run against three computer-controlled generals. Free, offline and with no account.</p></div>
+    <div class="card"><h3>Find a rival</h3><p>A 1-vs-1 duel or an open room of up to 10 real generals; in the room, after 30 seconds bots fill the empty seats.</p></div>
+    <div class="card"><h3>With friends</h3><p>Create a duel (2 seats) or a private or open room (2 to 10 seats), share its 6-character code and start whenever you want.</p></div>
+  </div>
+  <p>Both online modes are unlocked by the one-time "No Banner" purchase.</p>
+  <h2>What is inside</h2>
+  <ul>
+    <li><strong>24 tanks from 6 armies</strong> (USA, United Kingdom, USSR, Germany, France and Japan), from fast scouts to super-heavies.</li>
+    <li><strong>Gear that changes the model</strong>: cannons, tracks, engines, armour, systems and banners; radar, smoke screen, repair kit, mine layer and active defences that stop one projectile and then rearm.</li>
+    <li><strong>Synergies</strong> by army, type and alliance, and an economy of loot, money and interest.</li>
+    <li><strong>Rounds against paper critters</strong>: ants, beetles, spiders, wasps, mice and, at the end, the Cat.</li>
+    <li><strong>A paper battlefield that folds</strong> and tanks that burst into paper shavings when they fall. 6 boards: forest, desert, snow, city, mud and a desk.</li>
+    <li><strong>Paper styles</strong>: Kraft (free) and, as optional purchases that only change the look, Notebook, Newsprint and Blueprint.</li>
+    <li><strong>Free, director and overhead cameras</strong>, follow-a-tank with a double tap, 1× or 2× speed and a tutorial in your first game.</li>
+    <li>In English and Spanish. For iPhone and iPad.</li>
+  </ul>
+  <h2>Screenshots</h2>
+  <div class="galeria">
+    <figure><img loading="lazy" src="capturas/01-portada-en.jpg" alt="The three modes" width="1434" height="660"><figcaption>The three modes</figcaption></figure>
+    <figure><img loading="lazy" src="capturas/02-taller-en.jpg" alt="Equip your column in the workshop" width="1434" height="660"><figcaption>Equip your column in the workshop</figcaption></figure>
+    <figure><img loading="lazy" src="capturas/03-explosion-en.jpg" alt="Tanks burst into paper" width="1434" height="660"><figcaption>Tanks burst into paper</figcaption></figure>
+    <figure><img loading="lazy" src="capturas/05-sala-en.jpg" alt="A waiting room of 10 with its code" width="1434" height="660"><figcaption>A waiting room of 10 with its code</figcaption></figure>
+    <figure><img loading="lazy" src="capturas/06-liga-en.jpg" alt="The room's league" width="1434" height="660"><figcaption>The room's league</figcaption></figure>
+    <figure><img loading="lazy" src="capturas/07-estilos-en.jpg" alt="Paper styles" width="1434" height="660"><figcaption>Paper styles</figcaption></figure>
+  </div>
+  <h2>Online without an account</h2>
+  <p>You do not sign up to play in a room: the game uses an anonymous session and gives you an invented name (adjective, noun and number) that you can change. There is no chat and no free text. Each player's plan stays hidden until everyone has finished preparing, and room data deletes itself shortly after the game ends. More in the <a href="privacy.html">privacy policy</a>.</p>
+  <h2>Price and ads</h2>
+  <p>Paper Tanks is free. It shows a discreet banner on menu screens only, a full-screen ad when a game starts (while it is being prepared, with a notice first) and, once in a while, when you open the game. The one-time "No Banner" purchase removes the banner and unlocks the online modes; the other ads stay. Nothing paid gives an advantage in a game and there are no random boxes.</p>
+  <h2>Quick questions</h2>
+  <h3>Do I need an account?</h3>
+  <p>No. Neither to play solo nor to play online.</p>
+  <h3>Does it work offline?</h3>
+  <p>Solo mode does. The online modes need a connection.</p>
+  <h3>Can I play online without other players?</h3>
+  <p>Yes: any seat nobody takes is filled by a bot, so a whole game can be played alone.</p>
+  <h3>Which devices?</h3>
+  <p>iPhone and iPad (iOS), in English and Spanish.</p>
+
+  <div class="foot">Paper Tanks · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></div>
+</main>
+</body>
+</html>
