@@ -47,7 +47,7 @@
   <nav class="enlaces"><a href="index.html">Inicio</a><a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Mi Gallinero guarda todo en tu móvil, no tiene cuentas ni te pide correo, nombre real, ubicación ni contactos. Solo si activas «Mi granja» (Pro) los datos del gallinero se guardan también en la nube de Google (Firebase, servidores en la Unión Europea) bajo un código de granja que tú compartes. Solo si eres Pro y usas «Contar con una foto», esa foto se envía para contar los huevos a un servicio de inteligencia artificial (Google Gemini o NVIDIA) y no se guarda. La app muestra anuncios de Google AdMob, solo personalizados si das tu consentimiento. Las compras las gestionan Apple o Google. Para saber cuánta gente usa la app y mejorarla, usamos además analítica de uso anónima de Google Analytics para Firebase, con tu consentimiento donde la ley lo exige.</p>
+    <p><strong>Resumen:</strong> Mi Gallinero guarda todo en tu móvil, no tiene cuentas ni te pide correo, nombre real, ubicación ni contactos. Solo si activas «Mi granja» (Pro) los datos del gallinero se guardan también en la nube de Google (Firebase, servidores en la Unión Europea) bajo un código de granja que tú compartes. La app muestra anuncios de Google AdMob, solo personalizados si das tu consentimiento. Las compras las gestionan Apple o Google. Para saber cuánta gente usa la app y mejorarla, usamos además analítica de uso anónima de Google Analytics para Firebase, con tu consentimiento donde la ley lo exige.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -56,18 +56,9 @@
   <h2>Lo que se guarda en tu móvil</h2>
   <p>Las gallinas (con raza, fechas, anilla, notas y foto), los huevos recogidos, los repartos y sus precios, la alimentación, los niveles de pienso y agua y los ajustes se guardan <strong>solo en el almacenamiento de la propia app</strong> (IndexedDB). No salen del móvil mientras no actives «Mi granja». Si desinstalas la app, se borran con ella.</p>
   <ul>
-    <li><strong>Fotos de las gallinas.</strong> Cuando eliges «Cámara» o «Galería» para poner la foto a una gallina, la app te pide permiso y usa la imagen solo para eso: la recorta, la reduce (unos 400 píxeles) y la guarda dentro de la app. La cámara y la galería solo se usan para esto y para la función «Contar con una foto» (Pro), que se explica más abajo.</li>
+    <li><strong>Fotos de las gallinas.</strong> Cuando eliges «Cámara» o «Galería» para poner la foto a una gallina, la app te pide permiso y usa la imagen solo para eso: la recorta, la reduce (unos 400 píxeles) y la guarda dentro de la app. La cámara y la galería solo se usan para esto. La app no envía fotos a ningún servicio de inteligencia artificial.</li>
     <li><strong>Avisos de pienso y agua.</strong> Son notificaciones <strong>locales</strong>: las programa el propio móvil con la autonomía calculada. No hay ningún servidor de notificaciones y no enviamos nada para ello. Si no das el permiso, la app funciona igual, sin avisos.</li>
     <li><strong>Copia de seguridad.</strong> Si exportas tus datos, la app genera un archivo y te deja elegir dónde guardarlo o con quién compartirlo. Nosotros no lo recibimos.</li>
-  </ul>
-
-  <h2>«Contar con una foto» (Pro): la foto de los huevos</h2>
-  <p>En la recogida de huevos, los usuarios Pro tienen el botón «Contar con una foto». <strong>Solo ocurre si pulsas ese botón y aceptas el aviso</strong> que la app muestra la primera vez («Aceptar y continuar»); si no lo aceptas, no se envía nada. Sin Pro, el botón lleva a la pantalla de Pro y tampoco se envía nada.</p>
-  <ul>
-    <li><strong>Qué se envía.</strong> La foto que haces con la cámara o eliges de la galería (reducida a un máximo de 1280 píxeles) y, para poder comparar los huevos con tus gallinas, el <strong>color y la talla del huevo y el nombre</strong> de cada gallina que tienes en la ficha. No se envía ningún otro dato del gallinero.</li>
-    <li><strong>A quién.</strong> Primero a nuestro servidor intermediario, una función de <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> que <strong>no guarda la foto</strong> y solo la reenvía. Desde allí llega a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">API de Google Gemini</a> (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">condiciones de la API de Gemini</a>) y, si esta no responde, a la API de <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank" rel="noopener">NVIDIA</a>. Google y NVIDIA actúan como encargados del tratamiento y los servidores pueden estar fuera de la Unión Europea.</li>
-    <li><strong>Para qué.</strong> Solo para contar cuántos huevos hay en la foto y proponer de qué gallina parece ser cada uno según el color y la talla de su huevo. No se usa para publicidad ni para nada más.</li>
-    <li><strong>Qué queda.</strong> La app no guarda la foto ni nosotros en nuestros servidores. La respuesta rellena la pantalla de recogida, tú la revisas y <strong>no se guarda nada hasta que pulsas «Confirmar»</strong>. Cada servicio puede tratar la foto según su propia política, enlazada arriba.</li>
   </ul>
 
   <h2>«Mi granja» (Pro): datos en la nube</h2>
@@ -116,7 +107,7 @@
   <h2>Cambios</h2>
   <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
 
-  <div class="foot">Mi Gallinero · Vigente desde 2026-10-22 · Gabriel Micó Victoria</div>
+  <div class="foot">Mi Gallinero · Vigente desde 2026-10-29 · Gabriel Micó Victoria</div>
 
 </div>
 </body>
