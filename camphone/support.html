@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CamPhone — Help and support</title>
-<meta name="description" content="CamPhone help: how to pair the camera and the viewer, motion watch and alerts, requirements, recordings, changing the code and the “No Banner” purchase.">
+<meta name="description" content="CamPhone help: how to pair the camera and the viewer, motion watch, LiDAR and ignoring pets, alerts, requirements, recordings, changing the code and the “No Banner” purchase.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/support.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html">
@@ -64,8 +64,8 @@
     <li>On the phone that will be the camera, open CamPhone and tap <strong>“Use this phone as the camera”</strong>. Accept the camera and microphone permissions. You will see a 10-character <strong>link code</strong> of letters and numbers (format XXXXX-XXXXX); you can copy it.</li>
     <li>On the other phone, open CamPhone and tap <strong>“Use this phone as the viewer”</strong>. Type the code and tap <strong>“Connect”</strong>.</li>
     <li>The viewer remembers the code: next time it connects by itself. To watch another camera, use “Change camera”.</li>
-    <li>The camera starts watching on its own (“Watching”). You can change the sensitivity (low, medium, high) or turn motion watch off on its screen.</li>
-    <li>On the viewer, the “Motion watch” switch turns the camera's motion watch on and off without touching it; the viewer shows the camera's real state, not the last command. For alerts, switch on “Notify me when the camera records” and allow iOS notifications.</li>
+    <li>The camera starts watching on its own (“Watching”). You can change the sensitivity (low, medium, high) or turn motion watch off on its screen. On iPhones and iPads with LiDAR you will also see “LiDAR detection” (off by default) and, on iPhone and iPad, “Ignore pets” (on by default).</li>
+    <li>On the viewer, the “Motion watch” switch turns the camera's motion watch on and off without touching it; the viewer shows the camera's real state, not the last command. If the camera has “LiDAR detection” and “Ignore pets”, the viewer shows and changes them too. For alerts, switch on “Notify me when the camera records” and allow iOS notifications.</li>
   </ol>
   <p>Only one viewer at a time can watch a camera; if another one is connected, you will see “Camera in use”.</p>
 
@@ -89,6 +89,15 @@
 
   <h3>It didn't detect something that moved</h3>
   <p>Detection compares reduced images and may miss slow, distant or low-light movement. CamPhone doesn't replace an alarm or a person's supervision. Raise the sensitivity or move the camera closer.</p>
+
+  <h3>What does “Ignore pets” do?</h3>
+  <p>It is on by default on iPhone and iPad. When the camera notices motion, it looks at images with Vision, Apple's image-recognition framework. If it recognizes a dog or a cat and no person, it doesn't save the clip or alert the viewer, and adds one to the “pet motions ignored today” counter shown on the camera and on the viewer. If a person appears, or it isn't clear what it is, it records and alerts as usual. It is switched off on the camera or from the viewer. It can be wrong: if you need no motion to be missed, switch it off.</p>
+
+  <h3>What is “LiDAR detection” and why don't I see the switch?</h3>
+  <p>It is an optional way to watch with the depth sensor instead of comparing images. It only exists on iPhones and iPads with a LiDAR sensor (such as the iPhone Pro from the 12 Pro on): on the others the switch doesn't appear. It is off by default. It watches with the back camera and with no viewer watching; when it detects motion, or if a viewer connects, the regular camera turns on and the clip is recorded. If the phone gets hot, it drops to one measurement per second and, if it stays hot, it pauses and the regular camera watches until it cools. The device should still be plugged in.</p>
+
+  <h3>Are the images Vision looks at or the LiDAR maps stored or sent?</h3>
+  <p>No. They are analyzed in the camera phone's memory, with no servers, and are neither stored nor sent. The only thing kept is a counter of the pet motions ignored each day. More details in the <a href="privacy.html">privacy policy</a>.</p>
 
   <h3>How do I turn motion watch off without going to the camera?</h3>
   <p>On the viewer, use the “Motion watch” switch. The camera stays open and connected; the viewer waits for the camera to confirm (“Waiting for the camera to confirm…”) and says so if it doesn't answer. You can also turn it off on the camera itself.</p>

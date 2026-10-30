@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CamPhone: cámara de vigilancia con móvil viejo y movimiento</title>
-<meta name="description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
+<title>CamPhone: cámara de vigilancia con móvil viejo y LiDAR</title>
+<meta name="description" content="Usa un iPhone o iPad viejo como cámara de vigilancia: graba al detectar movimiento, también con LiDAR, y puede descartar a tu perro o gato. Sin cuentas.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/en.html">
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CamPhone">
 <meta property="og:url" content="https://cdpoma.github.io/camphone/">
-<meta property="og:title" content="CamPhone: cámara de vigilancia con móvil viejo y movimiento">
-<meta property="og:description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
+<meta property="og:title" content="CamPhone: cámara de vigilancia con móvil viejo y LiDAR">
+<meta property="og:description" content="Usa un iPhone o iPad viejo como cámara de vigilancia: graba al detectar movimiento, también con LiDAR, y puede descartar a tu perro o gato. Sin cuentas.">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://cdpoma.github.io/camphone/icon.png">
@@ -27,8 +27,8 @@
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="Icono de CamPhone">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CamPhone: cámara de vigilancia con móvil viejo y movimiento">
-<meta name="twitter:description" content="Convierte un móvil viejo en cámara de vigilancia: detecta movimiento, graba sola y avisa a tu visor. Enciéndela o apágala desde el visor. Sin cuentas.">
+<meta name="twitter:title" content="CamPhone: cámara de vigilancia con móvil viejo y LiDAR">
+<meta name="twitter:description" content="Usa un iPhone o iPad viejo como cámara de vigilancia: graba al detectar movimiento, también con LiDAR, y puede descartar a tu perro o gato. Sin cuentas.">
 <meta name="twitter:image" content="https://cdpoma.github.io/camphone/icon.png">
 <meta name="twitter:image:alt" content="Icono de CamPhone">
 <script type="application/ld+json">
@@ -36,19 +36,76 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://cdpoma.github.io/camphone/#web",
+      "name": "CamPhone: cámara de vigilancia con móvil viejo",
+      "url": "https://cdpoma.github.io/camphone/",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/camphone/#pagina",
+      "url": "https://cdpoma.github.io/camphone/",
+      "name": "CamPhone: cámara de vigilancia con móvil viejo y LiDAR",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://cdpoma.github.io/camphone/#web"
+      },
+      "about": {
+        "@id": "https://cdpoma.github.io/camphone/#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/camphone/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cdpoma.github.io/camphone/icon.png",
+        "width": 1024,
+        "height": 1024
+      },
+      "dateModified": "2026-10-30",
+      "significantLink": [
+        "https://cdpoma.github.io/camphone/privacidad.html",
+        "https://cdpoma.github.io/camphone/soporte.html"
+      ],
+      "relatedLink": [
+        "https://cdpoma.github.io/camphone/en.html"
+      ]
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://cdpoma.github.io/camphone/#app",
       "name": "CamPhone",
       "url": "https://cdpoma.github.io/camphone/",
       "image": "https://cdpoma.github.io/camphone/icon.png",
       "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Cámara de vigilancia con un iPhone o iPad viejo",
       "operatingSystem": "iOS, iPadOS",
+      "softwareRequirements": "iOS o iPadOS 15 o posterior, en iPhone o iPad. El LiDAR es opcional y solo existe en iPhone Pro (desde el 12 Pro) e iPad Pro (desde 2020).",
+      "availableOnDevice": "iPhone, iPad",
+      "softwareVersion": "1.0",
+      "releaseNotes": "Incluye detección de movimiento con el LiDAR (iPhone desde el 12 Pro e iPad Pro desde 2020), basada en distancias y no en la imagen, y «Descartar mascotas», que no guarda el clip ni avisa cuando reconoce un perro o un gato y ninguna persona.",
       "inLanguage": "es",
-      "dateModified": "2026-10-22",
-      "description": "CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.",
+      "dateModified": "2026-10-30",
+      "description": "CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. En los iPhone y iPad con LiDAR puede vigilar con ese sensor de profundidad, y con «Descartar mascotas» no guarda ni avisa cuando reconoce un perro o un gato y ninguna persona. Los dos dispositivos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.",
+      "keywords": "cámara de vigilancia, móvil viejo como cámara, detección de movimiento, LiDAR, descartar mascotas, vigilabebés, cámara para mascotas, sin cuenta, iPhone, iPad",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Personas con un iPhone o iPad viejo que quieren una cámara de vigilancia, vigilabebés o cámara para mascotas sin cuentas ni suscripción"
+      },
       "featureList": [
         "Convierte un iPhone o iPad viejo en cámara de vigilancia, vigilabebés o cámara para mascotas",
         "Detección de movimiento dentro del propio dispositivo de la cámara: graba un clip cuando hay movimiento y sigue vigilando",
+        "Detección opcional con LiDAR (apagada de serie, solo en iPhone y iPad con sensor): mapas de profundidad analizados en el propio dispositivo, sin guardarlos ni enviarlos",
+        "Con LiDAR la detección se basa en distancias, no en la imagen; al detectar movimiento se enciende la cámara normal, que graba el clip",
+        "«Descartar mascotas» (encendido de serie): reconoce personas, perros y gatos con el framework Vision de Apple, en el dispositivo; si reconoce un perro o un gato y ninguna persona, no guarda el clip ni avisa",
         "Aviso opcional al visor cuando la cámara ha guardado un clip (notificación del sistema, sin imagen ni vídeo)",
         "Enciende y apaga la vigilancia desde el visor, sin tocar el dispositivo de la cámara y sin cerrar su app",
         "Vídeo y sonido en directo cuando quieras, directos de dispositivo a dispositivo con WebRTC (DTLS-SRTP); relevo cifrado si la red no permite la conexión directa",
@@ -57,6 +114,7 @@
         "Las grabaciones se quedan en la cámara (hasta 6 GB) y se reproducen desde el visor sin copiarlas",
         "Funciona entre iPhone y iPad, en español e inglés"
       ],
+      "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -84,6 +142,39 @@
           "name": "Ayuda y soporte",
           "url": "https://cdpoma.github.io/camphone/soporte.html",
           "inLanguage": "es"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/camphone/#pagina"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://cdpoma.github.io/camphone/#como",
+      "name": "Cómo usar un móvil viejo como cámara de vigilancia con CamPhone",
+      "description": "Tres pasos para convertir un iPhone o iPad viejo en cámara de vigilancia y verlo desde tu móvil.",
+      "inLanguage": "es",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Elige «Cámara» en el dispositivo viejo",
+          "text": "En el iPhone o iPad viejo elige «Cámara»: te enseña un código de 10 símbolos. Déjalo enchufado y con la app abierta.",
+          "url": "https://cdpoma.github.io/camphone/#como-funciona"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Elige «Visor» en tu otro dispositivo",
+          "text": "En tu otro iPhone o iPad elige «Visor» y escribe el código una vez.",
+          "url": "https://cdpoma.github.io/camphone/#como-funciona"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Vigila, mira y revisa",
+          "text": "La cámara graba sola un clip cuando detecta movimiento; la ves en directo cuando quieras, enciendes o apagas su vigilancia desde el visor y revisas las grabaciones, que se quedan en la cámara.",
+          "url": "https://cdpoma.github.io/camphone/#como-funciona"
         }
       ]
     },
@@ -158,10 +249,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con wifi y con datos móviles (4G/5G), o fuera de casa?",
+          "name": "¿Funciona sin wifi? ¿Y con datos móviles (4G/5G)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, con wifi y con datos móviles (4G y 5G). Hace falta internet en los dos dispositivos, pero no la misma wifi, y a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo)."
+            "text": "Sí. CamPhone funciona con wifi y con datos móviles (4G y 5G), así que la cámara puede estar en un sitio sin wifi si el móvil tiene una SIM con datos. Hace falta internet en los dos dispositivos, pero no la misma wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo)."
           }
         },
         {
@@ -185,7 +276,31 @@
           "name": "¿Detecta personas o solo movimiento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Solo movimiento: compara imágenes reducidas dentro del dispositivo de la cámara y no distingue personas, animales o sombras. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena."
+            "text": "Detecta movimiento comparando imágenes reducidas dentro del dispositivo de la cámara. Además, «Descartar mascotas» (encendido de serie en iPhone y iPad) mira imágenes con Vision, el framework de Apple, y si reconoce un perro o un gato y ninguna persona no guarda el clip ni avisa; si ve una persona, o no está claro, graba y avisa. No reconoce caras ni identifica a nadie, y puede equivocarse. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hace la detección con LiDAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En un iPhone o iPad con LiDAR, «Detección con LiDAR» (apagada de serie) detecta el movimiento midiendo distancias con el sensor de profundidad, en lugar de comparar imágenes. El alcance se elige entre 2, 3,5 y 5 m, solo con la cámara trasera. Al detectar movimiento se enciende la cámara normal, que graba el clip; CamPhone no tiene visión nocturna ni infrarrojos. Sin LiDAR, la detección compara imágenes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Avisa si es mi perro o mi gato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, si «Descartar mascotas» está activo (viene encendido de serie). Cuando hay movimiento, la cámara mira imágenes con Vision, el framework de Apple, en el propio dispositivo: si reconoce un perro o un gato y ninguna persona, no guarda el clip ni avisa al visor, y cuenta cuántos descartó hoy. Si aparece una persona en algún momento, o no está claro qué es, graba y avisa como siempre. No es infalible: a veces guardará un clip de tu mascota. Se apaga en la cámara o desde el visor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué iPhone y iPad tienen LiDAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los iPhone Pro desde el iPhone 12 Pro y los iPad Pro desde 2020. CamPhone comprueba en el propio dispositivo si tiene el sensor: solo entonces aparece el interruptor «Detección con LiDAR». Sin LiDAR, la detección de movimiento y «Descartar mascotas» funcionan igual con la cámara normal."
           }
         },
         {
@@ -259,7 +374,8 @@
   th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
   .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
   .idioma{float:right;font-size:.9rem;margin-top:.4rem}
-  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces{margin:0 0 1rem;font-size:.95rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
 </style>
 
 </head>
@@ -268,15 +384,21 @@
 
   <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
   <h1>CamPhone: tu móvil viejo como cámara de vigilancia que detecta movimiento</h1>
-  <p class="sub">Un dispositivo hace de cámara y otro de visor, enlazados con un código<br><small>Actualizado el <time datetime="2026-10-22">22 de octubre de 2026</time></small></p>
+  <p class="sub">Un dispositivo hace de cámara y otro de visor, enlazados con un código<br><small>Actualizado el <time datetime="2026-10-30">30 de octubre de 2026</time></small></p>
   <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
+  <nav class="toc" aria-label="En esta página">En esta página: <a href="#para-quien">Para quién es</a> · <a href="#como-funciona">Cómo funciona</a> · <a href="#movimiento">Movimiento</a> · <a href="#lidar-mascotas">LiDAR y mascotas</a> · <a href="#limites">Límites</a> · <a href="#precio">Precio</a> · <a href="#faq">Preguntas frecuentes</a></nav>
 
-  <h2>Qué es CamPhone</h2>
+  <h2 id="que-es">Qué es CamPhone</h2>
   <div class="card">
-    <p>CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. Los dos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.</p>
+    <p>CamPhone es una app para iPhone y iPad que convierte un dispositivo que ya no usas en una cámara de vigilancia que detecta movimiento, graba clips y avisa al visor, y te deja verla en directo desde otro iPhone o iPad. En los iPhone y iPad con LiDAR puede vigilar con ese sensor de profundidad, y con «Descartar mascotas» no guarda ni avisa cuando reconoce un perro o un gato y ninguna persona. Los dos dispositivos se enlazan con un código de 10 símbolos, sin cuentas ni registro. La imagen y el sonido van directos de un dispositivo a otro, cifrados, y las grabaciones se guardan en la cámara.</p>
   </div>
 
-  <h2>Ficha rápida</h2>
+  <h2 id="para-quien">Para quién es y qué resuelve</h2>
+  <p><strong>Para quién es.</strong> Para quien tiene un iPhone o iPad parado en un cajón y quiere vigilar una habitación, la casa, un pequeño negocio, al bebé o al perro sin comprar una cámara, sin suscripción y sin crear una cuenta.</p>
+  <p><strong>Qué resuelve.</strong> Convierte el dispositivo viejo en una cámara que graba un clip solo cuando hay movimiento, puede avisarte en tu móvil, se ve en directo con wifi o datos móviles y deja los vídeos en tu propio dispositivo, no en una nube. Con el LiDAR la detección se basa en distancias y no en la imagen, y con «Descartar mascotas» se evitan clips y avisos cuando solo pasa tu perro o tu gato.</p>
+  <p><strong>Para quién no es.</strong> CamPhone no es una alarma ni un sistema de seguridad profesional, solo funciona en iPhone y iPad, y necesita dos dispositivos con la app: uno de cámara, que debe quedarse enchufado, y otro de visor.</p>
+
+  <h2 id="ficha">Ficha rápida</h2>
   <ul>
     <li><strong>Precio:</strong> gratis con anuncios (un banner). Compra única opcional «Sin banner» de 1,99 €, sin suscripción.</li>
     <li><strong>Dispositivos:</strong> iPhone y iPad, en cualquier combinación de cámara y visor.</li>
@@ -285,33 +407,40 @@
     <li><strong>Nube:</strong> ninguna. El vídeo va directo entre los dos dispositivos y las grabaciones se quedan en la cámara.</li>
     <li><strong>Avisos:</strong> notificación del sistema, opcional y apagada de fábrica, cuando la cámara guarda un clip.</li>
     <li><strong>Idiomas:</strong> español e inglés.</li>
+    <li><strong>Detección:</strong> de movimiento, en el propio dispositivo de la cámara. Opcional con LiDAR (iPhone desde el 12 Pro e iPad Pro desde 2020) y «Descartar mascotas» (perros y gatos, con Vision), sin enviar imágenes a ningún servidor.</li>
+    <li><strong>Requisitos:</strong> iOS o iPadOS 15 o posterior; el LiDAR, solo en iPhone Pro (desde el 12 Pro) e iPad Pro (desde 2020).</li>
   </ul>
 
-  <h2>Cómo funciona</h2>
+  <h2 id="como-funciona">Cómo funciona</h2>
   <ol>
     <li><strong>Elige «Cámara»</strong> en el iPhone o iPad viejo: te enseña un código de 10 símbolos. Déjalo enchufado y con la app abierta.</li>
     <li><strong>Elige «Visor»</strong> en tu otro iPhone o iPad y escribe el código una vez.</li>
     <li><strong>Vigila, mira y revisa</strong>: la cámara graba sola un clip cuando detecta movimiento, tú la ves en directo cuando quieras, enciendes o apagas su vigilancia desde el visor y revisas las grabaciones, que se quedan en la cámara.</li>
   </ol>
 
-  <h2>Vigilancia con detección de movimiento</h2>
+  <h2 id="movimiento">Vigilancia con detección de movimiento</h2>
   <p>Con la vigilancia activada, la cámara mira todo el rato. Si detecta movimiento graba un clip; cuando el movimiento cesa, deja de grabar y sigue vigilando. En la cámara puedes ajustar la sensibilidad (Baja, Media o Alta).</p>
-  <p>La detección se hace dentro del dispositivo de la cámara: ninguna imagen se envía a un servidor para analizarla. Solo detecta movimiento: no distingue personas, animales o sombras, y puede dar avisos de más o no captar algún movimiento. La detección de movimiento y la grabación automática están probadas en un iPhone real.</p>
+  <p>La detección se hace dentro del dispositivo de la cámara: ninguna imagen se envía a un servidor para analizarla. Por sí sola solo detecta movimiento, sin distinguir qué lo causa, y puede dar avisos de más o no captar algún movimiento (más abajo, el descarte de mascotas). La detección de movimiento y la grabación automática están probadas en un iPhone real.</p>
   <p>Si en el visor activas «Avisarme cuando la cámara grabe» (viene apagado) y permites las notificaciones de iOS, recibes un aviso cada vez que la cámara guarda un clip, también con la app del visor cerrada, como mucho uno cada 30 segundos. El aviso no lleva imagen ni vídeo. Se ha comprobado en un iPhone real con la app del visor en segundo plano; los avisos dependen de iOS y de tu conexión.</p>
 
-  <h2>Enciende y apaga la vigilancia desde el visor</h2>
+  <h2 id="lidar-mascotas">LiDAR y descarte de mascotas</h2>
+  <p><strong>Detección con LiDAR (opcional).</strong> En los iPhone y iPad con sensor LiDAR, como los iPhone Pro desde el 12 Pro, puedes activar «Detección con LiDAR» en la pantalla de la cámara; viene apagada de serie y el interruptor no aparece en los dispositivos sin sensor. La cámara vigila entonces con mapas de profundidad en lugar de comparar imágenes, con la cámara trasera, y enciende la cámara normal al detectar movimiento o si se conecta un visor. Los mapas se analizan en el propio dispositivo y no se guardan ni se envían. Si el dispositivo se calienta, baja el ritmo o se pausa.</p>
+  <p><strong>Distancias, no imagen.</strong> El LiDAR detecta el movimiento midiendo distancias en lugar de comparar la imagen. El alcance se elige entre 2, 3,5 y 5 m (5 por defecto). El clip lo graba la cámara normal, que se enciende al detectar, así que empieza un momento después del movimiento. CamPhone no tiene visión nocturna ni infrarrojos.</p>
+  <p><strong>Descartar mascotas.</strong> Viene encendido de serie en iPhone y iPad. Cuando hay movimiento, la cámara mira imágenes con Vision, el framework de reconocimiento de Apple, que busca personas, perros y gatos. Si reconoce un perro o un gato y ninguna persona, no guarda el clip y no avisa al visor; si aparece una persona en algún momento, o no reconoce qué es, graba y avisa como siempre. El reconocimiento se hace en el dispositivo, sin servidores: las imágenes no se guardan ni se envían. La cámara y el visor enseñan cuántos movimientos de mascota se han descartado hoy. Puede equivocarse; se apaga en la cámara o desde el visor.</p>
+
+  <h2 id="visor">Enciende y apaga la vigilancia desde el visor</h2>
   <p>Desde el visor apagas y enciendes la vigilancia sin tocar la cámara: por ejemplo, apágala al llegar a casa y enciéndela al salir. La app de la cámara no se cierra: sigue abierta y conectada. El visor muestra el estado real de la cámara, no la última orden enviada. Con la vigilancia desactivada, el sensor queda cerrado y solo se abre si ves en directo o pulsas «Grabar».</p>
 
-  <h2>Ver en directo cuando quieras</h2>
+  <h2 id="directo">Ver en directo cuando quieras</h2>
   <p>La imagen y el sonido van directos de la cámara al visor (WebRTC, cifrado), con calidad a elegir (Baja, Media o Alta). Funciona con wifi y con datos móviles (4G y 5G): a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa del plan; la calidad «Baja» ahorra datos. Si la red no permite la conexión directa, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos.</p>
 
-  <h2>Grabaciones: se quedan en la cámara</h2>
+  <h2 id="grabaciones">Grabaciones: se quedan en la cámara</h2>
   <p>Los clips de movimiento y las grabaciones manuales se guardan siempre en el dispositivo de la cámara, nunca en el visor ni en una nube. Desde el visor abres «Grabaciones» y reproduces una desde la cámara; en la cámara puedes pasarla a la galería o borrarla. La biblioteca guarda hasta 6 GB y borra las más antiguas.</p>
 
-  <h2>Vigilabebés, cámara para mascotas y cámara de seguridad</h2>
+  <h2 id="usos">Vigilabebés, cámara para mascotas y cámara de seguridad</h2>
   <p>Como vigilabebés con móvil viejo, cámara para mascotas con un iPhone, o cámara de vigilancia sin suscripción para la casa o un pequeño negocio: cualquier sitio donde un dispositivo viejo, enchufado, pueda mirar mientras tú ves la imagen desde otro.</p>
 
-  <h2>Qué hace y qué no hace (límites)</h2>
+  <h2 id="limites">Qué hace y qué no hace (límites)</h2>
   <ul>
     <li><strong>Cámara:</strong> déjala enchufada y con la app abierta. Vigila, graba un clip cuando hay movimiento y dice siempre qué hace en pantalla (vigilando, grabando o desactivada).</li>
     <li><strong>Visor:</strong> escribe el código una vez y mira en directo, con sonido, elige la calidad, cambia entre cámara trasera y delantera, enciende o apaga la vigilancia y activa los avisos.</li>
@@ -323,7 +452,7 @@
     <li>Solo funciona entre dispositivos con CamPhone. Un solo visor a la vez ve cada cámara en directo.</li>
   </ul>
 
-  <h2>Requisitos</h2>
+  <h2 id="requisitos">Requisitos</h2>
   <ul>
     <li>Un iPhone o iPad como cámara y otro como visor, en cualquier combinación.</li>
     <li>iOS no permite usar la cámara con la app cerrada o en segundo plano: el dispositivo de la cámara tiene que estar <strong>enchufado, con la pantalla encendida y CamPhone abierta delante</strong>. Con la vigilancia activada su cámara está encendida (iOS muestra el indicador de uso); el micrófono solo se usa al grabar o al ver en directo.</li>
@@ -331,13 +460,13 @@
     <li>Internet en los dos dispositivos (wifi o datos móviles; a la cámara le basta un móvil con SIM). Solo puede haber un visor conectado a cada cámara.</li>
   </ul>
 
-  <h2>Uso responsable</h2>
-  <p>Pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca; no para grabar a nadie sin que lo sepa. La cámara muestra su estado y un aviso de uso responsable en pantalla; el brillo baja tras unos segundos sin tocarla, pero la pantalla nunca se apaga.</p>
+  <h2 id="uso-responsable">Uso responsable</h2>
+  <p>Pensada para vigilar tu casa, tu negocio o a tus mascotas con conocimiento de quien aparezca; no para grabar a nadie sin que lo sepa. Cómo trata CamPhone los datos está en la <a href="privacidad.html">política de privacidad</a> y las dudas de uso, en <a href="soporte.html">ayuda y soporte</a>. La cámara muestra su estado y un aviso de uso responsable en pantalla; el brillo baja tras unos segundos sin tocarla, pero la pantalla nunca se apaga.</p>
 
-  <h2>Gratis y «Sin banner»</h2>
+  <h2 id="precio">Gratis y «Sin banner»</h2>
   <p>La app es gratuita con anuncios; vigilar, grabar y recibir avisos no se paga. La compra única «Sin banner» (1,99 €, sin suscripción) quita el banner del visor y de la pantalla de inicio. La pantalla de la cámara mantiene su banner también con «Sin banner», y al parar una grabación desde el visor puede salir un anuncio a pantalla completa, como mucho uno cada 90 segundos.</p>
 
-  <h2>Respuestas rápidas</h2>
+  <h2 id="respuestas">Respuestas rápidas</h2>
   <h3>¿Cómo usar un móvil viejo como cámara de vigilancia?</h3>
   <p>Puedes usar un iPhone o iPad viejo como cámara con la app CamPhone: instálala, elige «Cámara» y apunta el código de 10 símbolos que muestra. En tu móvil elige «Visor» y escribe el código. El móvil viejo debe quedar enchufado, con la app abierta y con internet.</p>
   <h3>¿Hay cámaras con detección de movimiento sin suscripción?</h3>
@@ -352,6 +481,10 @@
   <p>Sí. Con CamPhone dejas el iPhone o iPad viejo apuntando a donde esté tu perro o gato y lo ves en directo, con sonido, desde otro dispositivo. Si hay movimiento, graba un clip y avisa al visor. Debe estar enchufado y con la app abierta.</p>
   <h3>¿Se puede tener una cámara de seguridad casera sin cuentas ni nube?</h3>
   <p>Sí: CamPhone no usa cuentas, se enlaza con un código de 10 símbolos. El vídeo va directo entre los dos dispositivos, cifrado, y las grabaciones quedan en el móvil de la cámara, con tope de 6 GB. Si la red lo impide, un servidor de relevo reenvía paquetes ya cifrados.</p>
+  <h3>¿Cómo evitar que la cámara de vigilancia avise cada vez que pasa mi perro o mi gato?</h3>
+  <p>En CamPhone, «Descartar mascotas» (encendido de serie) mira imágenes con Vision, el framework de Apple, en el propio iPhone o iPad. Si reconoce un perro o un gato y ninguna persona, no guarda el clip ni avisa al visor; si ve una persona o duda, graba y avisa. Puede equivocarse.</p>
+  <h3>¿Hay una cámara de vigilancia que use el LiDAR del iPhone para detectar movimiento?</h3>
+  <p>Sí: CamPhone puede vigilar con el LiDAR de un iPhone Pro (desde el 12 Pro) o un iPad Pro (desde 2020). Detecta el movimiento midiendo distancias en lugar de comparar la imagen y, al detectarlo, enciende la cámara normal, que graba el clip. No es la única app que usa el LiDAR.</p>
   <h3>¿Puedo apagar la cámara de vigilancia al llegar a casa sin tocarla?</h3>
   <p>Con CamPhone sí: desde el móvil visor desactivas y vuelves a activar la vigilancia sin tocar el dispositivo de la cámara, que sigue con la app abierta. El visor muestra el estado real de la cámara, no solo la última orden que enviaste.</p>
   <h3>¿Una app de cámara de vigilancia funciona con la pantalla apagada en iPhone?</h3>
@@ -365,7 +498,7 @@
   <h3>¿Cuánto cuesta usar un móvil viejo como cámara con CamPhone?</h3>
   <p>CamPhone es gratis, con un banner de anuncios. Una compra única de 1,99 €, «Sin banner», quita el banner del visor y del inicio, sin suscripción. Vigilar, grabar y recibir avisos no tienen coste. Hace falta un segundo dispositivo, iPhone o iPad.</p>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
   <h3>¿Cómo usar un móvil viejo como cámara de vigilancia?</h3>
   <p>Instala CamPhone en el móvil viejo y elige «Cámara»: te da un código de 10 símbolos. En tu móvil elige «Visor» y escribe el código. El móvil viejo debe estar enchufado y con la app abierta delante; desde el visor lo ves en directo y gestionas la vigilancia.</p>
   <h3>¿Hay una app de cámara con detección de movimiento y sin suscripción?</h3>
@@ -382,14 +515,20 @@
   <p>No. Los dos dispositivos se enlazan con un código de 10 símbolos. Con «Cambiar código» generas uno nuevo y el visor anterior queda fuera. Quien tenga el código puede ver la cámara, así que no lo compartas.</p>
   <h3>¿Dónde se guardan los vídeos? ¿Van a la nube?</h3>
   <p>En el dispositivo de la cámara, en una biblioteca de hasta 6 GB (al llenarse borra las más antiguas). No se suben a ninguna nube. Desde el visor puedes verlos reproduciéndose desde la cámara, sin copiarlos al visor.</p>
-  <h3>¿Funciona con wifi y con datos móviles (4G/5G), o fuera de casa?</h3>
-  <p>Sí, con wifi y con datos móviles (4G y 5G). Hace falta internet en los dos dispositivos, pero no la misma wifi, y a la cámara le basta un móvil con SIM, sin wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo).</p>
+  <h3>¿Funciona sin wifi? ¿Y con datos móviles (4G/5G)?</h3>
+  <p>Sí. CamPhone funciona con wifi y con datos móviles (4G y 5G), así que la cámara puede estar en un sitio sin wifi si el móvil tiene una SIM con datos. Hace falta internet en los dos dispositivos, pero no la misma wifi. Con datos móviles el vídeo consume la tarifa de tu plan; la calidad «Baja» ahorra datos. El vídeo va directo entre los dos; si la red no lo permite, un servidor de relevo de Cloudflare reenvía los paquetes ya cifrados, sin poder verlos (en una prueba con la cámara en 5G y el visor en wifi, el vídeo fue por el relevo).</p>
   <h3>¿Gasta mucha batería? ¿Hay que dejarlo enchufado?</h3>
   <p>Con la vigilancia activada la cámara del dispositivo está encendida todo el rato (el micrófono solo al grabar o al ver en directo), así que debe estar enchufado. Con la vigilancia desactivada, el sensor queda cerrado hasta que ves en directo o grabas.</p>
   <h3>¿Sirve como vigilabebés o cámara para mascotas?</h3>
   <p>Sí, es un uso habitual: dejas el dispositivo viejo en la habitación y lo ves en directo, con sonido, desde el visor. Detecta movimiento, no sonidos ni llanto, y no sustituye la supervisión de una persona.</p>
   <h3>¿Detecta personas o solo movimiento?</h3>
-  <p>Solo movimiento: compara imágenes reducidas dentro del dispositivo de la cámara y no distingue personas, animales o sombras. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena.</p>
+  <p>Detecta movimiento comparando imágenes reducidas dentro del dispositivo de la cámara. Además, «Descartar mascotas» (encendido de serie en iPhone y iPad) mira imágenes con Vision, el framework de Apple, y si reconoce un perro o un gato y ninguna persona no guarda el clip ni avisa; si ve una persona, o no está claro, graba y avisa. No reconoce caras ni identifica a nadie, y puede equivocarse. Puede dar avisos de más o no captar algún movimiento; ajusta la sensibilidad (Baja, Media o Alta) según la escena.</p>
+  <h3>¿Qué hace la detección con LiDAR?</h3>
+  <p>En un iPhone o iPad con LiDAR, «Detección con LiDAR» (apagada de serie) detecta el movimiento midiendo distancias con el sensor de profundidad, en lugar de comparar imágenes. El alcance se elige entre 2, 3,5 y 5 m, solo con la cámara trasera. Al detectar movimiento se enciende la cámara normal, que graba el clip; CamPhone no tiene visión nocturna ni infrarrojos. Sin LiDAR, la detección compara imágenes.</p>
+  <h3>¿Avisa si es mi perro o mi gato?</h3>
+  <p>No, si «Descartar mascotas» está activo (viene encendido de serie). Cuando hay movimiento, la cámara mira imágenes con Vision, el framework de Apple, en el propio dispositivo: si reconoce un perro o un gato y ninguna persona, no guarda el clip ni avisa al visor, y cuenta cuántos descartó hoy. Si aparece una persona en algún momento, o no está claro qué es, graba y avisa como siempre. No es infalible: a veces guardará un clip de tu mascota. Se apaga en la cámara o desde el visor.</p>
+  <h3>¿Qué iPhone y iPad tienen LiDAR?</h3>
+  <p>Los iPhone Pro desde el iPhone 12 Pro y los iPad Pro desde 2020. CamPhone comprueba en el propio dispositivo si tiene el sensor: solo entonces aparece el interruptor «Detección con LiDAR». Sin LiDAR, la detección de movimiento y «Descartar mascotas» funcionan igual con la cámara normal.</p>
   <h3>¿Es seguro? ¿Quién puede ver mi vídeo?</h3>
   <p>La imagen y el sonido van directos de la cámara al visor, cifrados con DTLS-SRTP, y no se guardan en ningún servidor (si la red lo impide, un relevo reenvía paquetes ya cifrados). Un solo visor a la vez ve cada cámara en directo, y solo ve quien tenga el código.</p>
   <h3>¿Es legal grabar con ella?</h3>
@@ -399,7 +538,7 @@
   <h3>¿Se puede usar con un iPad?</h3>
   <p>Sí. CamPhone funciona entre iPhone y iPad en cualquier combinación, como cámara o como visor, y en vertical u horizontal.</p>
 
-  <div class="foot">CamPhone · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></div>
+  <div class="foot">CamPhone · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a><br><a href="privacidad.html">Política de privacidad</a> · <a href="soporte.html">Ayuda y soporte</a> · <a href="en.html" hreflang="en" lang="en">English</a> · <a href="llms.txt">llms.txt</a></div>
 
 </main>
 </body>

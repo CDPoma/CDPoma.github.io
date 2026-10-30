@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CamPhone — Ayuda y soporte</title>
-<meta name="description" content="Ayuda de CamPhone: cómo enlazar la cámara y el visor, vigilancia por movimiento y avisos, requisitos, grabaciones, cambiar el código y la compra «Sin banner».">
+<meta name="description" content="Ayuda de CamPhone: cómo enlazar la cámara y el visor, vigilancia por movimiento, LiDAR y descarte de mascotas, avisos, requisitos, grabaciones, cambiar el código y la compra «Sin banner».">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html">
@@ -64,8 +64,8 @@
     <li>En el móvil que hará de cámara, abre CamPhone y toca <strong>«Usar este móvil como cámara»</strong>. Acepta los permisos de cámara y micrófono. Verás un <strong>código de enlace</strong> de 10 letras y números (formato XXXXX-XXXXX); puedes copiarlo.</li>
     <li>En el otro móvil, abre CamPhone y toca <strong>«Usar este móvil como visor»</strong>. Escribe el código y toca <strong>«Conectar»</strong>.</li>
     <li>El visor se acuerda del código: la próxima vez se conecta solo. Para ver otra cámara, usa «Cambiar de cámara».</li>
-    <li>La cámara empieza a vigilar sola («Vigilando»). Puedes cambiar la sensibilidad (baja, media, alta) o desactivar la vigilancia en su pantalla.</li>
-    <li>En el visor, el interruptor «Vigilancia» enciende y apaga la vigilancia de la cámara sin tocarla; el visor muestra el estado real de la cámara, no la última orden. Para avisos, activa «Avisarme cuando la cámara grabe» y concede el permiso de iOS.</li>
+    <li>La cámara empieza a vigilar sola («Vigilando»). Puedes cambiar la sensibilidad (baja, media, alta) o desactivar la vigilancia en su pantalla. En los iPhone y iPad con LiDAR verás también «Detección con LiDAR» (apagada de serie) y, en iPhone y iPad, «Descartar mascotas» (encendido de serie).</li>
+    <li>En el visor, el interruptor «Vigilancia» enciende y apaga la vigilancia de la cámara sin tocarla; el visor muestra el estado real de la cámara, no la última orden. Si la cámara tiene «Detección con LiDAR» y «Descartar mascotas», el visor también los enseña y los cambia. Para avisos, activa «Avisarme cuando la cámara grabe» y concede el permiso de iOS.</li>
   </ol>
   <p>Solo un visor a la vez puede ver una cámara; si hay otro conectado, verás «Cámara ocupada».</p>
 
@@ -89,6 +89,15 @@
 
   <h3>No detecta algo que se movió</h3>
   <p>La detección compara imágenes reducidas y puede no captar movimientos lentos, lejanos o con poca luz. CamPhone no sustituye a una alarma ni a la supervisión de una persona. Sube la sensibilidad o acerca la cámara.</p>
+
+  <h3>¿Qué hace «Descartar mascotas»?</h3>
+  <p>Viene encendido de serie en iPhone y iPad. Cuando la cámara nota movimiento, mira imágenes con Vision, el framework de reconocimiento de Apple. Si reconoce un perro o un gato y ninguna persona, no guarda el clip ni avisa al visor, y suma uno al contador «movimientos de mascota descartados hoy» que se ve en la cámara y en el visor. Si aparece una persona, o no está claro qué es, graba y avisa como siempre. Se apaga en la cámara o desde el visor. Puede equivocarse: si necesitas que no se pierda ningún movimiento, apágalo.</p>
+
+  <h3>¿Qué es «Detección con LiDAR» y por qué no me sale el interruptor?</h3>
+  <p>Es una forma opcional de vigilar con el sensor de profundidad en lugar de comparar imágenes. Solo existe en los iPhone y iPad con sensor LiDAR (como los iPhone Pro desde el 12 Pro): en los demás el interruptor no aparece. Viene apagada de serie. Vigila con la cámara trasera y sin ningún visor mirando; cuando detecta movimiento, o si se conecta un visor, se enciende la cámara normal y se graba el clip. Si el móvil se calienta, baja a una medida por segundo y, si sigue caliente, se pausa y vigila la cámara normal hasta que se enfríe. Aun así, el dispositivo debe estar enchufado.</p>
+
+  <h3>¿Se guardan o se envían las imágenes que mira Vision o los mapas del LiDAR?</h3>
+  <p>No. Se analizan en la memoria del móvil de la cámara, sin servidores, y no se guardan ni se envían. Lo único que se guarda es un contador de los movimientos de mascota descartados cada día. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
 
   <h3>¿Cómo apago la vigilancia sin ir a la cámara?</h3>
   <p>En el visor, usa el interruptor «Vigilancia». La cámara sigue abierta y conectada; el visor espera a que la cámara lo confirme («Esperando a que la cámara lo confirme…») y, si no contesta, lo dice. También puedes apagarla en la propia cámara.</p>

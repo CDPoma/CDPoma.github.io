@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CamPhone: old phone security camera with motion detection</title>
-<meta name="description" content="Turn an old phone into a security camera: it detects motion, records on its own and notifies your viewer. Switch it on or off from the viewer. No accounts.">
+<title>CamPhone: old phone security camera with LiDAR</title>
+<meta name="description" content="Use an old iPhone or iPad as a security camera: it records on motion, also with LiDAR, and can ignore your dog or cat. No account needed.">
 <link rel="canonical" href="https://cdpoma.github.io/camphone/en.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/en.html">
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CamPhone">
 <meta property="og:url" content="https://cdpoma.github.io/camphone/en.html">
-<meta property="og:title" content="CamPhone: old phone security camera with motion detection">
-<meta property="og:description" content="Turn an old phone into a security camera: it detects motion, records on its own and notifies your viewer. Switch it on or off from the viewer. No accounts.">
+<meta property="og:title" content="CamPhone: old phone security camera with LiDAR">
+<meta property="og:description" content="Use an old iPhone or iPad as a security camera: it records on motion, also with LiDAR, and can ignore your dog or cat. No account needed.">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:image" content="https://cdpoma.github.io/camphone/icon.png">
@@ -27,8 +27,8 @@
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="CamPhone icon">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CamPhone: old phone security camera with motion detection">
-<meta name="twitter:description" content="Turn an old phone into a security camera: it detects motion, records on its own and notifies your viewer. Switch it on or off from the viewer. No accounts.">
+<meta name="twitter:title" content="CamPhone: old phone security camera with LiDAR">
+<meta name="twitter:description" content="Use an old iPhone or iPad as a security camera: it records on motion, also with LiDAR, and can ignore your dog or cat. No account needed.">
 <meta name="twitter:image" content="https://cdpoma.github.io/camphone/icon.png">
 <meta name="twitter:image:alt" content="CamPhone icon">
 <script type="application/ld+json">
@@ -36,19 +36,76 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://cdpoma.github.io/camphone/#web",
+      "name": "CamPhone: old phone security camera",
+      "url": "https://cdpoma.github.io/camphone/",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/camphone/en.html#pagina",
+      "url": "https://cdpoma.github.io/camphone/en.html",
+      "name": "CamPhone: old phone security camera with LiDAR",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://cdpoma.github.io/camphone/#web"
+      },
+      "about": {
+        "@id": "https://cdpoma.github.io/camphone/en.html#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/camphone/en.html#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cdpoma.github.io/camphone/icon.png",
+        "width": 1024,
+        "height": 1024
+      },
+      "dateModified": "2026-10-30",
+      "significantLink": [
+        "https://cdpoma.github.io/camphone/privacy.html",
+        "https://cdpoma.github.io/camphone/support.html"
+      ],
+      "relatedLink": [
+        "https://cdpoma.github.io/camphone/"
+      ]
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://cdpoma.github.io/camphone/en.html#app",
       "name": "CamPhone",
       "url": "https://cdpoma.github.io/camphone/en.html",
       "image": "https://cdpoma.github.io/camphone/icon.png",
       "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Security camera using an old iPhone or iPad",
       "operatingSystem": "iOS, iPadOS",
+      "softwareRequirements": "iOS or iPadOS 15 or later, on iPhone or iPad. LiDAR is optional and only exists on iPhone Pro (12 Pro or later) and iPad Pro (2020 or later).",
+      "availableOnDevice": "iPhone, iPad",
+      "softwareVersion": "1.0",
+      "releaseNotes": "Includes motion detection with LiDAR (iPhone 12 Pro or later Pro models and iPad Pro 2020 or later), based on distances rather than the picture, and “Ignore pets”, which doesn't save the clip or alert when it recognizes a dog or a cat and no person.",
       "inLanguage": "en",
-      "dateModified": "2026-10-22",
-      "description": "CamPhone is an iPhone and iPad app that turns a device you no longer use into a security camera that detects motion, records clips and notifies the viewer, and lets you watch it live from another iPhone or iPad. The two are linked with a 10-character code, with no accounts or sign-up. Picture and sound go directly from one device to the other, encrypted, and recordings are stored on the camera.",
+      "dateModified": "2026-10-30",
+      "description": "CamPhone is an iPhone and iPad app that turns a device you no longer use into a security camera that detects motion, records clips and notifies the viewer, and lets you watch it live from another iPhone or iPad. On iPhones and iPads with LiDAR it can watch with that depth sensor, and with “Ignore pets” it doesn't save a clip or alert when it recognizes a dog or a cat and no person. The two devices are linked with a 10-character code, with no accounts or sign-up. Picture and sound go directly from one device to the other, encrypted, and recordings are stored on the camera.",
+      "keywords": "old phone security camera, motion detection, LiDAR, ignore pets, baby monitor, nanny cam, pet camera, no account, iPhone, iPad",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "People with an old iPhone or iPad who want a security camera, baby monitor or pet camera with no accounts or subscription"
+      },
       "featureList": [
         "Turns an old iPhone or iPad into a security camera, baby monitor or pet cam",
         "Motion detection inside the camera device itself: it records a clip when there is motion and keeps watching",
+        "Optional LiDAR detection (off by default, only on iPhone and iPad with the sensor): depth maps analyzed on the device itself, never stored or sent",
+        "With LiDAR, detection is based on distances, not the picture; when it detects motion the regular camera turns on and records the clip",
+        "“Ignore pets” (on by default): recognizes people, dogs and cats with Apple's Vision framework, on the device; if it recognizes a dog or a cat and no person, it doesn't save the clip or alert",
         "Optional notification to the viewer when the camera has saved a clip (system notification, no picture or video)",
         "Turn surveillance on and off from the viewer, without touching the camera device or closing its app",
         "Live video and sound whenever you want, device to device over WebRTC (DTLS-SRTP); encrypted relay if the network blocks a direct connection",
@@ -57,6 +114,7 @@
         "Recordings stay on the camera (up to 6 GB) and play from the viewer without being copied",
         "Works between iPhone and iPad, in English and Spanish"
       ],
+      "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -84,6 +142,39 @@
           "name": "Help and support",
           "url": "https://cdpoma.github.io/camphone/support.html",
           "inLanguage": "en"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/camphone/en.html#pagina"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://cdpoma.github.io/camphone/en.html#como",
+      "name": "How to use an old phone as a security camera with CamPhone",
+      "description": "Three steps to turn an old iPhone or iPad into a security camera and watch it from your phone.",
+      "inLanguage": "en",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Choose “Camera” on the old device",
+          "text": "On the old iPhone or iPad choose “Camera”: it shows a 10-character code. Leave it plugged in with the app open.",
+          "url": "https://cdpoma.github.io/camphone/en.html#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Choose “Viewer” on your other device",
+          "text": "On your other iPhone or iPad choose “Viewer” and type the code once.",
+          "url": "https://cdpoma.github.io/camphone/en.html#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Watch, look and review",
+          "text": "The camera records a clip on its own when it detects motion; you watch it live whenever you want, turn its surveillance on or off from the viewer and review the recordings, which stay on the camera.",
+          "url": "https://cdpoma.github.io/camphone/en.html#how-it-works"
         }
       ]
     },
@@ -158,10 +249,10 @@
         },
         {
           "@type": "Question",
-          "name": "Does it work on Wi-Fi and on mobile data (4G/5G), or away from home?",
+          "name": "Does it work without Wi-Fi, on mobile data (4G/5G)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, on Wi-Fi and on mobile data (4G and 5G). Both devices need internet, but not the same Wi-Fi, and the camera only needs a phone with a SIM, no Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data. Video goes directly between the two; if your network prevents that, a Cloudflare relay server forwards the already-encrypted packets without being able to see them (in a test with the camera on 5G and the viewer on Wi-Fi, the video went through the relay)."
+            "text": "Yes. CamPhone works on Wi-Fi and on mobile data (4G and 5G), so the camera can sit somewhere without Wi-Fi if the phone has a SIM with data. Both devices need internet, but not the same Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data. Video goes directly between the two; if your network prevents that, a Cloudflare relay server forwards the already-encrypted packets without being able to see them (in a test with the camera on 5G and the viewer on Wi-Fi, the video went through the relay)."
           }
         },
         {
@@ -185,7 +276,31 @@
           "name": "Does it detect people or only motion?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Only motion: it compares reduced images inside the camera device and can't tell people, animals or shadows apart. It may give extra alerts or miss some movement; adjust the sensitivity (Low, Medium or High) to the scene."
+            "text": "It detects motion by comparing reduced images inside the camera device. On top of that, “Ignore pets” (on by default on iPhone and iPad) looks at images with Vision, Apple's framework, and if it recognizes a dog or a cat and no person it doesn't save the clip or alert; if it sees a person, or it isn't clear, it records and alerts. It doesn't recognize faces or identify anyone, and it can be wrong. It may give extra alerts or miss some movement; adjust the sensitivity (Low, Medium or High) to the scene."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does LiDAR detection do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On an iPhone or iPad with LiDAR, “LiDAR detection” (off by default) detects motion by measuring distances with the depth sensor instead of comparing images. The range can be set to 2, 3.5 or 5 m, with the back camera only. When it detects motion the regular camera turns on and records the clip; CamPhone has no night vision or infrared. Without LiDAR, detection compares images."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it alert me if it's my dog or cat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if “Ignore pets” is on (it is on by default). When there is motion, the camera looks at images with Vision, Apple's framework, on the device itself: if it recognizes a dog or a cat and no person, it doesn't save the clip or alert the viewer, and it counts how many it ignored today. If a person appears at any point, or it isn't clear what it is, it records and alerts as usual. It isn't foolproof: sometimes it will still save a clip of your pet. It is switched off on the camera or from the viewer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which iPhones and iPads have LiDAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "iPhone Pro models from the iPhone 12 Pro on, and iPad Pro models from 2020 on. CamPhone checks on the device itself whether it has the sensor: only then does the “LiDAR detection” switch appear. Without LiDAR, motion detection and “Ignore pets” work the same way with the regular camera."
           }
         },
         {
@@ -259,7 +374,8 @@
   th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
   .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
   .idioma{float:right;font-size:.9rem;margin-top:.4rem}
-  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces{margin:0 0 1rem;font-size:.95rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
 </style>
 
 </head>
@@ -268,15 +384,21 @@
 
   <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
   <h1>CamPhone: your old phone as a security camera that detects motion</h1>
-  <p class="sub">One device is the camera and another is the viewer, linked with a code<br><small>Updated <time datetime="2026-10-22">October 22, 2026</time></small></p>
+  <p class="sub">One device is the camera and another is the viewer, linked with a code<br><small>Updated <time datetime="2026-10-30">October 30, 2026</time></small></p>
   <nav class="enlaces"><a href="privacy.html">Privacy policy</a> · <a href="support.html">Help &amp; support</a></nav>
+  <nav class="toc" aria-label="On this page">On this page: <a href="#who-for">Who it's for</a> · <a href="#how-it-works">How it works</a> · <a href="#motion">Motion</a> · <a href="#lidar-pets">LiDAR and pets</a> · <a href="#limits">Limits</a> · <a href="#price">Price</a> · <a href="#faq">FAQ</a></nav>
 
-  <h2>What is CamPhone</h2>
+  <h2 id="what-is">What is CamPhone</h2>
   <div class="card">
-    <p>CamPhone is an iPhone and iPad app that turns a device you no longer use into a security camera that detects motion, records clips and notifies the viewer, and lets you watch it live from another iPhone or iPad. The two are linked with a 10-character code, with no accounts or sign-up. Picture and sound go directly from one device to the other, encrypted, and recordings are stored on the camera.</p>
+    <p>CamPhone is an iPhone and iPad app that turns a device you no longer use into a security camera that detects motion, records clips and notifies the viewer, and lets you watch it live from another iPhone or iPad. On iPhones and iPads with LiDAR it can watch with that depth sensor, and with “Ignore pets” it doesn't save a clip or alert when it recognizes a dog or a cat and no person. The two devices are linked with a 10-character code, with no accounts or sign-up. Picture and sound go directly from one device to the other, encrypted, and recordings are stored on the camera.</p>
   </div>
 
-  <h2>Quick facts</h2>
+  <h2 id="who-for">Who it's for and what it solves</h2>
+  <p><strong>Who it's for.</strong> Anyone with an iPhone or iPad sitting in a drawer who wants to watch a room, the house, a small business, the baby or the dog without buying a camera, paying a subscription or creating an account.</p>
+  <p><strong>What it solves.</strong> It turns the old device into a camera that records a clip only when there is motion, can alert your phone, can be watched live over Wi-Fi or mobile data and keeps the videos on your own device, not in a cloud. With LiDAR, detection is based on distances rather than the picture, and with “Ignore pets” clips and alerts are avoided when it's only your dog or cat.</p>
+  <p><strong>Who it's not for.</strong> CamPhone is not an alarm or a professional security system, it only works on iPhone and iPad, and it needs two devices running the app: one as the camera, which must stay plugged in, and one as the viewer.</p>
+
+  <h2 id="facts">Quick facts</h2>
   <ul>
     <li><strong>Price:</strong> free with ads (one banner). Optional one-time “No Banner” purchase for €1.99, no subscription.</li>
     <li><strong>Devices:</strong> iPhone and iPad, in any combination of camera and viewer.</li>
@@ -285,33 +407,40 @@
     <li><strong>Cloud:</strong> none. Video goes directly between the two devices and recordings stay on the camera.</li>
     <li><strong>Alerts:</strong> system notification, optional and off by default, when the camera saves a clip.</li>
     <li><strong>Languages:</strong> Spanish and English.</li>
+    <li><strong>Detection:</strong> of motion, on the camera device itself. Optional with LiDAR (iPhone 12 Pro or later Pro models and iPad Pro 2020 or later) and “Ignore pets” (dogs and cats, with Vision), without sending images to any server.</li>
+    <li><strong>Requirements:</strong> iOS or iPadOS 15 or later; LiDAR only on iPhone Pro (12 Pro or later) and iPad Pro (2020 or later).</li>
   </ul>
 
-  <h2>How it works</h2>
+  <h2 id="how-it-works">How it works</h2>
   <ol>
     <li><strong>Choose “Camera”</strong> on the old iPhone or iPad: it shows a 10-character code. Leave it plugged in with the app open.</li>
     <li><strong>Choose “Viewer”</strong> on your other iPhone or iPad and type the code once.</li>
     <li><strong>Watch, look and review</strong>: the camera records a clip on its own when it detects motion, you watch it live whenever you want, you turn its surveillance on or off from the viewer and you review the recordings, which stay on the camera.</li>
   </ol>
 
-  <h2>Surveillance with motion detection</h2>
+  <h2 id="motion">Surveillance with motion detection</h2>
   <p>With surveillance on, the camera watches all the time. If it detects motion it records a clip; when the motion stops, it stops recording and keeps watching. You can adjust the sensitivity (Low, Medium or High) on the camera.</p>
-  <p>Detection happens inside the camera device: no image is sent to a server to be analysed. It only detects motion: it can't tell people, animals or shadows apart, and it may give extra alerts or miss some movement. Motion detection and automatic recording have been tested on a real iPhone.</p>
+  <p>Detection happens inside the camera device: no image is sent to a server to be analysed. On its own it only detects motion, without telling what causes it, and it may give extra alerts or miss some movement (see ignoring pets below). Motion detection and automatic recording have been tested on a real iPhone.</p>
   <p>If you switch on “Notify me when the camera records” on the viewer (it is off by default) and allow iOS notifications, you get an alert each time the camera saves a clip, even with the viewer's app closed, at most one every 30 seconds. The alert carries no picture or video. It has been checked on a real iPhone with the viewer's app in the background; alerts depend on iOS and your connection.</p>
 
-  <h2>Turn surveillance on and off from the viewer</h2>
+  <h2 id="lidar-pets">LiDAR and ignoring pets</h2>
+  <p><strong>LiDAR detection (optional).</strong> On iPhones and iPads with a LiDAR sensor, such as the iPhone Pro from the 12 Pro on, you can turn on “LiDAR detection” on the camera's screen; it is off by default and the switch doesn't appear on devices without the sensor. The camera then watches with depth maps instead of comparing images, using the back camera, and turns on the regular camera when it detects motion or a viewer connects. The maps are analyzed on the device itself and are neither stored nor sent. If the device gets hot, it slows down or pauses.</p>
+  <p><strong>Distances, not the picture.</strong> LiDAR detects motion by measuring distances instead of comparing the picture. The range can be set to 2, 3.5 or 5 m (5 by default). The clip is recorded by the regular camera, which turns on when motion is detected, so it starts a moment after the motion. CamPhone has no night vision or infrared.</p>
+  <p><strong>Ignore pets.</strong> On by default on iPhone and iPad. When there is motion, the camera looks at images with Vision, Apple's image-recognition framework, which looks for people, dogs and cats. If it recognizes a dog or a cat and no person, it doesn't save the clip and doesn't alert the viewer; if a person appears at any point, or it can't tell what it is, it records and alerts as usual. Recognition happens on the device, with no servers: images are neither stored nor sent. The camera and the viewer show how many pet motions were ignored today. It can be wrong; it is switched off on the camera or from the viewer.</p>
+
+  <h2 id="viewer">Turn surveillance on and off from the viewer</h2>
   <p>From the viewer you turn surveillance off and on without touching the camera: for example, switch it off when you get home and on when you leave. The camera's app doesn't close: it stays open and connected. The viewer shows the camera's real state, not the last command sent. With surveillance off, the sensor stays closed and only opens if you watch live or tap “Record”.</p>
 
-  <h2>Watch live whenever you want</h2>
+  <h2 id="live">Watch live whenever you want</h2>
   <p>Picture and sound go straight from the camera to the viewer over WebRTC (encrypted), with a choice of quality (Low, Medium or High). Works on Wi-Fi and on mobile data (4G and 5G): the camera only needs a phone with a SIM, no Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data. If your network doesn't allow a direct connection, a Cloudflare relay server forwards the already-encrypted packets without being able to see them.</p>
 
-  <h2>Recordings stay on the camera</h2>
+  <h2 id="recordings">Recordings stay on the camera</h2>
   <p>Motion clips and manual recordings are always saved on the camera's device, never on the viewer or in a cloud. From the viewer you open “Recordings” and play one from the camera; on the camera you can send it to the photo library or delete it. The library keeps up to 6 GB and deletes the oldest.</p>
 
-  <h2>Baby monitor, pet cam and security camera</h2>
+  <h2 id="uses">Baby monitor, pet cam and security camera</h2>
   <p>Use a spare phone as a baby monitor, a pet cam, a home security camera or a small-business camera: anywhere an old iPhone or iPad, plugged in, can watch while you see the picture from your own phone.</p>
 
-  <h2>What it does and doesn't do (limits)</h2>
+  <h2 id="limits">What it does and doesn't do (limits)</h2>
   <ul>
     <li><strong>Camera:</strong> leave it plugged in with the app open. It watches, records a clip when there is motion and always shows on screen what it is doing (watching, recording or off).</li>
     <li><strong>Viewer:</strong> type the code once and watch live, with sound, pick the quality, switch between the rear and front camera, turn surveillance on or off and switch alerts on.</li>
@@ -323,7 +452,7 @@
     <li>It only works between devices running CamPhone. One viewer at a time watches each camera live.</li>
   </ul>
 
-  <h2>Requirements</h2>
+  <h2 id="requirements">Requirements</h2>
   <ul>
     <li>One iPhone or iPad as the camera and another as the viewer, in any combination.</li>
     <li>iOS does not allow the camera to be used with the app closed or in the background: the camera device must be <strong>plugged in, with the screen on and CamPhone open in front</strong>. With surveillance on, its camera is on (iOS shows the usage indicator); the microphone is only used while recording or watching live.</li>
@@ -331,13 +460,13 @@
     <li>Internet on both devices (Wi-Fi or mobile data; the camera only needs a phone with a SIM). Only one viewer can be connected to each camera.</li>
   </ul>
 
-  <h2>Responsible use</h2>
-  <p>Meant for watching your home, business or pets with the knowledge of anyone who appears, not for recording people without their knowledge. The camera shows its status and a responsible-use notice on screen; the brightness dims after a few seconds without touch, but the screen never turns off.</p>
+  <h2 id="responsible-use">Responsible use</h2>
+  <p>Meant for watching your home, business or pets with the knowledge of anyone who appears, not for recording people without their knowledge. How CamPhone handles data is in the <a href="privacy.html">privacy policy</a>, and usage questions are answered in <a href="support.html">help &amp; support</a>. The camera shows its status and a responsible-use notice on screen; the brightness dims after a few seconds without touch, but the screen never turns off.</p>
 
-  <h2>Free, and “No Banner”</h2>
+  <h2 id="price">Free, and “No Banner”</h2>
   <p>Free with ads; watching, recording and notifications are not paid features. The one-time “No Banner” purchase (€1.99, no subscription) removes the banner in the viewer and on the home screen. The camera screen keeps its banner even with “No Banner”, and when you stop a recording from the viewer a full-screen ad may appear, at most one every 90 seconds.</p>
 
-  <h2>Quick answers</h2>
+  <h2 id="quick-answers">Quick answers</h2>
   <h3>How do I use an old phone as a security camera?</h3>
   <p>You can use an old iPhone or iPad as a camera with the CamPhone app: install it, choose “Camera” and note the 10-character code it shows. On your own phone choose “Viewer” and type the code. Leave the old phone plugged in, with the app open and online.</p>
   <h3>Are there motion-detection cameras without a subscription?</h3>
@@ -352,6 +481,10 @@
   <p>Yes. With CamPhone you point the old iPhone or iPad at where your dog or cat hangs out and watch it live, with sound, from another device. If there's motion, it records a clip and notifies the viewer. It must stay plugged in with the app open.</p>
   <h3>Can I have a home security camera with no accounts or cloud?</h3>
   <p>Yes: CamPhone uses no accounts, just a 10-character link code. Video goes directly between the two devices, encrypted, and recordings stay on the camera phone, capped at 6 GB. If the network blocks a direct link, a relay server forwards already-encrypted packets.</p>
+  <h3>How do I stop a security camera from alerting me every time my dog or cat walks by?</h3>
+  <p>In CamPhone, “Ignore pets” (on by default) looks at images with Vision, Apple's framework, on the iPhone or iPad itself. If it recognizes a dog or a cat and no person, it doesn't save the clip or alert the viewer; if it sees a person or isn't sure, it records and alerts. It can be wrong.</p>
+  <h3>Is there a security camera that uses the iPhone's LiDAR to detect motion?</h3>
+  <p>Yes: CamPhone can watch with the LiDAR of an iPhone Pro (12 Pro or later) or an iPad Pro (2020 or later). It detects motion by measuring distances instead of comparing the picture and, when it does, turns on the regular camera, which records the clip. It isn't the only app that uses LiDAR.</p>
   <h3>Can I switch off a security camera when I get home without touching it?</h3>
   <p>With CamPhone, yes: from the viewer phone you turn surveillance off and on again without touching the camera device, which keeps its app open. The viewer shows the camera's real state, not just the last command you sent, and the camera stays connected so you can switch it on again later.</p>
   <h3>Does a security camera app work with the screen off on an iPhone?</h3>
@@ -365,7 +498,7 @@
   <h3>How much does it cost to use an old phone as a camera with CamPhone?</h3>
   <p>CamPhone is free, with a banner ad. A one-time €1.99 purchase, “No Banner”, removes the banner in the viewer and on the home screen, with no subscription. Watching, recording and notifications cost nothing. You need a second device, an iPhone or iPad.</p>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="faq">Frequently asked questions</h2>
   <h3>How do I use an old phone as a security camera?</h3>
   <p>Install CamPhone on the old phone and choose “Camera”: it shows a 10-character code. On your own phone choose “Viewer” and type the code. The old phone must be plugged in with the app open in front; from the viewer you watch it live and manage surveillance.</p>
   <h3>Is there a motion-detection camera app without a subscription?</h3>
@@ -382,14 +515,20 @@
   <p>No. The two devices link with a 10-character code. “Change code” generates a new one and locks out the previous viewer. Anyone who has the code can watch the camera, so don't share it.</p>
   <h3>Where are the videos stored? Do they go to the cloud?</h3>
   <p>On the camera's device, in a library of up to 6 GB (the oldest are deleted when it fills up). Nothing is uploaded to a cloud. From the viewer you can watch them playing from the camera, without copying them to the viewer.</p>
-  <h3>Does it work on Wi-Fi and on mobile data (4G/5G), or away from home?</h3>
-  <p>Yes, on Wi-Fi and on mobile data (4G and 5G). Both devices need internet, but not the same Wi-Fi, and the camera only needs a phone with a SIM, no Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data. Video goes directly between the two; if your network prevents that, a Cloudflare relay server forwards the already-encrypted packets without being able to see them (in a test with the camera on 5G and the viewer on Wi-Fi, the video went through the relay).</p>
+  <h3>Does it work without Wi-Fi, on mobile data (4G/5G)?</h3>
+  <p>Yes. CamPhone works on Wi-Fi and on mobile data (4G and 5G), so the camera can sit somewhere without Wi-Fi if the phone has a SIM with data. Both devices need internet, but not the same Wi-Fi. On mobile data the video uses your plan's data; the “Low” quality saves data. Video goes directly between the two; if your network prevents that, a Cloudflare relay server forwards the already-encrypted packets without being able to see them (in a test with the camera on 5G and the viewer on Wi-Fi, the video went through the relay).</p>
   <h3>Does it drain the battery? Must it stay plugged in?</h3>
   <p>With surveillance on, the device's camera is on all the time (the microphone only while recording or watching live), so it should be plugged in. With surveillance off, the sensor stays closed until you watch live or record.</p>
   <h3>Can it be a baby monitor or a pet cam?</h3>
   <p>Yes, that's a common use: leave the old device in the room and watch it live, with sound, from the viewer. It detects motion, not sound or crying, and it doesn't replace supervision by a person.</p>
   <h3>Does it detect people or only motion?</h3>
-  <p>Only motion: it compares reduced images inside the camera device and can't tell people, animals or shadows apart. It may give extra alerts or miss some movement; adjust the sensitivity (Low, Medium or High) to the scene.</p>
+  <p>It detects motion by comparing reduced images inside the camera device. On top of that, “Ignore pets” (on by default on iPhone and iPad) looks at images with Vision, Apple's framework, and if it recognizes a dog or a cat and no person it doesn't save the clip or alert; if it sees a person, or it isn't clear, it records and alerts. It doesn't recognize faces or identify anyone, and it can be wrong. It may give extra alerts or miss some movement; adjust the sensitivity (Low, Medium or High) to the scene.</p>
+  <h3>What does LiDAR detection do?</h3>
+  <p>On an iPhone or iPad with LiDAR, “LiDAR detection” (off by default) detects motion by measuring distances with the depth sensor instead of comparing images. The range can be set to 2, 3.5 or 5 m, with the back camera only. When it detects motion the regular camera turns on and records the clip; CamPhone has no night vision or infrared. Without LiDAR, detection compares images.</p>
+  <h3>Will it alert me if it's my dog or cat?</h3>
+  <p>Not if “Ignore pets” is on (it is on by default). When there is motion, the camera looks at images with Vision, Apple's framework, on the device itself: if it recognizes a dog or a cat and no person, it doesn't save the clip or alert the viewer, and it counts how many it ignored today. If a person appears at any point, or it isn't clear what it is, it records and alerts as usual. It isn't foolproof: sometimes it will still save a clip of your pet. It is switched off on the camera or from the viewer.</p>
+  <h3>Which iPhones and iPads have LiDAR?</h3>
+  <p>iPhone Pro models from the iPhone 12 Pro on, and iPad Pro models from 2020 on. CamPhone checks on the device itself whether it has the sensor: only then does the “LiDAR detection” switch appear. Without LiDAR, motion detection and “Ignore pets” work the same way with the regular camera.</p>
   <h3>Is it secure? Who can see my video?</h3>
   <p>Picture and sound go straight from the camera to the viewer, encrypted with DTLS-SRTP, and aren't stored on any server (if the network blocks it, a relay forwards already-encrypted packets). One viewer at a time watches each camera live, and only someone with the code can watch.</p>
   <h3>Is it legal to record with it?</h3>
@@ -399,7 +538,7 @@
   <h3>Can I use it with an iPad?</h3>
   <p>Yes. CamPhone works between iPhone and iPad in any combination, as camera or as viewer, in portrait or landscape.</p>
 
-  <div class="foot">CamPhone · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></div>
+  <div class="foot">CamPhone · Gabriel Micó Victoria · <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a><br><a href="privacy.html">Privacy policy</a> · <a href="support.html">Help &amp; support</a> · <a href="index.html" hreflang="es" lang="es">Español</a> · <a href="llms.txt">llms.txt</a></div>
 
 </main>
 </body>
