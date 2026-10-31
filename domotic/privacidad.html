@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Domotic — Política de privacidad</title>
+<meta name="description" content="Qué datos usa Domotic, adónde van y cómo se borran.">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/domotic/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/domotic/privacy.html">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .4rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  .aviso{background:#fff4e5;border:1px solid #f0c27a;color:#4a3000}
+  @media (prefers-color-scheme: dark){.aviso{background:#2b2111;border-color:#7a5a1f;color:#f3dfb4}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>Domotic</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> Domotic no pide cuenta, nombre, correo ni teléfono. Tus aparatos, sus claves (en el llavero del iPhone) y el histórico se quedan en tu móvil. La app solo habla con tus aparatos por la red de tu casa o por Bluetooth. Sale algo a internet solo si activas tú el modo Estación o el Remoto (el estado de tu cuadro, bajo un código aleatorio) o los avisos (el token de notificaciones de Apple). Además hay anuncios (Google AdMob) en la versión gratuita, compras (RevenueCat), estadísticas de uso (Firebase Analytics, con tu consentimiento donde la ley lo exige) y una consulta a la App Store para saber si hay versión nueva.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de Domotic. Para cualquier duda sobre tus datos o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Lo que se queda en tu teléfono</h2>
+  <ul>
+    <li><strong>Tus aparatos:</strong> nombre, tipo, dirección en tu red o identificador Bluetooth, y los nombres y ajustes de cada circuito.</li>
+    <li><strong>Las claves de tus aparatos</strong> (clave local de Tuya, contraseña de un Shelly o Tasmota, token de Home Assistant) y los <strong>códigos de administrador</strong> de la Estación y del Remoto: en el <strong>llavero del iPhone</strong> (Keychain). Nunca se envían a Firebase ni a ningún servidor nuestro.</li>
+    <li><strong>El registro de maniobras</strong> (qué orden, cuándo, a qué circuito y con qué resultado) y tus ajustes.</li>
+    <li><strong>El histórico</strong> de potencia y de energía, solo si tienes Pro (sin Pro no se guarda).</li>
+    <li>El código de tu Estación o el del cuadro que miras, el modo elegido y el idioma.</li>
+  </ul>
+  <p>Todo esto se borra al desinstalar la app. Dentro de la app puedes borrar cada aparato (también se borra su clave del llavero).</p>
+
+  <h2>Lo que sale del teléfono, y adónde</h2>
+  <h3>Hacia tus aparatos (red local y Bluetooth)</h3>
+  <p>Para encontrar y leer tus aparatos, Domotic explora la red WiFi de tu casa (solo tu propia red local) y escucha por Bluetooth. Solo habla con aparatos de tu red, o con el Home Assistant o el servidor MQTT cuya dirección escribas tú. iOS te pide permiso para la red local y para el Bluetooth. No se usa la ubicación.</p>
+
+  <h3>Google Firebase Realtime Database (solo con la Estación o el Remoto)</h3>
+  <ul>
+    <li><strong>Qué se publica:</strong> la Estación publica, bajo un <strong>código aleatorio de 10 caracteres</strong>, el estado del cuadro: nombres de los aparatos y de los circuitos, si están abiertos o cerrados, medidas (potencia, tensión, corriente, energía, fuga, temperatura, frecuencia), alarmas, qué maniobras tienes permitidas y, si la Estación es Pro, un resumen de energía del último mes y año.</li>
+    <li><strong>Qué no se publica:</strong> ni direcciones IP, ni claves, ni contraseñas, ni direcciones Bluetooth. Los textos de error se limpian de IP y direcciones antes de salir.</li>
+    <li><strong>Órdenes:</strong> un Remoto con código de administrador escribe órdenes <strong>firmadas</strong> (aparato, circuito, abrir o cerrar, hora, número de un solo uso y firma) y la Estación responde con el resultado, también firmado. El código de administrador no pasa nunca por Firebase.</li>
+    <li><strong>Quién puede verlo:</strong> el código es la llave del cuadro. <strong>Quien tenga el código de mirar puede ver el estado</strong>, así que no lo compartas con quien no quieras que lo vea. Para mandar hace falta además el código de administrador. Puedes generar códigos nuevos en cualquier momento (y el cuadro publicado con el código viejo se borra).</li>
+    <li>El Remoto escribe además la hora a la que «sigue mirando», para que la Estación publique más a menudo mientras alguien mira.</li>
+    <li>No hay cuenta ni identidad: ni tu nombre ni tu correo van asociados al código. Recomendamos no poner datos personales (nombre y apellidos, dirección) en los nombres de aparatos y circuitos, porque se publican tal cual.</li>
+    <li>Servidor en Bélgica (europe-west1). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Política de Firebase</a>.</li>
+  </ul>
+
+  <h3>Supabase (solo si activas avisos en el Remoto)</h3>
+  <ul>
+    <li><strong>Qué recibe:</strong> el <strong>token de notificaciones de Apple</strong> de tu móvil, el <strong>código del cuadro</strong> (el de mirar), el idioma de la app (para escribirte el aviso en tu idioma), qué tipos de aviso quieres y si el token es de pruebas o de producción.</li>
+    <li><strong>Para qué:</strong> solo para entregarte los avisos (apagón, vuelta de la luz, disparo, fuga, alarma, estación caída) a través del servicio de notificaciones de Apple (APNs). No se usa para publicidad ni se cede.</li>
+    <li>Cuando la Estación detecta un aviso, le dice al servidor el código, el tipo de aviso y, si procede, el nombre del circuito que lo causó (para escribirlo en la notificación). El servidor apunta durante un día «qué aviso se envió y cuándo» para no repetirlos. El servidor lee además la hora del último dato publicado de la Estación para saber si se ha caído.</li>
+    <li>Las tablas están cerradas: solo la función del servidor (no la app) puede leerlas.</li>
+    <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Política de Supabase</a>. Apple recibe el token para entregar la notificación.</li>
+  </ul>
+
+  <h3>Google AdMob (anuncios, versión gratuita)</h3>
+  <p>La versión gratuita muestra un banner abajo y, de vez en cuando, un anuncio a pantalla completa al abrir la app (1 de cada 5 aperturas, nunca el día de la instalación y nunca con la Estación puesta). Antes de pedir ningún anuncio se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google (UMP); en el iPhone, además, con el aviso de Apple de seguimiento (ATT). Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo (IDFA) para personalizar y medir los anuncios; si no, los anuncios siguen saliendo sin personalizar. En ambos casos Google recibe datos técnicos del dispositivo, como la dirección IP. Google no recibe nada de tu cuadro ni de tus aparatos.</p>
+  <p>Lo que elegiste en el formulario de Google se cambia en la app, en Ajustes → «Privacidad de los anuncios» (donde ese formulario se aplica), y el permiso de seguimiento en Ajustes del iPhone → Privacidad y seguridad → Rastreo. Con Pro no hay anuncios, salvo el banner del modo Estación. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Google</a>.</p>
+
+  <h3>RevenueCat (compras)</h3>
+  <p>Comprueba con Apple si tienes la suscripción Domotic Pro. Usa un identificador anónimo de la instalación; Apple gestiona el pago y nosotros nunca vemos datos de pago. No recibe datos de tu cuadro. Si la analítica tiene consentimiento, RevenueCat recibe también el identificador de instalación de Firebase para que las compras salgan en las mismas estadísticas. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Política de RevenueCat</a>.</p>
+
+  <h3>Firebase Analytics (estadísticas de uso)</h3>
+  <p>Domotic usa Google Analytics para Firebase en iPhone para saber cuánta gente usa la app. Solo se envían los eventos automáticos del SDK (primera apertura, sesión, tiempo de uso), un identificador de la instalación (no es tu nombre ni el identificador de publicidad) y datos técnicos básicos (país aproximado, sistema, versión de la app). <strong>No usa el identificador de publicidad (IDFA)</strong>, no asigna identificador de usuario y no envía nada de tus aparatos. En el Espacio Económico Europeo, el Reino Unido y Suiza queda <strong>desactivada hasta que aceptes</strong> el formulario de Google; fuera de esa zona está activa por defecto. Puedes pedir que se deje de usar escribiendo al correo de contacto.</p>
+
+  <h3>App Store (actualización obligatoria)</h3>
+  <p>Al abrir la app se consulta a Apple (<code>itunes.apple.com</code>) cuál es la última versión de Domotic a la venta. Esa consulta lleva solo el identificador de la app; Apple ve, como en cualquier petición, tu dirección IP. No se envía nada tuyo.</p>
+
+  <h2>Cómo borrar tus datos</h2>
+  <ul>
+    <li><strong>Lo que está en tu móvil:</strong> se borra al desinstalar la app. Cada aparato se borra desde la app, con su clave del llavero.</li>
+    <li><strong>El cuadro publicado en Firebase:</strong> al <strong>parar la Estación</strong> desde la app (botón de la pantalla Estación), el cuadro se borra del servidor, junto con las órdenes, los resultados y la marca de «sigue mirando». También se borra el cuadro anterior cuando generas un código nuevo. El borrado necesita conexión en ese momento; si no la había, o si cierras la app o la desinstalas sin parar la Estación, el último estado queda en el servidor hasta que se sobrescriba o se borre. Escríbenos con el código de tu estación y lo borramos.</li>
+    <li><strong>Los avisos (Supabase):</strong> en el Remoto, <strong>«Desactivar avisos»</strong> borra el token del servidor. Desactívalos antes de salir del Remoto. Si ya no tienes el móvil, o te quedaste sin red al desactivarlos, escríbenos con el código del cuadro y lo borramos. Apple retira además los tokens de móviles que ya no existen y el servidor los borra la primera vez que Apple los rechaza.</li>
+    <li><strong>Las estadísticas, los anuncios y las compras:</strong> los gestionan Google y RevenueCat según sus políticas; para pedirnos el borrado o ejercer tus derechos de acceso, rectificación, supresión, oposición o portabilidad, escribe al correo de contacto.</li>
+  </ul>
+
+  <h2>Permisos</h2>
+  <ul>
+    <li><code>Red local</code>: para encontrar y hablar con tus aparatos dentro de tu casa.</li>
+    <li><code>Bluetooth</code>: para los aparatos que solo hablan Bluetooth.</li>
+    <li><code>Cámara</code>: solo para escanear el QR de la Estación. No hace ni guarda fotos.</li>
+    <li><code>Notificaciones</code>: solo si activas los avisos.</li>
+    <li><code>Seguimiento</code>: el aviso de Apple antes de personalizar los anuncios.</li>
+  </ul>
+  <p>No se pide ubicación, micrófono, contactos ni fotos.</p>
+
+  <h2>Compras dentro de la app</h2>
+  <p>Domotic Pro: <strong>1,99 €/mes o 14,99 €/año</strong> en España (en tu país, el precio local aparece en la app antes de pagar). Se renueva sola hasta que la canceles en los Ajustes del iPhone → tu nombre → Suscripciones. «Restaurar compras» está en la pantalla de Pro. Se aplica el <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">contrato de licencia estándar de Apple (EULA)</a>.</p>
+
+  <h2>Privacidad infantil</h2>
+  <p>Domotic es una herramienta técnica para controlar instalaciones eléctricas y no está dirigida a menores. No recoge a sabiendas datos de menores.</p>
+
+  <h2>Cambios</h2>
+  <p>Si cambia algo de lo anterior, esta página se actualiza y cambia la fecha de abajo.</p>
+
+  <h2>Contacto</h2>
+  <p>Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si pides que borremos un cuadro o un token, incluye el código del cuadro.</p>
+
+  <div class="foot">Domotic 1.0 · Vigente desde 2026-10-31 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

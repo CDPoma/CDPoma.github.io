@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Domotic — Support and safety</title>
+<meta name="description" content="Help, FAQ and safety for Domotic, the app to watch and control your electrical panel and smart plugs.">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/domotic/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/domotic/support.html">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .4rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  .aviso{background:#fff4e5;border:1px solid #f0c27a;color:#4a3000}
+  @media (prefers-color-scheme: dark){.aviso{background:#2b2111;border-color:#7a5a1f;color:#f3dfb4}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>Domotic</h1>
+  <p class="sub">Support and safety</p>
+  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+
+  <div class="card">
+    <p><strong>Quick summary:</strong> Domotic shows you, on your iPhone, the state of your electrical panel and your smart plugs (circuit breakers, RCDs, relays, energy meters) and, if you turn it on, lets you open and re-arm them. There are no accounts or sign-ups. Your devices and their keys stay on your phone; something leaves it only if you turn on Station mode, Remote mode or notifications. The free version shows ads; Pro removes them and adds charts.</p>
+  </div>
+
+  <div class="card aviso">
+    <p><strong>Important:</strong> Domotic <strong>does not replace</strong> the electrical protection of your home. The breakers and RCDs in your panel protect you without the app; the app only reads them and, if you enable it, operates them. Do not use it as the only safety measure for people, animals or equipment that cannot lose power. Work inside the panel must be done by a qualified electrician.</p>
+  </div>
+
+  <h2>What the app does</h2>
+  <p>Domotic finds the devices in your home on its own, tells you what each one is (circuit breaker, plug, meter, relay...) and adds it with one tap. For each device you see, in large numbers, what it measures: power, voltage, current, today's energy, leakage, temperature and alarms.</p>
+  <h3>How it talks to your devices</h3>
+  <ul>
+    <li><strong>WiFi (your home network):</strong> Shelly, Tuya / Smart Life (local), Sonoff in DIY mode, Tasmota, ESPHome, Modbus TCP through a WiFi gateway, MQTT and Home Assistant. Your phone talks to the device directly, inside your network.</li>
+    <li><strong>Bluetooth:</strong> devices that only speak Bluetooth (for example Shelly with Bluetooth or a Bluetooth-to-RS485 bridge).</li>
+    <li><strong>Station:</strong> an iPhone that stays next to the panel, with Bluetooth and WiFi or mobile data, reads the devices and publishes their state over the internet.</li>
+    <li><strong>Remote:</strong> another phone, away from home, sees that state with a code (or by scanning a QR) and, with the administrator code, can open and re-arm.</li>
+  </ul>
+  <p>Whether a specific model works depends on it speaking one of those protocols. Domotic is not an official app of any of the brands mentioned, and the names belong to their owners.</p>
+
+  <h3>Free</h3>
+  <ul>
+    <li>Find, add and read your devices, over WiFi and Bluetooth.</li>
+    <li>Open and re-arm the circuits that allow it (off by default; see Safety).</li>
+    <li>Station and Remote modes, with the view code and the administrator code.</li>
+    <li>Phone notifications (power cut, power back, trip, leakage, alarm, station down).</li>
+    <li>Today's energy on every card.</li>
+  </ul>
+  <h3>With Domotic Pro</h3>
+  <ul>
+    <li>Charts and history of power and energy. Without Pro, the app does not keep history.</li>
+    <li>No ads. One exception: in Station mode the bottom banner is still shown.</li>
+  </ul>
+
+  <h2>Safety: how switching works</h2>
+  <ul>
+    <li><strong>Switching is off by default.</strong> You turn it on in Settings. Putting power back on (closing or re-arming) is a separate setting, also off by default.</li>
+    <li>You can mark circuits as <strong>critical</strong> (the fridge, the router, medical equipment): the app never operates them.</li>
+    <li>To cut power you must <strong>press and hold for two seconds</strong>, and the screen shows the power the circuit was drawing and what will be cut.</li>
+    <li>After every command the app <strong>reads the real state</strong> of the device again and records it in the phone's log. If the device does not confirm, it tells you.</li>
+    <li><strong>From the Remote</strong>, commands can only be sent with the administrator code. Without it, the Remote only watches. The command is signed, the Station verifies it and carries it out under the same rules as at home (switching enabled, circuit not critical, closing allowed).</li>
+    <li>There are two codes and you can renew them at any time from the Station screen: the view code and the administrator code. Renewing the view code also changes the administrator code.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <h3>My device does not show up</h3>
+  <p>Check that the device is on, that your phone is on the same WiFi network (or close by, for Bluetooth) and that you allowed Domotic to use the local network and Bluetooth. Some devices accept only one connection at a time: if the manufacturer's app or Home Assistant is connected, close it. If it still does not appear, tap "Can't find yours?", type its IP address and the app recognises it by itself, or choose what kind of device it is.</p>
+  <h3>My Tuya / Smart Life device asks for two keys</h3>
+  <p>Tuya protects the local connection with a key of its own for each device (device ID and local key). The app guides you to get them. They are stored in the iPhone keychain and never leave the phone.</p>
+  <h3>How do Station and Remote work?</h3>
+  <p>Leave an iPhone next to the panel, plugged in, with the app open and an internet connection, and tap the Station button. It gives you a view code and an administrator code (with a QR to share them). On the other phone, tap Remote and type or scan the code. The Station publishes every 5 seconds while someone is watching and every 5 minutes when nobody is. While it is a station, the screen stays on.</p>
+  <h3>How do I get notifications?</h3>
+  <p>On the Remote phone, on the Remote screen, tap "Turn on notifications" and accept the notification permission. Choose which ones you want. The Station detects them, so it <strong>needs mobile data (a SIM)</strong>: if the power goes out, so does the router. The "station down" notification is detected by the server.</p>
+  <h3>The app asks me to update and won't let me in</h3>
+  <p>Domotic requires the latest version. If the App Store has a newer one, the app tells you and stops reading until you update. If it cannot reach the App Store (no network, for example), it does not block you.</p>
+  <h3>How do I change the language?</h3>
+  <p>The app follows the phone's language: Spanish (Spain), Spanish (Latin America) or English.</p>
+
+  <h2>Domotic Pro subscription</h2>
+  <p>Domotic Pro is an auto-renewing subscription: <strong>&euro;1.99 per month or &euro;14.99 per year</strong> in Spain (in your country the local price is shown in the app before you pay). Your Apple account is charged when you confirm, and it renews unless you cancel at least 24 hours before the end of the period. To <strong>cancel</strong>: iPhone Settings &rarr; your name &rarr; Subscriptions &rarr; Domotic. To recover it on another device or after reinstalling, use <strong>"Restore purchases"</strong> on the Pro screen.</p>
+  <p>The purchase is handled by <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> on top of Apple's payment; it does not receive your panel's data.</p>
+
+  <h2>Privacy</h2>
+  <p>The full policy, covering what stays on your phone, what leaves it, where it goes and how to delete it, is on <a href="privacy.html">the privacy page</a>.</p>
+
+  <h2>Terms of use</h2>
+  <p>Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">standard license agreement (EULA)</a> applies.</p>
+
+  <h2>Contact and support</h2>
+  <p>Questions, bugs or suggestions? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it is about a device, tell us its make and model, how you connect it (WiFi or Bluetooth) and your iPhone model.</p>
+
+  <div class="foot">Domotic 1.0 &middot; In force since 2026-10-31 &middot; Gabriel Mic&oacute; Victoria</div>
+</div>
+</body>
+</html>
