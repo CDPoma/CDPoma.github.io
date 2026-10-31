@@ -88,8 +88,8 @@
   <h3>Supabase (solo si activas avisos en el Remoto)</h3>
   <ul>
     <li><strong>Qué recibe:</strong> el <strong>token de notificaciones de Apple</strong> de tu móvil, el <strong>código del cuadro</strong> (el de mirar), el idioma de la app (para escribirte el aviso en tu idioma), qué tipos de aviso quieres y si el token es de pruebas o de producción.</li>
-    <li><strong>Para qué:</strong> solo para entregarte los avisos (apagón, vuelta de la luz, disparo, fuga y alarma) a través del servicio de notificaciones de Apple (APNs). No se usa para publicidad ni se cede.</li>
-    <li>Cuando la Estación detecta un aviso, le dice al servidor el código, el tipo de aviso y, si procede, el nombre del circuito que lo causó (para escribirlo en la notificación). El servidor apunta durante un día «qué aviso se envió y cuándo» para no repetirlos.</li>
+    <li><strong>Para qué:</strong> solo para entregarte los avisos (apagón, vuelta de la luz, disparo, fuga, alarma y estación caída) a través del servicio de notificaciones de Apple (APNs). No se usa para publicidad ni se cede.</li>
+    <li>Cuando la Estación detecta un aviso, le dice al servidor el código, el tipo de aviso y, si procede, el nombre del circuito que lo causó (para escribirlo en la notificación). El servidor apunta durante un día «qué aviso se envió y cuándo» para no repetirlos. Para el aviso de «estación caída», el servidor lee cada 2 minutos la hora del último dato que publicó el cuadro (con su código) y avisa si lleva más de 12 minutos sin cambiar; una estación parada desde la app borra su cuadro y no avisa.</li>
     <li>Las tablas están cerradas: solo la función del servidor (no la app) puede leerlas.</li>
     <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Política de Supabase</a>. Apple recibe el token para entregar la notificación.</li>
   </ul>

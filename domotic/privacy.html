@@ -88,8 +88,8 @@
   <h3>Supabase (only if you turn on notifications on the Remote)</h3>
   <ul>
     <li><strong>What it receives:</strong> your phone's <strong>Apple notification token</strong>, the <strong>panel code</strong> (the view code), the app language (to write the notification in your language), which kinds of notification you want and whether the token is for testing or production.</li>
-    <li><strong>What for:</strong> only to deliver your notifications (power cut, power back, trip, leakage and alarm) through the Apple Push Notification service (APNs). It is not used for advertising and is not passed on.</li>
-    <li>When the Station detects an event, it tells the server the code, the type of notification and, where relevant, the name of the circuit that caused it (to write it in the notification). The server keeps, for one day, a note of "which notification was sent and when" so it does not repeat them.</li>
+    <li><strong>What for:</strong> only to deliver your notifications (power cut, power back, trip, leakage, alarm and station down) through the Apple Push Notification service (APNs). It is not used for advertising and is not passed on.</li>
+    <li>When the Station detects an event, it tells the server the code, the type of notification and, where relevant, the name of the circuit that caused it (to write it in the notification). The server keeps, for one day, a note of "which notification was sent and when" so it does not repeat them. For the "station down" notification, the server reads every 2 minutes the time of the last data the panel published (using its code) and notifies if it has not changed for more than 12 minutes; a station stopped from the app deletes its panel and does not notify.</li>
     <li>The tables are locked: only the server function (not the app) can read them.</li>
     <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase policy</a>. Apple receives the token in order to deliver the notification.</li>
   </ul>
