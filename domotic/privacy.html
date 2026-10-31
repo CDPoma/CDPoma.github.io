@@ -65,7 +65,7 @@
     <li><strong>Your devices:</strong> name, type, address on your network or Bluetooth identifier, and the names and settings of each circuit.</li>
     <li><strong>Your devices' keys</strong> (Tuya local key, a Shelly or Tasmota password, a Home Assistant token) and the <strong>administrator codes</strong> of the Station and the Remote: in the <strong>iPhone keychain</strong>. They are never sent to Firebase or to any server of ours.</li>
     <li><strong>The switching log</strong> (which command, when, on which circuit and with what result) and your settings.</li>
-    <li><strong>The history</strong> of power and energy, only if you have Pro (without Pro it is not stored).</li>
+    <li><strong>The history</strong> of power and energy for the whole house, each device and each circuit and, depending on what it is, leakage, hours on and when it opened (trips), only if you have Pro (without Pro none of this is stored).</li>
     <li>The code of your Station or of the panel you watch, the chosen mode and the language.</li>
   </ul>
   <p>All of this is deleted when you uninstall the app. Inside the app you can delete each device (its key is also removed from the keychain).</p>
@@ -76,7 +76,7 @@
 
   <h3>Google Firebase Realtime Database (only with Station or Remote)</h3>
   <ul>
-    <li><strong>What is published:</strong> the Station publishes, under a <strong>random 10-character code</strong>, the state of the panel: names of devices and circuits, whether they are open or closed, readings (power, voltage, current, energy, leakage, temperature, frequency), alarms, which operations you have allowed and, if the Station is Pro, a summary of energy for the last month and year.</li>
+    <li><strong>What is published:</strong> the Station publishes, under a <strong>random 10-character code</strong>, the state of the panel: names of devices and circuits, whether they are open or closed, readings (power, voltage, current, energy, leakage, temperature, frequency), alarms, which operations you have allowed and, if the Station is Pro, a summary of the last month and year (energy, hours on and the latest openings of each device and circuit).</li>
     <li><strong>What is not published:</strong> no IP addresses, keys, passwords or Bluetooth addresses. Error texts are stripped of IPs and addresses before leaving the phone.</li>
     <li><strong>Commands:</strong> a Remote with the administrator code writes <strong>signed</strong> commands (device, circuit, open or close, time, one-time number and signature) and the Station replies with the result, also signed. The administrator code never goes through Firebase.</li>
     <li><strong>Who can see it:</strong> the code is the key to the panel. <strong>Anyone with the view code can see the state</strong>, so do not share it with anyone you do not want to see it. Sending commands also needs the administrator code. You can generate new codes at any time (and the panel published under the old code is deleted).</li>
@@ -88,8 +88,8 @@
   <h3>Supabase (only if you turn on notifications on the Remote)</h3>
   <ul>
     <li><strong>What it receives:</strong> your phone's <strong>Apple notification token</strong>, the <strong>panel code</strong> (the view code), the app language (to write the notification in your language), which kinds of notification you want and whether the token is for testing or production.</li>
-    <li><strong>What for:</strong> only to deliver your notifications (power cut, power back, trip, leakage, alarm, station down) through the Apple Push Notification service (APNs). It is not used for advertising and is not passed on.</li>
-    <li>When the Station detects an event, it tells the server the code, the type of notification and, where relevant, the name of the circuit that caused it (to write it in the notification). The server keeps, for one day, a note of "which notification was sent and when" so it does not repeat them. The server also reads the time of the Station's last published data to know whether it has gone down.</li>
+    <li><strong>What for:</strong> only to deliver your notifications (power cut, power back, trip, leakage and alarm) through the Apple Push Notification service (APNs). It is not used for advertising and is not passed on.</li>
+    <li>When the Station detects an event, it tells the server the code, the type of notification and, where relevant, the name of the circuit that caused it (to write it in the notification). The server keeps, for one day, a note of "which notification was sent and when" so it does not repeat them.</li>
     <li>The tables are locked: only the server function (not the app) can read them.</li>
     <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase policy</a>. Apple receives the token in order to deliver the notification.</li>
   </ul>
@@ -110,8 +110,8 @@
   <h2>How to delete your data</h2>
   <ul>
     <li><strong>What is on your phone:</strong> deleted when you uninstall the app. Each device is deleted from within the app, together with its key in the keychain.</li>
-    <li><strong>The panel published on Firebase:</strong> when you <strong>stop the Station</strong> from the app (button on the Station screen), the panel is deleted from the server, together with the commands, the results and the "still watching" mark. The previous panel is also deleted when you generate a new code. Deletion needs a connection at that moment; if there was none, or if you close or uninstall the app without stopping the Station, the last state stays on the server until it is overwritten or deleted. Write to us with your station code and we will delete it.</li>
-    <li><strong>Notifications (Supabase):</strong> on the Remote, <strong>"Turn off notifications"</strong> deletes the token from the server. Turn them off before leaving the Remote. If you no longer have the phone, or had no network when turning them off, write to us with the panel code and we will delete it. Apple also retires tokens of phones that no longer exist, and the server deletes them the first time Apple rejects them.</li>
+    <li><strong>The panel published on Firebase:</strong> when you <strong>stop the Station</strong> from the app (button "Stop the station"), the panel is deleted from the server, together with the commands, the results and the "still watching" mark. The previous panel is also deleted when you tap "New code". If there is no connection at that moment, the app notes the deletion on the phone and repeats it by itself when the network is back; if it finally cannot, it tells you on the main screen. If you uninstall the app or close it without stopping the Station, the last state stays on the server until it is overwritten or deleted: write to us with your station code and we will delete it.</li>
+    <li><strong>Notifications (Supabase):</strong> on the Remote, <strong>"Turn alerts off"</strong> deletes the token from the server, and <strong>"Leave remote"</strong> (or switching to Station) does it by itself. If there is no network at that moment, the app repeats it when the network is back and, if it cannot, it tells you. Each phone deletes its own token: the Station cannot delete other phones' tokens, so when you stop the Station or get a new code, the tokens stored under the old code stay until each phone leaves the Remote. If you no longer have the phone and want them deleted, write to us with the panel code and we will delete it. Apple also retires tokens of phones that no longer exist, and the server deletes them the first time Apple rejects them.</li>
     <li><strong>Statistics, ads and purchases:</strong> handled by Google and RevenueCat under their policies; to ask us for deletion or to exercise your rights of access, rectification, erasure, objection or portability, write to the contact email.</li>
   </ul>
 

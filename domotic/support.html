@@ -66,7 +66,7 @@
   <h3>How it talks to your devices</h3>
   <ul>
     <li><strong>WiFi (your home network):</strong> Shelly, Tuya / Smart Life (local), Sonoff in DIY mode, Tasmota, ESPHome, Modbus TCP through a WiFi gateway, MQTT and Home Assistant. Your phone talks to the device directly, inside your network.</li>
-    <li><strong>Bluetooth:</strong> devices that only speak Bluetooth (for example Shelly with Bluetooth or a Bluetooth-to-RS485 bridge).</li>
+    <li><strong>Bluetooth:</strong> devices that only speak Bluetooth (for example Shelly with Bluetooth, SwitchBot, Voltcraft, Atorch or a Bluetooth-to-RS485 bridge).</li>
     <li><strong>Station:</strong> an iPhone that stays next to the panel, with Bluetooth and WiFi or mobile data, reads the devices and publishes their state over the internet.</li>
     <li><strong>Remote:</strong> another phone, away from home, sees that state with a code (or by scanning a QR) and, with the administrator code, can open and re-arm.</li>
   </ul>
@@ -77,12 +77,12 @@
     <li>Find, add and read your devices, over WiFi and Bluetooth.</li>
     <li>Open and re-arm the circuits that allow it (off by default; see Safety).</li>
     <li>Station and Remote modes, with the view code and the administrator code.</li>
-    <li>Phone notifications (power cut, power back, trip, leakage, alarm, station down).</li>
+    <li>Phone notifications (power cut, power back, trip, leakage and alarm).</li>
     <li>Today's energy on every card.</li>
   </ul>
   <h3>With Domotic Pro</h3>
   <ul>
-    <li>Charts and history of power and energy. Without Pro, the app does not keep history.</li>
+    <li>Charts and history for the whole house, for <strong>each device</strong> and for each circuit: power and energy and, depending on what it is, leakage, hours on and trips. Without Pro, the app does not keep history.</li>
     <li>No ads. One exception: in Station mode the bottom banner is still shown.</li>
   </ul>
 
@@ -104,7 +104,7 @@
   <h3>How do Station and Remote work?</h3>
   <p>Leave an iPhone next to the panel, plugged in, with the app open and an internet connection, and tap the Station button. It gives you a view code and an administrator code (with a QR to share them). On the other phone, tap Remote and type or scan the code. The Station publishes every 5 seconds while someone is watching and every 5 minutes when nobody is. While it is a station, the screen stays on.</p>
   <h3>How do I get notifications?</h3>
-  <p>On the Remote phone, on the Remote screen, tap "Turn on notifications" and accept the notification permission. Choose which ones you want. The Station detects them, so it <strong>needs mobile data (a SIM)</strong>: if the power goes out, so does the router. The "station down" notification is detected by the server.</p>
+  <p>On the Remote phone, on the Remote screen, tap "Get alerts" and accept the notification permission. Choose which ones you want. The Station detects them, so it <strong>needs mobile data (a SIM)</strong>: if the power goes out, so does the router. To stop them, tap "Turn alerts off"; "Leave remote" also turns them off by itself.</p>
   <h3>The app asks me to update and won't let me in</h3>
   <p>Domotic requires the latest version. If the App Store has a newer one, the app tells you and stops reading until you update. If it cannot reach the App Store (no network, for example), it does not block you.</p>
   <h3>How do I change the language?</h3>

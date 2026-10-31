@@ -65,7 +65,7 @@
     <li><strong>Tus aparatos:</strong> nombre, tipo, dirección en tu red o identificador Bluetooth, y los nombres y ajustes de cada circuito.</li>
     <li><strong>Las claves de tus aparatos</strong> (clave local de Tuya, contraseña de un Shelly o Tasmota, token de Home Assistant) y los <strong>códigos de administrador</strong> de la Estación y del Remoto: en el <strong>llavero del iPhone</strong> (Keychain). Nunca se envían a Firebase ni a ningún servidor nuestro.</li>
     <li><strong>El registro de maniobras</strong> (qué orden, cuándo, a qué circuito y con qué resultado) y tus ajustes.</li>
-    <li><strong>El histórico</strong> de potencia y de energía, solo si tienes Pro (sin Pro no se guarda).</li>
+    <li><strong>El histórico</strong> de potencia y de energía de la casa, de cada aparato y de cada circuito y, según lo que sea, la fuga, las horas encendido y cuándo se abrió (disparos), solo si tienes Pro (sin Pro no se guarda nada de esto).</li>
     <li>El código de tu Estación o el del cuadro que miras, el modo elegido y el idioma.</li>
   </ul>
   <p>Todo esto se borra al desinstalar la app. Dentro de la app puedes borrar cada aparato (también se borra su clave del llavero).</p>
@@ -76,7 +76,7 @@
 
   <h3>Google Firebase Realtime Database (solo con la Estación o el Remoto)</h3>
   <ul>
-    <li><strong>Qué se publica:</strong> la Estación publica, bajo un <strong>código aleatorio de 10 caracteres</strong>, el estado del cuadro: nombres de los aparatos y de los circuitos, si están abiertos o cerrados, medidas (potencia, tensión, corriente, energía, fuga, temperatura, frecuencia), alarmas, qué maniobras tienes permitidas y, si la Estación es Pro, un resumen de energía del último mes y año.</li>
+    <li><strong>Qué se publica:</strong> la Estación publica, bajo un <strong>código aleatorio de 10 caracteres</strong>, el estado del cuadro: nombres de los aparatos y de los circuitos, si están abiertos o cerrados, medidas (potencia, tensión, corriente, energía, fuga, temperatura, frecuencia), alarmas, qué maniobras tienes permitidas y, si la Estación es Pro, un resumen del último mes y año (energía, horas encendido y las últimas aperturas de cada aparato y circuito).</li>
     <li><strong>Qué no se publica:</strong> ni direcciones IP, ni claves, ni contraseñas, ni direcciones Bluetooth. Los textos de error se limpian de IP y direcciones antes de salir.</li>
     <li><strong>Órdenes:</strong> un Remoto con código de administrador escribe órdenes <strong>firmadas</strong> (aparato, circuito, abrir o cerrar, hora, número de un solo uso y firma) y la Estación responde con el resultado, también firmado. El código de administrador no pasa nunca por Firebase.</li>
     <li><strong>Quién puede verlo:</strong> el código es la llave del cuadro. <strong>Quien tenga el código de mirar puede ver el estado</strong>, así que no lo compartas con quien no quieras que lo vea. Para mandar hace falta además el código de administrador. Puedes generar códigos nuevos en cualquier momento (y el cuadro publicado con el código viejo se borra).</li>
@@ -88,8 +88,8 @@
   <h3>Supabase (solo si activas avisos en el Remoto)</h3>
   <ul>
     <li><strong>Qué recibe:</strong> el <strong>token de notificaciones de Apple</strong> de tu móvil, el <strong>código del cuadro</strong> (el de mirar), el idioma de la app (para escribirte el aviso en tu idioma), qué tipos de aviso quieres y si el token es de pruebas o de producción.</li>
-    <li><strong>Para qué:</strong> solo para entregarte los avisos (apagón, vuelta de la luz, disparo, fuga, alarma, estación caída) a través del servicio de notificaciones de Apple (APNs). No se usa para publicidad ni se cede.</li>
-    <li>Cuando la Estación detecta un aviso, le dice al servidor el código, el tipo de aviso y, si procede, el nombre del circuito que lo causó (para escribirlo en la notificación). El servidor apunta durante un día «qué aviso se envió y cuándo» para no repetirlos. El servidor lee además la hora del último dato publicado de la Estación para saber si se ha caído.</li>
+    <li><strong>Para qué:</strong> solo para entregarte los avisos (apagón, vuelta de la luz, disparo, fuga y alarma) a través del servicio de notificaciones de Apple (APNs). No se usa para publicidad ni se cede.</li>
+    <li>Cuando la Estación detecta un aviso, le dice al servidor el código, el tipo de aviso y, si procede, el nombre del circuito que lo causó (para escribirlo en la notificación). El servidor apunta durante un día «qué aviso se envió y cuándo» para no repetirlos.</li>
     <li>Las tablas están cerradas: solo la función del servidor (no la app) puede leerlas.</li>
     <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Política de Supabase</a>. Apple recibe el token para entregar la notificación.</li>
   </ul>
@@ -110,8 +110,8 @@
   <h2>Cómo borrar tus datos</h2>
   <ul>
     <li><strong>Lo que está en tu móvil:</strong> se borra al desinstalar la app. Cada aparato se borra desde la app, con su clave del llavero.</li>
-    <li><strong>El cuadro publicado en Firebase:</strong> al <strong>parar la Estación</strong> desde la app (botón de la pantalla Estación), el cuadro se borra del servidor, junto con las órdenes, los resultados y la marca de «sigue mirando». También se borra el cuadro anterior cuando generas un código nuevo. El borrado necesita conexión en ese momento; si no la había, o si cierras la app o la desinstalas sin parar la Estación, el último estado queda en el servidor hasta que se sobrescriba o se borre. Escríbenos con el código de tu estación y lo borramos.</li>
-    <li><strong>Los avisos (Supabase):</strong> en el Remoto, <strong>«Desactivar avisos»</strong> borra el token del servidor. Desactívalos antes de salir del Remoto. Si ya no tienes el móvil, o te quedaste sin red al desactivarlos, escríbenos con el código del cuadro y lo borramos. Apple retira además los tokens de móviles que ya no existen y el servidor los borra la primera vez que Apple los rechaza.</li>
+    <li><strong>El cuadro publicado en Firebase:</strong> al <strong>parar la Estación</strong> desde la app (botón «Parar la estación»), el cuadro se borra del servidor, junto con las órdenes, los resultados y la marca de «sigue mirando». También se borra el cuadro anterior cuando pulsas «Código nuevo». Si en ese momento no hay conexión, la app apunta el borrado en el teléfono y lo repite sola al volver la red; si al final no lo consigue, te lo dice en la pantalla principal. Si desinstalas la app o cierras sin parar la Estación, el último estado queda en el servidor hasta que se sobrescriba o se borre: escríbenos con el código de tu estación y lo borramos.</li>
+    <li><strong>Los avisos (Supabase):</strong> en el Remoto, <strong>«Quitar los avisos»</strong> borra el token del servidor, y <strong>«Salir del remoto»</strong> (o pasar a Estación) también lo hace solo. Si en ese momento no hay red, la app lo repite al volver la red y, si no lo consigue, te lo dice. Cada móvil borra su propio token: la Estación no puede borrar los de otros móviles, así que al parar la Estación o pedir un código nuevo, los tokens guardados con el código viejo se quedan hasta que cada móvil salga del Remoto. Si ya no tienes el móvil y quieres que se borren, escríbenos con el código del cuadro y lo borramos. Apple retira además los tokens de móviles que ya no existen y el servidor los borra la primera vez que Apple los rechaza.</li>
     <li><strong>Las estadísticas, los anuncios y las compras:</strong> los gestionan Google y RevenueCat según sus políticas; para pedirnos el borrado o ejercer tus derechos de acceso, rectificación, supresión, oposición o portabilidad, escribe al correo de contacto.</li>
   </ul>
 
