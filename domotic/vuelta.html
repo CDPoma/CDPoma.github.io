@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Domotic: vuelta del inicio de sesión</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<style>
+  :root{--bg:#f6f8fc;--surface:#ffffff;--ink:#12182b;--ink-light:#5b6580;--accent:#0c74c9;--line:#e4e9f4;--card:#eef3fb;--err:#b3261e}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0a0f1c;--surface:#111827;--ink:#e7ecf7;--ink-light:#8b96b5;--accent:#4fb6fa;--line:#1d2842;--card:#16213a;--err:#ff8a80}}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.6}
+  .wrap{max-width:560px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  h1{font-size:1.6rem;margin:0 0 .5rem}
+  p{margin:0 0 1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;margin:0 0 1.2rem}
+  .codigo{display:block;width:100%;font:600 1rem ui-monospace,Menlo,monospace;word-break:break-all;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.8rem;resize:none}
+  .btn{display:inline-block;margin:.6rem .5rem 0 0;padding:.75rem 1.2rem;border-radius:12px;border:0;background:var(--accent);color:#fff;font:600 1rem inherit;text-decoration:none;cursor:pointer}
+  .btn.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .err{color:var(--err)}
+  .peq{color:var(--ink-light);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="t">Un último paso</h1>
+  <div class="card" id="ok" hidden>
+    <p id="ins">Copia este código, abre Domotic y pégalo donde te lo pide.</p>
+    <textarea class="codigo" id="cod" rows="3" readonly></textarea>
+    <button class="btn" id="copiar" type="button">Copiar código</button>
+    <a class="btn sec" id="abrir" href="domotic://">Abrir Domotic</a>
+  </div>
+  <p class="err" id="ko" hidden></p>
+  <p class="peq" id="peq">Este código es de un solo uso y solo sirve para tu cuenta. No lo compartas. Esta página no guarda nada: el código no sale de tu navegador.</p>
+</div>
+<script>
+(function(){
+  var en = /^en/i.test(navigator.language || '');
+  var T = en ? {
+    t:'One last step', ins:'Copy this code, open Domotic and paste it where it asks for it.', copiar:'Copy code', copiado:'Copied',
+    abrir:'Open Domotic', peq:'This code is single-use and only works for your account. Do not share it. This page stores nothing: the code never leaves your browser.',
+    sin:'No code found in this address. Go back to Domotic and start the sign-in again.', den:'The brand returned an error: '
+  } : {
+    t:'Un último paso', ins:'Copia este código, abre Domotic y pégalo donde te lo pide.', copiar:'Copiar código', copiado:'Copiado',
+    abrir:'Abrir Domotic', peq:'Este código es de un solo uso y solo sirve para tu cuenta. No lo compartas. Esta página no guarda nada: el código no sale de tu navegador.',
+    sin:'No hay ningún código en esta dirección. Vuelve a Domotic y empieza de nuevo el inicio de sesión.', den:'La marca ha devuelto un error: '
+  };
+  document.documentElement.lang = en ? 'en' : 'es';
+  document.getElementById('t').textContent = T.t;
+  document.getElementById('ins').textContent = T.ins;
+  document.getElementById('copiar').textContent = T.copiar;
+  document.getElementById('abrir').textContent = T.abrir;
+  document.getElementById('peq').textContent = T.peq;
+  var q = new URLSearchParams(location.search);
+  var h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  var code = q.get('code') || h.get('code');
+  var error = q.get('error') || h.get('error');
+  var ko = document.getElementById('ko');
+  if (error) { ko.hidden = false; ko.textContent = T.den + error.replace(/[^\w .\-]/g, '').slice(0, 80); }
+  else if (!code) { ko.hidden = false; ko.textContent = T.sin; }
+  else {
+    document.getElementById('ok').hidden = false;
+    var c = document.getElementById('cod');
+    c.value = code;
+    // Quita el código de la barra de direcciones (y del historial) en cuanto se ha leído.
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    document.getElementById('copiar').addEventListener('click', function(){
+      var b = this;
+      function hecho(){ b.textContent = T.copiado; setTimeout(function(){ b.textContent = T.copiar; }, 2000); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(hecho, function(){ c.select(); document.execCommand('copy'); hecho(); });
+      else { c.select(); document.execCommand('copy'); hecho(); }
+    });
+    c.addEventListener('focus', function(){ c.select(); });
+  }
+})();
+</script>
+</body>
+</html>
