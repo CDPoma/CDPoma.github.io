@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PC Monitor · Soporte / Support</title>
+<style>
+  body { font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif; max-width: 46rem; margin: 0 auto; padding: 1.5rem; line-height: 1.55; color: #1b1f2a; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8rem; } h3 { font-size: 1rem; margin-top: 1.2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; } td, th { border: 1px solid #ccd; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  .en { margin-top: 3rem; border-top: 2px solid #ccd; padding-top: 1rem; }
+  nav { margin: 0.5rem 0 1.5rem; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<nav><a href="#es">Español</a> · <a href="#en">English</a> · <a href="privacidad.html">Política de privacidad / Privacy policy</a></nav>
+
+<div id="es">
+<h1>PC Monitor · Soporte</h1>
+<p>Última actualización: 6 de noviembre de 2026. Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (respondo en español e inglés).</p>
+
+<h2>Qué es PC Monitor</h2>
+<p>PC Monitor son dos piezas que trabajan juntas: el <strong>agente</strong> gratuito para Windows (en la Microsoft Store: «PC Monitor: Sensores en el móvil»), que vive en la bandeja del sistema y lee los sensores del PC, y la <strong>app del iPhone</strong>, que te los enseña cada segundo mientras juegas o trabajas. Todo va por tu red local (WiFi de casa): no hay nube ni cuenta.</p>
+<p>Gratis: Resumen, Favoritos, CPU, GPU, Memoria y Sistema. Bloques de información de pago (compra única, 0,49 € cada uno): CPU por núcleo, GPU avanzada, FPS y juego, Temperaturas, Ventiladores, Energía, Placa base, Voltajes, Memoria avanzada, Almacenamiento, Red y Procesos. También puedes elegir 3 bloques por 1,00 €. La app muestra anuncios (un banner abajo y, a veces, uno a pantalla completa al abrirla); las compras no los quitan.</p>
+
+<h2>Descargas</h2>
+<ul>
+<li><strong>App del iPhone</strong> (App Store): <a href="https://apps.apple.com/app/id6831380821">apps.apple.com/app/id6831380821</a></li>
+<li><strong>Agente gratuito para Windows</strong> (Microsoft Store): <a href="https://apps.microsoft.com/detail/9MVP3WQTWZXF">apps.microsoft.com/detail/9MVP3WQTWZXF</a></li>
+</ul>
+<h2>Cómo emparejar el iPhone con el PC</h2>
+<ol>
+<li>Instala el agente en el PC con Windows (Microsoft Store) y ábrelo: aparece un icono junto al reloj.</li>
+<li>Con el botón derecho en ese icono, pulsa «Emparejar un móvil (QR y código)…». Se abre una ventana con un código QR y un código de 6 cifras.</li>
+<li>En la app del iPhone, escanea el QR (la cámara solo se usa para eso) o escribe las 6 cifras. La app encuentra tu PC sola, sin escribir direcciones IP.</li>
+<li>Si usas el código de 6 cifras, el PC te pide confirmar en pantalla. Los códigos caducan a los pocos minutos: si caduca, genera otro.</li>
+<li>La primera vez, el iPhone pregunta si PC Monitor puede buscar dispositivos en tu red local: pulsa «Permitir».</li>
+</ol>
+<p>Puedes emparejar varios PCs y cambiar entre ellos desde Ajustes → «Mis PCs».</p>
+
+<h2>Problemas comunes</h2>
+<h3>La app no encuentra mi PC o se queda en «Reconectando»</h3>
+<ul>
+<li>El PC tiene que estar encendido, con el agente abierto (icono junto al reloj) y en <strong>la misma red WiFi</strong> que el iPhone. Las redes de invitados o con «aislamiento de clientes» (AP isolation) impiden que los dispositivos se vean entre sí; las VPN también pueden estorbar.</li>
+<li>En el iPhone: Ajustes → PC Monitor → activa «Red local». Si lo negaste la primera vez, aquí se vuelve a activar.</li>
+<li>En el PC: si Windows pregunta por el cortafuegos, permite el acceso en redes privadas. El agente solo acepta conexiones de tu red local.</li>
+<li>Si el PC ha cambiado de dirección, la app prueba las demás direcciones que el agente le dio. Si sigue sin conectar, quita el PC en la app («Quitar este PC») y vuelve a emparejarlo.</li>
+<li>En el icono del agente, «Abrir registro» muestra qué falla.</li>
+</ul>
+
+<h3>No salen temperaturas de la CPU ni sensores de la placa base</h3>
+<p>Windows no deja a las apps de la Microsoft Store leer directamente el chip de la placa ni el sensor de temperatura del procesador. La solución es usar <strong>HWiNFO</strong> (gratis, hwinfo.com): ábrelo, en sus ajustes (Settings) activa «Shared Memory Support» y acepta. PC Monitor lo detecta solo y envía también esos sensores. En el icono del agente, «Temperaturas de CPU y placa (HWiNFO)…» te lo explica paso a paso.</p>
+<p>Ojo: en la versión gratuita de HWiNFO la memoria compartida se apaga sola a las 12 horas. PC Monitor te avisa en el móvil y en el PC para que la vuelvas a activar. Las temperaturas de una GPU NVIDIA, el uso, la RAM, los discos y la red salen sin HWiNFO. Los FPS del juego salen con MSI Afterburner y RivaTuner abiertos.</p>
+
+<h3>Veo un candado en una pestaña</h3>
+<p>Esa pestaña es un bloque de información de pago. Puedes comprarlo (0,49 €), elegir 3 bloques por 1,00 € o activar la prueba gratis de 14 días de todos los bloques. La prueba no se renueva y, al acabar, vuelven los candados de lo que no hayas comprado.</p>
+
+<h3>Cómo restaurar compras</h3>
+<p>Abre la app, pulsa el engranaje (Ajustes) y «Restaurar compras». Usa el mismo ID de Apple con el que compraste. Si compraste «Elige 3 bloques» y cambiaste de iPhone, la app te pedirá volver a marcar qué bloques eran los tuyos (los huecos que ya pagaste siguen siendo tuyos).</p>
+
+<h3>Anuncios y privacidad de los anuncios</h3>
+<p>La app muestra un banner y, una de cada cinco aperturas (nunca el día de la instalación), un anuncio a pantalla completa. Si quieres ver un bloque que no has comprado, puedes ver un anuncio con recompensa (opcional) y se abre esa vez. Donde la ley lo exige (por ejemplo, el Espacio Económico Europeo), en Ajustes → «Privacidad de los anuncios» puedes revisar tu consentimiento. Más información en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+<h3>La pantalla no se apaga</h3>
+<p>Es a propósito: el móvil se suele dejar junto al teclado, y la app mantiene la pantalla encendida mientras está abierta.</p>
+
+<h2>Contacto</h2>
+<p>Escríbeme a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> contando el modelo de iPhone, la versión de Windows y, si puedes, lo que dice «Abrir registro» en el icono del agente.</p>
+</div>
+
+<div class="en" id="en">
+<h1>PC Monitor · Support</h1>
+<p>Last updated: 6 November 2026. Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (I reply in Spanish and English).</p>
+
+<h2>What PC Monitor is</h2>
+<p>PC Monitor is two parts working together: the free <strong>Windows agent</strong> (on the Microsoft Store as "PC Monitor: Sensores en el móvil"), which lives in the system tray and reads your PC's sensors, and the <strong>iPhone app</strong>, which shows them every second while you game or work. Everything goes over your local network (home Wi-Fi): no cloud and no account.</p>
+<p>Free: Overview, Favorites, CPU, GPU, Memory and System. Paid information blocks (one-time purchase, 0.49 EUR each): CPU per core, Advanced GPU, FPS &amp; game, Temperatures, Fans, Power, Motherboard, Voltages, Advanced memory, Storage, Network and Processes. You can also pick 3 blocks for 1.00 EUR. The app shows ads (a bottom banner and, sometimes, a full-screen ad when you open it); purchases do not remove them.</p>
+
+<h2>Downloads</h2>
+<ul>
+<li><strong>iPhone app</strong> (App Store): <a href="https://apps.apple.com/app/id6831380821">apps.apple.com/app/id6831380821</a></li>
+<li><strong>Free Windows agent</strong> (Microsoft Store): <a href="https://apps.microsoft.com/detail/9MVP3WQTWZXF">apps.microsoft.com/detail/9MVP3WQTWZXF</a></li>
+</ul>
+<h2>How to pair your iPhone with your PC</h2>
+<ol>
+<li>Install the agent on your Windows PC (Microsoft Store) and open it: an icon appears next to the clock.</li>
+<li>Right-click that icon and choose "Emparejar un móvil (QR y código)…" (pair a phone). A window shows a QR code and a 6-digit code.</li>
+<li>In the iPhone app, scan the QR (the camera is used only for this) or type the 6 digits. The app finds your PC on its own, no IP addresses needed.</li>
+<li>If you use the 6-digit code, the PC asks you to confirm on screen. Codes expire after a few minutes: generate a new one if needed.</li>
+<li>The first time, the iPhone asks whether PC Monitor may find devices on your local network: tap "Allow".</li>
+</ol>
+<p>You can pair several PCs and switch between them from Settings → "My PCs".</p>
+
+<h2>Common problems</h2>
+<h3>The app cannot find my PC or stays on "Reconnecting"</h3>
+<ul>
+<li>The PC must be on, with the agent running (icon next to the clock) and on <strong>the same Wi-Fi network</strong> as the iPhone. Guest networks or routers with "client isolation" (AP isolation) stop devices from seeing each other; VPNs can interfere too.</li>
+<li>On the iPhone: Settings → PC Monitor → turn on "Local Network". If you denied it the first time, you can enable it again there.</li>
+<li>On the PC: if Windows asks about the firewall, allow access on private networks. The agent only accepts connections from your local network.</li>
+<li>If your PC changed address, the app tries the other addresses the agent gave it. If it still fails, remove the PC in the app ("Remove this PC") and pair it again.</li>
+<li>In the agent's tray menu, "Abrir registro" (open log) shows what is failing.</li>
+</ul>
+
+<h3>No CPU temperatures or motherboard sensors</h3>
+<p>Windows does not let Microsoft Store apps read the motherboard chip or the processor temperature sensor directly. The fix is to use <strong>HWiNFO</strong> (free, hwinfo.com): open it, turn on "Shared Memory Support" in its Settings and accept. PC Monitor detects it automatically and sends those sensors too. In the agent's tray menu, "Temperaturas de CPU y placa (HWiNFO)…" explains it step by step.</p>
+<p>Note: in HWiNFO's free version, shared memory turns itself off after 12 hours. PC Monitor warns you on the phone and on the PC so you can turn it on again. NVIDIA GPU temperatures, load, RAM, drives and network work without HWiNFO. Game FPS needs MSI Afterburner and RivaTuner running.</p>
+
+<h3>I see a lock on a tab</h3>
+<p>That tab is a paid information block. You can buy it (0.49 EUR), pick 3 blocks for 1.00 EUR, or start the free 14-day trial of all blocks. The trial does not renew and, when it ends, the locks come back on whatever you have not bought.</p>
+
+<h3>How to restore purchases</h3>
+<p>Open the app, tap the gear (Settings) and "Restore purchases". Use the same Apple ID you bought with. If you bought "Pick 3 blocks" and changed iPhone, the app will ask you to mark which blocks were yours again (the slots you already paid for stay yours).</p>
+
+<h3>Ads and ad privacy</h3>
+<p>The app shows a banner and, one in every five launches (never on install day), a full-screen ad. To see a block you have not bought, you can watch an optional rewarded ad and it opens that one time. Where the law requires it (for example, the European Economic Area), you can review your consent in Settings → "Ad privacy". More in the <a href="privacidad.html">privacy policy</a>.</p>
+
+<h3>The screen never turns off</h3>
+<p>That is intentional: the phone usually sits next to the keyboard, and the app keeps the screen on while it is open.</p>
+
+<h2>Contact</h2>
+<p>Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> with your iPhone model, your Windows version and, if you can, what "Abrir registro" shows in the agent's tray menu.</p>
+</div>
+</body>
+</html>
