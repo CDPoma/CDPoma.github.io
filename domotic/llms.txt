@@ -1,0 +1,25 @@
+# Domotic
+
+> Domotic es una app para iPhone que reúne luces, cuadro eléctrico (magnetotérmicos, diferenciales, contadores) y enchufes inteligentes en una sola pantalla, por WiFi o Bluetooth, sin registro. Con los modos Estación y Remoto se ve y se controla desde fuera de casa. Gratis con anuncios: banner, anuncio al abrir (1 de cada 5 aperturas) y gráficas tras un anuncio con recompensa cada vez que se abren; el histórico se guarda para todos. Domotic Pro (1,99 €/mes o 14,99 €/año en España) quita todos los anuncios (solo el modo Estación conserva su banner) y abre siempre las gráficas. Cabecera: «Añadir» (WiFi o Bluetooth), «Conectar» (Estación o Monitor Remoto) y Ajustes; tocar una ficha abre las gráficas de ese aparato o línea. El gasto sale en la moneda de la región del móvil. No es una app oficial de ninguna marca. / Domotic is an iPhone app that puts lights, an electrical panel (circuit breakers, RCDs, meters) and smart plugs on one screen, over WiFi or Bluetooth, with no sign-up. Station and Remote modes let you watch and control from away from home. Free: banner, an ad when opening (1 launch in 5) and charts after a rewarded ad each time they are opened; history is saved for everyone. Domotic Pro ($1.99/month or $12.99/year in the US) removes all ads (only Station mode keeps its banner) and always opens the charts. Header: “Add” (WiFi or Bluetooth), “Link” (Station or Remote Monitor) and Settings; tapping a card opens the charts of that device or line. The cost is shown in the currency of the phone's region. Not an official app of any brand.
+
+Datos / Facts:
+- iOS 15 o posterior, solo iPhone; no hay versión de Android. / iOS 15 or later, iPhone only; no Android version.
+- Autor / Author: Gabriel Micó Victoria. Contacto / Contact: gabrielmicovictoria@gmail.com
+- Hasta hoy se ha probado con simuladores de cada protocolo y todavía no con los aparatos reales. / So far tested with protocol simulators and not yet with the real devices.
+
+## Páginas / Pages
+- [Domotic: ayuda, compatibles y preguntas frecuentes (español)](https://cdpoma.github.io/domotic/soporte.html): qué hace, lista de compatibles, pestañas, Estación y Remoto, seguridad, gratis y Pro, preguntas frecuentes.
+- [Domotic: help, compatible devices and FAQ (English)](https://cdpoma.github.io/domotic/support.html): what it does, compatible devices, tabs, Station and Remote, safety, free and Pro, FAQ.
+- [Política de privacidad](https://cdpoma.github.io/domotic/privacidad.html) · [Privacy policy](https://cdpoma.github.io/domotic/privacy.html)
+- [App Store (ES)](https://apps.apple.com/es/app/domotic-dom%C3%B3tica-en-casa/id6829186031) · [App Store (US)](https://apps.apple.com/us/app/domotic-home-automation/id6829186031)
+
+## Compatible / Compatible devices
+- Luces WiFi / WiFi lights: Philips Hue (puente / bridge), LIFX, Yeelight / Xiaomi (Control LAN), Nanoleaf, WLED.
+- Cuadro y enchufes WiFi / Panel and plugs over WiFi: Shelly (Gen1, Gen2+), Tuya / Smart Life (local 3.3, 3.4, 3.5), Sonoff DIY, Tasmota, ESPHome.
+- Bluetooth: Shelly (Pro 1PM, Pro CB).
+- Contadores / Meters: Eastron SDM120 y SDM630 por Modbus.
+- Integraciones / Integrations: Home Assistant, Zigbee2MQTT, MQTT.
+- Puede ser compatible (sin probar) / May be compatible (untested): WiZ, TP-Link Tapo y Kasa, Govee, Elgato, Twinkly, Magic Home, Phoscon / deCONZ, Hue y tiras LED por Bluetooth, bombillas Tuya, SwitchBot, Voltcraft SEM6000, Atorch, BTHome, Schneider / ABB / CHINT por Modbus.
+
+## Opcional / Optional
+- No entra directamente / Not direct: nubes de marca (Wyze, eufy, Ring, Meross…), Matter, Thread, Alexa, Google Home, HomeKit; sí vía Home Assistant o Zigbee2MQTT / only through Home Assistant or Zigbee2MQTT.

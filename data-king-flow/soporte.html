@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Axpert King Flow Monitor — Soporte y privacidad</title>
-<meta name="description" content="Ayuda, preguntas frecuentes y política de privacidad de Axpert King Flow Monitor, el monitor por Bluetooth para inversores solares compatibles con el protocolo Voltronic.">
+<meta name="description" content="Ayuda, preguntas frecuentes y política de privacidad de Axpert King Flow Monitor, el monitor por Bluetooth y WiFi para inversores solares compatibles con el protocolo Voltronic.">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/data-king-flow/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/data-king-flow/support.html">
 <style>
@@ -51,12 +51,13 @@
   <nav class="enlaces"><a href="#preguntas">Preguntas frecuentes</a> · <a href="#privacidad">Política de privacidad</a> · <a href="#contacto">Contacto</a></nav>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> la app habla directamente con tu inversor solar por Bluetooth. No hay cuenta ni registro, y no se recoge ningún dato personal. Los datos de tu instalación se quedan en tu móvil; solo salen de él si activas tú el modo estación para verlos en remoto, y entonces viajan bajo un código aleatorio, sin tu nombre ni tu correo.</p>
+    <p><strong>Resumen rápido:</strong> la app habla directamente con tu inversor solar, por Bluetooth o por la WiFi de tu casa. No hay cuenta ni registro, y no te pedimos tu nombre ni tu correo. Los datos de tu instalación (lo que lee del inversor y su histórico) se quedan en tu móvil; solo salen de él si activas tú el modo estación para verlos en remoto, y entonces viajan bajo un código aleatorio. Aparte, como app gratuita con anuncios, la versión gratis usa Google AdMob (datos técnicos del dispositivo y, si lo permites, el identificador de publicidad), Pro lo cobra RevenueCat y, solo si el formulario de Google lo permite, Firebase Analytics cuenta cuánta gente usa la app. Con Pro no ves anuncios, salvo el banner del modo estación. Todo está explicado abajo.</p>
   </div>
 
   <h2>Qué hace la app</h2>
-  <p>Axpert King Flow Monitor se conecta por Bluetooth Low Energy (BLE) a inversores solares compatibles con el protocolo Voltronic/PI30 y enseña en directo qué está pasando en tu instalación: lo que dan las placas, cómo carga o descarga la batería, lo que entra de la red o del generador y lo que gasta la vivienda.</p>
+  <p>Axpert King Flow Monitor se conecta por Bluetooth Low Energy (BLE), o por la WiFi de tu casa, a inversores solares compatibles con el protocolo Voltronic/PI30 y enseña en directo qué está pasando en tu instalación: lo que dan las placas, cómo carga o descarga la batería, lo que entra de la red o del generador y lo que gasta la vivienda. Es una app de <strong>solo lectura</strong>: lee el aparato, no le manda ajustes.</p>
   <p><strong>Inversores compatibles:</strong> los que hablan el protocolo Voltronic/PI30 por Bluetooth, con el Bluetooth integrado de fábrica (como el Axpert King o el Inverter King) o con un adaptador Bluetooth serie (HM-10, JDY y similares): Axpert, Inverter King, MPP Solar, EASUN, PowMr, Must, Effekta y otros compatibles. La app es <strong>compatible con</strong> esos equipos; es una <strong>app no oficial</strong>: no está hecha, patrocinada ni avalada por los fabricantes de esos inversores híbridos, y las marcas citadas pertenecen a sus propietarios.</p>
+  <p><strong>Otras familias y WiFi:</strong> además de los Voltronic, la app incluye lectura de otras familias de inversores y reguladores (Renogy, EPEVER, SRNE, Lumiax, Victron, Bluetti, Anker SOLIX) según el protocolo de cada una; no todos los modelos están probados. Por WiFi lee un Victron GX en tu red local o, con una pasarela serie-WiFi (Elfin EW11, eBox de EPEVER o similar), el inversor o regulador que tenga puerto serie. La app no lee la tarjeta WiFi propia de cada marca.</p>
 
   <h3>Gratis</h3>
   <ul>
@@ -65,17 +66,32 @@
     <li><strong>Estado del pack:</strong> porcentaje, voltaje, corriente y potencia de carga o descarga, máximos del día y amperios-hora que quedan. El porcentaje lo calcula la app contando los amperios-hora que entran y salen; no es el del inversor, que sale de una fórmula de voltaje.</li>
     <li><strong>Red o generador:</strong> potencia de entrada estimada, voltaje, corriente, frecuencia y el diésel que queda en el depósito, estimado por el tiempo de funcionamiento. Al repostar, mantén pulsado el botón del surtidor 2 segundos.</li>
     <li>La capacidad del banco de baterías, que pones tú en Ajustes, y el idioma.</li>
+    <li><strong>Añadir un dispositivo</strong> por Bluetooth o por WiFi, y <strong>conectar dos móviles</strong>: el modo estación y el modo remoto son gratis, con o sin Pro.</li>
+    <li><strong>Precio de la luz y moneda</strong> en Ajustes (€, $ o £), con los que la ficha solar calcula cuánto dinero te ahorra el sol. Se guardan solo en tu móvil.</li>
+    <li><strong>Las gráficas de historial, la ficha desplegada y el diagrama de flujo</strong>, de la forma que explica el apartado siguiente.</li>
+    <li><strong>Anuncios</strong>, de Google AdMob (ver «Anuncios sin Pro» más abajo).</li>
   </ul>
 
-  <h3>Axpert King Flow Pro (suscripción)</h3>
+  <h3>Anuncios sin Pro</h3>
   <ul>
-    <li><strong>Gráficas de historial</strong> de cada ficha por día, semana, mes y año (pulsa <strong>+</strong> en la ficha).</li>
-    <li><strong>Ficha central:</strong> la autonomía que queda (kWh y horas con el consumo de ahora) y, al darle la vuelta, el <strong>diagrama de flujo</strong> animado de la energía. Con ella, la ficha del generador dice también cuánto falta para tener que arrancarlo.</li>
-    <li><strong>Modo estación y modo remoto:</strong> un móvil se queda junto al inversor y publica bajo un código de 6 caracteres; desde otro móvil, con ese código, ves la instalación en directo sin estar cerca.</li>
+    <li><strong>Banner:</strong> uno abajo, en el hueco de la ficha central, en el modo normal y en el remoto.</li>
+    <li><strong>Anuncio de apertura</strong> (a pantalla completa, en iPhone, iPad y Android): sale al abrir la app, 1 de cada 5 aperturas, nunca el día en que la instalas y nunca con el modo estación puesto. También cuenta como apertura volver a la app tras 30 minutos o más fuera de ella.</li>
+    <li><strong>Anuncio con recompensa</strong> (novedad): para abrir una gráfica de historial (solar, batería, consumo o red/generador), la ficha desplegada o el diagrama de flujo, la app muestra «Esto es Pro» con dos caminos: hacerte Pro o <strong>ver un anuncio y abrirlo ahora</strong>. Solo sale si tú pulsas ese botón, hay que verlo entero y vale <strong>solo esa vez</strong>: al cerrar lo que abriste, la próxima vez pedirá otro anuncio. Nada de esto se guarda. Con el modo estación puesto no se ofrece.</li>
+  </ul>
+  <p>Todos los anuncios salen después del formulario de consentimiento de Google y, en iPhone y iPad, del aviso de seguimiento de Apple (ver la política de privacidad). El <strong>histórico</strong> de las gráficas se guarda en tu móvil siempre, con Pro o sin él (y, con la estación, se publica para el remoto); lo que cambia es cómo lo ves: siempre con Pro, tras un anuncio con recompensa sin Pro.</p>
+
+  <h3>Axpert King Flow Pro (suscripción)</h3>
+  <p>Pro es <strong>sin anuncios</strong> y todo abierto siempre, sin ver ningún anuncio con recompensa:</p>
+  <ul>
+    <li><strong>Sin anuncios:</strong> sin banner (en modo normal y en remoto), sin anuncio de apertura y sin anuncio con recompensa. <strong>Solo el modo estación lleva banner, también con Pro.</strong></li>
+    <li><strong>Gráficas de historial</strong> de cada ficha por día, semana, mes y año (pulsa <strong>+</strong> en la ficha), siempre abiertas.</li>
+    <li><strong>Ficha central:</strong> la autonomía que queda (kWh y horas con el consumo de ahora) y, al darle la vuelta, el <strong>diagrama de flujo</strong> animado de la energía, siempre abierto. Con ella, la ficha del generador dice también cuánto falta para tener que arrancarlo.</li>
     <li><strong>Ajustes del inversor</strong> (solo lectura) y del generador: cambio de aceite, horas de funcionamiento, depósito y consumo.</li>
-    <li><strong>Sin anuncios.</strong></li>
   </ul>
   <p>Es una suscripción mensual o anual que se renueva sola (en España, 1,99 €/mes o 14,99 €/año; en otros países, el precio que enseñe la tienda en tu moneda). Se cobra en tu cuenta de Apple o de Google Play al confirmar y se renueva salvo que la canceles al menos 24 horas antes de que termine el periodo. Se gestiona y se cancela en los ajustes de tu cuenta de la tienda. Condiciones de uso de Apple: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">EULA estándar</a>.</p>
+
+  <h3>Tienda de skins</h3>
+  <p>El botón de la cabecera abre la tienda de skins: cambian los colores, las letras, las formas y los iconos de la app; los datos y los botones son los mismos. Son compras sueltas, no suscripciones (en España, 0,49 € cada skin o 0,99 € el pack de 3 a elegir; en otros países, el precio que enseñe la tienda). Las cobra tu cuenta de Apple o de Google Play y las comprueba RevenueCat, así que al reinstalar o cambiar de móvil se recuperan con <strong>Restaurar compras</strong>. Quien ya era Pro antes del 18 de octubre de 2026 tiene de regalo la skin «Noche de Brujas».</p>
 
   <h3>Idiomas</h3>
   <p>La app está en español de España, español de Latinoamérica e inglés. La primera vez sigue al idioma del móvil; en <strong>Ajustes → Idioma</strong> se cambia al momento y se queda guardado.</p>
@@ -83,13 +99,16 @@
   <h2 id="preguntas">Preguntas frecuentes</h2>
 
   <h3>¿Cómo la conecto?</h3>
-  <p>Pulsa <strong>Conectar</strong> y elige tu inversor en la lista de dispositivos Bluetooth. Abrir la app no conecta nada por sí solo; una vez conectada, si la conexión se corta, la app se vuelve a enganchar sola hasta que pulses <strong>Desconectar</strong>. Si el móvil te pide un PIN, suele ser <code>123456</code> o <code>000000</code>; si no es ninguno de los dos, míralo en el manual del inversor.</p>
+  <p>Pulsa <strong>Añadir</strong> y elige cómo se conecta tu aparato: por <strong>Bluetooth</strong> (eliges tu inversor en la lista de dispositivos Bluetooth) o por <strong>WiFi</strong> (la app lo busca en tu red o escribes su dirección IP y su puerto; la primera vez iPhone y iPad piden permiso para hablar con la red local). Abrir la app no conecta nada por sí solo; una vez conectada, si la conexión se corta, la app se vuelve a enganchar sola hasta que pulses <strong>Desconectar</strong>. Si el móvil te pide un PIN, suele ser <code>123456</code> o <code>000000</code>; si no es ninguno de los dos, míralo en el manual del inversor.</p>
 
   <h3>¿Por qué el porcentaje no coincide con el del inversor?</h3>
   <p>El del inversor sale de una fórmula de voltaje y en baterías de litio se equivoca mucho (puede marcar 0 % con la batería a media carga). La app cuenta los amperios-hora que entran y salen y aprende la curva de tu batería. Para que acierte, pon en <strong>Ajustes</strong> la capacidad real de tu banco: la suma de los amperios-hora de las baterías conectadas en paralelo.</p>
 
   <h3>¿Cómo funciona el modo estación?</h3>
-  <p>En el móvil que se queda junto al inversor (por ejemplo, uno viejo enchufado a la corriente), conecta con el inversor y pulsa el icono de la antena → <strong>Activar modo estación</strong>. En tu móvil, pulsa el icono del satélite y escribe el código de 6 caracteres. Mientras el modo estación está activo, la pantalla de ese móvil se queda encendida. Desde el remoto, al repostar el generador, la app te pregunta cuántos litros hay en el depósito.</p>
+  <p>Es gratis. En el móvil que se queda junto al inversor (por ejemplo, uno viejo enchufado a la corriente y con WiFi), conecta con el inversor, pulsa <strong>Conectar</strong> → <strong>Este móvil será la ESTACIÓN</strong> y activa el modo estación. En tu móvil de siempre, pulsa <strong>Conectar</strong> → <strong>Este móvil será el MONITOR REMOTO</strong> y escribe el código de 6 caracteres que sale en el otro. Mientras el modo estación está activo, la pantalla de ese móvil se queda encendida, en Android hay una notificación permanente y, con o sin Pro, lleva un banner de anuncios. Desde el remoto, al repostar el generador, la app te pregunta cuántos litros hay en el depósito. Mantén las dos apps a la misma versión.</p>
+
+  <h3>¿Qué es el aviso de «conectar dos móviles» al abrir la app?</h3>
+  <p>Un aviso a pantalla completa que sale al abrir la app, una vez por arranque, para recordarte que puedes ver tu instalación desde cualquier sitio con un móvil viejo de estación y tu móvil de remoto. Sale hasta que dos móviles se hayan enlazado de verdad y se estén pasando datos; entonces no vuelve. No envía nada: la app solo guarda en tu móvil una marca de que ya los enlazaste. Espera a que acaben el formulario de Google, el aviso de Apple y el anuncio de apertura, y no sale con el modo estación puesto.</p>
 
   <h3>¿Por qué no se apaga la pantalla?</h3>
   <p>A propósito: mientras la app está abierta mantiene la pantalla encendida, para que un móvil que hace de estación no se duerma y deje de leer el inversor. Al cerrar la app, el móvil vuelve a apagar la pantalla como siempre.</p>
@@ -97,31 +116,48 @@
   <h3>¿Se puede ver una ficha más grande?</h3>
   <p>Sí: toca dos veces seguidas una ficha y se pone a pantalla completa; otros dos toques la devuelven a su sitio.</p>
 
+  <h3>¿Qué es «Esto es Pro» y el anuncio con recompensa?</h3>
+  <p>Al tocar una gráfica, una ficha para desplegarla o el diagrama de flujo sin ser Pro sale «Esto es Pro»: una vista previa bloqueada y dos caminos, hacerte Pro o ver un anuncio de Google AdMob con recompensa. Si lo ves entero, lo que pediste se abre mientras lo tengas abierto; al cerrarlo, la próxima vez pide otro anuncio. Si ahora no hay anuncio disponible, o no has dado el consentimiento de anuncios, no se abre nada y puedes probar más tarde o hacerte Pro. Con Pro todo se abre directamente y no se ve ningún anuncio con recompensa.</p>
+
+  <h3>¿Se guarda el histórico si no soy Pro?</h3>
+  <p>Sí. El histórico se guarda en tu móvil con Pro o sin él (y, si usas la estación, se publica para el remoto, como explica la política de privacidad). Solo se pinta mientras la app está conectada: para tenerlo completo, mantén una conexión estable o usa el modo estación y el remoto.</p>
+
+  <h3>La app me pide actualizar</h3>
+  <p>La app comprueba al abrirla, al volver a ella y una vez al día si hay una versión mínima obligatoria; si la tuya es más antigua, te lleva a la tienda para actualizar. Se hace para que la estación y el remoto se entiendan. Si no se puede comprobar (sin conexión, por ejemplo), la app funciona con normalidad.</p>
+
   <h3>He pagado Pro y no aparece</h3>
-  <p>Abre el muro de Pro (botón <strong>Pro</strong>) y pulsa <strong>Restaurar compras</strong>, con la misma cuenta de la tienda con la que pagaste.</p>
+  <p>Abre el muro de Pro (botón <strong>Pro</strong>) y pulsa <strong>Restaurar compras</strong>, con la misma cuenta de la tienda con la que pagaste. Lo mismo vale para las skins compradas.</p>
 
   <h2 id="privacidad">Política de privacidad</h2>
 
   <h3>Qué se guarda en tu móvil</h3>
-  <p>Las lecturas del inversor se guardan solo en tu dispositivo: un punto por minuto del día de hoy y un resumen por día (hasta 400 días) de cada magnitud, para las gráficas. También se guardan los ajustes que pones tú (capacidad del banco, datos del generador, idioma), la curva aprendida de tu batería, el identificador Bluetooth del último inversor (para volver a conectar sin elegirlo otra vez) y, si usas el modo estación o el remoto, su código. Todo se borra al desinstalar la app.</p>
+  <p>Las lecturas del inversor se guardan solo en tu dispositivo: un punto por minuto del día de hoy y un resumen por día (hasta 400 días) de cada magnitud, para las gráficas. También se guardan los ajustes que pones tú (capacidad del banco, datos del generador, idioma), la curva aprendida de tu batería, el identificador Bluetooth del último inversor y, si lo conectaste por WiFi, su dirección IP, puerto y marca (para volver a conectar sin elegirlo otra vez), el precio del kWh y la moneda, la skin puesta y, si usas el modo estación o el remoto, su código. Para el resto de funciones guarda también: cuántas veces has abierto la app y el día en que la abriste por primera vez (para que el anuncio de apertura salga 1 de cada 5 aperturas y nunca el día de la instalación), una marca de si ya enlazaste dos móviles (para no volver a enseñar el aviso de conectarlos), los días de uso y el estado del recordatorio de reseña, y la última respuesta de la suscripción Pro que confirmó RevenueCat, para no quitarte el Pro si un día no hay red. Todo se borra al desinstalar la app.</p>
+  <p>El histórico de las gráficas se guarda con Pro o sin él. Tampoco se envía nada por usar el aviso de conectar dos móviles ni por pedir un anuncio con recompensa.</p>
 
   <h3>Qué sale del móvil, y solo si usas el modo estación o el remoto</h3>
   <p>Con el modo estación activado, el móvil-estación publica en <strong>Google Firebase</strong> (Realtime Database, en servidores de la Unión Europea, y Cloud Firestore) bajo su código aleatorio de 6 caracteres:</p>
   <ul>
     <li>la lectura del momento del inversor (vatios, voltios, amperios, porcentajes y los cálculos de la app, como las horas de autonomía);</li>
     <li>el histórico de hoy y el resumen diario de los últimos 120 días, las horas del generador, el diésel estimado, los ciclos y la capacidad medida de la batería;</li>
-    <li>un estado técnico de la estación (si está publicando y el último error), para poder diagnosticarla si se queda muda.</li>
+    <li>un estado técnico de la estación (si está publicando y el último error), para poder diagnosticarla si se queda muda;</li>
+    <li>la plataforma (iOS o Android) y la versión de la app, para avisar si la estación y el remoto no llevan la misma.</li>
   </ul>
-  <p>El móvil que mira en remoto escribe bajo ese mismo código un aviso de «estoy mirando» (la hora, si tiene la app delante y un número de sesión aleatorio), para que la estación solo publique cuando hay alguien mirando, y la orden de «depósito rellenado» con los litros cuando la usas.</p>
-  <p>Nada de eso lleva tu nombre, correo, cuenta, ubicación ni identificadores del dispositivo: la app no tiene ninguno de esos datos. Lo publicado se va sustituyendo con cada envío y se queda bajo el código hasta el siguiente; si quieres que lo borremos, escríbenos con el código y lo eliminamos.</p>
+  <p>El móvil que mira en remoto escribe bajo ese mismo código un aviso de «estoy mirando» (la hora, si tiene la app delante, un número de sesión aleatorio y la plataforma y versión de su app), para que la estación solo publique cuando hay alguien mirando, y la orden de «depósito rellenado» con los litros cuando la usas.</p>
+  <p>Nada de eso lleva tu nombre, correo, cuenta, ubicación ni identificadores del dispositivo: la app no tiene ninguno de esos datos. (Los identificadores que usan AdMob y Analytics son aparte y no van con lo que publica la estación.) Lo publicado se va sustituyendo con cada envío y se queda bajo el código hasta el siguiente; si quieres que lo borremos, escríbenos con el código y lo eliminamos.</p>
+
+  <h3>Qué más sale del móvil, aunque no uses la estación</h3>
+  <p>Con independencia de lo anterior, la app habla con estos servicios (detalle en la tabla de abajo): los anuncios de Google AdMob (solo sin Pro, o con la estación puesta por el banner), la suscripción y las compras con RevenueCat, el recuento de uso con Firebase Analytics (solo si lo permite el formulario de Google) y una consulta a Firebase y, en iPhone y iPad, a la App Store, para saber si hay una versión mínima obligatoria. Esas consultas solo llevan los datos técnicos de toda conexión a internet (como la dirección IP). Con Pro, el SDK de Google se arranca igualmente para leer el estado del formulario de consentimiento, pero no se pide ningún anuncio (salvo el banner de la estación).</p>
+  <p>Además, si la app no sabe leer un aparato Bluetooth que parece un inversor, puede apuntar en Google Firebase (Cloud Firestore), como un simple contador, solo el principio del nombre Bluetooth («SRNE-», nunca el nombre entero ni números de serie) y, si lo dices en «¿Qué inversor tienes?», la familia que elijas. No lleva ningún identificador tuyo ni del móvil y se hace una vez por prefijo; sirve para saber qué marcas añadir.</p>
 
   <h3>Servicios de terceros</h3>
   <table>
     <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
     <tbody>
-      <tr><td>Google AdMob</td><td>Publicidad para quien no tiene Pro: un banner en el hueco de la ficha central y, en iPhone y iPad, un anuncio a pantalla completa al abrir la app (no al volver a ella desde segundo plano). Antes de mostrar ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google, que se puede cambiar después en <strong>Ajustes → Privacidad de los anuncios</strong>; en iPhone y iPad, además, con el aviso de seguimiento de Apple. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios; si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP. Con Pro no se carga ningún anuncio.</td></tr>
-      <tr><td>RevenueCat, Apple y Google Play</td><td>Cobran y comprueban la suscripción Pro. RevenueCat recibe un identificador anónimo de la app y el historial de compras de la tienda; no hay cuenta ni correo.</td></tr>
-      <tr><td>Google Firebase</td><td>Solo con el modo estación o el remoto, como se cuenta arriba.</td></tr>
+      <tr><td>Google AdMob</td><td>Publicidad. Sin Pro: un <strong>banner</strong> en el hueco de la ficha central (modo normal y remoto), un <strong>anuncio de apertura</strong> a pantalla completa (1 de cada 5 aperturas, nunca el día de la instalación; también al volver tras 30 minutos o más) y un <strong>anuncio con recompensa</strong> (nuevo) que solo sale si lo pides en «Esto es Pro» para abrir una gráfica, una ficha o el diagrama de flujo. Con Pro no se carga ningún anuncio, salvo el banner del modo estación (también con Pro). Antes de pedir ninguno se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google (UMP), que se puede cambiar después en <strong>Ajustes → Privacidad de los anuncios</strong>; y, en iPhone y iPad, además, con el aviso de seguimiento de Apple (ATT), que va después del formulario. Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo para personalizar y medir los anuncios (en Android, el identificador de publicidad de Google, según tu consentimiento y los ajustes de anuncios de tu móvil); si no, siguen saliendo sin personalizar. En los dos casos recibe datos técnicos del dispositivo, como la dirección IP. Sin el consentimiento, donde es obligatorio, no se pide ningún anuncio.</td></tr>
+      <tr><td>Firebase Analytics (Google)</td><td>Solo para contar cuánta gente usa la app (usuarios activos). Va <strong>apagado de origen</strong> y solo se enciende si el formulario de Google lo permite (o si no rige en tu país); si lo retiras en «Privacidad de los anuncios», se apaga. La app no registra ningún evento propio, solo los básicos del sistema (primera apertura, sesión y uso de la app), sin identificador de publicidad, sin identificador de usuario y con el consentimiento de anuncios y de personalización denegado en Analytics. Funciona también con Pro. Recibe datos técnicos y de uso del dispositivo y de la app, como la versión, el sistema o la dirección IP. El identificador de instancia de esa medición se comparte con RevenueCat para que sus compras se vean en la estadística.</td></tr>
+      <tr><td>RevenueCat, Apple y Google Play</td><td>Cobran y comprueban la suscripción Pro y las skins. RevenueCat recibe un identificador anónimo de la app y el historial de compras de la tienda (y, si Analytics está encendido, el identificador de instancia de Analytics); no hay cuenta ni correo.</td></tr>
+      <tr><td>Google Firebase</td><td>Con el modo estación o el remoto, como se cuenta arriba. Además, al abrir la app, al volver a ella y una vez al día, se lee un valor suelto (la versión mínima obligatoria) de la Realtime Database; no se envía nada tuyo.</td></tr>
+      <tr><td>Apple (App Store)</td><td>Solo en iPhone y iPad: se consulta la versión publicada de la app en la App Store para la actualización obligatoria. No se envía nada tuyo.</td></tr>
     </tbody>
   </table>
 
@@ -130,6 +166,8 @@
     <li><strong>Bluetooth</strong>: para buscar el inversor y leerlo.</li>
     <li><strong>Ubicación</strong> (solo Android anterior a la versión 12): el sistema la exige para buscar dispositivos Bluetooth; la app no lee ni usa tu ubicación.</li>
     <li><strong>Rastreo</strong> (iPhone y iPad): el aviso de Apple para personalizar los anuncios. Decir que no no quita funciones.</li>
+    <li><strong>Red local</strong> (iPhone y iPad): solo si conectas por WiFi, para hablar con el inversor o la pasarela de tu propia red; la app solo se comunica con el aparato que eliges o que encuentra en tu red de casa.</li>
+    <li><strong>Notificaciones</strong> (Android 13 o más): la notificación permanente que Android exige mientras el modo estación está activo.</li>
     <li><strong>Estado de la WiFi</strong> (Android): solo lo usa una instalación configurada a mano como propietaria del dispositivo, para reiniciar la WiFi de una estación que se queda sin conexión. En un móvil normal no hace nada.</li>
   </ul>
   <p>No se pide permiso de cámara, micrófono, contactos ni fotos.</p>
@@ -140,7 +178,7 @@
   <h2 id="contacto">Contacto y soporte</h2>
   <p>¿Dudas, fallos, un inversor que no conecta o quieres que borremos los datos de tu código? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">Axpert King Flow Monitor 1.0.5 · Gabriel Micó Victoria · Actualizado el 9 de octubre de 2026</div>
+  <div class="foot">Axpert King Flow Monitor 1.2.0 · Gabriel Micó Victoria · Actualizado el 6 de noviembre de 2026</div>
 </div>
 </body>
 </html>

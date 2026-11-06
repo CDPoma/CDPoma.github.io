@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Domotic no pide cuenta, nombre, correo ni teléfono. Tus aparatos, sus claves (en el llavero del iPhone) y el histórico se quedan en tu móvil. La app solo habla con tus aparatos por la red de tu casa o por Bluetooth. Sale algo a internet solo si activas tú el modo Estación o el Remoto (el estado de tu cuadro, bajo un código aleatorio) o los avisos (el token de notificaciones de Apple). Además hay anuncios (Google AdMob) en la versión gratuita, compras (RevenueCat), estadísticas de uso (Firebase Analytics, con tu consentimiento donde la ley lo exige) y una consulta a la App Store para saber si hay versión nueva.</p>
+    <p><strong>Resumen:</strong> Domotic no pide cuenta, nombre, correo ni teléfono. Tus aparatos, sus claves (en el llavero del iPhone) y el histórico se guardan en tu móvil. La app solo habla con tus aparatos por la red de tu casa o por Bluetooth. Sale algo a internet solo si activas tú el modo Estación o el Remoto (el estado de tu cuadro y un resumen de su histórico, bajo un código aleatorio) o los avisos (el token de notificaciones de Apple). Además hay anuncios de Google AdMob en la versión gratuita (un banner, un anuncio al abrir la app y un anuncio con recompensa para ver las gráficas), compras (RevenueCat), estadísticas de uso (Firebase Analytics, con tu consentimiento donde la ley lo exige) y una consulta a la App Store para saber si hay versión nueva. Con Domotic Pro no hay anuncios, salvo el banner del modo Estación.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -63,10 +63,13 @@
   <h2>Lo que se queda en tu teléfono</h2>
   <ul>
     <li><strong>Tus aparatos:</strong> nombre, tipo, dirección en tu red o identificador Bluetooth, y los nombres y ajustes de cada circuito.</li>
-    <li><strong>Las claves de tus aparatos</strong> (clave local de Tuya, contraseña de un Shelly o Tasmota, token de Home Assistant) y los <strong>códigos de administrador</strong> de la Estación y del Remoto: en el <strong>llavero del iPhone</strong> (Keychain). Nunca se envían a Firebase ni a ningún servidor nuestro.</li>
+    <li><strong>Las claves de tus aparatos</strong> (clave local de Tuya, contraseña de un Shelly o Tasmota, token de Home Assistant, el usuario que te da el puente Hue al emparejarlo, el token de Nanoleaf y la contraseña de tu cuenta TP-Link, que piden las bombillas y enchufes Tapo y algunos Kasa) y los <strong>códigos de administrador</strong> de la Estación y del Remoto: en el <strong>llavero del iPhone</strong> (Keychain). Nunca se envían a Firebase ni a ningún servidor nuestro. La cuenta de TP-Link solo se usa para hablar con la bombilla o el enchufe dentro de tu red; el correo de esa cuenta se guarda en el móvil junto con los ajustes del aparato.</li>
     <li><strong>El registro de maniobras</strong> (qué orden, cuándo, a qué circuito y con qué resultado) y tus ajustes.</li>
-    <li><strong>El histórico</strong> de potencia y de energía de la casa, de cada aparato y de cada circuito y, según lo que sea, la fuga, las horas encendido y cuándo se abrió (disparos), solo si tienes Pro (sin Pro no se guarda nada de esto).</li>
+    <li><strong>El histórico</strong> de potencia y de energía de la casa, de cada aparato y de cada circuito y, según lo que sea, la fuga, las horas encendido y cuándo se abrió (disparos). Se guarda para todos, con Pro o sin él, mientras la app está conectada; lo que depende de Pro es verlo (ver «Gratis y Pro»).</li>
     <li>El código de tu Estación o el del cuadro que miras, el modo elegido y el idioma.</li>
+    <li>El precio del kWh, si lo escribes, para calcular el gasto. El gasto sale en la moneda de la región del móvil: la app solo lee el idioma y la región del sistema, y no los guarda ni los envía.</li>
+    <li>Un marcador de que ya enlazaste dos móviles (Estación y Remoto), para que el aviso de conectar dos móviles que sale al abrir la app deje de salir. Nada se envía por ello.</li>
+    <li>El contador de aperturas y el día de la instalación, para el anuncio de apertura de la versión gratuita (1 de cada 5 aperturas, nunca el día de instalar).</li>
   </ul>
   <p>Todo esto se borra al desinstalar la app. Dentro de la app puedes borrar cada aparato (también se borra su clave del llavero).</p>
 
@@ -76,7 +79,7 @@
 
   <h3>Google Firebase Realtime Database (solo con la Estación o el Remoto)</h3>
   <ul>
-    <li><strong>Qué se publica:</strong> la Estación publica, bajo un <strong>código aleatorio de 10 caracteres</strong>, el estado del cuadro: nombres de los aparatos y de los circuitos, si están abiertos o cerrados, medidas (potencia, tensión, corriente, energía, fuga, temperatura, frecuencia), alarmas, qué maniobras tienes permitidas y, si la Estación es Pro, un resumen del último mes y año (energía, horas encendido y las últimas aperturas de cada aparato y circuito).</li>
+    <li><strong>Qué se publica:</strong> la Estación publica, bajo un <strong>código aleatorio de 10 caracteres</strong>, el estado del cuadro: nombres de los aparatos y de los circuitos, si están abiertos o cerrados, medidas (potencia, tensión, corriente, energía, fuga, temperatura, frecuencia), alarmas, qué maniobras tienes permitidas y un resumen del histórico del último mes y año (energía, horas encendido y las últimas aperturas de cada aparato y circuito), con Pro o sin él: el histórico se guarda para todos y la Estación lo publica siempre que tiene datos, para que el Remoto pueda dibujar las gráficas.</li>
     <li><strong>Qué no se publica:</strong> ni direcciones IP, ni claves, ni contraseñas, ni direcciones Bluetooth. Los textos de error se limpian de IP y direcciones antes de salir.</li>
     <li><strong>Órdenes:</strong> un Remoto con código de administrador escribe órdenes <strong>firmadas</strong> (aparato, circuito, abrir o cerrar, hora, número de un solo uso y firma) y la Estación responde con el resultado, también firmado. El código de administrador no pasa nunca por Firebase.</li>
     <li><strong>Quién puede verlo:</strong> el código es la llave del cuadro. <strong>Quien tenga el código de mirar puede ver el estado</strong>, así que no lo compartas con quien no quieras que lo vea. Para mandar hace falta además el código de administrador. Puedes generar códigos nuevos en cualquier momento (y el cuadro publicado con el código viejo se borra).</li>
@@ -95,14 +98,21 @@
   </ul>
 
   <h3>Google AdMob (anuncios, versión gratuita)</h3>
-  <p>La versión gratuita muestra un banner abajo y, de vez en cuando, un anuncio a pantalla completa al abrir la app (1 de cada 5 aperturas, nunca el día de la instalación y nunca con la Estación puesta). Antes de pedir ningún anuncio se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google (UMP); en el iPhone, además, con el aviso de Apple de seguimiento (ATT). Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo (IDFA) para personalizar y medir los anuncios; si no, los anuncios siguen saliendo sin personalizar. En ambos casos Google recibe datos técnicos del dispositivo, como la dirección IP. Google no recibe nada de tu cuadro ni de tus aparatos.</p>
-  <p>Lo que elegiste en el formulario de Google se cambia en la app, en Ajustes → «Privacidad de los anuncios» (donde ese formulario se aplica), y el permiso de seguimiento en Ajustes del iPhone → Privacidad y seguridad → Rastreo. Con Pro no hay anuncios, salvo el banner del modo Estación. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Google</a>.</p>
+  <p>La versión gratuita muestra tres tipos de anuncio de Google AdMob:</p>
+  <ul>
+    <li><strong>Banner</strong> abajo, en el modo normal, en el Remoto y en la Estación.</li>
+    <li><strong>Anuncio a pantalla completa al abrir la app</strong>: 1 de cada 5 aperturas, nunca el día de la instalación y nunca con la Estación puesta.</li>
+    <li><strong>Anuncio con recompensa</strong> (vídeo), solo si tú lo pides: para ver las gráficas sin Pro (no se ofrece con la Estación puesta), al tocar la ficha de un aparato o de una línea sale «Esto es Pro» con el botón «Ver un anuncio y abrirlo ahora». Al ganar la recompensa se abren esas gráficas mientras sigan abiertas; la próxima vez que las abras se pide otro anuncio. No se guarda ningún desbloqueo.</li>
+  </ul>
+  <p>Antes de pedir ningún anuncio se pide consentimiento: en el Espacio Económico Europeo, el Reino Unido y Suiza, con el formulario de Google (UMP); en el iPhone, después, con el aviso de Apple de seguimiento (ATT). Si lo permites, AdMob puede usar el identificador de publicidad del dispositivo (IDFA) para personalizar y medir los anuncios; si no, los anuncios siguen saliendo sin personalizar. En ambos casos Google recibe datos técnicos del dispositivo, como la dirección IP. Google no recibe nada de tu cuadro ni de tus aparatos. Si no das el consentimiento que pide el formulario de Google, la app deja de pedir anuncios y funciona igual.</p>
+  <p>Con Domotic Pro, fuera del modo Estación, la app no arranca AdMob: no sale el formulario de Google ni el aviso de seguimiento. En el modo Estación sí hay banner, también con Pro, y entonces sí se piden.</p>
+  <p>Lo que elegiste en el formulario de Google se cambia en la app, en Ajustes → «Privacidad de los anuncios» (donde ese formulario se aplica), y el permiso de seguimiento en Ajustes del iPhone → Privacidad y seguridad → Rastreo. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Google</a>.</p>
 
   <h3>RevenueCat (compras)</h3>
   <p>Comprueba con Apple si tienes la suscripción Domotic Pro. Usa un identificador anónimo de la instalación; Apple gestiona el pago y nosotros nunca vemos datos de pago. No recibe datos de tu cuadro. Si la analítica tiene consentimiento, RevenueCat recibe también el identificador de instalación de Firebase para que las compras salgan en las mismas estadísticas. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Política de RevenueCat</a>.</p>
 
   <h3>Firebase Analytics (estadísticas de uso)</h3>
-  <p>Domotic usa Google Analytics para Firebase en iPhone para saber cuánta gente usa la app. Solo se envían los eventos automáticos del SDK (primera apertura, sesión, tiempo de uso), un identificador de la instalación (no es tu nombre ni el identificador de publicidad) y datos técnicos básicos (país aproximado, sistema, versión de la app). <strong>No usa el identificador de publicidad (IDFA)</strong>, no asigna identificador de usuario y no envía nada de tus aparatos. En el Espacio Económico Europeo, el Reino Unido y Suiza queda <strong>desactivada hasta que aceptes</strong> el formulario de Google; fuera de esa zona está activa por defecto. Puedes pedir que se deje de usar escribiendo al correo de contacto.</p>
+  <p>Domotic usa Google Analytics para Firebase en iPhone para saber cuánta gente usa la app. Solo se envían los eventos automáticos del SDK (primera apertura, sesión, tiempo de uso), un identificador de la instalación (no es tu nombre ni el identificador de publicidad) y datos técnicos básicos (país aproximado, sistema, versión de la app). <strong>No usa el identificador de publicidad (IDFA)</strong>, no asigna identificador de usuario y no envía nada de tus aparatos. En el Espacio Económico Europeo, el Reino Unido y Suiza queda <strong>desactivada hasta que aceptes</strong> el formulario de Google; fuera de esa zona está activa por defecto. Con Pro, fuera del modo Estación, ese formulario no sale (no se arranca AdMob): dentro de esa zona la analítica queda desactivada y fuera de ella se activa según la región del móvil (el idioma y la región del sistema, que solo se leen). Puedes pedir que se deje de usar escribiendo al correo de contacto.</p>
 
   <h3>App Store (actualización obligatoria)</h3>
   <p>Al abrir la app se consulta a Apple (<code>itunes.apple.com</code>) cuál es la última versión de Domotic a la venta. Esa consulta lleva solo el identificador de la app; Apple ve, como en cualquier petición, tu dirección IP. No se envía nada tuyo.</p>
@@ -121,9 +131,16 @@
     <li><code>Bluetooth</code>: para los aparatos que solo hablan Bluetooth.</li>
     <li><code>Cámara</code>: solo para escanear el QR de la Estación. No hace ni guarda fotos.</li>
     <li><code>Notificaciones</code>: solo si activas los avisos.</li>
-    <li><code>Seguimiento</code>: el aviso de Apple antes de personalizar los anuncios.</li>
+    <li><code>Seguimiento</code>: el aviso de Apple antes de personalizar los anuncios. Solo sale si la app va a mostrar anuncios.</li>
   </ul>
   <p>No se pide ubicación, micrófono, contactos ni fotos.</p>
+
+  <h2>Gratis y Pro</h2>
+  <ul>
+    <li><strong>Gratis:</strong> buscar, añadir, leer y controlar tus aparatos, la Estación, el Remoto y los avisos, con banner, anuncio al abrir la app (1 de cada 5 aperturas) y, para ver las gráficas, un anuncio con recompensa cada vez que las abres (salvo con la Estación puesta). El histórico se guarda para todos.</li>
+    <li><strong>Domotic Pro</strong> (suscripción, gestionada con RevenueCat): sin anuncios (ni banner, ni anuncio al abrir, ni el anuncio con recompensa de las gráficas) y las gráficas siempre abiertas. La única excepción es el modo Estación, que lleva banner también con Pro.</li>
+    <li>Tener Pro o no lo decide RevenueCat con Apple. Un fallo al comprobarlo no te quita el Pro.</li>
+  </ul>
 
   <h2>Compras dentro de la app</h2>
   <p>Domotic Pro: <strong>1,99 €/mes o 14,99 €/año</strong> en España (en tu país, el precio local aparece en la app antes de pagar). Se renueva sola hasta que la canceles en los Ajustes del iPhone → tu nombre → Suscripciones. «Restaurar compras» está en la pantalla de Pro. Se aplica el <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">contrato de licencia estándar de Apple (EULA)</a>.</p>
@@ -137,7 +154,7 @@
   <h2>Contacto</h2>
   <p>Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si pides que borremos un cuadro o un token, incluye el código del cuadro.</p>
 
-  <div class="foot">Domotic 1.0 · Vigente desde 2026-10-31 · Gabriel Micó Victoria</div>
+  <div class="foot">Domotic 1.0.1 · Vigente desde 2026-11-06 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>

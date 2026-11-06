@@ -48,11 +48,11 @@
   <p class="sub">Support and privacy</p>
 
   <div class="card">
-    <p><strong>In short:</strong> BMS Monitor reads the BMS in your lithium battery over Bluetooth and shows what it measures. There's no account or sign-up, and readings never leave your phone unless you turn on station mode (Pro) to watch them from another one. The free version shows ads; Pro removes them.</p>
+    <p><strong>In short:</strong> BMS Monitor reads the BMS in your lithium battery over Bluetooth (or over Wi-Fi, with a gateway) and shows what it measures. There's no account or sign-up, and your battery readings only leave your phone if you turn on station mode to watch them from another phone (everything else that is sent is described below). The free version shows ads, including a rewarded ad that opens the charts and the pack details; Pro removes them all, except the station-mode banner. The app counts how many people use it with Firebase Analytics, using minimal data, no advertising identifier and, where the law requires consent, only if you give it.</p>
   </div>
 
   <h2>What the app does</h2>
-  <p>It connects over Bluetooth Low Energy (BLE) to a BMS (battery management system) that uses the JBD/Xiaoxiang protocol and shows the live status of your LiFePO4 or lithium-ion battery.</p>
+  <p>It connects over Bluetooth Low Energy (BLE) to a BMS (battery management system) and shows the live status of your LiFePO4 or lithium-ion battery. It can also read it over your home Wi-Fi, without Bluetooth, through a serial-to-Wi-Fi gateway (such as the Elfin EW11) on the BMS's serial port or a Victron GX. Over both Bluetooth and Wi-Fi the app only reads: it doesn't change any setting on your BMS.</p>
   <h3>Free</h3>
   <ul>
     <li>State of charge, pack voltage, charge or discharge current, and power.</li>
@@ -60,62 +60,90 @@
     <li>Capacity: amp-hours remaining out of the nominal capacity.</li>
     <li>Average temperature and each sensor's reading.</li>
     <li>Protection: charge and discharge MOSFETs, how many cells the BMS is balancing, and any active alarm.</li>
+    <li>BMS information (in Settings): cells in series, sensors, configured nominal capacity and MOSFET status.</li>
+    <li>Reading over Bluetooth or Wi-Fi ("Add" button).</li>
+    <li>Station and remote modes, to watch the battery from another phone ("Link" button).</li>
+    <li>The price per kWh and the currency, in Settings, to work out the savings the charts show.</li>
+    <li>The chart history is always saved, whether you have Pro or not.</li>
+  </ul>
+  <h3>Free, with a rewarded ad each time</h3>
+  <ul>
+    <li>The "Pack status" charts (the "+"): generation in W with sun hours and a thin voltage line, and energy generated and consumed in kWh with a thin line for the Ah remaining; by day (lines), week, month or year (bars).</li>
+    <li>The "Capacity" details (the "+"): every cell's voltage (highest and lowest marked, red below 2.9 V, with a bolt on the cells being balanced), cycle count and the battery's measured health.</li>
+    <li>Without Pro, tapping the "+" opens the "This is Pro" screen with a "Watch an ad and open it now" button. If you watch the whole ad, it opens just that once: after you close it, the next time will ask for another ad. If no ad is available at that moment, it doesn't open.</li>
   </ul>
   <h3>With BMS Monitor Pro</h3>
   <ul>
-    <li>Pack details: every cell's voltage (highest and lowest marked, red below 2.9 V, with a bolt on the cells being balanced), cycle count and the battery's measured health.</li>
-    <li>Charts of voltage, charge and discharge, and remaining capacity, by day, week, month or year.</li>
-    <li>BMS information: cells in series, sensors, configured nominal capacity, cycles and MOSFET status.</li>
-    <li>Station and remote modes, to watch the battery from another phone (both phones with Pro).</li>
-    <li>No ads.</li>
+    <li>The charts and the pack details always open, with nothing to ask for.</li>
+    <li>No ads: no banner (in normal and remote modes), no app-open ad and no rewarded ads. Only station mode shows a banner, even with Pro.</li>
   </ul>
   <p>While the app is open, the screen stays on, so the phone acting as a station doesn't go to sleep. If you don't need it on, close the app.</p>
 
   <h2>Compatibility</h2>
-  <p>BMS Monitor reads JBD (Jiabaida) "Smart BMS" units, the Xiaoxiang family, with Bluetooth: the hardware inside many batteries from Overkill Solar, ECO-WORTHY, Vatrer Power, LIONTRON, Epoch or Datou, and many DIY packs. It is not an official app of any of those brands. Other BMS families use different protocols, and the app can't read them.</p>
+  <p>BMS Monitor was built for JBD (Jiabaida) "Smart BMS" units, the Xiaoxiang family, with Bluetooth: the hardware inside many batteries from Overkill Solar, ECO-WORTHY, Vatrer Power, LIONTRON, Epoch or Datou, and many DIY packs. Those are the ones tested the most. The app also includes readers for other families (for example JK, Daly, ANT, LiTime/Redodo, Renogy, Seplos, Victron or Pylontech), written from each protocol's documentation and from captures from other projects, and mostly without having been tested on the real device: some models may not read well or may not give all the data. It is not an official app of any of those brands.</p>
 
   <h2>Frequently asked questions</h2>
   <h3>My battery doesn't show up or won't connect</h3>
-  <p>Make sure your phone's Bluetooth is on and you're within a few meters of the BMS. The BMS accepts only one connection at a time: if another phone or app is connected to it, close it first. On Android the app also needs the location permission, which the system requires to scan for Bluetooth devices.</p>
+  <p>Make sure your phone's Bluetooth is on and you're within a few meters of the BMS. The BMS accepts only one connection at a time: if another phone or app is connected to it, close it first. On Android the app also needs the location permission, which the system requires to scan for Bluetooth devices. If the app can't read your device, it asks "Which BMS do you have?" (see below for what is counted then).</p>
+  <h3>How do I read the battery over Wi-Fi?</h3>
+  <p>Tap "Add", choose Wi-Fi, type the IP address and port of the serial-to-Wi-Fi gateway or the Victron GX (or tap "Search my network"), choose the brand and tap "Connect". The phone and the device must be on the same Wi-Fi, and Bluetooth can't be in use: the battery is read by one route at a time. On iPhone and iPad, Apple's local network prompt appears the first time.</p>
   <h3>How is battery health measured?</h3>
   <p>Automatically, the next time the battery reaches 100% and stops taking charge for a few minutes. If it had gone nearly empty before, the app counts the amp-hours that went in; otherwise it takes the amp-hours the BMS reports with the pack full. Until then you'll see "health not measured".</p>
-  <h3>How do station and remote modes work? (Pro)</h3>
-  <p>Leave one phone next to the battery, with Bluetooth, an internet connection and a charger, and turn on station mode there: it gives you a 6-character code. On another phone, "View remotely" with that code shows the battery live. The station publishes its readings while someone is watching and, when nobody is, one every five minutes.</p>
+  <h3>How do station and remote modes work?</h3>
+  <p>Leave one phone next to the battery, with Bluetooth (or Wi-Fi), an internet connection and a charger, tap "Link" and choose "This phone will be the STATION": it gives you a 6-character code. On your other phone, tap "Link", choose "This phone will be the REMOTE MONITOR" and type that code: you'll see the battery live. The station publishes its readings while someone is watching and, when nobody is, one every five minutes. Both apps must be up to date (if not, the app tells you). Both modes are free; the phone acting as a station shows an ad banner even with Pro.</p>
+  <h3>Why does a notice about connecting two phones appear?</h3>
+  <p>When you open the app, until you've really linked two phones (a station and a remote) and data has passed between them, a notice explains how to do it. "Not now" or the X closes it, and it comes back the next time you open the app; it doesn't appear if that phone is already a station or is watching remotely. It appears with Pro too. Nothing is sent because of it: the phone only remembers that you already linked them, so it doesn't remind you again.</p>
   <h3>How do I change the language?</h3>
   <p>In Settings → Language (the gear at the top): Spanish (Spain), Spanish (Latin America) or English. The first time, the app follows your phone's language.</p>
 
   <h2>What data is stored, and where</h2>
-  <p>No personal data is collected: the app doesn't ask for a name, email, phone number or any kind of account.</p>
+  <p>The app doesn't ask for a name, email, phone number or any kind of account, and nothing below is tied to your name. Still, as with any app with ads and statistics, the services below receive random identifiers and the IP address of your connection.</p>
   <ul>
-    <li><strong>On your phone</strong>: the chart history (kept for everyone and shown with Pro), the measured health, the name and identifier of the last BMS you connected, the language you chose and your station code.</li>
-    <li><strong>On Google Firebase, only with station or remote mode</strong>: the station publishes the latest BMS reading (voltages, current, temperatures, percentages and protection status) to Realtime Database, and the chart history and measured health to Cloud Firestore, all under its random code. The phone watching remotely only writes an "I'm still here" signal (the time, whether the app is in the foreground and a random session identifier), so the station knows when to publish.</li>
+    <li><strong>On your phone</strong>: the chart history (saved for everyone; with Pro it always opens, without Pro, after a rewarded ad), the measured health, the name and identifier of the last BMS you connected (and its key or PIN if your model asks for one), the last Wi-Fi address and port used, the language, the chosen skin, the price per kWh and the currency, your station code and whether it's active, whether you've already linked two phones, a few simple counters (app openings, used to decide when the app-open ad is due, and days of use, for the review reminder) and a copy of the last thing RevenueCat said about your Pro, so it doesn't drop when you're offline.</li>
+    <li><strong>On Google Firebase, only with station or remote mode</strong>: the station publishes the latest BMS reading (voltages, current, temperatures, percentages and protection status) to Realtime Database, and the chart history and measured health to Cloud Firestore, all under its random code, plus the platform and version of the app. The phone watching remotely only writes an "I'm still here" signal (the time, whether the app is in the foreground and a random session identifier, plus its platform and version), so the station knows when to publish.</li>
+    <li><strong>On Google Firebase, if the app doesn't recognize a BMS</strong>: when it can't read your device, or sees a nearby Bluetooth device that looks like a BMS and isn't recognized, it may add 1 to an anonymous counter with the first letters of its Bluetooth name (for example "JK-"; never the full name or its address) and, if you choose one in "Which BMS do you have?", another with the family you chose. It carries no identifier of yours; as with any connection, Google sees the IP address.</li>
+    <li><strong>Usage measurement with Firebase Analytics</strong>: only to count how many people use the app (openings, sessions and time of use; the app logs no custom events). It is sent with a random installation identifier, the phone model, the system and app versions, the language and an approximate location (country or city) deduced from the connection, with no advertising identifier, no name or account, and with Analytics' advertising features turned off. In the European Economic Area, the UK and Switzerland it only turns on if you allow it in Google's form (you can change this in Settings → "Ad privacy options"). It doesn't use Apple's tracking permission.</li>
+    <li><strong>Version check</strong>: when you open the app, when you return to it after at least 30 minutes away and once a day, the app reads the minimum version it needs from Firebase and, on iPhone and iPad, asks Apple (itunes.apple.com) which version is on sale; if yours is older, a screen takes you to the store and the app can't be used until you update. These are read-only requests: they don't send your data, but, as with any connection, Apple and Google see the IP address.</li>
   </ul>
+  <p>In Wi-Fi mode, the app only talks to the local-network address you type or pick and sends nothing outside your network because of it; what gets published afterwards depends on whether you turn on station mode.</p>
   <h3>How to delete your data</h3>
   <ul>
     <li><strong>What's on your phone</strong>: it's deleted when you uninstall the app.</li>
     <li><strong>What station mode published</strong>: it's overwritten with every reading and isn't tied to any identity, only to the code. The app doesn't have a button to delete it from the server yet: email us your station code and we'll delete it.</li>
+    <li><strong>What Analytics measures and the anonymous BMS counters</strong>: they aren't tied to any identity or name. Where the law requires consent, you can turn measurement off in Settings → "Ad privacy options".</li>
   </ul>
 
   <h2>Permissions</h2>
   <ul>
     <li><code>Bluetooth</code>: to find and connect to your BMS.</li>
     <li><code>Location</code> (Android only): the system requires it to scan for nearby Bluetooth devices. The app doesn't read or store your location.</li>
+    <li><code>Local network</code> (iPhone and iPad): Apple's prompt the first time you read the battery over Wi-Fi, to talk to your gateway or Victron GX on your own network.</li>
+    <li><code>Notifications</code> (Android only): the permanent notification that keeps the station alive while it's on.</li>
     <li><code>Tracking</code> (iPhone and iPad): Apple's prompt before ads are personalized.</li>
   </ul>
   <p>The app doesn't ask for camera, microphone, contacts or photos.</p>
 
   <h2>Ads</h2>
-  <p>The free version shows Google AdMob ads: a banner at the bottom and, on iPhone and iPad, a full-screen ad when the app opens. Consent is asked before any of them is shown: in the European Economic Area, the UK and Switzerland, with Google's form; on iPhone and iPad, with Apple's tracking prompt. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads still show, but not personalized. Either way it receives technical data from the device, such as the IP address.</p>
-  <p>What you chose in Google's form can be changed in the app, in Settings → "Ad privacy options" (it only appears where that form applies). The tracking permission is changed in Settings → Privacy &amp; Security → Tracking (iPhone) or in Settings → Google → Ads (Android). Pro has no ads at all.</p>
+  <p>The free version shows Google AdMob ads, of three kinds:</p>
+  <ul>
+    <li><strong>Banner</strong>, at the bottom.</li>
+    <li><strong>Full-screen ad when the app opens</strong> (iPhone, iPad and Android): at most 1 in every 5 openings (opening the app and returning to it after at least 30 minutes away both count), never on the day you install the app, and never while station mode is on.</li>
+    <li><strong>Rewarded ad</strong> (new): it only appears if you ask for it, from the "This is Pro" screen, to open the charts or the pack details once. You must watch it to the end for it to open, and another one is requested each time. It never appears on its own or while station mode is on. Nothing is saved on the phone for watching it.</li>
+  </ul>
+  <p>Consent is asked before any of them is shown: in the European Economic Area, the UK and Switzerland, with Google's form (UMP); on iPhone and iPad, with Apple's tracking prompt (ATT). If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads still show, but not personalized. Either way it receives technical data from the device, such as the IP address.</p>
+  <p>What you chose in Google's form can be changed in the app, in Settings → "Ad privacy options" (it only appears where that form applies). The tracking permission is changed in Settings → Privacy &amp; Security → Tracking (iPhone) or in Settings → Google → Ads (Android).</p>
+  <p><strong>What changes with Pro:</strong> no banner (in normal and remote modes), no app-open ad and no rewarded ads, because the charts and the pack details always open. Only station mode shows a banner, even with Pro.</p>
 
   <h2>In-app purchases</h2>
-  <p>BMS Monitor Pro is a monthly or yearly subscription (€1.99/month or €14.99/year in Spain; the price for your country and store is shown in the app before you pay) that renews automatically until you cancel it in your Apple or Google Play account. RevenueCat handles the purchase on top of Apple's payment system (iPhone and iPad) or Google Play's (Android); it checks whether you have the subscription but doesn't receive your battery data. To get it back on another device, use "Restore purchases" on the Pro screen.</p>
+  <p>BMS Monitor Pro is a monthly or yearly subscription (€1.99/month or €14.99/year in Spain; the price for your country and store is shown in the app before you pay) that renews automatically until you cancel it in your Apple or Google Play account. RevenueCat handles the purchase on top of Apple's payment system (iPhone and iPad) or Google Play's (Android); it checks whether you have the subscription but doesn't receive your battery data. If Analytics measurement is on on your phone, RevenueCat also receives Analytics' random identifier so it can count purchases in its reports. To get Pro back on another device, use "Restore purchases" on the Pro screen.</p>
+  <p>The skin store (the palette icon next to the gear) sells looks that only change colors, fonts, shapes and icons, never your data or features: €0.49 each or, for €0.99, a pack of 3 of your choice (prices in Spain). They are one-time purchases that don't expire, also handled by RevenueCat, and you get them back with "Restore purchases" in the store itself.</p>
 
   <h2>Third parties</h2>
   <ul>
-    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a>: station and remote modes.</li>
-    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>: Pro subscription check.</li>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: ads in the free version.</li>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a>: station and remote modes, usage measurement (Analytics), anonymous BMS counters and version check.</li>
+    <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>: Pro subscription and skin purchase check.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: ads in the free version (banner, app-open and rewarded) and the consent form.</li>
+    <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>: on iPhone and iPad, the check of the version on sale.</li>
   </ul>
 
   <h2>Languages</h2>
@@ -130,7 +158,7 @@
   <h2>Contact and support</h2>
   <p>Questions, bugs or suggestions? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it's about a connection, include your phone model and the name your BMS shows in the Bluetooth list.</p>
 
-  <div class="foot">BMS Monitor 1.0.5 · Effective 2026-10-02 · Gabriel Micó Victoria</div>
+  <div class="foot">BMS Monitor 1.2.0 · Effective 2026-11-06 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>

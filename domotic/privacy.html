@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="support.html">Help and support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Domotic asks for no account, name, email or phone number. Your devices, their keys (in the iPhone keychain) and the history stay on your phone. The app talks to your devices only over your home network or Bluetooth. Something goes out to the internet only if you turn on Station or Remote mode (the state of your panel, under a random code) or notifications (Apple's notification token). There are also ads (Google AdMob) in the free version, purchases (RevenueCat), usage statistics (Firebase Analytics, with your consent where the law requires it) and a query to the App Store to check for a new version.</p>
+    <p><strong>Summary:</strong> Domotic asks for no account, name, email or phone number. Your devices, their keys (in the iPhone keychain) and the history are stored on your phone. The app talks to your devices only over your home network or Bluetooth. Something goes out to the internet only if you turn on Station or Remote mode (the state of your panel and a summary of its history, under a random code) or notifications (Apple's notification token). There are also Google AdMob ads in the free version (a banner, an ad when opening the app and a rewarded ad to see the charts), purchases (RevenueCat), usage statistics (Firebase Analytics, with your consent where the law requires it) and a query to the App Store to check for a new version. With Domotic Pro there are no ads, except the banner in Station mode.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -63,10 +63,13 @@
   <h2>What stays on your phone</h2>
   <ul>
     <li><strong>Your devices:</strong> name, type, address on your network or Bluetooth identifier, and the names and settings of each circuit.</li>
-    <li><strong>Your devices' keys</strong> (Tuya local key, a Shelly or Tasmota password, a Home Assistant token) and the <strong>administrator codes</strong> of the Station and the Remote: in the <strong>iPhone keychain</strong>. They are never sent to Firebase or to any server of ours.</li>
+    <li><strong>Your devices' keys</strong> (Tuya local key, a Shelly or Tasmota password, a Home Assistant token, the user a Hue Bridge gives you when you pair it, the Nanoleaf token and the password of your TP-Link account, which Tapo bulbs and plugs and some Kasa devices ask for) and the <strong>administrator codes</strong> of the Station and the Remote: in the <strong>iPhone keychain</strong>. They are never sent to Firebase or to any server of ours. The TP-Link account is only used to talk to the bulb or plug inside your network; that account's email is stored on the phone with the device's settings.</li>
     <li><strong>The switching log</strong> (which command, when, on which circuit and with what result) and your settings.</li>
-    <li><strong>The history</strong> of power and energy for the whole house, each device and each circuit and, depending on what it is, leakage, hours on and when it opened (trips), only if you have Pro (without Pro none of this is stored).</li>
+    <li><strong>The history</strong> of power and energy for the whole house, each device and each circuit and, depending on what it is, leakage, hours on and when it opened (trips). It is stored for everyone, with Pro or without, while the app is connected; what depends on Pro is seeing it (see "Free and Pro").</li>
     <li>The code of your Station or of the panel you watch, the chosen mode and the language.</li>
+    <li>The price per kWh, if you enter it, to work out the cost. The cost is shown in the currency of your phone's region: the app only reads the system language and region, and neither stores nor sends them.</li>
+    <li>A marker that you have already linked two phones (Station and Remote), so that the reminder to connect two phones shown when opening the app stops appearing. Nothing is sent because of it.</li>
+    <li>The launch counter and the installation day, for the free version's opening ad (1 launch in 5, never on the day of installation).</li>
   </ul>
   <p>All of this is deleted when you uninstall the app. Inside the app you can delete each device (its key is also removed from the keychain).</p>
 
@@ -76,7 +79,7 @@
 
   <h3>Google Firebase Realtime Database (only with Station or Remote)</h3>
   <ul>
-    <li><strong>What is published:</strong> the Station publishes, under a <strong>random 10-character code</strong>, the state of the panel: names of devices and circuits, whether they are open or closed, readings (power, voltage, current, energy, leakage, temperature, frequency), alarms, which operations you have allowed and, if the Station is Pro, a summary of the last month and year (energy, hours on and the latest openings of each device and circuit).</li>
+    <li><strong>What is published:</strong> the Station publishes, under a <strong>random 10-character code</strong>, the state of the panel: names of devices and circuits, whether they are open or closed, readings (power, voltage, current, energy, leakage, temperature, frequency), alarms, which operations you have allowed and a summary of the history for the last month and year (energy, hours on and the latest openings of each device and circuit), with Pro or without: the history is stored for everyone and the Station publishes it whenever it has data, so the Remote can draw the charts.</li>
     <li><strong>What is not published:</strong> no IP addresses, keys, passwords or Bluetooth addresses. Error texts are stripped of IPs and addresses before leaving the phone.</li>
     <li><strong>Commands:</strong> a Remote with the administrator code writes <strong>signed</strong> commands (device, circuit, open or close, time, one-time number and signature) and the Station replies with the result, also signed. The administrator code never goes through Firebase.</li>
     <li><strong>Who can see it:</strong> the code is the key to the panel. <strong>Anyone with the view code can see the state</strong>, so do not share it with anyone you do not want to see it. Sending commands also needs the administrator code. You can generate new codes at any time (and the panel published under the old code is deleted).</li>
@@ -95,14 +98,21 @@
   </ul>
 
   <h3>Google AdMob (ads, free version)</h3>
-  <p>The free version shows a banner at the bottom and, now and then, a full-screen ad when opening the app (1 in every 5 openings, never on the day of installation and never while the Station is on). Before requesting any ad, consent is asked: in the European Economic Area, the United Kingdom and Switzerland, with Google's form (UMP); on iPhone, also with Apple's tracking prompt (ATT). If you allow it, AdMob may use the device advertising identifier (IDFA) to personalise and measure ads; if not, ads still appear but are not personalised. In both cases Google receives technical device data, such as the IP address. Google receives nothing about your panel or your devices.</p>
-  <p>What you chose in Google's form can be changed in the app, in Settings &rarr; "Ad privacy options" (where that form applies), and the tracking permission in iPhone Settings &rarr; Privacy &amp; Security &rarr; Tracking. With Pro there are no ads, except the banner in Station mode. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google policy</a>.</p>
+  <p>The free version shows three kinds of Google AdMob ad:</p>
+  <ul>
+    <li><strong>Banner</strong> at the bottom, in normal mode, on the Remote and on the Station.</li>
+    <li><strong>Full-screen ad when opening the app</strong>: 1 in every 5 openings, never on the day of installation and never while the Station is on.</li>
+    <li><strong>Rewarded ad</strong> (video), only if you ask for it: to see the charts without Pro (not offered while the Station is on), tapping the card of a device or a line shows "This is Pro" with the button "Watch an ad and open it now". When the reward is earned, those charts open for as long as they stay open; the next time you open them another ad is requested. No unlock is stored.</li>
+  </ul>
+  <p>Before requesting any ad, consent is asked: in the European Economic Area, the United Kingdom and Switzerland, with Google's form (UMP); on iPhone, afterwards, with Apple's tracking prompt (ATT). If you allow it, AdMob may use the device advertising identifier (IDFA) to personalise and measure ads; if not, ads still appear but are not personalised. In both cases Google receives technical device data, such as the IP address. Google receives nothing about your panel or your devices. If you do not give the consent Google's form asks for, the app stops requesting ads and works the same.</p>
+  <p>With Domotic Pro, outside Station mode, the app does not start AdMob: neither Google's form nor the tracking prompt appears. In Station mode there is a banner, also with Pro, and then they are requested.</p>
+  <p>What you chose in Google's form can be changed in the app, in Settings &rarr; "Ad privacy options" (where that form applies), and the tracking permission in iPhone Settings &rarr; Privacy &amp; Security &rarr; Tracking. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google policy</a>.</p>
 
   <h3>RevenueCat (purchases)</h3>
   <p>It checks with Apple whether you have the Domotic Pro subscription. It uses an anonymous installation identifier; Apple handles the payment and we never see payment details. It receives no data about your panel. If analytics has consent, RevenueCat also receives the Firebase installation identifier so that purchases appear in the same statistics. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat policy</a>.</p>
 
   <h3>Firebase Analytics (usage statistics)</h3>
-  <p>Domotic uses Google Analytics for Firebase on iPhone to know how many people use the app. Only the SDK's automatic events are sent (first open, session, engagement time), an installation identifier (not your name or the advertising identifier) and basic technical data (approximate country, system, app version). It <strong>does not use the advertising identifier (IDFA)</strong>, assigns no user ID and sends nothing about your devices. In the European Economic Area, the United Kingdom and Switzerland it stays <strong>off until you accept</strong> Google's form; outside that area it is on by default. You can ask for it to be stopped by writing to the contact email.</p>
+  <p>Domotic uses Google Analytics for Firebase on iPhone to know how many people use the app. Only the SDK's automatic events are sent (first open, session, engagement time), an installation identifier (not your name or the advertising identifier) and basic technical data (approximate country, system, app version). It <strong>does not use the advertising identifier (IDFA)</strong>, assigns no user ID and sends nothing about your devices. In the European Economic Area, the United Kingdom and Switzerland it stays <strong>off until you accept</strong> Google's form; outside that area it is on by default. With Pro, outside Station mode, that form does not appear (AdMob is not started): inside that area analytics stays off and outside it is turned on according to the phone's region (the system language and region, which are only read). You can ask for it to be stopped by writing to the contact email.</p>
 
   <h3>App Store (mandatory update)</h3>
   <p>When the app opens it asks Apple (<code>itunes.apple.com</code>) for the latest Domotic version on sale. The query carries only the app's identifier; Apple sees your IP address, as with any request. Nothing about you is sent.</p>
@@ -121,9 +131,16 @@
     <li><code>Bluetooth</code>: for devices that only speak Bluetooth.</li>
     <li><code>Camera</code>: only to scan the Station's QR code. It takes and stores no photos.</li>
     <li><code>Notifications</code>: only if you turn on notifications.</li>
-    <li><code>Tracking</code>: Apple's prompt before personalising ads.</li>
+    <li><code>Tracking</code>: Apple's prompt before personalising ads. It only appears if the app is going to show ads.</li>
   </ul>
   <p>Location, microphone, contacts and photos are not requested.</p>
+
+  <h2>Free and Pro</h2>
+  <ul>
+    <li><strong>Free:</strong> find, add, read and control your devices, the Station, the Remote and notifications, with a banner, an ad when opening the app (1 launch in 5) and, to see the charts, a rewarded ad each time you open them (except while the Station is on). The history is stored for everyone.</li>
+    <li><strong>Domotic Pro</strong> (subscription, handled with RevenueCat): no ads (no banner, no ad when opening the app and no rewarded ad for the charts) and the charts always open. The only exception is Station mode, which shows a banner even with Pro.</li>
+    <li>RevenueCat, with Apple, decides whether you have Pro. A failure while checking does not take your Pro away.</li>
+  </ul>
 
   <h2>In-app purchases</h2>
   <p>Domotic Pro: <strong>&euro;1.99/month or &euro;14.99/year</strong> in Spain (in your country the local price is shown in the app before you pay). It renews automatically until you cancel it in iPhone Settings &rarr; your name &rarr; Subscriptions. "Restore purchases" is on the Pro screen. Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">standard license agreement (EULA)</a> applies.</p>
@@ -137,7 +154,7 @@
   <h2>Contact</h2>
   <p>Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If you ask us to delete a panel or a token, include the panel code.</p>
 
-  <div class="foot">Domotic 1.0 &middot; In force since 2026-10-31 &middot; Gabriel Mic&oacute; Victoria</div>
+  <div class="foot">Domotic 1.0.1 &middot; In force since 2026-11-06 &middot; Gabriel Mic&oacute; Victoria</div>
 </div>
 </body>
 </html>

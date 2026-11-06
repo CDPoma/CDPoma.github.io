@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Axpert King Flow Monitor — Support and privacy</title>
-<meta name="description" content="Help, FAQ and privacy policy for Axpert King Flow Monitor, the Bluetooth monitor for solar inverters that speak the Voltronic protocol.">
+<meta name="description" content="Help, FAQ and privacy policy for Axpert King Flow Monitor, the Bluetooth and Wi-Fi monitor for solar inverters that speak the Voltronic protocol.">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/data-king-flow/soporte.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/data-king-flow/support.html">
 <style>
@@ -51,12 +51,13 @@
   <nav class="enlaces"><a href="#faq">FAQ</a> · <a href="#privacy">Privacy policy</a> · <a href="#contact">Contact</a></nav>
 
   <div class="card">
-    <p><strong>In short:</strong> the app talks directly to your solar inverter over Bluetooth. There is no account or sign-up, and no personal data is collected. Your system's data stays on your phone; it only leaves it if you turn on station mode to watch it remotely, and then it travels under a random code, without your name or email.</p>
+    <p><strong>In short:</strong> the app talks directly to your solar inverter, over Bluetooth or over your home Wi-Fi. There is no account or sign-up, and we don't ask for your name or email. Your system's data (what it reads from the inverter and its history) stays on your phone; it only leaves it if you turn on station mode to watch it remotely, and then it travels under a random code. Separately, as a free app with ads, the free version uses Google AdMob (technical device data and, if you allow it, the advertising identifier), Pro is billed through RevenueCat and, only if Google's consent form allows it, Firebase Analytics counts how many people use the app. With Pro you see no ads, except the station-mode banner. Everything is explained below.</p>
   </div>
 
   <h2>What the app does</h2>
-  <p>Axpert King Flow Monitor connects over Bluetooth Low Energy (BLE) to solar inverters that speak the Voltronic/PI30 protocol and shows what your system is doing right now: what the panels are producing, whether the battery is charging or discharging, what comes in from the grid or the generator, and what the home is using.</p>
+  <p>Axpert King Flow Monitor connects over Bluetooth Low Energy (BLE), or over your home Wi-Fi, to solar inverters that speak the Voltronic/PI30 protocol and shows what your system is doing right now: what the panels are producing, whether the battery is charging or discharging, what comes in from the grid or the generator, and what the home is using. It is a <strong>read-only</strong> app: it reads the device and never sends it settings.</p>
   <p><strong>Compatible inverters:</strong> those that speak the Voltronic/PI30 protocol over Bluetooth, either with built-in Bluetooth (such as the Axpert King or the Inverter King) or with a serial Bluetooth adapter (HM-10, JDY and similar): Axpert, Inverter King, MPP Solar, EASUN, PowMr, Must, Effekta and other compatible models. The app is <strong>compatible with</strong> that equipment; it is an <strong>unofficial app</strong>: it is not made, sponsored or endorsed by the makers of those hybrid inverters, and the brands mentioned belong to their owners.</p>
+  <p><strong>Other families and Wi-Fi:</strong> besides Voltronic, the app includes readers for other families of inverters and charge controllers (Renogy, EPEVER, SRNE, Lumiax, Victron, Bluetti, Anker SOLIX) following each one's protocol; not every model has been tested. Over Wi-Fi it reads a Victron GX on your local network or, with a serial-to-Wi-Fi gateway (Elfin EW11, EPEVER's eBox or similar), the inverter or controller that has a serial port. The app does not read each brand's own Wi-Fi card.</p>
 
   <h3>Free</h3>
   <ul>
@@ -65,17 +66,32 @@
     <li><strong>Battery pack:</strong> percentage, voltage, charge or discharge current and power, today's peaks and the amp-hours left. The app works out the percentage by counting the amp-hours going in and out; it is not the inverter's figure, which comes from a voltage formula.</li>
     <li><strong>Grid or generator:</strong> estimated input power, voltage, current, frequency and the diesel left in the tank, estimated from running time. When you refuel, press and hold the fuel-pump button for 2 seconds.</li>
     <li>Your battery bank capacity, which you enter in Settings, and the language.</li>
+    <li><strong>Adding a device</strong> over Bluetooth or Wi-Fi, and <strong>linking two phones</strong>: station mode and remote view are free, with or without Pro.</li>
+    <li><strong>Electricity price and currency</strong> in Settings (€, $ or £), which the solar card uses to work out how much money the sun saves you. They are stored only on your phone.</li>
+    <li><strong>History charts, the expanded card and the flow diagram</strong>, as the next section explains.</li>
+    <li><strong>Ads</strong>, from Google AdMob (see "Ads without Pro" below).</li>
   </ul>
 
-  <h3>Axpert King Flow Pro (subscription)</h3>
+  <h3>Ads without Pro</h3>
   <ul>
-    <li><strong>History charts</strong> for each card by day, week, month and year (tap <strong>+</strong> on the card).</li>
-    <li><strong>Center card:</strong> the runtime left (kWh and hours at the current load) and, on its back, the animated <strong>energy flow diagram</strong>. With it, the generator card also shows how long until the generator has to start.</li>
-    <li><strong>Station mode and remote view:</strong> one phone stays next to the inverter and publishes under a 6-character code; on another phone, with that code, you watch your system live without being nearby.</li>
+    <li><strong>Banner:</strong> one at the bottom, in the center card's slot, in normal mode and in remote view.</li>
+    <li><strong>Opening ad</strong> (full screen, on iPhone, iPad and Android): it appears when you open the app, 1 in every 5 openings, never on the day you install it and never while station mode is on. Coming back to the app after 30 minutes or more away also counts as an opening.</li>
+    <li><strong>Rewarded ad</strong> (new): to open a history chart (solar, battery, consumption or grid/generator), the expanded card or the flow diagram, the app shows "This is Pro" with two paths: get Pro, or <strong>watch an ad and open it now</strong>. It only appears if you tap that button, you have to watch it to the end and it works <strong>for that one time only</strong>: when you close what you opened, next time it asks for another ad. None of this is stored. It is not offered while station mode is on.</li>
+  </ul>
+  <p>All ads appear after Google's consent form and, on iPhone and iPad, Apple's tracking prompt (see the privacy policy). The charts' <strong>history</strong> is always saved on your phone, with Pro or without (and, with the station, published for the remote view); what changes is how you see it: always with Pro, after a rewarded ad without Pro.</p>
+
+  <h3>Axpert King Flow Pro (subscription)</h3>
+  <p>Pro means <strong>no ads</strong> and everything always open, with no rewarded ad to watch:</p>
+  <ul>
+    <li><strong>No ads:</strong> no banner (in normal mode and in remote view), no opening ad and no rewarded ad. <strong>Only station mode carries a banner, even with Pro.</strong></li>
+    <li><strong>History charts</strong> for each card by day, week, month and year (tap <strong>+</strong> on the card), always open.</li>
+    <li><strong>Center card:</strong> the runtime left (kWh and hours at the current load) and, on its back, the animated <strong>energy flow diagram</strong>, always open. With it, the generator card also shows how long until the generator has to start.</li>
     <li><strong>Inverter settings</strong> (read-only) and generator settings: oil changes, running hours, tank and fuel use.</li>
-    <li><strong>No ads.</strong></li>
   </ul>
   <p>It is a monthly or yearly auto-renewing subscription; the price is shown in the app and in the store, in your currency, before you pay. Your Apple or Google Play account is charged when you confirm, and it renews unless you cancel at least 24 hours before the end of the period. You manage and cancel it in your store account settings. Apple's terms of use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">standard EULA</a>.</p>
+
+  <h3>Skin store</h3>
+  <p>The button in the header opens the skin store: it changes the app's colors, fonts, shapes and icons; the data and the buttons stay the same. They are one-off purchases, not subscriptions (in Spain, €0.49 per skin or €0.99 for a pack of 3 of your choice; elsewhere, the price the store shows). Your Apple or Google Play account is charged and RevenueCat verifies them, so after reinstalling or changing phone you get them back with <strong>Restore purchases</strong>. Anyone who was already Pro before October 18, 2026 has the "Halloween" skin as a gift.</p>
 
   <h3>Languages</h3>
   <p>The app is available in English, Spanish (Spain) and Spanish (Latin America). The first time it follows your phone's language; in <strong>Settings → Language</strong> you can switch instantly, and your choice is kept.</p>
@@ -83,13 +99,16 @@
   <h2 id="faq">FAQ</h2>
 
   <h3>How do I connect?</h3>
-  <p>Tap <strong>Connect</strong> and pick your inverter from the list of Bluetooth devices. Opening the app doesn't connect anything by itself; once connected, if the connection drops, the app reconnects on its own until you tap <strong>Disconnect</strong>. If your phone asks for a PIN, it's usually <code>123456</code> or <code>000000</code>; if neither works, check the inverter's manual.</p>
+  <p>Tap <strong>Add</strong> and choose how your device connects: over <strong>Bluetooth</strong> (you pick your inverter from the list of Bluetooth devices) or over <strong>Wi-Fi</strong> (the app looks for it on your network, or you type its IP address and port; the first time, iPhone and iPad ask for permission to talk to the local network). Opening the app doesn't connect anything by itself; once connected, if the connection drops, the app reconnects on its own until you tap <strong>Disconnect</strong>. If your phone asks for a PIN, it's usually <code>123456</code> or <code>000000</code>; if neither works, check the inverter's manual.</p>
 
   <h3>Why doesn't the percentage match the inverter's?</h3>
   <p>The inverter's figure comes from a voltage formula and is far off with lithium batteries (it can show 0% with the battery half full). The app counts the amp-hours going in and out and learns your battery's curve. For it to be right, enter your bank's real capacity in <strong>Settings</strong>: the sum of the amp-hours of the batteries connected in parallel.</p>
 
   <h3>How does station mode work?</h3>
-  <p>On the phone that stays next to the inverter (for example an old one, plugged in), connect to the inverter and tap the antenna icon → <strong>Turn on station mode</strong>. On your phone, tap the satellite icon and enter the 6-character code. While station mode is on, that phone's screen stays on. From the remote view, after refueling the generator, the app asks how many liters are in the tank.</p>
+  <p>It is free. On the phone that stays next to the inverter (for example an old one, plugged in and on Wi-Fi), connect to the inverter, tap <strong>Connect</strong> → <strong>This phone will be the STATION</strong> and turn on station mode. On your everyday phone, tap <strong>Connect</strong> → <strong>This phone will be the REMOTE MONITOR</strong> and enter the 6-character code shown on the other one. While station mode is on, that phone's screen stays on, on Android there is a permanent notification and, with or without Pro, it carries an ad banner. From the remote view, after refueling the generator, the app asks how many liters are in the tank. Keep both apps on the same version.</p>
+
+  <h3>What is the "link two phones" notice when I open the app?</h3>
+  <p>A full-screen notice that appears when you open the app, once per launch, to remind you that you can watch your system from anywhere with an old phone as the station and your own phone as the remote. It keeps appearing until two phones have actually been linked and are passing data; then it stops. It sends nothing: the app only stores on your phone a mark saying you already linked them. It waits for Google's form, Apple's prompt and the opening ad to finish, and it doesn't appear while station mode is on.</p>
 
   <h3>Why doesn't the screen turn off?</h3>
   <p>On purpose: while the app is open it keeps the screen on, so a phone working as a station doesn't fall asleep and stop reading the inverter. When you close the app, the phone turns the screen off as usual.</p>
@@ -97,31 +116,48 @@
   <h3>Can I see a card bigger?</h3>
   <p>Yes: double-tap a card and it goes full screen; another double tap puts it back.</p>
 
+  <h3>What is "This is Pro" and the rewarded ad?</h3>
+  <p>When you tap a chart, a card to expand it or the flow diagram without Pro, "This is Pro" appears: a blurred preview and two paths, get Pro or watch a rewarded Google AdMob ad. If you watch it to the end, what you asked for opens and stays open while you keep it open; when you close it, next time it asks for another ad. If no ad is available right now, or you haven't given ad consent, nothing opens and you can try later or get Pro. With Pro everything opens directly and no rewarded ad is shown.</p>
+
+  <h3>Is the history saved if I'm not Pro?</h3>
+  <p>Yes. The history is saved on your phone with Pro or without (and, if you use the station, it is published for the remote view, as the privacy policy explains). It is only drawn while the app is connected: to have it complete, keep a stable connection or use station mode and remote view.</p>
+
+  <h3>The app asks me to update</h3>
+  <p>The app checks when you open it, when you come back to it and once a day whether there is a required minimum version; if yours is older, it takes you to the store to update. This is so the station and the remote understand each other. If it can't be checked (for example, no connection), the app works as normal.</p>
+
   <h3>I paid for Pro and it doesn't show</h3>
   <p>Open the Pro screen (the <strong>Pro</strong> button) and tap <strong>Restore purchases</strong>, with the same store account you paid with.</p>
 
   <h2 id="privacy">Privacy policy</h2>
 
   <h3>What is stored on your phone</h3>
-  <p>The inverter readings are stored only on your device: one point per minute for today and one summary per day (up to 400 days) for each measurement, for the charts. The app also stores the settings you enter (bank capacity, generator details, language), the learned curve of your battery, the Bluetooth identifier of the last inverter (to reconnect without picking it again) and, if you use station mode or remote view, its code. Everything is deleted when you uninstall the app.</p>
+  <p>The inverter readings are stored only on your device: one point per minute for today and one summary per day (up to 400 days) for each measurement, for the charts. The app also stores the settings you enter (bank capacity, generator details, language), the learned curve of your battery, the Bluetooth identifier of the last inverter and, if you connected over Wi-Fi, its IP address, port and brand (to reconnect without picking it again), the electricity price and currency, the skin in use and, if you use station mode or remote view, its code. For other features it also stores: how many times you have opened the app and the day you first opened it (so the opening ad appears 1 in every 5 openings and never on install day), a mark of whether you have already linked two phones (so the notice about linking them is not shown again), the days of use and the state of the review reminder, and the last Pro subscription answer confirmed by RevenueCat, so you don't lose Pro if one day there is no network. Everything is deleted when you uninstall the app.</p>
+  <p>The charts' history is saved with Pro or without. Nothing is sent either for using the "link two phones" notice or for asking for a rewarded ad.</p>
 
-  <h3>What leaves your phone, and only if you use station mode or remote view</h3>
+  <h3>What your installation's data does when it leaves your phone: only with station mode or remote view</h3>
   <p>With station mode on, the station phone publishes to <strong>Google Firebase</strong> (Realtime Database, on servers in the European Union, and Cloud Firestore) under its random 6-character code:</p>
   <ul>
     <li>the current inverter reading (watts, volts, amps, percentages and the app's calculations, such as the runtime hours);</li>
     <li>today's history and the daily summary for the last 120 days, the generator's hours, the estimated diesel, the cycles and the measured battery capacity;</li>
-    <li>a technical status of the station (whether it is publishing and the last error), so it can be diagnosed if it goes silent.</li>
+    <li>a technical status of the station (whether it is publishing and the last error), so it can be diagnosed if it goes silent;</li>
+    <li>the platform (iOS or Android) and the app version, to warn you if the station and the remote are not on the same one.</li>
   </ul>
-  <p>The phone watching remotely writes, under that same code, an "I'm watching" signal (the time, whether the app is in front and a random session number), so the station only publishes when someone is watching, and the "tank refilled" command with the liters when you use it.</p>
-  <p>None of this includes your name, email, account, location or device identifiers: the app has none of that data. What is published is replaced with each update and stays under the code until the next one; if you want us to delete it, email us the code and we will.</p>
+  <p>The phone watching remotely writes, under that same code, an "I'm watching" signal (the time, whether the app is in front, a random session number and the platform and version of its app), so the station only publishes when someone is watching, and the "tank refilled" command with the liters when you use it.</p>
+  <p>None of this includes your name, email, account, location or device identifiers: the app has none of that data. (The identifiers used by AdMob and Analytics are separate and do not go with what the station publishes.) What is published is replaced with each update and stays under the code until the next one; if you want us to delete it, email us the code and we will.</p>
+
+  <h3>What else leaves your phone, even if you don't use the station</h3>
+  <p>Regardless of the above, the app talks to these services (details in the table below): Google AdMob ads (only without Pro, or with the station on for the banner), the subscription and purchases through RevenueCat, usage counting with Firebase Analytics (only if Google's consent form allows it) and a lookup to Firebase and, on iPhone and iPad, to the App Store, to find out whether a minimum version is required. Those lookups carry only the technical data of any internet connection (such as the IP address). With Pro, Google's SDK still starts up to read the state of the consent form, but no ad is requested (except the station banner).</p>
+  <p>Also, if the app can't read a Bluetooth device that looks like an inverter, it may record in Google Firebase (Cloud Firestore), as a simple counter, only the beginning of the Bluetooth name ("SRNE-", never the full name or serial numbers) and, if you say so in "Which inverter do you have?", the family you choose. It carries no identifier of you or your phone and happens once per prefix; it is used to know which brands to add.</p>
 
   <h3>Third-party services</h3>
   <table>
     <thead><tr><th>Service</th><th>What for</th></tr></thead>
     <tbody>
-      <tr><td>Google AdMob</td><td>Ads for users without Pro: a banner in the center card's slot and, on iPhone and iPad, a full-screen ad when the app is opened (not when you come back to it from the background). Consent is asked before any ad is shown: in the European Economic Area, the UK and Switzerland, with Google's consent form, which you can change later in <strong>Settings → Ad privacy options</strong>; on iPhone and iPad, also with Apple's tracking prompt. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads; if not, ads are still shown, just not personalized. In both cases it receives technical device data, such as the IP address. With Pro no ads are loaded.</td></tr>
-      <tr><td>RevenueCat, Apple and Google Play</td><td>They charge for and verify the Pro subscription. RevenueCat receives an anonymous app identifier and the store's purchase history; there is no account or email.</td></tr>
-      <tr><td>Google Firebase</td><td>Only with station mode or remote view, as described above.</td></tr>
+      <tr><td>Google AdMob</td><td>Advertising. Without Pro: a <strong>banner</strong> in the center card's slot (normal mode and remote view), a full-screen <strong>opening ad</strong> (1 in every 5 openings, never on install day; also when you return after 30 minutes or more) and a <strong>rewarded ad</strong> (new) that only appears if you ask for it in "This is Pro" to open a chart, a card or the flow diagram. With Pro no ads are loaded, except the station-mode banner (also with Pro). Consent is asked before any is requested: in the European Economic Area, the UK and Switzerland, with Google's consent form (UMP), which you can change later in <strong>Settings → Ad privacy options</strong>; and, on iPhone and iPad, also with Apple's tracking prompt (ATT), which comes after the form. If you allow it, AdMob may use the device's advertising identifier to personalize and measure ads (on Android, Google's advertising ID, depending on your consent and your phone's ad settings); if not, ads are still shown, just not personalized. In both cases it receives technical device data, such as the IP address. Without consent, where it is required, no ad is requested.</td></tr>
+      <tr><td>Firebase Analytics (Google)</td><td>Only to count how many people use the app (active users). It is <strong>off by default</strong> and is only turned on if Google's form allows it (or if it doesn't apply in your country); if you withdraw it in "Ad privacy options", it turns off. The app records no custom events, only the basic system ones (first open, session and app use), with no advertising identifier, no user identifier and with ad and personalization consent denied in Analytics. It also works with Pro. It receives technical and usage data about the device and the app, such as the version, the system or the IP address. That measurement's instance identifier is shared with RevenueCat so its purchases show up in the statistics.</td></tr>
+      <tr><td>RevenueCat, Apple and Google Play</td><td>They charge for and verify the Pro subscription and the skins. RevenueCat receives an anonymous app identifier and the store's purchase history (and, if Analytics is on, Analytics' instance identifier); there is no account or email.</td></tr>
+      <tr><td>Google Firebase</td><td>With station mode or remote view, as described above. In addition, when the app opens, when you return to it and once a day, a single value (the required minimum version) is read from the Realtime Database; nothing of yours is sent.</td></tr>
+      <tr><td>Apple (App Store)</td><td>On iPhone and iPad only: the app's published version in the App Store is looked up for the required update. Nothing of yours is sent.</td></tr>
     </tbody>
   </table>
 
@@ -130,6 +166,8 @@
     <li><strong>Bluetooth</strong>: to find the inverter and read it.</li>
     <li><strong>Location</strong> (Android before version 12 only): the system requires it to scan for Bluetooth devices; the app doesn't read or use your location.</li>
     <li><strong>Tracking</strong> (iPhone and iPad): Apple's prompt to personalize ads. Saying no doesn't remove any feature.</li>
+    <li><strong>Local network</strong> (iPhone and iPad): only if you connect over Wi-Fi, to talk to the inverter or gateway on your own network; the app only communicates with the device you choose or that it finds on your home network.</li>
+    <li><strong>Notifications</strong> (Android 13 or later): the permanent notification Android requires while station mode is on.</li>
     <li><strong>Wi-Fi state</strong> (Android): only used by an installation set up by hand as the device owner, to restart the Wi-Fi of a station that loses its connection. On a normal phone it does nothing.</li>
   </ul>
   <p>The app doesn't ask for camera, microphone, contacts or photos.</p>
@@ -140,7 +178,7 @@
   <h2 id="contact">Contact and support</h2>
   <p>Questions, bugs, an inverter that won't connect, or want us to delete the data under your code? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <div class="foot">Axpert King Flow Monitor 1.0.5 · Gabriel Micó Victoria · Updated October 9, 2026</div>
+  <div class="foot">Axpert King Flow Monitor 1.2.0 · Gabriel Micó Victoria · Updated November 6, 2026</div>
 </div>
 </body>
 </html>
