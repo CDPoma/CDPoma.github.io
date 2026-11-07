@@ -44,7 +44,7 @@
   <p class="sub">Support and privacy</p>
 
   <div class="card">
-    <p><strong>In short:</strong> there are no accounts. No sign-up, no email, no password. Your projects, notes and prompts are stored on your device. Something only leaves it in seven cases: when the AI generates a prompt or organizes a note, when you share a project or a link, when you report content, in the free version what the ads need, the check for a new version of the app, on Android an encrypted (hashed) phone identifier so the 7-day free trial can't be repeated, and some minimal, anonymous usage statistics, explained below. You decide whether ads can be personalized, and the one-time “No Banner” purchase removes the banner, the app-open ad and the rewarded ads. The count of today's prompts is stored only on your phone.</p>
+    <p><strong>In short:</strong> there are no accounts. No sign-up, no email, no password. Your projects, notes and prompts are stored on your device. Something only leaves it in seven cases: when the AI generates a prompt or organizes a note (with Prompt AI's AI or, if you add your own key, directly with your provider), when you share a project or a link, when you report content, in the free version what the ads need, the check for a new version of the app, on Android an encrypted (hashed) phone identifier so the 7-day free trial can't be repeated, and some minimal, anonymous usage statistics, explained below. You decide whether ads can be personalized, and the one-time “No Banner” purchase removes the banner, the app-open ad and the rewarded ads. The count of today's prompts is stored only on your phone.</p>
     <p>Something not working, or have a question? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
@@ -96,6 +96,16 @@
   <p>When you write an idea and tap to generate a prompt, or save a note in the Notes tab (the AI only organizes it, without adding or changing anything), that text is sent to a server function that we run, hosted on Supabase. That function passes it to Claude, Anthropic's AI, and returns the result to you.</p>
   <p>It goes through there, rather than straight to Anthropic, so that the AI key doesn't have to ship inside the app. <strong>We don't store your text</strong>: not on that server and not in any database. It's discarded as soon as the result is returned.</p>
   <p>Anthropic handles that data under its commercial terms and privacy policy (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>), so <strong>don't write confidential information or other people's personal data there</strong>. If you don't use that feature, nothing is sent.</p>
+
+  <h3>With your own AI (optional)</h3>
+  <p>In Settings → <strong>Your own AI (optional)</strong> you can add the API key from your own AI account: Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google) or an OpenAI-compatible service you choose (for example DeepSeek, Mistral, xAI, Groq, OpenRouter, Azure OpenAI, or Ollama and LM Studio on a computer on your own network; only then will the iPhone ask for local network access). It's optional; without a key everything works as described above.</p>
+  <ul>
+    <li><strong>What is sent, and to whom.</strong> With your key, the text of your idea or note and the app's instructions are sent <strong>directly from your phone to the provider you chose</strong>, with your key. They don't go through our Supabase server and our key isn't used. Before the first send to each provider the app shows a notice saying what is sent and to whom, and sends nothing unless you accept.</li>
+    <li><strong>Your key.</strong> It's stored encrypted in your device's keychain (Keychain on iPhone; storage encrypted with the Android Keystore on Android), isn't synced to iCloud or moved to another device when restoring a backup, and is only sent to the provider you chose. We never see or receive it, and it doesn't appear in logs or statistics.</li>
+    <li><strong>What the provider does.</strong> It handles the text under its own terms and privacy policy, and the usage is billed to your account with it. For example: Anthropic (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>), OpenAI (<a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>) and Google (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>).</li>
+    <li><strong>To remove it</strong>, Settings → Your own AI → <strong>Delete my key</strong>: it's deleted from the device and the app goes back to Prompt AI's AI. On Android it's also deleted when you uninstall the app; on iPhone the keychain may keep it after uninstalling, and it's deleted with that same button.</li>
+    <li>The free-tier limits (1 prompt a day and a rewarded ad for each extra one) are the same with or without your key.</li>
+  </ul>
 
   <h2>Ads</h2>
   <p>The app shows Google AdMob ads: a banner, a full-screen ad while the AI works (when generating a prompt or organizing a note), announced on screen beforehand, from time to time one when you open the app (1 in every 5 openings, never the first one nor on the day you install the app) and, only if you ask for it, a rewarded ad: to generate a prompt once you've used the day's free prompt (each new or regenerated prompt from the second one of the day), to share a project (once per project, when you turn it into a shared one) or to join one with its code (every time you join). It has to be watched to the end, and if you close it early nothing is generated, shared or joined; if no ad is available at that moment, it's done anyway. Before any ad is shown:</p>
@@ -162,6 +172,7 @@
   <ul>
     <li>Google: Firebase Authentication, Cloud Firestore, Firebase Analytics and Firebase Hosting (the minimum-version file), and AdMob.</li>
     <li>Anthropic: the AI (Claude) that generates the prompts and organizes the notes.</li>
+    <li>If you add your own AI key: the provider you choose (Anthropic, OpenAI, Google or another), only with the text you send to generate or organize.</li>
     <li>Supabase: the AI's intermediate server.</li>
     <li>RevenueCat: validation of the purchase and of the iPhone trial (the Android one is kept by Cloud Firestore).</li>
     <li>Apple and Google Play: payment; Apple, also, the check of the latest published version.</li>

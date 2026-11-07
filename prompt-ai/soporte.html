@@ -44,7 +44,7 @@
   <p class="sub">Soporte y privacidad</p>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> no hay cuentas. Ni registro, ni correo, ni contraseña. Tus proyectos, notas y prompts se guardan en tu dispositivo. Solo sale algo de ahí en siete casos: cuando la IA genera un prompt o ordena una nota, cuando compartes un proyecto o un enlace, cuando denuncias un contenido, en la versión gratuita lo que necesitan los anuncios, la comprobación de si hay una versión nueva de la app, en Android un identificador del móvil cifrado (hash) para que la prueba gratis de 7 días no se repita, y unas estadísticas de uso anónimas y mínimas, explicadas abajo. Tú decides si los anuncios pueden ser personalizados, y la compra única «Sin banner» quita el banner, el anuncio de apertura y los anuncios con recompensa. El contador de prompts del día se guarda solo en tu móvil.</p>
+    <p><strong>Resumen rápido:</strong> no hay cuentas. Ni registro, ni correo, ni contraseña. Tus proyectos, notas y prompts se guardan en tu dispositivo. Solo sale algo de ahí en siete casos: cuando la IA genera un prompt o ordena una nota (con la IA de Prompt AI o, si pones tu propia clave, directamente con tu proveedor), cuando compartes un proyecto o un enlace, cuando denuncias un contenido, en la versión gratuita lo que necesitan los anuncios, la comprobación de si hay una versión nueva de la app, en Android un identificador del móvil cifrado (hash) para que la prueba gratis de 7 días no se repita, y unas estadísticas de uso anónimas y mínimas, explicadas abajo. Tú decides si los anuncios pueden ser personalizados, y la compra única «Sin banner» quita el banner, el anuncio de apertura y los anuncios con recompensa. El contador de prompts del día se guarda solo en tu móvil.</p>
     <p>¿Algo no funciona o tienes una duda? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
@@ -96,6 +96,16 @@
   <p>Cuando escribes una idea y pulsas para generar un prompt, o guardas una nota en el apartado Notas (la IA solo la ordena, sin añadir ni cambiar nada), ese texto se envía a una función de servidor que gestionamos nosotros, alojada en Supabase. Esa función se lo pasa a Claude, la IA de Anthropic, y te devuelve el resultado.</p>
   <p>Pasa por ahí, y no directamente a Anthropic, para no tener que llevar la clave de la IA dentro de la app. <strong>Nosotros no guardamos tu texto</strong>: ni en ese servidor ni en ninguna base de datos. Se descarta en cuanto se devuelve el resultado.</p>
   <p>Anthropic trata esos datos según sus condiciones comerciales y su política de privacidad (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>), así que <strong>no escribas ahí información confidencial ni datos personales de otras personas</strong>. Si no usas esa función, no se envía nada.</p>
+
+  <h3>Con tu propia IA (opcional)</h3>
+  <p>En Ajustes → <strong>Tu propia IA (opcional)</strong> puedes poner la clave de API de tu propia cuenta de IA: Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google) o un servicio compatible con la API de OpenAI que elijas tú (por ejemplo DeepSeek, Mistral, xAI, Groq, OpenRouter, Azure OpenAI, o Ollama y LM Studio en un ordenador de tu propia red; solo en ese caso el iPhone te pedirá permiso para la red local). Es opcional; sin clave, todo funciona como se explica arriba.</p>
+  <ul>
+    <li><strong>Qué se envía y a quién.</strong> Con tu clave puesta, el texto de tu idea o de tu nota y las instrucciones de la app se envían <strong>directamente desde tu móvil al proveedor que elegiste</strong>, con tu clave. No pasan por nuestro servidor de Supabase ni se usa nuestra clave. Antes del primer envío a cada proveedor, la app te muestra una ventana que dice qué se envía y a quién, y no envía nada si no la aceptas.</li>
+    <li><strong>Tu clave.</strong> Se guarda cifrada en el llavero de tu dispositivo (Keychain en iPhone; almacenamiento cifrado con el Android Keystore en Android), no se sincroniza con iCloud ni pasa a otro dispositivo al restaurar una copia de seguridad, y solo se envía al proveedor que elegiste. Nosotros nunca la vemos ni la recibimos, y no aparece en registros ni en estadísticas.</li>
+    <li><strong>Lo que hace el proveedor.</strong> Lo trata según sus propias condiciones y su política de privacidad, y el uso se cobra en tu cuenta con él. Por ejemplo: Anthropic (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>), OpenAI (<a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>) y Google (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>).</li>
+    <li><strong>Para quitarla</strong>, Ajustes → Tu propia IA → <strong>Borrar mi clave</strong>: se borra del dispositivo y la app vuelve a la IA de Prompt AI. También se borra al desinstalar la app en Android; en iPhone, el llavero puede conservarla tras desinstalar, y se borra con ese mismo botón.</li>
+    <li>Los límites de la versión gratuita (1 prompt al día y un anuncio con recompensa por cada uno más) son los mismos con o sin tu clave.</li>
+  </ul>
 
   <h2>Anuncios</h2>
   <p>La app muestra anuncios de Google AdMob: un banner, un anuncio a pantalla completa mientras la IA trabaja (al generar un prompt o ordenar una nota), avisado antes en pantalla, de vez en cuando uno al abrir la app (1 de cada 5 aperturas, nunca la primera ni el día de la instalación) y, solo si tú lo pides, un anuncio con recompensa: para generar un prompt cuando ya has usado el prompt gratis del día (cada prompt nuevo o regenerado desde el segundo del día), para compartir un proyecto (una vez por proyecto, al convertirlo en compartido) o para unirte a uno con su código (cada vez que te unes). Hay que verlo entero, y si lo cierras antes no se genera, no se comparte ni te unes; si en ese momento no hay ningún anuncio disponible, se hace igual. Antes de mostrar ninguno:</p>
@@ -162,6 +172,7 @@
   <ul>
     <li>Google: Firebase Authentication, Cloud Firestore, Firebase Analytics y Firebase Hosting (el archivo de la versión mínima), y AdMob.</li>
     <li>Anthropic: la IA (Claude) que genera los prompts y ordena las notas.</li>
+    <li>Si pones tu propia clave de IA: el proveedor que elijas tú (Anthropic, OpenAI, Google u otro), solo con el texto que mandas a generar u ordenar.</li>
     <li>Supabase: el servidor intermedio de la IA.</li>
     <li>RevenueCat: la validación de la compra y de la prueba de iPhone (la de Android la guarda Cloud Firestore).</li>
     <li>Apple y Google Play: el pago; Apple, además, la consulta de la última versión publicada.</li>
