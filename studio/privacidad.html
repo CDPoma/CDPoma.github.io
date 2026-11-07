@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios.</p>
+    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. En Android y Windows, para que la prueba gratis sea una por aparato, guardamos un identificador del aparato cifrado y la fecha de la primera vez. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -73,6 +73,7 @@
     <tr><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td><td>Anuncios en la versión gratis de móvil y tablet. No hay anuncios en Mac ni Windows.</td><td>Datos técnicos del dispositivo y de la app (dirección IP, modelo, versión del sistema, interacción con el anuncio). Si lo consientes, el identificador de publicidad del dispositivo para mostrar anuncios personalizados.</td></tr>
     <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase Analytics (Google)</a></td><td>Estadísticas de uso anónimas para mejorar la app.</td><td>Eventos de uso, modelo de dispositivo, versión del sistema e idioma, con un identificador de instalación. La app no usa el IDFA para la analítica.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Gestionar la suscripción Pro y comprobar si está activa.</td><td>Un ID anónimo de compra y el estado de la suscripción. No recibe tu nombre ni tu correo. Los pagos los cobran Apple, Google o Microsoft, no la app.</td></tr>
+    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (nuestro servidor)</td><td>Solo en Android y Windows: que la prueba de 7 días sea una por aparato.</td><td>El identificador del aparato cifrado (hash SHA-256) y la fecha de la primera vez. Nada más: ni vídeos, ni nombre, ni correo.</td></tr>
   </table>
 
   <h2>Anuncios y consentimiento</h2>
@@ -81,7 +82,13 @@
 
   <h2>Suscripción Pro y prueba de 7 días</h2>
   <ul>
-    <li>Tras instalar la app tienes <strong>7 días con todo Pro</strong>, sin tarjeta y sin cobro. La prueba la gestiona la propia app a partir de la fecha de la primera descarga, que firma Apple (AppTransaction) o la tienda. No es una compra ni una oferta de prueba de la tienda. Al acabar, la app vuelve a la versión gratis si no te suscribes.</li>
+    <li>Tras instalar la app tienes <strong>7 días con todo Pro</strong>, sin tarjeta y sin cobro. La prueba la gestiona la propia app y no es una compra ni una oferta de prueba de la tienda. Al acabar, la app vuelve a la versión gratis si no te suscribes.</li>
+    <li><strong>La prueba es una por aparato</strong>: desinstalar y volver a instalar no da otros 7 días.
+      <ul>
+        <li><strong>iPhone, iPad y Mac:</strong> no se manda nada. La fecha de la primera descarga la da Apple, firmada (AppTransaction).</li>
+        <li><strong>Android y Windows:</strong> la app guarda en nuestro servidor (Supabase) un identificador del aparato <strong>cifrado</strong> (un hash SHA-256 del ANDROID_ID en Android, o del identificador del sistema para el editor en Windows) junto con la fecha de la primera vez. Se usa <strong>solo</strong> para saber si ese aparato ya tuvo la prueba: no se usa para nada más, no se comparte con nadie, no sirve para publicidad y no identifica a la persona.</li>
+      </ul>
+    </li>
     <li>Pro cuesta <strong>1,99 € al mes</strong> y se cancela en la tienda (Apple, Google o Microsoft) cuando quieras.</li>
     <li>El pago lo gestiona y cobra la tienda; la app nunca ve tu tarjeta.</li>
   </ul>
@@ -99,11 +106,12 @@
   <ul>
     <li><strong>Vídeos, grabaciones y proyectos:</strong> en tu dispositivo, hasta que los borres o desinstales la app.</li>
     <li><strong>Datos locales de la app</strong> (ajustes, estado de la prueba): hasta que desinstales la app.</li>
+    <li><strong>Registro de la prueba</strong> (Android y Windows: identificador cifrado y fecha): mientras la app siga disponible, para que la prueba sea una por aparato. Puedes pedir que se borre.</li>
     <li><strong>Analítica, publicidad y suscripción:</strong> según los plazos de Google (Firebase, AdMob) y de RevenueCat.</li>
   </ul>
 
   <h2>Cómo borrar tus datos</h2>
-  <p>Desinstala la app para borrar todo lo que está en tu dispositivo. Los datos de AdMob, Firebase y RevenueCat se pueden restablecer o borrar: restablece el identificador de publicidad en los ajustes del sistema, o escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> y gestionaremos el borrado en esos servicios.</p>
+  <p>Desinstala la app para borrar todo lo que está en tu dispositivo. Los datos de AdMob, Firebase y RevenueCat se pueden restablecer o borrar: restablece el identificador de publicidad en los ajustes del sistema, o escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> y gestionaremos el borrado en esos servicios y del registro de la prueba en nuestro servidor.</p>
 
   <h2>Menores</h2>
   <p>Studio <strong>no está dirigida a niños</strong> y no recoge conscientemente datos de menores. Si crees que un menor ha facilitado datos, escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> y los borraremos.</p>

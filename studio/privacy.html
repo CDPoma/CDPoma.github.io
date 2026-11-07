@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="support.html">Help and support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows.</p>
+    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. On Android and Windows, so that the free trial is one per device, we store an encrypted device identifier and the date of first use. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -73,6 +73,7 @@
     <tr><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td><td>Ads in the free mobile and tablet version. No ads on Mac or Windows.</td><td>Technical device and app data (IP address, model, system version, ad interaction). If you consent, the device advertising identifier to show personalized ads.</td></tr>
     <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase Analytics (Google)</a></td><td>Anonymous usage statistics to improve the app.</td><td>Usage events, device model, system version and language, with an installation identifier. The app does not use the IDFA for analytics.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Manage the Pro subscription and check whether it is active.</td><td>An anonymous purchase ID and the subscription status. It does not receive your name or email. Payments are charged by Apple, Google or Microsoft, not by the app.</td></tr>
+    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (our server)</td><td>Android and Windows only: making the 7-day trial one per device.</td><td>The encrypted device identifier (SHA-256 hash) and the date of first use. Nothing else: no videos, no name, no email.</td></tr>
   </table>
 
   <h2>Ads and consent</h2>
@@ -81,7 +82,13 @@
 
   <h2>Pro subscription and 7-day trial</h2>
   <ul>
-    <li>After installing the app you get <strong>7 days of full Pro</strong>, with no card and no charge. The trial is managed by the app itself from the date of the first download, which is signed by Apple (AppTransaction) or the store. It is not a purchase or a store trial offer. When it ends, the app goes back to the free version unless you subscribe.</li>
+    <li>After installing the app you get <strong>7 days of full Pro</strong>, with no card and no charge. The trial is managed by the app itself and is not a purchase or a store trial offer. When it ends, the app goes back to the free version unless you subscribe.</li>
+    <li><strong>The trial is one per device</strong>: uninstalling and reinstalling does not give you another 7 days.
+      <ul>
+        <li><strong>iPhone, iPad and Mac:</strong> nothing is sent. The date of the first download comes from Apple, signed (AppTransaction).</li>
+        <li><strong>Android and Windows:</strong> the app stores on our server (Supabase) an <strong>encrypted</strong> device identifier (a SHA-256 hash of the ANDROID_ID on Android, or of the system ID for publisher on Windows) together with the date of first use. It is used <strong>only</strong> to know whether that device has already had the trial: it is not used for anything else, it is not shared with anyone, it is not used for advertising and it does not identify you.</li>
+      </ul>
+    </li>
     <li>Pro costs <strong>€1.99 per month</strong> and can be cancelled in the store (Apple, Google or Microsoft) at any time.</li>
     <li>Payment is handled and charged by the store; the app never sees your card.</li>
   </ul>
@@ -99,11 +106,12 @@
   <ul>
     <li><strong>Videos, recordings and projects:</strong> on your device, until you delete them or uninstall the app.</li>
     <li><strong>Local app data</strong> (settings, trial state): until you uninstall the app.</li>
+    <li><strong>Trial record</strong> (Android and Windows: encrypted identifier and date): while the app remains available, so the trial stays one per device. You can ask for it to be deleted.</li>
     <li><strong>Analytics, advertising and subscription:</strong> according to the retention periods of Google (Firebase, AdMob) and RevenueCat.</li>
   </ul>
 
   <h2>How to delete your data</h2>
-  <p>Uninstall the app to delete everything stored on your device. AdMob, Firebase and RevenueCat data can be reset or deleted: reset the advertising identifier in your system settings, or write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will handle deletion with those services.</p>
+  <p>Uninstall the app to delete everything stored on your device. AdMob, Firebase and RevenueCat data can be reset or deleted: reset the advertising identifier in your system settings, or write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will handle deletion with those services and of the trial record on our server.</p>
 
   <h2>Children</h2>
   <p>Studio is <strong>not directed at children</strong> and does not knowingly collect data from minors. If you believe a minor has provided data, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will delete it.</p>
