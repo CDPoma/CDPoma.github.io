@@ -17,7 +17,7 @@
 
 <div id="es">
 <h1>PC Monitor · Soporte</h1>
-<p>Última actualización: 6 de noviembre de 2026. Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (respondo en español e inglés).</p>
+<p>Última actualización: 7 de noviembre de 2026. Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (respondo en español e inglés).</p>
 
 <h2>Qué es PC Monitor</h2>
 <p>PC Monitor son dos piezas que trabajan juntas: el <strong>agente</strong> gratuito para Windows (en la Microsoft Store: «PC Monitor: Sensores en el móvil»), que vive en la bandeja del sistema y lee los sensores del PC, y la <strong>app del iPhone</strong>, que te los enseña cada segundo mientras juegas o trabajas. Todo va por tu red local (WiFi de casa): no hay nube ni cuenta.</p>
@@ -51,6 +51,8 @@
 <h3>No salen temperaturas de la CPU ni sensores de la placa base</h3>
 <p>Windows no deja a las apps de la Microsoft Store leer directamente el chip de la placa ni el sensor de temperatura del procesador. La solución es usar <strong>HWiNFO</strong> (gratis, hwinfo.com): ábrelo, en sus ajustes (Settings) activa «Shared Memory Support» y acepta. PC Monitor lo detecta solo y envía también esos sensores. En el icono del agente, «Temperaturas de CPU y placa (HWiNFO)…» te lo explica paso a paso.</p>
 <p>Ojo: en la versión gratuita de HWiNFO la memoria compartida se apaga sola a las 12 horas. PC Monitor te avisa en el móvil y en el PC para que la vuelvas a activar. Las temperaturas de una GPU NVIDIA, el uso, la RAM, los discos y la red salen sin HWiNFO. Los FPS del juego salen con MSI Afterburner y RivaTuner abiertos.</p>
+<h3>En el Mac no salen temperaturas del chip</h3>
+<p>macOS no tiene una API pública para las temperaturas del chip, así que PC Monitor para Mac envía en su lugar el estado térmico del sistema («Presión térmica», en la pestaña Sistema) y, en los portátiles, la temperatura de la batería. El resto de datos (CPU por núcleo, GPU, memoria, discos, red, batería y procesos) salen enteros.</p>
 
 <h3>Veo un candado en una pestaña</h3>
 <p>Esa pestaña es un bloque de información de pago. Puedes comprarlo (0,49 €), elegir 3 bloques por 1,00 € o activar la prueba gratis de 14 días de todos los bloques. La prueba no se renueva y, al acabar, vuelven los candados de lo que no hayas comprado.</p>
@@ -70,7 +72,7 @@
 
 <div class="en" id="en">
 <h1>PC Monitor · Support</h1>
-<p>Last updated: 6 November 2026. Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (I reply in Spanish and English).</p>
+<p>Last updated: 7 November 2026. Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> (I reply in Spanish and English).</p>
 
 <h2>What PC Monitor is</h2>
 <p>PC Monitor is two parts working together: the free <strong>Windows agent</strong> (on the Microsoft Store as "PC Monitor: Sensores en el móvil"), which lives in the system tray and reads your PC's sensors, and the <strong>iPhone app</strong>, which shows them every second while you game or work. Everything goes over your local network (home Wi-Fi): no cloud and no account.</p>
@@ -104,6 +106,8 @@
 <h3>No CPU temperatures or motherboard sensors</h3>
 <p>Windows does not let Microsoft Store apps read the motherboard chip or the processor temperature sensor directly. The fix is to use <strong>HWiNFO</strong> (free, hwinfo.com): open it, turn on "Shared Memory Support" in its Settings and accept. PC Monitor detects it automatically and sends those sensors too. In the agent's tray menu, "Temperaturas de CPU y placa (HWiNFO)…" explains it step by step.</p>
 <p>Note: in HWiNFO's free version, shared memory turns itself off after 12 hours. PC Monitor warns you on the phone and on the PC so you can turn it on again. NVIDIA GPU temperatures, load, RAM, drives and network work without HWiNFO. Game FPS needs MSI Afterburner and RivaTuner running.</p>
+<h3>No chip temperatures on a Mac</h3>
+<p>macOS has no public API for chip temperatures, so PC Monitor for Mac sends the system thermal state instead ("Thermal Pressure", in the System tab) and, on laptops, the battery temperature. Everything else (per-core CPU, GPU, memory, drives, network, battery and processes) is sent in full.</p>
 
 <h3>I see a lock on a tab</h3>
 <p>That tab is a paid information block. You can buy it (0.49 EUR), pick 3 blocks for 1.00 EUR, or start the free 14-day trial of all blocks. The trial does not renew and, when it ends, the locks come back on whatever you have not bought.</p>
