@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TacticLiDAR — Help and support</title>
+<meta name="description" content="What TacticLiDAR does, which devices it needs, its limits, the subscription and how to get in touch.">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tacticlidar/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tacticlidar/support.html">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>TacticLiDAR</h1>
+  <p class="sub">Help and support</p>
+  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+
+  <div class="card">
+    <p><strong>TacticLiDAR</strong> uses the LiDAR sensor of the iPhone or iPad Pro, which emits its own infrared light and measures distances, to show you a live <strong>colour depth image</strong>: it also works in total darkness, with a range of about 5 metres (16 ft). It is not “real” night vision or a thermal camera, and it is not a photo. Everything is processed on the device itself and with no account. Something not working? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>What does it do, exactly?</h3>
+  <p>It uses LiDAR to measure the distance of everything in front of you and paints it by colour (near, far), with the distance in metres at the centre of the screen (“the crosshair”). It helps you make out the shapes of people, furniture, doors and steps where there is no light. You can <strong>record video</strong> of what you see on screen (the coloured image with the crosshair and the scale; never the banner or the panel).</p>
+
+  <h3>Which devices do I need?</h3>
+  <p>One with a <strong>LiDAR sensor</strong>: iPhone 12 Pro, 12 Pro Max or any later Pro or Pro Max model, and iPad Pro with LiDAR (2020 onwards). iOS 17 or later is required. On a device without LiDAR (iPhones without “Pro”, regular iPads) the app explains it on screen and cannot measure.</p>
+
+  <h3>What are its limits? (we say it plainly)</h3>
+  <ul>
+    <li><strong>Range of about 5 metres.</strong> Beyond that, the device's LiDAR does not measure reliably.</li>
+    <li><strong>Low resolution</strong> (256×192 points): you see shapes and distances, not detail. No real colours, no faces, no text, except with “Amplified camera” (below).</li>
+    <li><strong>The sun blinds LiDAR.</strong> Sunlight carries a lot of infrared and, outdoors by day, valid points drop. It works best at night, in the shade or indoors.</li>
+    <li>Very shiny, transparent (glass) or very black surfaces are measured poorly.</li>
+    <li>The device may warm up with long use, more so when recording. If the temperature climbs a lot the app warns you, and at critical level it stops the sensor and you can resume once it cools down.</li>
+  </ul>
+
+  <h3>What are “Narrow indoor space”, “Large indoor space”, “Outdoors” and “Automatic”?</h3>
+  <p>They are the environments: each one adjusts range, colour palette, frame rate and smoothing. <strong>Narrow indoor space</strong> (corridors, small rooms: short range, more frames per second), <strong>Large indoor space</strong> (living rooms, warehouses), <strong>Outdoors</strong> (the sun limits it a lot; raises the range and smooths) and <strong>Automatic</strong>, which picks one from the distances it sees, and the panel says which one and why. You can tweak each environment's values in the panel and go back to the factory ones whenever you like.</p>
+
+  <h3>What are “Far points”, “Amplified camera” and “Walking map”?</h3>
+  <p>Three <strong>free-for-everyone</strong> features to see a little further, with their limits:</p>
+  <ul>
+    <li><strong>Far points:</strong> shows, dimmed, the unreliable points beyond about 5 m. It can gain one or two metres, with more noise.</li>
+    <li><strong>Amplified camera:</strong> if there is <em>some</em> light (moon, street lamps, a city in the distance), the camera pushed to maximum is blended with the LiDAR to see further. <strong>In total darkness it adds nothing</strong> (the app warns: “No light for the camera: LiDAR only”). Where there is light, a face or a piece of text may be visible, and if you record it ends up in the video, on your device.</li>
+    <li><strong>Walking map (“Mapa al caminar”):</strong> the 3D mesh of what you have already seen stays painted, coloured by distance, as you move. In total darkness, motion tracking may drift.</li>
+  </ul>
+
+  <h3>How much can I record? What is free and what is Pro?</h3>
+  <table>
+    <tr><th></th><th>Free</th><th>Pro (subscription) adds</th></tr>
+    <tr><td>Banner</td><td>Always on screen</td><td>No banner</td></tr>
+    <tr><td>App-open ad</td><td>One in every five launches (full screen)</td><td>No ad when opening</td></tr>
+    <tr><td>Recording</td><td>10 seconds; to keep going, a rewarded ad (full screen) and that same recording continues with no limit until you stop it, or “Finish”</td><td>Record with no time limit</td></tr>
+    <tr><td>Save the video to Photos</td><td>After watching a rewarded ad to the end</td><td>Same: with Pro it also takes a rewarded ad</td></tr>
+    <tr><td>Share</td><td colspan="2">Free once the video is saved to Photos, with no further ad</td></tr>
+  </table>
+  <p>There are full-screen ads in the free version (the app-open ad and the rewarded one) and, with Pro, only the rewarded ad for saving. If no ad is available, or you have not given consent for ads, the action is granted anyway: nobody gets stuck. If you close a rewarded ad before it ends, it is not granted.</p>
+
+  <h3>What is TacticLiDAR Pro and how much does it cost?</h3>
+  <p><strong>TacticLiDAR Pro</strong> is an auto-renewing subscription: <strong>€1.99 a month</strong> or <strong>€14.99 a year</strong> (equal to €1.25 a month; in other countries the app shows the local price before you pay). It removes the banner and the app-open ad and lets you record with no limit. If your Apple ID has not used it yet, the first period comes with <strong>7 free days</strong>: the app shows you the date of the first charge before you start. The new features (Far points, Amplified camera and Walking map) are free, with or without Pro.</p>
+
+  <h3>How do I cancel the subscription?</h3>
+  <p>From the device: <strong>Settings → your name → Subscriptions → TacticLiDAR Pro → Cancel</strong>. Also with the <strong>“Manage subscription”</strong> button on the Pro screen inside the app. Cancel at least <strong>24 hours before</strong> the period (or the free trial) ends so the next one is not charged; you keep Pro until what you already paid for runs out. Deleting the app does <strong>not</strong> cancel the subscription. For a refund, Apple handles it at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+
+  <h3>I paid for Pro and still see the banner</h3>
+  <p>Open the Pro screen and tap <strong>“Restore Purchases”</strong>, with the same Apple ID you subscribed with. It also works when you change device or reinstall the app. Remember that with Pro the rewarded ad for saving a video to Photos stays.</p>
+
+  <h3>Where are my recordings stored? Do they leave the device?</h3>
+  <p>They stay on the device, in the app's recordings list (they do not go to the iCloud backup). They only leave if you save them to Photos or share them. The live depth image is never saved or sent. To delete one, do it from the list (it asks you to confirm); if you already saved it to Photos, delete it there as well. More details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>The app asks for camera and Photos permission</h3>
+  <p>The <strong>camera</strong> is needed because LiDAR is part of it. The <strong>Photos</strong> permission is <em>add-only</em>: it is used to save the video you choose, and the app cannot see or read your photos. If you denied it, turn it on in Settings → TacticLiDAR → Photos.</p>
+
+  <h3>Why does it ask me to update the app?</h3>
+  <p>If a newer version is on the App Store, the app asks you to update to keep using it; your recordings stay on the device and you will see them after updating. To know this it asks Apple for the version on sale (<code>itunes.apple.com/lookup</code>, no personal data). Offline or on any error, the app never blocks.</p>
+
+  <h3>The image is rotated, empty or very noisy</h3>
+  <p>Try another environment (by hand, rather than Automatic), get closer to what you are looking at (the range is about 5 m) and avoid direct sun and glass surfaces. If the sensor stays paused or without frames, the on-screen notice offers to try another depth source. If it is still wrong, write to us with the device model.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Tell us the device model, the iOS version and, if you can, the chosen environment and the “Sensor data” values from the panel.</p>
+
+  <div class="foot">TacticLiDAR · Gabriel Micó Victoria · <a href="soporte.html" hreflang="es" lang="es">Español</a></div>
+</div>
+</body>
+</html>
