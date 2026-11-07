@@ -75,11 +75,11 @@
   <p>They are the environments: each one adjusts range, colour palette, frame rate and smoothing. <strong>Narrow indoor space</strong> (corridors, small rooms: short range, more frames per second), <strong>Large indoor space</strong> (living rooms, warehouses), <strong>Outdoors</strong> (the sun limits it a lot; raises the range and smooths) and <strong>Automatic</strong>, which picks one from the distances it sees, and the panel says which one and why. You can tweak each environment's values in the panel and go back to the factory ones whenever you like.</p>
 
   <h3>What are “Far points”, “Amplified camera” and “Walking map”?</h3>
-  <p>Three <strong>free-for-everyone</strong> features to see a little further, with their limits:</p>
+  <p>Three <strong>free-for-everyone</strong> features, with their limits. “Far points” and “Amplified camera” can be combined; the map is a separate view:</p>
   <ul>
     <li><strong>Far points:</strong> shows, dimmed, the unreliable points beyond about 5 m. It can gain one or two metres, with more noise.</li>
     <li><strong>Amplified camera:</strong> if there is <em>some</em> light (moon, street lamps, a city in the distance), the camera pushed to maximum is blended with the LiDAR to see further. <strong>In total darkness it adds nothing</strong> (the app warns: “No light for the camera: LiDAR only”). Where there is light, a face or a piece of text may be visible, and if you record it ends up in the video, on your device.</li>
-    <li><strong>Walking map (“Mapa al caminar”):</strong> the 3D mesh of what you have already seen stays painted, coloured by distance, as you move. In total darkness, motion tracking may drift.</li>
+    <li><strong>Walking map:</strong> in the <strong>“View”</strong> selector on the main screen (next to the environment one), choose <strong>“Map”</strong>. The 3D mesh of what you have already seen stays painted, coloured by distance, as you move. It remembers what you saw; it does not see further. It uses ARKit, which tracks your position with the camera and the motion sensors, so <strong>in “Map” “Far points”, “Amplified camera”, smoothing and frame rate do not apply</strong>. In total darkness, tracking may drift and the map may twist or stop growing (the app warns you). The map is lost when you leave the app.</li>
   </ul>
 
   <h3>How much can I record? What is free and what is Pro?</h3>
