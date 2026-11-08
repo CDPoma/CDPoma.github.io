@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["56Z75Y893Q.com.studioeditor.app"],
+        "components": [
+          { "/": "/studio/d", "comment": "Desbloquear el ordenador con el móvil (QR de Studio)" },
+          { "/": "/studio/d/*" }
+        ]
+      }
+    ]
+  }
+}

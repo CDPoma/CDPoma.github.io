@@ -1,0 +1,3 @@
+# Jekyll ignora las carpetas que empiezan por punto; sin esto GitHub Pages no serviría .well-known
+include:
+  - .well-known

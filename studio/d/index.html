@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio: Editor de vídeo — Desbloquear el ordenador</title>
+<meta name="description" content="Desbloquea una herramienta de Studio en tu ordenador escaneando su código QR con la app Studio de tu móvil y viendo un anuncio.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://cdpoma.github.io/studio/d">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b7a75; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fd1c5; --line:#1d2842; --card:#16213a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  p{margin:0 0 1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .boton{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border-radius:12px;padding:.7rem 1.3rem;margin:.2rem 0 0}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  /* Sin JavaScript se ve todo; con JavaScript solo lo que toca (idioma y aparato). */
+  html.js [data-l]:not(.on), html.js [data-d]:not(.on){display:none}
+</style>
+<script>document.documentElement.className='js'</script>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" id="cambiar" href="#" hreflang="en" lang="en">English</a>
+  <h1>Studio</h1>
+  <p class="sub" data-l="es">Desbloquear el ordenador con el móvil</p>
+  <p class="sub" data-l="en">Unlock your computer with your phone</p>
+
+  <!-- iPhone o iPad sin la app (con la app instalada, este enlace se abre dentro de Studio) -->
+  <div class="card" data-d="ios">
+    <p data-l="es"><strong>Abre Studio en tu iPhone y escanea el código del ordenador.</strong></p>
+    <p data-l="es">Si ya tienes la app, ábrela, elige «Desbloquear el ordenador» y apunta a la pantalla del ordenador. Al ver el anuncio entero, esa herramienta queda desbloqueada 20 minutos.</p>
+    <p data-l="es"><a class="boton" href="https://apps.apple.com/app/id6832008044">Descargar Studio en la App Store</a></p>
+    <p data-l="en"><strong>Open Studio on your iPhone and scan the code on your computer.</strong></p>
+    <p data-l="en">If you already have the app, open it, choose “Unlock your computer” and point at the computer screen. Once you watch the ad all the way through, that tool is unlocked for 20 minutes.</p>
+    <p data-l="en"><a class="boton" href="https://apps.apple.com/app/id6832008044">Download Studio on the App Store</a></p>
+  </div>
+
+  <!-- Ordenador -->
+  <div class="card" data-d="pc">
+    <p data-l="es"><strong>Este código se escanea con el móvil.</strong></p>
+    <p data-l="es">Abre la app Studio en tu iPhone, elige «Desbloquear el ordenador» y apunta a la pantalla donde sale el código QR. Al ver un anuncio entero, esa herramienta queda desbloqueada 20 minutos en el ordenador.</p>
+    <p data-l="es">¿Aún no tienes la app? <a href="https://apps.apple.com/app/id6832008044">Descárgala en la App Store</a>.</p>
+    <p data-l="en"><strong>This code is scanned with your phone.</strong></p>
+    <p data-l="en">Open the Studio app on your iPhone, choose “Unlock your computer” and point at the screen showing the QR code. Once you watch an ad all the way through, that tool is unlocked for 20 minutes on the computer.</p>
+    <p data-l="en">Don’t have the app yet? <a href="https://apps.apple.com/app/id6832008044">Get it on the App Store</a>.</p>
+  </div>
+
+  <!-- Otro móvil (Android): la app aún no sale -->
+  <div class="card" data-d="otro">
+    <p data-l="es"><strong>Por ahora Studio solo está en iPhone, iPad, Mac y Windows.</strong></p>
+    <p data-l="es">La versión para Android llegará más adelante. Mientras tanto, escanea el código del ordenador con un iPhone o un iPad con la app Studio.</p>
+    <p data-l="en"><strong>For now Studio is only on iPhone, iPad, Mac and Windows.</strong></p>
+    <p data-l="en">The Android version is coming later. Meanwhile, scan the computer’s code with an iPhone or iPad running the Studio app.</p>
+  </div>
+
+  <p class="foot" data-l="es">Studio: Editor de vídeo · Esta página no usa cookies ni rastreo. <a href="../privacidad.html">Política de privacidad</a></p>
+  <p class="foot" data-l="en">Studio: Video Editor · This page uses no cookies or tracking. <a href="../privacy.html">Privacy policy</a></p>
+</main>
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  // iPad moderno se presenta como Mac, pero tiene pantalla táctil.
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var movil = ios || /Android|Mobile/.test(ua);
+  var aparato = ios ? 'ios' : (movil ? 'otro' : 'pc');
+
+  var idioma = ((navigator.language || 'es').slice(0, 2) === 'es') ? 'es' : 'en';
+  var m = location.search.match(/[?&]lang=(es|en)/);
+  if (m) idioma = m[1];
+
+  document.documentElement.lang = idioma;
+  var els = document.querySelectorAll('[data-l]');
+  for (var i = 0; i < els.length; i++) if (els[i].getAttribute('data-l') === idioma) els[i].className += ' on';
+  els = document.querySelectorAll('[data-d]');
+  for (i = 0; i < els.length; i++) if (els[i].getAttribute('data-d') === aparato) els[i].className += ' on';
+
+  var a = document.getElementById('cambiar');
+  var otro = idioma === 'es' ? 'en' : 'es';
+  a.textContent = otro === 'en' ? 'English' : 'Español';
+  a.lang = otro; a.hreflang = otro;
+  // No se conserva el # (lleva el id de la petición): el cambio solo recarga con el idioma.
+  a.href = '?lang=' + otro;
+  document.title = idioma === 'es' ? 'Studio: Editor de vídeo — Desbloquear el ordenador' : 'Studio: Video Editor — Unlock your computer';
+})();
+</script>
+</body>
+</html>
