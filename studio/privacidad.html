@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Studio: Editor de vídeo — Política de privacidad</title>
-<meta name="description" content="Política de privacidad de Studio: Editor de vídeo. Tus vídeos y grabaciones de pantalla no salen del dispositivo, los subtítulos se transcriben en él, y los anuncios, la analítica y la suscripción dependen de tu consentimiento o de la tienda.">
+<meta name="description" content="Política de privacidad de Studio: Editor de vídeo. Tus vídeos y grabaciones de pantalla no salen del dispositivo, los subtítulos se transcriben en él, los anuncios, la analítica y la suscripción dependen de tu consentimiento o de la tienda, y la IA propia solo envía datos si la activas con tu clave.">
 <link rel="canonical" href="https://cdpoma.github.io/studio/privacidad.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/studio/privacidad.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/studio/privacy.html">
@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. En Android y Windows, para que la prueba gratis sea una por aparato, guardamos un identificador del aparato cifrado y la fecha de la primera vez. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios.</p>
+    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. En Android y Windows, para que la prueba gratis sea una por aparato, guardamos un identificador del aparato cifrado y la fecha de la primera vez. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios. Si quieres, puedes usar <strong>tu propia IA</strong> con tu propia clave: lo que se envía va directo de tu dispositivo a ese proveedor, solo tras tu consentimiento, y Studio no lo guarda ni pasa por ningún servidor nuestro.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -64,6 +64,7 @@
   <ul>
     <li>Los vídeos que abres, las grabaciones de pantalla y los proyectos se editan y se guardan en tu dispositivo. Studio no los envía a ningún servidor del desarrollador ni de terceros.</li>
     <li>Los <strong>subtítulos</strong> se transcriben en el propio dispositivo. El audio no se manda a ningún servidor.</li>
+    <li>Solo si tú lo activas, la función <a href="#ia-propia"><strong>«Usa tu propia IA»</strong></a> envía texto o un fotograma al proveedor de IA que elijas, con tu clave (ver más abajo). Sin activarla, no se envía nada.</li>
     <li>El botón <strong>«Crear con IA de Google»</strong> solo abre <code>gemini.google.com</code> en el navegador, con tu propia cuenta de Google. La app no envía a Google ni vídeos ni datos tuyos. Lo que hagas en Gemini se rige por la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</li>
   </ul>
 
@@ -71,14 +72,16 @@
   <table>
     <tr><th>Servicio</th><th>Para qué</th><th>Qué recibe</th></tr>
     <tr><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td><td>Anuncios en la versión gratis de móvil y tablet. No hay anuncios en Mac ni Windows.</td><td>Datos técnicos del dispositivo y de la app (dirección IP, modelo, versión del sistema, interacción con el anuncio). Si lo consientes, el identificador de publicidad del dispositivo para mostrar anuncios personalizados.</td></tr>
-    <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase Analytics (Google)</a></td><td>Estadísticas de uso anónimas para mejorar la app.</td><td>Eventos de uso, modelo de dispositivo, versión del sistema e idioma, con un identificador de instalación. La app no usa el IDFA para la analítica.</td></tr>
+    <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase Analytics (Google)</a></td><td>Estadísticas de uso anónimas para mejorar la app.</td><td>Eventos de uso, modelo de dispositivo, versión del sistema e idioma, con un identificador de instalación. La app no usa el IDFA para la analítica. En Mac está apagada de serie: solo se activa si marcas «Compartir estadísticas de uso anónimas» en el menú de la app.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Gestionar la suscripción Pro y comprobar si está activa.</td><td>Un ID anónimo de compra y el estado de la suscripción. No recibe tu nombre ni tu correo. Los pagos los cobran Apple, Google o Microsoft, no la app.</td></tr>
-    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (nuestro servidor)</td><td>Solo en Android y Windows: que la prueba de 7 días sea una por aparato.</td><td>El identificador del aparato cifrado (hash SHA-256) y la fecha de la primera vez. Nada más: ni vídeos, ni nombre, ni correo.</td></tr>
+    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (nuestro servidor)</td><td>Que la prueba de 7 días sea una por aparato en Android y Windows, y comprobar si hay que actualizar la app (versión mínima).</td><td>En Android y Windows: el identificador del aparato cifrado (hash SHA-256) y la fecha de la primera vez. En todas las plataformas, como en cualquier conexión, la dirección IP al preguntar la versión mínima, sin guardarla con ningún dato tuyo. Nada más: ni vídeos, ni nombre, ni correo.</td></tr>
+    <tr><td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face</a></td><td>Solo en Mac y Windows y solo si eliges «Más precisión» en los subtítulos: descargar el modelo de voz grande.</td><td>Como en cualquier descarga, tu dirección IP. No se envía nada tuyo: la transcripción sigue haciéndose en tu equipo.</td></tr>
+    <tr><td>Tu proveedor de IA (opcional)</td><td>Solo si activas «Usa tu propia IA»: Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) u otro compatible que tú configures.</td><td>Lo que se explica en <a href="#ia-propia">«Usa tu propia IA»</a>, con tu clave y tu consentimiento. No pasa por nuestros servidores.</td></tr>
   </table>
 
   <h2>Anuncios y consentimiento</h2>
   <p>La versión gratis de móvil y tablet muestra anuncios de Google AdMob. Al abrir la app por primera vez, el formulario de consentimiento de Google (UMP) te pregunta en el Espacio Económico Europeo, el Reino Unido y Suiza, y también ofrece las opciones de privacidad de los estados de EE. UU. que lo exigen. En iOS, además, se muestra el aviso de transparencia de seguimiento de Apple (ATT). AdMob solo puede usar el identificador de publicidad para anuncios personalizados <strong>si lo consientes</strong>; si no, los anuncios no son personalizados. Puedes cambiar tu decisión en cualquier momento desde los ajustes de la app (opciones de privacidad) y, en el dispositivo, desde los ajustes de anuncios del sistema.</p>
-  <p>Hay además un <strong>anuncio recompensado opcional</strong>: si decides verlo, desbloquea 30 minutos de todas las funciones Pro.</p>
+  <p>Hay además un <strong>anuncio recompensado opcional</strong>, herramienta a herramienta: si decides verlo, desbloquea <strong>solo la herramienta Pro que has tocado</strong> durante 30 minutos. Cada herramienta pide su propio anuncio y ver otro para la misma herramienta suma 30 minutos más. Recortar es gratis y no pide anuncio. Guardamos en tu dispositivo, para cada herramienta, la hora en que acaba su tiempo; no sale del dispositivo. El anuncio lo sirve Google AdMob, con lo descrito arriba.</p>
 
   <h2>Suscripción Pro y prueba de 7 días</h2>
   <ul>
@@ -89,8 +92,25 @@
         <li><strong>Android y Windows:</strong> la app guarda en nuestro servidor (Supabase) un identificador del aparato <strong>cifrado</strong> (un hash SHA-256 del ANDROID_ID en Android, o del identificador del sistema para el editor en Windows) junto con la fecha de la primera vez. Se usa <strong>solo</strong> para saber si ese aparato ya tuvo la prueba: no se usa para nada más, no se comparte con nadie, no sirve para publicidad y no identifica a la persona.</li>
       </ul>
     </li>
-    <li>Pro cuesta <strong>1,99 € al mes</strong> y se cancela en la tienda (Apple, Google o Microsoft) cuando quieras.</li>
+    <li>Pro cuesta <strong>1,99 € al mes o 14,99 € al año</strong> (el precio de tu país lo muestra la tienda) y se cancela en la tienda (Apple, Google o Microsoft) cuando quieras.</li>
+    <li><strong>La respuesta del servidor va firmada</strong> (firma digital Ed25519) para que nadie pueda falsearla y alargar la prueba. La app comprueba la firma en tu dispositivo. Lo que se firma es solo la hora del servidor, si es la primera vez y un número aleatorio que inventa la app en cada petición: no lleva ningún dato personal.</li>
     <li>El pago lo gestiona y cobra la tienda; la app nunca ve tu tarjeta.</li>
+  </ul>
+
+  <h2 id="ia-propia">Usa tu propia IA (opcional)</h2>
+  <p>Studio puede trabajar con la IA que tú ya usas (Claude, ChatGPT, Gemini u otra compatible) para editar hablando, escribir textos para redes, crear la miniatura con IA o traducir subtítulos. Es <strong>opcional y está apagada</strong> hasta que pegas tu propia clave de API.</p>
+  <ul>
+    <li><strong>Qué se envía</strong>, según la función que uses:
+      <ul>
+        <li><em>Editar hablando:</em> tu instrucción y una descripción del proyecto (nombres y duraciones de los clips y, si la hay, la transcripción de los subtítulos). <strong>Nunca el vídeo ni el audio.</strong></li>
+        <li><em>Textos para redes y Traducir subtítulos:</em> el texto de los subtítulos.</li>
+        <li><em>Miniatura con IA dentro:</em> el fotograma que elijas y tu texto, a Gemini.</li>
+      </ul>
+    </li>
+    <li><strong>A quién:</strong> solo al proveedor que tú elijas (Anthropic, OpenAI, Google, o la dirección compatible que escribas, que puede ser un programa en tu propio ordenador). La llamada va <strong>directa desde tu dispositivo</strong> a ese proveedor: no pasa por ningún servidor de Studio.</li>
+    <li><strong>Con tu clave, no la nuestra:</strong> la clave la creas tú en tu cuenta del proveedor y se guarda <strong>cifrada</strong> en el llavero del sistema (Keychain en iPhone, iPad y Mac; Keystore en Android; Almacén de credenciales en Windows). No sale de tu dispositivo salvo para identificarte ante ese proveedor. Puedes probarla y borrarla cuando quieras. El uso se factura a tu cuenta del proveedor, no a nosotros.</li>
+    <li><strong>Con tu consentimiento:</strong> antes del primer uso con cada proveedor, una ventana te dice qué se enviará y a quién, y solo se envía si pulsas «Aceptar». Con «No» no se envía nada.</li>
+    <li><strong>Studio no lo guarda:</strong> ni nosotros ni ningún servidor nuestro recibimos esos datos ni tu clave. Lo que haga el proveedor con ellos se rige por su propia política de privacidad y sus condiciones; revísalas antes de aceptar.</li>
   </ul>
 
   <h2>Permisos</h2>
@@ -107,6 +127,7 @@
     <li><strong>Vídeos, grabaciones y proyectos:</strong> en tu dispositivo, hasta que los borres o desinstales la app.</li>
     <li><strong>Datos locales de la app</strong> (ajustes, estado de la prueba): hasta que desinstales la app.</li>
     <li><strong>Registro de la prueba</strong> (Android y Windows: identificador cifrado y fecha): mientras la app siga disponible, para que la prueba sea una por aparato. Puedes pedir que se borre.</li>
+    <li><strong>Tu clave de IA:</strong> cifrada en tu dispositivo, hasta que pulses «Borrar mi clave» o desinstales la app.</li>
     <li><strong>Analítica, publicidad y suscripción:</strong> según los plazos de Google (Firebase, AdMob) y de RevenueCat.</li>
   </ul>
 
@@ -118,12 +139,12 @@
 
   <h2>Tus derechos</h2>
   <p>Puedes pedir en cualquier momento acceso, rectificación, supresión, oposición, limitación y portabilidad de tus datos (RGPD) escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Como Studio no tiene cuentas y tus vídeos no salen del dispositivo, casi todo está en tu dispositivo, donde puedes borrarlo tú. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) o ante la autoridad de tu país.</p>
-  <p>Base legal: la suscripción, por ejecución del servicio que has pedido; los anuncios personalizados y la analítica de uso, con tu consentimiento, que puedes retirar cuando quieras; los anuncios no personalizados, por interés legítimo en financiar la versión gratuita.</p>
+  <p>Base legal: la suscripción, por ejecución del servicio que has pedido; los anuncios personalizados, la analítica de uso y el envío de datos a tu proveedor de IA, con tu consentimiento, que puedes retirar cuando quieras; los anuncios no personalizados, por interés legítimo en financiar la versión gratuita.</p>
 
   <h2>Cambios</h2>
   <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
 
-  <div class="foot">Studio: Editor de vídeo · Vigente desde 7 de noviembre de 2026 · Gabriel Micó Victoria</div>
+  <div class="foot">Studio: Editor de vídeo · Vigente desde 8 de noviembre de 2026 · Gabriel Micó Victoria</div>
 </main>
 </body>
 </html>
