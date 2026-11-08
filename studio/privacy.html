@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="support.html">Help and support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. On Android and Windows, so that the free trial is one per device, we store an encrypted device identifier and the date of first use. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows. If you want, you can use <strong>your own AI</strong> with your own key: what is sent goes straight from your device to that provider, only after your consent, and Studio neither stores it nor routes it through any server of ours.</p>
+    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. On Android and Windows, so that the free trial is one per device, we store an encrypted device identifier and the date of first use. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows, but you can unlock a tool on your computer by watching an ad on your phone: for that we store on our server a random, encrypted identifier of the computer, the unlock requests and, if you accept notifications, your phone’s notification token. If you want, you can use <strong>your own AI</strong> with your own key: what is sent goes straight from your device to that provider, only after your consent, and Studio neither stores it nor routes it through any server of ours.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -74,14 +74,29 @@
     <tr><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td><td>Ads in the free mobile and tablet version. No ads on Mac or Windows.</td><td>Technical device and app data (IP address, model, system version, ad interaction). If you consent, the device advertising identifier to show personalized ads.</td></tr>
     <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase Analytics (Google)</a></td><td>Anonymous usage statistics to improve the app.</td><td>Usage events, device model, system version and language, with an installation identifier. The app does not use the IDFA for analytics. On Mac it is off by default: it is only turned on if you tick “Share anonymous usage statistics” in the app menu.</td></tr>
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Manage the Pro subscription and check whether it is active.</td><td>An anonymous purchase ID and the subscription status. It does not receive your name or email. Payments are charged by Apple, Google or Microsoft, not by the app.</td></tr>
-    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (our server)</td><td>Making the 7-day trial one per device on Android and Windows, and checking whether the app must be updated (minimum version).</td><td>On Android and Windows: the encrypted device identifier (SHA-256 hash) and the date of first use. On all platforms, as with any connection, the IP address when asking for the minimum version, not stored with any data about you. Nothing else: no videos, no name, no email.</td></tr>
+    <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (our server)</td><td>Making the 7-day trial one per device on Android and Windows, and checking whether the app must be updated (minimum version).</td><td>On Android and Windows: the encrypted device identifier (SHA-256 hash) and the date of first use. On all platforms, as with any connection, the IP address when asking for the minimum version, not stored with any data about you. If you unlock the computer with your phone: the random identifier of the computer (encrypted with SHA-256), the unlock requests and, if you accept notifications, your phone’s notification token (see <a href="#unlock-computer">“Unlock your computer with your phone”</a>). Nothing else: no videos, no name, no email.</td></tr>
     <tr><td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face</a></td><td>Mac and Windows only, and only if you choose “More accuracy” for subtitles: downloading the large speech model.</td><td>As with any download, your IP address. Nothing of yours is sent: transcription is still done on your computer.</td></tr>
     <tr><td>Your AI provider (optional)</td><td>Only if you turn on “Use your own AI”: Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) or another compatible one you set up.</td><td>What is explained in <a href="#own-ai">“Use your own AI”</a>, with your key and your consent. It does not go through our servers.</td></tr>
   </table>
 
   <h2>Ads and consent</h2>
   <p>The free mobile and tablet version shows Google AdMob ads. When you first open the app, Google's consent form (UMP) asks you in the European Economic Area, the United Kingdom and Switzerland, and also offers the privacy choices required in some US states. On iOS, Apple's App Tracking Transparency (ATT) prompt is shown as well. AdMob can use the advertising identifier for personalized ads <strong>only if you consent</strong>; otherwise ads are not personalized. You can change your choice at any time in the app settings (privacy options) and in your device's system ad settings.</p>
-  <p>There is also an <strong>optional rewarded ad</strong>, tool by tool: if you choose to watch it, it unlocks <strong>only the Pro tool you tapped</strong> for 30 minutes. Each tool needs its own ad, and watching another one for the same tool adds 30 more minutes. Trimming is free and needs no ad. We store on your device, for each tool, the time its allowance ends; it never leaves the device. The ad is served by Google AdMob, as described above.</p>
+  <p>There is also an <strong>optional rewarded ad</strong>, tool by tool: if you choose to watch it, it unlocks <strong>only the Pro tool you tapped</strong> for 20 minutes. Each tool needs its own ad, and watching another one for the same tool adds 20 more minutes. Trimming is free and needs no ad. We store on your device, for each tool, the time its allowance ends; it never leaves the device. The ad is served by Google AdMob, as described above.</p>
+
+  <h2 id="unlock-computer">Unlock your computer with your phone</h2>
+  <p>There are no ads on Mac and Windows. If you want to use a Pro tool without a subscription, the computer shows a QR code and, when you scan it with Studio on your phone and watch a rewarded ad <strong>all the way through</strong>, that tool is unlocked for <strong>20 minutes</strong> on the computer. It is optional and there are no accounts or passwords.</p>
+  <ul>
+    <li><strong>What we store on our server (Supabase):</strong>
+      <ul>
+        <li>A <strong>random identifier of the computer</strong>, invented by the app and kept in the system keychain (Keychain on Mac, Credential Locker on Windows). On the server we store it only <strong>encrypted (SHA-256 hash)</strong>.</li>
+        <li>The <strong>unlock requests</strong>: a random single-use code that expires after 10 minutes, the requested tool, the date and its status, and the time each tool’s unlocked time ends.</li>
+        <li>Only if you <strong>accept notifications</strong> on the phone, the phone’s <strong>notification token</strong> (and its platform), to let you know the computer is asking to be unlocked. Notifications are sent through Google (Firebase Cloud Messaging) and, on iPhone and iPad, Apple (APNs). If you do not accept them, the QR works just the same.</li>
+      </ul>
+    </li>
+    <li><strong>Google (AdMob) notifies our server:</strong> when a rewarded ad is watched all the way through, AdMob sends our server a signed confirmation (server-side verification) with the request code. Only then is the time added. If you close the ad early, nothing is unlocked.</li>
+    <li><strong>There are no accounts.</strong> The phone and the computer are linked only by those random identifiers, which carry no name, email or videos, are not used for advertising and are not shared with anyone.</li>
+    <li><strong>You can unlink</strong> the phone and the computer at any time from Studio’s Settings, which deletes the link and the notification token.</li>
+  </ul>
 
   <h2>Pro subscription and 7-day trial</h2>
   <ul>
@@ -127,19 +142,20 @@
     <li><strong>Videos, recordings and projects:</strong> on your device, until you delete them or uninstall the app.</li>
     <li><strong>Local app data</strong> (settings, trial state): until you uninstall the app.</li>
     <li><strong>Trial record</strong> (Android and Windows: encrypted identifier and date): while the app remains available, so the trial stays one per device. You can ask for it to be deleted.</li>
+    <li><strong>Computer unlock</strong> (encrypted computer identifier, requests and the phone’s notification token): requests are deleted shortly after they expire; the link and the token, until you unlink from Settings. You can ask for them to be deleted.</li>
     <li><strong>Your AI key:</strong> encrypted on your device, until you tap “Delete my key” or uninstall the app.</li>
     <li><strong>Analytics, advertising and subscription:</strong> according to the retention periods of Google (Firebase, AdMob) and RevenueCat.</li>
   </ul>
 
   <h2>How to delete your data</h2>
-  <p>Uninstall the app to delete everything stored on your device. AdMob, Firebase and RevenueCat data can be reset or deleted: reset the advertising identifier in your system settings, or write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will handle deletion with those services and of the trial record on our server.</p>
+  <p>Uninstall the app to delete everything stored on your device. AdMob, Firebase and RevenueCat data can be reset or deleted: reset the advertising identifier in your system settings, or write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will handle deletion with those services and of the trial record and the computer-unlock data on our server. The link between phone and computer can also be deleted from Settings, with “Unlink”.</p>
 
   <h2>Children</h2>
   <p>Studio is <strong>not directed at children</strong> and does not knowingly collect data from minors. If you believe a minor has provided data, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will delete it.</p>
 
   <h2>Your rights</h2>
   <p>You can request access, rectification, erasure, objection, restriction and portability of your data (GDPR) at any time by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Since Studio has no accounts and your videos never leave the device, almost everything is on your device, where you can delete it yourself. You can also lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) or your country's authority.</p>
-  <p>Legal basis: the subscription, to provide the service you requested; personalized ads, usage analytics and sending data to your AI provider, with your consent, which you can withdraw at any time; non-personalized ads, legitimate interest in funding the free version.</p>
+  <p>Legal basis: the subscription and the computer unlock, to provide the service you requested; phone notifications, with your consent when you accept them in the system; personalized ads, usage analytics and sending data to your AI provider, with your consent, which you can withdraw at any time; non-personalized ads, legitimate interest in funding the free version.</p>
 
   <h2>Changes</h2>
   <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
