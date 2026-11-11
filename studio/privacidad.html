@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="./">Studio: qué es, precio y funciones</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. En Android y Windows, para que la prueba gratis sea una por aparato, guardamos un identificador del aparato cifrado y la fecha de la primera vez. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios, pero puedes desbloquear una herramienta en el ordenador viendo un anuncio en el móvil: para eso guardamos en nuestro servidor un identificador al azar del ordenador, cifrado, las peticiones de desbloqueo y, si aceptas las notificaciones, el token de notificaciones del móvil. Si quieres, puedes usar <strong>tu propia IA</strong> con tu propia clave: lo que se envía va directo de tu dispositivo a ese proveedor, solo tras tu consentimiento, y Studio no lo guarda ni pasa por ningún servidor nuestro.</p>
+    <p><strong>Resumen:</strong> Studio edita tus vídeos y grabaciones de pantalla <strong>en tu propio dispositivo</strong>: no salen de él, no se suben a ningún servidor y se guardan donde tú elijas. Los subtítulos se transcriben también en el dispositivo; el audio no se envía a ningún servidor. No hay cuentas ni registro. En Android y Windows, para que la prueba gratis sea una por aparato, guardamos un identificador del aparato cifrado y la fecha de la primera vez. La versión gratis de móvil y tablet muestra anuncios de Google AdMob, personalizados solo si lo consientes. Usamos Firebase Analytics para estadísticas de uso anónimas y RevenueCat para gestionar la suscripción Pro. En Mac y Windows no hay anuncios, pero puedes desbloquear una herramienta en el ordenador viendo un anuncio en el móvil: para eso guardamos en nuestro servidor un identificador al azar del ordenador, cifrado, las peticiones de desbloqueo y, si aceptas las notificaciones, el token de notificaciones del móvil. Si quieres, puedes usar <strong>tu propia IA</strong> con tu propia clave: lo que se envía (incluido lo que escribes en el <strong>«Chat IA»</strong> de cada herramienta) va directo de tu dispositivo a ese proveedor, solo tras tu consentimiento, y Studio no lo guarda ni pasa por ningún servidor nuestro. Los «Nombres o palabras que salen en el vídeo» que apuntas para los subtítulos se quedan en tu dispositivo.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -64,7 +64,8 @@
   <ul>
     <li>Los vídeos que abres, las grabaciones de pantalla y los proyectos se editan y se guardan en tu dispositivo. Studio no los envía a ningún servidor del desarrollador ni de terceros.</li>
     <li>Los <strong>subtítulos</strong> se transcriben en el propio dispositivo. El audio no se manda a ningún servidor.</li>
-    <li>Solo si tú lo activas, la función <a href="#ia-propia"><strong>«Usa tu propia IA»</strong></a> envía texto o un fotograma al proveedor de IA que elijas, con tu clave (ver más abajo). Sin activarla, no se envía nada.</li>
+    <li>Los <strong>«Nombres o palabras que salen en el vídeo»</strong> que apuntas en «Poner subtítulos» para que los escriba bien se guardan con tus subtítulos en tu dispositivo y solo los usa la transcripción, que se hace en el propio dispositivo. No se envían a ningún servidor ni a ningún proveedor de IA.</li>
+    <li>Solo si tú lo activas, la función <a href="#ia-propia"><strong>«Usa tu propia IA»</strong></a> (que incluye el <strong>«Chat IA»</strong> de cada herramienta) envía texto o un fotograma al proveedor de IA que elijas, con tu clave (ver más abajo). Sin activarla, no se envía nada.</li>
     <li>El botón <strong>«Crear con IA de Google»</strong> solo abre <code>gemini.google.com</code> en el navegador, con tu propia cuenta de Google. La app no envía a Google ni vídeos ni datos tuyos. Lo que hagas en Gemini se rige por la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</li>
   </ul>
 
@@ -76,7 +77,7 @@
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Gestionar la suscripción Pro y comprobar si está activa.</td><td>Un ID anónimo de compra y el estado de la suscripción. No recibe tu nombre ni tu correo. Los pagos los cobran Apple, Google o Microsoft, no la app.</td></tr>
     <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (nuestro servidor)</td><td>Que la prueba de 7 días sea una por aparato en Android y Windows, y comprobar si hay que actualizar la app (versión mínima).</td><td>En Android y Windows: el identificador del aparato cifrado (hash SHA-256) y la fecha de la primera vez. En todas las plataformas, como en cualquier conexión, la dirección IP al preguntar la versión mínima, sin guardarla con ningún dato tuyo. Si desbloqueas el ordenador con el móvil: el identificador al azar del ordenador (cifrado con SHA-256), las peticiones de desbloqueo y, si aceptas las notificaciones, el token de notificaciones del móvil (ver <a href="#desbloqueo-ordenador">«Desbloquear el ordenador con el móvil»</a>). Nada más: ni vídeos, ni nombre, ni correo.</td></tr>
     <tr><td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face</a></td><td>Solo en Mac y Windows y solo si eliges «Más precisión» en los subtítulos: descargar el modelo de voz grande.</td><td>Como en cualquier descarga, tu dirección IP. No se envía nada tuyo: la transcripción sigue haciéndose en tu equipo.</td></tr>
-    <tr><td>Tu proveedor de IA (opcional)</td><td>Solo si activas «Usa tu propia IA»: Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) u otro compatible que tú configures.</td><td>Lo que se explica en <a href="#ia-propia">«Usa tu propia IA»</a>, con tu clave y tu consentimiento. No pasa por nuestros servidores.</td></tr>
+    <tr><td>Tu proveedor de IA (opcional)</td><td>Solo si activas «Usa tu propia IA» (incluido «Chat IA»): Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) u otro compatible que tú configures.</td><td>Lo que se explica en <a href="#ia-propia">«Usa tu propia IA»</a>, con tu clave y tu consentimiento. No pasa por nuestros servidores.</td></tr>
   </table>
 
   <h2>Anuncios y consentimiento</h2>
@@ -113,18 +114,20 @@
   </ul>
 
   <h2 id="ia-propia">Usa tu propia IA (opcional)</h2>
-  <p>Studio puede trabajar con la IA que tú ya usas (Claude, ChatGPT, Gemini u otra compatible) para editar hablando, escribir textos para redes, crear la miniatura con IA o traducir subtítulos. Es <strong>opcional y está apagada</strong> hasta que pegas tu propia clave de API.</p>
+  <p>Studio puede trabajar con la IA que tú ya usas (Claude, ChatGPT, Gemini u otra compatible) para pedir cambios en el «Chat IA» de cada herramienta, editar hablando, escribir textos para redes, crear la miniatura con IA o traducir subtítulos. Es <strong>opcional y está apagada</strong> hasta que pegas tu propia clave de API.</p>
   <ul>
     <li><strong>Qué se envía</strong>, según la función que uses:
       <ul>
-        <li><em>Editar hablando:</em> tu instrucción y una descripción del proyecto (nombres y duraciones de los clips y, si la hay, la transcripción de los subtítulos). <strong>Nunca el vídeo ni el audio.</strong></li>
+        <li><em>Chat IA</em> (una pestaña en cada herramienta): lo que escribes en el chat y los últimos mensajes de la conversación, lo elegido en la herramienta (por ejemplo, el texto de la miniatura o del clip viral) y una descripción del proyecto (cuántos vídeos hay, lo que dura cada uno, los fragmentos quitados, los colores y, si los hay, el texto de tus subtítulos). <strong>Nunca el vídeo ni el audio, ni los nombres de tus archivos.</strong> La IA solo propone: tú ves el cambio en la vista previa y solo se queda si pulsas «Confirmar».</li>
+        <li><em>Editar hablando:</em> tu instrucción y una descripción del proyecto (cuántos vídeos hay, lo que dura cada uno, los fragmentos quitados, los colores y, si los hay, el texto de tus subtítulos). <strong>Nunca el vídeo ni el audio.</strong></li>
         <li><em>Textos para redes y Traducir subtítulos:</em> el texto de los subtítulos.</li>
         <li><em>Miniatura con IA dentro:</em> el fotograma que elijas y tu texto, a Gemini.</li>
       </ul>
     </li>
     <li><strong>A quién:</strong> solo al proveedor que tú elijas (Anthropic, OpenAI, Google, o la dirección compatible que escribas, que puede ser un programa en tu propio ordenador). La llamada va <strong>directa desde tu dispositivo</strong> a ese proveedor: no pasa por ningún servidor de Studio.</li>
     <li><strong>Con tu clave, no la nuestra:</strong> la clave la creas tú en tu cuenta del proveedor y se guarda <strong>cifrada</strong> en el llavero del sistema (Keychain en iPhone, iPad y Mac; Keystore en Android; Almacén de credenciales en Windows). No sale de tu dispositivo salvo para identificarte ante ese proveedor. Puedes probarla y borrarla cuando quieras. El uso se factura a tu cuenta del proveedor, no a nosotros.</li>
-    <li><strong>Con tu consentimiento:</strong> antes del primer uso con cada proveedor, una ventana te dice qué se enviará y a quién, y solo se envía si pulsas «Aceptar». Con «No» no se envía nada.</li>
+    <li><strong>Con tu consentimiento:</strong> antes del primer uso de cada tipo de envío con cada proveedor (el del «Chat IA» se pregunta aparte), una ventana te dice qué se enviará y a quién, y solo se envía si pulsas «Aceptar». Con «No» no se envía nada.</li>
+    <li><strong>Lo que no se envía:</strong> los «Nombres o palabras que salen en el vídeo» que apuntas para los subtítulos se quedan en tu dispositivo, también con «Usa tu propia IA».</li>
     <li><strong>Studio no lo guarda:</strong> ni nosotros ni ningún servidor nuestro recibimos esos datos ni tu clave. Lo que haga el proveedor con ellos se rige por su propia política de privacidad y sus condiciones; revísalas antes de aceptar.</li>
   </ul>
 
@@ -160,7 +163,7 @@
   <h2>Cambios</h2>
   <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
 
-  <div class="foot">Studio: Editor de vídeo · Vigente desde 8 de noviembre de 2026 · Gabriel Micó Victoria</div>
+  <div class="foot">Studio: Editor de vídeo · Vigente desde 11 de noviembre de 2026 · Gabriel Micó Victoria</div>
 </main>
 </body>
 </html>

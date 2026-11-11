@@ -54,7 +54,7 @@
   <nav class="enlaces"><a href="en.html">Studio: features, pricing and FAQ</a> · <a href="support.html">Help and support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. On Android and Windows, so that the free trial is one per device, we store an encrypted device identifier and the date of first use. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows, but you can unlock a tool on your computer by watching an ad on your phone: for that we store on our server a random, encrypted identifier of the computer, the unlock requests and, if you accept notifications, your phone’s notification token. If you want, you can use <strong>your own AI</strong> with your own key: what is sent goes straight from your device to that provider, only after your consent, and Studio neither stores it nor routes it through any server of ours.</p>
+    <p><strong>Summary:</strong> Studio edits your videos and screen recordings <strong>on your own device</strong>: they never leave it, are not uploaded to any server and are saved where you choose. Subtitles are also transcribed on the device; the audio is not sent to any server. There are no accounts or sign-up. On Android and Windows, so that the free trial is one per device, we store an encrypted device identifier and the date of first use. The free mobile and tablet version shows Google AdMob ads, personalized only if you consent. We use Firebase Analytics for anonymous usage statistics and RevenueCat to manage the Pro subscription. There are no ads on Mac and Windows, but you can unlock a tool on your computer by watching an ad on your phone: for that we store on our server a random, encrypted identifier of the computer, the unlock requests and, if you accept notifications, your phone’s notification token. If you want, you can use <strong>your own AI</strong> with your own key: what is sent (including what you type in the <strong>“AI Chat”</strong> of each tool) goes straight from your device to that provider, only after your consent, and Studio neither stores it nor routes it through any server of ours. The “Names or words said in the video” you add for the subtitles stay on your device.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -64,7 +64,8 @@
   <ul>
     <li>The videos you open, your screen recordings and your projects are edited and saved on your device. Studio does not send them to any server of the developer or of third parties.</li>
     <li><strong>Subtitles</strong> are transcribed on the device itself. The audio is not sent to any server.</li>
-    <li>Only if you turn it on, the <a href="#own-ai"><strong>“Use your own AI”</strong></a> feature sends text or a frame to the AI provider you choose, with your key (see below). If you do not turn it on, nothing is sent.</li>
+    <li>The <strong>“Names or words said in the video”</strong> you add in “Add subtitles” so they are spelled right are saved with your subtitles on your device and only used by the transcription, which runs on the device itself. They are not sent to any server or to any AI provider.</li>
+    <li>Only if you turn it on, the <a href="#own-ai"><strong>“Use your own AI”</strong></a> feature (which includes the <strong>“AI Chat”</strong> of each tool) sends text or a frame to the AI provider you choose, with your key (see below). If you do not turn it on, nothing is sent.</li>
     <li>The <strong>“Create with Google AI”</strong> button only opens <code>gemini.google.com</code> in your browser, with your own Google account. The app sends no videos or data of yours to Google. What you do in Gemini is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</li>
   </ul>
 
@@ -76,7 +77,7 @@
     <tr><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td><td>Manage the Pro subscription and check whether it is active.</td><td>An anonymous purchase ID and the subscription status. It does not receive your name or email. Payments are charged by Apple, Google or Microsoft, not by the app.</td></tr>
     <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (our server)</td><td>Making the 7-day trial one per device on Android and Windows, and checking whether the app must be updated (minimum version).</td><td>On Android and Windows: the encrypted device identifier (SHA-256 hash) and the date of first use. On all platforms, as with any connection, the IP address when asking for the minimum version, not stored with any data about you. If you unlock the computer with your phone: the random identifier of the computer (encrypted with SHA-256), the unlock requests and, if you accept notifications, your phone’s notification token (see <a href="#unlock-computer">“Unlock your computer with your phone”</a>). Nothing else: no videos, no name, no email.</td></tr>
     <tr><td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face</a></td><td>Mac and Windows only, and only if you choose “More accuracy” for subtitles: downloading the large speech model.</td><td>As with any download, your IP address. Nothing of yours is sent: transcription is still done on your computer.</td></tr>
-    <tr><td>Your AI provider (optional)</td><td>Only if you turn on “Use your own AI”: Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) or another compatible one you set up.</td><td>What is explained in <a href="#own-ai">“Use your own AI”</a>, with your key and your consent. It does not go through our servers.</td></tr>
+    <tr><td>Your AI provider (optional)</td><td>Only if you turn on “Use your own AI” (including “AI Chat”): Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini) or another compatible one you set up.</td><td>What is explained in <a href="#own-ai">“Use your own AI”</a>, with your key and your consent. It does not go through our servers.</td></tr>
   </table>
 
   <h2>Ads and consent</h2>
@@ -113,18 +114,20 @@
   </ul>
 
   <h2 id="own-ai">Use your own AI (optional)</h2>
-  <p>Studio can work with the AI you already use (Claude, ChatGPT, Gemini or another compatible one) to edit by talking, write social media texts, create the thumbnail with AI or translate subtitles. It is <strong>optional and off</strong> until you paste your own API key.</p>
+  <p>Studio can work with the AI you already use (Claude, ChatGPT, Gemini or another compatible one) to ask for changes in the “AI Chat” of each tool, edit by talking, write social media texts, create the thumbnail with AI or translate subtitles. It is <strong>optional and off</strong> until you paste your own API key.</p>
   <ul>
     <li><strong>What is sent</strong>, depending on the feature you use:
       <ul>
-        <li><em>Edit by talking:</em> your instruction and a description of the project (names and durations of the clips and, if there is one, the subtitle transcript). <strong>Never the video or the audio.</strong></li>
+        <li><em>AI Chat</em> (a tab in every tool): what you type in the chat and the latest messages of the conversation, what you chose in the tool (for example, the thumbnail or viral clip text) and a description of the project (how many videos there are, how long each one is, the removed segments, the colors and, if there are any, the text of your subtitles). <strong>Never the video or the audio, nor your file names.</strong> The AI only proposes: you see the change in the preview and it only stays if you tap “Confirm”.</li>
+        <li><em>Edit by talking:</em> your instruction and a description of the project (how many videos there are, how long each one is, the removed segments, the colors and, if there are any, the text of your subtitles). <strong>Never the video or the audio.</strong></li>
         <li><em>Social media texts and Translate subtitles:</em> the subtitle text.</li>
         <li><em>Thumbnail with AI inside:</em> the frame you pick and your text, to Gemini.</li>
       </ul>
     </li>
     <li><strong>To whom:</strong> only to the provider you choose (Anthropic, OpenAI, Google, or the compatible address you type, which can be a program on your own computer). The call goes <strong>straight from your device</strong> to that provider: it does not go through any Studio server.</li>
     <li><strong>With your key, not ours:</strong> you create the key in your provider account and it is stored <strong>encrypted</strong> in the system keychain (Keychain on iPhone, iPad and Mac; Keystore on Android; Credential Locker on Windows). It does not leave your device except to identify you to that provider. You can test it and delete it at any time. Usage is billed to your provider account, not to us.</li>
-    <li><strong>With your consent:</strong> before the first use with each provider, a window tells you what will be sent and to whom, and it is only sent if you tap “Accept”. With “No”, nothing is sent.</li>
+    <li><strong>With your consent:</strong> before the first use of each kind of sending with each provider (the one for “AI Chat” is asked separately), a window tells you what will be sent and to whom, and it is only sent if you tap “Accept”. With “No”, nothing is sent.</li>
+    <li><strong>What is never sent:</strong> the “Names or words said in the video” you add for the subtitles stay on your device, even with “Use your own AI”.</li>
     <li><strong>Studio does not store it:</strong> neither we nor any server of ours receive that data or your key. What the provider does with it is governed by its own privacy policy and terms; read them before accepting.</li>
   </ul>
 
@@ -160,7 +163,7 @@
   <h2>Changes</h2>
   <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
 
-  <div class="foot">Studio: Video Editor · Effective November 8, 2026 · Gabriel Micó Victoria</div>
+  <div class="foot">Studio: Video Editor · Effective November 11, 2026 · Gabriel Micó Victoria</div>
 </main>
 </body>
 </html>
