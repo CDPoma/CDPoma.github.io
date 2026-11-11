@@ -1,0 +1,34 @@
+# TapMusic
+
+> TapMusic es un sampler de pads, sintetizador y caja de ritmos para iPhone y iPad. Graba cualquier sonido con el micrófono, recórtalo o trocéalo y tócalo en 16 pads; o crea ritmos y melodías con un secuenciador de 16 pasos y 4 pistas con síntesis en tiempo real. Lo que tocas en los pads se graba en el mismo secuenciador que el sintetizador.
+
+Hechos comprobables:
+- Graba y toca tus sonidos: con el modo PADS: graba cualquier sonido con el micrófono (en bruto, sin filtros de voz), asígnalo a un pad y tócalo. 16 pads multitáctiles en 4 bancos (64 pads), con la fuerza del golpe según dónde toques.
+- Edita la muestra: con la forma de onda y zoom: recorta inicio y fin con ajuste al paso por cero y fundidos sin clics, normaliza, dale la vuelta o trocéala en 2, 4, 8 o 16 pads, en partes iguales o por golpes.
+- Mandos de estudio por pad: volumen en dB, tono en semitonos y cents, filtro paso bajo o alto con resonancia, panorama, envolvente ADSR, modo único, puerta o bucle y grupos de corte. Fader maestro y medidores de pico y RMS con aviso de recorte.
+- Sintetizador y caja de ritmos: secuenciador de 16 pasos con 4 pistas, 8 sonidos de fábrica creados por síntesis, editor de sonido por pista, 16 patrones encadenables y modo canción. Tempo de 40 a 240 BPM y swing.
+- Graba lo que tocas: con REC, en directo y ajustado al paso, en los pads y en el teclado del sintetizador, con metrónomo y una cuenta atrás de 3 segundos antes de empezar.
+- Efectos: filtro con resonancia, eco sincronizado al tempo con envío por pista y reducción de bits.
+- Exporta con calidad: la canción o un patrón en WAV de 24 bits a la frecuencia del aparato, las pistas sueltas (stems) y un archivo MIDI para cualquier programa de música.
+- Sonido limpio: osciladores limitados en banda (sin aliasing), cambio de tono con interpolación de calidad y un limitador suave que evita el recorte.
+- Hacer música: Gratis: Todo: pads, micrófono, sintetizador, secuenciador, efectos y exportar. TapMusic Pro: Todo.
+- Precio: Gratis: 0 €. TapMusic Pro: 1,99 €/mes o 14,99 €/año, 7 días gratis.
+- Banner: Gratis: Sí. TapMusic Pro: No.
+- Antes de grabar: Gratis: Opcional: ver un anuncio para grabar sin banner, o grabar ya con banner. TapMusic Pro: Nada: solo la cuenta atrás de 3 s.
+- Al guardar un archivo: Gratis: Un anuncio con aviso, como mucho uno cada 90 s. TapMusic Pro: Igual: este se mantiene con Pro.
+- iPhone: iOS 15.0 o posterior, en vertical y apaisado.
+- iPad: iPadOS 15.0 o posterior, en vertical, apaisado y pantalla dividida (Split View).
+- Android, Mac y Windows: no.
+- Idioma de la app: español.
+- Privacidad: TapMusic graba con el micrófono solo cuando tú pulsas grabar, y lo grabado se queda en tu aparato: no se envía a ningún servidor. Las canciones se guardan en el aparato y en tu iCloud; los sonidos grabados van en la copia de seguridad del aparato y en la copia completa que tú exportes. Sin cuentas ni registro.
+- Qué no hace: No trae muestras grabadas de fábrica: los pads empiezan vacíos y usan lo que tú grabes; el sintetizador crea sus sonidos por síntesis. No envía ni recibe MIDI en directo por cable o Bluetooth: exporta archivos MIDI. No graba el audio de otras apps. No está en Android, Mac ni Windows.
+
+Páginas:
+- [TapMusic](https://cdpoma.github.io/tapmusic/): qué es, funciones, precio, plataformas y preguntas frecuentes
+- [Soporte](https://cdpoma.github.io/tapmusic/soporte.html)
+- [Política de privacidad](https://cdpoma.github.io/tapmusic/privacidad.html)
+- [Resumen de TapMusic para asistentes](https://cdpoma.github.io/tapmusic/llms.txt)
+- [App Store (iPhone y iPad)](https://apps.apple.com/app/id6823804313)
+
+## Contacto
+gabrielmicovictoria@gmail.com

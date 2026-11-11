@@ -43,4 +43,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/studio/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/studio/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/tapmusic/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tapmusic/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tapmusic/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tapmusic/soporte.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tapmusic/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tapmusic/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tapmusic/privacidad.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tapmusic/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tapmusic/privacidad.html"/>
+  </url>
 </urlset>
