@@ -44,7 +44,7 @@
       "name": "Studio: video editor and screen recorder for iPhone, Mac and PC",
       "description": "Easy editing with professional results: auto captions, viral clips with music and screen recording. Trim for free, with no watermark, in 1080p.",
       "inLanguage": "en",
-      "dateModified": "2026-11-08",
+      "dateModified": "2026-11-11",
       "about": {
         "@id": "https://cdpoma.github.io/studio/#app"
       },
@@ -78,7 +78,9 @@
         "https://cdpoma.github.io/studio/img/captions-en.webp",
         "https://cdpoma.github.io/studio/img/viral-clips-en.webp",
         "https://cdpoma.github.io/studio/img/free-en.webp",
-        "https://cdpoma.github.io/studio/img/screen-recorder-en.webp"
+        "https://cdpoma.github.io/studio/img/screen-recorder-en.webp",
+        "https://cdpoma.github.io/studio/img/remove-segment-en.webp",
+        "https://cdpoma.github.io/studio/img/ai-chat-en.webp"
       ],
       "applicationCategory": "MultimediaApplication",
       "applicationSubCategory": "Video editor and screen recorder",
@@ -90,24 +92,24 @@
         "es",
         "en"
       ],
-      "dateModified": "2026-11-08",
-      "description": "Studio is a video editor that also records your screen, for iPhone, iPad, Mac and Windows (10 and 11). It is easy to use and gives a professional finish: captions that write themselves, vertical viral clips cut to the beat of the music, one-tap color and lighting fixes, and screen recording with sound. Trimming a video and saving it as MP4 up to 1080p is free, with no watermark and no length limit. Studio Pro costs $1.99/month or $12.99/year in the US (1.99 €/14.99 € in Spain), and every Pro tool is free for 7 days after you install, no card needed.",
+      "dateModified": "2026-11-11",
+      "description": "Studio is a video editor that also records your screen, for iPhone, iPad, Mac and Windows (10 and 11). It is easy to use and gives a professional finish: captions that write themselves, vertical viral clips cut to the beat of the music, one-tap color and lighting fixes, and screen recording with sound. Trimming is free, with two tools: “Cut video” keeps one part and “Remove segment” takes one out, even from the middle. Saving as MP4 up to 1080p is free, with no watermark and no length limit. Studio Pro costs $1.99/month or $12.99/year in the US (1.99 €/14.99 € in Spain), and every Pro tool is free for 7 days after you install, no card needed.",
       "keywords": "video editor, screen recorder, auto captions, viral clip, trim video, merge videos, no watermark, YouTube thumbnail, iPhone, iPad, Mac, Windows",
       "audience": {
         "@type": "Audience",
         "audienceType": "Social media video creators, travelers who want to edit their trip video and people who record tutorials or their screen"
       },
       "featureList": [
-        "Captions that write themselves: from what is said, in 20 languages, created on your device. Edit any line and export an .srt file too.",
-        "Viral clips: turn your travel footage into a vertical 9:16 clip with auto framing, cuts on the beat and royalty-free (CC0) music included. Five styles: Landscape, Travel, Luxury, Beach and City.",
-        "Trim for free: mark the part you don't want with two handles, check the preview and confirm. Export as MP4 up to 1080p, with no watermark and no length limit.",
-        "Record your screen: with device audio and your mic; when you stop, the recording opens in the editor.",
-        "Change colors: in one tap: auto enhance or six looks (Warm, Cinema, Vivid, Cool, Black and white, Sunset). Press and hold to see the before.",
-        "Fix lighting: recovers blown-out highlights and brightens dark scenes, shot by shot.",
-        "Reaction videos: you on camera in the corner while the video plays.",
-        "Thumbnails that stand out: Studio suggests the best frames and you add big text, in YouTube (1280×720), vertical or square size. Or create one with Gemini.",
-        "Merge videos into one: drag them into order and export a single video.",
-        "Use your own AI: add the API key of the AI you already pay for (Claude, OpenAI, Gemini or a compatible service), then describe the edits in your own words, get titles and hashtags for social media or translate your captions. With a Gemini key, it also creates the thumbnail with AI."
+        "Captions that write themselves: with “Add subtitles”, from what is said, in 20 languages, created on your device. Add the “Names or words said in the video” so they are spelled right (they stay on your device), edit any line, pick a style (classic or social, with the spoken word highlighted) and export an .srt file too.",
+        "Viral clips cut to the beat: with “Make a viral clip”, choose where it is going (vertical 9:16 for Reels, Shorts and other short-video apps; YouTube 16:9, up to 4K with Pro; or a 4:5 Instagram or Facebook feed post) and what kind of video it is (Auto or one of 13: travel, vlog, sports, food, tutorial…). Studio finds the best moments, frames them and cuts them to royalty-free (CC0) music included.",
+        "Two ways to trim, free: “Cut video” keeps the part between the two handles (in green) and “Remove segment” takes out the part you don't want (in red), even from the middle. See the result before you confirm and export as MP4 up to 1080p, with no watermark and no length limit.",
+        "Record your screen: with “Record screen”, with device audio and your mic; when you stop, the recording opens in the editor.",
+        "Change colors: in “Change colors” you get, in one tap, auto enhance or six looks (Warm, Cinema, Vivid, Cool, Black and white, Sunset). Press and hold to see the before.",
+        "Fix lighting: with “Fix lighting”, recovers blown-out highlights and brightens dark scenes, shot by shot.",
+        "Reaction videos: with “Reaction video”, you on camera in the corner while the video plays.",
+        "Thumbnails that stand out: with “Create thumbnail”, Studio suggests the best frames and you add big text, in YouTube (1280×720), vertical or square size. Or create one with Gemini.",
+        "Merge videos into one: with “Join videos”, pick the videos and where each one goes (at the start, after another or at the end), check the timeline and confirm.",
+        "AI Chat in every tool: with your own AI. Add the API key of the AI you already pay for (Claude, OpenAI, Gemini or a compatible service) and ask for edits in your own words (“bigger, yellow captions”, “remove the silences”); you see them in the preview and they only stay if you confirm. It also writes titles and hashtags for social media and translates captions, and with a Gemini key it creates the thumbnail with AI."
       ],
       "isAccessibleForFree": true,
       "offers": [
@@ -203,10 +205,18 @@
         },
         {
           "@type": "Question",
+          "name": "How do I remove a part from the middle of a video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open the video in Studio and tap “Remove segment”. Leave between the two handles what you want to remove (it shows in red, even in the middle of the video), tap “Remove”, see the result and tap “Confirm”. It is free, with no watermark. If you only want to keep one part, use “Cut video”, where the green part stays."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How do I add auto captions to a video?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Open the video in Studio and tap “Add subtitles”. Captions write themselves from what is said, in 20 languages, created on your device: the audio is not sent to any server. Edit any line and export an .srt file. It is a Pro tool."
+            "text": "Open the video in Studio and tap “Add subtitles”. Captions write themselves from what is said, in 20 languages, created on your device: the audio is not sent to any server. Add the names or words said in the video and it spells them right. Edit any line, use the social style and export an .srt file. It is a Pro tool."
           }
         },
         {
@@ -214,7 +224,7 @@
           "name": "How do I record my Mac screen with audio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Studio for Mac, tap “Record screen” and keep “Device sound” and “Microphone” on. When you stop, the recording opens in the editor. It is a Pro tool."
+            "text": "In Studio for Mac, tap “Record screen” and keep “Device audio” and “Microphone” on. When you stop, the recording opens in the editor. It is a Pro tool."
           }
         },
         {
@@ -227,18 +237,10 @@
         },
         {
           "@type": "Question",
-          "name": "How do I merge several videos into one on my phone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In Studio, pick several videos when opening or use “Join videos”, drag them into order and save: you get a single video. It is a Pro tool."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "How do I make a vertical clip with copyright-free music?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use “Make a viral clip”: Studio builds a vertical 9:16 video with auto framing, cuts on the beat and a royalty-free (CC0) song included. Five styles: Landscape, Travel, Luxury, Beach and City."
+            "text": "Use “Make a viral clip”: choose where it is going (vertical 9:16, YouTube 16:9 or a 4:5 feed) and the kind of video (Auto or one of 13), and Studio cuts the best moments with auto framing, cuts on the beat and a royalty-free (CC0) song included. It is a Pro tool."
           }
         },
         {
@@ -251,10 +253,10 @@
         },
         {
           "@type": "Question",
-          "name": "Can I use a Pro tool without subscribing?",
+          "name": "How do I ask an AI for edits inside Studio (AI Chat)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. On iPhone and iPad, a fully watched rewarded ad unlocks that tool for 20 minutes, and each extra ad adds 20 more. Windows has no ads: the PC shows a QR code, you scan it with Studio on your iPhone, watch the ad there and the tool unlocks for 20 minutes on the PC. On Mac, Pro tools come with the 7-day trial or with Pro."
+            "text": "Add the API key of the AI you already use (Claude, ChatGPT, Gemini or a compatible one) in “Use your own AI”. Then, in any tool, open the “AI Chat” tab and ask for the change in your own words, for example “bigger, yellow captions” or “remove the silences”. The AI proposes it, you see it in the preview and it only stays if you tap “Confirm”. It needs no Pro on iPhone and iPad; on Mac and Windows it needs Pro (or the 7-day trial). Your AI provider bills you for what you use, not Studio."
           }
         }
       ]
@@ -314,7 +316,7 @@
   <a class="idioma" href="./" hreflang="es" lang="es">Español</a>
   <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
   <h1>Studio: easy video editing, professional results</h1>
-  <p class="sub">Auto captions, viral clips cut to the beat and screen recording on iPhone, iPad, Mac and Windows<br><small>Updated <time datetime="2026-11-08">November 8, 2026</time></small></p>
+  <p class="sub">Auto captions, viral clips cut to the beat and screen recording on iPhone, iPad, Mac and Windows<br><small>Updated <time datetime="2026-11-11">November 11, 2026</time></small></p>
   <div class="tiendas">
     <a href="https://apps.apple.com/app/id6832008044"><img src="img/app-store-en.svg" alt="Download on the App Store" width="120" height="40"></a>
     <a href="https://apps.microsoft.com/detail/9N16ZN02Z0CB"><img src="img/microsoft-store-en.svg" alt="Get it from Microsoft" width="161" height="44"></a>
@@ -326,29 +328,31 @@
   <h2 id="what-it-is">What Studio is</h2>
   <div class="card">
     <p>Studio is a video editor that also records your screen, for iPhone, iPad, Mac and Windows (10 and 11). It is easy to use and gives a professional finish: captions that write themselves, vertical viral clips cut to the beat of the music, one-tap color and lighting fixes, and screen recording with sound.</p>
-    <p>Trimming a video and saving it as MP4 up to 1080p is free, with no watermark and no length limit. Studio Pro costs $1.99/month or $12.99/year in the US (1.99 €/14.99 € in Spain), and every Pro tool is free for 7 days after you install, no card needed.</p>
+    <p>Trimming is free, with two tools: “Cut video” keeps one part and “Remove segment” takes one out, even from the middle. Saving as MP4 up to 1080p is free, with no watermark and no length limit. Studio Pro costs $1.99/month or $12.99/year in the US (1.99 €/14.99 € in Spain), and every Pro tool is free for 7 days after you install, no card needed.</p>
   </div>
 
   <h2 id="screenshots">Screenshots</h2>
   <div class="capturas">
-    <figure><img src="img/captions-en.webp" alt="Studio on iPhone: auto captions created on the device, each line with its time so you can edit it" width="440" height="956" loading="lazy" decoding="async"><figcaption>Captions that write themselves</figcaption></figure>
-    <figure><img src="img/viral-clips-en.webp" alt="Studio on iPhone: preview of a vertical 9:16 viral clip with Another version and Save video buttons" width="440" height="956" loading="lazy" decoding="async"><figcaption>Viral clips cut to the beat</figcaption></figure>
-    <figure><img src="img/free-en.webp" alt="Studio on iPhone: trimming a video with two handles on the timeline, free and with no watermark" width="440" height="956" loading="lazy" decoding="async"><figcaption>Free 1080p export, no watermark</figcaption></figure>
-    <figure><img src="img/screen-recorder-en.webp" alt="Studio on iPhone: recording the screen with device sound and microphone" width="440" height="956" loading="lazy" decoding="async"><figcaption>Record your screen with sound</figcaption></figure>
+    <figure><img src="img/captions-en.webp" alt="Studio on iPhone: social-style auto captions over the video, each line with its time so you can edit it" width="440" height="956" loading="lazy" decoding="async"><figcaption>Captions that write themselves</figcaption></figure>
+    <figure><img src="img/viral-clips-en.webp" alt="Studio on iPhone: a vertical viral clip for “Vertical · Travel”, with the song, Another version, Cancel and Confirm" width="440" height="956" loading="lazy" decoding="async"><figcaption>Viral clips cut to the beat</figcaption></figure>
+    <figure><img src="img/free-en.webp" alt="Studio on iPhone: “Cut video” with two handles; the green part stays, free and with no watermark" width="440" height="956" loading="lazy" decoding="async"><figcaption>Free 1080p export, no watermark</figcaption></figure>
+    <figure><img src="img/screen-recorder-en.webp" alt="Studio on iPhone: “Record screen” options with device sound and microphone" width="440" height="956" loading="lazy" decoding="async"><figcaption>Record your screen with sound</figcaption></figure>
+    <figure><img src="img/remove-segment-en.webp" alt="Studio on iPhone: “Remove segment”; the red part goes, even from the middle of the video" width="440" height="956" loading="lazy" decoding="async"><figcaption>Remove any part, even mid-clip</figcaption></figure>
+    <figure><img src="img/ai-chat-en.webp" alt="Studio on iPhone: the “AI Chat” tab of Add subtitles, with the request typed and the AI proposal already showing in the preview" width="440" height="956" loading="lazy" decoding="async"><figcaption>AI Chat in every tool</figcaption></figure>
   </div>
 
   <h2 id="features">What you get</h2>
   <ul>
-    <li><strong>Captions that write themselves:</strong> from what is said, in 20 languages, created on your device. Edit any line and export an .srt file too.</li>
-    <li><strong>Viral clips:</strong> turn your travel footage into a vertical 9:16 clip with auto framing, cuts on the beat and royalty-free (CC0) music included. Five styles: Landscape, Travel, Luxury, Beach and City.</li>
-    <li><strong>Trim for free:</strong> mark the part you don&#x27;t want with two handles, check the preview and confirm. Export as MP4 up to 1080p, with no watermark and no length limit.</li>
-    <li><strong>Record your screen:</strong> with device audio and your mic; when you stop, the recording opens in the editor.</li>
-    <li><strong>Change colors:</strong> in one tap: auto enhance or six looks (Warm, Cinema, Vivid, Cool, Black and white, Sunset). Press and hold to see the before.</li>
-    <li><strong>Fix lighting:</strong> recovers blown-out highlights and brightens dark scenes, shot by shot.</li>
-    <li><strong>Reaction videos:</strong> you on camera in the corner while the video plays.</li>
-    <li><strong>Thumbnails that stand out:</strong> Studio suggests the best frames and you add big text, in YouTube (1280×720), vertical or square size. Or create one with Gemini.</li>
-    <li><strong>Merge videos into one:</strong> drag them into order and export a single video.</li>
-    <li><strong>Use your own AI:</strong> add the API key of the AI you already pay for (Claude, OpenAI, Gemini or a compatible service), then describe the edits in your own words, get titles and hashtags for social media or translate your captions. With a Gemini key, it also creates the thumbnail with AI.</li>
+    <li><strong>Captions that write themselves:</strong> with “Add subtitles”, from what is said, in 20 languages, created on your device. Add the “Names or words said in the video” so they are spelled right (they stay on your device), edit any line, pick a style (classic or social, with the spoken word highlighted) and export an .srt file too.</li>
+    <li><strong>Viral clips cut to the beat:</strong> with “Make a viral clip”, choose where it is going (vertical 9:16 for Reels, Shorts and other short-video apps; YouTube 16:9, up to 4K with Pro; or a 4:5 Instagram or Facebook feed post) and what kind of video it is (Auto or one of 13: travel, vlog, sports, food, tutorial…). Studio finds the best moments, frames them and cuts them to royalty-free (CC0) music included.</li>
+    <li><strong>Two ways to trim, free:</strong> “Cut video” keeps the part between the two handles (in green) and “Remove segment” takes out the part you don&#x27;t want (in red), even from the middle. See the result before you confirm and export as MP4 up to 1080p, with no watermark and no length limit.</li>
+    <li><strong>Record your screen:</strong> with “Record screen”, with device audio and your mic; when you stop, the recording opens in the editor.</li>
+    <li><strong>Change colors:</strong> in “Change colors” you get, in one tap, auto enhance or six looks (Warm, Cinema, Vivid, Cool, Black and white, Sunset). Press and hold to see the before.</li>
+    <li><strong>Fix lighting:</strong> with “Fix lighting”, recovers blown-out highlights and brightens dark scenes, shot by shot.</li>
+    <li><strong>Reaction videos:</strong> with “Reaction video”, you on camera in the corner while the video plays.</li>
+    <li><strong>Thumbnails that stand out:</strong> with “Create thumbnail”, Studio suggests the best frames and you add big text, in YouTube (1280×720), vertical or square size. Or create one with Gemini.</li>
+    <li><strong>Merge videos into one:</strong> with “Join videos”, pick the videos and where each one goes (at the start, after another or at the end), check the timeline and confirm.</li>
+    <li><strong>AI Chat in every tool:</strong> with your own AI. Add the API key of the AI you already pay for (Claude, OpenAI, Gemini or a compatible service) and ask for edits in your own words (“bigger, yellow captions”, “remove the silences”); you see them in the preview and they only stay if you confirm. It also writes titles and hashtags for social media and translates captions, and with a Gemini key it creates the thumbnail with AI.</li>
   </ul>
 
   <h2 id="pricing">Free, Pro and ads</h2>
@@ -360,13 +364,13 @@
       <tr><th scope="row">Trial on install</th><td>Every Pro tool for 7 days, no card and no ads</td><td>Same</td><td>Same (needs internet to activate)</td></tr>
       <tr><th scope="row">Studio Pro</th><td>$1.99/month or $12.99/year in the US</td><td>The same subscription as on iPhone and iPad</td><td>Separate subscription in the Microsoft Store</td></tr>
       <tr><th scope="row">Ads without Pro</th><td>A banner, a full-screen ad on 1 in 5 app launches and another when you save a video</td><td>None</td><td>None</td></tr>
-      <tr><th scope="row">One tool for a while</th><td>A fully watched rewarded ad unlocks it for 20 minutes; each extra ad adds 20 more</td><td>With the trial or Pro</td><td>The PC shows a QR code: scan it with Studio on your iPhone, watch the full ad and that tool unlocks for 20 minutes on the PC</td></tr>
-      <tr><th scope="row">Use your own AI</th><td>Doesn&#x27;t need Pro; anything it does with a Pro tool needs Pro or that tool&#x27;s ad</td><td>With Pro</td><td>With Pro</td></tr>
+      <tr><th scope="row">One tool for a while</th><td>A fully watched rewarded ad unlocks it for 20 minutes; each extra ad adds 20 more</td><td>The Mac shows a QR code: scan it with Studio on your iPhone, watch the full ad and that tool unlocks for 20 minutes on the Mac</td><td>The PC shows a QR code: scan it with Studio on your iPhone, watch the full ad and that tool unlocks for 20 minutes on the PC</td></tr>
+      <tr><th scope="row">Use your own AI and AI Chat</th><td>Doesn&#x27;t need Pro; anything it does with a Pro tool needs Pro or that tool&#x27;s ad</td><td>With Pro or the trial</td><td>With Pro or the trial</td></tr>
     </tbody>
   </table>
   </div>
   <p>Prices shown are for the US (1.99 €/month or 14.99 €/year in Spain); other countries see their local price in the store before paying. Pro also lets you save above 1080p where your device supports it.</p>
-  <p>The subscription renews automatically unless canceled at least 24 hours before the end of the period, and you manage it in your Apple or Microsoft account. When the trial ends you keep the free tools and nothing is charged.</p>
+  <p>On Apple, the subscription renews automatically unless canceled at least 24 hours before the end of the period, and you manage it in your Apple account; on Microsoft, it renews until you turn off recurring billing in your Microsoft account. When the trial ends you keep the free tools and nothing is charged.</p>
   <p>Your AI provider bills you for what you use: Studio does not charge for it.</p>
 
   <h2 id="platforms">Platforms and requirements</h2>
@@ -379,7 +383,7 @@
   </ul>
 
   <h2 id="privacy">Your video stays yours</h2>
-  <p>Studio edits on your device and does not upload your videos to its servers. Captions are created on the device itself. With “Use your own AI”, your requests go straight from your device to your provider, with your key. This page uses no cookies or tracking. Full details in the <a href="privacy.html">privacy policy</a>.</p>
+  <p>Studio edits on your device and does not upload your videos to its servers. Captions are created on the device itself. With “Use your own AI” and “AI Chat”, what you write and the description of your project, never the video, go straight from your device to the AI provider you choose, with your key and only if you accept: none of it passes through a Studio server. The “Names or words said in the video” of the captions stay on your device. This page uses no cookies or tracking. Full details in the <a href="privacy.html">privacy policy</a>.</p>
 
   <h2 id="does-not">What Studio does not do</h2>
   <ul>
@@ -391,17 +395,19 @@
 
   <h2 id="faq">Frequently asked questions</h2>
   <details><summary>Is there a free video editor with no watermark?</summary><p>Yes. In Studio, trimming a video and saving it as MP4 up to 1080p is free, with no watermark and no length limit, on iPhone, iPad, Mac and Windows.</p></details>
-  <details><summary>How do I add auto captions to a video?</summary><p>Open the video in Studio and tap “Add subtitles”. Captions write themselves from what is said, in 20 languages, created on your device: the audio is not sent to any server. Edit any line and export an .srt file. It is a Pro tool.</p></details>
-  <details><summary>How do I record my Mac screen with audio?</summary><p>In Studio for Mac, tap “Record screen” and keep “Device sound” and “Microphone” on. When you stop, the recording opens in the editor. It is a Pro tool.</p></details>
+  <details><summary>How do I remove a part from the middle of a video?</summary><p>Open the video in Studio and tap “Remove segment”. Leave between the two handles what you want to remove (it shows in red, even in the middle of the video), tap “Remove”, see the result and tap “Confirm”. It is free, with no watermark. If you only want to keep one part, use “Cut video”, where the green part stays.</p></details>
+  <details><summary>How do I add auto captions to a video?</summary><p>Open the video in Studio and tap “Add subtitles”. Captions write themselves from what is said, in 20 languages, created on your device: the audio is not sent to any server. Add the names or words said in the video and it spells them right. Edit any line, use the social style and export an .srt file. It is a Pro tool.</p></details>
+  <details><summary>How do I record my Mac screen with audio?</summary><p>In Studio for Mac, tap “Record screen” and keep “Device audio” and “Microphone” on. When you stop, the recording opens in the editor. It is a Pro tool.</p></details>
   <details><summary>How do I screen record on Windows 11?</summary><p>Get Studio from the Microsoft Store, tap “Record screen” and choose what to record. It records PC sound and your mic, and it also works on Windows 10. It is a Pro tool.</p></details>
-  <details><summary>How do I merge several videos into one on my phone?</summary><p>In Studio, pick several videos when opening or use “Join videos”, drag them into order and save: you get a single video. It is a Pro tool.</p></details>
-  <details><summary>How do I make a vertical clip with copyright-free music?</summary><p>Use “Make a viral clip”: Studio builds a vertical 9:16 video with auto framing, cuts on the beat and a royalty-free (CC0) song included. Five styles: Landscape, Travel, Luxury, Beach and City.</p></details>
+  <details><summary>How do I merge several videos into one on my phone?</summary><p>In Studio, tap “Join videos”, pick the videos and where each one goes (at the start, after another or at the end), check the timeline and tap “Confirm”: you get a single video. It is a Pro tool.</p></details>
+  <details><summary>How do I make a vertical clip with copyright-free music?</summary><p>Use “Make a viral clip”: choose where it is going (vertical 9:16, YouTube 16:9 or a 4:5 feed) and the kind of video (Auto or one of 13), and Studio cuts the best moments with auto framing, cuts on the beat and a royalty-free (CC0) song included. It is a Pro tool.</p></details>
   <details><summary>How do I make a YouTube thumbnail with AI?</summary><p>In “Create thumbnail”, Studio suggests the best frames and you add big text at 1280×720. With your Gemini key in “Use your own AI”, the AI creates it inside the app; or create it with Gemini in your browser.</p></details>
   <details><summary>How do I fix the lighting and color of a dark video?</summary><p>“Fix lighting” brightens dark shots and recovers blown-out highlights, shot by shot. “Change colors” gives you auto enhance and six looks. Pure white areas cannot be recovered, only softened.</p></details>
   <details><summary>How much does Studio Pro cost?</summary><p>$1.99/month or $12.99/year in the US, and 1.99 €/month or 14.99 €/year in Spain; other countries see their local price in the store. Every Pro tool is free for 7 days after you install, no card needed, and when it ends you keep the free tools and nothing is charged.</p></details>
-  <details><summary>Can I use a Pro tool without subscribing?</summary><p>Yes. On iPhone and iPad, a fully watched rewarded ad unlocks that tool for 20 minutes, and each extra ad adds 20 more. Windows has no ads: the PC shows a QR code, you scan it with Studio on your iPhone, watch the ad there and the tool unlocks for 20 minutes on the PC. On Mac, Pro tools come with the 7-day trial or with Pro.</p></details>
+  <details><summary>Can I use a Pro tool without subscribing?</summary><p>Yes. On iPhone and iPad, a fully watched rewarded ad unlocks that tool for 20 minutes, and each extra ad adds 20 more. Mac and Windows have no ads: the computer shows a QR code, you scan it with Studio on your iPhone, watch the ad there and the tool unlocks for 20 minutes on the computer.</p></details>
+  <details><summary>How do I ask an AI for edits inside Studio (AI Chat)?</summary><p>Add the API key of the AI you already use (Claude, ChatGPT, Gemini or a compatible one) in “Use your own AI”. Then, in any tool, open the “AI Chat” tab and ask for the change in your own words, for example “bigger, yellow captions” or “remove the silences”. The AI proposes it, you see it in the preview and it only stays if you tap “Confirm”. It needs no Pro on iPhone and iPad; on Mac and Windows it needs Pro (or the 7-day trial). Your AI provider bills you for what you use, not Studio.</p></details>
   <details><summary>Do I need video editing experience to use Studio?</summary><p>No experience needed: you see each change instantly, you can always undo, and the tools do the hard work (captions, cuts on the beat, light and color). The result has a professional finish.</p></details>
-  <details><summary>Does Studio upload my videos?</summary><p>No. Studio edits on your device and does not upload your videos to its servers. Only if you use “Use your own AI” do your requests go straight from your device to your AI provider, with your key.</p></details>
+  <details><summary>Does Studio upload my videos?</summary><p>No. Studio edits on your device and does not upload your videos to its servers. Only if you use “Use your own AI” or “AI Chat” do what you write and the description of your project (never the video or the audio) go straight from your device to the AI provider you choose, with your key and only if you accept; none of it passes through a Studio server. The “Names or words said in the video” of the captions stay on your device.</p></details>
   <details><summary>Do I need to keep the app updated?</summary><p>Some updates are required to keep using it; if one is, the app tells you and takes you to the store.</p></details>
 
   <p class="contacto">Questions, bugs or ideas: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
