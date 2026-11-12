@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Naval Tactics — Entrar a la partida</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#b8362a; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#e2836f; --line:#1d2842; --card:#16213a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  p{margin:0 0 1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .boton{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:12px;padding:.8rem 1.4rem;margin:.4rem 0 1rem}
+  .nota{color:var(--ink-light);font-size:.95rem}
+  [hidden]{display:none}
+  @media (max-width:480px){ .wrap{padding:2rem 1rem 4rem} h1{font-size:2rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- Sin rastreo, sin nada externo: la petición del QR va en el «#» de la URL, que el navegador no manda a ningún servidor. -->
+  <h1>Naval Tactics</h1>
+  <p class="sub" data-es="Entrar a la partida del ordenador" data-en="Enter your computer game">Entrar a la partida del ordenador</p>
+
+  <div class="card">
+    <p><strong data-es="Abre Naval Tactics en tu iPhone y pulsa «Escanear QR del ordenador»." data-en="Open Naval Tactics on your iPhone and tap “Scan computer QR”.">Abre Naval Tactics en tu iPhone y pulsa «Escanear QR del ordenador».</strong></p>
+    <p data-es="Mira el vídeo entero en el iPhone y la partida del ordenador empieza." data-en="Watch the whole video on your iPhone and your computer game starts.">Mira el vídeo entero en el iPhone y la partida del ordenador empieza.</p>
+    <a id="abrir" class="boton" href="ntactics://d/" hidden data-es="Abrir en la app" data-en="Open in the app">Abrir en la app</a>
+    <p id="malo" class="nota" hidden data-es="Este enlace no trae un código válido. Vuelve a escanear el QR que sale en el ordenador." data-en="This link has no valid code. Scan the QR shown on your computer again.">Este enlace no trae un código válido. Vuelve a escanear el QR que sale en el ordenador.</p>
+  </div>
+
+  <p data-es="¿Aún no tienes el juego?" data-en="Don't have the game yet?">¿Aún no tienes el juego?</p>
+  <p class="nota" data-es="Muy pronto en la App Store." data-en="Coming soon to the App Store.">Muy pronto en la App Store.</p>
+  <p class="nota" data-es="El código del QR caduca a los 10 minutos y solo vale una vez." data-en="The QR code expires after 10 minutes and works only once.">El código del QR caduca a los 10 minutos y solo vale una vez.</p>
+</div>
+<script>
+  // Idioma del navegador: español si empieza por «es»; si no, inglés.
+  var en = !/^es\b/i.test((navigator.languages && navigator.languages[0]) || navigator.language || "es");
+  if (en) {
+    document.documentElement.lang = "en";
+    document.title = "Naval Tactics — Enter your game";
+    document.querySelectorAll("[data-en]").forEach(function (n) { n.textContent = n.getAttribute("data-en"); });
+  }
+  // La petición son 32 hex (128 bits al azar). Solo con una válida sale el botón a la app.
+  var peticion = location.hash.replace(/^#/, "").toLowerCase();
+  if (/^[0-9a-f]{32}$/.test(peticion)) {
+    var a = document.getElementById("abrir");
+    a.href = "ntactics://d/" + peticion;
+    a.hidden = false;
+  } else {
+    document.getElementById("malo").hidden = false;
+  }
+</script>
+</body>
+</html>
