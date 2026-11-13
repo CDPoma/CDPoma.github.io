@@ -61,4 +61,52 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tapmusic/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tapmusic/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/privacidad.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/privacy.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/soporte.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/support.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/terminos.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/terminos.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/tankers/terms.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/tankers/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/terminos.html"/>
+  </url>
 </urlset>

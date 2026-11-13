@@ -63,6 +63,30 @@ Páginas:
 - [Resumen de TapMusic para asistentes](https://cdpoma.github.io/tapmusic/llms.txt)
 - [App Store (iPhone y iPad)](https://apps.apple.com/app/id6823804313)
 
+## Tankers: Steel Wars: juego de tanques para iPhone, iPad, Mac y PC / tank game for iPhone, iPad, Mac and PC
+
+Tankers: Steel Wars es un juego de tanques en vertical en el que juegas solo contra la IA: un joystick para conducir y los cañones disparan solos. Se juega gratis hasta el final; las compras solo ahorran tiempo. / Tankers: Steel Wars is a vertical tank game where you play alone against the AI: one joystick to drive, and your guns fire on their own. It is free to play all the way; purchases only save time.
+
+Hechos comprobables / Verifiable facts:
+- Gratis / Free: todo el contenido se consigue jugando; las compras (Fondos, pase de temporada y más) son opcionales y solo ahorran tiempo. / All content is earned by playing; purchases (Funds, season pass and more) are optional and only save time.
+- Anuncios / Ads: en iPhone y iPad, un anuncio de apertura en 1 de cada 5 aperturas y vídeos recompensados; no hay banner. En Mac y PC no hay anuncios en pantalla. / On iPhone and iPad, an app-open ad on 1 in 5 launches and rewarded videos; no banner. Mac and PC show no ads on screen.
+- Online / Online: es un juego online y necesita conexión a internet. No tiene chat ni multijugador. / It is an online game and needs an internet connection. It has no chat and no multiplayer.
+- Plataformas / Platforms: iPhone y iPad (iOS y iPadOS 16.4 o posterior), Mac (macOS 14 o posterior), PC (Windows 10 u 11). / iPhone and iPad (iOS and iPadOS 16.4 or later), Mac (macOS 14 or later), PC (Windows 10 or 11).
+- Dónde está / Where: App Store (iPhone, iPad y Mac), Microsoft Store (PC) e itch.io (PC). / App Store (iPhone, iPad and Mac), Microsoft Store (PC) and itch.io (PC).
+- Idiomas / Languages: español, inglés, alemán, francés y portugués. / Spanish, English, German, French and Portuguese.
+- Privacidad / Privacy: no pide nombre, correo, teléfono, ubicación, contactos ni micrófono. Crea una cuenta anónima para comprobar las compras. / It does not ask for name, email, phone, location, contacts or microphone. It creates an anonymous account to check purchases.
+- Borrar la cuenta / Delete the account: en el juego, Ajustes → Cuenta y privacidad → «Borrar mi cuenta». / In the game, Settings → Account and privacy → "Delete my account".
+- Qué no hace / What it does not do: no tiene chat ni multijugador, no funciona sin internet, no vende tanques, piezas ni armas, y no tiene sangre ni violencia realista. / It has no chat or multiplayer, does not work offline, does not sell tanks, parts or weapons, and has no blood or realistic violence.
+
+Páginas / Pages:
+- [Tankers: Steel Wars](https://cdpoma.github.io/tankers/): qué es, funciones, precio, plataformas y preguntas frecuentes / what it is, features, pricing, platforms and FAQ
+- [Soporte](https://cdpoma.github.io/tankers/soporte.html) · [Support](https://cdpoma.github.io/tankers/support.html)
+- [Política de privacidad](https://cdpoma.github.io/tankers/privacidad.html) · [Privacy policy](https://cdpoma.github.io/tankers/privacy.html)
+- [Términos de uso](https://cdpoma.github.io/tankers/terminos.html) · [Terms of use](https://cdpoma.github.io/tankers/terms.html)
+- [App Store (iPhone, iPad y Mac)](https://apps.apple.com/app/id6834362725)
+- [Microsoft Store (PC)](https://apps.microsoft.com/detail/9NCGSB34T1PF)
+- [itch.io (PC)](https://gmvdev.itch.io/tankers-steel-wars)
+
 ## Otras apps con resumen propio / Other apps with their own summary
 
 - [CamPhone](https://cdpoma.github.io/camphone/llms.txt): un iPhone o iPad viejo como cámara de vigilancia / an old iPhone or iPad as a security camera
