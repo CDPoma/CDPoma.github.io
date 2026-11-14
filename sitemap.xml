@@ -109,4 +109,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/tankers/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/tankers/terminos.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/en.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/soporte.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/support.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/privacidad.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/lavis/privacy.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/privacidad.html"/>
+  </url>
 </urlset>
