@@ -87,6 +87,29 @@ Páginas / Pages:
 - [Microsoft Store (PC)](https://apps.microsoft.com/detail/9NCGSB34T1PF)
 - [itch.io (PC)](https://gmvdev.itch.io/tankers-steel-wars)
 
+## Lavis: dibuja y pinta con capas y pinceles / draw and paint with layers and brushes
+
+Lavis es una app de dibujo y pintura para iPhone, iPad, Mac y Windows. Pintas con pinceles que responden a la presión del lápiz y a su inclinación, trabajas por capas, deshaces y rehaces, y exportas en PNG, en .ora (con sus capas) o en PSD. Gratis: 8 pinceles básicos, hasta 3 capas y exportar PNG. Lavis Pro: 1,99 €/mes o 14,99 €/año en España. Todavía no está en las tiendas. / Lavis is a drawing and painting app for iPhone, iPad, Mac and Windows. You paint with brushes that respond to pen pressure and tilt, work with layers, undo and redo, and export to PNG, .ora (with its layers) or PSD. Free: 8 basic brushes, up to 3 layers and PNG export. Lavis Pro: €1.99/month or €14.99/year in Spain. Not in the stores yet.
+
+Hechos comprobables / Verifiable facts:
+- Estado / Status: «Próximamente en App Store y Microsoft Store». Todavía no hay enlace de descarga. / "Coming soon on the App Store and Microsoft Store". No download link yet.
+- Gratis / Free: 8 pinceles básicos (lápiz, entintador, rotulador, aerógrafo, acuarela, pincel redondo, carboncillo y borrador), hasta 3 capas, deshacer y rehacer, color, cuentagotas, transformar la capa, guardar y abrir .ora, y exportar PNG. Sin marca de agua y sin límite de tiempo de dibujo. / 8 basic brushes, up to 3 layers, undo and redo, color, eyedropper, transform the layer, save and open .ora, and export PNG. No watermark and no time limit on drawing.
+- Pro / Pro: capas sin límite (de la cuarta en adelante), modos de fusión, forma rápida, simetría, exportar PSD y 6 pinceles Pro (pastel, tiza, pincel seco, vapor, plumilla y sello). / Unlimited layers (from the fourth on), blend modes, perfect shape, symmetry, PSD export and 6 Pro brushes (pastel, chalk, dry brush, mist, fine pen and stamp).
+- Precio / Price: Lavis Pro 1,99 €/mes o 14,99 €/año en España; en otros países, el precio local de la tienda. / Lavis Pro €1.99/month or €14.99/year in Spain; elsewhere, the local store price.
+- Prueba / Trial: 7 días con todo Pro, sin tarjeta, al instalar. / 7 days of all of Pro, no card, from install.
+- Anuncios / Ads: solo en la versión gratis de iPhone y iPad (banner, anuncio de apertura, anuncio al exportar y anuncio con recompensa). Mac y Windows no tienen anuncios propios. / Only in the free version on iPhone and iPad (banner, app-open ad, ad on export and rewarded ad). Mac and Windows have no ads of their own.
+- Desbloqueo sin pagar / Unlock without paying: en iPhone y iPad, un anuncio con recompensa visto entero abre una herramienta Pro 20 minutos. En Mac y Windows, un código QR se escanea con la app del iPhone, se ve el anuncio entero allí y la herramienta se abre 20 minutos en el ordenador. / On iPhone and iPad, a rewarded ad watched to the end opens one Pro tool for 20 minutes. On Mac and Windows, a QR code is scanned with the iPhone app, the full ad is watched there, and the tool opens for 20 minutes on the computer.
+- Plataformas / Platforms: iPhone, iPad, Mac y Windows. Pro se compra en Apple (iPhone, iPad y Mac) o en Microsoft Store (Windows). / iPhone, iPad, Mac and Windows. Pro is bought through Apple (iPhone, iPad and Mac) or Microsoft Store (Windows).
+- Formatos / Formats: PNG, .ora (con capas / with layers) y PSD (Pro). / PNG, .ora (with layers) and PSD (Pro).
+- Privacidad / Privacy: los dibujos no se suben a ningún servidor de Lavis; se guardan en el aparato o donde tú elijas. Sin cuentas. / Drawings are not uploaded to any Lavis server; they are saved on the device or wherever you choose. No accounts.
+- Qué no hace / What it does not do: no pone marca de agua, no limita el tiempo de dibujo, no tiene cuentas ni inicio de sesión y no muestra anuncios en Mac ni en Windows. / It adds no watermark, sets no time limit on drawing, has no accounts or sign-in, and shows no ads on Mac or Windows.
+
+Páginas / Pages:
+- [Lavis (es)](https://cdpoma.github.io/lavis/): qué es, gratis y Pro, preguntas frecuentes / what it is, free and Pro, FAQ
+- [Lavis (en)](https://cdpoma.github.io/lavis/en.html): what it is, free and Pro, FAQ
+- [Soporte](https://cdpoma.github.io/lavis/soporte.html) · [Support](https://cdpoma.github.io/lavis/support.html)
+- [Política de privacidad](https://cdpoma.github.io/lavis/privacidad.html) · [Privacy policy](https://cdpoma.github.io/lavis/privacy.html)
+
 ## Otras apps con resumen propio / Other apps with their own summary
 
 - [CamPhone](https://cdpoma.github.io/camphone/llms.txt): un iPhone o iPad viejo como cámara de vigilancia / an old iPhone or iPad as a security camera
