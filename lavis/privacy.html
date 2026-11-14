@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lavis privacy policy</title>
-<meta name="description" content="What data Lavis uses and why: your drawings stay on your device, Google ads only in the free version on iPhone and iPad, purchases through Apple and Microsoft, and unlocking with the phone.">
+<meta name="description" content="What data Lavis uses and why: your drawings stay on your device, ads from an outside provider only in the free version on iPhone and iPad, purchases through Apple and Microsoft, and unlocking with the phone.">
 <link rel="canonical" href="https://cdpoma.github.io/lavis/privacy.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/lavis/privacidad.html">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/privacy.html">
@@ -83,39 +83,39 @@
 
   <h2 id="summary">Summary</h2>
   <div class="card">
-    <p>Lavis has no accounts. Your drawings are not uploaded to any server of ours. What does leave the device: Google ads (only in the free version on iPhone and iPad), purchases (Apple and Microsoft), the free trial, unlocking Pro with the phone (Mac and Windows) and the version check.</p>
+    <p>Lavis has no accounts. Your drawings are not uploaded to any server of ours. What does leave the device: ads from an outside ad provider (only in the free version on iPhone and iPad), purchases (Apple and Microsoft), the free trial, unlocking Pro with the phone (Mac and Windows) and the version check.</p>
   </div>
 
   <h2 id="drawings">Your drawings</h2>
   <p>Drawings are saved on your device. To get them out, you use the system “Save as…” panel (Mac and Windows) or the share sheet on iPhone and iPad (which can send them to Files, Photos or another app you choose). Lavis does not send them to any server.</p>
-  <p>The key that protects unlocking with the phone is kept in the system keychain (Keychain on Mac, Credential Manager on Windows). It is not sent: the server only receives its fingerprint (SHA-256).</p>
+  <p>The key that protects unlocking with the phone is kept in the secure storage of the system, on Mac and on Windows. It is not sent: the server only receives its fingerprint (SHA-256).</p>
 
   <h2 id="ads">Ads (iPhone and iPad free version only)</h2>
-  <p>In the free version on iPhone and iPad, Lavis shows Google AdMob ads: a banner, an app-open ad (1 in every 5 times you open the app), an ad when you export, and the rewarded ad that unlocks a Pro tool for 20 minutes.</p>
+  <p>In the free version on iPhone and iPad, Lavis shows ads from an outside provider: a banner, an app-open ad (1 in every 5 times you open the app), an ad when you export, and the rewarded ad that unlocks a Pro tool for 20 minutes.</p>
   <ul>
-    <li>Before asking for ads, Lavis uses Google’s consent form (UMP) when it applies, and on iOS it asks for Apple’s tracking permission (ATT). Your answers decide which ads and which measurement are used.</li>
+    <li>Before asking for ads, Lavis shows the ad consent form when the law in your area requires it, and on iPhone and iPad it asks for the system’s tracking permission. Your answers decide which ads and which measurement are used.</li>
     <li>With Lavis Pro, or during the 7-day trial, there are no ads.</li>
     <li>On Mac and Windows there are no ads of our own.</li>
-    <li>Google handles what it collects for ads under its own policy: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</li>
+    <li>Each ad provider handles what it collects under its own privacy policy.</li>
   </ul>
-  <p>Lavis measures usage with Firebase Analytics (Google) to see how many people use the app. That measurement stays off until you answer the consent form.</p>
+  <p>Lavis measures usage (how many people open the app) with an analytics tool. This is only on iPhone and iPad: on Mac it is off by default, with a checkbox to turn it on, and on Windows there is none. In the European Economic Area, the United Kingdom and Switzerland it stays off until you answer the consent form. Elsewhere it is on from the first launch, including the Pro version.</p>
 
   <h2 id="purchases">Purchases and subscription</h2>
-  <p>Lavis Pro is a subscription of €1.99 a month or €14.99 a year in Spain. Apple (iPhone, iPad and Mac) or Microsoft Store (Windows) charges it. On iPhone and iPad, Lavis uses RevenueCat to know whether you have Pro; on Mac and Windows it reads the purchase status from each store. Lavis does not receive your card or payment details. You can restore or cancel as explained in the <a href="support.html">help page</a>.</p>
+  <p>Lavis Pro is a subscription of €1.99 a month or €14.99 a year in Spain. Apple (iPhone, iPad and Mac) or Microsoft Store (Windows) charges it. On iPhone and iPad, Lavis uses a purchase-management service to know whether you have Pro; on Mac and Windows it reads the purchase status from each store. Lavis does not receive your card or payment details. You can restore or cancel as explained in the <a href="support.html">help page</a>.</p>
 
   <h2 id="trial">7-day free trial</h2>
   <p>When you install it, you get all Pro tools for 7 days, no card. The store gives the start date: Apple on iPhone, iPad and Mac. On Windows, the Lavis server stores, once, a code derived from the device identifier (a salted fingerprint) and the date it first saw it. It does not store the IP address or the browser. The time that decides when the trial ends is the server’s, not the device’s.</p>
 
   <h2 id="phone">Unlocking Pro with the phone (Mac and Windows)</h2>
-  <p>To unlock a Pro tool on the computer with an ad watched on the iPhone, the computer asks a Lavis server (Supabase, a cloud database) for a code. The following is stored:</p>
+  <p>To unlock a Pro tool on the computer with an ad watched on the iPhone, the computer asks a Lavis server (a cloud database) for a code. The following is stored:</p>
   <ul>
     <li>the fingerprint (SHA-256) of the computer’s key, never the key itself;</li>
     <li>the request: which tool is asked for, when it was created and when it expires, and whether it was already opened;</li>
     <li>the time until which each tool is open on that computer;</li>
     <li>if an iPhone has been linked to the computer, that iPhone’s notification token, to alert it; the server also keeps a fingerprint of the token;</li>
-    <li>the confirmation Google sends when you watch the full ad, with the request it belongs to.</li>
+    <li>the confirmation the ad provider sends when you watch the full ad, with the request it belongs to.</li>
   </ul>
-  <p>Requests expire after 10 minutes and are deleted the next day; unlock times are deleted one day after they end; ad confirmations after 7 days; iPhone links that are not used after 60 days. The server does not record IP addresses, headers or browsers, and writes no data to its logs.</p>
+  <p>Requests expire after 10 minutes and are deleted the next day; unlock times are deleted one day after they end; ad confirmations after 7 days; iPhone links that are not used after 60 days. The server code does not record IP addresses, headers or browsers, and writes nothing to logs of its own. The platform that hosts the server may keep its own technical logs.</p>
   <p>iPhone notifications are optional: they are only requested the first time you scan a code, and they are a shortcut; the code is always shown.</p>
 
   <h2 id="version">Version check</h2>
