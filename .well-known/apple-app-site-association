@@ -7,6 +7,13 @@
           { "/": "/studio/d", "comment": "Desbloquear el ordenador con el móvil (QR de Studio)" },
           { "/": "/studio/d/*" }
         ]
+      },
+      {
+        "appIDs": ["56Z75Y893Q.com.gessopaint.app"],
+        "components": [
+          { "/": "/gesso/d", "comment": "Desbloquear el ordenador con el móvil (QR de Lavis; la ruta conserva el nombre de la carpeta de la app)" },
+          { "/": "/gesso/d/*" }
+        ]
       }
     ]
   }
