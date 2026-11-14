@@ -56,7 +56,7 @@
   <h2>Lo que se guarda en tu móvil</h2>
   <p>Las gallinas (con raza, fechas, anilla, notas y foto), los huevos recogidos, los repartos y sus precios, la alimentación, los niveles de pienso y agua y los ajustes se guardan <strong>solo en el almacenamiento de la propia app</strong> (IndexedDB). No salen del móvil mientras no actives «Mi granja». Si desinstalas la app, se borran con ella.</p>
   <ul>
-    <li><strong>Fotos de las gallinas.</strong> Cuando eliges «Cámara» o «Galería» para poner la foto a una gallina, la app te pide permiso y usa la imagen solo para eso: la recorta, la reduce (unos 400 píxeles) y la guarda dentro de la app. La cámara y la galería solo se usan para esto. La app no envía fotos a ningún servicio de inteligencia artificial.</li>
+    <li><strong>Fotos de las gallinas.</strong> Cuando eliges «Cámara» o «Galería» para poner la foto a una gallina, la app te pide permiso y usa la imagen solo para eso: la recorta, la reduce (unos 400 píxeles) y la guarda dentro de la app. Para las fotos de las gallinas, la cámara y la galería solo se usan para esto; la cámara de la puerta se explica más abajo. La app no envía fotos a ningún servicio de inteligencia artificial.</li>
     <li><strong>Avisos de pienso y agua.</strong> Son notificaciones <strong>locales</strong>: las programa el propio móvil con la autonomía calculada. No hay ningún servidor de notificaciones y no enviamos nada para ello. Si no das el permiso, la app funciona igual, sin avisos.</li>
     <li><strong>Copia de seguridad.</strong> Si exportas tus datos, la app genera un archivo y te deja elegir dónde guardarlo o con quién compartirlo. Nosotros no lo recibimos.</li>
   </ul>
@@ -71,6 +71,16 @@
   </ul>
   <p><strong>Sin cuentas ni correo.</strong> La granja se identifica con un código de 10 caracteres que genera la app. Quien tiene el código puede ver y modificar los datos de esa granja, así que compártelo solo con personas de confianza. No existe forma de listar ni buscar granjas.</p>
   <p>Google, como proveedor de la nube, puede tratar datos técnicos de la conexión (como la dirección IP) para prestar el servicio, según su política. No usamos los datos de la granja para publicidad ni los vendemos.</p>
+
+  <h2>Cámara de la puerta (gratis, opcional)</h2>
+  <p>Si activas la cámara de la puerta, un móvil se queda en el gallinero mirando a la puerta y otro lo consulta. Esto es lo que sale de tu móvil, adónde y para qué:</p>
+  <ul>
+    <li><strong>Números y estado de la puerta</strong>: aves dentro, entradas y salidas de hoy, la última, si la puerta está abierta o cerrada, la hora y la versión de la app. Se guardan en <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase (Cloud Firestore)</a>, en servidores de la Unión Europea, bajo el código de la cámara. No se guarda nombre ni cuenta. Se borran cuando cambias el código de la cámara.</li>
+    <li><strong>Vídeo en directo</strong>: va de un móvil al otro y va cifrado. No se graba ni se guarda en ningún sitio. Si la red no deja conectar los dos móviles directamente, pasa por un relé de <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> (TURN) cifrado que tampoco guarda nada.</li>
+    <li><strong>Señal para conectar el vídeo</strong>: los dos móviles se encuentran a través de <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>. Solo viajan datos de conexión (ofertas y direcciones de red), nunca imágenes.</li>
+    <li><strong>Aviso «todas las gallinas están dentro»</strong>: el token de notificaciones de Apple del móvil que consulta se guarda en Supabase solo para mandarte ese aviso. Se borra al desactivar el aviso o al olvidar la cámara en ese móvil.</li>
+  </ul>
+  <p>El reconocimiento de aves y de la puerta se hace <strong>dentro del propio móvil</strong>, con un modelo que viene en la app: las imágenes de la cámara no salen del móvil para contar. Quien tenga el código de la cámara puede ver los números y el vídeo en directo; no lo compartas, y si lo has compartido, cambia el código en la cámara (el anterior deja de servir).</p>
 
   <h2>Dejar de compartir y borrar los datos de la nube</h2>
   <ul>
@@ -95,7 +105,7 @@
   <p><strong>Consentimiento y control.</strong> En el Espacio Económico Europeo, el Reino Unido y Suiza la analítica queda <strong>desactivada hasta que contestes</strong> al formulario de consentimiento de Google que sale al abrir la app (el mismo de los anuncios): solo se activa si aceptas el almacenamiento de datos en tu dispositivo, y si lo rechazas no se recoge ningún dato de uso. Fuera de esa zona, donde no hace falta consentimiento previo, la analítica está activa por defecto. Puedes pedir que se deje de usar escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>; también puedes borrar la app y volver a instalarla, y el formulario volverá a salir en la zona europea.</p>
 
   <h2>Compras dentro de la app</h2>
-  <p>La compra única Pro (1,99 €, pago único sin suscripción ni renovaciones) la cobra Apple o Google con la cuenta de tu tienda; nosotros nunca vemos datos de pago. Quita el banner pero no el anuncio de apertura descrito arriba. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> comprueba la compra con la tienda y le dice a la app si eres Pro; para ello conoce un identificador aleatorio de la instalación y el estado de tus compras. Si hay consentimiento de analítica, RevenueCat recibe también el identificador de instalación de Google Analytics para enviar las compras a esas mismas estadísticas. No hay nada que cancelar (quien aún tenga activa la suscripción anterior, mensual o anual, puede cancelarla en los ajustes de suscripciones de su cuenta de Apple o Google). «Restaurar compras» está en la pantalla de Pro (Ajustes → Mi Gallinero Pro).</p>
+  <p>La compra única Pro (1,99 €, pago único sin suscripción ni renovaciones) la cobra Apple o Google con la cuenta de tu tienda; nosotros nunca vemos datos de pago. Quita el banner pero no el anuncio de apertura descrito arriba. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> comprueba la compra con la tienda y le dice a la app si eres Pro; para ello conoce un identificador aleatorio de la instalación y el estado de tus compras. Si hay consentimiento de analítica, RevenueCat recibe también el identificador de instalación de Google Analytics para enviar las compras a esas mismas estadísticas. No hay nada que cancelar (quien aún tenga activa la suscripción anterior, mensual o anual, puede cancelarla en los ajustes de suscripciones de su cuenta de Apple o Google). La <strong>prueba gratis de 7 días</strong> de Pro es una compra de 0 € en la tienda, una sola vez por cuenta: dura 7 días desde la compra, no se renueva ni cobra nada, y RevenueCat comprueba su fecha igual que la del Pro. «Restaurar compras» está en la pantalla de Pro (Ajustes → Mi Gallinero Pro).</p>
 
   <h2>Menores y derechos</h2>
   <p>Mi Gallinero no va dirigida a menores de 13 años ni recoge conscientemente datos personales de menores. Puedes pedir en cualquier momento ver, corregir o borrar los datos que tengamos de ti y ejercer el resto de derechos del RGPD (acceso, rectificación, supresión, oposición, limitación y portabilidad) escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
@@ -107,7 +117,7 @@
   <h2>Cambios</h2>
   <p>Si la app cambia lo que hace con los datos, esta página se actualiza antes y cambia la fecha de abajo.</p>
 
-  <div class="foot">Mi Gallinero · Vigente desde 2026-10-29 · Gabriel Micó Victoria</div>
+  <div class="foot">Mi Gallinero · Vigente desde 2026-11-14 · Gabriel Micó Victoria</div>
 
 </div>
 </body>
