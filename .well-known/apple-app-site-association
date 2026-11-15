@@ -11,7 +11,9 @@
       {
         "appIDs": ["56Z75Y893Q.com.gessopaint.app"],
         "components": [
-          { "/": "/gesso/d", "comment": "Desbloquear el ordenador con el móvil (QR de Lavis; la ruta conserva el nombre de la carpeta de la app)" },
+          { "/": "/lavis/d", "comment": "Desbloquear el ordenador con el móvil (QR de Lavis, ruta nueva)" },
+          { "/": "/lavis/d/*" },
+          { "/": "/gesso/d", "comment": "Desbloquear el ordenador con el móvil (QR de Lavis en las versiones ya en revisión; se queda)" },
           { "/": "/gesso/d/*" }
         ]
       }
