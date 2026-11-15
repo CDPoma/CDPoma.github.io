@@ -115,7 +115,7 @@
     <li>la confirmación que envía el proveedor de anuncios cuando ves el anuncio entero: un identificador de la transacción, la petición a la que corresponde, la hora en que llegó y si se usó para sumar tiempo.</li>
   </ul>
   <p>Esta versión de Lavis no pide permiso de notificaciones ni envía ningún token de notificaciones al servidor. Por tanto, el servidor no guarda ningún token de iPhone ni enlaza ningún iPhone con el ordenador.</p>
-  <p>Las peticiones caducan a los 10 minutos y se borran un día después de caducar; las horas de desbloqueo se borran un día después de acabar; las confirmaciones de anuncio, a los 7 días. La limpieza la hace el propio servidor cuando recibe peticiones. El código del servidor no registra la dirección IP, las cabeceras ni el navegador, y no escribe nada en registros propios. La plataforma que aloja el servidor puede guardar sus propios registros técnicos.</p>
+  <p>Las peticiones caducan a los 10 minutos y se borran un día después de caducar; las horas de desbloqueo se borran un día después de acabar; las confirmaciones de anuncio, a los 7 días. La limpieza la hace el propio servidor, como mucho una vez por hora, cuando se crea una petición nueva. El código del servidor no registra la dirección IP, las cabeceras ni el navegador, y no escribe nada en registros propios. La plataforma que aloja el servidor puede guardar sus propios registros técnicos.</p>
 
   <h2 id="version">Comprobación de versión</h2>
   <p>Lavis consulta una tabla de versiones en el mismo servidor para saber si la versión instalada sigue valiendo o si hay una nueva. Solo se envían el nombre de la app y la plataforma. No se envía nada de tus dibujos.</p>

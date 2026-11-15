@@ -115,7 +115,7 @@
     <li>the confirmation the ad provider sends when you watch the full ad: a transaction identifier, the request it belongs to, when it arrived, and whether it was used to add time.</li>
   </ul>
   <p>This version of Lavis does not ask for notification permission and does not send any notification token to the server. So the server does not store any iPhone token and does not link any iPhone to the computer.</p>
-  <p>Requests expire after 10 minutes and are deleted one day after they expire; unlock times are deleted one day after they end; ad confirmations after 7 days. The server cleans these up itself when it receives requests. The server code does not record IP addresses, headers or browsers, and writes nothing to logs of its own. The platform that hosts the server may keep its own technical logs.</p>
+  <p>Requests expire after 10 minutes and are deleted one day after they expire; unlock times are deleted one day after they end; ad confirmations after 7 days. The server cleans these up itself, at most once an hour, when a new request is created. The server code does not record IP addresses, headers or browsers, and writes nothing to logs of its own. The platform that hosts the server may keep its own technical logs.</p>
 
   <h2 id="version">Version check</h2>
   <p>Lavis reads a table of versions from the same server to know whether the installed version is still valid or whether there is a newer one. Only the app name and the platform are sent. Nothing from your drawings is sent.</p>
