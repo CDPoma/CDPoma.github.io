@@ -77,7 +77,7 @@
   <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
   <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
   <h1>Política de privacidad de Lavis</h1>
-  <p class="sub">Qué hace la app hoy, qué datos toca y para qué<br><small>Actualizada el <time datetime="2026-11-14">14 de noviembre de 2026</time></small></p>
+  <p class="sub">Qué hace la app hoy, qué datos toca y para qué<br><small>Actualizada el <time datetime="2026-11-15">15 de noviembre de 2026</time></small></p>
   <nav class="enlaces" aria-label="Enlaces"><a href="index.html">Lavis</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
   <nav class="toc" aria-label="En esta página">En esta página: <a href="#resumen">Resumen</a> · <a href="#dibujos">Tus dibujos</a> · <a href="#anuncios">Anuncios</a> · <a href="#compras">Compras</a> · <a href="#prueba">Prueba gratis</a> · <a href="#movil">Desbloqueo con el móvil</a> · <a href="#version">Comprobación de versión</a> · <a href="#no-cuentas">Cuentas</a> · <a href="#contacto">Contacto</a></nav>
 
@@ -112,11 +112,10 @@
     <li>la huella (SHA-256) de la clave del ordenador, nunca la clave;</li>
     <li>la petición: qué herramienta se pide, su hora de creación y de caducidad, y si ya se abrió;</li>
     <li>la hora hasta la que cada herramienta está abierta en ese ordenador;</li>
-    <li>si el iPhone se ha enlazado con el ordenador, el token de notificaciones de ese iPhone, para avisarle; el servidor guarda también una huella del token;</li>
-    <li>la confirmación que envía el proveedor de anuncios cuando ves el anuncio entero, con la petición a la que corresponde.</li>
+    <li>la confirmación que envía el proveedor de anuncios cuando ves el anuncio entero: un identificador de la transacción, la petición a la que corresponde, la hora en que llegó y si se usó para sumar tiempo.</li>
   </ul>
-  <p>Las peticiones caducan a los 10 minutos y se borran al día siguiente; las horas de desbloqueo se borran un día después de acabar; las confirmaciones de anuncio, a los 7 días; los enlaces de iPhone que no se usan, a los 60 días. El código del servidor no registra la dirección IP, las cabeceras ni el navegador, y no escribe nada en registros propios. La plataforma que aloja el servidor puede guardar sus propios registros técnicos.</p>
-  <p>Las notificaciones del iPhone son opcionales: solo se piden cuando escaneas un código por primera vez, y sirven de atajo; el código sale siempre.</p>
+  <p>Esta versión de Lavis no pide permiso de notificaciones ni envía ningún token de notificaciones al servidor. Por tanto, el servidor no guarda ningún token de iPhone ni enlaza ningún iPhone con el ordenador.</p>
+  <p>Las peticiones caducan a los 10 minutos y se borran un día después de caducar; las horas de desbloqueo se borran un día después de acabar; las confirmaciones de anuncio, a los 7 días. La limpieza la hace el propio servidor cuando recibe peticiones. El código del servidor no registra la dirección IP, las cabeceras ni el navegador, y no escribe nada en registros propios. La plataforma que aloja el servidor puede guardar sus propios registros técnicos.</p>
 
   <h2 id="version">Comprobación de versión</h2>
   <p>Lavis consulta una tabla de versiones en el mismo servidor para saber si la versión instalada sigue valiendo o si hay una nueva. Solo se envían el nombre de la app y la plataforma. No se envía nada de tus dibujos.</p>
@@ -130,6 +129,6 @@
   <h2 id="contacto">Contacto</h2>
   <p>Responsable: Gabriel Micó Victoria. Para cualquier duda sobre esta política, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 </main>
-<footer class="foot"><p>Actualizada el <time datetime="2026-11-14">14 de noviembre de 2026</time>. Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p><p><a href="privacy.html">English</a></p></footer>
+<footer class="foot"><p>Actualizada el <time datetime="2026-11-15">15 de noviembre de 2026</time>. Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p><p><a href="privacy.html">English</a></p></footer>
 </body>
 </html>

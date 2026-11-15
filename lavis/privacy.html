@@ -77,7 +77,7 @@
   <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
   <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
   <h1>Lavis privacy policy</h1>
-  <p class="sub">What the app does today, what data it touches and why<br><small>Updated on <time datetime="2026-11-14">November 14, 2026</time></small></p>
+  <p class="sub">What the app does today, what data it touches and why<br><small>Updated on <time datetime="2026-11-15">November 15, 2026</time></small></p>
   <nav class="enlaces" aria-label="Links"><a href="en.html">Lavis</a> · <a href="support.html">Help and support</a></nav>
   <nav class="toc" aria-label="On this page">On this page: <a href="#summary">Summary</a> · <a href="#drawings">Your drawings</a> · <a href="#ads">Ads</a> · <a href="#purchases">Purchases</a> · <a href="#trial">Free trial</a> · <a href="#phone">Unlocking with the phone</a> · <a href="#version">Version check</a> · <a href="#no-accounts">Accounts</a> · <a href="#contact">Contact</a></nav>
 
@@ -112,11 +112,10 @@
     <li>the fingerprint (SHA-256) of the computer’s key, never the key itself;</li>
     <li>the request: which tool is asked for, when it was created and when it expires, and whether it was already opened;</li>
     <li>the time until which each tool is open on that computer;</li>
-    <li>if an iPhone has been linked to the computer, that iPhone’s notification token, to alert it; the server also keeps a fingerprint of the token;</li>
-    <li>the confirmation the ad provider sends when you watch the full ad, with the request it belongs to.</li>
+    <li>the confirmation the ad provider sends when you watch the full ad: a transaction identifier, the request it belongs to, when it arrived, and whether it was used to add time.</li>
   </ul>
-  <p>Requests expire after 10 minutes and are deleted the next day; unlock times are deleted one day after they end; ad confirmations after 7 days; iPhone links that are not used after 60 days. The server code does not record IP addresses, headers or browsers, and writes nothing to logs of its own. The platform that hosts the server may keep its own technical logs.</p>
-  <p>iPhone notifications are optional: they are only requested the first time you scan a code, and they are a shortcut; the code is always shown.</p>
+  <p>This version of Lavis does not ask for notification permission and does not send any notification token to the server. So the server does not store any iPhone token and does not link any iPhone to the computer.</p>
+  <p>Requests expire after 10 minutes and are deleted one day after they expire; unlock times are deleted one day after they end; ad confirmations after 7 days. The server cleans these up itself when it receives requests. The server code does not record IP addresses, headers or browsers, and writes nothing to logs of its own. The platform that hosts the server may keep its own technical logs.</p>
 
   <h2 id="version">Version check</h2>
   <p>Lavis reads a table of versions from the same server to know whether the installed version is still valid or whether there is a newer one. Only the app name and the platform are sent. Nothing from your drawings is sent.</p>
@@ -130,6 +129,6 @@
   <h2 id="contact">Contact</h2>
   <p>Controller: Gabriel Micó Victoria. For any question about this policy, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 </main>
-<footer class="foot"><p>Updated on <time datetime="2026-11-14">November 14, 2026</time>. Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p><p><a href="privacidad.html">Español</a></p></footer>
+<footer class="foot"><p>Updated on <time datetime="2026-11-15">November 15, 2026</time>. Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p><p><a href="privacidad.html">Español</a></p></footer>
 </body>
 </html>
