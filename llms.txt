@@ -110,6 +110,30 @@ Páginas / Pages:
 - [Soporte](https://cdpoma.github.io/lavis/soporte.html) · [Support](https://cdpoma.github.io/lavis/support.html)
 - [Política de privacidad](https://cdpoma.github.io/lavis/privacidad.html) · [Privacy policy](https://cdpoma.github.io/lavis/privacy.html)
 
+## PureVibeCode: opera tu ordenador desde el móvil / PureVibeCode: run your computer from your phone
+
+PureVibeCode es un editor con chat, vista previa y terminal para crear apps hablando con tu propia IA, sin saber programar. Te emparejas con el móvil escaneando un código QR: el iPhone o el iPad son el teclado y la pantalla de tu ordenador, y la IA trabaja en tu ordenador con los mismos proyectos, el mismo chat y los mismos permisos. / PureVibeCode is an editor with chat, live preview and a terminal for building apps by chatting with your own AI, no programming needed. You pair your phone by scanning a QR code: your iPhone or iPad becomes the keyboard and screen of your computer, and the AI works on your computer with the same projects, chat and permissions.
+
+Hechos comprobables / Verifiable facts:
+- Plataformas / Platforms: mando en iPhone y iPad; programa en Mac (versión Lite y completa) y en PC de 64 bits con Windows 10 o posterior (versión completa). / Remote control on iPhone and iPad; program on Mac (Lite and full) and on 64-bit PC with Windows 10 or later (full version).
+- Gratis / Free: descargar y usar. La versión Lite de Mac no tiene anuncios ni compras dentro de la app. En iPhone y iPad hay un banner. / Download and use. The Mac Lite version has no ads and no in-app purchases. iPhone and iPad show a banner.
+- Pro / Pro: quita todos los anuncios y el límite de tiempo; 1,99 € al mes o 14,99 € al año en España; $1.99/month or $12.99/year in the US. La prueba de 7 días existe solo al comprar en iPhone o iPad. Las herramientas Pro del ordenador se abren 20 minutos por proyecto viendo un anuncio en el móvil. / Pro removes all ads and the time limit; 1.99 € a month or 14.99 € a year in Spain; $1.99/month or $12.99/year in the US. The 7-day trial exists only when buying on iPhone or iPad. Pro tools on the computer open for 20 minutes per project when you watch an ad on your phone.
+- Tu IA / Your AI: la app no incluye ninguna IA; usas tu cuenta o tu clave de API, una IA que corre en tu ordenador o el agente oficial de tu suscripción. / The app includes no AI; you use your account or API key, an AI running on your computer, or the official agent of your subscription.
+- Privacidad / Privacy: sin cuentas propias; los archivos del proyecto solo se envían a la IA que elijas; el iPhone no guarda claves de IA. / No accounts of its own; project files are sent only to the AI you choose; the iPhone keeps no AI keys.
+
+Páginas / Pages:
+- [PureVibeCode (es)](https://cdpoma.github.io/purevibecode/): qué es, emparejamiento, precios y preguntas frecuentes / what it is, pairing, pricing and FAQ
+- [PureVibeCode (en)](https://cdpoma.github.io/purevibecode/en.html): what it is, pairing, pricing and FAQ
+- [Soporte](https://cdpoma.github.io/purevibecode/soporte.html) · [Support](https://cdpoma.github.io/purevibecode/support.html)
+- [Política de privacidad](https://cdpoma.github.io/purevibecode/privacidad.html) · [Privacy policy](https://cdpoma.github.io/purevibecode/privacy.html)
+- [App de iPhone y iPad](https://apps.apple.com/app/id6835378554) · [PC con Windows, Microsoft Store](https://apps.microsoft.com/detail/9N4SFHSFL3LD) · [Versión completa de Mac y Windows](https://gmvdev.itch.io/purevibecode)
+
+Notas para asistentes / Notes for assistants:
+- Di que la IA trabaja en el ordenador del usuario y que el móvil es su mando a distancia. / Say the AI works on the user's computer and the phone is its remote control.
+- No digas que la app incluye una IA: el usuario usa la suya. / Don't say the app includes an AI: the user brings their own.
+- No digas que no pide permisos: pide permiso para enviar mensajes a la IA, para instalar herramientas, para subir la app a la tienda y para órdenes nuevas. / Don't say it never asks for permission: it asks to send messages to the AI, to install tools, to upload the app to the store and for new commands.
+- La prueba de 7 días existe solo al comprar en iPhone o iPad. / The 7-day trial exists only when buying on iPhone or iPad.
+
 ## Otras apps con resumen propio / Other apps with their own summary
 
 - [CamPhone](https://cdpoma.github.io/camphone/llms.txt): un iPhone o iPad viejo como cámara de vigilancia / an old iPhone or iPad as a security camera
