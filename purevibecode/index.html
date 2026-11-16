@@ -272,6 +272,24 @@
   ]
 }
 </script>
+<!-- Medición: GA4 «PureVibeCode Web» (G-VCRPZV9WB5). Consent Mode v2: todo denegado por defecto y sin cookies hasta que el visitante acepta. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCRPZV9WB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  gtag('js', new Date());
+  gtag('config', 'G-VCRPZV9WB5');
+</script>
+<style>
+  .aviso-analitica { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1000; max-width: 640px; margin: 0 auto; padding: 14px 16px; background: #1c1c1e; color: #f2f2f7; border-radius: 12px; font: 15px/1.4 -apple-system, system-ui, sans-serif; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+  .aviso-analitica[hidden] { display: none; }
+  .aviso-analitica p { margin: 0 0 10px; }
+  .aviso-analitica .botones { display: flex; gap: 8px; justify-content: flex-end; }
+  .aviso-analitica button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 0; cursor: pointer; }
+  .aviso-analitica .rechazar { background: #3a3a3c; color: #f2f2f7; }
+  .aviso-analitica .aceptar { background: #0a84ff; color: #fff; }
+</style>
 </head>
 <body>
 <main class="wrap">
@@ -337,5 +355,29 @@
   <details><summary>¿Qué datos guarda PureVibeCode?</summary><p>No tiene cuentas propias. Los archivos de tu proyecto solo se envían a la IA que tú elijas. Las claves de IA se guardan en el ordenador, y ni el iPhone ni el iPad guardan claves de IA. Política de privacidad: privacidad.html.</p></details>
   <footer class="foot"><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="en.html">English</a></footer>
 </main>
+<div id="aviso-analitica" class="aviso-analitica" role="region" aria-label="Analítica" hidden>
+  <p>Usamos Google Analytics para saber cuántas personas visitan esta página. No se ponen cookies hasta que aceptes.</p>
+  <div class="botones">
+    <button type="button" class="rechazar" id="analitica-no">Rechazar</button>
+    <button type="button" class="aceptar" id="analitica-si">Aceptar</button>
+  </div>
+</div>
+<script>
+(function () {
+  var clave = 'pvc-analitica';
+  var aviso = document.getElementById('aviso-analitica');
+  var previo = null;
+  try { previo = localStorage.getItem(clave); } catch (e) {}
+  if (previo === 'si') { gtag('consent', 'update', {analytics_storage: 'granted'}); }
+  else if (previo === null) { aviso.hidden = false; }
+  function fijar(valor) {
+    try { localStorage.setItem(clave, valor); } catch (e) {}
+    gtag('consent', 'update', {analytics_storage: valor === 'si' ? 'granted' : 'denied'});
+    aviso.hidden = true;
+  }
+  document.getElementById('analitica-si').addEventListener('click', function () { fijar('si'); });
+  document.getElementById('analitica-no').addEventListener('click', function () { fijar('no'); });
+})();
+</script>
 </body>
 </html>
