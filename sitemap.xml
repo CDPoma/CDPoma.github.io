@@ -151,4 +151,30 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/lavis/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/lavis/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/purevibecode/privacidad.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/purevibecode/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/purevibecode/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/purevibecode/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/purevibecode/privacy.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/purevibecode/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/purevibecode/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/purevibecode/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/purevibecode/soporte.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/purevibecode/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/purevibecode/support.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/purevibecode/support.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/purevibecode/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/purevibecode/support.html"/>
+  </url>
 </urlset>

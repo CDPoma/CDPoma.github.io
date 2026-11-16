@@ -16,6 +16,13 @@
           { "/": "/gesso/d", "comment": "Desbloquear el ordenador con el móvil (QR de Lavis en las versiones ya en revisión; se queda)" },
           { "/": "/gesso/d/*" }
         ]
+      },
+      {
+        "appIDs": ["56Z75Y893Q.com.purevibecode.app"],
+        "components": [
+          { "/": "/purevibecode/d", "comment": "Desbloquear tiempo en el ordenador con el móvil (QR de PureVibeCode)" },
+          { "/": "/purevibecode/d/*" }
+        ]
       }
     ]
   }
