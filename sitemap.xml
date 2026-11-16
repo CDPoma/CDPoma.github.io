@@ -191,4 +191,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/purevibecode/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/purevibecode/"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/en.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/privacidad.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/privacy.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/soporte.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/itsrain/support.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/soporte.html"/>
+  </url>
 </urlset>

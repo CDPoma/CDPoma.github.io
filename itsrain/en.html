@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ItsRain: weather and rain radar, minute by minute</title>
+<meta name="description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<link rel="canonical" href="https://cdpoma.github.io/itsrain/en.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#eef4fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1322" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="apple-itunes-app" content="app-id=6835644244">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ItsRain">
+<meta property="og:url" content="https://cdpoma.github.io/itsrain/en.html">
+<meta property="og:title" content="ItsRain: weather and rain radar, minute by minute">
+<meta property="og:description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<meta property="og:image" content="https://cdpoma.github.io/itsrain/icon.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ItsRain: weather and rain radar, minute by minute">
+<meta name="twitter:description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<meta name="twitter:image" content="https://cdpoma.github.io/itsrain/icon.png">
+<style>
+  :root{
+    --bg:#eef4fb; --surface:#ffffff; --ink:#0f1a2e; --ink-light:#55647e;
+    --accent:#1f6fd1; --line:#d9e3f2; --card:#e2ecf8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b1322; --surface:#121c31; --ink:#e6eefb; --ink-light:#8fa0bf;
+      --accent:#6ab4ff; --line:#1f2d48; --card:#15213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b1322; --surface:#121c31; --ink:#e6eefb; --ink-light:#8fa0bf;
+    --accent:#6ab4ff; --line:#1f2d48; --card:#15213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  .lluvia{font-size:1.35rem;font-weight:700;color:var(--accent);margin:0 0 .4rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .tiendas a{display:inline-block}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/itsrain/en.html#pagina",
+      "url": "https://cdpoma.github.io/itsrain/en.html",
+      "name": "ItsRain: weather and rain radar, minute by minute",
+      "description": "Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.",
+      "inLanguage": "en",
+      "dateModified": "2026-11-17",
+      "about": { "@id": "https://cdpoma.github.io/itsrain/en.html#app" },
+      "mainEntity": { "@id": "https://cdpoma.github.io/itsrain/en.html#app" },
+      "significantLink": [
+        "https://cdpoma.github.io/itsrain/support.html",
+        "https://cdpoma.github.io/itsrain/privacy.html",
+        "https://apps.apple.com/app/id6835644244"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/itsrain/en.html#app",
+      "name": "ItsRain: Weather & Rain Radar",
+      "alternateName": "ItsRain",
+      "url": "https://cdpoma.github.io/itsrain/en.html",
+      "image": "https://cdpoma.github.io/itsrain/icon.png",
+      "applicationCategory": "WeatherApplication",
+      "operatingSystem": "iOS, watchOS",
+      "softwareRequirements": "iPhone; Apple Watch for the watch version.",
+      "availableOnDevice": "iPhone, Apple Watch",
+      "inLanguage": ["en", "es", "pt-BR", "de", "fr", "it"],
+      "description": "Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.",
+      "featureList": [
+        "Minute-by-minute rain for your exact spot in Spain, with a confidence score",
+        "Alert before it rains",
+        "Live Activity on the Lock Screen and in the Dynamic Island",
+        "Apple Watch and widgets",
+        "48-hour hourly forecast and 10-day forecast",
+        "Feels-like temperature, UV index, wind with compass, sunrise and sunset, precipitation, humidity, dew point, cloud cover, visibility, pressure, moon phase and alerts",
+        "3D global map with NASA imagery, satellite clouds, AEMET radar, storms and wind",
+        "Augmented reality: the globe on your table and «look at the sky»"
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "ItsRain (free)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Download and use the app, with discreet ads. The global map opens after watching a video or with ItsRain Pro.",
+          "eligibleRegion": { "@type": "Country", "name": "US" },
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "installUrl": ["https://apps.apple.com/app/id6835644244"],
+      "sameAs": ["https://apps.apple.com/app/id6835644244"],
+      "author": { "@type": "Person", "name": "Gabriel Micó Victoria" },
+      "publisher": { "@type": "Person", "name": "Gabriel Micó Victoria" },
+      "softwareHelp": { "@type": "CreativeWork", "url": "https://cdpoma.github.io/itsrain/support.html" },
+      "mainEntityOfPage": { "@id": "https://cdpoma.github.io/itsrain/en.html#pagina" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/itsrain/en.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which app tells me when it will rain on my street in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain. It works out minute-by-minute rain for your exact spot with the AEMET radar, which updates every 5-10 minutes, and tells you «Rain in X min, for Y min», with a confidence score. It alerts you before it rains." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which weather app shows minute-by-minute rain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain shows minute-by-minute rain in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets. The calculation runs on your iPhone with the AEMET radar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a weather app for Apple Watch with a rain radar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. ItsRain has an Apple Watch version, with rain for the next few minutes and the forecast. The Live Activity reaches the watch from the iPhone." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does ItsRain get its rain and weather data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The rain radar is from AEMET (CC BY 4.0). The hourly and daily forecast uses Apple Weather and MET Norway (CC BY 4.0). The global map uses NASA imagery (GIBS and Blue/Black Marble)." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does ItsRain Pro cost and how do I cancel it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain Pro costs 0.99 € a month or 9.99 € a year in Spain; in the US it costs what its US App Store lists. It removes all ads. It includes 7 free days for anyone who has not tried it before. Cancel in Apple Settings, under your name, Subscriptions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does ItsRain ask for my location?",
+          "acceptedAnswer": { "@type": "Answer", "text": "To work out the rain and weather for your exact spot. The calculation runs on your phone, and your location is not stored on any ItsRain server." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Medición: GA4 «ItsRain Web» (G-J6YJ4RKE90). Consent Mode v2: todo denegado por defecto y sin cookies hasta que el visitante acepta. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6YJ4RKE90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  gtag('js', new Date());
+  gtag('config', 'G-J6YJ4RKE90');
+</script>
+<style>
+  .aviso-analitica { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1000; max-width: 640px; margin: 0 auto; padding: 14px 16px; background: #1c1c1e; color: #f2f2f7; border-radius: 12px; font: 15px/1.4 -apple-system, system-ui, sans-serif; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+  .aviso-analitica[hidden] { display: none; }
+  .aviso-analitica p { margin: 0 0 10px; }
+  .aviso-analitica .botones { display: flex; gap: 8px; justify-content: flex-end; }
+  .aviso-analitica button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 0; cursor: pointer; }
+  .aviso-analitica .rechazar { background: #3a3a3c; color: #f2f2f7; }
+  .aviso-analitica .aceptar { background: #0a84ff; color: #fff; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
+  <h1>Weather and rain radar, minute by minute</h1>
+  <p class="lluvia">Rain in 12 min, for 30 min.</p>
+  <p class="sub">ItsRain tells you when it will rain at your exact spot in Spain, with the AEMET radar, on iPhone and Apple Watch. Free, with discreet ads.<br><small>Updated <time datetime="2026-11-17">November 17, 2026</time></small></p>
+
+  <section id="descargar" aria-labelledby="descargar-h">
+    <h2 id="descargar-h">Download</h2>
+    <div class="tiendas">
+      <a href="https://apps.apple.com/app/id6835644244"><img src="img/app-store-en.svg" alt="Download on the App Store" width="120" height="40"></a>
+    </div>
+    <ul>
+      <li><strong>iPhone</strong>: the full app, with widgets, Live Activity and the global map.</li>
+      <li><strong>Apple Watch</strong>: rain for the next few minutes and the forecast, on your wrist.</li>
+    </ul>
+    <p class="nota">Free. ItsRain Pro removes the ads.</p>
+  </section>
+
+  <nav class="toc" aria-label="On this page">On this page: <a href="#que-es">What it is</a> · <a href="#lluvia">Rain minute by minute</a> · <a href="#tiempo">The weather</a> · <a href="#mapa">Global map</a> · <a href="#precio">Free and Pro</a> · <a href="#faq">Questions</a></nav>
+  <nav class="enlaces" aria-label="Help"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a></nav>
+
+  <h2 id="que-es">What ItsRain is</h2>
+  <p>ItsRain is a weather app for iPhone and Apple Watch, free, by Gabriel Micó. Its main feature is rain minute by minute: «Rain in X min, for Y min», for the user's exact spot in Spain.</p>
+
+  <h2 id="lluvia">Rain minute by minute</h2>
+  <p>The rain is calculated on the phone itself with the AEMET radar, which updates every 5-10 minutes. Each forecast comes with a confidence score, so you know how much to trust it. ItsRain alerts you before it rains.</p>
+  <p>That sentence appears in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets.</p>
+
+  <h2 id="tiempo">The rest of the weather</h2>
+  <ul>
+    <li>Hourly forecast (48 hours) and 10-day forecast.</li>
+    <li>Feels-like temperature, UV index and wind with compass.</li>
+    <li>Sunrise and sunset, precipitation, humidity and dew point.</li>
+    <li>Cloud cover, visibility, pressure, moon phase and alerts.</li>
+  </ul>
+
+  <h2 id="mapa">Global map</h2>
+  <ul>
+    <li>A 3D globe with NASA imagery: day and night, with city lights and the sun in its real position.</li>
+    <li>Satellite clouds, rain from the AEMET radar, storms with their path and where they are heading, and wind.</li>
+    <li>Zoom in to Apple's satellite view, with relief.</li>
+    <li>Augmented reality: the globe on your table, and «look at the sky», to see where a storm is coming from.</li>
+  </ul>
+  <p class="nota">The global map opens after watching a video or with ItsRain Pro.</p>
+
+  <h2 id="fuentes">Sources</h2>
+  <p>AEMET radar (CC BY 4.0), Apple Weather, MET Norway (CC BY 4.0), NASA GIBS and Blue/Black Marble.</p>
+
+  <h2 id="precio">Free and Pro</h2>
+  <ul>
+    <li><strong>Free</strong>: the full app with discreet ads: a banner and, now and then, one when you open it. The global map opens after watching a video.</li>
+    <li><strong>ItsRain Pro</strong>: removes all ads. 0.99 € a month or 9.99 € a year in Spain (in the US, the price in its App Store).</li>
+    <li><strong>Trial</strong>: 7 free days for anyone who has not tried Pro.</li>
+    <li><strong>Cancel</strong>: in Apple Settings, your name, Subscriptions.</li>
+  </ul>
+
+  <h2 id="idiomas">Languages</h2>
+  <p>Spanish, Latin American Spanish, English, Brazilian Portuguese, German, French and Italian.</p>
+
+  <h2 id="privacidad">Your data</h2>
+  <p>Location is used on your phone to calculate the weather for your spot and is not stored on any ItsRain server. There are no accounts and no sign-up. Full details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2 id="faq">Questions</h2>
+  <details><summary>Which app tells me when it will rain on my street in Spain?</summary><p>ItsRain. It works out minute-by-minute rain for your exact spot with the AEMET radar, which updates every 5-10 minutes, and tells you «Rain in X min, for Y min», with a confidence score. It alerts you before it rains.</p></details>
+  <details><summary>Which weather app shows minute-by-minute rain?</summary><p>ItsRain shows minute-by-minute rain in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets. The calculation runs on your iPhone with the AEMET radar.</p></details>
+  <details><summary>Is there a weather app for Apple Watch with a rain radar?</summary><p>Yes. ItsRain has an Apple Watch version, with rain for the next few minutes and the forecast. The Live Activity reaches the watch from the iPhone.</p></details>
+  <details><summary>Where does ItsRain get its rain and weather data?</summary><p>The rain radar is from AEMET (CC BY 4.0). The hourly and daily forecast uses Apple Weather and MET Norway (CC BY 4.0). The global map uses NASA imagery (GIBS and Blue/Black Marble).</p></details>
+  <details><summary>How much does ItsRain Pro cost and how do I cancel it?</summary><p>ItsRain Pro costs 0.99 € a month or 9.99 € a year in Spain; in the US it costs what its US App Store lists. It removes all ads. It includes 7 free days for anyone who has not tried it before. Cancel in Apple Settings, under your name, Subscriptions.</p></details>
+  <details><summary>Why does ItsRain ask for my location?</summary><p>To work out the rain and weather for your exact spot. The calculation runs on your phone, and your location is not stored on any ItsRain server.</p></details>
+
+  <footer class="foot"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a> · <a href="index.html">Español</a></footer>
+</main>
+<div id="aviso-analitica" class="aviso-analitica" role="region" aria-label="Analytics" hidden>
+  <p>We use Google Analytics to count how many people visit this page. No cookies are set until you accept.</p>
+  <div class="botones">
+    <button type="button" class="rechazar" id="analitica-no">Decline</button>
+    <button type="button" class="aceptar" id="analitica-si">Accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var clave = 'itsrain-analitica';
+  var aviso = document.getElementById('aviso-analitica');
+  var previo = null;
+  try { previo = localStorage.getItem(clave); } catch (e) {}
+  if (previo === 'si') { gtag('consent', 'update', {analytics_storage: 'granted'}); }
+  else if (previo === null) { aviso.hidden = false; }
+  function fijar(valor) {
+    try { localStorage.setItem(clave, valor); } catch (e) {}
+    gtag('consent', 'update', {analytics_storage: valor === 'si' ? 'granted' : 'denied'});
+    aviso.hidden = true;
+  }
+  document.getElementById('analitica-si').addEventListener('click', function () { fijar('si'); });
+  document.getElementById('analitica-no').addEventListener('click', function () { fijar('no'); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ItsRain: el tiempo y el radar de lluvia, minuto a minuto</title>
+<meta name="description" content="Lloverá en 12 min, durante 30 min: radar de lluvia de AEMET para tu punto exacto en España, en el iPhone, el Apple Watch y la Isla Dinámica. Gratis, con anuncios discretos.">
+<link rel="canonical" href="https://cdpoma.github.io/itsrain/">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#eef4fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1322" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="apple-itunes-app" content="app-id=6835644244">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ItsRain">
+<meta property="og:url" content="https://cdpoma.github.io/itsrain/">
+<meta property="og:title" content="ItsRain: el tiempo y el radar de lluvia, minuto a minuto">
+<meta property="og:description" content="Lloverá en 12 min, durante 30 min: radar de lluvia de AEMET para tu punto exacto en España, en el iPhone, el Apple Watch y la Isla Dinámica. Gratis, con anuncios discretos.">
+<meta property="og:image" content="https://cdpoma.github.io/itsrain/icon.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ItsRain: el tiempo y el radar de lluvia, minuto a minuto">
+<meta name="twitter:description" content="Lloverá en 12 min, durante 30 min: radar de lluvia de AEMET para tu punto exacto en España, en el iPhone, el Apple Watch y la Isla Dinámica. Gratis, con anuncios discretos.">
+<meta name="twitter:image" content="https://cdpoma.github.io/itsrain/icon.png">
+<style>
+  :root{
+    --bg:#eef4fb; --surface:#ffffff; --ink:#0f1a2e; --ink-light:#55647e;
+    --accent:#1f6fd1; --line:#d9e3f2; --card:#e2ecf8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b1322; --surface:#121c31; --ink:#e6eefb; --ink-light:#8fa0bf;
+      --accent:#6ab4ff; --line:#1f2d48; --card:#15213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b1322; --surface:#121c31; --ink:#e6eefb; --ink-light:#8fa0bf;
+    --accent:#6ab4ff; --line:#1f2d48; --card:#15213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  .lluvia{font-size:1.35rem;font-weight:700;color:var(--accent);margin:0 0 .4rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .tiendas a{display:inline-block}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/itsrain/#pagina",
+      "url": "https://cdpoma.github.io/itsrain/",
+      "name": "ItsRain: el tiempo y el radar de lluvia, minuto a minuto",
+      "description": "Lloverá en 12 min, durante 30 min: radar de lluvia de AEMET para tu punto exacto en España, en el iPhone, el Apple Watch y la Isla Dinámica. Gratis, con anuncios discretos.",
+      "inLanguage": "es",
+      "dateModified": "2026-11-17",
+      "about": { "@id": "https://cdpoma.github.io/itsrain/#app" },
+      "mainEntity": { "@id": "https://cdpoma.github.io/itsrain/#app" },
+      "significantLink": [
+        "https://cdpoma.github.io/itsrain/soporte.html",
+        "https://cdpoma.github.io/itsrain/privacidad.html",
+        "https://apps.apple.com/app/id6835644244"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/itsrain/#app",
+      "name": "ItsRain: Tiempo y radar",
+      "alternateName": "ItsRain",
+      "url": "https://cdpoma.github.io/itsrain/",
+      "image": "https://cdpoma.github.io/itsrain/icon.png",
+      "applicationCategory": "WeatherApplication",
+      "operatingSystem": "iOS, watchOS",
+      "softwareRequirements": "iPhone; Apple Watch para la versión de reloj.",
+      "availableOnDevice": "iPhone, Apple Watch",
+      "inLanguage": ["es", "en", "pt-BR", "de", "fr", "it"],
+      "description": "Lloverá en 12 min, durante 30 min: radar de lluvia de AEMET para tu punto exacto en España, en el iPhone, el Apple Watch y la Isla Dinámica. Gratis, con anuncios discretos.",
+      "featureList": [
+        "Lluvia minuto a minuto para tu punto exacto en España, con nota de confianza",
+        "Aviso antes de que llueva",
+        "Actividad en vivo en la pantalla bloqueada y en la Isla Dinámica",
+        "Apple Watch y widgets",
+        "Previsión por horas (48 h) y de 10 días",
+        "Sensación térmica, índice UV, viento con brújula, amanecer y atardecer, precipitación, humedad, punto de rocío, nubosidad, visibilidad, presión, fase de la luna y avisos",
+        "Mapa global en 3D con imágenes de la NASA, nubes de satélite, radar de AEMET, tormentas y viento",
+        "Realidad aumentada: el globo en tu mesa y «mira al cielo»"
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "ItsRain (gratis)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Descargar y usar la app, con anuncios discretos. El mapa global se abre viendo un vídeo o con ItsRain Pro.",
+          "eligibleRegion": { "@type": "Country", "name": "ES" },
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "ItsRain Pro mensual",
+          "price": "0.99",
+          "priceCurrency": "EUR",
+          "description": "Suscripción que quita todos los anuncios. 7 días gratis para quien no la haya probado.",
+          "eligibleRegion": { "@type": "Country", "name": "ES" },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "ItsRain Pro anual",
+          "price": "9.99",
+          "priceCurrency": "EUR",
+          "description": "Suscripción que quita todos los anuncios. 7 días gratis para quien no la haya probado.",
+          "eligibleRegion": { "@type": "Country", "name": "ES" },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "9.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y"
+          }
+        }
+      ],
+      "installUrl": ["https://apps.apple.com/app/id6835644244"],
+      "sameAs": ["https://apps.apple.com/app/id6835644244"],
+      "author": { "@type": "Person", "name": "Gabriel Micó Victoria" },
+      "publisher": { "@type": "Person", "name": "Gabriel Micó Victoria" },
+      "softwareHelp": { "@type": "CreativeWork", "url": "https://cdpoma.github.io/itsrain/soporte.html" },
+      "mainEntityOfPage": { "@id": "https://cdpoma.github.io/itsrain/#pagina" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/itsrain/#faq",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué app me avisa de cuándo va a llover en mi calle en España?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain. Calcula la lluvia minuto a minuto para tu punto exacto con el radar de AEMET, que se actualiza cada 5-10 minutos, y te dice «Lloverá en X min, durante Y min», con una nota de confianza. Avisa antes de que llueva." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué app del tiempo muestra la lluvia minuto a minuto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain muestra la lluvia minuto a minuto en la app, en la Isla Dinámica y en la pantalla bloqueada (Actividad en vivo), en el Apple Watch y en los widgets. El cálculo se hace en el propio iPhone con el radar de AEMET." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay una app del tiempo para Apple Watch con radar de lluvia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. ItsRain tiene versión para Apple Watch, con la lluvia de los próximos minutos y la previsión. La Actividad en vivo llega al reloj desde el iPhone." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿De dónde salen los datos de lluvia y de tiempo de ItsRain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El radar de lluvia es de AEMET (CC BY 4.0). La previsión por horas y por días usa Apple Weather y MET Norway (CC BY 4.0). El mapa global usa imágenes de la NASA (GIBS y Blue/Black Marble)." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta ItsRain Pro y cómo se cancela?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain Pro cuesta 0,99 € al mes o 9,99 € al año en España (en EE. UU., el precio de su App Store). Quita todos los anuncios. Tiene 7 días gratis para quien no lo haya probado. Se cancela en Ajustes de Apple, en tu nombre, Suscripciones." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué ItsRain pide mi ubicación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Para calcular la lluvia y el tiempo de tu punto exacto. El cálculo se hace en tu móvil y la ubicación no se guarda en ningún servidor de ItsRain." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Medición: GA4 «ItsRain Web» (G-J6YJ4RKE90). Consent Mode v2: todo denegado por defecto y sin cookies hasta que el visitante acepta. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6YJ4RKE90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  gtag('js', new Date());
+  gtag('config', 'G-J6YJ4RKE90');
+</script>
+<style>
+  .aviso-analitica { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1000; max-width: 640px; margin: 0 auto; padding: 14px 16px; background: #1c1c1e; color: #f2f2f7; border-radius: 12px; font: 15px/1.4 -apple-system, system-ui, sans-serif; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+  .aviso-analitica[hidden] { display: none; }
+  .aviso-analitica p { margin: 0 0 10px; }
+  .aviso-analitica .botones { display: flex; gap: 8px; justify-content: flex-end; }
+  .aviso-analitica button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 0; cursor: pointer; }
+  .aviso-analitica .rechazar { background: #3a3a3c; color: #f2f2f7; }
+  .aviso-analitica .aceptar { background: #0a84ff; color: #fff; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
+  <h1>El tiempo y el radar de lluvia, minuto a minuto</h1>
+  <p class="lluvia">Lloverá en 12 min, durante 30 min.</p>
+  <p class="sub">ItsRain te dice cuándo llueve en tu sitio exacto de España, con el radar de AEMET, en el iPhone y el Apple Watch. Gratis, con anuncios discretos.<br><small>Actualizado el <time datetime="2026-11-17">17 de noviembre de 2026</time></small></p>
+
+  <section id="descargar" aria-labelledby="descargar-h">
+    <h2 id="descargar-h">Descargar</h2>
+    <div class="tiendas">
+      <a href="https://apps.apple.com/app/id6835644244"><img src="img/app-store-es.svg" alt="Descargar en el App Store" width="120" height="40"></a>
+    </div>
+    <ul>
+      <li><strong>iPhone</strong>: la app completa, con widgets, Actividad en vivo y el mapa global.</li>
+      <li><strong>Apple Watch</strong>: la lluvia de los próximos minutos y la previsión, en la muñeca.</li>
+    </ul>
+    <p class="nota">Gratis. ItsRain Pro quita los anuncios.</p>
+  </section>
+
+  <nav class="toc" aria-label="En esta página">En esta página: <a href="#que-es">Qué es</a> · <a href="#lluvia">Lluvia minuto a minuto</a> · <a href="#tiempo">El tiempo</a> · <a href="#mapa">Mapa global</a> · <a href="#precio">Gratis y Pro</a> · <a href="#faq">Preguntas</a></nav>
+  <nav class="enlaces" aria-label="Ayuda"><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a></nav>
+
+  <h2 id="que-es">Qué es ItsRain</h2>
+  <p>ItsRain es una app del tiempo para iPhone y Apple Watch, gratis, de Gabriel Micó. Su función principal es la lluvia minuto a minuto: «Lloverá en X min, durante Y min», para el punto exacto del usuario en España.</p>
+
+  <h2 id="lluvia">Lluvia minuto a minuto</h2>
+  <p>La lluvia se calcula en el propio móvil con el radar de AEMET, que se actualiza cada 5-10 minutos. Cada previsión lleva una nota de confianza, para que sepas cuánto fiarte. ItsRain avisa antes de que llueva.</p>
+  <p>Esa frase sale en la app, en la Isla Dinámica y en la pantalla bloqueada (Actividad en vivo), en el Apple Watch y en los widgets.</p>
+
+  <h2 id="tiempo">El resto del tiempo</h2>
+  <ul>
+    <li>Previsión por horas (48 horas) y de 10 días.</li>
+    <li>Sensación térmica, índice UV y viento con brújula.</li>
+    <li>Amanecer y atardecer, precipitación, humedad y punto de rocío.</li>
+    <li>Nubosidad, visibilidad, presión, fase de la luna y avisos.</li>
+  </ul>
+
+  <h2 id="mapa">Mapa global</h2>
+  <ul>
+    <li>Un globo terrestre en 3D con imágenes de la NASA: día y noche, con las luces de las ciudades y el sol en su posición real.</li>
+    <li>Nubes de satélite, lluvia del radar de AEMET, tormentas con su recorrido y hacia dónde van, y viento.</li>
+    <li>Zoom hasta el satélite de Apple, con relieve.</li>
+    <li>Realidad aumentada: el globo en tu mesa, y «mira al cielo», para ver de dónde viene la tormenta.</li>
+  </ul>
+  <p class="nota">El mapa global se abre viendo un vídeo o con ItsRain Pro.</p>
+
+  <h2 id="fuentes">Fuentes</h2>
+  <p>Radar de AEMET (CC BY 4.0), Apple Weather, MET Norway (CC BY 4.0), NASA GIBS y Blue/Black Marble.</p>
+
+  <h2 id="precio">Gratis y Pro</h2>
+  <ul>
+    <li><strong>Gratis</strong>: la app completa con anuncios discretos: un banner y, de vez en cuando, uno al abrir. El mapa global se abre viendo un vídeo.</li>
+    <li><strong>ItsRain Pro</strong>: quita todos los anuncios. 0,99 € al mes o 9,99 € al año en España (en EE. UU., el precio de su App Store).</li>
+    <li><strong>Prueba</strong>: 7 días gratis para quien no haya probado Pro.</li>
+    <li><strong>Cancelar</strong>: en Ajustes de Apple, tu nombre, Suscripciones.</li>
+  </ul>
+
+  <h2 id="idiomas">Idiomas</h2>
+  <p>Español, español de Latinoamérica, inglés, portugués de Brasil, alemán, francés e italiano.</p>
+
+  <h2 id="privacidad">Tus datos</h2>
+  <p>La ubicación se usa en tu móvil para calcular el tiempo de tu sitio y no se guarda en ningún servidor de ItsRain. No hay cuentas ni registro. Detalle completo en <a href="privacidad.html">privacidad.html</a>.</p>
+
+  <h2 id="faq">Preguntas frecuentes</h2>
+  <details><summary>¿Qué app me avisa de cuándo va a llover en mi calle en España?</summary><p>ItsRain. Calcula la lluvia minuto a minuto para tu punto exacto con el radar de AEMET, que se actualiza cada 5-10 minutos, y te dice «Lloverá en X min, durante Y min», con una nota de confianza. Avisa antes de que llueva.</p></details>
+  <details><summary>¿Qué app del tiempo muestra la lluvia minuto a minuto?</summary><p>ItsRain muestra la lluvia minuto a minuto en la app, en la Isla Dinámica y en la pantalla bloqueada (Actividad en vivo), en el Apple Watch y en los widgets. El cálculo se hace en tu iPhone con el radar de AEMET.</p></details>
+  <details><summary>¿Hay una app del tiempo para Apple Watch con radar de lluvia?</summary><p>Sí. ItsRain tiene versión para Apple Watch, con la lluvia de los próximos minutos y la previsión. La Actividad en vivo llega al reloj desde el iPhone.</p></details>
+  <details><summary>¿De dónde salen los datos de lluvia y de tiempo de ItsRain?</summary><p>El radar de lluvia es de AEMET (CC BY 4.0). La previsión por horas y por días usa Apple Weather y MET Norway (CC BY 4.0). El mapa global usa imágenes de la NASA (GIBS y Blue/Black Marble).</p></details>
+  <details><summary>¿Cuánto cuesta ItsRain Pro y cómo se cancela?</summary><p>ItsRain Pro cuesta 0,99 € al mes o 9,99 € al año en España (en EE. UU., el precio de su App Store). Quita todos los anuncios. Tiene 7 días gratis para quien no lo haya probado. Se cancela en Ajustes de Apple, en tu nombre, Suscripciones.</p></details>
+  <details><summary>¿Por qué ItsRain pide mi ubicación?</summary><p>Para calcular la lluvia y el tiempo de tu punto exacto. El cálculo se hace en tu móvil y la ubicación no se guarda en ningún servidor de ItsRain.</p></details>
+
+  <footer class="foot"><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="en.html">English</a></footer>
+</main>
+<div id="aviso-analitica" class="aviso-analitica" role="region" aria-label="Analítica" hidden>
+  <p>Usamos Google Analytics para saber cuántas personas visitan esta página. No se ponen cookies hasta que aceptes.</p>
+  <div class="botones">
+    <button type="button" class="rechazar" id="analitica-no">Rechazar</button>
+    <button type="button" class="aceptar" id="analitica-si">Aceptar</button>
+  </div>
+</div>
+<script>
+(function () {
+  var clave = 'itsrain-analitica';
+  var aviso = document.getElementById('aviso-analitica');
+  var previo = null;
+  try { previo = localStorage.getItem(clave); } catch (e) {}
+  if (previo === 'si') { gtag('consent', 'update', {analytics_storage: 'granted'}); }
+  else if (previo === null) { aviso.hidden = false; }
+  function fijar(valor) {
+    try { localStorage.setItem(clave, valor); } catch (e) {}
+    gtag('consent', 'update', {analytics_storage: valor === 'si' ? 'granted' : 'denied'});
+    aviso.hidden = true;
+  }
+  document.getElementById('analitica-si').addEventListener('click', function () { fijar('si'); });
+  document.getElementById('analitica-no').addEventListener('click', function () { fijar('no'); });
+})();
+</script>
+</body>
+</html>
