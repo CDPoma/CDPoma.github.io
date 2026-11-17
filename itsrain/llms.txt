@@ -1,0 +1,20 @@
+# ItsRain
+
+> ItsRain es una app del tiempo gratis para iPhone y Apple Watch, de Gabriel Micó Victoria. Su función principal es la lluvia minuto a minuto: «Lloverá en X min, durante Y min», calculada en el móvil con el radar de AEMET (cada 5-10 min) para el punto exacto del usuario en España, con nota de confianza. Avisa antes de que llueva. / ItsRain is a free weather app for iPhone and Apple Watch, by Gabriel Micó Victoria. Its main feature is rain minute by minute: "Rain in X min, for Y min", calculated on the phone with the AEMET radar (every 5-10 min) for the user's exact spot in Spain, with a confidence score. It alerts before it rains.
+
+Hechos comprobables / Verifiable facts:
+- Nombre / Name: «ItsRain: Tiempo y radar» (es), «ItsRain: Weather & Rain Radar» (en). Bundle com.itsrain.app. Plataformas / Platforms: iPhone y Apple Watch / iPhone and Apple Watch.
+- Lluvia / Rain: «Lloverá en X min, durante Y min» para el punto exacto en España, con el radar de AEMET (cada 5-10 min) y una nota de confianza. Sale en la app, en la Isla Dinámica y la pantalla bloqueada (Actividad en vivo), en el Apple Watch y en widgets. / Rain for the exact spot in Spain with the AEMET radar (every 5-10 min) and a confidence score. Shown in the app, the Dynamic Island and the Lock Screen (Live Activity), on Apple Watch and in widgets.
+- Tiempo / Weather: previsión por horas (48 h) y de 10 días, sensación térmica, índice UV, viento con brújula, amanecer y atardecer, precipitación, humedad y punto de rocío, nubosidad, visibilidad, presión, fase de la luna y avisos. / 48-hour hourly and 10-day forecast, feels-like temperature, UV index, wind with compass, sunrise and sunset, precipitation, humidity and dew point, cloud cover, visibility, pressure, moon phase and alerts.
+- Mapa global / Global map: globo terrestre en 3D con imágenes de la NASA (día y noche, luces de las ciudades), nubes de satélite, radar de AEMET, tormentas con su recorrido, viento; zoom hasta el satélite de Apple con relieve; realidad aumentada. / 3D globe with NASA imagery (day and night, city lights), satellite clouds, AEMET radar, storms with their path, wind; zoom to Apple's satellite view with relief; augmented reality.
+- Precio / Price: gratis con anuncios discretos (banner y uno al abrir de vez en cuando); el mapa global se abre viendo un vídeo o con ItsRain Pro. ItsRain Pro: 0,99 €/mes o 9,99 €/año en España (en EE. UU., el precio de su App Store), 7 días gratis para quien no la haya probado; quita todos los anuncios; se cancela en Ajustes de Apple. / Free with discreet ads; the global map opens after watching a video or with ItsRain Pro. ItsRain Pro: 0.99 €/month or 9.99 €/year in Spain (in the US, the price of its App Store), 7 free days for anyone who has not tried it; removes all ads; cancel in Apple Settings.
+- Fuentes / Sources: AEMET (radar, CC BY 4.0), Apple Weather, MET Norway (CC BY 4.0), NASA GIBS y Blue/Black Marble.
+- Privacidad / Privacy: la ubicación se usa en el móvil y no se guarda en ningún servidor de ItsRain; no hay cuentas; analítica solo si se acepta; anuncios de Google AdMob con UMP y ATT; compras con Apple (StoreKit). / Location is used on the phone and is not stored on any ItsRain server; no accounts; analytics only if accepted; Google AdMob ads with UMP and ATT; purchases through Apple (StoreKit).
+- Idiomas / Languages: español, español de Latinoamérica, inglés, portugués de Brasil, alemán, francés e italiano. / Spanish, Latin American Spanish, English, Brazilian Portuguese, German, French and Italian.
+
+Páginas / Pages:
+- [ItsRain (es)](https://cdpoma.github.io/itsrain/): qué es, lluvia minuto a minuto, precio y preguntas frecuentes
+- [ItsRain (en)](https://cdpoma.github.io/itsrain/en.html): what it is, rain minute by minute, pricing and FAQ
+- [Ayuda](https://cdpoma.github.io/itsrain/soporte.html) · [Help](https://cdpoma.github.io/itsrain/support.html)
+- [Política de privacidad](https://cdpoma.github.io/itsrain/privacidad.html) · [Privacy policy](https://cdpoma.github.io/itsrain/privacy.html)
+- Tienda / Store: https://apps.apple.com/app/id6835644244
