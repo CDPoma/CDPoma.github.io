@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Níscalo — Help &amp; support</title>
+<title>Níscalo support: identify mushrooms with AI and spots</title>
+<meta name="description" content="Answers about Níscalo: identifying a mushroom, saving and sharing spots, the Mountain map layer, the Go screen, Pro, Mac and deleting your account.">
+<link rel="canonical" href="https://cdpoma.github.io/niscalo/support.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/support.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/soporte.html">
+<meta name="robots" content="index,follow">
+<meta name="apple-itunes-app" content="app-id=6837037270">
 <style>
   :root{
     --bg:#1F2A1C; --surface:#263322; --ink:#EDE8DC; --ink-light:#A9B39F;
@@ -27,6 +34,27 @@
   .idioma{float:right;font-size:.9rem;margin-top:.4rem}
   nav.enlaces{margin:0 0 2rem;font-size:.95rem}
   nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:0 0 .4rem}
+  .tiendas img{display:block;height:48px;width:auto}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .capturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:0 0 1rem}
+  .capturas figure{margin:0}
+  .capturas img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  .capturas figcaption{font-size:.85rem;color:var(--ink-light);margin-top:.4rem;text-align:center}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
 </style>
 </head>
 <body>
@@ -35,49 +63,70 @@
   <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
   <h1>Níscalo</h1>
   <p class="sub">Help &amp; support</p>
-  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+  <nav class="enlaces"><a href="en.html">Níscalo</a> · <a href="privacy.html">Privacy policy</a></nav>
 
   <div class="aviso">
-    <p><strong>Safety first:</strong> Níscalo is an aid, not an expert. <strong>Do not eat any mushroom if you have the slightest doubt</strong>, even if the app says it is edible. Always check with an expert mycologist before eating any specimen.</p>
+    <p><strong>Safety first:</strong> Níscalo is a helper, not an expert. <strong>Do not eat any mushroom if you have the slightest doubt</strong>, even if the app says it is edible. Always check with an expert mycologist before consuming any specimen.</p>
   </div>
 
   <div class="card">
-    <p><strong>Níscalo</strong> identifies mushrooms from a photo using artificial intelligence, and lets you publish your finds, with photo, description and location, on a public wall. Something not working, or an idea? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+    <p><strong>Níscalo</strong> identifies mushrooms from a photo using artificial intelligence, lets you save your spots on a terrain map with elevation, slope and sun or shade, and publish your finds with a photo, a description and a location, choosing who sees the place. Something not working, or have an idea? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
   <h2>Frequently asked questions</h2>
 
   <h3>How do I identify a mushroom?</h3>
-  <p>Tap «Identify», take a clear photo of the mushroom (cap, gills or pores, stem and base) or choose one from your gallery. The app gives the probable species, its confidence, whether it is edible and a safety warning. Always confirm with an expert.</p>
+  <p>Tap "Identify", take a clear photo of the mushroom (cap, gills or pores, stem and base) or pick one from your library. The app gives you the probable species, with its confidence, the species it can be confused with, whether it is edible and a safety warning. Always confirm with an expert. There is a limit of 40 identifications per day per account, and an internet connection is required.</p>
+
+  <h3>What is the video I see before an analysis?</h3>
+  <p>The free version shows a short full-screen video before each photo analysis, and a banner. With Níscalo Pro both go away. If no video is available (for example without a connection), the photo is not analysed: you can try again or go Pro.</p>
+
+  <h3>Do I have to create an account?</h3>
+  <p>To identify, save spots, publish, add friends, report or block, yes. The account does not ask for an email or a password: it is anonymous and only has a display name you choose. If you delete the app, you start from scratch. You can see the map and the wall without an account.</p>
+
+  <h3>How do I save a spot?</h3>
+  <p>On the Map tab, tap "Save here" to save where you are using GPS, or "Add a spot by hand" and tap the map. You can also tick "Save this place to My spots" when you publish a find. Give it a name and, if you like, a note.</p>
+
+  <h3>Are my spots private? How do I share them?</h3>
+  <p>Yes: a spot is yours alone until you decide to share it. On its page, "Share" lets you choose between "With a friend", "On my wall" (anyone can see it) and "By WhatsApp or another app". You can stop sharing it whenever you like.</p>
+
+  <h3>How do I add friends?</h3>
+  <p>On the Profile tab you have your 6-character friend code. Give it to anyone you like: they type it into "Add by code" and you get the request. You are friends once you accept it.</p>
 
   <h3>Why does it ask for my location?</h3>
-  <p>Only to record where the find is when you publish it. If you do not give permission, you can still publish without location, after confirming. The location becomes public together with the photo.</p>
+  <p>Only when you use it: to save a spot with GPS, to publish a find with its location, to center the map on your position and for the "Go" screen. If you do not grant permission, you can mark the place by hand on the map or publish without a location, after confirming. For each find you choose who sees the place: only you (the default), your friends or everyone.</p>
 
-  <h3>Do I need an account?</h3>
-  <p>To identify, publish, report or block, yes. The account has no email or a sign-in key: it is anonymous and only has a display name that you choose. If you delete the app, you start from scratch. You can read the wall without an account.</p>
+  <h3>What does the Mountain layer show?</h3>
+  <p>Terrain only: hillshading, elevation colors and labeled contour lines. Point the crosshair and it gives you the elevation, the slope and whether the point faces the sun or lies in shade, using NASA SRTM elevation data. The data is approximate: do not use it as your only guide in the mountains.</p>
 
-  <h3>How do I delete a post?</h3>
-  <p>Open its page and delete it. It is removed together with its photo.</p>
+  <h3>How do I get to a spot?</h3>
+  <p>Open the spot or the find and tap "Go": you will see the map with a line to the destination and, below it, the compass with the bearing and the distance. Tap "Turn on compass" if needed. "Directions by car" opens your maps app.</p>
+
+  <h3>Does it work on a Mac?</h3>
+  <p>Yes, on Macs with Apple silicon, as an iPhone and iPad app. The map, spots, friends and finds work the same. A Mac has no compass, so the "Go" screen gives you the bearing and the distance, and if your Mac has no camera you can identify from a photo in your library.</p>
+
+  <h3>How do I delete a post or a spot?</h3>
+  <p>Open its page and delete it. A find is removed together with its photo and its location.</p>
 
   <h3>How do I delete my account?</h3>
-  <p>In <strong>Settings → Delete my account</strong>. Your profile, posts, photos, reports and blocks are deleted. This cannot be undone.</p>
+  <p>In <strong>Settings → Delete my account</strong>. Your profile, finds with their photos and locations, spots, friendships, reports and blocks are deleted. It cannot be undone.</p>
 
   <h3>How do I remove the ads?</h3>
-  <p>With the Pro subscription, from the Pro screen. The ads disappear as soon as the purchase is active.</p>
+  <p>With the Pro subscription, from the Pro screen. The banner and the video go away as soon as the purchase is active.</p>
 
-  <h3>I bought Pro and it does not show</h3>
-  <p>Go to <strong>Pro screen → Restore purchases</strong>. The store sometimes takes a few minutes to confirm the payment. If it still does not appear, write to us with your Apple receipt.</p>
+  <h3>I bought Pro and it does not show up</h3>
+  <p>Go to the <strong>Pro → Restore purchases</strong> screen. Sometimes the store takes a few minutes to confirm the payment. If it still does not appear, write to us with the Apple receipt.</p>
 
-  <h3>How do I cancel Pro?</h3>
+  <h3>How do I cancel the Pro subscription?</h3>
   <p>It is managed from your Apple account: iPhone Settings → your name → Subscriptions → Níscalo Pro.</p>
 
-  <h3>What if a post is inappropriate?</h3>
-  <p>Tap «Report» on its page. When it collects 3 reports it is hidden automatically and the developer reviews it. You can also block its author so you no longer see their posts.</p>
+  <h3>What if a post or a spot is inappropriate?</h3>
+  <p>Tap "Report" on its page. When it collects 3 reports it is hidden automatically and the developer reviews it. You can also block its author so you do not see their posts.</p>
 
   <h2>Contact</h2>
-  <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. For a bug, tell us your phone model and what you were doing.</p>
+  <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it is a bug, tell us the phone or Mac model and what you were doing.</p>
 
-  <div class="foot">Níscalo · Gabriel Micó Victoria</div>
+  <div class="foot"><a href="en.html">Níscalo</a> · Gabriel Micó Victoria</div>
 
 </div>
 </body>

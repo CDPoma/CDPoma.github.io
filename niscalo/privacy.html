@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Níscalo — Privacy policy</title>
+<title>Níscalo privacy: mushroom identifier with AI</title>
+<meta name="description" content="What data Níscalo uses: an account with just a name, photos that are not kept unless you publish, private spots, location, Apple maps, ads and statistics.">
+<link rel="canonical" href="https://cdpoma.github.io/niscalo/privacy.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/privacidad.html">
+<meta name="robots" content="index,follow">
+<meta name="apple-itunes-app" content="app-id=6837037270">
 <style>
   :root{
     --bg:#1F2A1C; --surface:#263322; --ink:#EDE8DC; --ink-light:#A9B39F;
@@ -27,6 +34,27 @@
   .idioma{float:right;font-size:.9rem;margin-top:.4rem}
   nav.enlaces{margin:0 0 2rem;font-size:.95rem}
   nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:0 0 .4rem}
+  .tiendas img{display:block;height:48px;width:auto}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .capturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:0 0 1rem}
+  .capturas figure{margin:0}
+  .capturas img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  .capturas figcaption{font-size:.85rem;color:var(--ink-light);margin-top:.4rem;text-align:center}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
 </style>
 </head>
 <body>
@@ -35,47 +63,84 @@
   <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
   <h1>Níscalo</h1>
   <p class="sub">Privacy policy</p>
-  <nav class="enlaces"><a href="support.html">Help &amp; support</a></nav>
+  <nav class="enlaces"><a href="en.html">Níscalo</a> · <a href="support.html">Help &amp; support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Níscalo identifies mushrooms from a photo using artificial intelligence and lets you publish your finds on a public wall. You can identify without an account, but to publish or identify you need an account, which no longer uses email or a sign-in key: it is only a display name you choose. <strong>What you publish (photo, description, probable species and, if you allow it, the GPS location) is public</strong> to anyone, even without an account. The app shows Google AdMob ads, and the Pro subscription removes them. Usage statistics are anonymous.</p>
+    <p><strong>Summary:</strong> Níscalo identifies mushrooms from a photo using artificial intelligence, lets you save your places (spots) on a terrain map and publish your finds. To identify, save spots or publish you need an account, which has no email or password: it is only a display name you choose. The map and the wall can be viewed without an account. <strong>Your spots are private</strong> until you decide to share them with your friends or on the wall. For each find you choose who sees where you found it (only you, your friends or everyone), but <strong>the photo, the description and the probable species of a published find are public</strong> to anyone, even without an account. The app shows Google AdMob ads, and the Pro subscription removes them. Usage statistics are anonymous.</p>
   </div>
 
   <h2>Who is responsible</h2>
   <p>Gabriel Micó Victoria, developer of Níscalo. For any question about your data, or to exercise your rights, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
   <h2>Account</h2>
-  <p>To identify, publish, report or block, you need an account. The account no longer has an email or a sign-in key: it is an anonymous Supabase session with only a <strong>display name</strong> that you choose and that other people see on your posts. We recommend a nickname rather than your full name. If you delete the app, you start from scratch, and you can delete your account in Settings → Delete my account. Your account is stored in Supabase, with servers in the European Union (Frankfurt).</p>
+  <p>To identify, save spots, publish, add friends, report or block, you need an account. The account has no email and no password: it is an anonymous Supabase session with only a <strong>display name</strong> that you choose and that other people see on your finds, on the spots you share and in your friend requests. We recommend a nickname rather than your full name. If you delete the app, you start from scratch, and you can delete your account in Settings → Delete my account. Your account is stored in Supabase, with servers in the European Union (Frankfurt).</p>
 
   <h2>Identifying a mushroom</h2>
-  <p>When you tap «Identify», the photo is sent to our server and from there to Anthropic's artificial intelligence service (Claude). If that service does not respond, the photo is sent to Google's service (Gemini) for the same task. It is only used to give you the identification.</p>
+  <p>When you tap "Identify", the app reduces the photo and sends it to our server, and from there to Anthropic's artificial intelligence service (Claude). If that service does not respond, the photo is sent to Google's service (Gemini) for the same task. It is only used to give you the identification.</p>
   <ul>
     <li><strong>We do not keep the photo or the result</strong> unless you publish the find.</li>
-    <li>We count how many identifications each account makes per day, to apply the usage limit. That counter does not include the photo.</li>
+    <li>We count how many identifications each account makes per day (the limit is 40 per account per day), to apply the usage limit. That counter does not include the photo.</li>
   </ul>
+
+  <h2>Location and compass</h2>
+  <p>Níscalo asks for location permission only when it needs it: when you save a spot with GPS, when you publish a find with a location, when you center the map on your position and on the "Go" screen, which uses your position and the compass to lead you to a place. <strong>Your position only reaches our server when you save a spot or publish a find with a location.</strong> The compass, the bearing and the distance are calculated on your device. If you do not grant permission, you can mark the place by hand on the map.</p>
+
+  <h2>Your spots</h2>
+  <p>A spot stores its name, an optional note, its coordinates and whether you marked it with GPS or by hand on the map, linked to your account on our server. <strong>A spot is private: only you see it</strong>, until you decide otherwise:</p>
+  <ul>
+    <li><strong>With a friend:</strong> the friends you choose see it, with your display name. You can stop sharing it, and the person who received it can also remove it from their list.</li>
+    <li><strong>On your wall:</strong> anyone sees it, even without an account, with your display name. You can take it off the wall whenever you like.</li>
+    <li><strong>By WhatsApp or another app:</strong> Níscalo opens the system share menu with the name, the coordinates and an Apple Maps link. What happens next depends on the app you choose and on whoever receives it.</li>
+  </ul>
+  <p>You can delete a spot from its page. When you delete your account, all your spots are deleted.</p>
+
+  <h2>Friends</h2>
+  <p>Each account has a 6-character friend code that only you see. Anyone with your code can send you a friend request, and you are only friends if you accept it. Your friends see your display name, the spots you share with them and the location of the finds for which you choose "friends". You can remove a friend or block them: doing so stops what had been shared between the two of you.</p>
 
   <h2>Publishing a find</h2>
-  <p>When you publish, we store the photo, the description (optional), the probable species returned by the identification and, <strong>if you grant location permission</strong>, the GPS position of the find. All of this is <strong>public</strong>: anyone can see it, also without an account, on the wall and on the map.</p>
+  <p>When you publish, we store the photo, the description (optional), the probable species, the confidence and the edibility guide returned by the identification. All of this is <strong>public</strong>: anyone can see it, also without an account, on the wall and on the map, with your display name.</p>
+  <p>The location is separate. If you grant permission, the GPS position of the find is stored and <strong>you choose who sees it: only you (the default), your friends or everyone</strong>. The place is stored even if you choose "only you", so that you can see it; nobody else can. After publishing, that choice cannot be changed: to change it, delete the find and publish it again.</p>
   <ul>
-    <li>Without location permission, the app warns you and you can publish <strong>without location</strong>, if you confirm.</li>
-    <li>Do not publish photos of people or data you do not want everyone to see. The location of a mushroom may reveal where you forage.</li>
+    <li>Without location permission, the app warns you and you can publish <strong>without a location</strong>, if you confirm.</li>
+    <li>Do not publish photos of people or data you do not want everyone to see. If you leave the location visible to everyone, it may reveal where you forage.</li>
   </ul>
 
+  <h2>The map and the terrain</h2>
+  <p>The Níscalo map is served by Apple (MapKit JS). To draw it, Apple receives the map requests, the area you are looking at and your IP address. We do not give Apple any account or identifier of ours, and Níscalo does not send it your spots or your finds: the app places the pins on the map on your device.</p>
+  <p>The Mountain layer draws the terrain on your device using elevation tiles from AWS Terrain Tiles (Amazon S3), which are based on NASA SRTM data, and, while it draws, relief imagery from NASA (GIBS). These services receive the request for each tile (the area and the zoom level) and your IP address, like any web server. They do not receive your name or any account of ours.</p>
+  <p>So that Apple loads the map, the app asks our server (Supabase) for a temporary, short-lived permit. That request carries no personal data: not your name, not your location and not your spots.</p>
+  <p>If you tap &quot;Directions by car&quot;, the app opens your maps app with the coordinates of the place; from there, that app&#x27;s privacy policy applies.</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th scope="col">Service</th><th scope="col">What for</th><th scope="col">What it receives</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Apple MapKit JS</th><td>Map imagery (Satellite, Mountain, Streets)</td><td>Map requests, the area viewed and the IP address; no account or identifier of ours</td></tr>
+      <tr><th scope="row">AWS Terrain Tiles (Amazon S3)</th><td>Elevation tiles for the Mountain layer terrain</td><td>The request for each tile (area and zoom) and the IP address</td></tr>
+      <tr><th scope="row">NASA GIBS</th><td>Background relief imagery while the Mountain layer is drawn</td><td>The request for each tile (area and zoom) and the IP address</td></tr>
+      <tr><th scope="row">Supabase (our server)</th><td>Temporary permit to load the Apple map</td><td>The request, with no personal data</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Checking for a new version</h2>
+  <p>On iPhone and iPad, when the app starts it asks Apple's App Store whether a newer version exists and, if an update is required, tells you. For that, Apple receives the app identifier and your IP address, like any web server.</p>
+
   <h2>Reporting and blocking</h2>
-  <p>You can report any post and block its author. Blocking hides their posts from you. A post that collects <strong>3 reports</strong> is hidden automatically and kept for review by the developer.</p>
+  <p>You can report any public find or spot and block its author. Blocking hides their posts from you and ends the friendship and anything shared between the two of you. A post or a spot that collects <strong>3 reports</strong> is hidden automatically and kept for review by the developer.</p>
 
   <h2>Deleting your data</h2>
   <ul>
-    <li><strong>One post:</strong> delete it from its page. It is removed together with its photo.</li>
-    <li><strong>Your whole account:</strong> Settings → Delete my account. Your profile, posts, photos, reports, blocks and usage counter are deleted. The sign-in account is deleted too, unless you use it in another of our apps.</li>
+    <li><strong>One find:</strong> delete it from its page. It is removed together with its photo and its location.</li>
+    <li><strong>One spot:</strong> delete it from its page.</li>
+    <li><strong>Your whole account:</strong> Settings → Delete my account. Your profile, finds with their photos and locations, spots, friendships and requests, reports, blocks and usage counter are deleted. The sign-in account is deleted too, unless you use it in another of our apps.</li>
   </ul>
 
   <h2>Ads and purchases</h2>
-  <p>The app shows <strong>Google AdMob</strong> ads (a banner and a rewarded video you watch before the photo is analysed). In the European Economic Area, the United Kingdom and Switzerland, Google asks for your consent before showing ads; you can change it in the same form. On iPhone, Apple asks whether you allow tracking (ATT); if you do not, ads are not personalised with that tracking.</p>
-  <p><strong>Pro</strong> is a subscription managed by Apple's App Store, with <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> to verify your purchase. Pro removes the ads. Apple handles the payment; we only learn whether the subscription is active.</p>
+  <p>The app shows <strong>Google AdMob</strong> ads (a banner and a rewarded video you watch before the photo is analysed). In the European Economic Area, the United Kingdom and Switzerland, Google asks for your consent before showing ads; you can change it in the same form. On iPhone and iPad, Apple asks whether you allow tracking (ATT); if you do not, ads are not personalised with that tracking.</p>
+  <p><strong>Pro</strong> is a subscription managed by Apple's App Store, with <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> to verify your purchase: RevenueCat receives the anonymous identifier of your account, not your name. Pro removes the banner and the video. Apple handles the payment; we only learn whether the subscription is active.</p>
 
   <h2>Usage statistics</h2>
-  <p>We use <strong>Firebase Analytics</strong> anonymously to see which screens are used and improve the app. It is only enabled according to your consent (the choice you make in Google's form). We do not send your email, name, location or the text of your finds, and the app does not use the iPhone advertising identifier.</p>
+  <p>We use <strong>Firebase Analytics</strong> anonymously to see which screens are used and improve the app. In the European Economic Area, the United Kingdom and Switzerland it is only enabled if you accept it in Google's form; in the rest of the countries it is enabled by default and, if the form appears, it follows your answer. We do not send your email, name, location or the text of your finds, and the app does not use the iPhone advertising identifier.</p>
 
   <h2>Your rights</h2>
   <p>You can ask for access, correction or deletion by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>, although you can already do almost everything from the app itself.</p>
@@ -83,8 +148,7 @@
   <div class="aviso">
     <p><strong>Safety warning:</strong> Níscalo does not replace the opinion of an expert mycologist. No photo-based identification is infallible. <strong>Do not eat any mushroom if you have the slightest doubt</strong>, and always check with an expert before consuming any specimen.</p>
   </div>
-
-  <div class="foot">Níscalo · Gabriel Micó Victoria</div>
+  <div class="foot"><a href="en.html">Níscalo</a> · Gabriel Micó Victoria</div>
 
 </div>
 </body>

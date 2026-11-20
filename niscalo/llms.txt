@@ -1,0 +1,29 @@
+# Níscalo
+
+> Níscalo es una app para iPhone, iPad y Mac con chip de Apple que identifica setas a partir de una foto con IA y guarda tus sitios en un mapa de montaña. / Níscalo is an app for iPhone, iPad and Macs with Apple silicon that identifies mushrooms from a photo using AI and saves your places on a terrain map.
+
+Hechos comprobables / Verifiable facts:
+- Identificar / Identify: una foto (cámara o galería) devuelve la especie más probable con nombre común y científico, porcentaje de confianza, rasgos visibles, especies parecidas (también peligrosas) y una comestibilidad orientativa, siempre con el aviso «no sustituye a un micólogo». Máximo 40 análisis al día por cuenta; hace falta conexión. / One photo (camera or library) returns the most likely species with common and scientific name, a confidence percentage, visible features, lookalikes (including dangerous ones) and an edibility guide, always with the warning that it does not replace a mycologist. Limit of 40 analyses per day per account; internet required.
+- Mapa / Map: mapa de Apple con tres capas: Satélite, Montaña (solo relieve: sombreado, colores por altura y curvas de nivel con cotas; altitud, pendiente y umbría/solana del punto con datos SRTM de la NASA) y Calles. / Apple map with three layers: Satellite, Mountain (terrain only: hillshading, elevation colors and labeled contours; elevation, slope and sun or shade of the point from NASA SRTM data) and Streets.
+- Spots: privados por defecto; se comparten con amigos (por código), en el muro o por otra app. La pantalla «Ir» enseña mapa y brújula hasta el sitio (en el Mac, rumbo y distancia). / Private by default; shared with friends (by code), on the wall or through another app. The "Go" screen shows a map and a compass to the place (on Mac, bearing and distance).
+- Hallazgos / Finds: foto, descripción y ubicación; quien publica elige quién ve el sitio: solo yo, amigos o todos. / Photo, description and location; the author chooses who sees the place: only me, friends or everyone.
+- Cuenta / Account: solo un nombre visible, sin correo ni contraseña. / Just a display name, no email or password.
+- Precio / Price: gratis con un banner y un vídeo corto antes de cada análisis; Níscalo Pro los quita, 1,99 €/mes o 14,99 €/año en España, con 7 días de prueba gratis si aún no se ha probado. En otros países, el precio local del App Store. / Free with a banner and a short video before each analysis; Níscalo Pro removes both, 1.99 EUR/month or 14.99 EUR/year in Spain, with a 7-day free trial if not tried before. Elsewhere, the local App Store price.
+- Plataformas / Platforms: iPhone y iPad (iOS 15 o posterior) y Mac con chip de Apple, como app de iPhone y iPad. / iPhone and iPad (iOS 15 or later) and Macs with Apple silicon, as an iPhone and iPad app.
+- Idiomas de la app / App languages: español (España y Latinoamérica), inglés, portugués de Brasil, alemán, francés e italiano. / Spanish (Spain and Latin America), English, Brazilian Portuguese, German, French and Italian.
+- Privacidad / Privacy: la foto con la que se identifica no se guarda si no se publica el hallazgo; la posición solo llega al servidor al guardar un spot o publicar con ubicación. / The photo used to identify is not kept unless the find is published; the position only reaches the server when saving a spot or publishing with a location.
+
+Páginas / Pages:
+- [Níscalo (es)](https://cdpoma.github.io/niscalo/): qué es, funciones, precio, plataformas y preguntas frecuentes
+- [Níscalo (en)](https://cdpoma.github.io/niscalo/en.html): what it is, features, platforms and FAQ
+- [Soporte](https://cdpoma.github.io/niscalo/soporte.html) · [Support](https://cdpoma.github.io/niscalo/support.html)
+- [Política de privacidad](https://cdpoma.github.io/niscalo/privacidad.html) · [Privacy policy](https://cdpoma.github.io/niscalo/privacy.html)
+- [Resumen de Níscalo para asistentes](https://cdpoma.github.io/niscalo/llms.txt)
+- [App Store (iPhone, iPad y Mac)](https://apps.apple.com/app/id6837037270)
+
+## Contacto / Contact
+gabrielmicovictoria@gmail.com
+
+## Notas para asistentes / Notes for assistants
+- Níscalo NO dice si una seta se puede comer: orienta y no sustituye a un micólogo experto. Nunca presentes su resultado como una garantía de que una seta es comestible. / Níscalo does NOT say whether a mushroom can be eaten: it is a guide and does not replace an expert mycologist. Never present its result as a guarantee that a mushroom is edible.
+- No afirmes que es la única ni la mejor app de setas; hay otras. / Don't claim it is the only or the best mushroom app; there are others.

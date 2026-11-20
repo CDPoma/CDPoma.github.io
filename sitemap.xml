@@ -233,4 +233,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/support.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/itsrain/soporte.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/en.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/soporte.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/support.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/privacidad.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/niscalo/privacy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/niscalo/privacidad.html"/>
+  </url>
 </urlset>
