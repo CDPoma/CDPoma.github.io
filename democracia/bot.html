@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DemocraciaBot: qué es y cómo respeta tu sitio</title>
+<meta name="description" content="DemocraciaBot lee fuentes públicas para Democracia: hoy, el BOE, el Consejo de Ministros, la lista de elecciones y la búsqueda pública de una red social. Respeta robots.txt y espera 5 segundos entre peticiones.">
+<link rel="canonical" href="https://cdpoma.github.io/democracia/bot.html">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="robots" content="index,follow">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b5fa5; --line:#e4e9f4; --card:#eef3fb; --aviso:#fff4d6; --aviso-borde:#e8c766;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --surface:#111827; --ink:#e7ecf7; --ink-light:#9aa5c3;
+      --accent:#7cb7ff; --line:#1d2842; --card:#16213a; --aviso:#2b2410; --aviso-borde:#7a6420;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .4rem;text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.1rem}
+  h2{font-size:1.35rem;font-weight:700;margin:2.4rem 0 .7rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:var(--aviso);border:1px solid var(--aviso-borde);border-radius:12px;padding:.8rem 1.1rem;margin:0 0 1.4rem;font-weight:600}
+  a{color:var(--accent)}
+  .boton{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border-radius:12px;padding:.7rem 1.2rem;margin:0 0 .4rem}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 2rem}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 1rem;font-size:.95rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+  section.lengua{margin-top:3rem;padding-top:1rem;border-top:3px solid var(--line)}
+  code{font-size:.9em}
+</style>
+</head>
+<body>
+<main class="wrap" id="top">
+  <a class="idioma" href="#english" hreflang="en" lang="en">English</a>
+  <nav class="enlaces"><a href="./">Democracia</a></nav>
+  <h1>DemocraciaBot</h1>
+  <p class="sub">El robot con el que los servidores de Democracia leen fuentes públicas</p>
+
+  <h2>Qué es</h2>
+  <p>DemocraciaBot es el rastreador de <a href="./">Democracia</a>, una app de votación ciudadana no oficial. Lo ejecutan funciones del servidor de la app (no hay ningún programa en el móvil de nadie) para traer a la app las leyes, decretos y elecciones en cuanto se publican. Se identifica siempre así:</p>
+  <p><code>User-Agent: DemocraciaBot/1.0 (+https://cdpoma.github.io/democracia/bot.html)</code></p>
+
+  <h2>Qué lee</h2>
+  <ul>
+    <li>El BOE (su API de datos abiertos: sumario diario y legislación consolidada, y la página de texto de cada norma que su <code>robots.txt</code> permite).</li>
+    <li>Las referencias del Consejo de Ministros (La Moncloa).</li>
+    <li>La lista de próximas elecciones de IFES ElectionGuide. Su <code>robots.txt</code> lo declara «solo referencia» (<code>Content-Signal: use=reference</code>): solo enlazamos y resumimos.</li>
+    <li>La búsqueda pública de Bluesky, mediante su API, para contar cuántas veces se menciona cada norma.</li>
+  </ul>
+  <p>A 21 de noviembre de 2026 hay otras fuentes preparadas pero sin activar: el Congreso de los Diputados y el Senado (sus datos abiertos), los canales RSS de una lista fija de medios (de cada noticia se guardaría solo el titular, el medio, la fecha y el enlace, nunca el artículo), la búsqueda pública de Mastodon y las webs de los partidos (para localizar el PDF del programa electoral). Cuando se activen, aplican las mismas reglas de abajo y esta página se actualizará.</p>
+
+  <h2>Cómo respeta tu sitio</h2>
+  <ul>
+    <li><strong>robots.txt primero.</strong> Antes de pedir una dirección lee el <code>robots.txt</code> del dominio (lo guarda 24 horas). Si lo prohíbe, no la pide. Si hay reglas para <code>DemocraciaBot</code>, aplica solo esas; si no, las de <code>*</code>. No interpreta <code>Crawl-delay</code>, pero respeta siempre la pausa que sigue.</li>
+    <li><strong>Pausa mínima de 5 segundos</strong> entre dos peticiones al mismo dominio, con un límite de 30 segundos por petición.</li>
+    <li><strong>Reintentos con calma:</strong> hasta 3 reintentos con espera creciente solo ante un error de servidor o de red (nunca ante un 4xx), y si una fuente falla repetidamente, espera cada vez más (hasta 24 horas) antes de volver.</li>
+    <li><strong>No sale de un dominio sin mirar</strong> el <code>robots.txt</code> del dominio de destino.</li>
+    <li><strong>Pocas visitas:</strong> cada fuente se consulta al ritmo al que publica (desde cada 15 minutos en las horas de más publicación del BOE y los martes del Consejo de Ministros, hasta una vez al día) y un documento ya guardado, con la misma dirección y huella, no se vuelve a analizar.</li>
+  </ul>
+
+  <h2>Qué guarda</h2>
+  <p>Los datos que son públicos por naturaleza (título, organismo, fecha, enlace) y, de los documentos oficiales, una copia archivada con su huella SHA-256 y la fecha de captura, para poder comprobar mañana que no se ha cambiado. Siempre enlazamos a la fuente original. Si una web no permite copiar, solo guardamos el enlace.</p>
+
+  <h2>Qué no hace</h2>
+  <p>No entra en zonas con contraseña, no rellena formularios, no se hace pasar por un navegador ni por otro robot y no evita bloqueos.</p>
+
+  <h2>Quiero que no pase por mi web</h2>
+  <p>Añade a tu <code>robots.txt</code>:</p>
+  <p><code>User-agent: DemocraciaBot<br>Disallow: /</code></p>
+  <p>Lo respetará la próxima vez que lo lea (como mucho, en 24 horas). Si prefieres otra cosa, o notas algún problema, escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Las peticiones salen de servidores en la nube y no hay una dirección IP fija que podamos darte.</p>
+
+  <p class="contacto">Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p>
+  <section class="lengua" id="english" lang="en">
+    <p><a href="#top" hreflang="es" lang="es">Español</a> · <a href="en.html">Democracia</a></p>
+    <p class="nota">DemocraciaBot: what it is and how it respects your site. DemocraciaBot reads public sources for Democracia. It obeys robots.txt and waits 5 seconds between requests.</p>
+  <h1>DemocraciaBot</h1>
+  <p class="sub">The robot Democracia’s servers use to read public sources</p>
+
+  <h2>What it is</h2>
+  <p>DemocraciaBot is the crawler of <a href="en.html">Democracia</a>, an unofficial citizen voting app. It is run by functions on the app’s server (no program runs on anyone’s phone) to bring laws, decrees and elections into the app as soon as they are published. It always identifies itself like this:</p>
+  <p><code>User-Agent: DemocraciaBot/1.0 (+https://cdpoma.github.io/democracia/bot.html)</code></p>
+
+  <h2>What it reads</h2>
+  <ul>
+    <li>Spain’s BOE (its open-data API: daily summary and consolidated legislation, and the text page of each rule that its <code>robots.txt</code> allows).</li>
+    <li>The Council of Ministers references (La Moncloa).</li>
+    <li>The list of upcoming elections from IFES ElectionGuide. Its <code>robots.txt</code> declares “reference only” (<code>Content-Signal: use=reference</code>): we only link and summarise.</li>
+    <li>The public search of Bluesky, through its API, to count how often each law is mentioned.</li>
+  </ul>
+  <p>As of 21 November 2026 other sources are prepared but not switched on: the Congress of Deputies and the Senate (their open data), the RSS feeds of a fixed list of media (from each story only the headline, the outlet, the date and the link would be kept, never the article), Mastodon’s public search and party websites (to find the PDF of the election manifesto). When they are switched on, the same rules below apply and this page will be updated.</p>
+
+  <h2>How it respects your site</h2>
+  <ul>
+    <li><strong>robots.txt first.</strong> Before requesting an address it reads the domain’s <code>robots.txt</code> (cached for 24 hours). If it forbids it, the bot does not request it. If there are rules for <code>DemocraciaBot</code> it applies only those; otherwise those for <code>*</code>. It does not interpret <code>Crawl-delay</code>, but it always keeps the pause below.</li>
+    <li><strong>At least 5 seconds</strong> between two requests to the same domain, with a 30-second limit per request.</li>
+    <li><strong>Gentle retries:</strong> up to 3 retries with growing waits only on a server or network error (never on a 4xx), and if a source keeps failing it waits longer each time (up to 24 hours) before coming back.</li>
+    <li><strong>It does not leave a domain without checking</strong> the destination domain’s <code>robots.txt</code>.</li>
+    <li><strong>Few visits:</strong> each source is read at the pace it publishes (from every 15 minutes in the BOE’s busiest hours and on Council of Ministers Tuesdays, down to once a day) and a document already stored, with the same address and fingerprint, is not analysed again.</li>
+  </ul>
+
+  <h2>What it stores</h2>
+  <p>Data that is public by nature (title, body, date, link) and, for official documents, an archived copy with its SHA-256 fingerprint and capture date, so anyone can later check it has not been changed. We always link to the original source. If a site does not allow copying, we keep only the link.</p>
+
+  <h2>What it does not do</h2>
+  <p>It does not enter password-protected areas, fill in forms, pose as a browser or another robot or evade blocks.</p>
+
+  <h2>I do not want it on my site</h2>
+  <p>Add this to your <code>robots.txt</code>:</p>
+  <p><code>User-agent: DemocraciaBot<br>Disallow: /</code></p>
+  <p>It will obey the next time it reads it (within 24 hours at most). If you prefer something else, or notice a problem, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Requests come from cloud servers and there is no fixed IP address we can give you.</p>
+
+  <p class="contacto">Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p>
+  </section>
+  <div class="foot">Democracia: iniciativa ciudadana no oficial, sin validez legal / unofficial citizen initiative, no legal validity.<br><a href="./">Democracia</a> · <a href="privacidad.html">Privacidad / Privacy</a> · <a href="bot.html">DemocraciaBot</a></div>
+</main>
+</body>
+</html>

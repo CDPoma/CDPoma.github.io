@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de privacidad de Democracia</title>
+<meta name="description" content="Qué guarda Democracia, qué no guarda nunca, anuncios y Pro, los límites de la protección del voto y cómo pedir el borrado. Iniciativa ciudadana no oficial.">
+<link rel="canonical" href="https://cdpoma.github.io/democracia/privacidad.html">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="robots" content="index,follow">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b5fa5; --line:#e4e9f4; --card:#eef3fb; --aviso:#fff4d6; --aviso-borde:#e8c766;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --surface:#111827; --ink:#e7ecf7; --ink-light:#9aa5c3;
+      --accent:#7cb7ff; --line:#1d2842; --card:#16213a; --aviso:#2b2410; --aviso-borde:#7a6420;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .4rem;text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.1rem}
+  h2{font-size:1.35rem;font-weight:700;margin:2.4rem 0 .7rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:var(--aviso);border:1px solid var(--aviso-borde);border-radius:12px;padding:.8rem 1.1rem;margin:0 0 1.4rem;font-weight:600}
+  a{color:var(--accent)}
+  .boton{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border-radius:12px;padding:.7rem 1.2rem;margin:0 0 .4rem}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 2rem}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 1rem;font-size:.95rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+  section.lengua{margin-top:3rem;padding-top:1rem;border-top:3px solid var(--line)}
+  code{font-size:.9em}
+</style>
+</head>
+<body>
+<main class="wrap" id="top">
+  <a class="idioma" href="#english" hreflang="en" lang="en">English</a>
+  <nav class="enlaces"><a href="./">Democracia</a></nav>
+  <h1>Política de privacidad de Democracia</h1>
+  <p class="sub">Última actualización: 21 de noviembre de 2026 · Versión de la app: 1.0.0</p>
+  <p class="aviso" role="note">Democracia es una iniciativa ciudadana no oficial. Los resultados no tienen validez legal y no sustituyen a ninguna votación oficial.</p>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de Democracia (iPhone y iPad, <code>com.democraciavoz.app</code>). Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>En una frase</h2>
+  <p>Democracia no te pide nombre, correo, teléfono ni inicio de sesión; tu voto no lleva tu nombre, ni tu iPhone, ni tu cuenta, y por diseño el servidor no puede saber qué votó cada cuenta; pero el anonimato no es absoluto: tiene límites, y están más abajo.</p>
+
+  <h2>Lo que no guardamos nunca</h2>
+  <p>Tu nombre, tu número de documento, tu fecha de nacimiento, la foto del chip de tu documento, tu selfie, tu cara, tu correo, tu teléfono, tu IP en ninguna tabla de datos ni el token de tu credencial en claro. No existe perfil ni inicio de sesión: solo un PIN de 6 cifras, que se queda en tu iPhone (en el Llavero se guarda su huella con sal, nunca el PIN).</p>
+
+  <h2>Lo que sí se guarda y para qué</h2>
+  <div class="tabla"><table>
+    <thead><tr><th scope="col">Dato</th><th scope="col">Qué se guarda</th><th scope="col">Para qué</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Cuenta de Apple</th><td>Una huella irreversible (SHA-256 del identificador de la app para esa cuenta más un secreto del servidor) y si está verificada. Nunca tu Apple Account ni tu nombre.</td><td>Un voto por votación y cuenta; reinstalar o cambiar de iPhone no da otro voto.</td></tr>
+      <tr><th scope="row">iPhone o iPad</th><td>La clave pública de App Attest, su contador y el día de alta. Apple guarda además dos bits por aparato (DeviceCheck).</td><td>Comprobar que es un aparato real con la app original y que un iPhone no sirve a dos cuentas.</td></tr>
+      <tr><th scope="row">Credencial pedida</th><td>Cuenta, aparato, votación, huella del mensaje cegado, el día (no la hora) y el grupo.</td><td>Que cada cuenta pida una sola credencial por votación. El servidor la firma sin verla.</td></tr>
+      <tr><th scope="row">Persona verificada (opcional)</th><td>Dos huellas irreversibles, el tipo de documento (DNI o pasaporte), el país emisor y el día de la verificación. Nada del documento.</td><td>Una persona, una cuenta verificada.</td></tr>
+      <tr><th scope="row">Voto (el libro público)</th><td>Un identificador aleatorio, la opción, el grupo («verificado» o «general»), la circunscripción si la papeleta la pide, la posición, la hora redondeada a la hora, el hash anterior, el hash y la firma del servidor. Sin ninguna referencia a cuenta, aparato, persona ni IP.</td><td>Contar y que cualquiera pueda comprobar los resultados.</td></tr>
+      <tr><th scope="row">Seguridad</th><td>Eventos de rechazo (tipo, ruta y motivo corto) y contadores de límites por huella de IP con sal diaria. Ninguna IP en claro y, en los eventos de votos, nada del aparato.</td><td>Cortar ráfagas y fraude.</td></tr>
+      <tr><th scope="row">Avisos (opcional)</th><td>El token de notificaciones cifrado y los temas que elijas, sin relación con aparatos, cuentas, personas ni votos.</td><td>Enviarte los avisos que pidas.</td></tr>
+      <tr><th scope="row">Anuncios</th><td>Nada de lo que votas. Google AdMob recibe el identificador del bloque de anuncio y el de la app; con tu permiso en el aviso de seguimiento de Apple, también el identificador de publicidad del aparato.</td><td>Mostrar el banner y el anuncio de después de votar (con tu voto ya contado) en la versión sin Pro.</td></tr>
+      <tr><th scope="row">Democracia Pro</th><td>La compra la gestiona Apple. RevenueCat valida con Apple si tienes Pro y recibe un identificador propio, sin nombre ni correo, y el recibo de la compra. Nada de votos.</td><td>Quitar los anuncios a quien tiene Pro y restaurar compras.</td></tr>
+      <tr><th scope="row">Solo en tu iPhone</th><td>El PIN (su huella con sal), tus recibos y credenciales, la circunscripción que elijas, el orden de las candidaturas, tu país y tus ajustes.</td><td>Que funcione la app. Los ajustes se borran al desinstalarla; el PIN, los recibos y las credenciales van en el Llavero de iOS, que puede conservarlos aunque desinstales la app.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Verificación con documento y cara (opcional)</h2>
+  <p>Solo si tú la inicias. El iPhone lee por NFC el chip de tu DNI electrónico o pasaporte electrónico y escanea tu cara con prueba de vida. <strong>La cara se compara con la foto del chip dentro del propio iPhone: ni la foto ni tu cara ni ninguna plantilla facial salen de él.</strong> Al servidor llegan los datos firmados del chip, para comprobar que el documento es auténtico (firma del emisor y caducidad), y el resultado de la comparación facial dentro de una petición firmada por App Attest. Con esos datos calcula las dos huellas de la tabla y <strong>descarta el documento al momento</strong>. Tratamos los datos del documento un instante, con tu consentimiento al iniciar la verificación, solo para esa comprobación.</p>
+
+  <h2>Estadísticas de uso (opcional)</h2>
+  <p>Al abrir la app por primera vez te preguntamos si nos dejas contar el uso con Firebase Analytics (Google). Si aceptas, se envían las pantallas vistas, que se emitió un voto (sin votación, opción, recibo ni token), que se abrió la hoja de compartir (solo desde qué pantalla), que se vio un anuncio (banner o a pantalla completa), que se vio la pantalla de Pro y si se compró (producto e importe), que se hizo una verificación y su resultado, y errores genéricos de conexión con el servidor (tipo y código), además de los datos básicos que Firebase recoge por sí solo (como la primera apertura, las sesiones y la versión de la app y del sistema). Se usa un identificador de instalación de Firebase, no el identificador de publicidad. Puedes cambiarlo en Ajustes en cualquier momento.</p>
+
+  <h2>Anuncios y Democracia Pro</h2>
+  <p>La versión sin Pro lleva un banner abajo y un anuncio a pantalla completa después de votar, con tu voto ya contado, que sirve Google AdMob. Para votar no hay que ver ningún anuncio. El anuncio no recibe nada de lo que votas: ni la votación, ni la opción, ni el justificante, ni ningún token. Donde la ley lo exige, antes de pedir anuncios sale el formulario de consentimiento de Google, y después el aviso de seguimiento de Apple: solo si lo permites, AdMob usa el identificador de publicidad. Puedes cambiarlo en «Privacidad de los anuncios», dentro de «Tú». Democracia Pro (suscripción mensual o anual, con 7 días de prueba si no la has usado antes) quita todos los anuncios; no cambia tu voto ni el recuento. Se renueva sola hasta que la canceles en los ajustes de tu cuenta de Apple.</p>
+
+  <h2>Avisos al móvil (opcional)</h2>
+  <p>El permiso de notificaciones solo se pide cuando activas los avisos. Pasan por el servicio de notificaciones de Apple. Al desactivarlos desde Ajustes se borra tu token del servidor.</p>
+
+  <h2>Quién más interviene</h2>
+  <ul>
+    <li><strong>Apple</strong> (App Attest, DeviceCheck, comprobación de la cuenta que descargó la app): sabe que ese aparato y esa cuenta usan Democracia, pero no qué votas, porque el voto no pasa por Apple.</li>
+    <li><strong>Supabase</strong> aloja el servidor y la base de datos. Sus registros de plataforma guardan la IP y la hora de las peticiones durante un tiempo, fuera de nuestras tablas de datos.</li>
+    <li><strong>Google Firebase Analytics</strong>, solo si lo aceptas.</li>
+    <li><strong>Google AdMob</strong>, que sirve los anuncios de la versión sin Pro, con lo que se dice en la sección de anuncios.</li>
+    <li><strong>RevenueCat</strong>, que comprueba con Apple si tienes Democracia Pro.</li>
+    <li><strong>Anthropic (Claude) o, según la configuración del servidor, Google (Gemini)</strong>, redacta desde nuestro servidor el resumen automático de cada ley a partir del texto público de la norma. Solo recibe ese texto: ningún dato de usuarios.</li>
+    <li><strong>Fuentes públicas</strong> (hoy, el BOE, el Consejo de Ministros, la lista de próximas elecciones de IFES ElectionGuide y la búsqueda pública de Bluesky), leídas por el servidor con <a href="bot.html">DemocraciaBot</a>. No intervienen datos de usuarios.</li>
+  </ul>
+
+  <h2>Los límites del anonimato, sin adornos</h2>
+  <ul>
+    <li>La firma ciega impide ligar la credencial con la emisión por su contenido, pero <strong>quien tuviera los registros de red de la plataforma</strong> (IP y hora) podría intentar relacionar la petición de una credencial con un voto llegado de la misma IP poco después. Lo dificultamos (emisión y voto en peticiones distintas, voto sin datos del aparato, hora redondeada, emisión con solo el día), pero no lo eliminamos. Si te importa, vota desde una red distinta de la que usaste al abrir la votación.</li>
+    <li>El orden de los votos en el libro es exacto: quien vea los resultados en directo y sepa cuándo votaste puede acotar tu voto, sobre todo con pocos votos.</li>
+    <li>Tu recibo, junto al tablón público, permite saber qué votaste a quien lo tenga: alguien podría exigirte que lo enseñes. Democracia no es una votación libre de recibos y no sustituye a un voto secreto en una urna.</li>
+    <li>El grupo del voto («verificado» o «general») se ve. Con pocos verificados en una votación el anonimato dentro del grupo es menor; la app avisa cuando un grupo tiene menos de 20 votos.</li>
+    <li>Quien controlase a la vez la base de datos y las claves del servidor podría añadir votos al final de la cadena. Se detecta si los votos superan las credenciales emitidas (el tablón publica ambas cifras), pero la protección real es la custodia de las claves y que mucha gente guarde sus recibos.</li>
+    <li>Si pides una credencial y pierdes el recibo o cambias de aparato antes de votar, no se puede pedir otra, y un recibo perdido no se recupera: el servidor no sabe cuál es tuyo.</li>
+    <li>La comparación facial es un control de riesgo, no una prueba absoluta: puede aceptar o rechazar de más, y una grabación o una máscara muy buena podrían superar la prueba de vida. Un documento auténtico de otra persona no sirve sin su cara.</li>
+    <li>Los votantes de la app no son una muestra representativa de la población: un resultado de Democracia no es una encuesta científica, y por eso todo porcentaje va «basado en N votos».</li>
+  </ul>
+
+  <h2>Conservación y borrado</h2>
+  <p>Los votos forman un libro público encadenado: no se pueden borrar ni localizar, porque no están ligados a nadie (es la razón de ser del anonimato). Los datos de registro (huellas de cuenta y de persona) se conservan mientras existan las votaciones y el servicio, porque borrarlos permitiría votar dos veces. En tu iPhone, desinstalar la app borra los ajustes, pero el Llavero de iOS puede conservar el PIN, los recibos y las credenciales (solo en ese iPhone, sin copia a iCloud); desactivar los avisos borra el token del servidor; y puedes dejar de permitir las estadísticas en Ajustes. Como no guardamos tu nombre ni tu número de documento, no podemos localizar tus huellas a partir de tus datos personales.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad de los datos que tengamos sobre ti, retirar tu consentimiento en cualquier momento y reclamar ante la Agencia Española de Protección de Datos (aepd.es). Escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> y te contestaremos en el plazo legal. Si lo que pides no puede cumplirse por cómo está hecho el anonimato, te lo explicaremos.</p>
+
+  <h2>Cambios</h2>
+  <p>Si cambia algo de lo anterior, esta página se actualizará con la fecha y, si es importante, la app te lo dirá.</p>
+
+  <p class="contacto">Contacto: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p>
+  <section class="lengua" id="english" lang="en">
+    <p><a href="#top" hreflang="es" lang="es">Español</a> · <a href="en.html">Democracia</a></p>
+    <p class="nota">Democracia privacy policy. What Democracia stores, what it never stores, ads and Pro, the limits of vote protection and how to ask for deletion.</p>
+  <h1>Democracia privacy policy</h1>
+  <p class="sub">Last updated: 21 November 2026 · App version: 1.0.0</p>
+  <p class="aviso" role="note">Democracia is an unofficial citizen initiative. Results have no legal validity and do not replace any official vote.</p>
+
+  <h2>Who is responsible</h2>
+  <p>Gabriel Micó Victoria, developer of Democracia (iPhone and iPad, <code>com.democraciavoz.app</code>). Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>In one sentence</h2>
+  <p>Democracia asks for no name, email, phone number or login; your vote doesn’t carry your name, your iPhone or your account, and by design the server cannot tell what each account voted; but anonymity is not absolute: it has limits, and they are listed below.</p>
+
+  <h2>What we never store</h2>
+  <p>Your name, document number, date of birth, the photo on your document chip, your selfie, your face, your email, your phone number, your IP in any data table, or your credential token in the clear. There is no profile or login: only a 6-digit PIN, which stays on your iPhone (only a salted hash of it is kept in the Keychain, never the PIN).</p>
+
+  <h2>What is stored, and why</h2>
+  <div class="tabla"><table>
+    <thead><tr><th scope="col">Data</th><th scope="col">What is stored</th><th scope="col">Why</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Apple Account</th><td>An irreversible fingerprint (SHA-256 of the app’s identifier for that account plus a server secret) and whether it is verified. Never your Apple Account or name.</td><td>One vote per vote and account; reinstalling or switching iPhones does not give another vote.</td></tr>
+      <tr><th scope="row">iPhone or iPad</th><td>The App Attest public key, its counter and the sign-up day. Apple also keeps two bits per device (DeviceCheck).</td><td>To check it is a real device running the original app, and that one iPhone cannot serve two accounts.</td></tr>
+      <tr><th scope="row">Credential requested</th><td>Account, device, vote, a fingerprint of the blinded message, the day (not the time) and the group.</td><td>So each account requests one credential per vote. The server signs it without seeing it.</td></tr>
+      <tr><th scope="row">Verified person (optional)</th><td>Two irreversible fingerprints, the document type (DNI or passport), the issuing country and the verification day. Nothing from the document.</td><td>One person, one verified account.</td></tr>
+      <tr><th scope="row">Vote (the public ledger)</th><td>A random identifier, the choice, the group (“verified” or “general”), the constituency if the ballot needs it, the position, the time rounded to the hour, the previous hash, the hash and the server’s signature. No reference to any account, device, person or IP.</td><td>To count, and so anyone can check the results.</td></tr>
+      <tr><th scope="row">Security</th><td>Rejection events (type, route and short reason) and rate-limit counters by salted daily IP fingerprint. No IP in the clear and, in vote events, nothing about the device.</td><td>To stop bursts and fraud.</td></tr>
+      <tr><th scope="row">Alerts (optional)</th><td>The notification token, encrypted, and the topics you choose, with no link to devices, accounts, people or votes.</td><td>To send the alerts you ask for.</td></tr>
+      <tr><th scope="row">Ads</th><td>Nothing about what you vote. Google AdMob receives the ad unit identifier and the app’s identifier; with your permission in Apple’s tracking prompt, also the device’s advertising identifier.</td><td>To show the banner and the ad after you vote (with your vote already counted) in the version without Pro.</td></tr>
+      <tr><th scope="row">Democracia Pro</th><td>Apple handles the purchase. RevenueCat checks with Apple whether you have Pro and receives its own identifier, with no name or email, and the purchase receipt. No votes.</td><td>To remove ads for Pro users and to restore purchases.</td></tr>
+      <tr><th scope="row">Only on your iPhone</th><td>The PIN (its salted hash), your receipts and credentials, the constituency you pick, the order of candidacies, your country and your settings.</td><td>To make the app work. Settings are deleted when you uninstall; the PIN, receipts and credentials are kept in the iOS Keychain, which may keep them even if you uninstall the app.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Verification with a document and your face (optional)</h2>
+  <p>Only if you start it. The iPhone reads the NFC chip of your Spanish DNI or electronic passport and scans your face with a liveness check. <strong>Your face is compared with the chip photo inside the iPhone itself: neither the photo, nor your face, nor any facial template leaves it.</strong> The server receives the chip’s signed data, to check the document is genuine (issuer signature and expiry), and the result of the face comparison inside an App Attest–signed request. From that it computes the two fingerprints in the table and <strong>discards the document immediately</strong>. We process the document data for an instant, with your consent when you start verification, only for that check.</p>
+
+  <h2>Usage statistics (optional)</h2>
+  <p>The first time you open the app we ask whether you let us count usage with Firebase Analytics (Google). If you accept, it sends the screens viewed, that a vote was cast (with no vote, option, receipt or token), that the share sheet was opened (only from which screen), that an ad was shown (banner or full-screen), that the Pro screen was viewed and whether a purchase was made (product and amount), that a verification was done and its result, and generic server-connection errors (type and code), plus the basic data Firebase collects by itself (such as first open, sessions and the app and system version). A Firebase installation identifier is used, not the advertising identifier. You can change it in Settings at any time.</p>
+
+  <h2>Ads and Democracia Pro</h2>
+  <p>The version without Pro shows a banner at the bottom and a full-screen ad after you vote, with your vote already counted, served by Google AdMob. You never have to watch an ad in order to vote. The ad receives nothing about what you vote: not the vote, not the option, not the receipt, not any token. Where the law requires it, Google’s consent form appears before ads are requested, followed by Apple’s tracking prompt: only if you allow it does AdMob use the advertising identifier. You can change this in «Ad privacy», inside «You». Democracia Pro (monthly or yearly subscription, with a 7-day trial if you have not used one before) removes all ads; it does not change your vote or the count. It renews automatically until you cancel in your Apple Account settings.</p>
+
+  <h2>Alerts to your phone (optional)</h2>
+  <p>The notification permission is only asked when you turn alerts on. They go through Apple’s notification service. Turning them off in Settings deletes your token from the server.</p>
+
+  <h2>Who else is involved</h2>
+  <ul>
+    <li><strong>Apple</strong> (App Attest, DeviceCheck, checking the account that downloaded the app) knows that this device and account use Democracia, but not how you vote, because votes do not pass through Apple.</li>
+    <li><strong>Supabase</strong> hosts the server and database. Its platform logs keep request IPs and times for a while, outside our data tables.</li>
+    <li><strong>Google Firebase Analytics</strong>, only if you accept.</li>
+    <li><strong>Google AdMob</strong>, which serves the ads in the version without Pro, as described in the ads section.</li>
+    <li><strong>RevenueCat</strong>, which checks with Apple whether you have Democracia Pro.</li>
+    <li><strong>Anthropic (Claude) or, depending on the server setup, Google (Gemini)</strong>, writes each law’s automatic summary from our server, using the public text of the law. It receives only that text: no user data.</li>
+    <li><strong>Public sources</strong> (today, the BOE, the Council of Ministers, the list of upcoming elections from IFES ElectionGuide and Bluesky’s public search), read by the server with <a href="bot.html#english">DemocraciaBot</a>. No user data is involved.</li>
+  </ul>
+
+  <h2>The limits of anonymity, plainly</h2>
+  <ul>
+    <li>Blind signing stops the credential being linked to its issuance by content, but <strong>whoever held the platform’s network logs</strong> (IP and time) could try to match a credential request with a vote arriving from the same IP shortly after. We make this harder (issuance and vote in separate requests, vote with no device data, rounded time, issuance with only the day), but we do not eliminate it. If it matters to you, vote from a different network from the one you used when you opened the vote.</li>
+    <li>The order of votes in the ledger is exact: someone watching results live who knows when you voted can narrow down your vote, especially with few votes.</li>
+    <li>Your receipt, together with the public board, shows how you voted to anyone who has it: someone could demand you show it. Democracia is not a receipt-free vote and does not replace a secret ballot box.</li>
+    <li>The vote’s group (“verified” or “general”) is visible. With few verified voters in a vote, anonymity within the group is lower; the app warns when a group has fewer than 20 votes.</li>
+    <li>Whoever controlled both the database and the server keys could append votes to the end of the chain. It is detected if votes exceed issued credentials (the board publishes both figures), but the real protection is key custody and many people keeping their receipts.</li>
+    <li>If you request a credential and lose the receipt or change device before voting, you cannot request another, and a lost receipt cannot be recovered: the server does not know which one is yours.</li>
+    <li>The face comparison is a risk control, not absolute proof: it can accept or reject too much, and a very good recording or mask might pass the liveness check. A genuine document belonging to someone else is no use without their face.</li>
+    <li>The app’s voters are not a representative sample of the population: a Democracia result is not a scientific poll, which is why every percentage is “based on N votes”.</li>
+  </ul>
+
+  <h2>Retention and deletion</h2>
+  <p>Votes form a public, chained ledger: they cannot be deleted or located, because they are not linked to anyone (that is the point of anonymity). Registration data (account and person fingerprints) is kept while the votes and the service exist, because deleting it would allow voting twice. On your iPhone, uninstalling the app deletes the settings, but the iOS Keychain may keep the PIN, receipts and credentials (on that iPhone only, with no iCloud copy); turning alerts off deletes the token from the server; and you can stop allowing statistics in Settings. Because we do not store your name or document number, we cannot find your fingerprints from your personal data.</p>
+
+  <h2>Your rights</h2>
+  <p>You may ask for access, rectification, erasure, objection, restriction and portability of the data we hold about you, withdraw your consent at any time and complain to the Spanish Data Protection Agency (aepd.es). Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will answer within the legal time limit. If what you ask cannot be done because of how anonymity is built, we will explain why.</p>
+
+  <h2>Changes</h2>
+  <p>If anything above changes, this page will be updated with the date and, if it matters, the app will tell you.</p>
+
+  <p class="contacto">Contact: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a></p>
+  </section>
+  <div class="foot">Democracia: iniciativa ciudadana no oficial, sin validez legal / unofficial citizen initiative, no legal validity.<br><a href="./">Democracia</a> · <a href="privacidad.html">Privacidad / Privacy</a> · <a href="bot.html">DemocraciaBot</a></div>
+</main>
+</body>
+</html>

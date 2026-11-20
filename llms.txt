@@ -143,10 +143,20 @@ ItsRain es una app del tiempo gratis para iPhone y Apple Watch, de Gabriel Micó
 - [Ayuda](https://cdpoma.github.io/itsrain/soporte.html) · [Help](https://cdpoma.github.io/itsrain/support.html)
 - [Privacidad](https://cdpoma.github.io/itsrain/privacidad.html) · [Privacy](https://cdpoma.github.io/itsrain/privacy.html)
 
+## Democracia: Voz del pueblo, vota las leyes y elecciones de España / People's Voice, vote on Spain's laws and elections
+
+Democracia es una app para iPhone y iPad, de Gabriel Micó Victoria, que te enseña las leyes, decretos y normas que se acaban de aprobar en España (lo publicado en el BOE), te las explica en pocas palabras con un resumen hecho con IA (que puede contener errores) y te deja votar «A favor», «En contra» o «En blanco». Es una iniciativa ciudadana no oficial: los resultados no tienen validez legal y los votantes de la app no son una muestra representativa. Un voto por tema y cuenta de Apple, que no se puede cambiar; el voto no lleva nombre, iPhone ni cuenta y, por diseño (firma ciega), el servidor no puede saber qué votó cada cuenta, aunque el anonimato no es absoluto y sus límites están en la política de privacidad. Verificación opcional con el chip del DNI electrónico o de un pasaporte electrónico (NFC) y un escaneo facial en el iPhone; los votos verificados se enseñan frente al total. También elecciones dentro de la app (no las reales). Gratis, con un banner y un anuncio a pantalla completa después de votar (con el voto ya contado); Democracia Pro (0,99 €/mes o 9,99 €/año en España, con 7 días de prueba si no se ha usado antes) los quita. Requiere iOS o iPadOS 18.4 o posterior e internet; no hay versión para Android. / Democracia is an iPhone and iPad app, by Gabriel Micó Victoria, that shows you the laws, decrees and rules Spain has just approved (as published in the BOE), explains each in a few words with an AI-made summary (which can contain errors) and lets you vote "In favor", "Against" or "Blank". It is an unofficial citizen initiative: results have no legal validity and the app's voters are not a representative sample. One vote per topic per Apple Account, which cannot be changed; the vote carries no name, iPhone or account and, by design (blind signature), the server cannot tell what each account voted, although anonymity is not absolute and its limits are in the privacy policy. Optional verification with the chip of the Spanish electronic ID or an electronic passport (NFC) and a face scan on the iPhone; verified votes are shown against the total. Also elections inside the app (not the real ones). Free, with a banner and a full-screen ad after you vote (with your vote already counted); Democracia Pro (0.99 €/month or 9.99 €/year in Spain, with a 7-day trial if not used before) removes them. Requires iOS or iPadOS 18.4 or later and internet; no Android version.
+
+- [Democracia (es)](https://cdpoma.github.io/democracia/): qué es, qué puedes hacer, tu voto protegido, verificación, anuncios y Pro, preguntas frecuentes
+- [Democracia (en)](https://cdpoma.github.io/democracia/en.html): what it is, what you can do, your vote protected, verification, ads and Pro, FAQ
+- [Privacidad / Privacy](https://cdpoma.github.io/democracia/privacidad.html) · [DemocraciaBot](https://cdpoma.github.io/democracia/bot.html)
+- [Resumen de Democracia para asistentes](https://cdpoma.github.io/democracia/llms.txt)
+
 ## Otras apps con resumen propio / Other apps with their own summary
 
 - [CamPhone](https://cdpoma.github.io/camphone/llms.txt): un iPhone o iPad viejo como cámara de vigilancia / an old iPhone or iPad as a security camera
 - [Domotic](https://cdpoma.github.io/domotic/llms.txt): la casa inteligente en una sola pantalla de iPhone / the smart home on one iPhone screen
+- [Democracia](https://cdpoma.github.io/democracia/llms.txt): vota las leyes y elecciones de España, iniciativa ciudadana no oficial / vote on Spain's laws and elections, unofficial citizen initiative
 
 ## Contacto / Contact
 

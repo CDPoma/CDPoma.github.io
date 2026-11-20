@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vota esta norma en Democracia</title>
+<meta name="description" content="Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.">
+<meta name="robots" content="noindex,follow">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://cdpoma.github.io/democracia/v/">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Democracia">
+<meta property="og:title" content="Vota esta norma en Democracia">
+<meta property="og:description" content="Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0b5fa5; --line:#e4e9f4; --card:#eef3fb; --aviso:#fff4d6; --aviso-borde:#e8c766;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --surface:#111827; --ink:#e7ecf7; --ink-light:#9aa5c3;
+      --accent:#7cb7ff; --line:#1d2842; --card:#16213a; --aviso:#2b2410; --aviso-borde:#7a6420;
+    }
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .4rem;text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
+  .sub{color:var(--ink-light);margin:0 0 1.2rem;font-size:1.1rem}
+  h2{font-size:1.35rem;font-weight:700;margin:2.4rem 0 .7rem}
+  p{margin:0 0 1rem}
+  ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.45rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:var(--aviso);border:1px solid var(--aviso-borde);border-radius:12px;padding:.8rem 1.1rem;margin:0 0 1.4rem;font-weight:600}
+  a{color:var(--accent)}
+  .boton{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border-radius:12px;padding:.7rem 1.2rem;margin:0 0 .4rem}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 2rem}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 1rem;font-size:.95rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+  section.lengua{margin-top:3rem;padding-top:1rem;border-top:3px solid var(--line)}
+  code{font-size:.9em}
+  .tipo{display:inline-block;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--ink-light);margin:0 0 .6rem}
+  .tema{font-size:1.25rem;font-weight:700;line-height:1.35;margin:0 0 1.2rem;overflow-wrap:anywhere}
+  .acciones{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0 .6rem}
+  .boton.secundario{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:calc(.7rem - 2px) calc(1.2rem - 2px)}
+  [hidden]{display:none!important}
+  #pocas-titulo{margin-top:0}
+  #pocas-texto{margin:0}
+  #sin-app{margin-bottom:.4rem}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="enlaces"><a href="../">Democracia</a></nav>
+  <span class="tipo" id="tipo">Norma</span>
+  <h1 id="h1">Te invitan a votar esta norma</h1>
+  <p class="sub" id="sub">Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.</p>
+
+  <div class="card">
+    <p class="tema" id="titulo"></p>
+    <div id="pocas" hidden>
+      <h2 id="pocas-titulo">En pocas palabras</h2>
+      <p id="pocas-texto"></p>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <a class="boton secundario" id="abrir" href="democracia://v/" hidden>Abrir en la app</a>
+  </div>
+  <p class="nota" id="sin-app">¿No tienes la app? Descárgala y vuelve a abrir este enlace:</p>
+  <p><a class="boton" id="tienda" href="https://apps.apple.com/app/id6837060680">Descargar en el App Store</a></p>
+
+  <div class="foot">Democracia: iniciativa ciudadana no oficial, sin validez legal.<br>Esta página no usa cookies ni rastreadores y no guarda nada de ti. <a href="../privacidad.html">Privacidad</a></div>
+</main>
+<script>
+(function () {
+  var API = 'https://rvtyzxvkdzpinspvsvxr.supabase.co/functions/v1/democracia-api/v1';
+  var TIPO = 'v';
+  var TEXTOS = {"es": {"tipo_v": "Norma", "tipo_e": "Elección", "h1_v": "Te invitan a votar esta norma", "h1_e": "Te invitan a votar en esta elección", "sub_v": "Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.", "sub_e": "Alguien quiere saber a quién votarías. Vota en Democracia y que se oiga la voz del pueblo.", "pocas": "En pocas palabras", "abrir": "Abrir en la app", "descargar": "Descargar en el App Store", "sin_app": "¿No tienes la app? Descárgala y vuelve a abrir este enlace:", "cargando": "Cargando…", "no_hay": "No encontramos este tema, pero puedes ver todos en la app.", "sufijo": "Democracia"}, "en": {"tipo_v": "Law", "tipo_e": "Election", "h1_v": "You are invited to vote on this law", "h1_e": "You are invited to vote in this election", "sub_v": "Someone wants to know what you think of this law or decree. Vote in Democracia and let the people’s voice be heard.", "sub_e": "Someone wants to know who you would vote for. Vote in Democracia and let the people’s voice be heard.", "pocas": "In a few words", "abrir": "Open in the app", "descargar": "Download on the App Store", "sin_app": "Don’t have the app? Download it and open this link again:", "cargando": "Loading…", "no_hay": "We could not find this topic, but you can see them all in the app.", "sufijo": "Democracia"}};
+  var L = TEXTOS[(navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en'];
+  var id = new URLSearchParams(location.search).get('id') || '';
+  var valido = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+  function $(n) { return document.getElementById(n); }
+
+  document.documentElement.lang = L === TEXTOS.es ? 'es' : 'en';
+  $('tipo').textContent = L['tipo_' + TIPO];
+  $('h1').textContent = L['h1_' + TIPO];
+  $('sub').textContent = L['sub_' + TIPO];
+  $('abrir').textContent = L.abrir;
+  $('tienda').textContent = L.descargar;
+  $('sin-app').textContent = L.sin_app;
+  $('pocas-titulo').textContent = L.pocas;
+  if (!valido) { $('titulo').parentNode.hidden = true; return; }
+
+  // 1) Abrir la app. Un iframe oculto (y no un cambio de la dirección de la página) para que, si la app no está instalada,
+  //    Safari no enseñe un aviso de «dirección no válida»; con la app puesta, iOS pregunta si abrirla. El enlace «Abrir en la app»
+  //    queda a mano por si el navegador no deja abrirla solo.
+  var esquema = 'democracia://' + TIPO + '/' + id;
+  var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (ios) {
+    $('abrir').href = esquema;
+    $('abrir').hidden = false;
+    var marco = document.createElement('iframe');
+    marco.hidden = true;
+    marco.src = esquema;
+    document.body.appendChild(marco);
+  }
+
+  // 2) Título y «En pocas palabras», de la API pública. Todo con textContent.
+  $('titulo').textContent = L.cargando;
+  fetch(API + '/votaciones/' + id, { referrerPolicy: 'no-referrer', credentials: 'omit' })
+    .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+    .then(function (v) {
+      $('titulo').textContent = String(v.titulo || '');
+      document.title = String(v.titulo || '') + ' · ' + L.sufijo;
+      if (!v.norma_id) return null;
+      return fetch(API + '/analisis/norma/' + encodeURIComponent(v.norma_id), { referrerPolicy: 'no-referrer', credentials: 'omit' })
+        .then(function (r) { return r.ok ? r.json() : null; });
+    })
+    .then(function (a) {
+      var resumen = a && a.contenido && typeof a.contenido.resumen === 'string' ? a.contenido.resumen : '';
+      if (resumen) { $('pocas-texto').textContent = resumen; $('pocas').hidden = false; }
+    })
+    .catch(function () { $('titulo').textContent = L.no_hay; });
+})();
+</script>
+</body>
+</html>
