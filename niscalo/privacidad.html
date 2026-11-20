@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Níscalo — Política de privacidad</title>
+<style>
+  :root{
+    --bg:#1F2A1C; --surface:#263322; --ink:#EDE8DC; --ink-light:#A9B39F;
+    --accent:#D9622B; --olive:#B9D49A; --line:#3a4a35; --card:#2a3826;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--olive)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#3a2216;border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:#FFB48A}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>Níscalo</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> Níscalo identifica setas a partir de una foto con inteligencia artificial y te deja publicar tus hallazgos en un muro público. Para usarla no hace falta cuenta, pero si publicas o identificas necesitas una cuenta con correo y contraseña. <strong>Lo que publicas (foto, descripción, especie probable y, si lo permites, la ubicación GPS) es público</strong> para cualquier persona, también sin cuenta. La app muestra anuncios de Google AdMob y la suscripción Pro los quita. Las estadísticas de uso son anónimas.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de Níscalo. Para cualquier duda sobre tus datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Cuenta</h2>
+  <p>Para identificar, publicar, denunciar o bloquear necesitas una cuenta con <strong>correo y contraseña</strong>. Tu cuenta se guarda en Supabase, con servidores en la Unión Europea (Frankfurt). Además, tu perfil tiene un <strong>nombre visible</strong> que ven los demás en tus publicaciones. Por defecto es la parte del correo antes de la @; puedes cambiarlo, y te recomendamos un apodo y no tu nombre completo.</p>
+
+  <h2>Identificar una seta</h2>
+  <p>Cuando pulsas «Identificar», la foto se envía a nuestro servidor y de ahí al servicio de inteligencia artificial de Anthropic (Claude). Si ese servicio no responde, la foto se envía al de Google (Gemini) para la misma tarea. Solo se usa para darte la identificación.</p>
+  <ul>
+    <li><strong>No guardamos la foto ni el resultado</strong> si no publicas el hallazgo.</li>
+    <li>Contamos cuántas identificaciones hace cada cuenta al día, para aplicar el límite de uso. Ese contador no incluye la foto.</li>
+  </ul>
+
+  <h2>Publicar un hallazgo</h2>
+  <p>Al publicar se guardan la foto, la descripción (opcional), la especie probable que devolvió la identificación y, <strong>si das permiso de ubicación</strong>, la posición GPS del hallazgo. Todo ello es <strong>público</strong>: lo ve cualquier persona, también sin cuenta, en el muro y en el mapa.</p>
+  <ul>
+    <li>Sin permiso de ubicación, la app te avisa y puedes publicar <strong>sin ubicación</strong>, si lo confirmas.</li>
+    <li>No publiques fotos de personas ni datos que no quieras que vea todo el mundo. La ubicación de una seta puede revelar dónde está tu lugar de recogida.</li>
+  </ul>
+
+  <h2>Denunciar y bloquear</h2>
+  <p>Puedes denunciar cualquier publicación y bloquear a su autor. Un bloqueo oculta sus publicaciones para ti. Una publicación que acumula <strong>3 denuncias</strong> se oculta automáticamente y queda para revisión por el desarrollador.</p>
+
+  <h2>Borrar tus datos</h2>
+  <ul>
+    <li><strong>Una publicación:</strong> bórrala desde su ficha. Se elimina junto con su foto.</li>
+    <li><strong>Tu cuenta entera:</strong> Ajustes → Borrar mi cuenta. Se borran tu perfil, tus publicaciones, tus fotos, tus denuncias, tus bloqueos y el contador de uso. La cuenta de acceso también se borra, salvo que la uses en otra de nuestras apps.</li>
+  </ul>
+
+  <h2>Anuncios y compras</h2>
+  <p>La app muestra anuncios de <strong>Google AdMob</strong> (un banner y un vídeo recompensado que ves antes de analizar la foto). En el Espacio Económico Europeo, Reino Unido y Suiza, Google te pide tu consentimiento antes de mostrar anuncios; puedes cambiarlo en el mismo formulario. En iPhone, Apple te pregunta si permites el seguimiento (ATT); si no lo permites, los anuncios no se personalizan con ese seguimiento.</p>
+  <p><strong>Pro</strong> es una suscripción gestionada por la App Store de Apple, con <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> para comprobar tu compra. Pro quita los anuncios. Apple gestiona el cobro; nosotros solo recibimos si la suscripción está activa.</p>
+
+  <h2>Estadísticas de uso</h2>
+  <p>Usamos <strong>Firebase Analytics</strong> de forma anónima para saber qué pantallas se usan y mejorar la app. Solo se activa según tu consentimiento (el que decides en el formulario de Google). No enviamos tu correo, tu nombre, tu ubicación ni el texto de tus hallazgos, y la app no usa el identificador de publicidad del iPhone.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir acceso, rectificación o borrado escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>, aunque ya puedas hacer casi todo desde la propia app.</p>
+
+  <div class="aviso">
+    <p><strong>Aviso de seguridad:</strong> Níscalo no sustituye la opinión de un micólogo experto. Ninguna identificación por foto es infalible. <strong>No comas ninguna seta si tienes la más mínima duda</strong>, y consulta siempre con una persona experta antes de consumir cualquier ejemplar.</p>
+  </div>
+
+  <div class="foot">Níscalo · Gabriel Micó Victoria</div>
+
+</div>
+</body>
+</html>
