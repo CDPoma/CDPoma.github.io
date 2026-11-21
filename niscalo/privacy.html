@@ -66,7 +66,7 @@
   <nav class="enlaces"><a href="en.html">Níscalo</a> · <a href="support.html">Help &amp; support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> Níscalo identifies mushrooms from a photo using artificial intelligence, lets you save your places (spots) on a terrain map and publish your finds. To identify, save spots or publish you need an account, which has no email or password: it is only a display name you choose. The map and the wall can be viewed without an account. <strong>Your spots are private</strong> until you decide to share them with your friends or on the wall. For each find you choose who sees where you found it (only you, your friends or everyone), but <strong>the photo, the description and the probable species of a published find are public</strong> to anyone, even without an account. The app shows Google AdMob ads, and the Pro subscription removes them. Usage statistics are anonymous.</p>
+    <p><strong>Summary:</strong> Níscalo identifies mushrooms from a photo using artificial intelligence, lets you save your places (spots) on a 3D satellite map and publish your finds. To identify, save spots or publish you need an account, which has no email or password: it is only a display name you choose. The map and the wall can be viewed without an account. <strong>Your spots are private</strong> until you decide to share them with your friends or on the wall. For each find you choose who sees where you found it (only you, your friends or everyone), but <strong>the photo, the description and the probable species of a published find are public</strong> to anyone, even without an account. If you switch on the optional mushroom alert, we store an approximate area of about 10 km and your device&#x27;s notification token, linked to your account. The app shows Google AdMob ads, and the Pro subscription removes them. Usage statistics are anonymous.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -76,14 +76,14 @@
   <p>To identify, save spots, publish, add friends, report or block, you need an account. The account has no email and no password: it is an anonymous Supabase session with only a <strong>display name</strong> that you choose and that other people see on your finds, on the spots you share and in your friend requests. We recommend a nickname rather than your full name. If you delete the app, you start from scratch, and you can delete your account in Settings → Delete my account. Your account is stored in Supabase, with servers in the European Union (Frankfurt).</p>
 
   <h2>Identifying a mushroom</h2>
-  <p>When you tap "Identify", the app reduces the photo and sends it to our server, and from there to Anthropic's artificial intelligence service (Claude). If that service does not respond, the photo is sent to Google's service (Gemini) for the same task. It is only used to give you the identification.</p>
+  <p>When you tap "Identify", the app reduces the photo and sends it to our server, and from there to Anthropic's artificial intelligence service (Claude). It is only used to give you the identification.</p>
   <ul>
     <li><strong>We do not keep the photo or the result</strong> unless you publish the find.</li>
     <li>We count how many identifications each account makes per day (the limit is 40 per account per day), to apply the usage limit. That counter does not include the photo.</li>
   </ul>
 
   <h2>Location and compass</h2>
-  <p>Níscalo asks for location permission only when it needs it: when you save a spot with GPS, when you publish a find with a location, when you center the map on your position and on the "Go" screen, which uses your position and the compass to lead you to a place. <strong>Your position only reaches our server when you save a spot or publish a find with a location.</strong> The compass, the bearing and the distance are calculated on your device. If you do not grant permission, you can mark the place by hand on the map.</p>
+  <p>Níscalo asks for location permission only when it needs it: when you save a spot with GPS, when you publish a find with a location, when you center the map on your position and on the "Go" screen, which uses your position and the compass to lead you to a place. <strong>Your position only reaches our server when you save a spot or publish a find with a location</strong> and, if you switch on the optional mushroom alert, an approximate area of about 10 km (see "Mushroom alerts" below). The compass, the bearing and the distance are calculated on your device. If you do not grant permission, you can mark the place by hand on the map.</p>
 
   <h2>Your spots</h2>
   <p>A spot stores its name, an optional note, its coordinates and whether you marked it with GPS or by hand on the map, linked to your account on our server. <strong>A spot is private: only you see it</strong>, until you decide otherwise:</p>
@@ -106,21 +106,31 @@
   </ul>
 
   <h2>The map and the terrain</h2>
-  <p>The Níscalo map is served by Apple (MapKit JS). To draw it, Apple receives the map requests, the area you are looking at and your IP address. We do not give Apple any account or identifier of ours, and Níscalo does not send it your spots or your finds: the app places the pins on the map on your device.</p>
-  <p>The Mountain layer draws the terrain on your device using elevation tiles from AWS Terrain Tiles (Amazon S3), which are based on NASA SRTM data, and, while it draws, relief imagery from NASA (GIBS). These services receive the request for each tile (the area and the zoom level) and your IP address, like any web server. They do not receive your name or any account of ours.</p>
-  <p>So that Apple loads the map, the app asks our server (Supabase) for a temporary, short-lived permit. That request carries no personal data: not your name, not your location and not your spots.</p>
-  <p>If you tap &quot;Directions by car&quot;, the app opens your maps app with the coordinates of the place; from there, that app&#x27;s privacy policy applies.</p>
+  <p>On iPhone, iPad and Mac, the large maps (the Map tab and the &quot;Go&quot; screen) use Apple&#x27;s native map (MapKit), with its satellite imagery in 3D, and the small maps (a spot&#x27;s page and choosing a point) use Apple&#x27;s map for the web (MapKit JS). Apple receives the map requests, the area you are looking at and your IP address. We do not give Apple any account or identifier of ours, and Níscalo does not send it your spots or your finds: the app places the pins on the map on your device.</p>
+  <p>On top of the map there are five layers you switch on or off. &quot;Towns and roads&quot; are the names on Apple&#x27;s own map. &quot;Trails and tracks&quot; and &quot;Streams and springs&quot; use OpenStreetMap data served by OpenFreeMap (tiles.openfreemap.org). &quot;Contour lines&quot; are computed on your device from the elevation tiles of AWS Terrain Tiles / Mapzen (Amazon S3, based on NASA SRTM data), and the elevation, slope and sun or shade readout uses that same elevation data. &quot;Pine forests&quot; (on by default) shades in orange the conifer woodland areas of the Copernicus Land Monitoring Service (2018), served by the European Environment Agency (image.discomap.eea.europa.eu); it only requests tiles inside Europe and when the map is zoomed in, and it uses no personal data. Each of these servers receives your IP address and the area of the map you look at (the tiles requested), like any web server; never your account or your name.</p>
+  <p>On Android and on the web, the map uses Esri satellite imagery instead (World Imagery, server ibasemaps-api.arcgis.com, with an API key) and the same OpenFreeMap and AWS layers. Esri also receives your IP address and the area you look at, never your account or your name. The Android version is not in the store yet.</p>
+  <p>So that Apple loads the map for the web (MapKit JS), the app asks our server (Supabase) for a temporary, short-lived permit. That request carries no personal data: not your name, not your location and not your spots.</p>
+  <p>If you tap &quot;Directions&quot; (on a spot, a find or the card of a map point that you open by touching and holding) or &quot;Directions by car&quot;, the app opens your maps app with the coordinates of the place; from there, that app&#x27;s privacy policy applies.</p>
   <div class="tabla">
   <table>
     <thead><tr><th scope="col">Service</th><th scope="col">What for</th><th scope="col">What it receives</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Apple MapKit JS</th><td>Map imagery (Satellite, Mountain, Streets)</td><td>Map requests, the area viewed and the IP address; no account or identifier of ours</td></tr>
-      <tr><th scope="row">AWS Terrain Tiles (Amazon S3)</th><td>Elevation tiles for the Mountain layer terrain</td><td>The request for each tile (area and zoom) and the IP address</td></tr>
-      <tr><th scope="row">NASA GIBS</th><td>Background relief imagery while the Mountain layer is drawn</td><td>The request for each tile (area and zoom) and the IP address</td></tr>
-      <tr><th scope="row">Supabase (our server)</th><td>Temporary permit to load the Apple map</td><td>The request, with no personal data</td></tr>
+      <tr><th scope="row">Apple MapKit (native) and MapKit JS (web)</th><td>Apple&#x27;s map and satellite imagery on iPhone, iPad and Mac; town and road names</td><td>Map requests, the area viewed and the IP address; no account or identifier of ours</td></tr>
+      <tr><th scope="row">OpenFreeMap (OpenStreetMap data)</th><td>Trails and tracks and Streams and springs layers</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">AWS Terrain Tiles / Mapzen (Amazon S3)</th><td>Elevation data for the contour lines and for the elevation, slope and sun or shade readout</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">European Environment Agency (Copernicus CLMS)</th><td>Pine forests layer: conifer woodland in Europe (2018)</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">Esri World Imagery (Android and web only)</th><td>Satellite imagery on Android and the web</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">Supabase (our server)</th><td>Temporary permit to load Apple&#x27;s map for the web</td><td>The request, with no personal data</td></tr>
+      <tr><th scope="row">Apple WeatherKit and Apple Push Notification service (APNs)</th><td>The &quot;Saffron milk caps may be out tomorrow&quot; alert, only if you switch it on: the weather of your area and delivering the alert</td><td>WeatherKit: only the coordinates of an area of about 10 km, from our server, with no account or personal data. APNs: your device&#x27;s notification token, to deliver the alert</td></tr>
     </tbody>
   </table>
   </div>
+
+  <h2>Mushroom alerts (optional)</h2>
+  <p>On iPhone and iPad you can switch on the &quot;Saffron milk caps may be out tomorrow&quot; alert in Settings. It is off by default, and Níscalo asks for notification permission only when you switch it on.</p>
+  <p>To send it to you we store on our server (Supabase), linked to your account, your device&#x27;s notification token, your language, your time zone and an approximate area of about 10 km: that of your most recent spot or, if you have none, your last known position. Your exact position never reaches the server for this alert.</p>
+  <p>Once a day our server asks Apple WeatherKit for the weather of that area, with no account or personal data, and decides whether to send the alert, at most one every 3 days. Delivery goes through Apple&#x27;s Push Notification service (APNs), which receives your device&#x27;s token.</p>
+  <p>If you switch the alert off, we stop checking the weather for your area and stop sending notifications, and your device&#x27;s record becomes inactive. If you delete your account, that record is deleted entirely. We do not use this data for anything else.</p>
 
   <h2>Checking for a new version</h2>
   <p>On iPhone and iPad, when the app starts it asks Apple's App Store whether a newer version exists and, if an update is required, tells you. For that, Apple receives the app identifier and your IP address, like any web server.</p>
@@ -132,7 +142,7 @@
   <ul>
     <li><strong>One find:</strong> delete it from its page. It is removed together with its photo and its location.</li>
     <li><strong>One spot:</strong> delete it from its page.</li>
-    <li><strong>Your whole account:</strong> Settings → Delete my account. Your profile, finds with their photos and locations, spots, friendships and requests, reports, blocks and usage counter are deleted. The sign-in account is deleted too, unless you use it in another of our apps.</li>
+    <li><strong>Your whole account:</strong> Settings → Delete my account. Your profile, finds with their photos and locations, spots, friendships and requests, reports, blocks, usage counter and your device's alert record are deleted. The sign-in account is deleted too, unless you use it in another of our apps.</li>
   </ul>
 
   <h2>Ads and purchases</h2>
