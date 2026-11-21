@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GoldSpot: mapa de spots y minas de oro, y análisis de minerales con IA</title>
+<meta name="description" content="Mapa mundial de spots con posible oro y minas conocidas, con puntuación explicada. Analiza un punto, identifica un mineral por foto y guarda tus sitios.">
+<link rel="canonical" href="https://cdpoma.github.io/goldspot/">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/goldspot/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/goldspot/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/goldspot/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#05070d">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldSpot">
+<meta property="og:url" content="https://cdpoma.github.io/goldspot/">
+<meta property="og:title" content="GoldSpot: dónde mirar para buscar oro">
+<meta property="og:description" content="Spots con puntuación explicada, minas de oro conocidas, análisis de cualquier punto del mapa e identificación de minerales con IA. Estimación indicativa: no garantiza oro.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://cdpoma.github.io/goldspot/icon.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">
+<meta property="og:image:alt" content="GoldSpot: mapa de spots y minas de oro, con análisis de puntos e identificación de minerales">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GoldSpot: dónde mirar para buscar oro">
+<meta name="twitter:description" content="Spots con puntuación explicada, minas de oro conocidas, análisis de cualquier punto del mapa e identificación de minerales con IA. Estimación indicativa: no garantiza oro.">
+<meta name="twitter:image" content="https://cdpoma.github.io/goldspot/icon.png">
+<meta name="twitter:image:alt" content="GoldSpot: mapa de spots y minas de oro, con análisis de puntos e identificación de minerales">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/goldspot/#pagina",
+      "url": "https://cdpoma.github.io/goldspot/",
+      "name": "GoldSpot: mapa de spots y minas de oro, y análisis de minerales con IA",
+      "description": "Mapa mundial de spots con posible oro y minas conocidas, con puntuación explicada. Analiza un punto, identifica un mineral por foto y guarda tus sitios.",
+      "inLanguage": "es",
+      "dateModified": "2026-11-21",
+      "about": {
+        "@id": "https://cdpoma.github.io/goldspot/#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/goldspot/#app"
+      },
+      "significantLink": [
+        "https://cdpoma.github.io/goldspot/soporte.html",
+        "https://cdpoma.github.io/goldspot/privacidad.html"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/goldspot/#app",
+      "name": "GoldSpot",
+      "alternateName": [
+        "GoldSpot: mapa de oro",
+        "GoldSpot: spots y minas de oro"
+      ],
+      "url": "https://cdpoma.github.io/goldspot/",
+      "applicationCategory": "ReferenceApplication",
+      "applicationSubCategory": "Mapa de spots y minas de oro y análisis de minerales",
+      "operatingSystem": "iOS, iPadOS",
+      "softwareRequirements": "iOS o iPadOS 15 o posterior; conexión a internet para el mapa, identificar y publicar",
+      "availableOnDevice": "iPhone, iPad",
+      "softwareVersion": "1.0",
+      "inLanguage": [
+        "es",
+        "es-419",
+        "en",
+        "pt-BR",
+        "de",
+        "fr",
+        "it"
+      ],
+      "dateModified": "2026-11-21",
+      "description": "GoldSpot es una app para iPhone y iPad que enseña en un mapa del mundo dónde es más probable encontrar oro aluvial (el de arroyos y ríos), junto a las minas de oro conocidas. Cada spot lleva una puntuación de 0 a 100 con los factores que la explican. Es una estimación indicativa: no garantiza que haya oro.",
+      "keywords": "buscar oro, mapa de oro, minas de oro, bateo, oro aluvial, prospección, identificar minerales con IA, pepitas, pirita, spots de oro",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Buscadores de oro, bateadores y aficionados a la geología y a salir al monte"
+      },
+      "featureList": [
+        "Spots con puntuación explicada: Más de 46.000 zonas del mundo con una puntuación de 0 a 100 y los factores que la explican: roca fuente aguas arriba, cercanía de un cauce, terrazas antiguas, minas cercanas y más. La puntuación es relativa: compara sitios entre sí, no es una probabilidad.",
+        "Minas de oro conocidas: Más de 95.000 minas, labores e indicios de oro de servicios geológicos públicos, con su estado (activa, abandonada o desconocido) y su fuente. Los spots y las minas van dentro de la app y se consultan sin conexión.",
+        "Analizar este punto: Mantén pulsado cualquier lugar del mapa, o usa «Mi ubicación», y GoldSpot calcula en tu móvil, gratis y sin anuncios, la puntuación de ese punto con el relieve de la zona. Sin conexión da una puntuación parcial con confianza baja.",
+        "Identifica un mineral con una foto: Haz una foto de una piedra, una pepita o lo que te queda en la batea y la IA dice qué mineral parece, si podría ser oro (frente a pirita, calcopirita o mica dorada) y cómo comprobarlo en casa. Nunca promete oro: ante la duda, dice «dudoso». Hasta 40 análisis al día por cuenta.",
+        "Un mapa para leer el terreno: La foto de satélite de Apple en 3D, con capas que enciendes o apagas: pueblos y carreteras, sendas y pistas, arroyos y fuentes y curvas de nivel, además del mapa de calor, la geología y los cauces. Con la cruz del mapa lees la altitud, la pendiente y la orientación del punto.",
+        "Tus sitios y tus hallazgos, también anónimos: Guarda tus sitios (privados hasta que los compartas), ve hasta ellos con mapa y brújula y publica spots y pepitas con hasta 8 fotos, sin tu nombre si quieres: con la hora redondeada al día y las fotos limpias de metadatos. Añade amigos con un código."
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "GoldSpot",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Gratis, con un vídeo recompensado de Google AdMob antes de cada análisis de un mineral con IA.",
+          "availability": "https://schema.org/PreOrder"
+        }
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria",
+        "email": "gabrielmicovictoria@gmail.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria",
+        "email": "gabrielmicovictoria@gmail.com"
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://cdpoma.github.io/goldspot/soporte.html"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/goldspot/#pagina"
+      },
+      "image": "https://cdpoma.github.io/goldspot/icon.png"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/goldspot/#faq",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿GoldSpot me garantiza que voy a encontrar oro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La puntuación es una estimación indicativa y relativa que compara sitios entre sí; no es una probabilidad. Una zona marca dónde mirar, no dónde cavar, y que haya una mina cerca puede no significar nada si está agotada. Tampoco una foto basta para saber si algo es oro: la identificación con IA es orientativa y hay que confirmarla con pruebas caseras o con un análisis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un spot y cómo se calcula la puntuación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un spot es una zona del mapa (un punto con un radio) donde, según el cálculo, es más probable encontrar oro aluvial. La puntuación, de 0 a 100, suma factores como la roca fuente aguas arriba, la cercanía de un cauce, el tamaño de la cuenca, los fondos de valle, las terrazas antiguas, las rupturas de pendiente, las confluencias, los aluviales, las minas de oro cercanas y el oro en sedimentos, y la ficha de cada spot dice por qué aparece. Un spot puede ser científico (lo dice el cálculo), de buscadores (pistas como labores antiguas o zonas oficiales de bateo) o ambos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo identifica GoldSpot un mineral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con una foto que haces con la cámara o eliges de la galería. Una función de nuestro servidor la envía a un servicio de inteligencia artificial (Claude, de Anthropic) que dice qué mineral parece, y, si Claude no responde, a Google Gemini como respaldo; qué señales se ven, si podría ser oro y qué pruebas caseras seguras sirven para confirmarlo. Siempre tiene en cuenta los parecidos, como la pirita, la calcopirita y la mica dorada, y ante la duda responde «dudoso». Hay un máximo de 40 análisis al día por cuenta, y hace falta conexión a internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo publicar spots y hallazgos sin que se sepa que son míos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Frente a los demás usuarios, sí: «Publicar como anónimo» viene activado de partida. Lo anónimo no lleva autor, enseña el día y no la hora, y sus fotos se limpian de metadatos en el servidor. Hay límites: el desarrollador, que administra el servidor, puede ver qué cuenta publicó cada cosa, y el contenido de una foto (una cara, un paisaje reconocible) no se puede limpiar. La política de privacidad lo explica con detalle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo buscar oro en cualquier lugar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Buscar oro está regulado: en muchos sitios hace falta un permiso o una licencia, el terreno puede tener dueño o concesión minera, y en espacios protegidos o en algunos cauces puede estar prohibido. GoldSpot no da permiso para nada ni comprueba por ti las zonas protegidas: infórmate antes de ir y respeta la ley y los permisos de cada sitio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es gratis y en qué aparatos funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se descarga gratis y funciona en iPhone y iPad con iOS o iPadOS 15 o posterior. Antes de cada análisis de un mineral con IA se ve un vídeo corto de Google AdMob; no hay compras ni suscripción por ahora. Analizar un punto del mapa es gratis y sin anuncios."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#05070d; --surface:#0b1020; --ink:#eef0f6; --ink-light:#a4adc2;
+    --accent:#f5c542; --dorado:#ffe08a; --line:#1f2944; --card:#0d1428;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--dorado)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#1d1604;border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:var(--dorado)}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:0 0 .4rem}
+  .tiendas img{display:block;height:48px;width:auto}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .capturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:0 0 1rem}
+  .capturas figure{margin:0}
+  .capturas img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  .capturas figcaption{font-size:.85rem;color:var(--ink-light);margin-top:.4rem;text-align:center}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .fuentes{font-size:.88rem;color:var(--ink-light)}
+  .contacto{margin-top:2rem}
+</style>
+</head>
+<body>
+<main class="wrap ancha">
+  <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
+  <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
+  <h1>Mapa de spots y minas de oro, con análisis de puntos e identificación de minerales con IA</h1>
+  <p class="sub">Spots con puntuación explicada, minas de oro conocidas, análisis de cualquier punto del mapa e identificación de minerales con IA. Estimación indicativa: no garantiza oro.<br><small>Actualizado el <time datetime="2026-11-21">21 de noviembre de 2026</time></small></p>
+  <p class="nota">Próximamente en el App Store, para iPhone y iPad</p>
+  <nav class="enlaces" aria-label="Ayuda y soporte"><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a></nav>
+  <nav class="toc" aria-label="En esta página">En esta página: <a href="#que-es">Qué es</a> · <a href="#funciones">Lo que consigues</a> · <a href="#precio">Gratis</a> · <a href="#plataformas">Plataformas</a> · <a href="#datos">Tus datos</a> · <a href="#no-hace">Qué no hace</a> · <a href="#faq">Preguntas frecuentes</a> · <a href="#fuentes">Datos y atribuciones</a></nav>
+
+  <h2 id="que-es">Qué es GoldSpot</h2>
+  <div class="card">
+    <p>GoldSpot es una app para iPhone y iPad que enseña en un mapa del mundo dónde es más probable encontrar oro aluvial (el de arroyos y ríos), junto a las minas de oro conocidas. Cada spot lleva una puntuación de 0 a 100 con los factores que la explican. Es una estimación indicativa: no garantiza que haya oro.</p>
+  </div>
+  <div class="aviso">
+    <p>Importante: la puntuación de GoldSpot es una estimación indicativa y relativa, no una probabilidad ni una garantía de que haya oro. Buscar oro está regulado: pide los permisos que hagan falta y respeta la propiedad, la ley y las zonas protegidas. Las minas abandonadas son peligrosas: no entres. Una foto no basta para saber si algo es oro: confírmalo con pruebas caseras o con un análisis.</p>
+  </div>
+
+  <h2 id="funciones">Lo que consigues</h2>
+  <ul>
+    <li><strong>Spots con puntuación explicada:</strong> Más de 46.000 zonas del mundo con una puntuación de 0 a 100 y los factores que la explican: roca fuente aguas arriba, cercanía de un cauce, terrazas antiguas, minas cercanas y más. La puntuación es relativa: compara sitios entre sí, no es una probabilidad.</li>
+    <li><strong>Minas de oro conocidas:</strong> Más de 95.000 minas, labores e indicios de oro de servicios geológicos públicos, con su estado (activa, abandonada o desconocido) y su fuente. Los spots y las minas van dentro de la app y se consultan sin conexión.</li>
+    <li><strong>Analizar este punto:</strong> Mantén pulsado cualquier lugar del mapa, o usa «Mi ubicación», y GoldSpot calcula en tu móvil, gratis y sin anuncios, la puntuación de ese punto con el relieve de la zona. Sin conexión da una puntuación parcial con confianza baja.</li>
+    <li><strong>Identifica un mineral con una foto:</strong> Haz una foto de una piedra, una pepita o lo que te queda en la batea y la IA dice qué mineral parece, si podría ser oro (frente a pirita, calcopirita o mica dorada) y cómo comprobarlo en casa. Nunca promete oro: ante la duda, dice «dudoso». Hasta 40 análisis al día por cuenta.</li>
+    <li><strong>Un mapa para leer el terreno:</strong> La foto de satélite de Apple en 3D, con capas que enciendes o apagas: pueblos y carreteras, sendas y pistas, arroyos y fuentes y curvas de nivel, además del mapa de calor, la geología y los cauces. Con la cruz del mapa lees la altitud, la pendiente y la orientación del punto.</li>
+    <li><strong>Tus sitios y tus hallazgos, también anónimos:</strong> Guarda tus sitios (privados hasta que los compartas), ve hasta ellos con mapa y brújula y publica spots y pepitas con hasta 8 fotos, sin tu nombre si quieres: con la hora redondeada al día y las fotos limpias de metadatos. Añade amigos con un código.</li>
+  </ul>
+
+  <h2 id="precio">Gratis</h2>
+  <p>Se descarga gratis. Antes de cada análisis de un mineral con IA ves un vídeo corto a pantalla completa (un anuncio recompensado de Google AdMob, en iPhone y iPad); sin verlo, la foto no se analiza. Analizar un punto del mapa y el resto de la app no llevan anuncios. Por ahora no hay compras ni suscripción. Hasta 40 análisis de fotos al día por cuenta.</p>
+
+  <h2 id="plataformas">Plataformas</h2>
+  <p>Funciona en iPhone y iPad con iOS o iPadOS 15 o posterior. Hace falta conexión a internet para el mapa y la foto de satélite, el relieve de «Analizar este punto», identificar minerales y publicar; los spots y las minas se consultan sin conexión.</p>
+
+  <h2 id="datos">Tus datos</h2>
+  <p>La cuenta es solo un nombre, sin correo ni contraseña. Tus spots son privados hasta que los compartas. Lo que publicas como anónimo no lleva tu nombre ni la hora exacta y sus fotos salen sin metadatos, aunque el desarrollador sí puede ver quién lo publicó. La foto con la que identificas un mineral va a Anthropic (Claude) y no se guarda si no la publicas. Tu ubicación solo sale del móvil cuando guardas un spot o publicas con ubicación. Lo cuenta todo la <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <h2 id="no-hace">Qué no hace</h2>
+  <ul>
+    <li>No garantiza que haya oro: la puntuación es una estimación indicativa y relativa, y una foto no basta para saber si algo es oro.</li>
+    <li>No da permiso para buscar en ningún sitio ni comprueba por ti las zonas protegidas: respeta la ley y los permisos de cada lugar.</li>
+    <li>No identifica un mineral sin conexión ni sin ver antes el vídeo.</li>
+    <li>No publica tus spots: son privados hasta que los compartas con amigos o en el muro.</li>
+    <li>No oculta quién publica al desarrollador: el anonimato es frente a los demás usuarios, no frente al operador del servidor.</li>
+  </ul>
+
+  <h2 id="faq">Preguntas frecuentes</h2>
+  <details><summary>¿GoldSpot me garantiza que voy a encontrar oro?</summary><p>No. La puntuación es una estimación indicativa y relativa que compara sitios entre sí; no es una probabilidad. Una zona marca dónde mirar, no dónde cavar, y que haya una mina cerca puede no significar nada si está agotada. Tampoco una foto basta para saber si algo es oro: la identificación con IA es orientativa y hay que confirmarla con pruebas caseras o con un análisis.</p></details>
+  <details><summary>¿Qué es un spot y cómo se calcula la puntuación?</summary><p>Un spot es una zona del mapa (un punto con un radio) donde, según el cálculo, es más probable encontrar oro aluvial. La puntuación, de 0 a 100, suma factores como la roca fuente aguas arriba, la cercanía de un cauce, el tamaño de la cuenca, los fondos de valle, las terrazas antiguas, las rupturas de pendiente, las confluencias, los aluviales, las minas de oro cercanas y el oro en sedimentos, y la ficha de cada spot dice por qué aparece. Un spot puede ser científico (lo dice el cálculo), de buscadores (pistas como labores antiguas o zonas oficiales de bateo) o ambos.</p></details>
+  <details><summary>¿Cómo identifica GoldSpot un mineral?</summary><p>Con una foto que haces con la cámara o eliges de la galería. Una función de nuestro servidor la envía a un servicio de inteligencia artificial (Claude, de Anthropic) que dice qué mineral parece, y, si Claude no responde, a Google Gemini como respaldo; qué señales se ven, si podría ser oro y qué pruebas caseras seguras sirven para confirmarlo. Siempre tiene en cuenta los parecidos, como la pirita, la calcopirita y la mica dorada, y ante la duda responde «dudoso». Hay un máximo de 40 análisis al día por cuenta, y hace falta conexión a internet.</p></details>
+  <details><summary>¿Puedo publicar spots y hallazgos sin que se sepa que son míos?</summary><p>Frente a los demás usuarios, sí: «Publicar como anónimo» viene activado de partida. Lo anónimo no lleva autor, enseña el día y no la hora, y sus fotos se limpian de metadatos en el servidor. Hay límites: el desarrollador, que administra el servidor, puede ver qué cuenta publicó cada cosa, y el contenido de una foto (una cara, un paisaje reconocible) no se puede limpiar. La política de privacidad lo explica con detalle.</p></details>
+  <details><summary>¿Puedo buscar oro en cualquier lugar?</summary><p>No. Buscar oro está regulado: en muchos sitios hace falta un permiso o una licencia, el terreno puede tener dueño o concesión minera, y en espacios protegidos o en algunos cauces puede estar prohibido. GoldSpot no da permiso para nada ni comprueba por ti las zonas protegidas: infórmate antes de ir y respeta la ley y los permisos de cada sitio.</p></details>
+  <details><summary>¿Es gratis y en qué aparatos funciona?</summary><p>Se descarga gratis y funciona en iPhone y iPad con iOS o iPadOS 15 o posterior. Antes de cada análisis de un mineral con IA se ve un vídeo corto de Google AdMob; no hay compras ni suscripción por ahora. Analizar un punto del mapa es gratis y sin anuncios.</p></details>
+
+  <h2 id="fuentes">Datos y atribuciones</h2>
+  <p>GoldSpot usa datos abiertos de servicios geológicos y de otras instituciones. Estas son sus fuentes y sus licencias; la app las enseña también en «Avisos, fuentes y atribuciones».</p>
+  <h3>Datos que lleva la app</h3>
+  <ul class="fuentes">
+    <li><a href="https://mrdata.usgs.gov/mrds/" target="_blank" rel="noopener">USGS Mineral Resources Data System (MRDS)</a>: dominio público (USGS)</li>
+    <li><a href="https://www.igme.es/" target="_blank" rel="noopener">IGME-CSIC, base de datos minera BDMIN</a>: CC BY 4.0</li>
+    <li><a href="https://www.sgu.se/" target="_blank" rel="noopener">SGU (Servicio Geológico de Suecia), Mineral resources</a>: CC0</li>
+    <li><a href="https://www.resources.nsw.gov.au/geological-survey" target="_blank" rel="noopener">Geological Survey of New South Wales, Mineral Occurrences (MetIndEx) y distritos de bateo</a>: CC BY (Australia)</li>
+    <li><a href="https://catalogue.data.wa.gov.au/" target="_blank" rel="noopener">Gobierno de Australia Occidental (DMIRS), MINEDEX</a>: CC BY 4.0</li>
+    <li><a href="https://discover.data.vic.gov.au/" target="_blank" rel="noopener">Gobierno de Victoria (Australia), Mineral Tenements</a>: CC BY 4.0</li>
+    <li><a href="https://open.canada.ca/" target="_blank" rel="noopener">Nuevo Brunswick, Nueva Escocia, Alberta y Columbia Británica (Canadá): indicios minerales y títulos de placer</a>: licencias de gobierno abierto de cada provincia</li>
+    <li><a href="https://www.blm.gov/" target="_blank" rel="noopener">BLM de EE. UU., concesiones mineras (MLRS)</a>: dominio público (obra federal de EE. UU.)</li>
+    <li><a href="https://camino.beta.gouv.fr/" target="_blank" rel="noopener">Francia, Cadastre minier (Camino)</a>: Licence Ouverte 2.0 (Etalab)</li>
+    <li><a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a>: CC0</li>
+    <li><a href="https://www.hydrosheds.org/" target="_blank" rel="noopener">HydroSHEDS y HydroRIVERS (relieve, dirección de flujo y red de cauces)</a>: uso con atribución (Lehner y Grill; acuerdo de HydroSHEDS)</li>
+    <li><a href="https://macrostrat.org/" target="_blank" rel="noopener">Macrostrat (mapas geológicos compilados: rocas y fallas)</a>: CC BY 4.0, con atribución a cada mapa de origen</li>
+    <li><a href="https://pubs.usgs.gov/of/1997/ofr-97-470/" target="_blank" rel="noopener">USGS, Open-File Report 97-470 (geología generalizada de Irán y de la antigua URSS)</a>: datos del USGS (dominio público en EE. UU.)</li>
+    <li><a href="https://open.canada.ca/en/open-government-licence-canada" target="_blank" rel="noopener">Servicio Geológico de Canadá, Open File 5529 (Chorlton, 2007), geología generalizada del mundo</a>: Open Government Licence – Canada</li>
+    <li><a href="https://www.ga.gov.au/" target="_blank" rel="noopener">Geoscience Australia: Surface Geology of Australia 1:2 500 000, Geochemical Atlas of Australia y modelo de paleovalles de West Musgrave</a>: CC BY 4.0 y CC BY 3.0 AU</li>
+    <li><a href="https://www.gsi.ie/" target="_blank" rel="noopener">GEMAS, geoquímica de suelos de Europa (publicada por el Servicio Geológico de Irlanda)</a>: CC BY 4.0</li>
+    <li><a href="https://doi.pangaea.de/10.1594/PANGAEA.884822" target="_blank" rel="noopener">GUM, Global Unconsolidated Sediments Map (Börker et al., 2018)</a>: CC BY 3.0</li>
+    <li><a href="https://figshare.com/" target="_blank" rel="noopener">Global Aridity Index and PET Database v3.1 (Zomer, Xu y Trabucco)</a>: CC BY 4.0</li>
+    <li><a href="https://human-settlement.emergency.copernicus.eu/" target="_blank" rel="noopener">GHS-SMOD (Comisión Europea, JRC), grado de urbanización</a>: CC BY 4.0</li>
+    <li><a href="https://www.ncei.noaa.gov/products/etopo-global-relief-model" target="_blank" rel="noopener">ETOPO 2022 (NOAA NCEI), elevación</a>: dominio público</li>
+    <li><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth, límites de países</a>: dominio público</li>
+    <li><a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames, ciudades y topónimos</a>: CC BY 4.0</li>
+    <li><a href="https://earthdata.nasa.gov/gibs" target="_blank" rel="noopener">NASA GIBS y Blue Marble (NASA Earth Observatory)</a>: imágenes de la NASA, con atribución</li>
+  </ul>
+  <h3>Mapas y servicios mientras usas la app</h3>
+  <ul class="fuentes">
+    <li><a href="https://www.apple.com/legal/internet-services/maps/" target="_blank" rel="noopener">Apple Maps (MapKit y MapKit JS), mapa y foto de satélite</a>: © Apple</li>
+    <li><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap, © OpenMapTiles, con datos de OpenStreetMap</a>: © colaboradores de OpenStreetMap (ODbL)</li>
+    <li><a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener">Terrain Tiles de Mapzen en AWS (SRTM de la NASA, 3DEP del USGS, GMTED2010, EU-DEM, ALOS y otras)</a>: relieve, curvas de nivel y altitudes</li>
+    <li><a href="https://www.esri.com/" target="_blank" rel="noopener">Esri World Imagery (solo Android y web)</a>: Esri, Vantor, Earthstar Geographics y la comunidad de usuarios de GIS</li>
+    <li><a href="https://www.ign.es/" target="_blank" rel="noopener">Instituto Geográfico Nacional de España, Mapa Topográfico Nacional</a>: © IGN de España (CC BY 4.0)</li>
+    <li><a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" target="_blank" rel="noopener">USGS The National Map, topográfico de EE. UU.</a>: dominio público</li>
+  </ul>
+
+  <p class="contacto">¿Dudas o ideas? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> o mira la <a href="soporte.html">ayuda y soporte</a>.</p>
+  <div class="foot">GoldSpot · Gabriel Micó Victoria<br><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="en.html" hreflang="en">English</a></div>
+</main>
+</body>
+</html>

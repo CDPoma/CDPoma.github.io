@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GoldSpot privacy: gold spots, anonymous photos and AI analysis</title>
+<meta name="description" content="What data GoldSpot uses: an account with just a name, private spots, anonymous posts, photos without metadata, location, Anthropic AI, ads, statistics and maps.">
+<link rel="canonical" href="https://cdpoma.github.io/goldspot/privacy.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/goldspot/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/goldspot/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/goldspot/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#05070d">
+<style>
+  :root{
+    --bg:#05070d; --surface:#0b1020; --ink:#eef0f6; --ink-light:#a4adc2;
+    --accent:#f5c542; --dorado:#ffe08a; --line:#1f2944; --card:#0d1428;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--dorado)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#1d1604;border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:var(--dorado)}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:0 0 .4rem}
+  .tiendas img{display:block;height:48px;width:auto}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .capturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:0 0 1rem}
+  .capturas figure{margin:0}
+  .capturas img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  .capturas figcaption{font-size:.85rem;color:var(--ink-light);margin-top:.4rem;text-align:center}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .fuentes{font-size:.88rem;color:var(--ink-light)}
+  .contacto{margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
+  <h1>GoldSpot</h1>
+  <p class="sub">Privacy policy</p>
+  <nav class="enlaces"><a href="en.html">GoldSpot</a> · <a href="support.html">Help &amp; support</a></nav>
+
+  <div class="card">
+    <p><strong>Summary:</strong> GoldSpot shows on a map where to look for gold and lets you save your places, identify a mineral from a photo and post spots and nuggets with photos, anonymously if you like. To save places, identify or post you need an account, which has no email or password: it is an anonymous session with only a display name you choose. The map, the mines and the spots can be viewed without an account. <strong>Your spots are private</strong> until you decide to share them. What you post as <strong>anonymous</strong> carries neither your name nor the exact time, and its photos are stripped of metadata on the server, but <strong>the developer, who runs the server, can see who posted each item</strong>. The photo you identify is sent to Anthropic (Claude) and we do not keep it unless you publish it. <strong>Your location only leaves your phone when you save a spot or post with a location.</strong> Before each analysis of a mineral you watch a Google AdMob video, and usage statistics (Firebase Analytics) depend on your consent.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Gabriel Micó Victoria, developer of GoldSpot. For any question about your data, or to exercise your rights, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Account</h2>
+  <p>To save spots, identify minerals, post, add friends, report, hide or block, you need an account. There is no sign-up with an email or with Apple: when you start you choose a <strong>display name</strong>, accept the community guidelines and the app opens an anonymous Supabase session tied to your phone. We do not receive your email or a password, because there are none. Other people see your display name only on what you post under your name, on what you share with friends and in your friend requests; what you post as anonymous does not carry it. We recommend a nickname rather than your full name. Because the account lives on your phone, if you delete the app or change phone you start from scratch. You can delete your account in Settings → Delete my account. Your account is stored in Supabase, with servers in the European Union (Frankfurt).</p>
+
+  <h2>Identifying a mineral from a photo</h2>
+  <p>When you take or pick a photo in “Identify”, the app first shows you a short video (see “Ads”), reduces the photo on your phone (longest side 1,600 px, as a JPEG) and sends it to our Supabase function <em>goldspot-identifica</em>, with the app language and your session. The function checks your session, counts the identification towards the daily limit (up to 40 per account per day) and sends the photo to Anthropic's artificial intelligence service (Claude), which returns what mineral it looks like and whether it could be gold. If Claude does not respond, the photo may go as a fallback to Google Gemini, for the same task. It is only used to give you the result.</p>
+  <ul>
+    <li><strong>We do not keep the photo or the result</strong> unless you publish the find. The function's technical logs only record statuses, times, how much of the service was used and an abbreviated account identifier: never the photo or the answer.</li>
+    <li>We count how many identifications each account makes per day (the limit is 40 per account per day), to apply the usage limit. That counter does not include the photo and is deleted with your account.</li>
+    <li>The artificial intelligence services only receive the downsized photo and the language: not your name, your account or your location. According to Anthropic's public policy, data it receives through its API is not used by default to train its models; the specific terms (for example, how long it keeps the data for safety purposes) are set by that company in its <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">privacy policy</a>. The photo that goes to Google's fallback is treated under the terms of Google's Gemini API and its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>, and we cannot promise that Google will not use it: that depends on those terms.</li>
+    <li>The result is an estimate from a photo: it does not confirm that something is gold.</li>
+  </ul>
+
+  <h2>Location</h2>
+  <p>GoldSpot asks for location permission only when it needs it: to center the map on your position, for “My location” in “Analyse this point”, to save a place with GPS, to post a find with a location and for the “Go” screen, which uses your position and the compass to lead you to a place. If you do not grant permission, you can mark the place by hand on the map.</p>
+  <ul>
+    <li><strong>Your position is not sent to any server on its own.</strong> It only leaves your phone when you <strong>save a spot</strong> (its coordinates are stored in your account, whether you marked it with GPS or by hand) or <strong>post a find with a location</strong> (see below).</li>
+    <li>Centering the map, “My location”, “Analyse this point” and “Go” are calculated on your device. So are the compass, the bearing and the distance. The only thing that goes out is what any map requests: the tiles of the area you look at, to the map services (see “The map”).</li>
+    <li>When you post, the public location can be <strong>exact</strong> or <strong>approximate</strong> (rounded to a 0.01° grid, about 1.1 km: with “Approximate” the app rounds before sending and the server rounds again, so the exact point never leaves your phone). For anonymous posts, approximate is the default.</li>
+  </ul>
+
+  <h2>Your spots</h2>
+  <p>One of your spots stores its name, an optional note, its coordinates, whether you marked it with GPS or by hand on the map and the photos you add to it (up to 8), linked to your account on our server. The app also keeps a copy on your phone so you can see it offline. <strong>A spot is private: only you see it</strong>, until you decide otherwise:</p>
+  <ul>
+    <li><strong>With a friend:</strong> the friends you choose see it, with your display name: once you share it with them it is no longer anonymous. You can stop sharing it, and the person who received it can also remove it from their list.</li>
+    <li><strong>On the wall:</strong> anyone sees it, even without an account, under your name or as anonymous, as you choose. With “Approximate” a copy with the ≈1 km area is published and your exact spot stays private. You can take it off the wall whenever you like.</li>
+    <li><strong>Via WhatsApp or another app:</strong> GoldSpot opens the system share menu with the name, the coordinates and an Apple Maps link. What happens next depends on the app you choose and on whoever receives it.</li>
+  </ul>
+  <p>You can delete a spot from its page. When you delete your account, all your spots are deleted.</p>
+
+  <h2>Friends</h2>
+  <p>Each account has a 6-character friend code that only you see. Anyone with your code can send you a friend request, and you are only friends if you accept it. Your friends see your display name, the spots you share with them and the location of the finds for which you choose “friends”. You can remove a friend or block them: doing so stops what had been shared between the two of you.</p>
+
+  <h2>Posting spots and nuggets: anonymous finds</h2>
+  <p>When you post a find (a nugget, a stone, what was left in your pan) we store its photos (up to 8; the first is the main one), the description (optional) and the result of the identification: the name, the type of mineral, the confidence, whether it could be gold, the signs, the tests and the warning. All of this is <strong>public</strong>: anyone can see it, even without an account, on the Finds tab and on the map. If you put a spot on the wall, anyone can see it too. Do not post photos of people or data you do not want everyone to see.</p>
+  <p><strong>“Post anonymously” is on by default.</strong> This is what other people see of an anonymous post, spot or photo:</p>
+  <ul>
+    <li><strong>No author:</strong> neither your name nor any identifier of yours. Only “Anonymous” is shown.</li>
+    <li><strong>No time:</strong> the server's views round the date to the day and the order within a day is random, so the order in which things were posted cannot be told.</li>
+    <li><strong>Nothing that links items to each other or to your account:</strong> nobody can list accounts or tell when each was created; photo paths carry a random name without your identifier; hiding an anonymous item hides only that item, not “everything by that author”; and GoldSpot sends no statistics event when an anonymous item is created or deleted.</li>
+    <li><strong>Location as you choose:</strong> only you, your friends or everyone (for anonymous posts, only you or everyone, because letting only your friends see it would tell them it is yours), exact or approximate.</li>
+  </ul>
+  <p>The place of a find is stored even if you choose “only me”, so that you can see it; nobody else can. After posting, who can see it cannot be changed: to change it, delete the find and post it again. Without location permission, the app warns you and you can post <strong>without a location</strong>, if you confirm.</p>
+
+  <h3>Photos are stripped of metadata</h3>
+  <p>The app re-encodes each photo on your phone before uploading it. Then our function <em>goldspot-subir-foto</em> rebuilds it on the server using a whitelist of blocks: EXIF (make, model, date and GPS of the camera), XMP, IPTC, colour profiles, comments, thumbnails and any added data are discarded. Animated WebP is rejected, 16 random bytes with no meaning are added so that two uploads of the same photo cannot be linked, and the write is delayed by a random time of 0 to 20 seconds.</p>
+
+  <h3>What anonymity does not guarantee</h3>
+  <ul>
+    <li><strong>The developer can see who posted each item.</strong> Whoever runs the server (the technical operator, Gabriel Micó Victoria) can read which account posted each item, including anonymous ones: the database stores the author and the function that uploads photos knows which account is uploading. Anonymity holds against other users, not against the operator.</li>
+    <li>The storage service records the exact time each file was written, and that cannot be removed: it is mitigated with the random 0 to 20 second delay. If you post something anonymous and something under your name at the same time, someone very skilled could link them, with some probability. For strong anonymity, do not post anonymous and signed items within the same minute.</li>
+    <li>The content of a photo (a face, a licence plate, a recognisable landscape) is not metadata: the cleaning cannot do anything about it.</li>
+    <li>An exact location that is published is visible as it is. That is what the “Approximate” option is for.</li>
+  </ul>
+
+  <h2>Photos of zones and mines</h2>
+  <p>On the page of a spot or a mine on the map you can add photos of that place (up to 3 per place per day), with an optional note and, if you like, as anonymous. Anyone can see them, even without an account, and they are stripped of metadata like the rest.</p>
+
+  <h2>The map, the terrain and “Analyse this point”</h2>
+  <p>On iPhone and iPad, the large map (the Map tab) uses Apple&#x27;s native map (MapKit), with its satellite imagery in 3D, and the small maps (a spot&#x27;s page, choosing a point and the “Go” screen) use Apple&#x27;s map for the web (MapKit JS). Apple receives the map requests, the area you are looking at and your IP address. We do not give Apple any account or identifier of ours, and GoldSpot does not send it your spots or your finds: the app places the pins on the map on your device.</p>
+  <p>On top of the map there are layers you switch on or off. “Towns and roads” are the names on Apple&#x27;s own map. “Trails and tracks” and “Streams and springs” use OpenStreetMap data served by OpenFreeMap (tiles.openfreemap.org). “Contour lines” are computed on your device from the elevation tiles of AWS Terrain Tiles / Mapzen (Amazon S3, based on NASA SRTM and other data), and the elevation, slope and aspect of the point under the crosshair use that same data. “Official topographic map”, if you switch it on, requests tiles from Spain&#x27;s National Geographic Institute (IGN) or the US Geological Survey (USGS), depending on the area you look at. Each of these servers receives your IP address and the area of the map you look at (the tiles requested), like any web server; never your account or your name. GoldSpot&#x27;s spots, mines, heat map, geology and stream network are bundled in the app: they are not downloaded from any server.</p>
+  <p>“Analyse this point” (press and hold the map, or “My location”) is calculated on your phone and has no ads. To do it, the app downloads from AWS Terrain Tiles (Terrarium) the elevation tiles of a window of about 4 km around the point: AWS sees which tiles are requested, which cover several kilometres, and your IP address, but does not receive the exact point, your account or your name. The result is not sent to any server or saved unless you tap “Save here”. Without a connection, the score is calculated partially using only what the app already contains. The search for cities, countries and mines is also done inside the app, with its own database.</p>
+  <p>On Android and on the web, the map uses Esri satellite imagery instead (World Imagery, with an API key when one is configured) and the same OpenFreeMap and AWS layers; if the map cannot load, a globe with NASA imagery (GIBS) is shown. Esri and NASA also receive your IP address and the area you look at, never your account or your name. The Android version is not in the store yet.</p>
+  <p>So that Apple loads the map for the web (MapKit JS), the app asks our Supabase function (goldspot-mapkit-token) for a temporary, short-lived permit. That request carries no personal data: not your name, not your location and not your spots.</p>
+  <p>If you tap “Directions by car”, the app opens your maps app (Apple Maps on iPhone and iPad, the system maps app on Android and Google Maps on the web) with the coordinates of the place; if you share a spot by WhatsApp or another app, GoldSpot opens the system share menu with the name, the coordinates and an Apple Maps link. From there, the privacy policy of that app and of whoever receives it applies.</p>
+
+  <h2>Checking for a new version</h2>
+  <p>On iPhone and iPad, when the app starts it asks Apple's App Store whether a newer version exists and, if an update is required, tells you. For that, Apple receives the app identifier and your IP address, like any web server.</p>
+
+  <h2>Reporting, hiding and blocking</h2>
+  <p>You can report any public find, spot or photo. A post, a spot or a photo that collects <strong>3 reports</strong> is hidden automatically and kept for review by the developer. If the author is visible, you can block them: their posts are hidden from you and the friendship and anything shared between the two of you ends. Anonymous items cannot be blocked, because they do not say who the author is: with “Hide this” you stop seeing only that item.</p>
+
+  <h2>Deleting your data</h2>
+  <ul>
+    <li><strong>One find:</strong> delete it from its page. It is removed together with its photos and its location.</li>
+    <li><strong>One spot:</strong> delete it from its page. <strong>One of your photos:</strong> delete it from the gallery.</li>
+    <li><strong>Your whole account:</strong> Settings → Delete my account. Your profile, finds, spots and photos (the files on the server too), friendships and requests, reports, blocks, the usage counter and the copy of your spots and of the shared ones kept on your phone are deleted. The sign-in account is deleted too, unless you use it in another of our apps.</li>
+  </ul>
+
+  <h2>Ads</h2>
+  <p>GoldSpot shows a single ad: a full-screen <strong>Google AdMob rewarded video</strong> before each AI analysis of a mineral, on iPhone and iPad. There are no banners or other ads, and analysing a point on the map has no ads. Without watching the video, the photo is not analysed. In the European Economic Area, the United Kingdom and Switzerland, Google asks for your consent with its form (UMP) before showing ads; you can change it from Settings → “Ad privacy options”. On iPhone and iPad, Apple then asks whether you allow tracking (ATT); if you do not, the ad is not personalised with that tracking. Where the form requires consent and you do not give it, no ad is shown. AdMob receives device and app data and your IP address, and the advertising identifier only if you allow it; GoldSpot has no purchases or subscriptions.</p>
+
+  <h2>Usage statistics</h2>
+  <p>We use <strong>Firebase Analytics</strong> (Google) anonymously to see what is used and improve the app: events such as identifying a mineral (only whether it looked like gold, the type and the confidence), opening a page, changing a layer, analysing a point (only the score and the confidence) or watching the video. In the European Economic Area, the United Kingdom and Switzerland it is only enabled if you accept it in Google's form; in the rest of the countries it is enabled by default and, if the form appears, it follows your answer. We do not send your name, your location or coordinates, or the text or photos of your finds, or events for creating or deleting an anonymous item. Firebase identifies the installation with its own, non-personal identifier, and the app does not use the iPhone advertising identifier for statistics.</p>
+
+  <h2>Who else receives data</h2>
+  <p>These are the third-party services involved, what they do and what they receive. None of them receives your email (the app does not have one) and only Supabase, our server, stores your display name.</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th scope="col">Service</th><th scope="col">What for</th><th scope="col">What it receives</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Supabase (our server, “Apps” project)</th><td>Account, spots, finds, photos, friends, the daily limit and the functions that identify minerals, upload photos and hand out the map permit</td><td>What you save (display name, spots, finds, photos and the locations you choose to save) with the anonymous identifier of your account, and your IP address when you connect</td></tr>
+      <tr><th scope="row">Anthropic (Claude)</th><td>Identifying a mineral from a photo</td><td>The downsized photo and the app language, sent from our server; it does not receive your name, your account or your location</td></tr>
+      <tr><th scope="row">Google (Gemini)</th><td>Fallback for the identification if Claude does not respond</td><td>The same downsized photo and the language, only if the fallback is needed; it does not receive your name, your account or your location</td></tr>
+      <tr><th scope="row">Google AdMob</th><td>The rewarded video before each analysis of a mineral (iPhone and iPad)</td><td>Device and app data, the IP address and, only if you allow it in Apple&#x27;s prompt, the advertising identifier, according to your consent in Google&#x27;s form (UMP)</td></tr>
+      <tr><th scope="row">Google Firebase Analytics</th><td>Anonymous usage statistics</td><td>Usage events with no personal data or coordinates, an installation identifier and the IP address, only according to your consent</td></tr>
+      <tr><th scope="row">Apple (MapKit, MapKit JS, App Store)</th><td>The map and satellite imagery; the check for a new version; the tracking prompt (ATT)</td><td>Map requests, the area viewed and the IP address; no account or identifier of ours</td></tr>
+      <tr><th scope="row">OpenFreeMap (OpenStreetMap data)</th><td>Trails and tracks and Streams and springs layers</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">AWS Terrain Tiles / Mapzen (Amazon S3)</th><td>Elevation data for the contour lines, the elevation, slope and aspect readout, and “Analyse this point”</td><td>The tiles requested (area and zoom) and the IP address; never the exact point, an account or a name</td></tr>
+      <tr><th scope="row">Esri World Imagery (Android and web only)</th><td>Satellite imagery on Android and the web</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">NASA GIBS (Android and web only)</th><td>Fallback globe and colour relief when the map does not load</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+      <tr><th scope="row">Spain&#x27;s IGN and the USGS (only if you switch on “Official topographic map”)</th><td>Official topographic maps of Spain and of the USA</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Legal basis, retention and transfers</h2>
+  <p>We process your data to provide the service you ask for (the account, your spots, posts, identifications and photos), with your consent (location, camera and photos, ads and statistics, which you can withdraw at any time from your phone's permissions or Google's form) and for our legitimate interest in security and preventing abuse (the daily limit, reports and moderation). We keep your data while you have the account or until you delete it; when you delete the account everything of yours is deleted from our server, although the hosting provider's backups may take a while to renew. Some of the services in the table (Anthropic, Google, Apple, Amazon, Esri, NASA) are in the United States or outside the European Economic Area; each applies the safeguards it states in its privacy policy. Policies: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> (AdMob, Firebase and Gemini), <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>, <a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Amazon Web Services</a> and <a href="https://www.esri.com/en-us/privacy/overview" target="_blank" rel="noopener">Esri</a>.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask for access, correction, erasure, objection, restriction or portability of your data by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>, although you can already do almost everything from the app itself (change your name, delete finds, spots and photos, and delete your account). If you think your data has not been handled properly, you can complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) or to the supervisory authority of your country.</p>
+
+  <h2>Children</h2>
+  <p>GoldSpot is not aimed at children under 14 and we do not knowingly collect data from children of that age. If you think a child has created an account, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and we will delete it.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If something important changes (for example, a new service that receives data), we will update this page and the date shown below. Last updated: <time datetime="2026-11-21">November 21, 2026</time>.</p>
+
+  <div class="aviso">
+    <p><strong>Warning:</strong> GoldSpot is a helper, not a guarantee. A spot's score and the identification of a mineral from a photo are indicative estimates: <strong>they do not ensure that there is gold</strong>. Prospecting for gold is regulated: get any permits you need, respect private property, the law and protected areas, and do not enter abandoned mines.</p>
+  </div>
+  <div class="foot"><a href="en.html">GoldSpot</a> · Gabriel Micó Victoria · Updated November 21, 2026</div>
+
+</div>
+</body>
+</html>
