@@ -110,6 +110,7 @@
 
   <h2>The map, the tides and the sea</h2>
   <p>On iPhone, iPad and Mac, the maps use Apple&#x27;s map (MapKit), with its satellite imagery in 3D. Apple receives the map requests, the area you are looking at and your IP address. We do not give Apple any account or identifier of ours, and FishSpot does not send it your spots or your catches: the app places the pins on the map on your device.</p>
+  <p>The place search in the map&#x27;s search box (&quot;Search&quot;) also uses Apple MapKit: Apple receives the text you type (it is not sent if you enter coordinates), the map area you are looking at and your IP address, with no account or identifier of ours. Spots you look up by name are filtered on your device and never leave it.</p>
   <p>On top of the map there are layers you switch on or off. &quot;Towns and roads&quot; are the names on Apple&#x27;s own map. &quot;Rivers and lakes&quot; and &quot;Trails and tracks&quot; use OpenStreetMap data served by OpenFreeMap (tiles.openfreemap.org). &quot;Contour lines&quot; are computed on your device from the elevation tiles of AWS Terrain Tiles (Amazon S3, based on open elevation data). Each of these servers receives your IP address and the area of the map you look at (the tiles requested), like any web server; never your account or your name.</p>
   <p>Tides are calculated on your device from the constants of about 3,600 stations that ship inside the app: nothing is requested from the internet to calculate them. The fishing places (from OpenStreetMap, ODbL license) also ship inside the app.</p>
   <p>The sea data (current, waves and wind) is downloaded several times a day by a function on our server (Supabase) from HYCOM and NOAA (with PacIOOS) and left as images in public storage; the app downloads those images from our server and works out what happens at each point on your device. Your position is not sent for that.</p>
@@ -119,7 +120,7 @@
   <table>
     <thead><tr><th scope="col">Service</th><th scope="col">What for</th><th scope="col">What it receives</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Apple MapKit</th><td>Apple&#x27;s map and satellite imagery on iPhone, iPad and Mac; town and road names</td><td>Map requests, the area viewed and the IP address; no account or identifier of ours</td></tr>
+      <tr><th scope="row">Apple MapKit</th><td>Apple&#x27;s map and satellite imagery on iPhone, iPad and Mac; town and road names; place search</td><td>Map requests, the area viewed, the search text and the IP address; no account or identifier of ours</td></tr>
       <tr><th scope="row">OpenFreeMap (OpenStreetMap data)</th><td>Rivers and lakes and Trails and tracks layers</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
       <tr><th scope="row">AWS Terrain Tiles (Amazon S3)</th><td>Elevation data for the contour lines</td><td>The tiles requested (area and zoom) and the IP address; never an account or a name</td></tr>
       <tr><th scope="row">Supabase (our server)</th><td>Processed sea data and species recorded near a point</td><td>The request; for species, the coordinates of the point; no name</td></tr>

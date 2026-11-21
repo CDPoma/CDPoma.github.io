@@ -110,6 +110,7 @@
 
   <h2>El mapa, las mareas y el mar</h2>
   <p>En iPhone, iPad y Mac, los mapas usan el mapa de Apple (MapKit), con su foto de satélite en 3D. Apple recibe las peticiones del mapa, la zona que estás mirando y tu dirección IP. No le damos ninguna cuenta ni identificador nuestro, y FishSpot no le envía tus spots ni tus capturas: las chinchetas las coloca la app sobre el mapa en tu dispositivo.</p>
+  <p>La búsqueda de lugares del buscador del mapa («Buscar») también usa Apple MapKit: Apple recibe el texto que escribes (no se envía si son coordenadas), la zona del mapa que estás viendo y tu dirección IP, sin ninguna cuenta ni identificador nuestro. Los spots que buscas por su nombre se filtran en tu dispositivo y no salen de él.</p>
   <p>Encima del mapa hay capas que enciendes o apagas. «Pueblos y carreteras» son los nombres del propio mapa de Apple. «Ríos y lagos» y «Sendas y pistas» usan datos de OpenStreetMap servidos por OpenFreeMap (tiles.openfreemap.org). Las «Curvas de nivel» se calculan en tu dispositivo a partir del relieve de AWS Terrain Tiles (Amazon S3, con datos de relieve abiertos). Cada uno de estos servidores recibe tu dirección IP y la zona del mapa que miras (las teselas que se piden), como cualquier servidor web; nunca tu cuenta ni tu nombre.</p>
   <p>Las mareas se calculan en tu dispositivo con las constantes de unas 3.600 estaciones que van dentro de la app: no se pide nada a internet para calcularlas. Los lugares de pesca (de OpenStreetMap, licencia ODbL) también van dentro de la app.</p>
   <p>Los datos del mar (corriente, oleaje y viento) los baja varias veces al día una función de nuestro servidor (Supabase) desde HYCOM y NOAA (con PacIOOS) y los deja como imágenes en un almacenamiento público; la app descarga esas imágenes de nuestro servidor y calcula en tu dispositivo lo que pasa en cada punto. Tu posición no se envía para eso.</p>
@@ -119,7 +120,7 @@
   <table>
     <thead><tr><th scope="col">Servicio</th><th scope="col">Para qué</th><th scope="col">Qué recibe</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Apple MapKit</th><td>Mapa y foto de satélite de Apple en iPhone, iPad y Mac; nombres de pueblos y carreteras</td><td>Peticiones del mapa, zona que se mira y dirección IP; sin cuenta ni identificador nuestro</td></tr>
+      <tr><th scope="row">Apple MapKit</th><td>Mapa y foto de satélite de Apple en iPhone, iPad y Mac; nombres de pueblos y carreteras; búsqueda de lugares</td><td>Peticiones del mapa, zona que se mira, texto buscado y dirección IP; sin cuenta ni identificador nuestro</td></tr>
       <tr><th scope="row">OpenFreeMap (datos de OpenStreetMap)</th><td>Capas Ríos y lagos y Sendas y pistas</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
       <tr><th scope="row">AWS Terrain Tiles (Amazon S3)</th><td>Relieve para las curvas de nivel</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
       <tr><th scope="row">Supabase (nuestro servidor)</th><td>Datos del mar ya procesados y especies registradas cerca de un punto</td><td>La petición; para las especies, las coordenadas del punto; sin tu nombre</td></tr>
