@@ -337,4 +337,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/goldspot/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/goldspot/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/soporte.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/support.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/privacidad.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/fishspot/privacy.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/fishspot/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/privacidad.html"/>
+  </url>
 </urlset>
