@@ -379,4 +379,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/fishspot/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/fishspot/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/soporte.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/support.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/privacidad.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/birdspot/privacy.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/privacidad.html"/>
+  </url>
 </urlset>

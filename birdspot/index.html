@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BirdSpot: identificar aves con IA y mapa de observación</title>
+<meta name="description" content="Descubre qué aves puedes ver hoy cerca de ti, identifica un pájaro con una foto y encuentra observatorios y ZEPA en un mapa de satélite. iPhone, iPad y Mac.">
+<link rel="canonical" href="https://cdpoma.github.io/birdspot/">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/birdspot/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2233">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="apple-itunes-app" content="app-id=6837658450">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BirdSpot">
+<meta property="og:url" content="https://cdpoma.github.io/birdspot/">
+<meta property="og:title" content="BirdSpot: las aves de hoy cerca de ti y qué pájaro es con una foto">
+<meta property="og:description" content="Qué aves puedes ver hoy en tu zona, identificación con IA desde una foto, mapa de satélite con observatorios y ZEPA, diario con tu lista de vida y amigos.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://cdpoma.github.io/birdspot/img/og-es.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BirdSpot: las aves de hoy cerca de ti, identificar con una foto y mapa de observatorios">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BirdSpot: las aves de hoy cerca de ti y qué pájaro es con una foto">
+<meta name="twitter:description" content="Qué aves puedes ver hoy en tu zona, identificación con IA desde una foto, mapa de satélite con observatorios y ZEPA, diario con tu lista de vida y amigos.">
+<meta name="twitter:image" content="https://cdpoma.github.io/birdspot/img/og-es.jpg">
+<meta name="twitter:image:alt" content="BirdSpot: las aves de hoy cerca de ti, identificar con una foto y mapa de observatorios">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/birdspot/#pagina",
+      "url": "https://cdpoma.github.io/birdspot/",
+      "name": "BirdSpot: identificar aves con IA y mapa de observación",
+      "description": "Descubre qué aves puedes ver hoy cerca de ti, identifica un pájaro con una foto y encuentra observatorios y ZEPA en un mapa de satélite. iPhone, iPad y Mac.",
+      "inLanguage": "es",
+      "dateModified": "2026-11-21",
+      "about": {
+        "@id": "https://cdpoma.github.io/birdspot/#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/birdspot/#app"
+      },
+      "significantLink": [
+        "https://cdpoma.github.io/birdspot/soporte.html",
+        "https://cdpoma.github.io/birdspot/privacidad.html",
+        "https://apps.apple.com/app/id6837658450"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/birdspot/#app",
+      "name": "BirdSpot",
+      "alternateName": [
+        "BirdSpot: Identificar aves"
+      ],
+      "url": "https://cdpoma.github.io/birdspot/",
+      "applicationCategory": "ReferenceApplication",
+      "applicationSubCategory": "Observación de aves, identificación de aves y mapa de observatorios",
+      "operatingSystem": "iOS, iPadOS, macOS (Apple silicon)",
+      "softwareRequirements": "iOS o iPadOS 15 o posterior; en Mac, un Mac con chip de Apple; conexión a internet",
+      "availableOnDevice": "iPhone, iPad, Mac (Apple silicon)",
+      "softwareVersion": "1.0.0",
+      "inLanguage": [
+        "es",
+        "es-419",
+        "en",
+        "pt-BR",
+        "de",
+        "fr",
+        "it"
+      ],
+      "dateModified": "2026-11-21",
+      "description": "BirdSpot es una app de observación de aves para iPhone, iPad y Mac con chip de Apple. Te dice qué aves se pueden ver hoy en tu zona según la época del año, identifica con IA el ave de una foto y enseña en un mapa de satélite de Apple los observatorios de aves y las ZEPA de la Red Natura 2000. Guarda tus avistamientos en un diario con tu lista de vida y compártelos con tus amigos. Nunca publica dónde anidan las aves ni dónde viven las especies más amenazadas.",
+      "keywords": "observación de aves, identificar aves, ornitología, lista de vida, observatorios de aves, ZEPA, Red Natura 2000, aves de la zona, avistamientos",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Aficionados a la observación de aves y a la ornitología"
+      },
+      "featureList": [
+        "Las aves de hoy, cerca de ti: La pantalla Hoy enseña las aves de tu zona con su nombre en tu idioma, su nombre científico y su ilustración, y pone delante las de este mes: en paso, llegando ahora, residentes o invernantes. Salen de registros públicos de GBIF de la celda (unos 25 km) donde estás o de la zona que dejaste en el mapa. Al tocar un ave ves su ficha: en qué meses se ve, las fotos que ha compartido la gente y cómo observarla sin molestar.",
+        "Qué ave es, con una foto: Haz la foto o elígela de la galería: la IA da el nombre común y el científico con su porcentaje de confianza, y avisa si no está segura. Añade los rasgos que se ven, las aves con las que se puede confundir y cómo distinguirlas, su protección en España según el Catálogo Español de Especies Amenazadas y un consejo ético. Si en la foto hay un nido o un pollo, te pide que no te acerques y guarda el sitio solo para ti.",
+        "El mapa de las aves, en satélite 3D: Sobre el satélite de Apple en 3D se encienden o apagan capas: Observatorios y torres de observación de aves (casi 8.000, de OpenStreetMap, en 26 países europeos), ZEPA de la Red Natura 2000 (Agencia Europea de Medio Ambiente) con su aviso de cría y drones, y Aves de la zona: la ilustración del ave más fácil de ver en cada zona este mes, con un «+» que abre las fotos que ha compartido la gente allí y el resto de aves. Mantén pulsado un punto para ver sus aves, guardarlo como spot o ir hasta allí.",
+        "Tu diario y tu lista de vida: Cada avistamiento se guarda con su foto, la especie, la fecha y el lugar. Tu lista de vida reúne las especies distintas que has visto, con el primer día de cada una. Tus spots, que son privados, se guardan con el GPS o en el mapa, y «Ir» te lleva con un mapa y una brújula con el rumbo y la distancia.",
+        "Amigos y muro de avistamientos: Añade amigos con un código, sin correo ni contraseña: solo un nombre. En el muro ves los avistamientos de todos, de tus amigos o los tuyos. Al guardar un avistamiento eliges quién ve dónde lo viste: solo tú, tus amigos o todos. Cualquiera puede denunciar un avistamiento o bloquear a su autor.",
+        "Seguro para las aves: Las especies en peligro de extinción no salen nunca con su lugar y las vulnerables solo con una zona aproximada de unos 10 km. El sitio de un nido o de un pollo no se comparte, y un aviso ético recuerda cómo observar: de lejos, sin reclamos ni cebos y sin drones donde hay restricciones."
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "BirdSpot",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Gratis, con un banner y un vídeo corto antes de cada identificación.",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "BirdSpot Pro mensual",
+          "price": "1.99",
+          "priceCurrency": "EUR",
+          "description": "Quita el banner y el vídeo antes de cada identificación. 7 días de prueba gratis si aún no lo has probado.",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "ES"
+          },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "1.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M",
+            "unitCode": "MON"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "BirdSpot Pro anual",
+          "price": "14.99",
+          "priceCurrency": "EUR",
+          "description": "Quita el banner y el vídeo antes de cada identificación. 7 días de prueba gratis si aún no lo has probado.",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "ES"
+          },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "14.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y",
+            "unitCode": "ANN"
+          }
+        }
+      ],
+      "installUrl": "https://apps.apple.com/app/id6837658450",
+      "sameAs": [
+        "https://apps.apple.com/app/id6837658450"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria",
+        "email": "gabrielmicovictoria@gmail.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria",
+        "email": "gabrielmicovictoria@gmail.com"
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://cdpoma.github.io/birdspot/soporte.html"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/birdspot/#pagina"
+      },
+      "image": "https://cdpoma.github.io/birdspot/icon.png"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/birdspot/#faq",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué app dice qué aves puedes ver hoy cerca de ti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BirdSpot, para iPhone, iPad y Mac con chip de Apple. Su pantalla Hoy enseña las aves de tu zona según la época del año, con su nombre en tu idioma, y pone delante las que están en paso, llegando ahora, residentes o invernantes este mes. Los datos son registros públicos de GBIF de una celda de unos 25 km: donde hay pocos registros, la lista puede ser corta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo saber qué pájaro es con una foto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con el botón Identificar de BirdSpot: haces la foto o eliges una de la galería y la inteligencia artificial (Claude, de Anthropic) devuelve el nombre común y el científico del ave más probable con su porcentaje de confianza, y avisa si es baja. Añade los rasgos que se ven, las aves parecidas y cómo distinguirlas. Es una ayuda y puede equivocarse. Conviene que se vea el ave entera, con el pico y el plumaje claros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿BirdSpot identifica el canto de las aves?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. En esta versión identifica solo por foto. No analiza sonidos ni grabaciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿BirdSpot publica dónde están los nidos o las aves amenazadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Las especies en peligro de extinción no salen nunca con su lugar y las vulnerables solo con una zona aproximada de unos 10 km. Si una foto muestra un nido o un pollo, la app pide no acercarse y guarda el lugar solo para ti, y esos avistamientos solo los ve su autor. En la ficha de una especie, «dónde se ha visto» son zonas, nunca puntos exactos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde encuentro observatorios de aves y zonas de protección en un mapa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En la pestaña Mapa de BirdSpot, sobre el satélite de Apple en 3D: la capa Observatorios muestra casi 8.000 observatorios y torres de observación de aves de OpenStreetMap en 26 países europeos, y la capa ZEPA y Red Natura 2000 enseña las zonas de protección de aves de la Unión Europea (Agencia Europea de Medio Ambiente), con un aviso sobre la época de cría y los drones. Toca un observatorio para guardarlo como spot o ir hasta él."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿BirdSpot es gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La descarga es gratis y todas las funciones están en la versión gratis, con un banner y un vídeo corto antes de cada identificación. BirdSpot Pro lo quita, por suscripción mensual o anual, con 7 días de prueba gratis si aún no lo has probado. En España cuesta 1,99 € al mes o 14,99 € al año; en otros países se ve el precio local en la App Store. Con Pro o sin él, hay un máximo de 40 identificaciones al día por cuenta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿BirdSpot funciona fuera de España?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Las aves de tu zona salen de registros públicos de GBIF de cualquier lugar, aunque donde hay pocos registros la lista es corta. La protección legal que muestra la app es la de España, las ZEPA y la Red Natura 2000 son de la Unión Europea y los observatorios, de 26 países europeos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito crear una cuenta o dar mi correo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay correo ni contraseña. Hoy y el mapa se usan sin nombre. Para identificar, guardar avistamientos o spots y tener amigos, la app te pide solo un nombre visible. Puedes borrar tu cuenta con todos tus datos desde Amigos, en el engranaje de Ajustes."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#1C1530; --surface:#2A2145; --ink:#F6F1FA; --ink-light:#B9AECB;
+    --accent:#FF5C8A; --olive:#FFC145; --line:#43355F; --card:#2A2145;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--olive)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#3A2A12;border:2px solid #FFC145;border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:#FFC145}
+  a{color:#9FD3FF}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .tiendas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:0 0 .4rem}
+  .tiendas img{display:block;height:48px;width:auto}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .capturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:0 0 1rem}
+  .capturas figure{margin:0}
+  .capturas img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  .capturas figcaption{font-size:.85rem;color:var(--ink-light);margin-top:.4rem;text-align:center}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+</style>
+</head>
+<body>
+<main class="wrap ancha">
+  <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
+  <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
+  <h1>Qué aves ver hoy cerca de ti y qué pájaro es con una foto</h1>
+  <p class="sub">Qué aves puedes ver hoy en tu zona, identificación con IA desde una foto, mapa de satélite con observatorios y ZEPA, diario con tu lista de vida y amigos.<br><small>Actualizado el <time datetime="2026-11-21">21 de noviembre de 2026</time></small></p>
+  <div class="tiendas">
+    <a href="https://apps.apple.com/app/id6837658450"><img src="img/app-store-es-es.svg" alt="Descárgalo en el App Store" width="120" height="40"></a>
+  </div>
+  <p class="nota">iPhone, iPad y Mac con chip de Apple, en el App Store</p>
+  <nav class="enlaces" aria-label="Ayuda y soporte"><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a></nav>
+  <nav class="toc" aria-label="En esta página">En esta página: <a href="#que-es">Qué es</a> · <a href="#funciones">Lo que consigues</a> · <a href="#precio">Gratis y Pro</a> · <a href="#plataformas">Plataformas</a> · <a href="#datos">Tus datos</a> · <a href="#no-hace">Qué no hace</a> · <a href="#faq">Preguntas frecuentes</a></nav>
+
+  <h2 id="que-es">Qué es BirdSpot</h2>
+  <div class="card">
+    <p>BirdSpot es una app de observación de aves para iPhone, iPad y Mac con chip de Apple. Te dice qué aves se pueden ver hoy en tu zona según la época del año, identifica con IA el ave de una foto y enseña en un mapa de satélite de Apple los observatorios de aves y las ZEPA de la Red Natura 2000. Guarda tus avistamientos en un diario con tu lista de vida y compártelos con tus amigos. Nunca publica dónde anidan las aves ni dónde viven las especies más amenazadas.</p>
+  </div>
+  <div class="aviso">
+    <p>Importante: la IA puede equivocarse y la información de protección que da la app es la de España. Observa a distancia, sin reclamos ni cebos, y consulta las normas del espacio que visites: la época de cría, los drones y los accesos cambian según el lugar.</p>
+  </div>
+
+  <h2 id="funciones">Lo que consigues</h2>
+  <ul>
+    <li><strong>Las aves de hoy, cerca de ti:</strong> La pantalla Hoy enseña las aves de tu zona con su nombre en tu idioma, su nombre científico y su ilustración, y pone delante las de este mes: en paso, llegando ahora, residentes o invernantes. Salen de registros públicos de GBIF de la celda (unos 25 km) donde estás o de la zona que dejaste en el mapa. Al tocar un ave ves su ficha: en qué meses se ve, las fotos que ha compartido la gente y cómo observarla sin molestar.</li>
+    <li><strong>Qué ave es, con una foto:</strong> Haz la foto o elígela de la galería: la IA da el nombre común y el científico con su porcentaje de confianza, y avisa si no está segura. Añade los rasgos que se ven, las aves con las que se puede confundir y cómo distinguirlas, su protección en España según el Catálogo Español de Especies Amenazadas y un consejo ético. Si en la foto hay un nido o un pollo, te pide que no te acerques y guarda el sitio solo para ti.</li>
+    <li><strong>El mapa de las aves, en satélite 3D:</strong> Sobre el satélite de Apple en 3D se encienden o apagan capas: Observatorios y torres de observación de aves (casi 8.000, de OpenStreetMap, en 26 países europeos), ZEPA de la Red Natura 2000 (Agencia Europea de Medio Ambiente) con su aviso de cría y drones, y Aves de la zona: la ilustración del ave más fácil de ver en cada zona este mes, con un «+» que abre las fotos que ha compartido la gente allí y el resto de aves. Mantén pulsado un punto para ver sus aves, guardarlo como spot o ir hasta allí.</li>
+    <li><strong>Tu diario y tu lista de vida:</strong> Cada avistamiento se guarda con su foto, la especie, la fecha y el lugar. Tu lista de vida reúne las especies distintas que has visto, con el primer día de cada una. Tus spots, que son privados, se guardan con el GPS o en el mapa, y «Ir» te lleva con un mapa y una brújula con el rumbo y la distancia.</li>
+    <li><strong>Amigos y muro de avistamientos:</strong> Añade amigos con un código, sin correo ni contraseña: solo un nombre. En el muro ves los avistamientos de todos, de tus amigos o los tuyos. Al guardar un avistamiento eliges quién ve dónde lo viste: solo tú, tus amigos o todos. Cualquiera puede denunciar un avistamiento o bloquear a su autor.</li>
+    <li><strong>Seguro para las aves:</strong> Las especies en peligro de extinción no salen nunca con su lugar y las vulnerables solo con una zona aproximada de unos 10 km. El sitio de un nido o de un pollo no se comparte, y un aviso ético recuerda cómo observar: de lejos, sin reclamos ni cebos y sin drones donde hay restricciones.</li>
+  </ul>
+
+  <h2 id="precio">Gratis y Pro</h2>
+  <p>Gratis, con un banner y un vídeo corto a pantalla completa antes de cada identificación. Todas las funciones están en la versión gratis. BirdSpot Pro, por suscripción mensual o anual, quita el banner y el vídeo; el precio se ve en la app antes de pagar, con 7 días de prueba gratis si aún no lo has probado. Hay un máximo de 40 identificaciones al día por cuenta, con Pro o sin él. En España, Pro cuesta 1,99 € al mes o 14,99 € al año.</p>
+
+  <h2 id="plataformas">Plataformas</h2>
+  <p>Funciona en iPhone, iPad y en los Mac con chip de Apple, en español (España y Latinoamérica), inglés, portugués de Brasil, alemán, francés e italiano. Necesita conexión a internet para cargar las aves de tu zona, identificar y compartir. En el Mac no hay brújula: la pantalla «Ir» te da el rumbo y la distancia.</p>
+
+  <h2 id="datos">Tus datos</h2>
+  <p>La cuenta es solo un nombre visible, sin correo ni contraseña, y la pantalla Hoy y el mapa funcionan sin nombre. La foto que usas para identificar no se guarda si no guardas el avistamiento. Los spots son privados hasta que los compartas. La foto, la especie y la fecha de un avistamiento guardado se ven en el muro, y tú eliges quién ve el lugar; nidos, pollos y especies en peligro de extinción no se publican. Tu posición exacta no sale del móvil para ver las aves de tu zona. Lee todo en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <h2 id="no-hace">Qué no hace</h2>
+  <ul>
+    <li>No identifica el canto ni ningún sonido: solo fotos.</li>
+    <li>No dice dónde anidan las aves ni dónde viven las especies más amenazadas.</li>
+    <li>La protección que enseña es la de España (Catálogo Español de Especies Amenazadas); no incluye la de otros países.</li>
+    <li>No sustituye a una guía de campo ni a un ornitólogo: la IA puede equivocarse, sobre todo con fotos lejanas o borrosas.</li>
+    <li>No sustituye a las normas del espacio que visites: los límites de las ZEPA y la época de cría los marcan las autoridades.</li>
+    <li>Sin conexión no identifica ni carga las aves de una zona nueva; enseña lo último que se guardó.</li>
+    <li>Por ahora solo está en el App Store, para iPhone, iPad y Mac con chip de Apple.</li>
+  </ul>
+
+  <h2 id="faq">Preguntas frecuentes</h2>
+  <details><summary>¿Qué app dice qué aves puedes ver hoy cerca de ti?</summary><p>BirdSpot, para iPhone, iPad y Mac con chip de Apple. Su pantalla Hoy enseña las aves de tu zona según la época del año, con su nombre en tu idioma, y pone delante las que están en paso, llegando ahora, residentes o invernantes este mes. Los datos son registros públicos de GBIF de una celda de unos 25 km: donde hay pocos registros, la lista puede ser corta.</p></details>
+  <details><summary>¿Cómo puedo saber qué pájaro es con una foto?</summary><p>Con el botón Identificar de BirdSpot: haces la foto o eliges una de la galería y la inteligencia artificial (Claude, de Anthropic) devuelve el nombre común y el científico del ave más probable con su porcentaje de confianza, y avisa si es baja. Añade los rasgos que se ven, las aves parecidas y cómo distinguirlas. Es una ayuda y puede equivocarse. Conviene que se vea el ave entera, con el pico y el plumaje claros.</p></details>
+  <details><summary>¿BirdSpot identifica el canto de las aves?</summary><p>No. En esta versión identifica solo por foto. No analiza sonidos ni grabaciones.</p></details>
+  <details><summary>¿BirdSpot publica dónde están los nidos o las aves amenazadas?</summary><p>No. Las especies en peligro de extinción no salen nunca con su lugar y las vulnerables solo con una zona aproximada de unos 10 km. Si una foto muestra un nido o un pollo, la app pide no acercarse y guarda el lugar solo para ti, y esos avistamientos solo los ve su autor. En la ficha de una especie, «dónde se ha visto» son zonas, nunca puntos exactos.</p></details>
+  <details><summary>¿Dónde encuentro observatorios de aves y zonas de protección en un mapa?</summary><p>En la pestaña Mapa de BirdSpot, sobre el satélite de Apple en 3D: la capa Observatorios muestra casi 8.000 observatorios y torres de observación de aves de OpenStreetMap en 26 países europeos, y la capa ZEPA y Red Natura 2000 enseña las zonas de protección de aves de la Unión Europea (Agencia Europea de Medio Ambiente), con un aviso sobre la época de cría y los drones. Toca un observatorio para guardarlo como spot o ir hasta él.</p></details>
+  <details><summary>¿BirdSpot es gratis?</summary><p>Sí. La descarga es gratis y todas las funciones están en la versión gratis, con un banner y un vídeo corto antes de cada identificación. BirdSpot Pro lo quita, por suscripción mensual o anual, con 7 días de prueba gratis si aún no lo has probado. En España cuesta 1,99 € al mes o 14,99 € al año; en otros países se ve el precio local en la App Store. Con Pro o sin él, hay un máximo de 40 identificaciones al día por cuenta.</p></details>
+  <details><summary>¿BirdSpot funciona fuera de España?</summary><p>Sí. Las aves de tu zona salen de registros públicos de GBIF de cualquier lugar, aunque donde hay pocos registros la lista es corta. La protección legal que muestra la app es la de España, las ZEPA y la Red Natura 2000 son de la Unión Europea y los observatorios, de 26 países europeos.</p></details>
+  <details><summary>¿Necesito crear una cuenta o dar mi correo?</summary><p>No hay correo ni contraseña. Hoy y el mapa se usan sin nombre. Para identificar, guardar avistamientos o spots y tener amigos, la app te pide solo un nombre visible. Puedes borrar tu cuenta con todos tus datos desde Amigos, en el engranaje de Ajustes.</p></details>
+
+  <p class="contacto">¿Dudas o fallos? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> o mira la página de <a href="soporte.html">Ayuda y soporte</a>.</p>
+  <div class="foot">BirdSpot · Gabriel Micó Victoria<br><a href="soporte.html">Ayuda y soporte</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="en.html" hreflang="en">English</a></div>
+</main>
+</body>
+</html>
