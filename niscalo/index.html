@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Níscalo: identificar setas con IA y mapa de spots de monte</title>
-<meta name="description" content="Haz una foto y mira qué seta puede ser, con sus parecidos peligrosos. Guarda tus spots en un mapa con altitud y umbría. iPhone, iPad y Mac.">
+<meta name="description" content="Haz una foto y mira qué seta puede ser, con sus parecidos peligrosos. Mapa 3D con pinares donde puede haber níscalos y aviso opcional. iPhone, iPad y Mac.">
 <link rel="canonical" href="https://cdpoma.github.io/niscalo/">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/niscalo/">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/niscalo/en.html">
@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Níscalo">
 <meta property="og:url" content="https://cdpoma.github.io/niscalo/">
 <meta property="og:title" content="Níscalo: identifica setas con una foto y guarda tus spots">
-<meta property="og:description" content="Especie probable, confianza y parecidos peligrosos. Mapa de montaña con altitud, pendiente y umbría, y brújula hasta tu spot.">
+<meta property="og:description" content="Especie probable y parecidos peligrosos. Mapa 3D con los pinares en naranja, curvas de nivel y aviso opcional cuando el tiempo acompaña a los níscalos.">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://cdpoma.github.io/niscalo/icon.png">
@@ -29,7 +29,7 @@
 <meta property="og:image:alt" content="Níscalo: identifica setas con una foto y guarda tus spots en un mapa de monte">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Níscalo: identifica setas con una foto y guarda tus spots">
-<meta name="twitter:description" content="Especie probable, confianza y parecidos peligrosos. Mapa de montaña con altitud, pendiente y umbría, y brújula hasta tu spot.">
+<meta name="twitter:description" content="Especie probable y parecidos peligrosos. Mapa 3D con los pinares en naranja, curvas de nivel y aviso opcional cuando el tiempo acompaña a los níscalos.">
 <meta name="twitter:image" content="https://cdpoma.github.io/niscalo/icon.png">
 <meta name="twitter:image:alt" content="Níscalo: identifica setas con una foto y guarda tus spots en un mapa de monte">
 <script type="application/ld+json">
@@ -41,9 +41,9 @@
       "@id": "https://cdpoma.github.io/niscalo/#pagina",
       "url": "https://cdpoma.github.io/niscalo/",
       "name": "Níscalo: identificar setas con IA y mapa de spots de monte",
-      "description": "Haz una foto y mira qué seta puede ser, con sus parecidos peligrosos. Guarda tus spots en un mapa con altitud y umbría. iPhone, iPad y Mac.",
+      "description": "Haz una foto y mira qué seta puede ser, con sus parecidos peligrosos. Mapa 3D con pinares donde puede haber níscalos y aviso opcional. iPhone, iPad y Mac.",
       "inLanguage": "es",
-      "dateModified": "2026-11-20",
+      "dateModified": "2026-11-21",
       "about": {
         "@id": "https://cdpoma.github.io/niscalo/#app"
       },
@@ -80,9 +80,9 @@
         "fr",
         "it"
       ],
-      "dateModified": "2026-11-20",
-      "description": "Níscalo es una app para iPhone, iPad y Mac con chip de Apple que identifica setas a partir de una foto con inteligencia artificial y guarda tus sitios en un mapa de montaña. No sustituye a un micólogo.",
-      "keywords": "identificar setas, identificador de setas con IA, hongos, micología, mapa de montaña, spots, umbría, brújula, parecidos peligrosos",
+      "dateModified": "2026-11-21",
+      "description": "Níscalo es una app para iPhone, iPad y Mac con chip de Apple que identifica setas a partir de una foto con inteligencia artificial, marca en el mapa los pinares donde puede haber níscalos y guarda tus sitios en un mapa de satélite en 3D. En iPhone y iPad, puede avisarte la víspera. No sustituye a un micólogo.",
+      "keywords": "identificar setas, identificador de setas con IA, hongos, micología, mapa de montaña, pinares, aviso de níscalos, spots, umbría, brújula, parecidos peligrosos",
       "audience": {
         "@type": "Audience",
         "audienceType": "Aficionados a la micología y a salir al monte"
@@ -90,10 +90,12 @@
       "featureList": [
         "Una foto, una especie probable: Haz la foto con la cámara o elígela de la galería y mira el nombre común y científico de la especie más probable, con su porcentaje de confianza. Si la confianza es baja, la app te dice que no te fíes.",
         "Sabe con qué se confunde: Cada resultado enseña los rasgos que se ven en la foto y las especies parecidas, también las peligrosas, y una comestibilidad orientativa (comestible, con precaución, no comestible, tóxica, mortal o desconocida) siempre con el aviso de seguridad a la vista.",
-        "Un mapa para leer el monte: Tres capas: Satélite, con las fotos aéreas de Apple; Montaña, solo relieve, con sombreado, colores por altura y curvas de nivel con cotas; y Calles.",
-        "Altitud, pendiente y umbría: En la capa Montaña, el punto bajo la cruz te da la altitud, la pendiente y si es umbría o solana, con datos de relieve SRTM de la NASA.",
+        "Un mapa para leer el monte: El satélite de Apple en 3D, con cinco capas encima que enciendes o apagas: Pueblos y carreteras, Sendas y pistas, Arroyos y fuentes, Curvas de nivel y Pinares. Todos los controles están en el botón redondo de abajo a la derecha. Mantén pulsado un punto del mapa para guardar un spot ahí o ver cómo llegar.",
+        "Pinares donde puede haber níscalos: La capa Pinares, encendida desde el principio, pinta en naranja las zonas de coníferas de Europa, que es donde crece el níscalo. Usa datos de Copernicus (2018): marca coníferas, no setas, y fuera de Europa no tiene datos. Es una pista, no una garantía.",
+        "Aviso: mañana puede haber níscalos: En iPhone y iPad, si lo activas en Ajustes, Níscalo te avisa la víspera cuando la lluvia y la temperatura acompañan en tu zona, en la temporada de otoño de tu hemisferio. Es una estimación con datos del tiempo, no una previsión segura: no avisa con helada ni si mañana va a llover fuerte, y como mucho manda un aviso cada 3 días.",
+        "Altitud, pendiente y umbría: Con las Curvas de nivel encendidas, el punto bajo la cruz te da la altitud, la pendiente y si es umbría o solana, con datos de relieve de la NASA (SRTM).",
         "Tus spots, solo tuyos: Guarda un sitio con el GPS o tocando el mapa. Es privado hasta que decidas compartirlo con tus amigos, en el muro o por mensaje con otra app. La pantalla «Ir» te lleva con mapa y brújula, con rumbo y distancia.",
-        "Hallazgos y amigos, con tu permiso: Publica lo que encuentras con foto, descripción y ubicación y elige quién ve el sitio: solo tú, tus amigos o todos. Añade amigos con un código. Sin correo ni contraseña: solo un nombre."
+        "Hallazgos y amigos, con tu permiso: Publica lo que encuentras con foto, descripción y ubicación y elige quién ve el sitio: solo tú, tus amigos o todos. Los hallazgos tienen su propia pestaña, junto al Mapa. Añade amigos con un código. Sin correo ni contraseña: solo un nombre."
       ],
       "isAccessibleForFree": true,
       "offers": [
@@ -190,10 +192,18 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué mapa usa y qué enseña la capa Montaña?",
+          "name": "¿Qué mapa usa y qué capas tiene?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El mapa es el de Apple, con tres capas: Satélite, Montaña y Calles. Montaña muestra solo relieve: sombreado, colores por altura y curvas de nivel con cotas. Al apuntar con la cruz, da la altitud, la pendiente y si el punto es umbría o solana, con datos de relieve SRTM de la NASA."
+            "text": "En iPhone, iPad y Mac el mapa es el de Apple, con su foto de satélite en 3D. Encima enciendes o apagas cinco capas: Pueblos y carreteras, Sendas y pistas, Arroyos y fuentes, Curvas de nivel y Pinares (esta última, encendida de fábrica, solo tiene datos en Europa). Con las curvas encendidas, al apuntar con la cruz te da la altitud, la pendiente y si el punto es umbría o solana, con datos de relieve de la NASA (SRTM). Todos los controles, también el botón 3D, están en el botón redondo de abajo a la derecha. Si mantienes pulsado un punto del mapa se abre su ficha, con «Guardar spot aquí» y «Cómo llegar»."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el aviso de níscalos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es opcional, solo en iPhone y iPad, y se activa en Ajustes (Níscalo te pide permiso de notificaciones en ese momento). Una vez al día, nuestro servidor consulta el tiempo de tu zona (aproximada, de unos 10 km) en Apple WeatherKit y, si la lluvia reciente y las temperaturas son las que suelen acompañar a los níscalos, te manda «Mañana puede haber níscalos». Es una estimación, no una previsión segura: no avisa con helada ni si mañana va a llover fuerte, y manda como mucho un aviso cada 3 días. Puedes desactivarlo cuando quieras."
           }
         },
         {
@@ -268,7 +278,7 @@
   <a class="idioma" href="en.html" hreflang="en" lang="en">English</a>
   <div class="marca"><img src="icon.png" alt="" width="64" height="64"></div>
   <h1>Identifica setas con una foto y guarda tus spots en un mapa de monte</h1>
-  <p class="sub">Especie probable, confianza y parecidos peligrosos. Mapa de montaña con altitud, pendiente y umbría, y brújula hasta tu spot.<br><small>Actualizado el <time datetime="2026-11-20">20 de noviembre de 2026</time></small></p>
+  <p class="sub">Especie probable y parecidos peligrosos. Mapa 3D con los pinares en naranja, curvas de nivel y aviso opcional cuando el tiempo acompaña a los níscalos.<br><small>Actualizado el <time datetime="2026-11-21">21 de noviembre de 2026</time></small></p>
   <div class="tiendas">
     <a href="https://apps.apple.com/app/id6837037270"><img src="img/app-store-es-es.svg" alt="Descárgalo en el App Store" width="120" height="40"></a>
   </div>
@@ -278,7 +288,7 @@
 
   <h2 id="que-es">Qué es Níscalo</h2>
   <div class="card">
-    <p>Níscalo es una app para iPhone, iPad y Mac con chip de Apple que identifica setas a partir de una foto con inteligencia artificial y guarda tus sitios en un mapa de montaña. No sustituye a un micólogo.</p>
+    <p>Níscalo es una app para iPhone, iPad y Mac con chip de Apple que identifica setas a partir de una foto con inteligencia artificial, marca en el mapa los pinares donde puede haber níscalos y guarda tus sitios en un mapa de satélite en 3D. En iPhone y iPad, puede avisarte la víspera. No sustituye a un micólogo.</p>
   </div>
   <div class="aviso">
     <p>Importante: Níscalo no sustituye a un micólogo experto. La identificación con IA es orientativa y puede equivocarse. No comas nunca una seta solo porque lo diga una app: si tienes la más mínima duda, no la comas y consulta a un experto o a una sociedad micológica.</p>
@@ -288,10 +298,12 @@
   <ul>
     <li><strong>Una foto, una especie probable:</strong> Haz la foto con la cámara o elígela de la galería y mira el nombre común y científico de la especie más probable, con su porcentaje de confianza. Si la confianza es baja, la app te dice que no te fíes.</li>
     <li><strong>Sabe con qué se confunde:</strong> Cada resultado enseña los rasgos que se ven en la foto y las especies parecidas, también las peligrosas, y una comestibilidad orientativa (comestible, con precaución, no comestible, tóxica, mortal o desconocida) siempre con el aviso de seguridad a la vista.</li>
-    <li><strong>Un mapa para leer el monte:</strong> Tres capas: Satélite, con las fotos aéreas de Apple; Montaña, solo relieve, con sombreado, colores por altura y curvas de nivel con cotas; y Calles.</li>
-    <li><strong>Altitud, pendiente y umbría:</strong> En la capa Montaña, el punto bajo la cruz te da la altitud, la pendiente y si es umbría o solana, con datos de relieve SRTM de la NASA.</li>
+    <li><strong>Un mapa para leer el monte:</strong> El satélite de Apple en 3D, con cinco capas encima que enciendes o apagas: Pueblos y carreteras, Sendas y pistas, Arroyos y fuentes, Curvas de nivel y Pinares. Todos los controles están en el botón redondo de abajo a la derecha. Mantén pulsado un punto del mapa para guardar un spot ahí o ver cómo llegar.</li>
+    <li><strong>Pinares donde puede haber níscalos:</strong> La capa Pinares, encendida desde el principio, pinta en naranja las zonas de coníferas de Europa, que es donde crece el níscalo. Usa datos de Copernicus (2018): marca coníferas, no setas, y fuera de Europa no tiene datos. Es una pista, no una garantía.</li>
+    <li><strong>Aviso: mañana puede haber níscalos:</strong> En iPhone y iPad, si lo activas en Ajustes, Níscalo te avisa la víspera cuando la lluvia y la temperatura acompañan en tu zona, en la temporada de otoño de tu hemisferio. Es una estimación con datos del tiempo, no una previsión segura: no avisa con helada ni si mañana va a llover fuerte, y como mucho manda un aviso cada 3 días.</li>
+    <li><strong>Altitud, pendiente y umbría:</strong> Con las Curvas de nivel encendidas, el punto bajo la cruz te da la altitud, la pendiente y si es umbría o solana, con datos de relieve de la NASA (SRTM).</li>
     <li><strong>Tus spots, solo tuyos:</strong> Guarda un sitio con el GPS o tocando el mapa. Es privado hasta que decidas compartirlo con tus amigos, en el muro o por mensaje con otra app. La pantalla «Ir» te lleva con mapa y brújula, con rumbo y distancia.</li>
-    <li><strong>Hallazgos y amigos, con tu permiso:</strong> Publica lo que encuentras con foto, descripción y ubicación y elige quién ve el sitio: solo tú, tus amigos o todos. Añade amigos con un código. Sin correo ni contraseña: solo un nombre.</li>
+    <li><strong>Hallazgos y amigos, con tu permiso:</strong> Publica lo que encuentras con foto, descripción y ubicación y elige quién ve el sitio: solo tú, tus amigos o todos. Los hallazgos tienen su propia pestaña, junto al Mapa. Añade amigos con un código. Sin correo ni contraseña: solo un nombre.</li>
   </ul>
 
   <h2 id="precio">Gratis y Pro</h2>
@@ -301,7 +313,7 @@
   <p>Funciona en iPhone, iPad y en los Mac con chip de Apple. Necesita conexión a internet. En el Mac no hay brújula: la pantalla «Ir» te da el rumbo y la distancia.</p>
 
   <h2 id="datos">Tus datos</h2>
-  <p>La cuenta es solo un nombre, sin correo ni contraseña. Tus spots son privados hasta que los compartas, y en cada hallazgo eliges quién ve el sitio. La foto con la que identificas no se guarda si no publicas el hallazgo. Lo cuenta todo la <a href="privacidad.html">política de privacidad</a>.</p>
+  <p>La cuenta es solo un nombre, sin correo ni contraseña. Tus spots son privados hasta que los compartas, y en cada hallazgo eliges quién ve el sitio. La foto con la que identificas no se guarda si no publicas el hallazgo. Si activas el aviso opcional de níscalos, guardamos una zona aproximada de unos 10 km y el token de notificaciones de tu aparato, ligados a tu cuenta. Lo cuenta todo la <a href="privacidad.html">política de privacidad</a>.</p>
 
   <h2 id="no-hace">Qué no hace</h2>
   <ul>
@@ -309,13 +321,15 @@
     <li>No sustituye a un micólogo experto ni a una sociedad micológica.</li>
     <li>No identifica sin conexión a internet.</li>
     <li>No publica tus spots: son privados hasta que los compartas con amigos o en el muro.</li>
+    <li>No garantiza que haya setas: Pinares marca coníferas y el aviso es una estimación con datos del tiempo.</li>
     <li>No enseña dónde encontraste un hallazgo a nadie más que a quien tú elijas: solo tú, tus amigos o todos.</li>
   </ul>
 
   <h2 id="faq">Preguntas frecuentes</h2>
   <details><summary>¿Níscalo me dice si puedo comerme una seta?</summary><p>No. Níscalo da una pista, no una autorización: propone la especie más probable con su confianza y una comestibilidad orientativa, y puede equivocarse. No sustituye a un micólogo experto. No comas nunca una seta solo porque lo diga una app; si tienes la más mínima duda, no la comas y consulta a un experto o a una sociedad micológica.</p></details>
   <details><summary>¿Cómo identifica Níscalo una seta?</summary><p>Con una foto que haces con la cámara o eliges de la galería. La inteligencia artificial devuelve el nombre común y científico de la especie más probable, su porcentaje de confianza, los rasgos que se ven y las especies con las que se puede confundir, también las peligrosas. Conviene fotografiar el sombrero, las láminas y el pie. Hay un máximo de 40 análisis al día por cuenta y hace falta conexión a internet.</p></details>
-  <details><summary>¿Qué mapa usa y qué enseña la capa Montaña?</summary><p>El mapa es el de Apple, con tres capas: Satélite, Montaña y Calles. Montaña muestra solo relieve: sombreado, colores por altura y curvas de nivel con cotas. Al apuntar con la cruz, da la altitud, la pendiente y si el punto es umbría o solana, con datos de relieve SRTM de la NASA.</p></details>
+  <details><summary>¿Qué mapa usa y qué capas tiene?</summary><p>En iPhone, iPad y Mac el mapa es el de Apple, con su foto de satélite en 3D. Encima enciendes o apagas cinco capas: Pueblos y carreteras, Sendas y pistas, Arroyos y fuentes, Curvas de nivel y Pinares (esta última, encendida de fábrica, solo tiene datos en Europa). Con las curvas encendidas, al apuntar con la cruz te da la altitud, la pendiente y si el punto es umbría o solana, con datos de relieve de la NASA (SRTM). Todos los controles, también el botón 3D, están en el botón redondo de abajo a la derecha. Si mantienes pulsado un punto del mapa se abre su ficha, con «Guardar spot aquí» y «Cómo llegar».</p></details>
+  <details><summary>¿Cómo funciona el aviso de níscalos?</summary><p>Es opcional, solo en iPhone y iPad, y se activa en Ajustes (Níscalo te pide permiso de notificaciones en ese momento). Una vez al día, nuestro servidor consulta el tiempo de tu zona (aproximada, de unos 10 km) en Apple WeatherKit y, si la lluvia reciente y las temperaturas son las que suelen acompañar a los níscalos, te manda «Mañana puede haber níscalos». Es una estimación, no una previsión segura: no avisa con helada ni si mañana va a llover fuerte, y manda como mucho un aviso cada 3 días. Puedes desactivarlo cuando quieras.</p></details>
   <details><summary>¿Mis spots son privados?</summary><p>Sí. Un spot es solo tuyo hasta que decides compartirlo con tus amigos, publicarlo en el muro o mandarlo por mensaje con otra app. En los hallazgos eliges quién ve dónde los encontraste: solo tú, tus amigos o todos. La cuenta es solo un nombre, sin correo ni contraseña.</p></details>
   <details><summary>¿Es gratis y en qué aparatos funciona?</summary><p>Se descarga gratis y funciona en iPhone, iPad y Mac con chip de Apple. La versión gratuita lleva un banner y un vídeo corto antes de cada análisis de foto. Níscalo Pro los quita: 1,99 € al mes o 14,99 € al año en España, con 7 días de prueba gratis si aún no lo has probado. En el Mac no hay brújula y, si no tiene cámara, se identifica con una foto de la galería.</p></details>
 
