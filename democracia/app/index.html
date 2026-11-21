@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover: la app pinta bajo el notch y la barra de inicio; las zonas seguras las pone el CSS. Sin user-scalable=no: el zoom es un derecho de accesibilidad. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="description" content="Lee cada ley en lenguaje claro, quién la propuso y quién la aprobó, qué opina la gente y los resultados de las elecciones. Iniciativa ciudadana no oficial: los resultados no tienen validez legal." />
+    <title>Democracia: lee, entiende y opina sobre las leyes y las elecciones</title>
+    <!--
+      Fuentes (§16.19): las dos de uso diario (Inter para la interfaz y los títulos, Literata para el texto largo; subconjunto
+      latino) se piden ya, en paralelo con el JS, en vez de esperar a que el CSS las descubra. `crossorigin` es obligatorio en
+      las fuentes aunque sean del mismo origen: sin él el navegador descarga la fuente dos veces. El `@font-face` de
+      src/index.css lleva `font-display: swap`, así que el texto sale al momento con la del sistema y cambia al llegar la buena.
+      El subconjunto latino ampliado no se precarga: solo hace falta para algunos caracteres y lo pide el CSS cuando aparecen.
+    -->
+    <link rel="preload" href="/democracia/app/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/democracia/app/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <script type="module" crossorigin src="/democracia/app/assets/index-DDouzM_f.js"></script>
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/dist-BD91r3g6.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/esm-29NTMFk8.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/Pagina-DsdcRsws.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/analiticas-BAB5NzK0.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/web-BVuexkiy.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/pais-D3AkZMO3.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/api-Bl5qRDy_.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/Estado-D1xuAR80.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/enlaces-BuAgjtn3.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/useCompartir-BoaxfgNi.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/compras-DazKOdf9.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/anuncios-BZb3bKw_.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/tienda-D40x7u9y.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/recibos-BHsbAI3f.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/errores-BYwQCr6a.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/bytes-P3ItzrsT.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/sha2-Ll6ASXRu.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/cripto-PJSl7DbS.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/dispositivo-DSV8FUJk.js">
+    <link rel="modulepreload" crossorigin href="/democracia/app/assets/useTrasVotar-BWUih16r.js">
+    <link rel="stylesheet" crossorigin href="/democracia/app/assets/index-C1naLxBk.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="/democracia/app/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/democracia/app/apple-touch-icon.png" />
+    <link rel="canonical" href="https://cdpoma.github.io/democracia/app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Democracia" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Democracia: lee, entiende y opina sobre las leyes y las elecciones" />
+    <meta property="og:description" content="Lee cada ley en lenguaje claro, quién la propuso y quién la aprobó, qué opina la gente y los resultados de las elecciones. Iniciativa ciudadana no oficial: los resultados no tienen validez legal." />
+    <meta property="og:url" content="https://cdpoma.github.io/democracia/app/" />
+    <meta property="og:image" content="https://cdpoma.github.io/democracia/app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Democracia: lee, entiende y opina sobre las leyes y las elecciones" />
+    <meta name="twitter:description" content="Lee cada ley en lenguaje claro, quién la propuso y quién la aprobó, qué opina la gente y los resultados de las elecciones. Iniciativa ciudadana no oficial: los resultados no tienen validez legal." />
+    <meta name="twitter:image" content="https://cdpoma.github.io/democracia/app/og.png" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-K5oO0qBuE2HtdOZD3MRbMnlmaXu6X7/uKns46y8orGc='; worker-src 'self' blob:; connect-src 'self' https://rvtyzxvkdzpinspvsvxr.supabase.co; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  </head>
+  <body class="bg-fondo">
+    <!--
+      Pantalla de carga: el mismo color de fondo que el arranque nativo (#0b1220), sin logo ni texto más que el porcentaje.
+      El porcentaje lo mueve `window.__cargaPaso(pct)`, que llama `src/main.tsx` en pasos reales. Llega al 100, o se quita
+      como tope a los 6 s desde que carga el HTML: nunca bloquea la app aunque algún paso no termine.
+    -->
+    <div id="carga" aria-hidden="true" style="position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;background:#0b1220;transition:opacity 250ms ease;">
+      <span id="carga-pct" style="font:500 14px/1 system-ui,-apple-system,sans-serif;color:#cbd5e1;font-variant-numeric:tabular-nums;">0%</span>
+    </div>
+    <script>
+      (function () {
+        var capa = document.getElementById('carga');
+        var texto = document.getElementById('carga-pct');
+        var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var mostrado = 0;
+        var meta = 0;
+        var reloj = null;
+        var cerrada = false;
+        if (quieto) capa.style.transition = 'none';
+
+        function pintar() {
+          texto.textContent = mostrado + '%';
+        }
+        function quitar() {
+          if (cerrada) return;
+          cerrada = true;
+          clearInterval(reloj);
+          capa.style.opacity = '0';
+          setTimeout(function () { capa.remove(); }, quieto ? 0 : 250);
+        }
+        // El número sube de uno en uno hasta el último paso real: nunca se adelanta a lo que de verdad ha pasado.
+        function tic() {
+          if (mostrado < meta) {
+            mostrado += 1;
+            pintar();
+          }
+          if (mostrado >= 100) return quitar();
+          if (mostrado >= meta) {
+            clearInterval(reloj);
+            reloj = null;
+          }
+        }
+        window.__cargaPaso = function (pct) {
+          if (cerrada) return;
+          var v = Math.min(100, Math.max(0, Math.round(pct)));
+          if (v > meta) meta = v;
+          if (quieto) {
+            mostrado = meta;
+            pintar();
+            if (mostrado >= 100) quitar();
+            return;
+          }
+          if (!reloj) reloj = setInterval(tic, 8);
+        };
+        // Tope de seguridad: pase lo que pase con la app, la pantalla se quita a los 6 s.
+        setTimeout(quitar, 6000);
+      })();
+    </script>
+    <div id="root"></div>
+  </body>
+</html>

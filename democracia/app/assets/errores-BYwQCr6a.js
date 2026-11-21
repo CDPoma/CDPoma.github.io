@@ -1,0 +1,1 @@
+var e=class extends Error{codigo;constructor(e,t=e){super(t),this.name=`ErrorNativo`,this.codigo=e}};function t(t,n,r){let i=t?.code,a=t instanceof Error?t.message:r;return new e(typeof i==`string`&&Object.prototype.hasOwnProperty.call(n,i)?n[i]:r,a)}export{t as n,e as t};

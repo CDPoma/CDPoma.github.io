@@ -79,6 +79,7 @@
   </div>
 
   <div class="acciones">
+    <a class="boton" id="web" href="../app/">Votar aquí en la web</a>
     <a class="boton secundario" id="abrir" href="democracia://v/" hidden>Abrir en la app</a>
   </div>
   <p class="nota" id="sin-app">¿No tienes la app? Descárgala y vuelve a abrir este enlace:</p>
@@ -90,7 +91,7 @@
 (function () {
   var API = 'https://rvtyzxvkdzpinspvsvxr.supabase.co/functions/v1/democracia-api/v1';
   var TIPO = 'v';
-  var TEXTOS = {"es": {"tipo_v": "Norma", "tipo_e": "Elección", "h1_v": "Te invitan a votar esta norma", "h1_e": "Te invitan a votar en esta elección", "sub_v": "Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.", "sub_e": "Alguien quiere saber a quién votarías. Vota en Democracia y que se oiga la voz del pueblo.", "pocas": "En pocas palabras", "abrir": "Abrir en la app", "descargar": "Descargar en el App Store", "sin_app": "¿No tienes la app? Descárgala y vuelve a abrir este enlace:", "cargando": "Cargando…", "no_hay": "No encontramos este tema, pero puedes ver todos en la app.", "sufijo": "Democracia"}, "en": {"tipo_v": "Law", "tipo_e": "Election", "h1_v": "You are invited to vote on this law", "h1_e": "You are invited to vote in this election", "sub_v": "Someone wants to know what you think of this law or decree. Vote in Democracia and let the people’s voice be heard.", "sub_e": "Someone wants to know who you would vote for. Vote in Democracia and let the people’s voice be heard.", "pocas": "In a few words", "abrir": "Open in the app", "descargar": "Download on the App Store", "sin_app": "Don’t have the app? Download it and open this link again:", "cargando": "Loading…", "no_hay": "We could not find this topic, but you can see them all in the app.", "sufijo": "Democracia"}};
+  var TEXTOS = {"es": {"tipo_v": "Norma", "tipo_e": "Elección", "h1_v": "Te invitan a votar esta norma", "h1_e": "Te invitan a votar en esta elección", "sub_v": "Alguien quiere saber qué opinas de esta ley o decreto. Vota en Democracia y que se oiga la voz del pueblo.", "sub_e": "Alguien quiere saber a quién votarías. Vota en Democracia y que se oiga la voz del pueblo.", "pocas": "En pocas palabras", "abrir": "Abrir en la app", "web": "Votar aquí en la web", "descargar": "Descargar en el App Store", "sin_app": "¿Prefieres la app de iPhone? Descárgala y vuelve a abrir este enlace:", "cargando": "Cargando…", "no_hay": "No encontramos este tema, pero puedes ver todos en la app.", "sufijo": "Democracia"}, "en": {"tipo_v": "Law", "tipo_e": "Election", "h1_v": "You are invited to vote on this law", "h1_e": "You are invited to vote in this election", "sub_v": "Someone wants to know what you think of this law or decree. Vote in Democracia and let the people’s voice be heard.", "sub_e": "Someone wants to know who you would vote for. Vote in Democracia and let the people’s voice be heard.", "pocas": "In a few words", "abrir": "Open in the app", "web": "Vote here on the web", "descargar": "Download on the App Store", "sin_app": "Prefer the iPhone app? Download it and open this link again:", "cargando": "Loading…", "no_hay": "We could not find this topic, but you can see them all in the app.", "sufijo": "Democracia"}};
   var L = TEXTOS[(navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en'];
   var id = new URLSearchParams(location.search).get('id') || '';
   var valido = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
@@ -101,10 +102,12 @@
   $('h1').textContent = L['h1_' + TIPO];
   $('sub').textContent = L['sub_' + TIPO];
   $('abrir').textContent = L.abrir;
+  $('web').textContent = L.web;
   $('tienda').textContent = L.descargar;
   $('sin-app').textContent = L.sin_app;
   $('pocas-titulo').textContent = L.pocas;
   if (!valido) { $('titulo').parentNode.hidden = true; return; }
+  $('web').href = '../app/#/v/' + id;
 
   // 1) Abrir la app. Un iframe oculto (y no un cambio de la dirección de la página) para que, si la app no está instalada,
   //    Safari no enseñe un aviso de «dirección no válida»; con la app puesta, iOS pregunta si abrirla. El enlace «Abrir en la app»

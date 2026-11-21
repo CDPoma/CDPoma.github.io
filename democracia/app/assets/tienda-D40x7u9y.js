@@ -1,0 +1,1 @@
+var e=`com.democraciavoz.app`,t=`https://cdpoma.github.io/democracia/privacidad.html`;function n(){return`itms-apps://itunes.apple.com/app/id6837060680?action=write-review`}export{t as n,n as r,e as t};

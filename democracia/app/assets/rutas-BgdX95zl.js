@@ -1,0 +1,1 @@
+var e={lista:`/leyes`,ley:`/leyes/:id`};function t(e){return`/leyes/${encodeURIComponent(e)}`}function n(e){return`/v/${encodeURIComponent(e)}`}export{t as n,n as r,e as t};

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cdpoma.github.io/democracia/app/sitemap.xml

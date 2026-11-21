@@ -1,0 +1,1 @@
+var e=`https://apps.apple.com/app/id6837060680`;function t(){return`https://cdpoma.github.io/democracia/app`.replace(/\/+$/,``)||(typeof location<`u`?location.origin:``)}export{t as n,e as t};
