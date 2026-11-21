@@ -66,7 +66,7 @@
   <nav class="enlaces"><a href="./">Níscalo</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> Níscalo identifica setas a partir de una foto con inteligencia artificial, te deja guardar tus sitios (spots) en un mapa de montaña y publicar tus hallazgos. Para identificar, guardar spots o publicar necesitas una cuenta, que no lleva correo ni contraseña: es solo un nombre visible que eliges. El mapa y el muro se pueden ver sin cuenta. <strong>Tus spots son privados</strong> hasta que decidas compartirlos con tus amigos o en el muro. En cada hallazgo eliges quién ve dónde lo encontraste (solo tú, tus amigos o todos), pero <strong>la foto, la descripción y la especie probable de un hallazgo publicado son públicas</strong> para cualquier persona, también sin cuenta. La app muestra anuncios de Google AdMob y la suscripción Pro los quita. Las estadísticas de uso son anónimas.</p>
+    <p><strong>Resumen:</strong> Níscalo identifica setas a partir de una foto con inteligencia artificial, te deja guardar tus sitios (spots) en un mapa de satélite en 3D y publicar tus hallazgos. Para identificar, guardar spots o publicar necesitas una cuenta, que no lleva correo ni contraseña: es solo un nombre visible que eliges. El mapa y el muro se pueden ver sin cuenta. <strong>Tus spots son privados</strong> hasta que decidas compartirlos con tus amigos o en el muro. En cada hallazgo eliges quién ve dónde lo encontraste (solo tú, tus amigos o todos), pero <strong>la foto, la descripción y la especie probable de un hallazgo publicado son públicas</strong> para cualquier persona, también sin cuenta. Si activas el aviso opcional de níscalos, guardamos una zona aproximada de unos 10 km y el token de notificaciones de tu aparato, ligados a tu cuenta. La app muestra anuncios de Google AdMob y la suscripción Pro los quita. Las estadísticas de uso son anónimas.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -76,14 +76,14 @@
   <p>Para identificar, guardar spots, publicar, añadir amigos, denunciar o bloquear necesitas una cuenta. La cuenta no lleva correo ni contraseña: es una sesión anónima de Supabase con solo un <strong>nombre visible</strong> que eliges tú y que ven los demás en tus hallazgos, en los spots que compartas y en tus solicitudes de amistad. Te recomendamos un apodo y no tu nombre completo. Si borras la app, empiezas de cero, y puedes borrar tu cuenta en Ajustes → Borrar mi cuenta. Tu cuenta se guarda en Supabase, con servidores en la Unión Europea (Frankfurt).</p>
 
   <h2>Identificar una seta</h2>
-  <p>Cuando pulsas «Identificar», la app reduce la foto y la envía a nuestro servidor, y de ahí al servicio de inteligencia artificial de Anthropic (Claude). Si ese servicio no responde, la foto se envía al de Google (Gemini) para la misma tarea. Solo se usa para darte la identificación.</p>
+  <p>Cuando pulsas «Identificar», la app reduce la foto y la envía a nuestro servidor, y de ahí al servicio de inteligencia artificial de Anthropic (Claude). Solo se usa para darte la identificación.</p>
   <ul>
     <li><strong>No guardamos la foto ni el resultado</strong> si no publicas el hallazgo.</li>
     <li>Contamos cuántas identificaciones hace cada cuenta al día (el máximo es de 40 por cuenta y día), para aplicar el límite de uso. Ese contador no incluye la foto.</li>
   </ul>
 
   <h2>Ubicación y brújula</h2>
-  <p>Níscalo te pide permiso de ubicación solo cuando lo necesita: al guardar un spot con el GPS, al publicar un hallazgo con ubicación, al centrar el mapa en tu posición y en la pantalla «Ir», que usa tu posición y la brújula para llevarte hasta un sitio. <strong>Tu posición solo llega a nuestro servidor cuando guardas un spot o publicas un hallazgo con ubicación.</strong> La brújula, el rumbo y la distancia se calculan en tu dispositivo. Si no das el permiso, puedes marcar el sitio a mano en el mapa.</p>
+  <p>Níscalo te pide permiso de ubicación solo cuando lo necesita: al guardar un spot con el GPS, al publicar un hallazgo con ubicación, al centrar el mapa en tu posición y en la pantalla «Ir», que usa tu posición y la brújula para llevarte hasta un sitio. <strong>Tu posición solo llega a nuestro servidor cuando guardas un spot o publicas un hallazgo con ubicación</strong> y, si activas el aviso opcional de níscalos, una zona aproximada de unos 10 km (más abajo, «Avisos de níscalos»). La brújula, el rumbo y la distancia se calculan en tu dispositivo. Si no das el permiso, puedes marcar el sitio a mano en el mapa.</p>
 
   <h2>Tus spots</h2>
   <p>Un spot guarda su nombre, una nota opcional, sus coordenadas y si lo marcaste con el GPS o a mano en el mapa, ligados a tu cuenta en nuestro servidor. <strong>Un spot es privado: solo lo ves tú</strong>, hasta que decidas otra cosa:</p>
@@ -106,21 +106,31 @@
   </ul>
 
   <h2>El mapa y el relieve</h2>
-  <p>El mapa de Níscalo lo sirve Apple (MapKit JS). Para dibujarlo, Apple recibe las peticiones del mapa, la zona que estás mirando y tu dirección IP. No le damos ninguna cuenta ni identificador nuestro, y Níscalo no le envía tus spots ni tus hallazgos: las chinchetas las coloca la app sobre el mapa en tu dispositivo.</p>
-  <p>La capa Montaña dibuja el relieve en tu dispositivo con teselas de altura de AWS Terrain Tiles (Amazon S3), que usan datos SRTM de la NASA, y, mientras dibuja, con imágenes de relieve de la NASA (GIBS). Estos servicios reciben la petición de cada tesela (la zona y el nivel de zoom) y tu dirección IP, como cualquier servidor web. No reciben tu nombre ni ninguna cuenta nuestra.</p>
-  <p>Para que Apple cargue el mapa, la app pide a nuestro servidor (Supabase) un permiso temporal y de corta duración. Esa petición no lleva datos personales: ni tu nombre, ni tu ubicación, ni tus spots.</p>
-  <p>Si tocas «Cómo llegar en coche», la app abre tu aplicación de mapas con las coordenadas del sitio; a partir de ahí rige la política de privacidad de esa aplicación.</p>
+  <p>En iPhone, iPad y Mac, los mapas grandes (la pestaña Mapa y la pantalla «Ir») usan el mapa nativo de Apple (MapKit), con su foto de satélite en 3D, y los mapas pequeños (la ficha de un spot y la elección de un punto) usan el mapa de Apple para web (MapKit JS). Apple recibe las peticiones del mapa, la zona que estás mirando y tu dirección IP. No le damos ninguna cuenta ni identificador nuestro, y Níscalo no le envía tus spots ni tus hallazgos: las chinchetas las coloca la app sobre el mapa en tu dispositivo.</p>
+  <p>Encima del mapa hay cinco capas que enciendes o apagas. «Pueblos y carreteras» son los nombres del propio mapa de Apple. «Sendas y pistas» y «Arroyos y fuentes» usan datos de OpenStreetMap servidos por OpenFreeMap (tiles.openfreemap.org). Las «Curvas de nivel» se calculan en tu dispositivo a partir del relieve de AWS Terrain Tiles / Mapzen (Amazon S3, con datos SRTM de la NASA), y la pastilla de altitud, pendiente y umbría usa esos mismos datos de relieve. «Pinares» (encendida de serie) pinta en naranja las zonas de coníferas de Copernicus Land Monitoring Service (2018), servidas por la Agencia Europea de Medio Ambiente (image.discomap.eea.europa.eu); solo pide teselas dentro de Europa y con el mapa acercado, y no usa datos personales. Cada uno de estos servidores recibe tu dirección IP y la zona del mapa que miras (las teselas que se piden), como cualquier servidor web; nunca tu cuenta ni tu nombre.</p>
+  <p>En Android y en la web, el mapa usa en cambio la foto de satélite de Esri (World Imagery, servidor ibasemaps-api.arcgis.com, con una clave de API) y las mismas capas de OpenFreeMap y AWS. Esri también recibe tu dirección IP y la zona que miras, nunca tu cuenta ni tu nombre. La versión de Android aún no está en la tienda.</p>
+  <p>Para que Apple cargue el mapa para web (MapKit JS), la app pide a nuestro servidor (Supabase) un permiso temporal y de corta duración. Esa petición no lleva datos personales: ni tu nombre, ni tu ubicación, ni tus spots.</p>
+  <p>Si tocas «Cómo llegar» (en un spot, un hallazgo o la ficha de un punto del mapa que abres manteniendo pulsado) o «Cómo llegar en coche», la app abre tu aplicación de mapas con las coordenadas del sitio; a partir de ahí rige la política de privacidad de esa aplicación.</p>
   <div class="tabla">
   <table>
     <thead><tr><th scope="col">Servicio</th><th scope="col">Para qué</th><th scope="col">Qué recibe</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Apple MapKit JS</th><td>Imágenes y mapa (Satélite, Montaña, Calles)</td><td>Peticiones del mapa, zona que se mira, dirección IP; sin cuenta ni identificador nuestro</td></tr>
-      <tr><th scope="row">AWS Terrain Tiles (Amazon S3)</th><td>Teselas de altura para el relieve de la capa Montaña</td><td>Petición de cada tesela (zona y zoom) y dirección IP</td></tr>
-      <tr><th scope="row">NASA GIBS</th><td>Imágenes de relieve de fondo mientras se dibuja la capa Montaña</td><td>Petición de cada tesela (zona y zoom) y dirección IP</td></tr>
-      <tr><th scope="row">Supabase (nuestro servidor)</th><td>Permiso temporal para cargar el mapa de Apple</td><td>La petición, sin datos personales</td></tr>
+      <tr><th scope="row">Apple MapKit (nativo) y MapKit JS (web)</th><td>Mapa y foto de satélite de Apple en iPhone, iPad y Mac; nombres de pueblos y carreteras</td><td>Peticiones del mapa, zona que se mira y dirección IP; sin cuenta ni identificador nuestro</td></tr>
+      <tr><th scope="row">OpenFreeMap (datos de OpenStreetMap)</th><td>Capas Sendas y pistas y Arroyos y fuentes</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
+      <tr><th scope="row">AWS Terrain Tiles / Mapzen (Amazon S3)</th><td>Relieve para las curvas de nivel y para la altitud, pendiente y umbría</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
+      <tr><th scope="row">Agencia Europea de Medio Ambiente (Copernicus CLMS)</th><td>Capa Pinares: zonas de coníferas de Europa (2018)</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
+      <tr><th scope="row">Esri World Imagery (solo Android y web)</th><td>Foto de satélite en Android y en la web</td><td>Teselas que se piden (zona y zoom) y dirección IP; nunca cuenta ni nombre</td></tr>
+      <tr><th scope="row">Supabase (nuestro servidor)</th><td>Permiso temporal para cargar el mapa de Apple para web</td><td>La petición, sin datos personales</td></tr>
+      <tr><th scope="row">Apple WeatherKit y servicio de notificaciones push de Apple (APNs)</th><td>Aviso «Mañana puede haber níscalos», solo si lo activas: el tiempo de tu zona y el envío del aviso</td><td>WeatherKit: solo coordenadas de una zona de unos 10 km, desde nuestro servidor, sin cuenta ni datos personales. APNs: el token de notificaciones de tu aparato, para entregarte el aviso</td></tr>
     </tbody>
   </table>
   </div>
+
+  <h2>Avisos de níscalos (opcionales)</h2>
+  <p>En iPhone y iPad puedes activar en Ajustes el aviso «Mañana puede haber níscalos». Está desactivado de serie, y Níscalo te pide permiso de notificaciones solo cuando lo activas.</p>
+  <p>Para enviártelo guardamos en nuestro servidor (Supabase), ligados a tu cuenta, el token de notificaciones de tu aparato, tu idioma, tu huso horario y una zona aproximada de unos 10 km: la de tu spot más reciente o, si no tienes ninguno, la de tu última posición. La posición exacta nunca llega al servidor para este aviso.</p>
+  <p>Una vez al día, nuestro servidor consulta a Apple WeatherKit el tiempo de esa zona, sin cuenta ni datos personales, y decide si manda el aviso, como mucho uno cada 3 días. El envío pasa por el servicio de notificaciones push de Apple (APNs), que recibe el token de tu aparato.</p>
+  <p>Si desactivas el aviso, dejamos de consultar el tiempo de tu zona y de enviarte notificaciones, y el registro de tu aparato queda inactivo. Si borras tu cuenta, ese registro se borra del todo. No usamos estos datos para nada más.</p>
 
   <h2>Comprobar si hay una versión nueva</h2>
   <p>En iPhone y iPad, al arrancar la app pregunta a la App Store de Apple si hay una versión más reciente y, si hace falta actualizar, te lo dice. Para eso Apple recibe el identificador de la app y tu dirección IP, como cualquier servidor web.</p>
@@ -132,7 +142,7 @@
   <ul>
     <li><strong>Un hallazgo:</strong> bórralo desde su ficha. Se elimina junto con su foto y su ubicación.</li>
     <li><strong>Un spot:</strong> bórralo desde su ficha.</li>
-    <li><strong>Tu cuenta entera:</strong> Ajustes → Borrar mi cuenta. Se borran tu perfil, tus hallazgos con sus fotos y ubicaciones, tus spots, tus amistades y solicitudes, tus denuncias, tus bloqueos y el contador de uso. La cuenta de acceso también se borra, salvo que la uses en otra de nuestras apps.</li>
+    <li><strong>Tu cuenta entera:</strong> Ajustes → Borrar mi cuenta. Se borran tu perfil, tus hallazgos con sus fotos y ubicaciones, tus spots, tus amistades y solicitudes, tus denuncias, tus bloqueos, el contador de uso y el registro de tu aparato para los avisos. La cuenta de acceso también se borra, salvo que la uses en otra de nuestras apps.</li>
   </ul>
 
   <h2>Anuncios y compras</h2>
