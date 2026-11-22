@@ -1,0 +1,1 @@
+import{L as e,P as t}from"./Pagina-CYGI5Fbj.js";import{t as n}from"./compras-DazKOdf9.js";var r=e(t(),1);function i(){let[e,t]=(0,r.useState)(()=>n.esPro());return(0,r.useEffect)(()=>(t(n.esPro()),n.onProStatusChange(t)),[]),e}export{i as t};

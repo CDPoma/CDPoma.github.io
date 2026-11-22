@@ -1,1 +1,0 @@
-import{C as e,v as t}from"./Pagina-nCGfkn2B.js";function n(){let{idioma:n,locale:r}=t(),i=(t,...r)=>e(n,t,...r),a=e=>e===1?i(`resultados.cuentaUno`):i(`resultados.cuentaVarios`,e.toLocaleString(r));return{t:i,contar:a,porcentajeBase:(e,t)=>i(`resultados.porcentajeBase`,e,i(`resultados.basadoEn`,a(t))),locale:r,idioma:n}}export{n as t};
