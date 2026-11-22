@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimOs: mobile app simulator for Windows, phone and tablet</title>
+<meta name="description" content="A mobile simulator for Windows: your web or hybrid app on a simulated phone, tablet and desktop at exact app store sizes. Screenshots and videos with Pro.">
+<link rel="canonical" href="https://cdpoma.github.io/simos/en.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SimOs">
+<meta property="og:url" content="https://cdpoma.github.io/simos/en.html">
+<meta property="og:title" content="SimOs: the mobile simulator for your Windows PC">
+<meta property="og:description" content="Your app on a simulated phone, tablet and desktop at exact app store sizes. Screenshots, videos and mobile builds without a Mac with SimOs Pro, 7 days free.">
+<meta property="og:image" content="https://cdpoma.github.io/simos/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SimOs: a web app on a simulated phone and the toolbar with Screenshot, Record and Build">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SimOs: the mobile simulator for your Windows PC">
+<meta name="twitter:description" content="Your app on every device at exact app store sizes, with screenshots and videos for your listing.">
+<meta name="twitter:image" content="https://cdpoma.github.io/simos/og.jpg">
+<meta name="twitter:image:alt" content="SimOs: a web app on a simulated phone and the toolbar with Screenshot, Record and Build">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#5a3fd1; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+  .logo{width:72px;height:72px;border-radius:16px;display:block;margin:0 0 1rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/simos/#pagina",
+      "url": "https://cdpoma.github.io/simos/en.html",
+      "name": "SimOs: mobile app simulator for Windows, phone and tablet",
+      "description": "A mobile simulator for Windows: your web or hybrid app on a simulated phone, tablet and desktop at exact app store sizes. Screenshots and videos with Pro.",
+      "inLanguage": "en",
+      "dateModified": "2026-11-22",
+      "about": {
+        "@id": "https://cdpoma.github.io/simos/#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/simos/#app"
+      },
+      "significantLink": [
+        "https://cdpoma.github.io/simos/support.html",
+        "https://cdpoma.github.io/simos/privacy.html"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/simos/#app",
+      "name": "SimOs",
+      "alternateName": "SimOs: Mobile App Simulator",
+      "url": "https://cdpoma.github.io/simos/en.html",
+      "image": "https://cdpoma.github.io/simos/icon.png",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Mobile simulator and store tools for developers",
+      "operatingSystem": "Windows 10, Windows 11",
+      "softwareRequirements": "A 64-bit PC with Windows 10 or later; internet to download the phone engine the first time (176 MB) and to check the trial; for Android, the Android Studio emulator; for iPhone over USB, the USB driver that comes with iTunes or the Apple Devices app.",
+      "availableOnDevice": "PC",
+      "softwareVersion": "1.0",
+      "inLanguage": [
+        "es-ES",
+        "es-419",
+        "en-US",
+        "pt-BR",
+        "de-DE",
+        "fr-FR",
+        "it"
+      ],
+      "dateModified": "2026-11-22",
+      "description": "A mobile simulator for Windows: your web or hybrid app on a simulated phone, tablet and desktop at exact app store sizes. Screenshots and videos with Pro.",
+      "featureList": [
+        "Simulated 6.9″ phone, 13″ tablet and desktop at exact app store sizes",
+        "Phone engine (WebKit) for faithful screenshots, or the Chrome engine (Chromium)",
+        "Your mouse is your finger: tap, swipe with momentum and scroll; your keyboard types into the app",
+        "Live reload on save: open folders, web addresses and your own dev server",
+        "The official Android emulator inside SimOs, live",
+        "PNG screenshots at the exact store size (Pro)",
+        "15 to 30 second app preview videos at 30 fps, sized for the store (Pro)",
+        "Your real iPhone over USB: mirroring, logs and crash reports free; screenshots and video with Pro",
+        "Build your iPhone app in the cloud without a Mac and upload it to TestFlight from your PC (Pro)",
+        "Build for Android on your PC and open it in the emulator or on your phone (Pro)",
+        "Built-in step-by-step guide in seven languages"
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "SimOs (free)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Open and view your app on every device, rotate it, test it, use the Android emulator and view your iPhone over USB, at no cost and with no ads.",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "SimOs Pro monthly",
+          "price": "1.99",
+          "priceCurrency": "EUR",
+          "description": "Capture, Record, video preparation and Build. 7 days free. Price in the euro area.",
+          "eligibleRegion": [
+            {
+              "@type": "Country",
+              "name": "ES"
+            },
+            {
+              "@type": "Country",
+              "name": "FR"
+            },
+            {
+              "@type": "Country",
+              "name": "DE"
+            },
+            {
+              "@type": "Country",
+              "name": "IT"
+            },
+            {
+              "@type": "Country",
+              "name": "PT"
+            },
+            {
+              "@type": "Country",
+              "name": "IE"
+            },
+            {
+              "@type": "Country",
+              "name": "NL"
+            },
+            {
+              "@type": "Country",
+              "name": "AT"
+            },
+            {
+              "@type": "Country",
+              "name": "BE"
+            }
+          ],
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "1.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "SimOs Pro yearly",
+          "price": "14.99",
+          "priceCurrency": "EUR",
+          "description": "Capture, Record, video preparation and Build. 7 days free. Price in the euro area.",
+          "eligibleRegion": [
+            {
+              "@type": "Country",
+              "name": "ES"
+            },
+            {
+              "@type": "Country",
+              "name": "FR"
+            },
+            {
+              "@type": "Country",
+              "name": "DE"
+            },
+            {
+              "@type": "Country",
+              "name": "IT"
+            },
+            {
+              "@type": "Country",
+              "name": "PT"
+            },
+            {
+              "@type": "Country",
+              "name": "IE"
+            },
+            {
+              "@type": "Country",
+              "name": "NL"
+            },
+            {
+              "@type": "Country",
+              "name": "AT"
+            },
+            {
+              "@type": "Country",
+              "name": "BE"
+            }
+          ],
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "14.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y"
+          }
+        }
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://cdpoma.github.io/simos/support.html"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/simos/#pagina"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/simos/#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SimOs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A phone, tablet and desktop simulator for Windows 10 and 11: you open your web or hybrid app and see it on each device at the exact app store sizes, take the screenshots and videos for your listing and, with Pro, build it for mobile without a Mac."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which apps can I open in SimOs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Websites, PWAs and apps built with React, Vite, Capacitor, Ionic or Cordova, from the project folder or from a web address. Native iPhone apps (Swift) cannot run on Windows: SimOs tells you why and shows you the alternatives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I take screenshots at the size the app stores ask for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With the Capture button in SimOs Pro: it saves the exact store PNG (1320×2868 on the phone, 2064×2752 on the tablet, 2880×1800 on the desktop) to Pictures, in a folder named after your app and the date. Record makes the 15 to 30 second app preview video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see my iPhone on my PC without a Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Over USB, you see and control your iPhone with the mouse (iOS 27 or later), read its logs and download its crash reports, free. Screenshots and videos of the real phone are part of Pro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I build an iPhone app without owning a Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With SimOs Pro, yes: build in the cloud with your Codemagic (500 free minutes a month), GitHub or Xcode Cloud account, and SimOs uploads the app to TestFlight from your PC. You need an Apple Developer account. SimOs never turns on billing for any service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is free and what is Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Opening your app, viewing it on every device, rotating it, testing it, using the Android emulator and viewing your iPhone over USB are free, with no ads. SimOs Pro unlocks Capture, Record, video preparation and Build, and the first 7 days are free on your PC. It costs €1.99 a month or €14.99 a year in the euro area, paid through the Microsoft Store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data does SimOs keep?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your code stays on your PC unless you choose to build in your own GitHub or Codemagic account. Your keys are stored in Windows Credential Manager, and usage statistics, with no personal data, are only sent if you allow them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does my PC need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 64-bit PC with Windows 10 or later and internet to download the phone engine the first time (176 MB) and to check the trial. For Android, the Android Studio emulator; to see your iPhone over USB, the USB driver that comes with iTunes or the Apple Devices app."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
+  <img class="logo" src="icon.png" alt="" width="72" height="72">
+  <h1>SimOs: the mobile simulator for your Windows PC</h1>
+  <p class="sub">Open your web or hybrid app on a simulated phone, tablet and desktop at the exact sizes the app stores ask for, and take your listing screenshots and videos without leaving your PC.<br><small>Updated November 22, 2026</small></p>
+  <section id="descargar" aria-labelledby="descargar-h">
+    <h2 id="descargar-h">Download</h2>
+    <ul>
+      <li><strong>Microsoft Store</strong>: SimOs for Windows 10 and 11, with the Pro subscription inside the app.</li>
+      <li><strong>itch.io</strong>: the same app for Windows, free and with no ads, with the 7-day trial; Pro is only sold in the Microsoft Store copy.</li>
+    </ul>
+    <p class="nota">Today SimOs is for 64-bit Windows 10 and 11.</p>
+  </section>
+  <nav class="toc" aria-label="On this page"><a href="#que-es">What SimOs is</a> · <a href="#aparatos">Your app, as on the real device</a> · <a href="#fichas">Screenshots and videos for your listing (Pro)</a> · <a href="#iphone">Your real iPhone on your PC, no Mac needed</a> · <a href="#compilar">Build for mobile (Pro)</a> · <a href="#precio">Free and Pro</a> · <a href="#privacidad">Your information</a> · <a href="#requisitos">Requirements</a> · <a href="#faq">Frequently asked questions</a></nav>
+  <nav class="enlaces"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a></nav>
+  <h2 id="que-es">What SimOs is</h2>
+  <p>SimOs is a phone, tablet and desktop simulator for Windows 10 and 11. You open your project folder or a web address and see your app as it will look on each device, at the exact sizes the app stores ask for, and you use it with your mouse as if it were your finger. It is made for people shipping their first app and for teams who ship every week.</p>
+  <p>It works with websites, PWAs, React, Vite and Capacitor, Ionic or Cordova apps, and when you save a file the app reloads on its own. Native iPhone apps (Swift) cannot run on Windows: SimOs tells you why and shows you the alternatives. The built-in guide, in seven languages, helps you decide whether your app can be built with Capacitor or has to be native.</p>
+  <h2 id="aparatos">Your app, as on the real device</h2>
+  <ul>
+    <li>6.9″ phone (1320×2868), 13″ tablet (2064×2752) and desktop (2880×1800), in portrait and landscape, with light and dark mode and a clean 9:41 status bar.</li>
+    <li>Two engines: the phone engine (WebKit), the same one that renders websites and Capacitor apps on iPhone and iPad, and the Chrome engine (Chromium). WebKit downloads the first time (176 MB).</li>
+    <li>Your mouse is your finger: tap, swipe with momentum and scroll; your keyboard types into the app.</li>
+    <li>The official Android emulator inside SimOs, with a live picture, touch, keyboard and buttons (the Android Studio emulator is required).</li>
+    <li>If your project has its own dev server (npm run dev), SimOs shows you the command and only starts it if you say yes.</li>
+  </ul>
+  <h2 id="fichas">Screenshots and videos for your listing (Pro)</h2>
+  <ul>
+    <li>Capture: the exact PNG the store asks for, saved to Pictures in a folder named after your app and the date.</li>
+    <li>Record: a 15 to 30 second app preview at 30 fps, sized for the store (886×1920 on the phone, 1200×1600 on the tablet, 1920×1080 on the desktop).</li>
+    <li>Check for free whether your video meets the App Store rules; with Pro, SimOs converts it with ffmpeg and adds the audio track the store requires.</li>
+    <li>Screenshots and videos from the Android emulator and from your iPhone over USB as well.</li>
+  </ul>
+  <h2 id="iphone">Your real iPhone on your PC, no Mac needed</h2>
+  <p>Plug in your iPhone and see it on your PC: control it with the mouse (iOS 27 or later), read its logs and download its crash reports, free. With Pro, screenshots fitted to 1320×2868 and video of the phone.</p>
+  <p>It uses two open-source tools by other authors, go-ios and pymobiledevice3, which SimOs installs only if you say yes, verifying every download. You need the USB driver that comes with iTunes or the Apple Devices app and, for mirroring and video, Python 3.12 to 3.15.</p>
+  <h2 id="compilar">Build for mobile (Pro)</h2>
+  <ul>
+    <li>iPhone without a Mac: build in the cloud with your own Codemagic account (500 free minutes a month), GitHub or Xcode Cloud (if you set it up once on a Mac), and SimOs uploads the app to TestFlight from your PC with your App Store Connect key. An Apple Developer account is required.</li>
+    <li>Before it starts, SimOs warns you if a private GitHub repository would use paid minutes, and it never turns on billing for any service.</li>
+    <li>Android on your PC: installs what is missing with your permission, builds and opens the app in the emulator or on your phone over USB.</li>
+    <li>Free, no build needed: install a development app you already have on your iPhone over USB.</li>
+  </ul>
+  <h2 id="precio">Free and Pro</h2>
+  <ul>
+    <li><strong>Free, no ads</strong>: opening your app, viewing it on every device, rotating it, testing it, using the Android emulator and viewing your iPhone over USB.</li>
+    <li><strong>SimOs Pro</strong>: Capture, Record, video preparation and Build. Your first 7 days are free on your PC, counted from the first time you use it, with nothing to pay; the trial is checked online and there is one per computer (reinstalling does not renew it).</li>
+    <li><strong>Price</strong>: an in-app subscription paid through the Microsoft Store, monthly or yearly: €1.99 a month or €14.99 a year in the euro area. The Store shows the price in your currency before you pay.</li>
+  </ul>
+  <h2 id="privacidad">Your information</h2>
+  <ul>
+    <li>Your code stays on your PC unless you choose to build in your own GitHub or Codemagic account.</li>
+    <li>Your keys are stored in Windows Credential Manager.</li>
+    <li>Usage statistics with no personal data, only if you allow them.</li>
+    <li>Privacy policy: <a href="privacy.html">privacy.html</a>. Help and support: <a href="support.html">support.html</a>.</li>
+  </ul>
+  <h2 id="requisitos">Requirements</h2>
+  <ul>
+    <li>A 64-bit PC with Windows 10 or later. Internet to download the phone engine the first time (176 MB) and to check the trial.</li>
+    <li>Android: the Android Studio emulator. iPhone over USB: the USB driver that comes with iTunes or the Apple Devices app.</li>
+    <li>TestFlight: an Apple Developer account and an App Store Connect team key.</li>
+  </ul>
+  <h2 id="faq">Frequently asked questions</h2>
+  <details><summary>What is SimOs?</summary><p>A phone, tablet and desktop simulator for Windows 10 and 11: you open your web or hybrid app and see it on each device at the exact app store sizes, take the screenshots and videos for your listing and, with Pro, build it for mobile without a Mac.</p></details>
+  <details><summary>Which apps can I open in SimOs?</summary><p>Websites, PWAs and apps built with React, Vite, Capacitor, Ionic or Cordova, from the project folder or from a web address. Native iPhone apps (Swift) cannot run on Windows: SimOs tells you why and shows you the alternatives.</p></details>
+  <details><summary>How do I take screenshots at the size the app stores ask for?</summary><p>With the Capture button in SimOs Pro: it saves the exact store PNG (1320×2868 on the phone, 2064×2752 on the tablet, 2880×1800 on the desktop) to Pictures, in a folder named after your app and the date. Record makes the 15 to 30 second app preview video.</p></details>
+  <details><summary>Can I see my iPhone on my PC without a Mac?</summary><p>Yes. Over USB, you see and control your iPhone with the mouse (iOS 27 or later), read its logs and download its crash reports, free. Screenshots and videos of the real phone are part of Pro.</p></details>
+  <details><summary>Can I build an iPhone app without owning a Mac?</summary><p>With SimOs Pro, yes: build in the cloud with your Codemagic (500 free minutes a month), GitHub or Xcode Cloud account, and SimOs uploads the app to TestFlight from your PC. You need an Apple Developer account. SimOs never turns on billing for any service.</p></details>
+  <details><summary>What is free and what is Pro?</summary><p>Opening your app, viewing it on every device, rotating it, testing it, using the Android emulator and viewing your iPhone over USB are free, with no ads. SimOs Pro unlocks Capture, Record, video preparation and Build, and the first 7 days are free on your PC. It costs €1.99 a month or €14.99 a year in the euro area, paid through the Microsoft Store.</p></details>
+  <details><summary>What data does SimOs keep?</summary><p>Your code stays on your PC unless you choose to build in your own GitHub or Codemagic account. Your keys are stored in Windows Credential Manager, and usage statistics, with no personal data, are only sent if you allow them.</p></details>
+  <details><summary>What does my PC need?</summary><p>A 64-bit PC with Windows 10 or later and internet to download the phone engine the first time (176 MB) and to check the trial. For Android, the Android Studio emulator; to see your iPhone over USB, the USB driver that comes with iTunes or the Apple Devices app.</p></details>
+  <p class="nota">iPhone, iPad, iOS, App Store, TestFlight, Xcode and Android are trademarks of their owners; SimOs is not affiliated with them.</p>
+  <footer class="foot"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a> · <a href="index.html">Español</a></footer>
+</main>
+</body>
+</html>
