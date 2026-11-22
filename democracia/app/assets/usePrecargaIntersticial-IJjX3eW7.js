@@ -1,0 +1,1 @@
+import{L as e,P as t}from"./Pagina-nCGfkn2B.js";import{t as n}from"./anuncios-Cghe29O2.js";var r=e(t(),1);function i(e){(0,r.useEffect)(()=>{e&&n.precargarIntersticial()},[e])}export{i as t};

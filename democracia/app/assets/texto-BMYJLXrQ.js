@@ -1,1 +1,0 @@
-import{v as e}from"./Pagina-DsdcRsws.js";function t(){let{t}=e();return(e,...n)=>t(e,...n)}export{t};
