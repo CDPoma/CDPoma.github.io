@@ -421,4 +421,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/birdspot/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/birdspot/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/en.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/soporte.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/support.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/privacidad.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/simos/privacy.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/privacidad.html"/>
+  </url>
 </urlset>

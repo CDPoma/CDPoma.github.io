@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimOs: política de privacidad</title>
+<meta name="description" content="Qué datos trata SimOs y para qué: tus proyectos y claves se quedan en tu PC; prueba de 7 días con huella del equipo, estadísticas de Google Analytics solo con tu permiso, y GitHub, Codemagic y App Store Connect si los enlazas.">
+<link rel="canonical" href="https://cdpoma.github.io/simos/privacidad.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#5a3fd1; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+  .logo{width:72px;height:72px;border-radius:16px;display:block;margin:0 0 1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>SimOs</h1>
+  <p class="sub">Política de privacidad · Última actualización: 22/11/2026</p>
+  <nav class="enlaces"><a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> SimOs no tiene cuentas propias y no pide ni guarda datos personales. Tus proyectos, capturas, vídeos y claves se quedan en tu PC (las claves, en el Administrador de credenciales de Windows). Lo que sale del PC es poco y está aquí contado: la comprobación de la prueba gratis de 7 días con la huella del equipo, estadísticas anónimas de Google Analytics solo si das tu permiso, las descargas de las herramientas que SimOs necesita y los servicios que tú decidas enlazar (GitHub, Codemagic, App Store Connect). SimOs no muestra anuncios.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de SimOs. Para cualquier duda sobre tus datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Qué es SimOs</h2>
+  <p>Un simulador de móvil, tableta y ordenador para Windows 10 y 11: abres tu app web o híbrida y la ves en cada aparato con las medidas de las tiendas, sacas capturas y vídeos y, con Pro, la compilas para el móvil. Todo ocurre en tu PC; solo se conecta a internet para lo que se explica en esta página.</p>
+
+  <h2>Sin cuentas propias</h2>
+  <p>SimOs no pide registro, correo ni inicio de sesión propio, y no hay perfiles de usuario en ningún servidor de SimOs. Las únicas cuentas que usa son las tuyas, en los servicios que tú decidas enlazar (apartado 4).</p>
+
+  <h2>Qué sale de tu PC y para qué</h2>
+  <table>
+    <tr><th>Qué</th><th>Para qué</th><th>Quién lo recibe</th></tr>
+    <tr><td>Huella (hash) del equipo y plataforma</td><td>Comprobar la prueba gratis de 7 días</td><td>Un servidor de SimOs en Supabase (apartado 1)</td></tr>
+    <tr><td>Eventos de uso anónimos (solo si lo permites)</td><td>Saber qué funciones se usan</td><td>Google Analytics 4 (apartado 2)</td></tr>
+    <tr><td>Descargas de herramientas y del motor del teléfono</td><td>Instalar lo que SimOs necesita</td><td>Los servidores de descarga de cada herramienta (apartado 3)</td></tr>
+    <tr><td>Tu proyecto y tus claves de compilación</td><td>Compilar en la nube y subir a TestFlight, si tú lo eliges</td><td>GitHub, Codemagic y App Store Connect, con tus cuentas (apartado 4)</td></tr>
+    <tr><td>Compra y estado de la suscripción</td><td>Saber si tienes Pro</td><td>Microsoft Store (apartado 5)</td></tr>
+  </table>
+
+  <h2>En tu ordenador</h2>
+  <p>Tus proyectos, sus archivos, las capturas, los vídeos, los ajustes, la lista de recientes (carpetas y direcciones que abres) y un registro técnico sin datos personales (<code>registro.txt</code>, con «Abrir el registro» en la app) se guardan en tu PC. SimOs no los recibe. Para abrir una carpeta, SimOs la sirve con un servidor local que solo responde a tu propio ordenador (127.0.0.1) y no es visible desde la red. Si tu proyecto trae un servidor de desarrollo (por ejemplo <code>npm run dev</code>), SimOs te enseña la orden y solo la ejecuta si tú dices que sí.</p>
+  <p>Si abres una <strong>dirección web</strong>, SimOs la carga como lo haría un navegador: esa web recibe tu dirección IP y el identificador del aparato simulado, y la trata según su propia política.</p>
+  <p><strong>Tus claves</strong> (la clave de App Store Connect, los tokens de GitHub y de Codemagic) se guardan solo en el Administrador de credenciales de Windows. No están en los archivos de tu proyecto ni pasan por ningún servidor de SimOs.</p>
+
+  <h2>1. Prueba gratis de 7 días y huella del equipo</h2>
+  <p>Los primeros 7 días de SimOs Pro son gratis. Para que reinstalar no renueve la prueba, SimOs envía a un servidor de SimOs, alojado en Supabase (la función «simos-prueba»), estos datos:</p>
+  <ul>
+    <li>una <strong>huella criptográfica (SHA-256)</strong> del identificador del equipo mezclada con una sal propia de SimOs: el identificador en claro no sale de tu PC y no se puede recuperar a partir de la huella;</li>
+    <li>la plataforma (<code>windows</code>) y un número al azar de un solo uso (para que la respuesta no se pueda reutilizar).</li>
+  </ul>
+  <p>El servidor guarda la huella, la plataforma y la fecha de la primera vez, y responde con esa fecha firmada. No guarda nombres, correos ni cuentas. El código de la función no registra la dirección IP, las cabeceras ni el navegador; como cualquier alojamiento, Supabase puede tratar la IP para entregar la respuesta, según <a href="https://supabase.com/privacy" rel="noopener">su política de privacidad</a>. Si no hay conexión, no hay prueba (nunca se regalan días): el resto de SimOs sigue funcionando.</p>
+
+  <h2>2. Estadísticas de uso anónimas (Google Analytics 4)</h2>
+  <p>La primera vez, SimOs te pregunta si permites las estadísticas de uso. <strong>Sin tu «sí» no se envía nada</strong>. Puedes cambiarlo en Ajustes: al retirar el permiso se borran la cola de eventos y el identificador.</p>
+  <p>Si las permites, SimOs envía a Google Analytics 4 (flujo «SimOs Windows», identificador de medición <code>G-SWV544QV13</code>, mediante el Measurement Protocol, sin cookies) eventos como abrir la app, abrir una carpeta o una dirección (solo el tipo, nunca la ruta ni la dirección), arrancar un servidor de desarrollo, usar el simulador oficial, hacer una captura, grabar un vídeo, compilar y la compra de Pro con su importe y su moneda. Cada evento lleva el aparato o el modo usado, un identificador de sesión, la versión de SimOs, el idioma de la app y el canal de descarga (Microsoft Store o itch.io). El identificador de la instalación es un número al azar. No se envían rutas, nombres de carpetas, direcciones, contenido de proyectos ni datos personales, y se indica a Google que no los use para publicidad. Como en cualquier conexión a internet, Google ve la dirección IP desde la que se conecta y la trata según <a href="https://policies.google.com/privacy" rel="noopener">su política de privacidad</a>.</p>
+
+  <h2>3. Descargas de herramientas</h2>
+  <p>SimOs no incluye programas de otros autores: los descarga cuando hacen falta, con tu permiso, y comprueba cada descarga con su suma de verificación (SHA-256) antes de usarla; si no coincide, la borra. En esas descargas el servidor de origen ve tu dirección IP, y SimOs no le envía ningún dato tuyo:</p>
+  <ul>
+    <li><strong>Motor del teléfono (WebKit):</strong> la primera vez que lo usas (176 MB), desde los servidores de descarga de Playwright.</li>
+    <li><strong>Tu iPhone por cable:</strong> go-ios y pymobiledevice3 (GitHub y PyPI), y ffmpeg en Windows (GitHub), para ver el iPhone y preparar el vídeo de la tienda. Todo con el iPhone se hace por cable, en tu PC: nada de lo que ves en él, ni sus registros ni sus informes de fallos, sale a internet.</li>
+    <li><strong>Android:</strong> si compilas para Android y falta algo, y tú aceptas, SimOs descarga el JDK Temurin (Adoptium) y los componentes de Android de Google.</li>
+  </ul>
+
+  <h2>4. Servicios que tú enlazas</h2>
+  <p>Solo si tú lo eliges, para compilar una app de iPhone sin Mac, SimOs habla directamente desde tu PC con estos servicios, con tus cuentas y tus credenciales:</p>
+  <ul>
+    <li><strong>GitHub:</strong> se enlaza con un token personal o con el código de dispositivo de GitHub. SimOs crea un repositorio <em>privado</em> si no tienes uno, sube tu proyecto (sin forzar nada), escribe el flujo <code>.github/workflows/simos-ios.yml</code> y guarda en los secretos de ese repositorio, cifrados con su clave pública, la clave de App Store Connect y el equipo de firma, para que GitHub compile y firme. Lanza la compilación y sigue su avance. Ver <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener">la declaración de privacidad de GitHub</a>.</li>
+    <li><strong>Codemagic:</strong> con tu token personal, SimOs lanza compilaciones en tu cuenta (hasta 500 minutos gratis al mes), crea un grupo de variables cifradas con la clave de App Store Connect y descarga a tu PC el .ipa ya firmado. Ver <a href="https://codemagic.io/privacy" rel="noopener">la política de privacidad de Codemagic</a>.</li>
+    <li><strong>App Store Connect (Apple):</strong> con la clave de API que tú crees en tu cuenta de desarrollador (el archivo .p8 con su Key ID y su Issuer ID), SimOs firma las peticiones en tu PC, comprueba tu app y sube la compilación a TestFlight. También puede usar Xcode Cloud si ya lo preparaste una vez en un Mac. Ver <a href="https://www.apple.com/legal/privacy/" rel="noopener">la política de privacidad de Apple</a>.</li>
+  </ul>
+  <p>SimOs nunca activa la facturación de ningún servicio, y antes de lanzar te avisa si un repositorio privado de GitHub va a gastar minutos de pago. Puedes desenlazar cada cuenta cuando quieras y borrar el token de GitHub y de Codemagic y la clave de Apple desde la propia app; los secretos que ya estén en tu repositorio o en tu cuenta de Codemagic los borras tú desde su sitio web.</p>
+
+  <h2>5. Compras y suscripción</h2>
+  <p>SimOs Pro (1,99 € al mes o 14,99 € al año en España, con 7 días gratis) se paga con la Microsoft Store, que gestiona el pago. SimOs le pregunta a la Store, desde tu PC, si tu suscripción está activa, y no recibe tus datos de pago. La copia de itch.io no vende Pro: ahí solo funciona la prueba de 7 días.</p>
+
+  <h2>6. Desbloqueo con un anuncio por QR (apagado en esta versión)</h2>
+  <p>SimOs está preparado para que, sin Pro, se desbloqueen Captura, Grabar y Compilar viendo un anuncio recompensado en la app de iPhone de PureVibeCode, a través del servidor de desbloqueo de PureVibeCode («purevibe-desbloqueo», también en Supabase). <strong>En la versión 1.0 ese camino está apagado</strong>: SimOs no se conecta a ese servidor ni muestra anuncios, y esas funciones son solo de Pro (o de la prueba). Cuando se active, el ordenador enviará una huella de un secreto propio de esta instalación, el tipo de desbloqueo y los datos técnicos de la petición, con las mismas garantías que explica la <a href="../purevibecode/privacidad.html">política de privacidad de PureVibeCode</a> (sin nombres, correos ni dirección IP), y esta política se actualizará antes. «Ver en tu iPhone» (abrir tu proyecto en el iPhone por la misma wifi) tampoco está en esta versión.</p>
+
+  <h2>Lo que no hacemos</h2>
+  <ul>
+    <li>No usamos tus proyectos, capturas o claves para publicidad, y SimOs no muestra anuncios.</li>
+    <li>No sacamos tu código de tu PC, salvo a los servicios que tú enlazas (apartado 4).</li>
+    <li>No rastreamos tu actividad en otras apps ni en webs de terceros.</li>
+    <li>No vendemos ni cedemos tus datos a nadie, y no creamos perfiles de usuario.</li>
+  </ul>
+
+  <h2>Cuánto tiempo se guardan</h2>
+  <table>
+    <tr><th>Qué</th><th>Cuánto</th></tr>
+    <tr><td>Proyectos, capturas, vídeos, ajustes, recientes y registro</td><td>En tu PC, hasta que los borras o desinstalas la app</td></tr>
+    <tr><td>Claves y tokens</td><td>En el Administrador de credenciales de tu PC, hasta que los quitas</td></tr>
+    <tr><td>Huella del equipo, plataforma y fecha de la primera vez</td><td>Mientras exista la prueba, para que reinstalar no la renueve; puedes pedir su borrado (apartado «Tus derechos»)</td></tr>
+    <tr><td>Estadísticas de Google Analytics</td><td>Según la configuración de la propiedad de Google Analytics; al retirar tu permiso se borra el identificador de tu instalación</td></tr>
+    <tr><td>Lo que tengan GitHub, Codemagic, Apple, Microsoft o Google</td><td>Según su propia política</td></tr>
+  </table>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir el acceso, la rectificación, el borrado o la limitación de los datos que trata SimOs, y oponerte a ciertos tratamientos, escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Como la huella del equipo no está unida a tu nombre, para localizarla necesitaremos que nos ayudes a identificarla; si se borra, la prueba de 7 días empezaría de nuevo. Los datos que están en tu PC los controlas tú: puedes borrarlos desde la app o desinstalándola. Para lo que tienen GitHub, Codemagic, Apple, Microsoft o Google, pídelo a esa empresa. Si consideras que no tratamos tus datos como debemos, puedes reclamar ante la autoridad de protección de datos de tu país (en España, la Agencia Española de Protección de Datos).</p>
+
+  <h2>Menores</h2>
+  <p>SimOs es una herramienta para quien crea apps y no va dirigida a menores de 13 años; no recogemos a sabiendas datos de menores.</p>
+
+  <h2>Idiomas y cambios en esta política</h2>
+  <p>SimOs se muestra en siete idiomas; esta política está en español y en inglés y vale para todos. Si cambia lo que hace la app, esta página se actualiza y se indica la nueva fecha arriba.</p>
+  <div class="foot">
+    <p>SimOs · Gabriel Micó Victoria · <a href="soporte.html">Ayuda y soporte</a> · <a href="privacy.html" hreflang="es" lang="es">English version</a></p>
+  </div>
+</div>
+</body>
+</html>

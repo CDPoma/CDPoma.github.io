@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimOs: help and support</title>
+<meta name="description" content="SimOs help: what you need, which apps you can open, screenshots and videos for the store, your iPhone over USB, Pro and the 7-day trial, your data and how to get in touch.">
+<link rel="canonical" href="https://cdpoma.github.io/simos/support.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/support.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/soporte.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#5a3fd1; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+  .logo{width:72px;height:72px;border-radius:16px;display:block;margin:0 0 1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>SimOs</h1>
+  <p class="sub">Help and support</p>
+  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+
+  <div class="card">
+    <p><strong>SimOs</strong> is a phone, tablet and desktop simulator for Windows 10 and 11: you open your web or hybrid app and see it on every device, take screenshots and videos for your listing and, with Pro, build it for mobile. Something not working, or a question? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>What do I need?</h3>
+  <ul>
+    <li>A 64-bit PC with Windows 10 or later and internet the first time (to download the phone engine, 176 MB, and to check the trial).</li>
+    <li>For Android: the Android Studio emulator. To see your iPhone over USB: the USB driver that comes with iTunes or the Apple Devices app, and iOS 27 or later.</li>
+    <li>To build an iPhone app without a Mac: an Apple Developer account and an App Store Connect team key.</li>
+  </ul>
+
+  <h3>Which apps can I open?</h3>
+  <p>Websites, PWAs and apps built with React, Vite, Capacitor, Ionic or Cordova, from the project folder or from a web address. Native iPhone apps (Swift) cannot run on Windows: SimOs tells you why and shows you the alternatives. The built-in guide, in seven languages, helps you decide whether your app can be built with Capacitor.</p>
+
+  <h3>The app is stuck on “Loading” or the image does not show</h3>
+  <ul>
+    <li>The first time, SimOs downloads the phone engine (176 MB): wait for the percentage to finish and check that you are online.</li>
+    <li>Press “Retry”. If it stays the same, use “Restart without graphics acceleration” (on computers with no graphics card or with old drivers).</li>
+    <li>You can switch to the Chrome (Chromium) engine in the “Simulate” button.</li>
+    <li>If none of this works, press “Open the log” and send us the <code>registro.txt</code> file (it holds no personal data).</li>
+  </ul>
+
+  <h3>How do I take screenshots and videos for the store?</h3>
+  <p>With SimOs Pro: “Capture” saves the exact store PNG in your Pictures folder, in a folder named after your app and the date (1320×2868 on the phone, 2064×2752 on the tablet, 2880×1800 on the desktop). “Record” makes the 15 to 30 second preview video. Checking whether your video meets the App Store rules is free.</p>
+
+  <h3>I cannot see my iPhone</h3>
+  <p>Connect it with the cable, unlock it and tap “Trust” on the iPhone. Install the USB driver from iTunes or the Apple Devices app. SimOs installs by itself, with your permission, the free tools it needs (go-ios and pymobiledevice3; Python 3.12 to 3.15 for the mirror and the video).</p>
+
+  <h3>How do Pro and the trial work?</h3>
+  <p>Opening your app, viewing it on every device, rotating it, testing it, the Android emulator and viewing your iPhone over USB are free and ad-free. <strong>SimOs Pro</strong> unlocks Capture, Record, video preparation and Build: €1.99 a month or €14.99 a year in the euro area (elsewhere, the price the Microsoft Store shows you). The <strong>first 7 days</strong> are free on your PC, from the first time you use it; they are checked online and there is one trial per computer (reinstalling does not renew it). Pro is only sold in the Microsoft Store copy; the itch.io copy has the trial but does not sell Pro.</p>
+  <p>To cancel or change the subscription: <a href="https://account.microsoft.com/services" rel="noopener">account.microsoft.com/services</a>. If you changed PC or Microsoft account, sign in to the Store with the same account and SimOs will recognise your subscription.</p>
+
+  <h3>What data is sent, and to whom?</h3>
+  <p>Your code stays on your PC unless you choose to build in your own GitHub or Codemagic account. Your keys are stored in Windows Credential Manager. Usage statistics, with no personal data, are only sent if you allow them; the trial is checked with a computer fingerprint, not your name. Full details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>How do I delete my data?</h3>
+  <p>Projects, screenshots, videos and settings are on your PC: delete them or uninstall SimOs. You remove keys and tokens from the app or from Windows Credential Manager. For what GitHub, Codemagic, Apple, Microsoft or Google hold, ask that company. To ask for the deletion of the trial fingerprint, write to us.</p>
+
+  <h2>Contact</h2>
+  <p>Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> and include your Windows version, your SimOs version, where you downloaded it (Microsoft Store or itch.io) and, if you can, what you see on screen.</p>
+  <div class="foot">
+    <p>SimOs · Gabriel Micó Victoria · <a href="privacy.html">Privacy policy</a> · <a href="soporte.html" hreflang="es" lang="es">Español</a></p>
+  </div>
+</div>
+</body>
+</html>

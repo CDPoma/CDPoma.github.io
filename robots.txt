@@ -1,6 +1,8 @@
 # cdpoma.github.io: todo se puede rastrear (incluidos app-ads.txt y los llms.txt).
 User-agent: *
 Allow: /
+# SimOs: web, privacidad y soporte (y sus iconos), en el sitemap de la raíz.
+Allow: /simos/
 
 Sitemap: https://cdpoma.github.io/sitemap.xml
 Sitemap: https://cdpoma.github.io/camphone/sitemap.xml

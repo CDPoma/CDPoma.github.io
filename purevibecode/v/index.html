@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>PureVibeCode: ver tu proyecto en el iPhone</title>
+</head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:560px;margin:3rem auto;padding:0 1.5rem;line-height:1.6;color:#12182b;background:#f6f8fc">
+<h1 style="font-size:1.6rem">Ver tu proyecto en el iPhone</h1>
+<p>Este código es para la app PureVibeCode de iPhone: abre a pantalla completa el proyecto que tienes en SimOs o en PureVibeCode, en tu misma wifi. Si no tienes la app, puedes abrirlo en Safari.</p>
+<p id="es-safari" hidden><a id="a-es" href="#">Abrir en Safari</a></p>
+<p id="es-malo" hidden>QR no válido. En el ordenador, vuelve a abrir «Ver en tu iPhone» y escanea el código que enseña.</p>
+<p><a href="https://apps.apple.com/app/id6835378554">Descargar PureVibeCode en la App Store</a></p>
+<hr>
+<p lang="en">This code is for the PureVibeCode iPhone app: it opens, full screen, the project you have in SimOs or PureVibeCode, on your same Wi-Fi. If you don't have the app, you can open it in Safari.</p>
+<p lang="en" id="en-safari" hidden><a id="a-en" href="#">Open in Safari</a></p>
+<p lang="en" id="en-malo" hidden>Invalid QR code. On the computer, open “See it on your iPhone” again and scan the code it shows.</p>
+<p lang="en"><a href="https://apps.apple.com/app/id6835378554">Get PureVibeCode on the App Store</a></p>
+<script>
+// Contrato «Ver en tu iPhone» (SimOs/docs/ver-en-iphone.md), la MISMA validación que la app
+// (PureVibeCode packages/shared/src/verEnIphone.ts → leerQrVer): solo http a una IPv4 privada; campos desconocidos,
+// repetidos o que faltan = QR no válido. El fragmento (#…) no sale del teléfono: no llega a GitHub Pages.
+(function () {
+  var OCT = '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)';
+  var DIR = new RegExp('^http://(' + OCT + '(?:\\.' + OCT + '){3}):([1-9]\\d{0,4})/$');
+  function privada(ip) {
+    var p = ip.split('.').map(Number);
+    return p[0] === 10 || (p[0] === 172 && p[1] >= 16 && p[1] <= 31) || (p[0] === 192 && p[1] === 168);
+  }
+  function leer(frag) {
+    var campos = {}, n = 0, partes = frag.split('&');
+    for (var i = 0; i < partes.length; i++) {
+      var kv = partes[i].split('=');
+      if (kv.length !== 2 || !kv[0] || campos.hasOwnProperty(kv[0])) return null;
+      if (['u', 'k', 'producto', 'n'].indexOf(kv[0]) < 0) return null;
+      campos[kv[0]] = kv[1]; n++;
+    }
+    if (n !== 4) return null;
+    var u;
+    try { u = decodeURIComponent(campos.u); decodeURIComponent(campos.n); } catch (e) { return null; }
+    var m = DIR.exec(u);
+    if (!m || Number(m[2]) > 65535 || !privada(m[1])) return null;
+    if (!/^[0-9a-f]{32}$/.test(campos.k)) return null;
+    if (campos.producto !== 'simos' && campos.producto !== 'purevibecode') return null;
+    return u + '?__simos=' + campos.k;
+  }
+  var entrada = leer(location.hash.replace(/^#/, ''));
+  // La dirección y la clave no se quedan en el historial de esta página.
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  if (entrada) {
+    document.getElementById('a-es').href = entrada;
+    document.getElementById('a-en').href = entrada;
+    document.getElementById('es-safari').hidden = false;
+    document.getElementById('en-safari').hidden = false;
+  } else {
+    document.getElementById('es-malo').hidden = false;
+    document.getElementById('en-malo').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>

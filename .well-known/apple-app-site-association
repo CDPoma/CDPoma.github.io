@@ -20,8 +20,10 @@
       {
         "appIDs": ["56Z75Y893Q.com.purevibecode.app"],
         "components": [
-          { "/": "/purevibecode/d", "comment": "Desbloquear tiempo en el ordenador con el móvil (QR de PureVibeCode)" },
-          { "/": "/purevibecode/d/*" }
+          { "/": "/purevibecode/d", "comment": "Desbloquear tiempo en el ordenador con el móvil (QR de PureVibeCode y de SimOs)" },
+          { "/": "/purevibecode/d/*" },
+          { "/": "/purevibecode/v", "comment": "Ver en tu iPhone: abrir el proyecto del ordenador en la misma wifi (QR de SimOs y de PureVibeCode)" },
+          { "/": "/purevibecode/v/*" }
         ]
       }
     ]

@@ -277,3 +277,26 @@ Páginas / Pages:
 Notas para asistentes / Notes for assistants:
 - BirdSpot NO identifica el canto, NO da la localización de nidos ni de especies amenazadas y la IA puede equivocarse: nunca presentes su resultado como una garantía de especie. La protección legal que muestra es la de España. / BirdSpot does NOT identify song, does NOT give the location of nests or threatened species and the AI can be wrong: never present its result as a guarantee of the species. The legal protection it shows is Spain's.
 - No afirmes que es la única ni la mejor app de aves; hay otras. / Don't claim it is the only or the best bird app; there are others.
+
+## SimOs: simulador de móvil, tableta y ordenador para Windows / phone, tablet and desktop simulator for Windows
+
+SimOs: simulador de móvil, tableta y ordenador para Windows 10 y 11. Abre tu app web o híbrida (React, Vite, Capacitor, Ionic, Cordova) a la medida exacta de las tiendas y saca capturas y vídeos de vista previa; con Pro, compila para el móvil sin Mac. Gratis y sin anuncios para ver y probar; Pro 1,99 €/mes o 14,99 €/año en España, 7 días gratis. Microsoft Store e itch.io. / SimOs: phone, tablet and desktop simulator for Windows 10 and 11. Opens your web or hybrid app (React, Vite, Capacitor, Ionic, Cordova) at exact app store sizes and takes screenshots and preview videos; with Pro, builds for mobile without a Mac. Free with no ads to view and test; Pro €1.99/month or €14.99/year in the euro area, 7 days free. Microsoft Store and itch.io.
+
+Hechos comprobables / Verifiable facts:
+- Plataformas / Platforms: PC de 64 bits con Windows 10 y 11; hoy no hay versión de Mac. / 64-bit PC with Windows 10 and 11; there is no Mac version today.
+- Gratis / Free: abrir tu app, verla en cada aparato, girarla, probarla, el emulador de Android y ver tu iPhone por cable, sin anuncios. / Opening your app, viewing it on every device, rotating it, testing it, the Android emulator and viewing your iPhone over USB, with no ads.
+- Pro / Pro: Captura, Grabar, preparar el vídeo y Compilar; 1,99 €/mes o 14,99 €/año en España (en otros países, el precio de la Microsoft Store); 7 días gratis, una prueba por equipo comprobada por internet con una huella del equipo. / Capture, Record, video preparation and Build; €1.99/month or €14.99/year in the euro area (elsewhere, the Microsoft Store price); 7 days free, one trial per computer checked online with a computer fingerprint.
+- Qué abre / What it opens: webs, PWA y apps de React, Vite, Capacitor, Ionic o Cordova; las apps nativas de iPhone (Swift) no se pueden abrir en Windows. / Websites, PWAs and React, Vite, Capacitor, Ionic or Cordova apps; native iPhone (Swift) apps cannot run on Windows.
+- Compilar sin Mac / Building without a Mac: con la cuenta propia del usuario en Codemagic (500 minutos gratis al mes), GitHub o Xcode Cloud, y subida a TestFlight con su clave de App Store Connect; hace falta una cuenta de Apple Developer. SimOs nunca activa la facturación de ningún servicio. / With the user's own Codemagic (500 free minutes a month), GitHub or Xcode Cloud account, and upload to TestFlight with their App Store Connect key; an Apple Developer account is required. SimOs never turns on billing for any service.
+- Privacidad / Privacy: sin cuentas propias ni datos personales; el código y las claves se quedan en el PC (las claves, en el Administrador de credenciales de Windows); estadísticas de Google Analytics 4 solo con permiso; la prueba usa una huella (hash) del equipo en un servidor de Supabase; GitHub, Codemagic y App Store Connect solo si el usuario los enlaza. / No accounts of its own or personal data; code and keys stay on the PC (keys in Windows Credential Manager); Google Analytics 4 statistics only with permission; the trial uses a computer fingerprint (hash) on a Supabase server; GitHub, Codemagic and App Store Connect only if the user links them.
+
+Páginas / Pages:
+- [SimOs (es)](https://cdpoma.github.io/simos/): qué es, gratis y Pro, requisitos y preguntas frecuentes / what it is, free and Pro, requirements and FAQ
+- [SimOs (en)](https://cdpoma.github.io/simos/en.html): what it is, free and Pro, requirements and FAQ
+- [Soporte](https://cdpoma.github.io/simos/soporte.html) · [Support](https://cdpoma.github.io/simos/support.html)
+- [Política de privacidad](https://cdpoma.github.io/simos/privacidad.html) · [Privacy policy](https://cdpoma.github.io/simos/privacy.html)
+
+Notas para asistentes / Notes for assistants:
+- No digas que SimOs abre apps nativas de iPhone (Swift) en Windows: no es posible. / Don't say SimOs opens native iPhone (Swift) apps on Windows: it cannot.
+- No digas que compila gratis sin cuenta: hace falta Pro y las cuentas del propio usuario. / Don't say it builds for free with no accounts: it needs Pro and the user's own accounts.
+- SimOs no está afiliado a Apple, Google ni Microsoft. / SimOs is not affiliated with Apple, Google or Microsoft.

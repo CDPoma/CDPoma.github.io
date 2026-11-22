@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimOs: ayuda y soporte</title>
+<meta name="description" content="Ayuda de SimOs: qué necesitas, qué apps puedes abrir, capturas y vídeos para la tienda, tu iPhone por cable, Pro y la prueba de 7 días, tus datos y cómo contactar.">
+<link rel="canonical" href="https://cdpoma.github.io/simos/soporte.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/simos/soporte.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/support.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/soporte.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#5a3fd1; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#b3a1ff; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .tiendas{display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;margin:1.2rem 0 .6rem}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+  .logo{width:72px;height:72px;border-radius:16px;display:block;margin:0 0 1rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
+  <h1>SimOs</h1>
+  <p class="sub">Ayuda y soporte</p>
+  <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a></nav>
+
+  <div class="card">
+    <p><strong>SimOs</strong> es un simulador de móvil, tableta y ordenador para Windows 10 y 11: abres tu app web o híbrida y la ves en cada aparato, sacas capturas y vídeos para tu ficha y, con Pro, la compilas para el móvil. ¿Algo no funciona o tienes una duda? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿Qué necesito?</h3>
+  <ul>
+    <li>Un PC de 64 bits con Windows 10 o posterior e internet la primera vez (para descargar el motor del teléfono, 176 MB, y para comprobar la prueba).</li>
+    <li>Para Android: el emulador de Android Studio. Para ver tu iPhone por cable: el controlador USB que traen iTunes o la app Dispositivos Apple, y iOS 27 o posterior.</li>
+    <li>Para compilar una app de iPhone sin Mac: una cuenta de Apple Developer y una clave de equipo de App Store Connect.</li>
+  </ul>
+
+  <h3>¿Qué apps puedo abrir?</h3>
+  <p>Webs, PWA y apps hechas con React, Vite, Capacitor, Ionic o Cordova, desde la carpeta del proyecto o desde una dirección web. Las apps nativas de iPhone (Swift) no se pueden abrir en Windows: SimOs te lo explica y te dice qué alternativas tienes. La guía integrada, en siete idiomas, te ayuda a decidir si tu app puede hacerse con Capacitor.</p>
+
+  <h3>La app se queda en «Cargando» o la imagen no se ve</h3>
+  <ul>
+    <li>La primera vez SimOs descarga el motor del teléfono (176 MB): espera a que acabe el porcentaje y comprueba que tienes internet.</li>
+    <li>Pulsa «Reintentar». Si sigue igual, usa «Reiniciar sin aceleración gráfica» (en equipos sin tarjeta gráfica o con controladores antiguos).</li>
+    <li>Puedes cambiar al motor de Chrome (Chromium) en el botón «Simular».</li>
+    <li>Si nada de esto funciona, pulsa «Abrir el registro» y envíanos el archivo <code>registro.txt</code> (no lleva datos personales).</li>
+  </ul>
+
+  <h3>¿Cómo saco capturas y vídeos para la tienda?</h3>
+  <p>Con SimOs Pro: «Captura» guarda el PNG exacto de la tienda en tu carpeta Imágenes, en una carpeta con el nombre de tu app y la fecha (1320×2868 en el teléfono, 2064×2752 en la tableta, 2880×1800 en el ordenador). «Grabar» hace el vídeo de vista previa de 15 a 30 segundos. Comprobar si tu vídeo cumple las reglas de la App Store es gratis.</p>
+
+  <h3>No veo mi iPhone</h3>
+  <p>Conéctalo por cable, desbloquéalo y pulsa «Confiar» en el iPhone. Instala el controlador USB de iTunes o de la app Dispositivos Apple. SimOs instala solo, con tu permiso, las herramientas libres que necesita (go-ios y pymobiledevice3; Python 3.12 a 3.15 para el espejo y el vídeo).</p>
+
+  <h3>¿Cómo funcionan Pro y la prueba?</h3>
+  <p>Abrir tu app, verla en cada aparato, girarla, probarla, el emulador de Android y ver tu iPhone por cable son gratis y sin anuncios. <strong>SimOs Pro</strong> desbloquea Captura, Grabar, preparar el vídeo y Compilar: 1,99 € al mes o 14,99 € al año en España (en otros países, el precio que te enseña la Microsoft Store). Los <strong>7 primeros días</strong> son gratis en tu PC, desde que lo usas por primera vez; se comprueban por internet y es una prueba por equipo (reinstalar no la renueva). Pro solo se compra en la copia de la Microsoft Store; la de itch.io tiene la prueba, pero no vende Pro.</p>
+  <p>Para cancelar o cambiar la suscripción: <a href="https://account.microsoft.com/services" rel="noopener">account.microsoft.com/services</a>. Si cambiaste de PC o de cuenta de Microsoft, inicia sesión en la Store con la misma cuenta y SimOs reconocerá tu suscripción.</p>
+
+  <h3>¿Qué datos se envían y a quién?</h3>
+  <p>Tu código no sale de tu PC salvo que elijas compilar en tu cuenta de GitHub o de Codemagic. Tus claves se guardan en el Administrador de credenciales de Windows. Las estadísticas de uso, sin datos personales, solo se envían si las permites; la prueba se comprueba con una huella del equipo, no con tu nombre. Detalles completos en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <h3>¿Cómo borro mis datos?</h3>
+  <p>Los proyectos, capturas, vídeos y ajustes están en tu PC: bórralos o desinstala SimOs. Las claves y los tokens los quitas desde la app o desde el Administrador de credenciales de Windows. Lo que tengan GitHub, Codemagic, Apple, Microsoft o Google, pídelo a esa empresa. Para pedir el borrado de la huella de la prueba, escríbenos.</p>
+
+  <h2>Contacto</h2>
+  <p>Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> e indica tu versión de Windows, la versión de SimOs, de dónde la descargaste (Microsoft Store o itch.io) y, si puedes, lo que ves en pantalla.</p>
+  <div class="foot">
+    <p>SimOs · Gabriel Micó Victoria · <a href="privacidad.html">Política de privacidad</a> · <a href="support.html" hreflang="es" lang="es">English version</a></p>
+  </div>
+</div>
+</body>
+</html>
