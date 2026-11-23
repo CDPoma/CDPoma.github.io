@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EnGarantia privacy: receipts on your device, AI reading, ads and subscription</title>
+<meta name="description" content="What data EnGarantia uses: warranties, PDFs and photos only on your device; receipt photos sent to Supabase and Anthropic only to be read; manual search, ads, subscription, analytics and notifications.">
+<link rel="canonical" href="https://cdpoma.github.io/engarantia/privacy.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#06100d">
+<style>
+  :root{
+    --bg:#06100d; --surface:#0a1813; --ink:#ecf5f1; --ink-light:#9fb5ab;
+    --accent:#10b981; --claro:#6ee7b7; --line:#1c3a30; --card:#0b1a15;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--claro)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#08241a;border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:var(--claro)}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
+  <h1>EnGarantia</h1>
+  <p class="sub">Privacy policy</p>
+  <nav class="enlaces"><a href="./">EnGarantia</a> · <a href="support.html">Help and support</a></nav>
+
+  <div class="card">
+    <p><strong>Summary:</strong> EnGarantia keeps track of the warranties of what you buy. <strong>There is no account or email: your warranties, the PDFs and the receipt photos are stored only on your device.</strong> When you scan a receipt, the photo is sent to our server (Supabase, in the European Union) and from there to Anthropic (Claude) <strong>only to be read, and it is not stored</strong>. To find the manual and the brand's contacts, our server asks Claude, with its web search, for the brand and model that appear on your receipt. The app opens an <strong>anonymous session</strong> with Supabase and counts how many reads and searches you do per day to apply a limit. It shows Google AdMob ads (with the consent form and Apple's tracking prompt) that the Pro subscription removes, uses RevenueCat for the subscription, Firebase Analytics without the advertising identifier and only with your consent, and local notifications to remind you that a warranty is ending.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Gabriel Micó Victoria, developer of EnGarantia. For any question about your data, or to exercise your rights, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>What stays on your device</h2>
+  <p>These things are stored <strong>only on your device</strong> (in the app's storage, not in an EnGarantia cloud) and we do not send them to any server of ours:</p>
+  <ul><li>Your warranties: product, brand, model, store, purchase date, price, country, years of warranty and extra months, and the brand and store contacts the app finds or you type.</li><li>The PDF of each receipt (with the scan date and time and a SHA-256 fingerprint of every page) and the original photos.</li><li>Your settings: language, reminder time and your consent choices.</li></ul>
+  <p>Because none of this is on our server, <strong>if you delete the app or change device without a system backup, you lose it</strong>. In Settings you can export all the PDFs. Each warranty is deleted from its page, with its photos and PDF. We do not have your email or any data that identifies you, so there is no account to delete.</p>
+
+  <h2>Scanning a receipt: the camera and AI reading</h2>
+  <p>EnGarantia asks for <strong>camera</strong> permission when you scan a receipt. There is no access to your photo library or your files, on purpose (so that what you keep is the original receipt). On an Apple silicon Mac the computer's camera is used.</p>
+  <p>Before the first reading, the app explains what follows and asks for your permission (if you say "Not now", you can fill in the details by hand). After you take the photo (up to 3 pages, as JPEG), the app sends it to our Supabase function <em>engarantia-tique</em> (servers in the European Union, Frankfurt), with the app language and your anonymous session. The function checks the session, counts the reading for your daily limit and sends the photos to Anthropic's artificial intelligence service (Claude), which returns the details: store, date, product, brand, model, price, country, product type, the store's phone, email and website if they are printed, and whether the receipt looks like a screen or an edited image.</p>
+  <ul><li><strong>We do not store the photo or what the AI reads.</strong> The function's technical logs only note statuses, times, the service's usage and an abbreviated account identifier: never the image or the answer.</li><li>A receipt may carry data about you (for example your name, a customer number or the last digits of a card, if the shop prints them). They are inside the image and our server and Anthropic see them only to read it. If you do not want them read, do not scan that part of the receipt.</li><li>Anthropic receives only the photos and the language: no name, no account identifier and no location. According to Anthropic's public policy, data it receives through its API is not used by default to train its models; the specific terms (for example how long it keeps data for safety) are set by that company in its <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">privacy policy</a>.</li><li>The reading is an aid: you check and correct the details before saving.</li></ul>
+
+  <h2>Finding the manual and the brand's contacts</h2>
+  <p>After you save a warranty, the app calls our <em>engarantia-manual</em> function with the <strong>brand, model, product type, app language and the country on the receipt</strong> (not the photo and not the store). The function asks Claude, with Anthropic's web search tool, for the user manual and the brand's support and warranty page. Our server only accepts addresses that appeared in the results and respond, and phone numbers and emails that appear verbatim in those texts; it marks the manual "official" if the address belongs to the brand's domain and "approximate" if not. We do not store that search: the logs do not include the brand or the model.</p>
+  <p>The store's contact comes from what is printed on your receipt. When you tap "Call", "Send email", "View manual" or a website, the app opens the Phone app, your mail app (with the message already written, which you send) or Safari: from there the terms of that app or website apply, and they may receive your IP address or what you send.</p>
+
+  <h2>Anonymous session and daily limit</h2>
+  <p>So that the server knows who is asking for a reading without you having to sign up, the first time the app talks to the server it opens an <strong>anonymous Supabase session</strong>: a random identifier, with no email, no name and no password, stored on your device. The server keeps a table with that identifier, the day and <strong>how many receipt reads and how many manual searches</strong> you made that day (up to 20 and 10 without Pro; 60 and 30 with Pro); rows older than a week are deleted from time to time. The app tells the server whether you are Pro only to choose the limit. If you want us to delete your anonymous identifier and its counter, write to us.</p>
+
+  <h2>End-of-warranty reminders</h2>
+  <p>The app schedules <strong>local notifications</strong> on your device (a month before each warranty ends, at the time you choose in Settings). They carry the product name and the end date, are created and shown on your device and do not go through any server or Apple's push notification service. We ask for notification permission when you save your first warranty; if you do not allow it, the warranty is saved anyway and there is no reminder. When you delete or edit a warranty, its reminder is cancelled or rescheduled.</p>
+
+  <h2>Ads and purchases</h2>
+  <p>The free version shows <strong>Google AdMob</strong> ads on iPhone and iPad: a banner at the bottom, a full-screen ad while the AI reads the receipt (the screen says so) and, on 1 in 5 app opens, another when you open the app, never on the day you install. In the European Economic Area, the United Kingdom and Switzerland, Google asks for your consent with its form (UMP) before showing ads; you can change it later in Settings › "Ads privacy" where it applies. Then Apple asks whether you allow tracking (ATT); if you do not, ads still appear but are not personalized with that tracking. AdMob receives data about the device and the app and your IP address, and the advertising identifier only if you allow it. With Pro there are no ads and neither the form nor the tracking prompt is shown.</p>
+  <p><strong>EnGarantia Pro</strong> is a monthly or yearly subscription managed by Apple's App Store, with <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> to check your purchase: RevenueCat receives its own anonymous identifier, not your name or your warranties. Apple handles the payment; we only receive whether the subscription is active. Pro removes the ads and raises the daily limits.</p>
+
+  <h2>Usage analytics</h2>
+  <p>We use <strong>Firebase Analytics</strong> (Google) anonymously to know what is used and improve the app: events such as scanning a receipt (how many pages), the reading result (whether it was a readable receipt and whether it looked suspicious), saving a warranty (the years), opening a manual (official or approximate), seeing an ad or the Pro screen and buying Pro (with the amount). We <strong>never</strong> send the store, product, brand, model or price of your receipts, or their photo. In the European Economic Area, the United Kingdom and Switzerland it only turns on if you accept in Google's form; elsewhere it is on by default and, if the form appears, it respects your answer. Firebase identifies the installation with its own non-personal identifier, and the app <strong>does not use the advertising identifier</strong> in analytics.</p>
+
+  <h2>Checking for a new version</h2>
+  <p>On launch, the app asks Apple's App Store whether there is a newer version and, if an update is needed, tells you. For that, Apple receives the app identifier and your IP address, like any web server.</p>
+
+  <h2>Who else receives data</h2>
+  <p>These are the third-party services involved, what they do and what they receive. None receives your email (the app does not have it).</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th scope="col">Service</th><th scope="col">What for</th><th scope="col">What it receives</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Supabase (our server, project &quot;Apps&quot;, EU)</th><td>Anonymous session, daily limit and the two functions that read the receipt and look for the manual</td><td>The receipt photos and the brand, model, product and country of a search, only while they are processed (not stored); the anonymous identifier and the day's counter; your IP address when connecting</td></tr>
+      <tr><th scope="row">Anthropic (Claude)</th><td>Reading the receipt and finding the manual and the brand's contacts with its web search</td><td>The receipt photos and the app language; or the brand, model, product and country of the search, sent from our server; it does not receive your account or your location</td></tr>
+      <tr><th scope="row">Google AdMob</th><td>The banner and the full-screen ads (iPhone and iPad, without Pro)</td><td>Device and app data, the IP address and, only if you allow it with Apple's prompt, the advertising identifier, according to your consent in Google's form (UMP)</td></tr>
+      <tr><th scope="row">RevenueCat and Apple StoreKit</th><td>Pro subscription</td><td>An anonymous RevenueCat identifier and your purchases; neither your name nor your warranties</td></tr>
+      <tr><th scope="row">Google Firebase Analytics</th><td>Anonymous usage statistics</td><td>Usage events without personal data, an installation identifier and the IP address, only according to your consent</td></tr>
+      <tr><th scope="row">Apple (App Store)</th><td>Checking for a new version; the tracking prompt (ATT)</td><td>The app identifier and your IP address</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Legal basis, retention and transfers</h2>
+  <p>We process your data to provide the service you ask for (reading the receipt, finding the manual, the daily limit and the Pro subscription), with your consent (the camera, notifications, AI reading, ads and analytics, which you can withdraw at any time from the device settings or Google's form) and for our legitimate interest in security and preventing abuse (the daily limit). Receipt photos are not kept on our server; the anonymous identifier and its counter are kept until you ask us to delete them or, for the counter, one week. Some of the services in the table (Anthropic, Google, Apple, RevenueCat) are in the United States or outside the European Economic Area; each applies the safeguards stated in its privacy policy. Policies: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> (AdMob and Firebase), <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a> and <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask for access, rectification, erasure, objection, restriction or portability of your data by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>, although almost everything of yours is on your device and you control it from the app itself. If you think your data has not been handled properly, you can complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) or to the supervisory authority of your country.</p>
+
+  <h2>Children</h2>
+  <p>EnGarantia is not aimed at children under 14 and we do not knowingly collect data from children of that age. If you think a child has used the app and you want us to delete their anonymous identifier, write to us at <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If something important changes (for example a new service that receives data), we will update this page and the date below. Last updated: <time datetime="2026-11-24">November 24, 2026</time>.</p>
+
+  <div class="aviso">
+    <p><strong>Notice:</strong> EnGarantia is an aid, not legal advice. The warranty period it works out is a guide: always check your receipt and the manufacturer's warranty.</p>
+  </div>
+  <div class="foot"><a href="./">EnGarantia</a> · Gabriel Micó Victoria · Updated November 24, 2026</div>
+</div>
+</body>
+</html>

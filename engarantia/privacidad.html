@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacidad de EnGarantia: tiques en el aparato, lectura con IA, anuncios y suscripción</title>
+<meta name="description" content="Qué datos usa EnGarantia: garantías, PDF y fotos solo en tu aparato; fotos del tique enviadas a Supabase y Anthropic solo para leerlas; búsqueda del manual, anuncios, suscripción, estadísticas y notificaciones.">
+<link rel="canonical" href="https://cdpoma.github.io/engarantia/privacidad.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#06100d">
+<style>
+  :root{
+    --bg:#06100d; --surface:#0a1813; --ink:#ecf5f1; --ink-light:#9fb5ab;
+    --accent:#10b981; --claro:#6ee7b7; --line:#1c3a30; --card:#0b1a15;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--claro)}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:#08241a;border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:var(--claro)}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .wrap.ancha{max-width:760px}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .sub{margin:0 0 1.6rem}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>EnGarantia</h1>
+  <p class="sub">Política de privacidad</p>
+  <nav class="enlaces"><a href="./">EnGarantia</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> EnGarantia guarda las garantías de tus compras. <strong>No hay cuenta ni correo: tus garantías, los PDF y las fotos de los tiques se guardan solo en tu aparato.</strong> Cuando escaneas un tique, la foto se envía a nuestro servidor (Supabase, en la Unión Europea) y de ahí a Anthropic (Claude) <strong>solo para leerla, y no se guarda</strong>. Para buscar el manual y los contactos de la marca, nuestro servidor pide a Claude, con su búsqueda web, el manual de la marca y el modelo que figuran en tu tique. La app abre una <strong>sesión anónima</strong> de Supabase y cuenta cuántas lecturas y búsquedas haces al día para aplicar un límite. Muestra anuncios de Google AdMob (con el formulario de consentimiento y el aviso de seguimiento de Apple) que la suscripción Pro quita, usa RevenueCat para la suscripción, Firebase Analytics sin identificador de publicidad y solo con tu consentimiento, y notificaciones locales para avisarte de que la garantía acaba.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Gabriel Micó Victoria, desarrollador de EnGarantia. Para cualquier duda sobre tus datos, o para ejercer tus derechos, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Lo que se queda en tu aparato</h2>
+  <p>Estas cosas se guardan <strong>solo en tu aparato</strong> (en el almacenamiento de la app, no en la nube de EnGarantia) y no las enviamos a ningún servidor nuestro:</p>
+  <ul><li>Tus garantías: producto, marca, modelo, tienda, fecha de compra, precio, país, años de garantía y meses extra, y los contactos de la marca y de la tienda que la app encuentre o tú escribas.</li><li>El PDF de cada tique (con la fecha y hora del escaneo y una huella SHA-256 de cada página) y las fotos originales.</li><li>Tus ajustes: idioma, hora del aviso y tus elecciones de consentimiento.</li></ul>
+  <p>Como nada de esto está en nuestro servidor, <strong>si borras la app o cambias de aparato sin una copia de seguridad del sistema, lo pierdes</strong>. Desde Ajustes puedes exportar todos los PDF. Cada garantía se borra desde su ficha, con sus fotos y su PDF. No tenemos tu correo ni ningún dato que te identifique, así que no hay cuenta que borrar.</p>
+
+  <h2>Escanear un tique: la cámara y la lectura con IA</h2>
+  <p>EnGarantia pide permiso de <strong>cámara</strong> cuando escaneas un tique. No hay acceso a tu fototeca ni a tus archivos, a propósito (para que lo que guardas sea el tique original). En un Mac con Apple Silicon se usa la cámara del ordenador.</p>
+  <p>Antes de la primera lectura, la app te explica lo que sigue y te pide permiso (si dices «Ahora no», puedes rellenar los datos a mano). Después de hacer la foto (hasta 3 páginas, en JPEG), la app la envía a nuestra función de Supabase <em>engarantia-tique</em> (servidores en la Unión Europea, Frankfurt), con el idioma de la app y tu sesión anónima. La función comprueba la sesión, cuenta la lectura para tu límite diario y envía las fotos al servicio de inteligencia artificial de Anthropic (Claude), que devuelve los datos: tienda, fecha, producto, marca, modelo, precio, país, tipo de producto, el teléfono, correo y web de la tienda si están impresos y si el tique parece una pantalla o una imagen retocada.</p>
+  <ul><li><strong>No guardamos la foto ni lo que lee la IA.</strong> Los registros técnicos de la función solo anotan estados, tiempos, el consumo del servicio y un identificador de cuenta abreviado: nunca la imagen ni la respuesta.</li><li>Un tique puede llevar datos tuyos (por ejemplo, tu nombre, un número de cliente o los últimos dígitos de una tarjeta, si el comercio los imprime). Van dentro de la imagen y los ven nuestro servidor y Anthropic solo para leerla. Si no quieres que se lean, no escanees esa parte del tique.</li><li>A Anthropic solo le llegan las fotos y el idioma: ni un nombre ni un identificador de cuenta ni tu ubicación. Según la política pública de Anthropic, los datos que recibe por su API no se usan por defecto para entrenar sus modelos; las condiciones concretas (por ejemplo, cuánto tiempo los conserva por seguridad) las fija esa empresa en su <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">política de privacidad</a>.</li><li>La lectura es una ayuda: revisas y corriges los datos antes de guardar.</li></ul>
+
+  <h2>Buscar el manual y los contactos de la marca</h2>
+  <p>Tras guardar una garantía, la app llama a nuestra función <em>engarantia-manual</em> con la <strong>marca, el modelo, el tipo de producto, el idioma de la app y el país del tique</strong> (no con la foto ni con la tienda). La función pide a Claude, con la herramienta de búsqueda web de Anthropic, el manual de usuario y la página de soporte y garantía de la marca. Nuestro servidor solo da por buenas las direcciones que aparecieron en los resultados y que responden, y los teléfonos y correos que aparecen tal cual en esos textos; marca el manual como «oficial» si la dirección es del dominio de la marca y como «aproximado» si no. No guardamos esa búsqueda: los registros no incluyen la marca ni el modelo.</p>
+  <p>El contacto de la tienda sale de lo que está impreso en tu tique. Cuando tocas «Llamar», «Enviar correo», «Ver el manual» o una web, la app abre el Teléfono, tu app de correo (con el mensaje ya redactado, que envías tú) o Safari: a partir de ahí rigen las condiciones de esa app o esa web, que pueden recibir tu dirección IP o lo que envíes.</p>
+
+  <h2>Sesión anónima y límite diario</h2>
+  <p>Para que el servidor sepa quién pide una lectura sin que tengas que registrarte, la primera vez que la app habla con el servidor abre una <strong>sesión anónima de Supabase</strong>: un identificador aleatorio, sin correo, sin nombre y sin contraseña, guardado en tu aparato. El servidor lleva una tabla con ese identificador, el día y <strong>cuántas lecturas de tique y cuántas búsquedas de manual</strong> has hecho ese día (hasta 20 y 10 sin Pro; 60 y 30 con Pro); las filas de más de una semana se borran cada cierto tiempo. La app le dice al servidor si eres Pro solo para elegir el tope. Si quieres que borremos tu identificador anónimo y su contador, escríbenos.</p>
+
+  <h2>Avisos de fin de garantía</h2>
+  <p>La app programa <strong>notificaciones locales</strong> en tu aparato (un mes antes de que acabe cada garantía, a la hora que elijas en Ajustes). Llevan el nombre del producto y la fecha de fin, se crean y se muestran en tu aparato y no pasan por ningún servidor ni por el servicio de notificaciones de Apple. Te pedimos permiso de notificaciones al guardar tu primera garantía; si no lo das, la garantía se guarda igual y no hay aviso. Al borrar o editar una garantía, su aviso se cancela o se reprograma.</p>
+
+  <h2>Anuncios y compras</h2>
+  <p>La versión gratuita muestra anuncios de <strong>Google AdMob</strong> en iPhone y iPad: un banner abajo, un anuncio a pantalla completa mientras la IA lee el tique (la pantalla lo dice) y, 1 de cada 5 aperturas, otro al abrir la app, nunca el día de instalar. En el Espacio Económico Europeo, Reino Unido y Suiza, Google te pide tu consentimiento con su formulario (UMP) antes de mostrar anuncios; puedes cambiarlo después en Ajustes › «Privacidad de los anuncios» donde aplica. Después, Apple te pregunta si permites el seguimiento (ATT); si no lo permites, los anuncios siguen apareciendo pero no se personalizan con ese seguimiento. AdMob recibe datos del aparato y de la app y tu dirección IP, y el identificador de publicidad solo si lo permites. Con Pro no hay anuncios y no se pide ni el formulario ni el permiso de seguimiento.</p>
+  <p><strong>EnGarantia Pro</strong> es una suscripción mensual o anual gestionada por la App Store de Apple, con <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> para comprobar tu compra: RevenueCat recibe un identificador anónimo propio, no tu nombre ni tus garantías. Apple gestiona el cobro; nosotros solo recibimos si la suscripción está activa. Pro quita los anuncios y sube los límites diarios.</p>
+
+  <h2>Estadísticas de uso</h2>
+  <p>Usamos <strong>Firebase Analytics</strong> (Google) de forma anónima para saber qué se usa y mejorar la app: eventos como escanear un tique (cuántas páginas), el resultado de la lectura (si fue un tique legible y si pareció sospechoso), guardar una garantía (los años), abrir un manual (oficial o aproximado), ver un anuncio o el muro de Pro y comprar Pro (con el importe). <strong>Nunca</strong> enviamos la tienda, el producto, la marca, el modelo ni el precio de tus tiques, ni su foto. En el Espacio Económico Europeo, Reino Unido y Suiza solo se activa si lo aceptas en el formulario de Google; en el resto de países se activa por defecto y, si el formulario aparece, respeta tu respuesta. Firebase identifica la instalación con un identificador propio, no personal, y la app <strong>no usa el identificador de publicidad</strong> en las estadísticas.</p>
+
+  <h2>Comprobar si hay una versión nueva</h2>
+  <p>Al arrancar, la app pregunta a la App Store de Apple si hay una versión más reciente y, si hace falta actualizar, te lo dice. Para eso Apple recibe el identificador de la app y tu dirección IP, como cualquier servidor web.</p>
+
+  <h2>Quién más recibe datos</h2>
+  <p>Estos son los servicios de terceros que intervienen, qué hacen y qué reciben. Ninguno recibe tu correo (la app no lo tiene).</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th scope="col">Servicio</th><th scope="col">Para qué</th><th scope="col">Qué recibe</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Supabase (nuestro servidor, proyecto «Apps», UE)</th><td>Sesión anónima, límite diario y las dos funciones que leen el tique y buscan el manual</td><td>Las fotos del tique y la marca, modelo, producto y país de una búsqueda, solo mientras se procesan (no se guardan); el identificador anónimo y el contador del día; tu dirección IP al conectar</td></tr>
+      <tr><th scope="row">Anthropic (Claude)</th><td>Leer el tique y buscar el manual y los contactos de la marca con su búsqueda web</td><td>Las fotos del tique y el idioma de la app; o la marca, el modelo, el producto y el país de la búsqueda, enviados desde nuestro servidor; no recibe tu cuenta ni tu ubicación</td></tr>
+      <tr><th scope="row">Google AdMob</th><td>El banner y los anuncios a pantalla completa (iPhone y iPad, sin Pro)</td><td>Datos del aparato y de la app, la dirección IP y, solo si lo permites con el aviso de Apple, el identificador de publicidad, según tu consentimiento en el formulario de Google (UMP)</td></tr>
+      <tr><th scope="row">RevenueCat y Apple StoreKit</th><td>Suscripción Pro</td><td>Un identificador anónimo de RevenueCat y tus compras; ni tu nombre ni tus garantías</td></tr>
+      <tr><th scope="row">Google Firebase Analytics</th><td>Estadísticas de uso anónimas</td><td>Eventos de uso sin datos personales, un identificador de la instalación y la dirección IP, solo según tu consentimiento</td></tr>
+      <tr><th scope="row">Apple (App Store)</th><td>Comprobar si hay una versión nueva; el aviso de seguimiento (ATT)</td><td>El identificador de la app y tu dirección IP</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Base legal, conservación y transferencias</h2>
+  <p>Tratamos tus datos para prestarte el servicio que pides (leer el tique, buscar el manual, el límite diario y la suscripción Pro), con tu consentimiento (la cámara, las notificaciones, la lectura con IA, los anuncios y las estadísticas, que puedes retirar cuando quieras desde los ajustes del aparato o el formulario de Google) y por nuestro interés legítimo en la seguridad y en evitar abusos (el límite diario). Las fotos del tique no se conservan en nuestro servidor; el identificador anónimo y su contador se conservan hasta que lo pidas o, el contador, una semana. Algunos servicios de la tabla (Anthropic, Google, Apple, RevenueCat) están en Estados Unidos o fuera del Espacio Económico Europeo; cada uno aplica las garantías que indica en su política de privacidad. Políticas: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> (AdMob y Firebase), <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a> y <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación o portabilidad de tus datos escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>, aunque casi todo lo tuyo está en tu aparato y lo controlas tú desde la propia app. Si crees que tus datos no se han tratado bien, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>) o ante la autoridad de control de tu país.</p>
+
+  <h2>Menores</h2>
+  <p>EnGarantia no está dirigida a menores de 14 años y no recogemos a sabiendas datos de menores de esa edad. Si crees que un menor ha usado la app y quieres que borremos su identificador anónimo, escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>Cambios en esta política</h2>
+  <p>Si cambia algo importante (por ejemplo, un servicio nuevo que reciba datos), actualizaremos esta página y la fecha que figura abajo. Última actualización: <time datetime="2026-11-24">24 de noviembre de 2026</time>.</p>
+
+  <div class="aviso">
+    <p><strong>Aviso:</strong> EnGarantia es una ayuda, no asesoramiento legal. El plazo de garantía que calcula es orientativo: revisa siempre tu tique y la garantía del fabricante.</p>
+  </div>
+  <div class="foot"><a href="./">EnGarantia</a> · Gabriel Micó Victoria · Actualizado el 24 de noviembre de 2026</div>
+</div>
+</body>
+</html>

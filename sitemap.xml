@@ -505,4 +505,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/en.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/soporte.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/support.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/privacidad.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/engarantia/privacy.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/engarantia/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/privacidad.html"/>
+  </url>
 </urlset>
