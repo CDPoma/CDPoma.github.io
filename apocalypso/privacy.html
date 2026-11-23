@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ApocalypSO — Privacy policy</title>
+<meta name="description" content="ApocalypSO privacy policy: no accounts, phone-to-phone messages, position only in an SOS, ads and analytics only with consent.">
+<link rel="canonical" href="https://cdpoma.github.io/apocalypso/privacy.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/privacy.html">
+<meta name="robots" content="index,follow">
 <style>
   :root{
     --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
@@ -45,7 +50,7 @@
   <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
   <h1>ApocalypSO</h1>
   <p class="sub">Privacy policy</p>
-  <nav class="enlaces"><a href="support.html">Help and support</a></nav>
+  <nav class="enlaces"><a href="en.html">ApocalypSO</a> · <a href="support.html">Help and support</a></nav>
 
   <div class="card">
     <p><strong>Summary:</strong> ApocalypSO is an app for communicating and finding your way without the internet. It has no accounts or sign-up. Your messages, SOS alerts, contacts, groups and positions travel from phone to phone over Bluetooth, direct wifi or LoRa radio, without going through any server of ours, and private messages are end-to-end encrypted. Your position is only sent when you send an SOS or choose to share it. Usage statistics and Google ads work only with your consent and only when there is internet. The medical information in the app is for guidance only and is not a substitute for a professional.</p>
@@ -66,11 +71,20 @@
     <li><strong>Your position</strong> is only sent when you <strong>send an SOS</strong> with your location or <strong>share your position</strong> yourself. GPS is also used for the map, the compass and the guide for finding an SOS, but in those cases the position stays on the device.</li>
   </ul>
 
+  <h2>SOS by SMS, emergency call and stealth mode</h2>
+  <ul>
+    <li><strong>Emergency contacts (iPhone and iPad only):</strong> you can save up to five, picking them with the system contact picker or typing a name and number. The app does not read your address book: it only receives the contact you choose. They are stored <strong>only on your phone</strong>, in an app file, and are never sent to a server or to the mesh. Uninstalling the app deletes them.</li>
+    <li><strong>SOS by SMS:</strong> when you send an SOS, if your phone can send SMS and you have saved contacts, the app opens the system SMS sheet with a ready-written message (your node name, the SOS text and your position with a map link, if GPS has one). <strong>It is not sent by itself: you send it by tapping "Send".</strong> That SMS travels through your mobile carrier and is seen by whoever receives it; it does not go through our servers.</li>
+    <li><strong>Call emergency services:</strong> the button next to SOS opens the system call screen with the emergency number for your region (112 by default), and you confirm the call. The app only reads the phone's region and language to pick the number; it does not alert the mesh or send data anywhere.</li>
+    <li><strong>Stealth mode:</strong> if you turn it on, your phone stops announcing itself on the mesh, scanning for others, forwarding other people's packets and broadcasting your name; only "Sync now" opens a short window to exchange what is pending. An SOS takes you out of stealth so help can reach you, and the app warns you before sending it.</li>
+  </ul>
+
   <h2>Permissions the app asks for</h2>
   <ul>
     <li><strong>Bluetooth and local network:</strong> to find and talk to nearby devices and form the mesh and, if you turn it on, to share the app and the encyclopedia with another nearby device. It sends nothing to the internet.</li>
     <li><strong>Location (only while the app is in use):</strong> for the map, GPS, compass, sun, altitude, SOS and the guide for finding someone who asks for help.</li>
     <li><strong>Camera:</strong> only to read the QR code of a contact or a group. No photo or video is saved and nothing is sent anywhere.</li>
+    <li><strong>Contacts and SMS:</strong> the app does not ask for permission to read your address book or to send SMS: it uses the system contact picker and the system SMS sheet, where you decide.</li>
     <li><strong>Flashlight:</strong> to send Morse code (and the Morse SOS).</li>
     <li><strong>Motion and sensors:</strong> for the compass and the barometer (altitude and storm warning). The data does not leave the device.</li>
     <li><strong>Tracking (iPhone and iPad only, free version):</strong> Apple's prompt (ATT), explained below.</li>
@@ -91,10 +105,10 @@
   <p>You can change your choice at any time: on iPhone, in Settings → Privacy &amp; Security → Tracking; and in the app itself, under "Ad privacy".</p>
 
   <h2>Purchases: Pro and the extended library</h2>
-  <p>The essentials of the app are free. You can buy, with a one-time payment (not a subscription), Pro and the groups of the extended library. Payment is handled by Apple (App Store) or Microsoft (Microsoft Store) with your store account: we never see payment details. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> checks the purchase with the store; for that it uses an <strong>anonymous customer identifier</strong> and knows what you have bought. We do not link it to your name or email, which we do not have. The app's store has "Restore purchases".</p>
+  <p>The essentials of the app are free. You can buy, with a one-time payment (not a subscription), Pro and the groups of the extended library. Payment is handled by Apple (App Store) with your Apple account: we never see payment details. Purchases are in the iPhone and iPad version; the Mac and Windows versions do not sell anything for now. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> checks the purchase with the store; for that it uses an <strong>anonymous customer identifier</strong> and knows what you have bought. We do not link it to your name or email, which we do not have. The app's store has "Restore purchases".</p>
 
   <h2>Extended library downloads</h2>
-  <p>Packs and maps that are not included are downloaded only when you tap "Download". To check the purchase and prevent abuse, that request goes through a server of ours hosted on <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, which returns a temporary link. The files are served from GitHub using that link.</p>
+  <p>On iPhone and iPad, packs and maps that are not included are downloaded only when you tap "Download". To check the purchase and prevent abuse, that request goes through a server of ours hosted on <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, which returns a temporary link. The files are served from GitHub using that link, so GitHub (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">its policy</a>) sees your phone's IP address during the download, like any web server.</p>
   <ul>
     <li><strong>What is logged:</strong> the anonymous purchase identifier, the pack requested, the platform, the date and the result (for example, successful or no purchase). <strong>It is kept for 30 days</strong>, to verify the purchase and prevent abuse.</li>
     <li><strong>IP address:</strong> used only to limit abuse (a daily download quota). It is not stored together with the download beyond that quota, which is kept for <strong>2 days</strong>.</li>
@@ -105,7 +119,7 @@
   <p>The medicine and first-aid articles are <strong>for guidance only and are not a substitute for a healthcare professional</strong> or the emergency services. In an emergency, call your country's emergency number if you can.</p>
 
   <h2>Where your data is stored and how to delete it</h2>
-  <p>Almost everything is stored <strong>only on your device</strong>: your identity, messages, contacts, groups, pins and what you have downloaded. There is no copy on any server of ours. To delete it all, uninstall the app; to start over with a new identity, regenerate it from the app. Messages that have already reached other devices stay on them and we cannot delete them from here. Purchase receipts are kept by Apple or Microsoft in your store account, under their own policies.</p>
+  <p>Almost everything is stored <strong>only on your device</strong>: your identity, messages, contacts, groups, pins and what you have downloaded. There is no copy on any server of ours. To delete it all, uninstall the app; to start over with a new identity, regenerate it from the app. Messages that have already reached other devices stay on them and we cannot delete them from here. Purchase receipts are kept by Apple in your account, under their own policies.</p>
 
   <h2>Your rights</h2>
   <p>You can ask at any time to see, correct or delete the data we hold about you (in practice, the 30-day download log tied to your anonymous purchase identifier) and exercise your other GDPR rights (access, rectification, erasure, objection, restriction and portability) by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. You can also complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>

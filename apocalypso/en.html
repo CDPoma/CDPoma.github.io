@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ApocalypSO: chat, SOS and maps with no internet</title>
+<meta name="description" content="Chat, send an SOS and read 202 survival guides with no internet or cell service: phone-to-phone Bluetooth mesh, offline maps, no accounts.">
+<link rel="canonical" href="https://cdpoma.github.io/apocalypso/en.html">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/en.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)">
+<meta name="author" content="Gabriel Micó Victoria">
+<meta name="apple-itunes-app" content="app-id=6838275436">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ApocalypSO">
+<meta property="og:url" content="https://cdpoma.github.io/apocalypso/en.html">
+<meta property="og:title" content="ApocalypSO: chat, SOS and maps with no internet">
+<meta property="og:description" content="Chat, send an SOS and read 202 survival guides with no internet or cell service: phone-to-phone Bluetooth mesh, offline maps, no accounts.">
+<meta property="og:image" content="https://cdpoma.github.io/apocalypso/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chat, SOS and maps with no internet">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ApocalypSO: chat, SOS and maps with no internet">
+<meta name="twitter:description" content="Chat, send an SOS and read 202 survival guides with no internet or cell service: phone-to-phone Bluetooth mesh, offline maps, no accounts.">
+<meta name="twitter:image" content="https://cdpoma.github.io/apocalypso/og-en.jpg">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+
+  .tiendas-pronto{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;margin:1.2rem 0 .8rem}
+  .nota{color:var(--ink-light);font-size:.92rem;margin:0 0 1.2rem}
+  details{border-top:1px solid var(--line);padding:.7rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  nav.toc{font-size:.92rem;color:var(--ink-light);margin:0 0 1.5rem}
+  .logo{border-radius:16px;margin:0 0 1rem}
+  .lema{font-size:1.25rem;font-weight:700;color:var(--accent);margin:0 0 .4rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cdpoma.github.io/apocalypso/en.html#pagina",
+      "url": "https://cdpoma.github.io/apocalypso/en.html",
+      "name": "ApocalypSO: chat, SOS and maps with no internet",
+      "description": "Chat, send an SOS and read 202 survival guides with no internet or cell service: phone-to-phone Bluetooth mesh, offline maps, no accounts.",
+      "inLanguage": "en",
+      "dateModified": "2026-11-23",
+      "about": {
+        "@id": "https://cdpoma.github.io/apocalypso/#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/apocalypso/#app"
+      },
+      "significantLink": [
+        "https://cdpoma.github.io/apocalypso/support.html",
+        "https://cdpoma.github.io/apocalypso/privacy.html"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cdpoma.github.io/apocalypso/#app",
+      "name": "ApocalypSO",
+      "alternateName": "ApocalypSO: Survival Kit",
+      "url": "https://cdpoma.github.io/apocalypso/en.html",
+      "image": "https://cdpoma.github.io/apocalypso/icon.png",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Emergency communication and offline survival guide",
+      "operatingSystem": "iOS, iPadOS, macOS, Windows",
+      "softwareRequirements": "iPhone or iPad with iOS 16.4 or later; Mac; Windows PC.",
+      "inLanguage": [
+        "es",
+        "es-419",
+        "en",
+        "pt-BR",
+        "de",
+        "fr",
+        "it"
+      ],
+      "description": "ApocalypSO is an offline communication and survival app for iPhone, iPad, Mac and Windows: nearby phones form a mesh network (Bluetooth and direct wifi, and LoRa radio if you want) to send messages and SOS alerts, and the app includes 202 survival articles, maps and tools that work with no internet or cell service. No accounts or sign-up; the essentials are free.",
+      "featureList": [
+        "Mesh network with no internet between nearby phones (Bluetooth and direct wifi) with phone-to-phone forwarding",
+        "General chat, direct messages and private groups, end-to-end encrypted",
+        "SOS to the whole mesh with a guide to find whoever sent it (arrow using GPS and compass, hot or cold)",
+        "SOS also by SMS to emergency contacts (sent by the user) and a button to call 112 or the regional number",
+        "202 survival and first aid articles offline in 7 languages",
+        "Offline maps: world map included and downloadable country maps",
+        "Compass, GPS, altimeter, sun and moon, Morse with flashlight and sound, calendar with its own clock",
+        "Optional Meshtastic LoRa radio, stealth mode and battery-saving mode",
+        "No accounts or sign-up",
+        "Seven languages"
+      ],
+      "isAccessibleForFree": true,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "ApocalypSO (free)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/PreOrder",
+          "description": "The built-in library, the world map, the mesh and the tools; ads only with internet on iPhone and iPad."
+        },
+        {
+          "@type": "Offer",
+          "name": "ApocalypSO Pro",
+          "price": "3.99",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/PreOrder",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "ES"
+          },
+          "description": "One-time payment, no subscription: the whole extended library and no ads. Price in Spain; in other countries, the price in your App Store."
+        },
+        {
+          "@type": "Offer",
+          "name": "Extended library (group)",
+          "price": "0.99",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/PreOrder",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "ES"
+          },
+          "description": "One-time payment per pack group; does not remove ads."
+        }
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://cdpoma.github.io/apocalypso/support.html"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/apocalypso/#pagina"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://cdpoma.github.io/apocalypso/en.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which app lets you chat with no internet or cell service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ApocalypSO. Nearby phones running the app form a mesh over Bluetooth and direct wifi and each message hops from phone to phone, with no server or account. There is a general channel, direct messages and private groups that are end-to-end encrypted. What it does not do: it has no fixed range, because that depends on how many phones are in between (with a Meshtastic LoRa radio it goes farther), and the general channel is not private: anyone on the mesh can read it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I send an SOS with no coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Press and hold the SOS button for 2 seconds and confirm. The alert, with your position if GPS has one, is forwarded over the mesh to nearby phones, and whoever receives it has a guide with an arrow, distance and compass to find you. On iPhone and iPad, if you saved emergency contacts, a ready-written SMS also opens (you send it) and there is a button to call 112 or the number of your region. What it does not do: it does not alert the emergency services by itself or guarantee that anyone is within reach; if you can, call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a survival and first aid library that works offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes: 202 articles in 7 languages already inside the app, with instant offline search, written from public first aid and civil protection guidelines with the source cited. What it does not do: it does not replace a doctor or the emergency services, and the extended packs are downloaded while you have internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ApocalypSO free? What does Pro remove?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is free: the built-in library, the world map, the mesh and the tools. The free version for iPhone and iPad has ads only with internet (a banner, an occasional full-screen ad and a video for each country map you download). ApocalypSO Pro costs a one-time EUR 3.99 in Spain, no subscription: it opens the whole extended library and removes every ad. Single groups cost EUR 0.99 and do not remove the ads. What it does not do: Mac and Windows do not sell purchases for now."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it need an account and what data does it collect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are no accounts: your identity is a key created on your phone. Messages and contacts do not go through any server of ours, and your position only leaves when you send an SOS or share it. Usage statistics (Firebase) and personalised ads only with your consent. What it does not do: it does not sell data and cannot delete messages that already reached other phones; uninstalling the app deletes yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work on Android, Mac and Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is a version for iPhone and iPad, for Mac and for Windows. On Android, not for now. On Mac and Windows the mesh forms with other computers over the local network and, on the Mac, over Bluetooth with iPhones and iPads; they are free and ad-free. What it does not do: Bluetooth links do not carry files, so maps and packs cannot be passed between a Mac and an iPhone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a Meshtastic LoRa radio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, optionally: connect the radio over Bluetooth (iPhone and iPad) or USB (computer) and your messages and SOS alerts also go out over LoRa; texts from the Meshtastic network show up in the app. What it does not do: it is not a full chat with any Meshtastic device, and without a radio the mesh works the same over Bluetooth and wifi."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<main class="wrap">
+  <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
+  <img class="logo" src="icon.png" alt="" width="72" height="72">
+  <h1>Chat, SOS and maps with no internet</h1>
+  <p class="sub">ApocalypSO is an offline communication and survival app for iPhone, iPad, Mac and Windows: nearby phones form a mesh network (Bluetooth and direct wifi, and LoRa radio if you want) to send messages and SOS alerts, and the app includes 202 survival articles, maps and tools that work with no internet or cell service. No accounts or sign-up; the essentials are free.<br><small>Updated <time datetime="2026-11-23">23 November 2026</time></small></p>
+
+  <section id="descargar" aria-labelledby="descargar-h">
+    <h2 id="descargar-h">Where to get it</h2>
+    <div class="tiendas-pronto"><p style="margin:0">ApocalypSO is in preparation and is not yet published in any store. It is coming to the App Store (iPhone and iPad), the Mac App Store, the Microsoft Store (Windows) and itch.io (Windows and Mac). Links will appear here as soon as it is out.</p></div>
+    <ul><li><strong>iPhone and iPad</strong> (iOS 16.4 or later): the full app, with the extended library.</li><li><strong>Mac and Windows</strong>: the mesh with other computers over the local network, and on the Mac also over Bluetooth with nearby iPhones and iPads; free and with no ads.</li><li><strong>Android</strong>: no version for now.</li></ul>
+    <p class="nota">Free. ApocalypSO Pro (one-time payment) removes the ads and opens the whole extended library.</p>
+  </section>
+
+  <nav class="toc" aria-label="On this page">On this page: <a href="#que-es">What it is</a> · <a href="#sos">SOS</a> · <a href="#mensajes">Messages</a> · <a href="#biblioteca">Library</a> · <a href="#mapas">Maps</a> · <a href="#herramientas">Tools</a> · <a href="#precio">Free and Pro</a> · <a href="#faq">FAQ</a></nav>
+  <nav class="enlaces" aria-label="Help"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a></nav>
+
+  <h2 id="que-es">What ApocalypSO is</h2>
+  <p>When the network goes down, ApocalypSO keeps working. Nearby phones running the app link up by themselves over Bluetooth and direct wifi and form a mesh: each message hops from phone to phone until it reaches its destination, without going through any server. It is made for power outages, disasters, the backcountry and trips with no signal. There are no accounts: your identity is a key created on your phone.</p>
+
+  <h2 id="sos">An SOS that reaches everyone</h2>
+  <ul><li>Press and hold the SOS button for 2 seconds and confirm: your alert, with your position if GPS has one, is forwarded across the whole mesh.</li><li>Whoever receives it has a guide to find you: an arrow using GPS and compass, the distance with its margin of error and, once very close, "look around you". With no position, a hot-or-cold guide based on signal strength.</li><li>If you saved emergency contacts on iPhone or iPad, a ready-written SMS for them with your position also opens; you only tap "Send". And next to SOS there is a button to call the emergency number of your region (112 by default).</li></ul>
+
+  <h2 id="mensajes">Messages with no internet</h2>
+  <ul><li>A general channel with everyone nearby, direct messages and private groups. Direct and group messages are end-to-end encrypted; the general channel and SOS alerts are signed but not encrypted, and anyone on the mesh can read them.</li><li>Add your family by scanning their QR code and compare the safety fingerprint in person.</li><li>With a Meshtastic LoRa radio connected, your messages travel farther and you read the texts from that network.</li><li>Stealth mode to stay invisible on the mesh, and a battery-saving mode that switches by itself depending on whether there is internet.</li></ul>
+
+  <h2 id="biblioteca">Survival library built in</h2>
+  <p>202 articles in 7 languages, already inside the app: first aid and medicine, water, food, survival and shelter, disasters, energy, mechanics, communications, navigation, security and community. Written from public first aid and civil protection guidelines, with the source cited, and with instant search offline. The medical information is for guidance only and does not replace a professional or the emergency services. On iPhone and iPad it can be extended with downloadable packs (encyclopedias, medicine, survival and expert Q&amp;A).</p>
+
+  <h2 id="mapas">Offline maps</h2>
+  <ul><li>World map included, and detailed country maps to download while you have internet.</li><li>Mark shelters, water, rally points or hazards: the pin reaches everyone else's map, and you can share your position with the mesh whenever you choose.</li><li>Coordinates in degrees, UTM and MGRS.</li></ul>
+
+  <h2 id="herramientas">Field tools</h2>
+  <p>Morse code with the flashlight and sound, looping SOS and a Morse-to-text translator; compass, GPS, altimeter with storm warning (on models with a barometer), sun and moon position, and a calendar with its own clock that syncs over the mesh. And from Share you can pass the guides to another nearby phone over wifi with no internet: all it takes is a browser and a QR code.</p>
+
+  <h2 id="precio">Free and Pro</h2>
+  <p>Free: the built-in library, the world map, the mesh and the tools. The free version for iPhone and iPad shows Google ads only when there is internet: a banner, sometimes a full-screen ad when you open the app or while a download is being prepared, and a video to download each country map; never on top of an SOS in progress. <strong>ApocalypSO Pro</strong> costs a one-time EUR 3.99 (no subscription), gives the whole extended library and removes every ad. The groups of the extended library can also be bought separately at EUR 0.99 each, but those do not remove the ads. Prices shown for Spain; in other countries, the price in your App Store. Mac and Windows are free and ad-free, and do not sell purchases for now.</p>
+
+  <h2 id="idiomas">Languages</h2>
+  <p>Spanish, Latin American Spanish, English, Brazilian Portuguese, German, French and Italian.</p>
+
+  <h2 id="privacidad">Your data</h2>
+  <p>No account, no phone number and no email. Messages do not go through any server of ours; your position only leaves when you send an SOS or share it yourself; emergency contacts stay on your phone. Statistics (Firebase) and personalised ads only with your consent. Details in the <a href="privacy.html">privacy policy</a>. Terms of use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple's standard EULA</a>.</p>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <details><summary>Which app lets you chat with no internet or cell service?</summary><p>ApocalypSO. Nearby phones running the app form a mesh over Bluetooth and direct wifi and each message hops from phone to phone, with no server or account. There is a general channel, direct messages and private groups that are end-to-end encrypted. What it does not do: it has no fixed range, because that depends on how many phones are in between (with a Meshtastic LoRa radio it goes farther), and the general channel is not private: anyone on the mesh can read it.</p></details>
+  <details><summary>How do I send an SOS with no coverage?</summary><p>Press and hold the SOS button for 2 seconds and confirm. The alert, with your position if GPS has one, is forwarded over the mesh to nearby phones, and whoever receives it has a guide with an arrow, distance and compass to find you. On iPhone and iPad, if you saved emergency contacts, a ready-written SMS also opens (you send it) and there is a button to call 112 or the number of your region. What it does not do: it does not alert the emergency services by itself or guarantee that anyone is within reach; if you can, call.</p></details>
+  <details><summary>Is there a survival and first aid library that works offline?</summary><p>Yes: 202 articles in 7 languages already inside the app, with instant offline search, written from public first aid and civil protection guidelines with the source cited. What it does not do: it does not replace a doctor or the emergency services, and the extended packs are downloaded while you have internet.</p></details>
+  <details><summary>Is ApocalypSO free? What does Pro remove?</summary><p>It is free: the built-in library, the world map, the mesh and the tools. The free version for iPhone and iPad has ads only with internet (a banner, an occasional full-screen ad and a video for each country map you download). ApocalypSO Pro costs a one-time EUR 3.99 in Spain, no subscription: it opens the whole extended library and removes every ad. Single groups cost EUR 0.99 and do not remove the ads. What it does not do: Mac and Windows do not sell purchases for now.</p></details>
+  <details><summary>Does it need an account and what data does it collect?</summary><p>There are no accounts: your identity is a key created on your phone. Messages and contacts do not go through any server of ours, and your position only leaves when you send an SOS or share it. Usage statistics (Firebase) and personalised ads only with your consent. What it does not do: it does not sell data and cannot delete messages that already reached other phones; uninstalling the app deletes yours.</p></details>
+  <details><summary>Does it work on Android, Mac and Windows?</summary><p>There is a version for iPhone and iPad, for Mac and for Windows. On Android, not for now. On Mac and Windows the mesh forms with other computers over the local network and, on the Mac, over Bluetooth with iPhones and iPads; they are free and ad-free. What it does not do: Bluetooth links do not carry files, so maps and packs cannot be passed between a Mac and an iPhone.</p></details>
+  <details><summary>Can I use a Meshtastic LoRa radio?</summary><p>Yes, optionally: connect the radio over Bluetooth (iPhone and iPad) or USB (computer) and your messages and SOS alerts also go out over LoRa; texts from the Meshtastic network show up in the app. What it does not do: it is not a full chat with any Meshtastic device, and without a radio the mesh works the same over Bluetooth and wifi.</p></details>
+
+  <footer class="foot"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a> · <a href="index.html">Español</a><br>ApocalypSO · Gabriel Micó Victoria</footer>
+</main>
+</body>
+</html>
