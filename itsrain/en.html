@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ItsRain: weather and rain radar, minute by minute</title>
-<meta name="description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<title>ItsRain: 3D weather map, rain and clouds</title>
+<meta name="description" content="3D weather map with real satellite clouds, rain, wind, waves and air quality, free. Plus &quot;Rain in 12 min&quot; for your exact spot. iPhone, iPad and Apple Watch.">
 <link rel="canonical" href="https://cdpoma.github.io/itsrain/en.html">
 <link rel="alternate" hreflang="es" href="https://cdpoma.github.io/itsrain/">
 <link rel="alternate" hreflang="en" href="https://cdpoma.github.io/itsrain/en.html">
@@ -19,14 +19,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ItsRain">
 <meta property="og:url" content="https://cdpoma.github.io/itsrain/en.html">
-<meta property="og:title" content="ItsRain: weather and rain radar, minute by minute">
-<meta property="og:description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<meta property="og:title" content="ItsRain: 3D weather map, rain and clouds">
+<meta property="og:description" content="3D weather map with real satellite clouds, rain, wind, waves and air quality, free. Plus &quot;Rain in 12 min&quot; for your exact spot. iPhone, iPad and Apple Watch.">
 <meta property="og:image" content="https://cdpoma.github.io/itsrain/icon.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ItsRain: weather and rain radar, minute by minute">
-<meta name="twitter:description" content="Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.">
+<meta name="twitter:title" content="ItsRain: 3D weather map, rain and clouds">
+<meta name="twitter:description" content="3D weather map with real satellite clouds, rain, wind, waves and air quality, free. Plus &quot;Rain in 12 min&quot; for your exact spot. iPhone, iPad and Apple Watch.">
 <meta name="twitter:image" content="https://cdpoma.github.io/itsrain/icon.png">
 <style>
   :root{
@@ -76,12 +76,16 @@
       "@type": "WebPage",
       "@id": "https://cdpoma.github.io/itsrain/en.html#pagina",
       "url": "https://cdpoma.github.io/itsrain/en.html",
-      "name": "ItsRain: weather and rain radar, minute by minute",
-      "description": "Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.",
+      "name": "ItsRain: 3D weather map, rain and clouds",
+      "description": "3D weather map with real satellite clouds, rain, wind, waves and air quality, free. Plus \"Rain in 12 min\" for your exact spot. iPhone, iPad and Apple Watch.",
       "inLanguage": "en",
-      "dateModified": "2026-11-17",
-      "about": { "@id": "https://cdpoma.github.io/itsrain/en.html#app" },
-      "mainEntity": { "@id": "https://cdpoma.github.io/itsrain/en.html#app" },
+      "dateModified": "2026-11-23",
+      "about": {
+        "@id": "https://cdpoma.github.io/itsrain/en.html#app"
+      },
+      "mainEntity": {
+        "@id": "https://cdpoma.github.io/itsrain/en.html#app"
+      },
       "significantLink": [
         "https://cdpoma.github.io/itsrain/support.html",
         "https://cdpoma.github.io/itsrain/privacy.html",
@@ -91,25 +95,33 @@
     {
       "@type": "SoftwareApplication",
       "@id": "https://cdpoma.github.io/itsrain/en.html#app",
-      "name": "ItsRain: Weather & Rain Radar",
+      "name": "ItsRain: Weather & Radar",
       "alternateName": "ItsRain",
       "url": "https://cdpoma.github.io/itsrain/en.html",
       "image": "https://cdpoma.github.io/itsrain/icon.png",
       "applicationCategory": "WeatherApplication",
-      "operatingSystem": "iOS, watchOS",
-      "softwareRequirements": "iPhone; Apple Watch for the watch version.",
-      "availableOnDevice": "iPhone, Apple Watch",
-      "inLanguage": ["en", "es", "pt-BR", "de", "fr", "it"],
-      "description": "Rain in 12 min, for 30 min: minute-by-minute rain radar for your exact spot in Spain, powered by AEMET, on iPhone, Apple Watch and the Dynamic Island. Free, with discreet ads.",
+      "operatingSystem": "iOS, iPadOS, watchOS, macOS",
+      "softwareRequirements": "iPhone or iPad with iOS 15 or later; Apple Watch for the watch version; Mac with Apple silicon.",
+      "availableOnDevice": "iPhone, iPad, Apple Watch, Mac with Apple silicon",
+      "inLanguage": [
+        "es",
+        "es-419",
+        "en",
+        "pt-BR",
+        "de",
+        "fr",
+        "it"
+      ],
+      "description": "3D weather map with real satellite clouds, rain, wind, waves and air quality, free. Plus \"Rain in 12 min\" for your exact spot. iPhone, iPad and Apple Watch.",
       "featureList": [
-        "Minute-by-minute rain for your exact spot in Spain, with a confidence score",
-        "Alert before it rains",
-        "Live Activity on the Lock Screen and in the Dynamic Island",
-        "Apple Watch and widgets",
-        "Hourly and 10-day forecast",
-        "Feels-like temperature, UV index, wind with compass, sunrise and sunset, precipitation, humidity, dew point, cloud cover, visibility, pressure, moon phase and alerts",
-        "3D global map with NASA imagery, satellite clouds, AEMET radar, storms and wind",
-        "Augmented reality: the globe on your table and «look at the sky»"
+        "3D weather map: the planet over Apple's satellite map, with relief and night where it really is",
+        "Real satellite clouds (Meteosat, GOES and Himawari) with their shadow, and a cloud forecast up to 5 days",
+        "Rain in X min, for Y min, for your exact spot, with a confidence score",
+        "Rain, animated wind, storms, temperature, air quality, waves and a topographic map",
+        "Advanced: sailing, surfing, fishing, mountain, ski, air sports and aviation modes; isobars; METAR; wind at altitude; ECMWF, GFS, ICON and MET Norway models",
+        "Home and Lock Screen widgets, Live Activity in the Dynamic Island and Apple Watch",
+        "Hourly and 10-day forecast, feels-like temperature, UV, humidity, pressure, visibility, sun and moon, and alerts",
+        "Seven languages"
       ],
       "isAccessibleForFree": true,
       "offers": [
@@ -117,18 +129,60 @@
           "@type": "Offer",
           "name": "ItsRain (free)",
           "price": "0",
-          "priceCurrency": "USD",
-          "description": "Download and use the app, with discreet ads. The global map opens after watching a video or with ItsRain Pro.",
-          "eligibleRegion": { "@type": "Country", "name": "US" },
+          "priceCurrency": "EUR",
+          "description": "Download and use the app, with one ad when you open it (at most 1 time in 5) and no banner. \"Advanced\" opens for 5 minutes with each video or always with ItsRain Pro.",
           "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "ItsRain Pro monthly",
+          "price": "0.99",
+          "priceCurrency": "EUR",
+          "description": "Subscription that removes all ads and keeps Advanced always open. Price in Spain; other countries see their own App Store price. 7 days free for anyone who has not tried it.",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "ItsRain Pro yearly",
+          "price": "9.99",
+          "priceCurrency": "EUR",
+          "description": "Subscription that removes all ads and keeps Advanced always open. Price in Spain; other countries see their own App Store price. 7 days free for anyone who has not tried it.",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "9.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y"
+          }
         }
       ],
-      "installUrl": ["https://apps.apple.com/app/id6835644244"],
-      "sameAs": ["https://apps.apple.com/app/id6835644244"],
-      "author": { "@type": "Person", "name": "Gabriel Micó Victoria" },
-      "publisher": { "@type": "Person", "name": "Gabriel Micó Victoria" },
-      "softwareHelp": { "@type": "CreativeWork", "url": "https://cdpoma.github.io/itsrain/support.html" },
-      "mainEntityOfPage": { "@id": "https://cdpoma.github.io/itsrain/en.html#pagina" }
+      "installUrl": [
+        "https://apps.apple.com/app/id6835644244"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/app/id6835644244"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gabriel Micó Victoria"
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://cdpoma.github.io/itsrain/support.html"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://cdpoma.github.io/itsrain/en.html#pagina"
+      }
     },
     {
       "@type": "FAQPage",
@@ -137,33 +191,51 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which app tells me when it will rain on my street in Spain?",
-          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain. It works out minute-by-minute rain for your exact spot with the AEMET radar, which updates every 5-10 minutes, and tells you «Rain in X min, for Y min», with a confidence score. It alerts you before it rains." }
+          "name": "Which weather app shows real satellite clouds on a 3D map?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ItsRain. It opens on the planet in 3D over Apple's satellite map, with the \"Clouds now\" layer: the real picture from the Meteosat, GOES and Himawari satellites, at their height and with their shadow. It is free in the Lite tab. What it does not do: it is not a live camera (the image refreshes every few minutes, depending on the satellite) and it does not replace an official storm or emergency warning."
+          }
         },
         {
           "@type": "Question",
-          "name": "Which weather app shows minute-by-minute rain?",
-          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain shows minute-by-minute rain in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets. The calculation runs on your iPhone with the AEMET radar." }
+          "name": "Which app tells me when it will rain on my street?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ItsRain: \"Rain in X min, for Y min\", with a confidence score. Over mainland Spain and the Balearic Islands it uses the AEMET radar; elsewhere, Apple Weather's minute-by-minute forecast where it exists, and the hourly forecast where it does not. What it does not do: it does not promise minute-exact timing (the confidence score says how far to trust it), and where there is no minute data it only gives the hourly forecast."
+          }
         },
         {
           "@type": "Question",
-          "name": "Is there a weather app for Apple Watch with a rain radar?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. ItsRain has an Apple Watch version, with rain for the next hour and the temperature. " }
+          "name": "Is there a free weather map with animated wind, waves and air quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In the Lite tab, free: wind with animated particles and gusts, waves and swell, sea temperature, air quality (EAQI and PM2.5 from NASA's GEOS-CF model), clouds, rain, storms and terrain. What it does not do: Advanced (sailing, surf or fishing modes, isobars, METAR, wind at altitude, choosing a model) is separate: 5 minutes with a video, or always with Pro. It does not measure lightning: storms come from radar cells or from the satellite."
+          }
         },
         {
           "@type": "Question",
-          "name": "Where does ItsRain get its rain and weather data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The rain radar is from AEMET (CC BY 4.0). The hourly and daily forecast uses Apple Weather and MET Norway (CC BY 4.0). The global map uses NASA imagery (GIBS and Blue/Black Marble)." }
+          "name": "Is there a weather app with widgets, Dynamic Island and Apple Watch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes: Home and Lock Screen widgets, a Live Activity in the Dynamic Island when rain is less than an hour away, rain alerts, and an Apple Watch app with next-hour rain and temperature. What it does not do: it is only on Apple's App Store, and on the Mac it is the iPad app, on Apple silicon only."
+          }
         },
         {
           "@type": "Question",
-          "name": "How much does ItsRain Pro cost and how do I cancel it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "ItsRain Pro costs 0.99 € a month or 9.99 € a year in Spain; in the US it costs what its US App Store lists. It removes all ads. It includes 7 free days for anyone who has not tried it before. Cancel in Apple Settings, under your name, Subscriptions." }
+          "name": "How much is ItsRain Pro and what does it remove?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0.99 € a month or 9.99 € a year in Spain (other countries see their own App Store price), with 7 days free if you have not tried it. It removes all ads and keeps Advanced always open. It renews automatically unless you cancel at least 24 hours before the period ends, in Settings > your name > Subscriptions, and purchases can be restored in the app's Settings. What it does not do: without Pro there is an ad when you open the app (at most 1 time in 5) and the video to open Advanced; there is no banner."
+          }
         },
         {
           "@type": "Question",
-          "name": "Why does ItsRain ask for my location?",
-          "acceptedAnswer": { "@type": "Answer", "text": "To work out the rain and weather for your exact spot. The calculation runs on your phone, and your location is not stored on any ItsRain server." }
+          "name": "Why does it ask for my location and what data does it use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To work out the rain and weather at your exact spot. Apple Weather receives your exact position and MET Norway receives it to four decimals; the other services (satellites, radar, wind, air quality) only receive zone or tile codes. There is no account. What it does not do: it does not sell your data or store your location on an ItsRain server; analytics (Firebase) use an app-instance identifier, not your name, and in the EU, the UK and Switzerland they only run if you accept."
+          }
         }
       ]
     }
@@ -192,9 +264,9 @@
 <body>
 <main class="wrap">
   <a class="idioma" href="index.html" hreflang="es" lang="es">Español</a>
-  <h1>Weather and rain radar, minute by minute</h1>
+  <h1>The weather planet, from space to your street</h1>
   <p class="lluvia">Rain in 12 min, for 30 min.</p>
-  <p class="sub">ItsRain tells you when it will rain at your exact spot in Spain, with the AEMET radar, on iPhone and Apple Watch. Free, with discreet ads.<br><small>Updated <time datetime="2026-11-17">November 17, 2026</time></small></p>
+  <p class="sub">ItsRain is a 3D weather map for iPhone, iPad and Apple Watch. It opens on the planet, over Apple&#x27;s satellite map, and lets you zoom from space down to your street with layers of real satellite clouds, rain, wind, storms, temperature, air quality, waves and terrain. It also tells you when rain will reach your exact spot, with a confidence score. Free; ItsRain Pro removes the ads.<br><small>Updated <time datetime="2026-11-23">November 23, 2026</time></small></p>
 
   <section id="descargar" aria-labelledby="descargar-h">
     <h2 id="descargar-h">Download</h2>
@@ -202,63 +274,51 @@
       <a href="https://apps.apple.com/app/id6835644244"><img src="img/app-store-en.svg" alt="Download on the App Store" width="120" height="40"></a>
     </div>
     <ul>
-      <li><strong>iPhone</strong>: the full app, with widgets, Live Activity and the global map.</li>
+      <li><strong>iPhone and iPad</strong>: the full app, with the planet, the layers, widgets and Live Activity.</li>
       <li><strong>Apple Watch</strong>: rain for the next hour and the temperature, on your wrist.</li>
+      <li><strong>Mac</strong>: the iPad app runs, on Apple silicon only.</li>
     </ul>
     <p class="nota">Free. ItsRain Pro removes the ads.</p>
   </section>
 
-  <nav class="toc" aria-label="On this page">On this page: <a href="#que-es">What it is</a> · <a href="#lluvia">Rain minute by minute</a> · <a href="#tiempo">The weather</a> · <a href="#mapa">Global map</a> · <a href="#precio">Free and Pro</a> · <a href="#faq">Questions</a></nav>
+  <nav class="toc" aria-label="On this page">On this page: <a href="#que-es">What it is</a> · <a href="#capas">The layers</a> · <a href="#lluvia">Rain in X min</a> · <a href="#precio">Free and Pro</a> · <a href="#faq">Questions</a></nav>
   <nav class="enlaces" aria-label="Help"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a></nav>
 
   <h2 id="que-es">What ItsRain is</h2>
-  <p>ItsRain is a weather app for iPhone and Apple Watch, free, by Gabriel Micó. Its main feature is rain minute by minute: «Rain in X min, for Y min», for the user's exact spot in Spain.</p>
+  <p>The home screen is the planet: Apple's satellite map in 3D, with relief and night where it really is. Pull up the "Now" sheet for the weather now, hourly and for 10 days, with feels-like temperature, UV, wind, humidity, pressure, visibility, sun and moon, and weather alerts. The layers menu, bottom right, works like a professional weather map and remembers what you choose.</p>
 
-  <h2 id="lluvia">Rain minute by minute</h2>
-  <p>The rain is calculated on the phone itself with the AEMET radar, which updates every 5-10 minutes. Each forecast comes with a confidence score, so you know how much to trust it. ItsRain alerts you before it rains.</p>
-  <p>That sentence appears in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets.</p>
-
-  <h2 id="tiempo">The rest of the weather</h2>
+  <h2 id="capas">The layers</h2>
   <ul>
-    <li>Hourly and 10-day forecast.</li>
-    <li>Feels-like temperature, UV index and wind with compass.</li>
-    <li>Sunrise and sunset, precipitation, humidity and dew point.</li>
-    <li>Cloud cover, visibility, pressure, moon phase and alerts.</li>
+    <li><strong>Clouds now</strong>: the real picture from the Meteosat, GOES and Himawari satellites, at their height and casting their shadow on the ground; with Play, the last 6 hours.</li>
+    <li><strong>Cloud forecast</strong>: the model's cloud cover with the rain on top, up to 5 days; low, mid and high clouds, fog and cloud ceiling.</li>
+    <li><strong>Rain</strong>: AEMET radar over mainland Spain and the Balearic Islands, satellite rain for the rest of the world; accumulated rain and snow.</li>
+    <li><strong>Wind</strong>: animated particles that follow its direction, coloured by strength, and gusts.</li>
+    <li><strong>Storms</strong>: over mainland Spain and the Balearic Islands, the radar's storm cells and where they head in the next hour; elsewhere, the ones the satellite sees.</li>
+    <li>Temperature, feels-like and dew point; air quality (European EAQI and PM2.5 from NASA's GEOS-CF model); sea (waves, swell and water temperature); topographic map with contour lines.</li>
   </ul>
 
-  <h2 id="mapa">Global map</h2>
-  <ul>
-    <li>A 3D globe with NASA imagery: day and night, with city lights and the sun in its real position.</li>
-    <li>Satellite clouds, rain from the AEMET radar, storms with their path and where they are heading, and wind.</li>
-    <li>Zoom in to Apple's satellite view, with relief.</li>
-    <li>Augmented reality: the globe on your table, and «look at the sky», to see where a storm is coming from.</li>
-  </ul>
-  <p class="nota">The global map opens after watching a video or with ItsRain Pro.</p>
-
-  <h2 id="fuentes">Sources</h2>
-  <p>AEMET radar (CC BY 4.0), Apple Weather, MET Norway (CC BY 4.0), NASA GIBS and Blue/Black Marble.</p>
+  <h2 id="lluvia">Rain in X min</h2>
+  <p>For your exact spot: with the AEMET radar over mainland Spain and the Balearic Islands; in the rest of the world, with Apple Weather's minute-by-minute forecast where it exists and the hourly forecast where it does not. It shows in the app, in Home and Lock Screen widgets, as a Live Activity in the Dynamic Island when rain is less than an hour away with enough confidence, in iPhone alerts and on Apple Watch (next-hour rain and temperature).</p>
 
   <h2 id="precio">Free and Pro</h2>
-  <ul>
-    <li><strong>Free</strong>: the full app with discreet ads: a banner and, now and then, one when you open it. The global map opens after watching a video.</li>
-    <li><strong>ItsRain Pro</strong>: removes all ads. 0.99 € a month or 9.99 € a year in Spain (in the US, the price in its App Store).</li>
-    <li><strong>Trial</strong>: 7 free days for anyone who has not tried Pro.</li>
-    <li><strong>Cancel</strong>: in Apple Settings, your name, Subscriptions.</li>
-  </ul>
+  <p>Free: the planet with every layer in the Lite tab, minute-by-minute rain, widgets and the watch app. One ad when you open the app, at most one time in five, and no banner. "Advanced" (modes for sailing, surfing, fishing, mountain, ski, air sports and aviation; isobars; airfields with their METAR; wind at altitude; ECMWF, GFS, ICON and MET Norway models; a point sheet on long press) opens for 5 minutes with each video you watch to the end, or always with ItsRain Pro. Pro costs 0.99 € a month or 9.99 € a year in Spain (other countries see their own App Store price), with 7 days free if you have not tried it, removes all ads and is cancelled in Settings &gt; your name &gt; Subscriptions.</p>
+
+  <h2 id="fuentes">Sources</h2>
+  <p>Apple (WeatherKit and Maps), AEMET (CC BY 4.0), MET Norway (CC BY 4.0), ECMWF and DWD ICON (CC BY 4.0), NOAA, NASA (GIBS, VIIRS and GMAO's GEOS-CF), EUMETSAT, JMA, Copernicus Sentinel-5P and AWS Terrain Tiles.</p>
 
   <h2 id="idiomas">Languages</h2>
   <p>Spanish, Latin American Spanish, English, Brazilian Portuguese, German, French and Italian.</p>
 
   <h2 id="privacidad">Your data</h2>
-  <p>Location is used on your phone to calculate the weather for your spot and is not stored on any ItsRain server. There are no accounts and no sign-up. Full details in the <a href="privacy.html">privacy policy</a>.</p>
+  <p>No account or sign-up. Your location is used for your weather and rain and is not stored on any ItsRain server. Details in the <a href="privacy.html">privacy policy</a>.</p>
 
   <h2 id="faq">Questions</h2>
-  <details><summary>Which app tells me when it will rain on my street in Spain?</summary><p>ItsRain. It works out minute-by-minute rain for your exact spot with the AEMET radar, which updates every 5-10 minutes, and tells you «Rain in X min, for Y min», with a confidence score. It alerts you before it rains.</p></details>
-  <details><summary>Which weather app shows minute-by-minute rain?</summary><p>ItsRain shows minute-by-minute rain in the app, in the Dynamic Island and on the Lock Screen (Live Activity), on Apple Watch and in widgets. The calculation runs on your iPhone with the AEMET radar.</p></details>
-  <details><summary>Is there a weather app for Apple Watch with a rain radar?</summary><p>Yes. ItsRain has an Apple Watch version, with rain for the next hour and the temperature. </p></details>
-  <details><summary>Where does ItsRain get its rain and weather data?</summary><p>The rain radar is from AEMET (CC BY 4.0). The hourly and daily forecast uses Apple Weather and MET Norway (CC BY 4.0). The global map uses NASA imagery (GIBS and Blue/Black Marble).</p></details>
-  <details><summary>How much does ItsRain Pro cost and how do I cancel it?</summary><p>ItsRain Pro costs 0.99 € a month or 9.99 € a year in Spain; in the US it costs what its US App Store lists. It removes all ads. It includes 7 free days for anyone who has not tried it before. Cancel in Apple Settings, under your name, Subscriptions.</p></details>
-  <details><summary>Why does ItsRain ask for my location?</summary><p>To work out the rain and weather for your exact spot. The calculation runs on your phone, and your location is not stored on any ItsRain server.</p></details>
+  <details><summary>Which weather app shows real satellite clouds on a 3D map?</summary><p>ItsRain. It opens on the planet in 3D over Apple's satellite map, with the "Clouds now" layer: the real picture from the Meteosat, GOES and Himawari satellites, at their height and with their shadow. It is free in the Lite tab. What it does not do: it is not a live camera (the image refreshes every few minutes, depending on the satellite) and it does not replace an official storm or emergency warning.</p></details>
+  <details><summary>Which app tells me when it will rain on my street?</summary><p>ItsRain: "Rain in X min, for Y min", with a confidence score. Over mainland Spain and the Balearic Islands it uses the AEMET radar; elsewhere, Apple Weather's minute-by-minute forecast where it exists, and the hourly forecast where it does not. What it does not do: it does not promise minute-exact timing (the confidence score says how far to trust it), and where there is no minute data it only gives the hourly forecast.</p></details>
+  <details><summary>Is there a free weather map with animated wind, waves and air quality?</summary><p>Yes. In the Lite tab, free: wind with animated particles and gusts, waves and swell, sea temperature, air quality (EAQI and PM2.5 from NASA's GEOS-CF model), clouds, rain, storms and terrain. What it does not do: Advanced (sailing, surf or fishing modes, isobars, METAR, wind at altitude, choosing a model) is separate: 5 minutes with a video, or always with Pro. It does not measure lightning: storms come from radar cells or from the satellite.</p></details>
+  <details><summary>Is there a weather app with widgets, Dynamic Island and Apple Watch?</summary><p>Yes: Home and Lock Screen widgets, a Live Activity in the Dynamic Island when rain is less than an hour away, rain alerts, and an Apple Watch app with next-hour rain and temperature. What it does not do: it is only on Apple's App Store, and on the Mac it is the iPad app, on Apple silicon only.</p></details>
+  <details><summary>How much is ItsRain Pro and what does it remove?</summary><p>0.99 € a month or 9.99 € a year in Spain (other countries see their own App Store price), with 7 days free if you have not tried it. It removes all ads and keeps Advanced always open. It renews automatically unless you cancel at least 24 hours before the period ends, in Settings &gt; your name &gt; Subscriptions, and purchases can be restored in the app's Settings. What it does not do: without Pro there is an ad when you open the app (at most 1 time in 5) and the video to open Advanced; there is no banner.</p></details>
+  <details><summary>Why does it ask for my location and what data does it use?</summary><p>To work out the rain and weather at your exact spot. Apple Weather receives your exact position and MET Norway receives it to four decimals; the other services (satellites, radar, wind, air quality) only receive zone or tile codes. There is no account. What it does not do: it does not sell your data or store your location on an ItsRain server; analytics (Firebase) use an app-instance identifier, not your name, and in the EU, the UK and Switzerland they only run if you accept.</p></details>
 
   <footer class="foot"><a href="support.html">Help and support</a> · <a href="privacy.html">Privacy policy</a> · <a href="index.html">Español</a></footer>
 </main>
