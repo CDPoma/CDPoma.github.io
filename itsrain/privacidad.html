@@ -48,11 +48,11 @@
 <div class="wrap">
   <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
   <h1>ItsRain</h1>
-  <p class="sub">Política de privacidad · Fecha: 17 de noviembre de 2026</p>
+  <p class="sub">Política de privacidad · Fecha: 23 de noviembre de 2026</p>
   <nav class="enlaces"><a href="index.html">ItsRain</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
 
   <div class="card">
-    <p><strong>Resumen:</strong> ItsRain no tiene cuentas ni registro. Tu ubicación se usa en el propio móvil para calcular el tiempo de tu sitio y no se guarda en ningún servidor de ItsRain. La analítica (Firebase) se activa si la aceptas en la UE, Reino Unido y Suiza; en otros países no se pide permiso. Sus datos van vinculados a un identificador de tu instalación, no a tu nombre. La versión gratis muestra anuncios de Google AdMob; ItsRain Pro los quita. Las compras las gestiona Apple.</p>
+    <p><strong>Resumen:</strong> ItsRain no tiene cuentas ni registro. Tu ubicación se usa en el propio móvil para calcular el tiempo de tu sitio y no se guarda en ningún servidor de ItsRain. La analítica (Firebase Analytics, de Google) usa un identificador de la instalación de la app que asigna Firebase, así que sus eventos quedan vinculados a esa instalación (no a tu nombre ni a una cuenta). En la UE, el Reino Unido y Suiza solo se activa si la aceptas; en otros países no se pide permiso. La versión gratis muestra anuncios de Google AdMob; ItsRain Pro los quita. Las compras las gestiona Apple.</p>
   </div>
 
   <h2>Quién es el responsable</h2>
@@ -60,24 +60,24 @@
 
   <h2>Ubicación</h2>
   <p>ItsRain usa tu ubicación para calcular la lluvia y el tiempo de tu punto exacto. El cálculo se hace en tu móvil. La ubicación no se guarda en ningún servidor de ItsRain.</p>
-  <p>Para el radar, el móvil pide al servidor las imágenes del radar de la zona, sin enviar tu posición exacta. Para la previsión, Apple Weather recibe tu posición exacta. MET Norway recibe tu posición con cuatro decimales (unos 10 metros), también desde el Apple Watch. El servidor de las imágenes del radar, como cualquier servidor web, ve la dirección IP del móvil.</p>
+  <p>Qué sale de tu móvil y adónde: (a) Apple Weather (WeatherKit) recibe tu posición exacta. (b) MET Norway (api.met.no) la recibe con cuatro decimales (unos 10 metros), también desde el Apple Watch. (c) El servidor de ItsRain (Supabase, que opera el desarrollador) sirve el radar de AEMET, las rejillas de viento, de previsión y de modelos y la calidad del aire: el móvil pide códigos de radar o de rejilla, no tu posición. (d) El mapa descarga teselas de imágenes de la NASA (GIBS), de EUMETSAT y de relieve (AWS Terrain Tiles), y el mapa satélite de Apple Mapas: ven la zona que miras y tu dirección IP, no tu posición exacta. (e) aviationweather.gov (NOAA) recibe el recuadro del mapa visible para dar el METAR y el TAF de los aeródromos. Cualquier servidor web ve la dirección IP del móvil.</p>
 
   <h2>Cuentas y registro</h2>
   <p>ItsRain no pide cuenta, correo ni registro.</p>
 
   <h2>Analítica</h2>
-  <p>Usamos Firebase Analytics (Google) para saber cómo se usa la app: qué pantallas y funciones se usan, cuántos anuncios se ven y las compras (su valor y su moneda). Los eventos van vinculados a un identificador de la instalación de la app que asigna Firebase. No son del todo anónimos: no contienen tu nombre, tu correo ni tu cuenta, y no usamos el IDFA de Apple ni los usamos para seguimiento entre apps. En la UE, Reino Unido y Suiza solo se activa si lo aceptas en el aviso de consentimiento de Google. En el resto de países se activa sin pedir permiso. Los eventos no llevan tu ubicación.</p>
+  <p>Usamos Firebase Analytics (Google) para saber cómo se usa la app: qué pantallas, capas y funciones se usan, cuántos anuncios se ven y las compras (valor y moneda). Los eventos van vinculados a un identificador de instancia de la app que asigna Firebase a cada instalación; por eso la etiqueta de privacidad de la App Store declara estos datos como vinculados a ti, aunque no contienen tu nombre, tu correo ni tu cuenta. No usamos el IDFA para la analítica ni la usamos para seguimiento entre apps. Los eventos no llevan tu ubicación. En la UE, el Reino Unido y Suiza solo se activa si lo aceptas en el aviso de consentimiento de Google; en el resto de países se activa sin pedir permiso. Puedes pedir que se borre tu identificador escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
   <h2>Anuncios</h2>
   <p>La versión gratis muestra anuncios de Google AdMob. Antes de mostrarlos se usa el aviso de consentimiento de Google (UMP) y, en iPhone, la pregunta de seguimiento de Apple (ATT). Puedes cambiar tu elección en los ajustes del móvil. ItsRain Pro quita todos los anuncios.</p>
+  <p>La versión gratis muestra un anuncio al abrir la app (como mucho 1 de cada 5 veces y nunca el día de la instalación) y un vídeo recompensado si lo eliges para abrir «Avanzado»; no hay banner. Google AdMob puede recibir la dirección IP y datos del aparato para servirlos; si aceptas el seguimiento en la pregunta de Apple, puede usar el identificador de publicidad (IDFA).</p>
 
   <h2>Compras y suscripciones</h2>
   <p>ItsRain Pro se compra y se gestiona con Apple (StoreKit). ItsRain no ve datos de tu tarjeta ni de tu pago. Puedes cancelar la suscripción en Ajustes de Apple, tu nombre, Suscripciones.</p>
 
   <h2>Avisos de lluvia</h2>
   <p>Los avisos de lluvia son notificaciones locales de tu propio móvil. No pasan por ningún servidor de ItsRain.</p>
-  <p>El mapa global descarga imágenes de la NASA, de EUMETSAT y de Apple Maps. Estos servicios ven la zona que miras y la dirección IP, no tu posición exacta.</p>
-  <p>Para saber si hay una versión nueva, la app consulta el servicio de la App Store de Apple (itunes.apple.com).</p>
+  <p>Para saber si hay una versión nueva, la app consulta el servicio de la App Store de Apple (itunes.apple.com); se envía el identificador de la app, no tu ubicación.</p>
 
   <h2>Tus derechos</h2>
   <p>Puedes pedirnos información, corrección o supresión de tus datos escribiendo a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>

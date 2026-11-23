@@ -48,11 +48,11 @@
 <div class="wrap">
   <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
   <h1>ItsRain</h1>
-  <p class="sub">Privacy policy · Date: November 17, 2026</p>
+  <p class="sub">Privacy policy · Date: November 23, 2026</p>
   <nav class="enlaces"><a href="en.html">ItsRain</a> · <a href="support.html">Help and support</a></nav>
 
   <div class="card">
-    <p><strong>Summary:</strong> ItsRain has no accounts and no sign-up. Your location is used on your phone to calculate the weather for your spot, and it is not stored on any ItsRain server. Analytics (Firebase) is switched on if you accept it in the EU, the UK and Switzerland; elsewhere it runs without asking. Its data is linked to an identifier of your app installation, not to your name. The free version shows Google AdMob ads; ItsRain Pro removes them. Purchases are handled by Apple.</p>
+    <p><strong>Summary:</strong> ItsRain has no accounts and no sign-up. Your location is used on your phone to calculate the weather for your spot, and it is not stored on any ItsRain server. Analytics (Firebase Analytics, by Google) uses an app-instance identifier that Firebase assigns to the installation, so its events are linked to that installation (not to your name or an account). In the EU, the UK and Switzerland it only runs if you accept; in other countries no permission is asked. The free version shows Google AdMob ads; ItsRain Pro removes them. Purchases are handled by Apple.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -60,26 +60,25 @@
 
   <h2>Location</h2>
   <p>ItsRain uses your location to work out the rain and the weather for your exact spot. The calculation is done on your phone. Your location is not stored on any ItsRain server.</p>
-  <p>For the radar, the phone asks the server for the radar images of your area, without sending your exact position. Apple Weather receives your exact position for the forecast. MET Norway receives your position to four decimal places (about 10 metres), also from Apple Watch. The radar image server, like any web server, sees the phone's IP address.</p>
+  <p>What leaves your phone and where it goes: (a) Apple Weather (WeatherKit) receives your exact position. (b) MET Norway (api.met.no) receives it to four decimals (about 10 metres), also from the Apple Watch. (c) The ItsRain server (Supabase, operated by the developer) serves the AEMET radar, wind, forecast and model grids and air quality: the phone asks for radar or grid codes, not for your position. (d) The map downloads image tiles from NASA (GIBS), from EUMETSAT and terrain tiles (AWS Terrain Tiles), and Apple Maps' satellite map: they see the area you are looking at and your IP address, not your exact position. (e) aviationweather.gov (NOAA) receives the box of the visible map to return the METAR and TAF of airfields. Any web server sees the phone's IP address.</p>
 
   <h2>Accounts and sign-up</h2>
   <p>ItsRain does not ask for an account, email or registration.</p>
 
   <h2>Analytics</h2>
-  <p>We use Firebase Analytics (Google) to learn how the app is used: which screens and features are used, how many ads are shown, and purchases (their value and currency). Events are linked to an identifier of your app installation that Firebase assigns. They are not fully anonymous: they do not contain your name, email or account, and we do not use Apple's IDFA or use them for tracking across other apps. In the EU, the UK and Switzerland it is switched on only if you accept Google's consent notice. Elsewhere it runs without asking. Events do not carry your location.</p>
+  <p>We use Firebase Analytics (Google) to learn how the app is used: which screens, layers and features are used, how many ads are shown and purchases (value and currency). Events are linked to an app-instance identifier that Firebase assigns to each installation; that is why the App Store privacy label declares this data as linked to you, even though it contains no name, email or account. We do not use the IDFA for analytics or for tracking across apps. Events carry no location. In the EU, the UK and Switzerland it only runs if you accept Google's consent notice; in other countries it runs without asking. You can ask for your identifier to be deleted by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
   <h2>Ads</h2>
   <p>The free version shows ads from Google AdMob. Before showing them, the app uses Google's consent notice (UMP) and, on iPhone, Apple's tracking prompt (ATT). You can change your choice in your phone's settings. ItsRain Pro removes all ads.</p>
+  <p>The free version shows one ad when you open the app (at most 1 time in 5, never on the install day) and a rewarded video if you choose it to open "Advanced"; there is no banner. Google AdMob may receive the IP address and device data to serve them; if you accept tracking in Apple's prompt, it may use the advertising identifier (IDFA).</p>
 
   <h2>Purchases and subscriptions</h2>
   <p>ItsRain Pro is bought and managed through Apple (StoreKit). ItsRain does not see your card or payment details. You can cancel the subscription in Apple Settings, your name, Subscriptions.</p>
 
   <h2>Rain alerts</h2>
   <p>Rain alerts are local notifications on your own phone. They do not go through any ItsRain server.</p>
-  <h2>Global map</h2>
-  <p>The global map downloads images from NASA, EUMETSAT and Apple Maps. These services see the area you are looking at and the IP address, not your exact position.</p>
   <h2>Version check</h2>
-  <p>To know whether there is a new version, the app queries Apple's App Store service (itunes.apple.com).</p>
+  <p>To know whether there is a new version, the app queries Apple's App Store service (itunes.apple.com); the app identifier is sent, not your location.</p>
 
   <h2>Your rights</h2>
   <p>You can ask us for information about your data, its correction or its deletion by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
