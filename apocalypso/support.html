@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ApocalypSO — Help and support</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="soporte.html" hreflang="es" lang="es">Español</a>
+  <h1>ApocalypSO</h1>
+  <p class="sub">Help and support</p>
+  <nav class="enlaces"><a href="privacy.html">Privacy policy</a></nav>
+
+  <div class="card">
+    <p><strong>ApocalypSO</strong> is an app to talk, call for help and find your way <strong>without the internet</strong>: nearby phones form a mesh over Bluetooth, direct wifi or LoRa radio, and the app includes a survival library, maps and tools that work offline. Something not working? Write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>How do I talk to someone without internet?</h3>
+  <p>Install the app on both phones and stay close: the mesh forms by itself over Bluetooth and direct wifi. <strong>Nearby</strong> lists the people in range and in <strong>Chats</strong> you can write to the general channel or privately. To add someone as a contact, scan each other's QR in <strong>Contacts</strong>. Private and group messages are encrypted; the general channel can be read by anyone in the mesh. Messages hop from phone to phone, so they travel further the more devices there are in between.</p>
+
+  <h3>Why does it ask for Bluetooth and location?</h3>
+  <p><strong>Bluetooth</strong> (and the local network) is used to find nearby devices and form the mesh; without that permission there is no mesh. <strong>Location</strong> (only while the app is in use) is used for the map, GPS, compass and SOS. Your position only leaves the phone when you send an SOS or choose to share it. The camera is only used to read QR codes, and the flashlight for Morse code. More details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>How do I send an SOS and how do I search for someone else's?</h3>
+  <p>To call for help, press and hold the <strong>SOS</strong> button (top right) for 2 seconds and confirm. The SOS is relayed across the whole mesh, with your position if GPS has one. To search for someone else's SOS, tap <strong>Search</strong> on the alert or in <strong>Nearby → Recent SOS</strong>. The guide shows an arrow towards the person with the distance and the GPS accuracy; if you are already very close, it asks you to look around, because at that range GPS gives no reliable direction. If the SOS carries no position, it helps with "cold / warm" based on signal strength. Search only if it is safe and, if you can, also call the emergency services.</p>
+
+  <h3>What is Pro and how do I restore my purchases?</h3>
+  <p>The essentials are free: the built-in articles, the world map, the mesh and the tools. <strong>Pro</strong> is a one-time payment (not a subscription) that includes the 5 groups of the extended library and removes all ads. The groups can also be bought separately; they do not remove the ads. To recover what you bought on another device or after reinstalling, open the app's store (Extended library) and tap <strong>Restore purchases</strong>, using the same Apple or Microsoft account.</p>
+
+  <h3>How do I pass the app to another phone without internet?</h3>
+  <p>From <strong>Share</strong>: 1) "Prepare content" (only once), 2) "Start server", 3) show the QR under "How to connect". The other phone scans it and opens, in its browser, a portal with the manuals and the content. Both devices must be on the same wifi network or, if there is none, on one phone's hotspot (on iPhone, turn on "Personal Hotspot" in Settings). Note: the portal links to the App Store for anyone who does not have the app yet, and <strong>installing it from the App Store does need internet</strong>; without internet you can hand over the content and manuals, but not install the app on an iPhone. Content packs can also be passed from phone to phone over the mesh.</p>
+
+  <h3>What is Ultra saver mode?</h3>
+  <p>It is the battery mode ApocalypSO starts in every time it opens: dim screen, Bluetooth in bursts, GPS only when a tool needs it and a radar without animation. That makes the battery last much longer. If you need the mesh to reach further, open the <strong>Battery</strong> panel on the home screen and choose "Maximum range" (continuous Bluetooth and normal screen), knowing it uses more battery.</p>
+
+  <h3>Can I use a LoRa radio?</h3>
+  <p>Yes. If you have a Meshtastic radio, connect it from <strong>LoRa</strong> (or "My node"); the texts from that LoRa network will show in the app and yours will go out through it. It is optional: the Bluetooth and wifi mesh works without a radio.</p>
+
+  <h3>Where are my messages stored and how do I delete them?</h3>
+  <p>Only on your phone: there are no accounts and no copy on any server. Uninstalling the app deletes everything; you can also regenerate your identity from the app to start over. Messages that other devices already received stay on them.</p>
+
+  <h3>Does the medical information replace a doctor?</h3>
+  <p>No. It is for guidance only and is not a substitute for a healthcare professional or the emergency services.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, bugs or suggestions: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. If it's a bug, tell us your phone (or computer) model, the app version and what you were doing. If it's about a purchase, also say which device you made it on.</p>
+
+  <div class="foot">ApocalypSO · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

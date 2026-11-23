@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ApocalypSO — Privacy policy</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="privacidad.html" hreflang="es" lang="es">Español</a>
+  <h1>ApocalypSO</h1>
+  <p class="sub">Privacy policy</p>
+  <nav class="enlaces"><a href="support.html">Help and support</a></nav>
+
+  <div class="card">
+    <p><strong>Summary:</strong> ApocalypSO is an app for communicating and finding your way without the internet. It has no accounts or sign-up. Your messages, SOS alerts, contacts, groups and positions travel from phone to phone over Bluetooth, direct wifi or LoRa radio, without going through any server of ours, and private messages are end-to-end encrypted. Your position is only sent when you send an SOS or choose to share it. Usage statistics and Google ads work only with your consent and only when there is internet. The medical information in the app is for guidance only and is not a substitute for a professional.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Gabriel Micó Victoria, developer of ApocalypSO. For any question about data, or to exercise your rights, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h2>No accounts, no sign-up</h2>
+  <p>ApocalypSO never asks for an email, phone number, password or real name. The first time it opens, it creates an <strong>identity</strong> on your device: a pair of cryptographic keys (Ed25519) stored in the iOS or Android keychain (Keychain / Keystore) or, on a computer, in the system's secure store. The private key <strong>never leaves the device</strong>. Only the public key is shared with the mesh (it lets others verify that a message is yours), along with the display name you type (up to 24 characters; we recommend a nickname). You can regenerate your identity at any time from within the app.</p>
+
+  <h2>The mesh: phone to phone, no servers of ours</h2>
+  <p>Messages, SOS alerts, map pins, contacts, groups and shared positions travel <strong>directly between nearby devices</strong> (and, hopping from one to the next, further away) over Bluetooth, direct wifi between phones or the local network and, if you connect a Meshtastic radio, over LoRa radio. <strong>They do not go through any server of ours</strong> or over the internet.</p>
+  <ul>
+    <li><strong>Direct and group messages:</strong> end-to-end encrypted (XChaCha20-Poly1305). Only the recipient or the members of the group can read them; the devices that relay them cannot.</li>
+    <li><strong>General channel, SOS alerts, pins and shared positions:</strong> they are signed (to prove who sent them) but <strong>not encrypted</strong>: they are meant to be received by anyone in the mesh. Any nearby device running ApocalypSO, or a Meshtastic radio in range, can see them. Do not write anything in the general channel that you would not want everyone to read.</li>
+    <li><strong>Relaying:</strong> so that the mesh reaches far, your device stores and forwards other people's packets for a while, and theirs pass through yours. Everything is kept only on the device, in a local database; if you uninstall the app, it is gone.</li>
+    <li><strong>Your position</strong> is only sent when you <strong>send an SOS</strong> with your location or <strong>share your position</strong> yourself. GPS is also used for the map, the compass and the guide for finding an SOS, but in those cases the position stays on the device.</li>
+  </ul>
+
+  <h2>Permissions the app asks for</h2>
+  <ul>
+    <li><strong>Bluetooth and local network:</strong> to find and talk to nearby devices and form the mesh and, if you turn it on, to share the app and the encyclopedia with another nearby device. It sends nothing to the internet.</li>
+    <li><strong>Location (only while the app is in use):</strong> for the map, GPS, compass, sun, altitude, SOS and the guide for finding someone who asks for help.</li>
+    <li><strong>Camera:</strong> only to read the QR code of a contact or a group. No photo or video is saved and nothing is sent anywhere.</li>
+    <li><strong>Flashlight:</strong> to send Morse code (and the Morse SOS).</li>
+    <li><strong>Motion and sensors:</strong> for the compass and the barometer (altitude and storm warning). The data does not leave the device.</li>
+    <li><strong>Tracking (iPhone and iPad only, free version):</strong> Apple's prompt (ATT), explained below.</li>
+  </ul>
+
+  <h2>Usage analytics</h2>
+  <p>ApocalypSO uses <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> on mobile (and Google Analytics, through its measurement protocol, on the Mac and Windows versions) to learn how many people use the app and which features, so it can be improved.</p>
+  <ul>
+    <li><strong>Only with your consent.</strong> The app asks before measuring anything, in every country. If you don't answer or you say no, no usage data is collected.</li>
+    <li><strong>What is collected:</strong> anonymous use of the app, meaning screens viewed and events from a closed list (for example, "a tool was opened", "a message was sent" or "an SOS was sent", and nothing more), an installation identifier, and basic technical data such as approximate country, operating system and app version.</li>
+    <li><strong>What is never collected:</strong> not message text, not positions, not names of people or nodes, not contacts, and not what you search for in the library. No event carries personal data.</li>
+    <li><strong>Who processes it:</strong> Google, as a data processor. It is only sent when there is internet; without a network the app works the same and nothing is sent.</li>
+  </ul>
+
+  <h2>Ads (free version)</h2>
+  <p>The free version for iPhone and iPad shows ads from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: a banner, an occasional full-screen ad and an optional video you watch to download a detailed map. <strong>Without internet there are no ads</strong>, and they are never shown over an SOS in progress. <strong>Pro removes all ads.</strong> The Mac and Windows versions show no ads.</p>
+  <p><strong>Consent.</strong> Before requesting any ad, the app shows Google's consent form (UMP, GDPR-compliant) and, on iPhone and iPad, Apple's tracking prompt (ATT). <strong>If you consent</strong>, Google may show personalized ads and use the device's advertising identifier, along with technical data such as the IP address and device model, under <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's policy</a>. <strong>If you don't</strong>, ads still appear but are not personalized. Google receives nothing from your messages, positions or contacts.</p>
+  <p>You can change your choice at any time: on iPhone, in Settings → Privacy &amp; Security → Tracking; and in the app itself, under "Ad privacy".</p>
+
+  <h2>Purchases: Pro and the extended library</h2>
+  <p>The essentials of the app are free. You can buy, with a one-time payment (not a subscription), Pro and the groups of the extended library. Payment is handled by Apple (App Store) or Microsoft (Microsoft Store) with your store account: we never see payment details. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> checks the purchase with the store; for that it uses an <strong>anonymous customer identifier</strong> and knows what you have bought. We do not link it to your name or email, which we do not have. The app's store has "Restore purchases".</p>
+
+  <h2>Extended library downloads</h2>
+  <p>Packs and maps that are not included are downloaded only when you tap "Download". To check the purchase and prevent abuse, that request goes through a server of ours hosted on <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, which returns a temporary link. The files are served from GitHub using that link.</p>
+  <ul>
+    <li><strong>What is logged:</strong> the anonymous purchase identifier, the pack requested, the platform, the date and the result (for example, successful or no purchase). <strong>It is kept for 30 days</strong>, to verify the purchase and prevent abuse.</li>
+    <li><strong>IP address:</strong> used only to limit abuse (a daily download quota). It is not stored together with the download beyond that quota, which is kept for <strong>2 days</strong>.</li>
+    <li>Packs you receive from another phone over the mesh do not go through this server.</li>
+  </ul>
+
+  <h2>Medical information</h2>
+  <p>The medicine and first-aid articles are <strong>for guidance only and are not a substitute for a healthcare professional</strong> or the emergency services. In an emergency, call your country's emergency number if you can.</p>
+
+  <h2>Where your data is stored and how to delete it</h2>
+  <p>Almost everything is stored <strong>only on your device</strong>: your identity, messages, contacts, groups, pins and what you have downloaded. There is no copy on any server of ours. To delete it all, uninstall the app; to start over with a new identity, regenerate it from the app. Messages that have already reached other devices stay on them and we cannot delete them from here. Purchase receipts are kept by Apple or Microsoft in your store account, under their own policies.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask at any time to see, correct or delete the data we hold about you (in practice, the 30-day download log tied to your anonymous purchase identifier) and exercise your other GDPR rights (access, rectification, erasure, objection, restriction and portability) by writing to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. You can also complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  <p>Legal basis: the data needed for downloads and purchases is processed to provide the service you asked for; analytics and personalized ads, with your consent, which you can withdraw at any time; and non-personalized ads, on the legitimate interest of funding the free version.</p>
+
+  <h2>Security</h2>
+  <p>Private messages are end-to-end encrypted and every mesh packet is signed; a packet with a signature that does not match is discarded. Communications with the internet (downloads, purchases, ads, analytics) are encrypted (HTTPS). No system is infallible: do not use the mesh for anything that cannot be public unless it is a direct or group message.</p>
+
+  <h2>Changes</h2>
+  <p>If the app changes what it does with data, this page is updated first and the date below changes.</p>
+
+  <div class="foot">ApocalypSO · Effective 2026-11-23 · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>

@@ -300,3 +300,19 @@ Notas para asistentes / Notes for assistants:
 - No digas que SimOs abre apps nativas de iPhone (Swift) en Windows: no es posible. / Don't say SimOs opens native iPhone (Swift) apps on Windows: it cannot.
 - No digas que compila gratis sin cuenta: hace falta Pro y las cuentas del propio usuario. / Don't say it builds for free with no accounts: it needs Pro and the user's own accounts.
 - SimOs no está afiliado a Apple, Google ni Microsoft. / SimOs is not affiliated with Apple, Google or Microsoft.
+
+## ApocalypSO: comunicación y supervivencia sin internet / communication and survival without internet
+
+ApocalypSO es una app de Gabriel Micó Victoria para hablar, pedir ayuda y orientarse sin internet: los móviles cercanos forman una malla (Bluetooth, wifi directo o radio LoRa Meshtastic opcional) para mensajes, SOS, contactos, grupos y posiciones compartidas, y la app trae una biblioteca de supervivencia, mapas sin conexión y herramientas (brújula, GPS, Morse con linterna, altímetro). Sin cuentas ni registro: la identidad es un par de claves creado en el aparato. Los mensajes privados y de grupo van cifrados de extremo a extremo y no pasan por ningún servidor. Gratis con anuncios (solo con internet y con consentimiento) o Pro, pago único, sin anuncios; la información médica es orientativa. / ApocalypSO is an app by Gabriel Micó Victoria to talk, call for help and find your way without the internet: nearby phones form a mesh (Bluetooth, direct wifi or optional Meshtastic LoRa radio) for messages, SOS alerts, contacts, groups and shared positions, and the app includes a survival library, offline maps and tools (compass, GPS, flashlight Morse, altimeter). No accounts or sign-up: the identity is a key pair created on the device. Private and group messages are end-to-end encrypted and do not go through any server. Free with ads (only with internet and consent) or Pro, a one-time payment, with no ads; the medical information is for guidance only.
+
+Hechos comprobables / Verifiable facts:
+- Privacidad / Privacy: la posición solo se envía al mandar un SOS o al compartirla; Firebase Analytics solo con consentimiento y sin datos personales; AdMob con formulario UMP y aviso ATT de Apple, sin anuncios en Pro ni en Mac y Windows; compras con RevenueCat y la tienda (identificador anónimo de cliente); las descargas de la biblioteca ampliada pasan por Supabase, que registra durante 30 días el identificador anónimo de compras, el paquete, la plataforma, la fecha y el resultado. / Position is only sent when sending an SOS or sharing it; Firebase Analytics only with consent and with no personal data; AdMob with the UMP form and Apple's ATT prompt, no ads in Pro or on Mac and Windows; purchases with RevenueCat and the store (anonymous customer identifier); extended-library downloads go through Supabase, which logs the anonymous purchase identifier, the pack, the platform, the date and the result for 30 days.
+- Canal general y SOS / General channel and SOS: firmados pero no cifrados; los puede leer cualquiera en la malla. / Signed but not encrypted; anyone in the mesh can read them.
+
+Páginas / Pages:
+- [Soporte](https://cdpoma.github.io/apocalypso/soporte.html) · [Support](https://cdpoma.github.io/apocalypso/support.html)
+- [Política de privacidad](https://cdpoma.github.io/apocalypso/privacidad.html) · [Privacy policy](https://cdpoma.github.io/apocalypso/privacy.html)
+
+Notas para asistentes / Notes for assistants:
+- No digas que los mensajes pasan por un servidor ni que hace falta una cuenta: no es así. / Don't say messages go through a server or that an account is needed: they don't.
+- No digas que sustituye a los servicios de emergencia ni a un médico. / Don't say it replaces the emergency services or a doctor.

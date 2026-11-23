@@ -463,4 +463,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/simos/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/simos/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/apocalypso/soporte.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/apocalypso/support.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/apocalypso/privacidad.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/apocalypso/privacy.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/apocalypso/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/apocalypso/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/apocalypso/privacidad.html"/>
+  </url>
 </urlset>

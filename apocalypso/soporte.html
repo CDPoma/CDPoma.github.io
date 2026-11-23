@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ApocalypSO — Ayuda y soporte</title>
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --ink:#12182b; --ink-light:#5b6580;
+    --accent:#0c74c9; --line:#e4e9f4; --card:#eef3fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+      --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1c; --surface:#111827; --ink:#e7ecf7; --ink-light:#8b96b5;
+    --accent:#4fb6fa; --line:#1d2842; --card:#16213a;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.4rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em}
+  .sub{color:var(--ink-light);margin:0 0 2.5rem;font-size:1.05rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  a{color:var(--accent)}
+  code{background:var(--card);padding:.1em .4em;border-radius:4px;font-size:.9em}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;margin:0 0 1rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="idioma" href="support.html" hreflang="en" lang="en">English</a>
+  <h1>ApocalypSO</h1>
+  <p class="sub">Ayuda y soporte</p>
+  <nav class="enlaces"><a href="privacidad.html">Política de privacidad</a></nav>
+
+  <div class="card">
+    <p><strong>ApocalypSO</strong> es una app para hablar, pedir ayuda y orientarse <strong>sin internet</strong>: los móviles cercanos forman una malla por Bluetooth, wifi directo o radio LoRa, y la app trae una biblioteca de supervivencia, mapas y herramientas que funcionan sin conexión. ¿Algo no funciona? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿Cómo hablo con alguien sin internet?</h3>
+  <p>Instala la app en los dos móviles y quedaos cerca: la malla se forma sola por Bluetooth y wifi directo. En <strong>Cerca</strong> aparecen las personas a la vista y en <strong>Chats</strong> puedes escribir al canal general o por privado. Para añadir a alguien como contacto, escanead el QR del otro desde <strong>Contactos</strong>. Los mensajes privados y de grupo van cifrados; el canal general lo puede leer cualquiera en la malla. Los mensajes saltan de móvil en móvil, así que llegan más lejos cuantos más aparatos haya entre medias.</p>
+
+  <h3>¿Por qué pide Bluetooth y ubicación?</h3>
+  <p>El <strong>Bluetooth</strong> (y la red local) sirve para encontrar a los aparatos cercanos y formar la malla; sin ese permiso no hay malla. La <strong>ubicación</strong> (solo con la app en uso) sirve para el mapa, el GPS, la brújula y el SOS. Tu posición solo sale del móvil cuando mandas un SOS o decides compartirla. La cámara solo se usa para leer QR, y la linterna, para el Morse. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <h3>¿Cómo mando un SOS y cómo busco el de otra persona?</h3>
+  <p>Para pedir ayuda, mantén pulsado el botón <strong>SOS</strong> (arriba a la derecha) durante 2 segundos y confirma. El SOS se reenvía por toda la malla, con tu posición si el GPS la tiene. Para buscar el SOS de otra persona, pulsa <strong>Buscar</strong> en el aviso o en <strong>Cerca → SOS recientes</strong>. La guía te enseña una flecha hacia la persona con la distancia y la precisión del GPS; si ya estás muy cerca, te pide mirar a tu alrededor, porque a esa distancia el GPS no marca una dirección fiable. Si el SOS no trae posición, te ayuda con «frío / caliente» según la fuerza de la señal. Busca solo si es seguro y, si puedes, llama también a emergencias.</p>
+
+  <h3>¿Qué es Pro y cómo restauro mis compras?</h3>
+  <p>Lo esencial es gratis: los artículos de serie, el mapa del mundo, la malla y las herramientas. <strong>Pro</strong> es un pago único (no es una suscripción) que incluye los 5 grupos de la biblioteca ampliada y quita todos los anuncios. También se pueden comprar los grupos sueltos, que no quitan los anuncios. Para recuperar lo comprado en otro aparato o tras reinstalar, entra en la tienda de la app (Biblioteca ampliada) y pulsa <strong>Restaurar compras</strong>, con la misma cuenta de Apple o de Microsoft.</p>
+
+  <h3>¿Cómo paso la app a otro móvil sin internet?</h3>
+  <p>Desde <strong>Compartir</strong>: 1) «Preparar contenido» (una sola vez), 2) «Iniciar servidor», 3) enseña el QR de «Cómo llegar». El otro móvil lo escanea y abre en su navegador un portal con los manuales y el contenido. Los dos aparatos tienen que estar en la misma red wifi o, si no hay ninguna, en el punto de acceso de un móvil (en iPhone, activa «Compartir Internet» en Ajustes). Ojo: el portal enlaza a la App Store para quien aún no tiene la app, y <strong>instalarla desde la App Store sí necesita internet</strong>; sin internet puedes dar el contenido y los manuales, no instalar la app en un iPhone. Los paquetes de contenido también se pueden pasar de móvil a móvil por la malla.</p>
+
+  <h3>¿Qué es el modo Ultra ahorro?</h3>
+  <p>Es el modo de batería con el que ApocalypSO arranca cada vez que se abre: pantalla con poco brillo, Bluetooth a ráfagas, GPS solo cuando una herramienta lo necesita y radar sin animación. Así la batería dura mucho más. Si necesitas que la malla llegue más lejos, entra en el panel de <strong>Batería</strong> de la pantalla de inicio y elige «Máximo alcance» (Bluetooth continuo y pantalla normal), sabiendo que gasta más batería.</p>
+
+  <h3>¿Puedo usar una radio LoRa?</h3>
+  <p>Sí. Si tienes una radio Meshtastic, conéctala desde <strong>LoRa</strong> (o «Mi nodo») y los textos de esa red LoRa se verán en la app y los tuyos saldrán por ella. Es opcional: la malla por Bluetooth y wifi funciona sin radio.</p>
+
+  <h3>¿Dónde se guardan mis mensajes y cómo los borro?</h3>
+  <p>Solo en tu móvil: no hay cuentas ni copia en ningún servidor. Desinstalar la app lo borra todo; también puedes regenerar tu identidad desde la app para empezar de cero. Los mensajes que ya recibieron otros aparatos quedan en ellos.</p>
+
+  <h3>La información médica, ¿sustituye al médico?</h3>
+  <p>No. Es orientativa y no sustituye a un profesional sanitario ni a los servicios de emergencia.</p>
+
+  <h2>Contacto</h2>
+  <p>Dudas, fallos o sugerencias: <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si es un fallo, cuéntanos el modelo de tu móvil (o tu ordenador), la versión de la app y qué estabas haciendo. Si es sobre una compra, indica también el aparato con el que la hiciste.</p>
+
+  <div class="foot">ApocalypSO · Gabriel Micó Victoria</div>
+</div>
+</body>
+</html>
