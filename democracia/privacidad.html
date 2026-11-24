@@ -48,6 +48,7 @@
   .contacto{margin-top:2rem}
   section.lengua{margin-top:3rem;padding-top:1rem;border-top:3px solid var(--line)}
   code{font-size:.9em}
+  h3{font-size:1.1rem;font-weight:700;margin:1.4rem 0 .5rem}
 </style>
 </head>
 <body>
@@ -55,7 +56,7 @@
   <a class="idioma" href="#english" hreflang="en" lang="en">English</a>
   <nav class="enlaces"><a href="./">Democracia</a></nav>
   <h1>Política de privacidad de Democracia</h1>
-  <p class="sub">Última actualización: 21 de noviembre de 2026 · Versión de la app: 1.0.0</p>
+  <p class="sub">Última actualización: 24 de noviembre de 2026 · Versión de la app: 1.0.1</p>
   <p class="aviso" role="note">Democracia es una iniciativa ciudadana no oficial. Los resultados no tienen validez legal y no sustituyen a ninguna votación oficial.</p>
 
   <h2>Quién es el responsable</h2>
@@ -85,7 +86,42 @@
   </table></div>
 
   <h2>Verificación con documento y cara (opcional)</h2>
-  <p>Solo si tú la inicias. El iPhone lee por NFC el chip de tu DNI electrónico o pasaporte electrónico y escanea tu cara con prueba de vida. <strong>La cara se compara con la foto del chip dentro del propio iPhone: ni la foto ni tu cara ni ninguna plantilla facial salen de él.</strong> Al servidor llegan los datos firmados del chip, para comprobar que el documento es auténtico (firma del emisor y caducidad), y el resultado de la comparación facial dentro de una petición firmada por App Attest. Con esos datos calcula las dos huellas de la tabla y <strong>descarta el documento al momento</strong>. Tratamos los datos del documento un instante, con tu consentimiento al iniciar la verificación, solo para esa comprobación.</p>
+  <p>Solo si tú la inicias. El iPhone lee por NFC el chip de tu DNI electrónico o pasaporte electrónico y escanea tu cara con prueba de vida. <strong>La cara se compara con la foto del chip dentro del propio iPhone: ni la foto ni tu cara ni ninguna plantilla facial salen de él.</strong> Al servidor llegan los datos firmados del chip (no la foto, solo su huella SHA-256), para comprobar que el documento es auténtico (firma del emisor y caducidad), y dos sí/no (prueba de vida superada y cara coincide) dentro de una petición firmada por App Attest. Con esos datos calcula las dos huellas de la tabla y <strong>no guarda el documento</strong>: lo descarta al acabar la comprobación. Tratamos los datos del documento un instante, con tu consentimiento al iniciar la verificación, solo para esa comprobación. Todos los detalles, en la sección <a href="#datos-cara">Datos de la cara y del documento</a>.</p>
+
+  <h2 id="datos-cara">Datos de la cara y del documento (verificación opcional)</h2>
+  <p>Esta sección explica cómo tratamos los datos faciales y otros datos biométricos en la verificación opcional con documento y cara. La verificación solo existe en la app de iPhone (el iPad no tiene NFC) y <strong>es opcional</strong>: puedes votar sin ella y tu voto cuenta en el «Total»; si te verificas, además cuenta en el grupo «verificados» (una persona, un voto).</p>
+
+  <h3>Qué se recoge</h3>
+  <ul>
+    <li><strong>Del documento:</strong> el iPhone lee por NFC el chip de tu DNI electrónico español (con la clave CAN de 6 cifras, que escaneas con la cámara o escribes) o de un pasaporte electrónico (con la clave MRZ). Lee los datos firmados del chip (COM y SOD), los datos impresos de la zona MRZ (DG1: nombre, número, fecha de nacimiento, caducidad, sexo y nacionalidad) y la foto del chip (DG2). El CAN y la MRZ no se guardan ni se envían.</li>
+    <li><strong>De la cara (datos faciales y datos biométricos):</strong> la cámara frontal, una cámara normal (no usa TrueDepth, ARKit ni Face ID), hace una prueba de vida (2 de 3 gestos: girar a la izquierda, girar a la derecha o parpadear) y una captura frontal. Con Vision se detecta la cara y 5 puntos; el modelo MobileFaceNet (Core ML, incluido dentro de la app) calcula una plantilla facial de 128 valores numéricos a partir de tu selfie y otra a partir de la foto del chip, y las compara.</li>
+  </ul>
+
+  <h3>Para qué se usa</h3>
+  <p>Solo para comprobar que quien se verifica es una persona real (prueba de vida) y que su cara coincide con la foto de su documento, y que el documento es auténtico y no ha caducado. El fin es que una persona solo pueda verificar una cuenta. Los datos faciales no se usan para nada más.</p>
+
+  <h3>Dónde se procesa y guarda</h3>
+  <ul>
+    <li><strong>En tu iPhone, en memoria:</strong> la prueba de vida, la detección de la cara, las dos plantillas faciales y su comparación se hacen en el propio iPhone. No se graba vídeo, no se guarda ninguna imagen ni plantilla en el aparato y no se envía a nadie. Al acabar la comprobación se descarta todo. En el iPhone solo queda una marca «verificada» en el Llavero.</li>
+    <li><strong>En el servidor de Democracia (Supabase, en la UE) llega solo:</strong> los datos firmados del chip (SOD y DG1), el SHA-256 de la foto del chip (no la foto), el tipo de documento, el país y dos sí/no (prueba de vida superada y cara coincide). La puntuación de la comparación no se envía. El servidor comprueba la firma del chip contra el certificado del país (autenticación pasiva) y la caducidad.</li>
+    <li><strong>El servidor no guarda</strong> la foto, la selfie ni ningún dato facial, ni tu nombre, número o fecha de nacimiento en claro. Guarda solo dos códigos irreversibles (HMAC-SHA256 con clave secreta), uno calculado con país, tipo y número de documento y fecha de nacimiento, y otro con nombre, fecha de nacimiento y sexo, junto a tu cuenta anónima, el día de la verificación, el tipo de documento y el país, para que la misma persona no pueda verificar dos cuentas.</li>
+  </ul>
+
+  <h3>Con quién se comparte</h3>
+  <p>Con nadie. Ningún dato facial ni del documento va a anunciantes (AdMob), a analítica, a RevenueCat ni a otros terceros. Apple solo recibe la firma del aparato de App Attest, sin datos de la cara. Lo único que registra Firebase Analytics, y solo si aceptaste la analítica, es que se hizo una verificación y si salió bien o mal, sin ningún dato de la cara ni del documento.</p>
+
+  <h3>Cuánto tiempo se conserva</h3>
+  <ul>
+    <li>La imagen de la cámara, la foto del chip y la plantilla facial: solo en la memoria del iPhone durante la comprobación; se descartan al acabar.</li>
+    <li>En el servidor no se guarda ningún dato facial.</li>
+    <li>Los dos códigos irreversibles se conservan mientras existan las votaciones y el servicio, para impedir que una persona verifique dos cuentas.</li>
+  </ul>
+
+  <h3>Borrado</h3>
+  <p>Los datos faciales nunca se guardan, así que no hay nada que borrar. Los dos códigos no contienen datos de tu cara ni permiten saber quién eres. Para cualquier consulta, escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h3>Consentimiento</h3>
+  <p>La app muestra una pantalla de consentimiento antes de abrir la cámara o el lector NFC. La verificación es opcional y se puede votar sin ella.</p>
 
   <h2>Estadísticas de uso (opcional)</h2>
   <p>Al abrir la app por primera vez te preguntamos si nos dejas contar el uso con Firebase Analytics (Google). Si aceptas, se envían las pantallas vistas, que se emitió un voto (sin votación, opción, recibo ni token), que se abrió la hoja de compartir (solo desde qué pantalla), que se vio un anuncio (banner o a pantalla completa), que se vio la pantalla de Pro y si se compró (producto e importe), que se hizo una verificación y su resultado, y errores genéricos de conexión con el servidor (tipo y código), además de los datos básicos que Firebase recoge por sí solo (como la primera apertura, las sesiones y la versión de la app y del sistema). Se usa un identificador de instalación de Firebase, no el identificador de publicidad. Puedes cambiarlo en Ajustes en cualquier momento.</p>
@@ -133,7 +169,7 @@
     <p><a href="#top" hreflang="es" lang="es">Español</a> · <a href="en.html">Democracia</a></p>
     <p class="nota">Democracia privacy policy. What Democracia stores, what it never stores, ads and Pro, the limits of vote protection and how to ask for deletion.</p>
   <h1>Democracia privacy policy</h1>
-  <p class="sub">Last updated: 21 November 2026 · App version: 1.0.0</p>
+  <p class="sub">Last updated: 24 November 2026 · App version: 1.0.1</p>
   <p class="aviso" role="note">Democracia is an unofficial citizen initiative. Results have no legal validity and do not replace any official vote.</p>
 
   <h2>Who is responsible</h2>
@@ -163,7 +199,42 @@
   </table></div>
 
   <h2>Verification with a document and your face (optional)</h2>
-  <p>Only if you start it. The iPhone reads the NFC chip of your Spanish DNI or electronic passport and scans your face with a liveness check. <strong>Your face is compared with the chip photo inside the iPhone itself: neither the photo, nor your face, nor any facial template leaves it.</strong> The server receives the chip’s signed data, to check the document is genuine (issuer signature and expiry), and the result of the face comparison inside an App Attest–signed request. From that it computes the two fingerprints in the table and <strong>discards the document immediately</strong>. We process the document data for an instant, with your consent when you start verification, only for that check.</p>
+  <p>Only if you start it. The iPhone reads the NFC chip of your Spanish DNI or electronic passport and scans your face with a liveness check. <strong>Your face is compared with the chip photo inside the iPhone itself: neither the photo, nor your face, nor any facial template leaves it.</strong> The server receives the chip’s signed data (not the photo, only its SHA-256 fingerprint), to check the document is genuine (issuer signature and expiry), and two yes/no answers (liveness check passed, face matches) inside an App Attest–signed request. From that it computes the two fingerprints in the table and <strong>does not store the document</strong>: it discards it when the check ends. We process the document data for an instant, with your consent when you start verification, only for that check. Full details are in the section <a href="#face-data">Face data and ID document data</a>.</p>
+
+  <h2 id="face-data">Face data and ID document data (optional verification)</h2>
+  <p>This section explains how we handle face data and other biometric data in the optional verification with a document and your face. Verification only exists in the iPhone app (the iPad has no NFC) and <strong>it is optional</strong>: you can vote without it and your vote counts in the “Total”; if you verify, it also counts in the “verified” group (one person, one vote).</p>
+
+  <h3>What we collect</h3>
+  <ul>
+    <li><strong>From the document:</strong> the iPhone reads over NFC the chip of your Spanish electronic DNI (using the 6-digit CAN, which you scan with the camera or type) or of an electronic passport (using the MRZ key). It reads the chip’s signed data (COM and SOD), the data printed in the MRZ zone (DG1: name, number, date of birth, expiry, sex and nationality) and the chip photo (DG2). The CAN and the MRZ are neither stored nor sent.</li>
+    <li><strong>From your face (face data and biometric data):</strong> the front camera, an ordinary camera (it does not use TrueDepth, ARKit or Face ID), runs a liveness check (2 of 3 gestures: turn left, turn right or blink) and takes a frontal capture. Vision detects the face and 5 landmarks; the MobileFaceNet model (Core ML, bundled inside the app) computes a facial template of 128 numeric values from your selfie and another from the chip photo, and compares them.</li>
+  </ul>
+
+  <h3>How it is used</h3>
+  <p>Only to check that the person verifying is a real person (liveness check), that their face matches the photo on their document, and that the document is genuine and has not expired. The purpose is that one person can verify only one account. Face data is not used for anything else.</p>
+
+  <h3>Where it is processed and stored</h3>
+  <ul>
+    <li><strong>On your iPhone, in memory:</strong> the liveness check, face detection, the two facial templates and their comparison all happen on the iPhone itself. No video is recorded, no image or template is saved on the device, and nothing is sent to anyone. Everything is discarded when the check ends. The only thing left on the iPhone is a “verified” flag in the Keychain.</li>
+    <li><strong>Only this reaches the Democracia server (Supabase, in the EU):</strong> the chip’s signed data (SOD and DG1), the SHA-256 of the chip photo (not the photo), the document type, the country and two yes/no answers (liveness check passed and face matches). The comparison score is not sent. The server checks the chip’s signature against the country’s certificate (passive authentication) and the expiry date.</li>
+    <li><strong>The server does not store</strong> the photo, the selfie or any face data, nor your name, number or date of birth in the clear. It stores only two irreversible codes (HMAC-SHA256 with a secret key), one computed from country, document type, document number and date of birth, and another from name, date of birth and sex, together with your anonymous account, the verification day, the document type and the country, so that the same person cannot verify two accounts.</li>
+  </ul>
+
+  <h3>Sharing</h3>
+  <p>With no one. No face data or document data goes to advertisers (AdMob), analytics, RevenueCat or any other third party. Apple only receives the device signature from App Attest, with no face data. The only thing Firebase Analytics records, and only if you accepted analytics, is that a verification was done and whether it succeeded or failed, with no face or document data.</p>
+
+  <h3>Retention</h3>
+  <ul>
+    <li>The camera image, the chip photo and the facial template: only in the iPhone’s memory during the check; they are discarded when it ends.</li>
+    <li>No face data is stored on the server.</li>
+    <li>The two irreversible codes are kept while the votes and the service exist, to stop one person verifying two accounts.</li>
+  </ul>
+
+  <h3>Deletion</h3>
+  <p>Face data is never stored, so there is nothing to delete. The two codes contain no data from your face and do not let anyone tell who you are. For any question, write to <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
+
+  <h3>Consent</h3>
+  <p>The app shows a consent screen before it opens the camera or the NFC reader. Verification is optional and you can vote without it.</p>
 
   <h2>Usage statistics (optional)</h2>
   <p>The first time you open the app we ask whether you let us count usage with Firebase Analytics (Google). If you accept, it sends the screens viewed, that a vote was cast (with no vote, option, receipt or token), that the share sheet was opened (only from which screen), that an ad was shown (banner or full-screen), that the Pro screen was viewed and whether a purchase was made (product and amount), that a verification was done and its result, and generic server-connection errors (type and code), plus the basic data Firebase collects by itself (such as first open, sessions and the app and system version). A Firebase installation identifier is used, not the advertising identifier. You can change it in Settings at any time.</p>
