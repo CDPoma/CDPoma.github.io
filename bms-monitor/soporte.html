@@ -65,6 +65,7 @@
     <li>Modo estación y modo remoto, para ver la batería desde otro teléfono (botón «Conectar»).</li>
     <li>El precio del kWh y la moneda, en Ajustes, para calcular el ahorro que enseñan las gráficas.</li>
     <li>El historial de las gráficas se guarda siempre, tengas Pro o no.</li>
+    <li>Las horas de sol que se esperan hoy en tu zona, en una línea entre las dos tarjetas de la pantalla principal (con el crédito «Apple Weather»). Solo se consultan cuando tocas esa línea (ver «Ubicación aproximada» más abajo).</li>
   </ul>
   <h3>Gratis, con un anuncio con recompensa cada vez</h3>
   <ul>
@@ -104,6 +105,7 @@
     <li><strong>En Google Firebase, si la app no reconoce un BMS</strong>: cuando no sabe leer tu aparato, o ve cerca un aparato Bluetooth con pinta de BMS que no reconoce, puede sumar 1 a un contador anónimo con las primeras letras de su nombre Bluetooth (por ejemplo «JK-»; nunca el nombre entero ni su dirección) y, si lo eliges en «¿Qué BMS tienes?», otro con la familia que has elegido. No lleva ningún identificador tuyo; como en toda conexión, Google ve la dirección IP.</li>
     <li><strong>Medición de uso con Firebase Analytics</strong>: solo para contar cuánta gente usa la app (aperturas, sesiones y tiempo de uso; la app no registra ningún evento propio). Se envía con un identificador aleatorio de la instalación, el modelo del teléfono, la versión del sistema y de la app, el idioma y una ubicación aproximada (país o ciudad) deducida de la conexión, sin identificador de publicidad, sin nombre ni cuenta, y con las funciones de publicidad de Analytics desactivadas. En el Espacio Económico Europeo, el Reino Unido y Suiza solo se activa si lo permites en el formulario de Google (se cambia en Ajustes → «Privacidad de los anuncios»). No usa el permiso de seguimiento de Apple.</li>
     <li><strong>Comprobación de versión</strong>: al abrir la app, al volver a ella tras al menos 30 minutos fuera y una vez al día, la app lee de Firebase la versión mínima que necesita y, en iPhone y iPad, pregunta a Apple (itunes.apple.com) qué versión hay a la venta; si la tuya es más antigua, una pantalla te lleva a la tienda y la app no se puede usar hasta que actualices. Son consultas de lectura: no envían tus datos, pero Apple y Google ven, como en cualquier conexión, la dirección IP.</li>
+    <li><strong>Ubicación aproximada (horas de sol)</strong>: BMS Monitor puede mostrar las horas de sol que se esperan hoy en tu zona. Para ello usa tu ubicación aproximada, y solo cuando tú tocas esa línea de la pantalla principal y aceptas el aviso del sistema. La app redondea la posición (a unos 11 km) antes de enviarla a nuestro servidor, que la usa en el momento para pedir el pronóstico a Apple Weather y devuelve solo el número de horas de sol. No guardamos tu ubicación en el servidor, no la vinculamos a ti ni a tu dispositivo, no la usamos para publicidad ni para seguimiento y no la vendemos. En tu móvil se conserva la posición redondeada y el último dato para no repetir la consulta; se borran al desinstalar la app. Puedes retirar el permiso cuando quieras en los ajustes del sistema: la app sigue funcionando igual, solo sin esa línea. Los datos meteorológicos son de <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a>.</li>
   </ul>
   <p>Con el modo WiFi, la app solo habla con la dirección de tu red local que escribes o eliges y no envía nada fuera de tu red por ello; lo que se publique después depende de si activas la estación.</p>
   <h3>Cómo borrar tus datos</h3>
@@ -111,12 +113,13 @@
     <li><strong>Lo que está en tu teléfono</strong>: se borra al desinstalar la app.</li>
     <li><strong>Lo publicado por el modo estación</strong>: se sobrescribe con cada lectura y no está ligado a ninguna identidad, solo al código. La app todavía no tiene un botón para borrarlo del servidor: escríbenos con el código de tu estación y lo borramos.</li>
     <li><strong>Lo medido por Analytics y los contadores anónimos de BMS</strong>: no están ligados a ninguna identidad ni a tu nombre. Puedes apagar la medición donde la ley exige consentimiento, en Ajustes → «Privacidad de los anuncios».</li>
+    <li><strong>La ubicación aproximada de las horas de sol</strong>: en el servidor no se guarda nada; en tu móvil, la posición redondeada y el último dato se borran al desinstalar la app, y puedes retirar el permiso en los ajustes del sistema.</li>
   </ul>
 
   <h2>Permisos</h2>
   <ul>
     <li><code>Bluetooth</code>: para buscar y conectar con tu BMS.</li>
-    <li><code>Ubicación</code> (solo Android): el sistema la exige para buscar dispositivos Bluetooth cercanos. La app no lee ni guarda tu ubicación.</li>
+    <li><code>Ubicación</code>: (1) solo en Android, el sistema la exige para buscar dispositivos Bluetooth cercanos y la app no la usa para nada más; (2) ubicación aproximada, en iPhone, iPad y Android, solo cuando tocas la línea de las horas de sol de la pantalla principal y aceptas el aviso del sistema, para calcular las horas de sol de tu zona (ver «Ubicación aproximada»). Sin ese permiso la app funciona igual, solo sin esa línea.</li>
     <li><code>Red local</code> (iPhone y iPad): el aviso de Apple la primera vez que lees la batería por WiFi, para hablar con tu pasarela o tu Victron GX en tu propia red.</li>
     <li><code>Notificaciones</code> (solo Android): la notificación permanente que mantiene viva la estación mientras está activa.</li>
     <li><code>Seguimiento</code> (iPhone y iPad): el aviso de Apple antes de personalizar los anuncios.</li>
@@ -144,6 +147,7 @@
     <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>: comprobación de la suscripción Pro y de las skins compradas.</li>
     <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob</a>: anuncios de la versión gratuita (banner, apertura y con recompensa) y formulario de consentimiento.</li>
     <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>: en iPhone y iPad, la consulta de la versión a la venta.</li>
+    <li><a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener">Apple Weather</a> (WeatherKit): el pronóstico de horas de sol; recibe la posición redondeada a través de nuestro servidor, sin ningún dato tuyo.</li>
   </ul>
 
   <h2>Idiomas</h2>
@@ -158,7 +162,7 @@
   <h2>Contacto y soporte</h2>
   <p>¿Dudas, fallos o sugerencias? Escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si es sobre una conexión, di el modelo de tu teléfono y el nombre con el que aparece tu BMS en la lista de Bluetooth.</p>
 
-  <div class="foot">BMS Monitor 1.2.0 · Vigente desde 2026-11-06 · Gabriel Micó Victoria</div>
+  <div class="foot">BMS Monitor 1.2.0 · Vigente desde 2026-11-27 · Gabriel Micó Victoria</div>
 </div>
 </body>
 </html>
