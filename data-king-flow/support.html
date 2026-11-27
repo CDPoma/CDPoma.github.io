@@ -51,7 +51,7 @@
   <nav class="enlaces"><a href="#faq">FAQ</a> · <a href="#privacy">Privacy policy</a> · <a href="#contact">Contact</a></nav>
 
   <div class="card">
-    <p><strong>In short:</strong> the app talks directly to your solar inverter, over Bluetooth or over your home Wi-Fi. There is no account or sign-up, and we don't ask for your name or email. Your system's data (what it reads from the inverter and its history) stays on your phone; it only leaves it if you turn on station mode to watch it remotely, and then it travels under a random code. Separately, as a free app with ads, the free version uses Google AdMob (technical device data and, if you allow it, the advertising identifier), Pro is billed through RevenueCat and, only if Google's consent form allows it, Firebase Analytics counts how many people use the app. With Pro you see no ads, except the station-mode banner. Everything is explained below.</p>
+    <p><strong>In short:</strong> the app talks directly to your solar inverter, over Bluetooth or over your home Wi-Fi. There is no account or sign-up, and we don't ask for your name or email. Your system's data (what it reads from the inverter and its history) stays on your phone; it only leaves it if you turn on station mode to watch it remotely, and then it travels under a random code. Separately, as a free app with ads, the free version uses Google AdMob (technical device data and, if you allow it, the advertising identifier), Pro is billed through RevenueCat and, only if Google's consent form allows it, Firebase Analytics counts how many people use the app. With Pro you see no ads, except the station-mode banner. If you like, the solar card can tell you how many hours of sun are expected today in your area: it only asks for your approximate location when you tap that line, sends it rounded to our server and to Apple Weather to get the figure, and we do not store it. Everything is explained below.</p>
   </div>
 
   <h2>What the app does</h2>
@@ -149,6 +149,11 @@
   <p>Regardless of the above, the app talks to these services (details in the table below): Google AdMob ads (only without Pro, or with the station on for the banner), the subscription and purchases through RevenueCat, usage counting with Firebase Analytics (only if Google's consent form allows it) and a lookup to Firebase and, on iPhone and iPad, to the App Store, to find out whether a minimum version is required. Those lookups carry only the technical data of any internet connection (such as the IP address). With Pro, Google's SDK still starts up to read the state of the consent form, but no ad is requested (except the station banner).</p>
   <p>Also, if the app can't read a Bluetooth device that looks like an inverter, it may record in Google Firebase (Cloud Firestore), as a simple counter, only the beginning of the Bluetooth name ("SRNE-", never the full name or serial numbers) and, if you say so in "Which inverter do you have?", the family you choose. It carries no identifier of you or your phone and happens once per prefix; it is used to know which brands to add.</p>
 
+  <h3 id="sun-hours">Today's sun hours (approximate location)</h3>
+  <p>The solar card can show a line with the hours of sun expected today in your area. To work that out the app needs to know roughly where you are, so it asks for your <strong>approximate location</strong>: only when you tap that line for the first time, never when the app opens. If you say no, the app works the same and the line disappears or invites you to turn it on.</p>
+  <p>The position is taken without high accuracy and <strong>rounded to one decimal</strong> (about 11 km), so it does not point to your home. That rounded position, together with the last figure received, is kept <strong>on your phone</strong> so it is asked for at most once a day. To get the hours, the app sends that rounded position, your time zone and today's date to a function on our server (Supabase), which asks <strong>Apple Weather</strong> (WeatherKit) and returns the number of hours. Neither the function nor we store your position or link it to you (there is no account); Apple Weather receives it, rounded, to provide the figure. The line is not shown in station or remote mode.</p>
+  <p>You can withdraw the permission at any time in your phone's settings: the line stops updating and everything else stays the same. Weather data: <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>.</p>
+
   <h3>Third-party services</h3>
   <table>
     <thead><tr><th>Service</th><th>What for</th></tr></thead>
@@ -158,13 +163,16 @@
       <tr><td>RevenueCat, Apple and Google Play</td><td>They charge for and verify the Pro subscription and the skins. RevenueCat receives an anonymous app identifier and the store's purchase history (and, if Analytics is on, Analytics' instance identifier); there is no account or email.</td></tr>
       <tr><td>Google Firebase</td><td>With station mode or remote view, as described above. In addition, when the app opens, when you return to it and once a day, a single value (the required minimum version) is read from the Realtime Database; nothing of yours is sent.</td></tr>
       <tr><td>Apple (App Store)</td><td>On iPhone and iPad only: the app's published version in the App Store is looked up for the required update. Nothing of yours is sent.</td></tr>
+      <tr><td>Supabase (our server)</td><td>Only if you tap the sun-hours line: receives the position rounded to one decimal, the time zone and the date, to ask Apple Weather for the hours. It does not store it or link it to you.</td></tr>
+      <tr><td>Apple Weather (WeatherKit)</td><td>Provides the expected sun hours for your area. Receives the position rounded to one decimal (through our server, not directly from your phone). <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Attribution</a>.</td></tr>
     </tbody>
   </table>
 
   <h3>Permissions</h3>
   <ul>
     <li><strong>Bluetooth</strong>: to find the inverter and read it.</li>
-    <li><strong>Location</strong> (Android before version 12 only): the system requires it to scan for Bluetooth devices; the app doesn't read or use your location.</li>
+    <li><strong>Approximate location</strong> (iPhone, iPad and Android): only if you tap the sun-hours line on the solar card, to know roughly where you are (rounded to about 11 km). Precise location is never requested and nothing is requested when the app opens; if you say no, everything else works the same.</li>
+    <li><strong>Location</strong> (Android before version 12 only): the system also requires it to scan for Bluetooth devices; for that the app doesn't read or use your location.</li>
     <li><strong>Tracking</strong> (iPhone and iPad): Apple's prompt to personalize ads. Saying no doesn't remove any feature.</li>
     <li><strong>Local network</strong> (iPhone and iPad): only if you connect over Wi-Fi, to talk to the inverter or gateway on your own network; the app only communicates with the device you choose or that it finds on your home network.</li>
     <li><strong>Notifications</strong> (Android 13 or later): the permanent notification Android requires while station mode is on.</li>

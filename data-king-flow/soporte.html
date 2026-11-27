@@ -51,7 +51,7 @@
   <nav class="enlaces"><a href="#preguntas">Preguntas frecuentes</a> · <a href="#privacidad">Política de privacidad</a> · <a href="#contacto">Contacto</a></nav>
 
   <div class="card">
-    <p><strong>Resumen rápido:</strong> la app habla directamente con tu inversor solar, por Bluetooth o por la WiFi de tu casa. No hay cuenta ni registro, y no te pedimos tu nombre ni tu correo. Los datos de tu instalación (lo que lee del inversor y su histórico) se quedan en tu móvil; solo salen de él si activas tú el modo estación para verlos en remoto, y entonces viajan bajo un código aleatorio. Aparte, como app gratuita con anuncios, la versión gratis usa Google AdMob (datos técnicos del dispositivo y, si lo permites, el identificador de publicidad), Pro lo cobra RevenueCat y, solo si el formulario de Google lo permite, Firebase Analytics cuenta cuánta gente usa la app. Con Pro no ves anuncios, salvo el banner del modo estación. Todo está explicado abajo.</p>
+    <p><strong>Resumen rápido:</strong> la app habla directamente con tu inversor solar, por Bluetooth o por la WiFi de tu casa. No hay cuenta ni registro, y no te pedimos tu nombre ni tu correo. Los datos de tu instalación (lo que lee del inversor y su histórico) se quedan en tu móvil; solo salen de él si activas tú el modo estación para verlos en remoto, y entonces viajan bajo un código aleatorio. Aparte, como app gratuita con anuncios, la versión gratis usa Google AdMob (datos técnicos del dispositivo y, si lo permites, el identificador de publicidad), Pro lo cobra RevenueCat y, solo si el formulario de Google lo permite, Firebase Analytics cuenta cuánta gente usa la app. Con Pro no ves anuncios, salvo el banner del modo estación. Si quieres, la ficha solar puede decirte cuántas horas de sol se esperan hoy en tu zona: solo pide tu ubicación aproximada cuando tocas esa leyenda, la envía redondeada a nuestro servidor y a Apple Weather para obtener el dato, y no la guardamos. Todo está explicado abajo.</p>
   </div>
 
   <h2>Qué hace la app</h2>
@@ -149,6 +149,11 @@
   <p>Con independencia de lo anterior, la app habla con estos servicios (detalle en la tabla de abajo): los anuncios de Google AdMob (solo sin Pro, o con la estación puesta por el banner), la suscripción y las compras con RevenueCat, el recuento de uso con Firebase Analytics (solo si lo permite el formulario de Google) y una consulta a Firebase y, en iPhone y iPad, a la App Store, para saber si hay una versión mínima obligatoria. Esas consultas solo llevan los datos técnicos de toda conexión a internet (como la dirección IP). Con Pro, el SDK de Google se arranca igualmente para leer el estado del formulario de consentimiento, pero no se pide ningún anuncio (salvo el banner de la estación).</p>
   <p>Además, si la app no sabe leer un aparato Bluetooth que parece un inversor, puede apuntar en Google Firebase (Cloud Firestore), como un simple contador, solo el principio del nombre Bluetooth («SRNE-», nunca el nombre entero ni números de serie) y, si lo dices en «¿Qué inversor tienes?», la familia que elijas. No lleva ningún identificador tuyo ni del móvil y se hace una vez por prefijo; sirve para saber qué marcas añadir.</p>
 
+  <h3 id="horas-de-sol">Horas de sol de hoy (ubicación aproximada)</h3>
+  <p>La ficha solar puede enseñar una línea con las horas de sol que se esperan hoy en tu zona. Para calcularlas la app necesita saber en qué zona estás, y por eso pide tu <strong>ubicación aproximada</strong>: solo cuando tocas esa leyenda por primera vez, nunca al abrir la app. Si dices que no, la app funciona igual y la línea desaparece o te invita a activarla.</p>
+  <p>La posición se toma sin alta precisión y se <strong>redondea a un decimal</strong> (unos 11 km), de modo que no señala tu casa. Esa posición redondeada, junto con el último dato recibido, se guarda <strong>en tu móvil</strong> para no tener que pedirla más de una vez al día. Para obtener las horas, la app envía esa posición redondeada, tu zona horaria y la fecha de hoy a una función de nuestro servidor (Supabase), que consulta <strong>Apple Weather</strong> (WeatherKit) y te devuelve el número de horas. Ni la función ni nosotros guardamos tu posición ni la ligamos a ti (no hay cuenta); Apple Weather la recibe, redondeada, para dar el dato. La línea no se enseña en el modo estación ni en el remoto.</p>
+  <p>Puedes retirar el permiso cuando quieras en los ajustes del móvil: la línea deja de actualizarse y todo lo demás sigue igual. Datos meteorológicos: <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Apple Weather</a>.</p>
+
   <h3>Servicios de terceros</h3>
   <table>
     <thead><tr><th>Servicio</th><th>Para qué</th></tr></thead>
@@ -158,13 +163,16 @@
       <tr><td>RevenueCat, Apple y Google Play</td><td>Cobran y comprueban la suscripción Pro y las skins. RevenueCat recibe un identificador anónimo de la app y el historial de compras de la tienda (y, si Analytics está encendido, el identificador de instancia de Analytics); no hay cuenta ni correo.</td></tr>
       <tr><td>Google Firebase</td><td>Con el modo estación o el remoto, como se cuenta arriba. Además, al abrir la app, al volver a ella y una vez al día, se lee un valor suelto (la versión mínima obligatoria) de la Realtime Database; no se envía nada tuyo.</td></tr>
       <tr><td>Apple (App Store)</td><td>Solo en iPhone y iPad: se consulta la versión publicada de la app en la App Store para la actualización obligatoria. No se envía nada tuyo.</td></tr>
+      <tr><td>Supabase (nuestro servidor)</td><td>Solo si tocas la leyenda de horas de sol: recibe la posición redondeada a un decimal, la zona horaria y la fecha, para pedir las horas a Apple Weather. No la guarda ni la liga a ti.</td></tr>
+      <tr><td>Apple Weather (WeatherKit)</td><td>Da las horas de sol previstas para tu zona. Recibe la posición redondeada a un decimal (a través de nuestro servidor, no directamente desde tu móvil). <a href="https://developer.apple.com/weatherkit/data-source-attribution/">Atribución</a>.</td></tr>
     </tbody>
   </table>
 
   <h3>Permisos</h3>
   <ul>
     <li><strong>Bluetooth</strong>: para buscar el inversor y leerlo.</li>
-    <li><strong>Ubicación</strong> (solo Android anterior a la versión 12): el sistema la exige para buscar dispositivos Bluetooth; la app no lee ni usa tu ubicación.</li>
+    <li><strong>Ubicación aproximada</strong> (iPhone, iPad y Android): solo si tocas la leyenda de horas de sol de la ficha solar, para saber en qué zona estás (redondeada a unos 11 km). Nunca se pide la ubicación precisa ni se pide al abrir la app; si dices que no, todo lo demás funciona igual.</li>
+    <li><strong>Ubicación</strong> (solo Android anterior a la versión 12): además, el sistema la exige para buscar dispositivos Bluetooth; para eso la app no lee ni usa tu ubicación.</li>
     <li><strong>Rastreo</strong> (iPhone y iPad): el aviso de Apple para personalizar los anuncios. Decir que no no quita funciones.</li>
     <li><strong>Red local</strong> (iPhone y iPad): solo si conectas por WiFi, para hablar con el inversor o la pasarela de tu propia red; la app solo se comunica con el aparato que eliges o que encuentra en tu red de casa.</li>
     <li><strong>Notificaciones</strong> (Android 13 o más): la notificación permanente que Android exige mientras el modo estación está activo.</li>
