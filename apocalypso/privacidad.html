@@ -82,7 +82,7 @@
   <h2>Permisos que pide la app</h2>
   <ul>
     <li><strong>Bluetooth y red local:</strong> para encontrar y hablar con los aparatos cercanos y formar la malla, y, si lo activas, para compartir la app y la enciclopedia con otro dispositivo cercano. No envía nada a internet.</li>
-    <li><strong>Ubicación (solo con la app en uso):</strong> para el mapa, el GPS, la brújula, el sol, la altitud, el SOS y la guía para buscar a quien pide ayuda.</li>
+    <li><strong>Ubicación (solo con la app en uso):</strong> para el mapa, el GPS, la brújula, el tiempo, la altitud, el SOS y la guía para buscar a quien pide ayuda.</li>
     <li><strong>Cámara:</strong> solo para leer el código QR de un contacto o de un grupo. No se guarda ninguna foto ni vídeo y no se envía nada a ninguna parte.</li>
     <li><strong>Contactos y SMS:</strong> la app no pide permiso para leer tu agenda ni para enviar SMS: usa el selector de contactos y la hoja de SMS del sistema, donde decides tú.</li>
     <li><strong>Linterna:</strong> para emitir Morse (y el SOS en Morse).</li>
@@ -114,6 +114,9 @@
     <li><strong>Dirección IP:</strong> se usa solo para limitar abusos (un cupo de descargas por día). No se guarda junto a la descarga más allá de ese cupo, que se conserva <strong>2 días</strong>.</li>
     <li>Los paquetes que recibes de otro móvil por la malla no pasan por este servidor.</li>
   </ul>
+
+  <h2>Previsión del tiempo</h2>
+  <p>Con internet, la pantalla Tiempo baja la previsión de tu lugar de <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, un servicio público de tiempo que no pide cuenta. La petición lleva tu posición redondeada a unos 1 km (dos decimales) y la web de la app como identificación. No lleva nombre, correo ni ningún identificador tuyo. La previsión se guarda en el móvil para verla sin internet. El sol, la luna y la tendencia del barómetro se calculan en el móvil y no necesitan internet. Como cualquier servidor web, MET Norway ve la dirección IP de tu móvil. Datos de MET Norway, con licencia CC BY 4.0.</p>
 
   <h2>Información médica</h2>
   <p>Los artículos de medicina y primeros auxilios son <strong>orientativos y no sustituyen a un profesional sanitario</strong> ni a los servicios de emergencia. Ante una urgencia, llama al número de emergencias de tu país si puedes.</p>

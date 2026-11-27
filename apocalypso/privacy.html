@@ -82,7 +82,7 @@
   <h2>Permissions the app asks for</h2>
   <ul>
     <li><strong>Bluetooth and local network:</strong> to find and talk to nearby devices and form the mesh and, if you turn it on, to share the app and the encyclopedia with another nearby device. It sends nothing to the internet.</li>
-    <li><strong>Location (only while the app is in use):</strong> for the map, GPS, compass, sun, altitude, SOS and the guide for finding someone who asks for help.</li>
+    <li><strong>Location (only while the app is in use):</strong> for the map, GPS, compass, weather, altitude, SOS and the guide for finding someone who asks for help.</li>
     <li><strong>Camera:</strong> only to read the QR code of a contact or a group. No photo or video is saved and nothing is sent anywhere.</li>
     <li><strong>Contacts and SMS:</strong> the app does not ask for permission to read your address book or to send SMS: it uses the system contact picker and the system SMS sheet, where you decide.</li>
     <li><strong>Flashlight:</strong> to send Morse code (and the Morse SOS).</li>
@@ -114,6 +114,9 @@
     <li><strong>IP address:</strong> used only to limit abuse (a daily download quota). It is not stored together with the download beyond that quota, which is kept for <strong>2 days</strong>.</li>
     <li>Packs you receive from another phone over the mesh do not go through this server.</li>
   </ul>
+
+  <h2>Weather forecast</h2>
+  <p>With internet, the Weather screen downloads the forecast for your place from <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a>, a free public weather service that needs no account. The request carries your position rounded to about 1 km (two decimals) and the app's website as its identification. It carries no name, no email and no identifier of yours. The forecast is saved on the phone so you can see it without internet. The sun, the moon and the barometer trend are calculated on the phone and need no internet. Like any web server, MET Norway sees the IP address of your phone. Data from MET Norway, licensed under CC BY 4.0.</p>
 
   <h2>Medical information</h2>
   <p>The medicine and first-aid articles are <strong>for guidance only and are not a substitute for a healthcare professional</strong> or the emergency services. In an emergency, call your country's emergency number if you can.</p>
