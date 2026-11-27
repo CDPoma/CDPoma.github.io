@@ -3,6 +3,8 @@ User-agent: *
 Allow: /
 # SimOs: web, privacidad y soporte (y sus iconos), en el sitemap de la raíz.
 Allow: /simos/
+# 3D Plant Health: web, privacidad, soporte, llms.txt y og.png en /3dplanthealth/ (todo permitido por Allow: /; sus páginas, en el sitemap de la raíz).
+Allow: /3dplanthealth/
 
 Sitemap: https://cdpoma.github.io/sitemap.xml
 Sitemap: https://cdpoma.github.io/camphone/sitemap.xml
