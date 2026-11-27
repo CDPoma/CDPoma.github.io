@@ -16,13 +16,13 @@
   </url>
   <url>
     <loc>https://cdpoma.github.io/camphone/privacidad.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html"/>
   </url>
   <url>
     <loc>https://cdpoma.github.io/camphone/privacy.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/privacy.html"/>
   </url>
@@ -37,5 +37,17 @@
     <lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/soporte.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/support.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/terminos.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/terms.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/camphone/terms.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/camphone/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/camphone/terms.html"/>
   </url>
 </urlset>
