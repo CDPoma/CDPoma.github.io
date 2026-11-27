@@ -547,4 +547,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/engarantia/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/engarantia/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/3dplanthealth/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/3dplanthealth/privacidad.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/3dplanthealth/soporte.html</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
 </urlset>

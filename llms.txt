@@ -157,6 +157,7 @@ Democracia es una app para iPhone y iPad, de Gabriel Micó Victoria, que te ense
 - [CamPhone](https://cdpoma.github.io/camphone/llms.txt): un iPhone o iPad viejo como cámara de vigilancia / an old iPhone or iPad as a security camera
 - [Domotic](https://cdpoma.github.io/domotic/llms.txt): la casa inteligente en una sola pantalla de iPhone / the smart home on one iPhone screen
 - [Democracia](https://cdpoma.github.io/democracia/llms.txt): vota las leyes y elecciones de España, iniciativa ciudadana no oficial / vote on Spain's laws and elections, unofficial citizen initiative
+- [3D Plant Health](https://cdpoma.github.io/3dplanthealth/llms.txt): escáner 360° de plantas con IA, riego e hidratación para iPhone y iPad / 360° plant scanner with AI, watering and hydration for iPhone and iPad
 
 ## Contacto / Contact
 
