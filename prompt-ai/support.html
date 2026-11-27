@@ -44,7 +44,7 @@
   <p class="sub">Support and privacy</p>
 
   <div class="card">
-    <p><strong>In short:</strong> there are no accounts. No sign-up, no email, no password. Your projects, notes and prompts are stored on your device. Something only leaves it in seven cases: when the AI generates a prompt or organizes a note (with Prompt AI's AI or, if you add your own key, directly with your provider), when you share a project or a link, when you report content, in the free version what the ads need, the check for a new version of the app, on Android an encrypted (hashed) phone identifier so the 7-day free trial can't be repeated, and some minimal, anonymous usage statistics, explained below. You decide whether ads can be personalized, and the one-time “No Banner” purchase removes the banner, the app-open ad and the rewarded ads. The count of today's prompts is stored only on your phone.</p>
+    <p><strong>In short:</strong> there are no accounts. No sign-up, no email, no password. Your projects, notes and prompts are stored on your device. Something only leaves it in six cases: when the AI generates a prompt or organizes a note (with Prompt AI's AI or, if you add your own key, directly with your provider), when you share a project or a link, when you report content, in the free version what the ads need, the check for a new version of the app, and some minimal, anonymous usage statistics, explained below. You decide whether ads can be personalized, and the Pro subscription removes the banner, the app-open ad and the rewarded ads. The count of today's prompts is stored only on your phone.</p>
     <p>Something not working, or have a question? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
   </div>
 
@@ -66,19 +66,22 @@
   <p>Open the project → the <strong>“…”</strong> button at the top (or touch and hold its icon on the home screen) → <strong>Share</strong> → <strong>Turn into a shared project</strong>. In the free version you share after a rewarded ad (<strong>“Watch an ad to share”</strong>, once per project); with Pro, with no ad. You get a six-character code; send it to anyone you like, by WhatsApp or by showing it to them. They enter it in <strong>Settings → Join a shared project</strong>, free after a rewarded ad each time they join (<strong>“Watch an ad to join”</strong>) or with no ad with Pro. Sharing a single note or prompt by link is free, with no ad.</p>
 
   <h3>What does Pro remove?</h3>
-  <p>The one-time “No Banner” purchase removes the banner, the app-open ad and every rewarded ad (unlimited prompts, and sharing or joining with no ad). Linking notes with prompts is free for everyone: Pro isn't needed. The full-screen ad shown while the AI works stays with Pro too, and the purchase screen says so before you pay.</p>
+  <p>Prompt AI Pro is a subscription (monthly or yearly) that removes the banner, the app-open ad and every rewarded ad (unlimited prompts, and sharing or joining with no ad). Linking notes with prompts is free for everyone: Pro isn't needed. The full-screen ad shown while the AI works stays with Pro too, and the Pro screen says so before you pay.</p>
 
-  <h3>How does the 7-day free trial work?</h3>
-  <p>In <strong>Settings → Go Pro → Try 7 days free</strong>. It gives everything in Pro for 7 days, once, and it never charges or renews: when it ends, the free version returns. It isn't repeated if you delete and reinstall the app: on iPhone it is a zero-price App Store purchase, which comes back with <strong>Restore purchases</strong> with its original start date; on Android, the encrypted phone record explained below. On Android, starting it needs a connection.</p>
+  <h3>How much does Pro cost?</h3>
+  <p>In Spain, €1.99 a month or €14.99 a year; in other countries the app shows the store price in your currency before you pay. It renews by itself, at the same price, until you cancel.</p>
+
+  <h3>How do the 7 free days work?</h3>
+  <p>When you subscribe to Pro (monthly or yearly), if the store says your account is eligible you start with 7 days free: the Pro screen shows “Start 7 days free”, with the price that will be charged afterwards and the date of the first charge. If you cancel at least 24 hours before the trial ends, nothing is charged. It is once per Apple or Google Play account, and reinstalling the app doesn't give another one.</p>
 
   <h3>The app asks me to update</h3>
   <p>When a newer version than yours has been published, the app shows <strong>“Update the app”</strong> with an <strong>“Update now”</strong> button that opens the store. A connection error never blocks it.</p>
 
   <h3>I got a new phone and I don't have Pro</h3>
-  <p>Go to <strong>Settings → Go Pro → Restore purchases</strong>, signed in with the same Apple or Google Play account you paid with. Anyone who bought the one-time purchase from the first versions keeps Pro, and anyone who had the subscription keeps Pro while it stays active, with nothing to do.</p>
+  <p>Go to <strong>Settings → Go Pro → Restore purchases</strong>, signed in with the same Apple or Google Play account you paid with. Anyone who bought “No Banner” (one-time purchase, between October 22 and November 27, 2026) or the one-time purchase from the first versions keeps Pro forever, and anyone who is subscribed keeps Pro while the subscription stays active.</p>
 
-  <h3>I have the old subscription: how do I cancel it?</h3>
-  <p>The monthly and yearly subscription is no longer sold: Pro is now the one-time “No Banner” purchase, with no renewals and nothing to cancel. If you were already subscribed, you stay Pro while the subscription is active. To cancel it, go to your store account, not the app. On iPhone: Settings → your name → Subscriptions. On Android: Google Play → your profile → Payments &amp; subscriptions → Subscriptions.</p>
+  <h3>How do I cancel the subscription?</h3>
+  <p>From your store account, not the app, at least 24 hours before the current period (or the free trial) ends, so it isn't charged. On iPhone: Settings → your name → Subscriptions. On Android: Google Play → your profile → Payments &amp; subscriptions → Subscriptions. If you cancel, you stay Pro until the end of the period you already paid. Anyone who bought “No Banner” has nothing to cancel: it doesn't renew.</p>
 
   <h2>What data leaves your device, and why</h2>
   <ul>
@@ -87,7 +90,6 @@
     <li><strong>The projects you share</strong> (free after watching a rewarded ad, or with no ad with Pro). When you share a project, its name, notes and prompts are stored in Cloud Firestore (Google), along with the alias and anonymous identifier of whoever wrote each item. That's how it syncs between its members. Only people who joined with its six-character code can read it. The rest of your projects stay on your device.</li>
     <li><strong>The notes or prompts you share by link.</strong> A read-only copy with the title and text is stored so that whoever receives the link can open it. Anyone with the link can see it.</li>
     <li><strong>The version check.</strong> When you open the app, when you return to it and at most once a day, the app asks which is the latest published version: on iPhone, Apple (App Store, itunes.apple.com, giving the app's identifier, not yours) and our Firebase Hosting site (prompt-ai-legal.web.app, a file with the minimum version), and on Android only that site. Only the normal network request is sent (at least your IP address), with no identifier of yours and nothing from your projects. If your version is too old, the app asks you to update it from the store.</li>
-    <li><strong>On Android, an encrypted device identifier, only for the free trial.</strong> So that the 7-day trial can't be repeated by deleting and reinstalling the app, the app computes an encrypted digest (SHA-256 hash) of your phone's Android identifier for this app (ANDROID_ID). The identifier itself never leaves the phone and is never stored: only that digest, from which the identifier cannot be recovered. With it the app asks Cloud Firestore (Google) whether this phone has already started the trial and, if you start it, a record with that digest and the server's start date and time is saved. It contains no name, email, advertising ID, the anonymous identifier above or anything from your projects, and it is not used for anything else: neither ads nor statistics. It isn't used on iPhone, where the App Store handles the trial.</li>
     <li><strong>What stays only on your phone.</strong> The count of today's prompts (how many free prompts you've used today and the rewarded ads you've watched and not yet used) is stored only in the app's storage on your device: it isn't sent to any server.</li>
     <li><strong>Reports.</strong> When you report content, it stops showing on your device and a record of the report is kept: a copy of that content as it was, the reason, and the anonymous identifiers and aliases of who wrote it and who reported it. Nobody reviews reports one by one; the record is used to handle a complaint if one arrives.</li>
   </ul>
@@ -120,18 +122,18 @@
     <li>On iPhone: Settings → Privacy &amp; Security → Tracking.</li>
     <li>On Android: Settings → Google → Ads, where you can delete the advertising ID.</li>
   </ul>
-  <p>With the “No Banner” purchase, or during the 7-day free trial, the banner, the app-open ad and the rewarded ads go away (unlimited prompts, and sharing a project or joining one with no ad). Only the full-screen ad shown while the AI works stays, also with Pro.</p>
+  <p>With the Pro subscription (also during its 7 free days), the banner, the app-open ad and the rewarded ads go away (unlimited prompts, and sharing a project or joining one with no ad). Only the full-screen ad shown while the AI works stays, also with Pro.</p>
 
   <h2>Usage statistics</h2>
   <p>The app uses Google Analytics for Firebase only to know how many people use it and which screens are used. It records only what Firebase measures on its own: that the app opens, when a session starts and ends, which screens are viewed and how long it is active. It also receives technical data from the device (model, system version, language and approximate country) and a random installation identifier, which changes if you reinstall the app.</p>
   <p><strong>It doesn't use the advertising identifier</strong>, doesn't receive your name, email or any user identifier, doesn't see the content of your projects, notes or prompts, and isn't used to personalize ads. That installation identifier is also shared with RevenueCat so that purchases show up in the same statistics.</p>
   <p>In the European Economic Area, the United Kingdom and Switzerland it's only turned on if you allow it in Google's consent form, and you can change that at any time in <strong>Ad privacy options</strong> (Settings, the gear, top right). Outside that area the law doesn't require asking and it's turned on without a form. Google Analytics keeps that data for a limited time, at most 14 months. When you uninstall the app, everything stops being sent.</p>
 
-  <h2>The Pro purchase</h2>
-  <p><strong>Prompt AI Pro</strong> is the one-time “No Banner” purchase (€1.99 in Spain; in other countries the app shows the price in your currency before you pay): a single payment, with no subscription and no renewals, yours forever. It removes the banner and the app-open ad, removes the rewarded ads that the free version shows (unlimited prompts a day, and sharing projects and joining one with its code with no ad); the full-screen ad shown while the AI works stays. Linking notes with prompts is free for everyone: Pro isn't needed. Until October 22, 2026 Pro was a subscription of €1.99/month or €14.99/year; it is no longer offered, and anyone who has it stays Pro while it is active (it's cancelled from your Apple or Google Play account). Payment is processed by Apple or Google Play. RevenueCat validates it: the app asks it for the status of your purchase when it opens (also if you haven't bought anything), and it receives a random app identifier and the purchase details. It doesn't receive your name or the content of your projects. “Restore purchases” is on the same screen, to get Pro back when you change devices.</p>
+  <h2>The Pro subscription</h2>
+  <p><strong>Prompt AI Pro</strong> is a monthly (€1.99 a month) or yearly (€14.99 a year) subscription; in other countries the app shows the store price in your currency before you pay. It renews by itself at the same price every month or year until you cancel, and is charged to your Apple or Google Play account; you can manage or cancel it at any time in your Apple account settings (Settings &gt; your name &gt; Subscriptions) or in Google Play (Payments &amp; subscriptions &gt; Subscriptions), at least 24 hours before the current period ends. It removes the banner and the app-open ad, removes the rewarded ads that the free version shows (unlimited prompts a day, and sharing projects and joining one with its code with no ad); the full-screen ad shown while the AI works stays. Linking notes with prompts is free for everyone: Pro isn't needed. Between October 22 and November 27, 2026 Pro was sold as a one-time “No Banner” purchase of €1.99: it is no longer offered, and anyone who bought it keeps Pro forever with nothing more to pay. Payment is processed by Apple or Google Play. RevenueCat validates it: the app asks it for the status of your subscription or purchase when it opens (also if you haven't bought anything), and it receives a random app identifier and the purchase details. It doesn't receive your name or the content of your projects. “Restore purchases” is on the same screen, to get Pro back when you change devices.</p>
 
-  <h2>The 7-day free trial</h2>
-  <p>The trial gives the same as Pro for 7 days, once, and it charges nothing and doesn't renew when it ends: the free version returns. On iPhone it is a zero-price App Store purchase (“7-day Trial”): Apple processes it, the App Store sets its start date and RevenueCat sees it like any other purchase. On Android, since Google Play doesn't allow zero-price purchases, the trial is tied to the phone: a record with the encrypted digest (hash) of the phone identifier and the start date set by the server is stored in Cloud Firestore, as explained above in “What data leaves your device”. That record is only used so the trial isn't repeated: the app can't change or delete it, and that's why “Delete my shared data” doesn't delete it either. Starting it needs a connection.</p>
+  <h2>The 7 free days</h2>
+  <p>If the store says your account is eligible, the first time you subscribe you get 7 days free (the introductory offer of the subscription, on both the monthly and the yearly plan). Before you pay, the Pro screen tells you how long it lasts, that it is free, the price that will be charged afterwards and the date of the first charge, that it renews by itself and how to cancel. If you cancel at least 24 hours before the trial ends, nothing is charged. Apple or Google Play decides whether you are eligible, once per account: the app stores and computes nothing on your device for it, and reinstalling doesn't give another trial. While the trial is active the app treats you as Pro, because your subscription is already running.</p>
 
   <h2>What the app does NOT do</h2>
   <ul>
@@ -149,14 +151,13 @@
     <li>Your alias is deleted and your device starts over with a new identifier.</li>
   </ul>
   <p>Anything that's only on your device isn't touched, and it disappears when you uninstall the app.</p>
-  <p>The Android free-trial record (the encrypted digest of the phone identifier and its start date) isn't deleted from the app, because its only purpose is that the trial isn't repeated. It contains nothing that identifies you by itself; if you still want us to delete it, email us, knowing that the app will then be unable to tell that this phone already used it.</p>
+  <p>Until November 27, 2026 the Android free trial was tied to the phone with a record in Cloud Firestore (the encrypted digest of the phone identifier and its start date). The app no longer creates or reads it. Records made before then remain on the server, with nothing that identifies you by itself, and we don't use them for anything; if you want us to delete them, email us.</p>
   <p>Copies shared by link and reports can't be deleted from the app. Email us at the address below with the link or whatever you want removed, and we'll delete it.</p>
 
   <h2>How long data is kept</h2>
   <ul>
     <li><strong>Shared projects:</strong> until they're deleted. Each one keeps its <strong>300 most recent prompts</strong>; older ones are deleted automatically. Notes are never deleted automatically.</li>
     <li><strong>Link copies:</strong> until you ask us to remove them.</li>
-    <li><strong>Android free-trial record:</strong> for as long as the app exists, because it's what keeps the trial from being repeated on that phone.</li>
     <li><strong>Reports:</strong> until you ask us to delete them, or for as long as they're needed to handle a complaint about that content.</li>
   </ul>
 
@@ -164,7 +165,7 @@
   <p>The app isn't directed at children under 14 and doesn't knowingly collect their data.</p>
 
   <h2>Legal basis and your rights</h2>
-  <p>We process data for three reasons. First, to provide the service you ask for: generating prompts, organizing notes, sharing and the purchase. Second, your consent, for personalized ads and, where the law requires it, for the usage statistics. Third, our legitimate interest in moderating shared content and preventing abuse, such as repeating the 7-day free trial on the same phone (the Android record above).</p>
+  <p>We process data for three reasons. First, to provide the service you ask for: generating prompts, organizing notes, sharing and the subscription. Second, your consent, for personalized ads and, where the law requires it, for the usage statistics. Third, our legitimate interest in moderating shared content and preventing abuse.</p>
   <p>You can access, correct or delete your data, object to or restrict its use, or ask for a copy. You can also withdraw your consent at any time. For any of these, email us. You can also file a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>).</p>
 
   <h2>Who it's shared with</h2>
@@ -174,7 +175,7 @@
     <li>Anthropic: the AI (Claude) that generates the prompts and organizes the notes.</li>
     <li>If you add your own AI key: the provider you choose (Anthropic, OpenAI, Google or another), only with the text you send to generate or organize.</li>
     <li>Supabase: the AI's intermediate server.</li>
-    <li>RevenueCat: validation of the purchase and of the iPhone trial (the Android one is kept by Cloud Firestore).</li>
+    <li>RevenueCat: validation of the subscription or purchase and of its 7 free days.</li>
     <li>Apple and Google Play: payment; Apple, also, the check of the latest published version.</li>
   </ul>
   <p>Some of them process data outside the European Economic Area, with the safeguards required by the GDPR: standard contractual clauses or the EU-U.S. Data Privacy Framework.</p>
@@ -182,7 +183,7 @@
   <h2>Controller and support</h2>
   <p>The controller is the developer of Prompt AI listed on its App Store and Google Play pages. Questions about your data, something not working, or a feature you'd like? Email <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>.</p>
 
-  <p class="foot">Last updated: November 7, 2026 · Prompt AI · <a href="soporte.html" hreflang="es" lang="es">Español</a></p>
+  <p class="foot">Last updated: November 27, 2026 · Prompt AI · <a href="soporte.html" hreflang="es" lang="es">Español</a></p>
 </div>
 </body>
 </html>
