@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Control Parental Familiar: política de privacidad</title>
+<meta name="description" content="Política de privacidad de Control Parental Familiar: qué datos guarda el servidor, para qué, cuánto tiempo y cómo borrarlos desde la app.">
+<link rel="canonical" href="https://cdpoma.github.io/controlparental/privacidad.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon-512.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#F3F8FE">
+<meta name="author" content="Gabriel Mico Victoria">
+<link rel="alternate" hreflang="es" href="https://cdpoma.github.io/controlparental/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://cdpoma.github.io/controlparental/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/controlparental/privacidad.html">
+<style>
+  :root{--bg:#F3F8FE;--surface:#fff;--ink:#14243A;--ink-light:#4a5b73;--accent:#1565C0;--naranja:#F57C00;--line:#d3e1f2;--card:#fff;--suave:#E6F0FC}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65}
+  .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  .wrap.ancha{max-width:760px}
+  h1{font-size:2.3rem;font-weight:800;margin:0 0 .25rem;text-wrap:balance;letter-spacing:-0.01em;line-height:1.15}
+  h2{font-size:1.3rem;font-weight:700;margin:2.2rem 0 .6rem;color:var(--accent)}
+  h3{font-size:1.05rem;font-weight:700;margin:1.4rem 0 .3rem}
+  .sub{color:var(--ink-light);margin:0 0 1.6rem;font-size:1.05rem}
+  p{margin:0 0 1rem}
+  ul{margin:0 0 1rem;padding-left:1.3rem}
+  li{margin-bottom:.4rem}
+  .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--naranja);border-radius:14px;padding:1.4rem 1.6rem;margin:0 0 1.4rem}
+  .aviso{background:var(--suave);border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:0 0 1.6rem}
+  .aviso strong{color:var(--accent)}
+  a{color:var(--accent)}
+  .foot{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-light);font-size:.9rem}
+  .idioma{float:right;font-size:.9rem;margin-top:.4rem}
+  nav.enlaces{margin:0 0 2rem;font-size:.95rem}
+  nav.enlaces a{margin-right:1rem}
+  .marca{display:flex;align-items:center;gap:.8rem;margin:0 0 1rem}
+  .marca img{border-radius:22%}
+  .nota{color:var(--ink-light);font-size:.9rem;margin:0 0 1.6rem}
+  nav.toc{margin:0 0 2rem;font-size:.9rem;color:var(--ink-light)}
+  .tabla{overflow-x:auto;margin:0 0 1rem}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-light)}
+  tbody th{font-weight:700}
+  details{border-bottom:1px solid var(--line);padding:.7rem 0}
+  summary{cursor:pointer;font-weight:700}
+  details p{margin:.6rem 0 0}
+  .contacto{margin-top:2rem}
+  .boton{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:.7rem 1.2rem;border-radius:12px;margin:0 0 1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="idioma" href="privacy.html" hreflang="en" lang="en">English</a>
+  <h1>Control Parental Familiar</h1>
+  <p class="sub">Política de privacidad. Última actualización: 28 de noviembre de 2026.</p>
+  <nav class="enlaces"><a href="./">Control Parental Familiar</a> · <a href="soporte.html">Ayuda y soporte</a></nav>
+
+  <div class="card">
+    <p><strong>Resumen:</strong> Control Parental Familiar <strong>no tiene cuentas ni pide correo</strong>. El servidor (Supabase) guarda solo <strong>cada dispositivo con su token</strong>, <strong>la última ubicación que manda el móvil del menor</strong>, la <strong>batería</strong>, el <strong>estado del bono de tiempo</strong>, la <strong>configuración</strong> y los <strong>avisos</strong>. <strong>No leemos mensajes, no usamos el micrófono ni la cámara y no vemos la pantalla.</strong> La ubicación se usa solo para los avisos y las zonas seguras. El tiempo de uso lo mide Tiempo de uso de Apple <strong>dentro del móvil del menor</strong> y no sale de él. Los <strong>anuncios de Google AdMob y Firebase Analytics van solo en el móvil del padre y con tu consentimiento</strong>; <strong>el móvil del menor no lleva anuncios ni analítica</strong>. Puedes <strong>borrar tus datos desde la app</strong> con «Borrar mis datos del servidor». No vendemos tus datos.</p>
+  </div>
+
+  <h2>1. Quién es el responsable</h2>
+  <p>El responsable del tratamiento es Gabriel Mico Victoria, desarrollador de Control Parental Familiar. Para cualquier consulta o petición sobre tus datos escribe a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a> o usa la <a href="soporte.html">página de soporte</a>.</p>
+
+  <h2>2. Cómo funciona y quién usa cada móvil</h2>
+  <p>La app se instala en dos móviles y al abrirla se elige un rol: <strong>«móvil del padre»</strong> (el adulto que cuida) o <strong>«móvil del menor»</strong>. Quien instala la app en el móvil de un menor debe ser su padre, madre o tutor, que es quien crea el PIN y responde de usarla de forma adecuada con el menor. Los dos móviles se vinculan con un código de 6 cifras; no hay cuenta, correo ni contraseña.</p>
+
+  <h2>3. Qué datos guardamos en el servidor</h2>
+  <ul>
+  <li>Un <strong>dispositivo</strong> por cada móvil: su identificador, el rol (padre o menor), el nombre del dispositivo, la versión de la app, el idioma y, si aceptas los avisos, el identificador de notificaciones push. El móvil se identifica con un <strong>token</strong> aleatorio; en el servidor solo se guarda su huella (hash), no el token.</li>
+  <li>Los <strong>vínculos</strong> entre móviles de padres y de menores y el nombre que el padre da a cada menor.</li>
+  <li>La <strong>última ubicación</strong> que el móvil del menor manda en su «latido» (la señal periódica de que está activo) y la fecha y hora en que la mandó. No guardamos un historial de recorridos.</li>
+  <li>El <strong>nivel de batería</strong> y si la protección está activa.</li>
+  <li>El <strong>estado del bono de tiempo</strong>: el tiempo concedido, el usado y si está activo o agotado.</li>
+  <li>La <strong>configuración</strong> que fija el padre: webs bloqueadas, zonas seguras, nombre del AirTag y la huella (hash) del PIN, nunca el PIN en claro.</li>
+  <li>Los <strong>avisos</strong> al padre (SOS, caída, señal perdida, batería baja, salida y llegada a zonas, protección desactivada), con la última ubicación conocida en ese momento.</li>
+  </ul>
+  <p>Las <strong>apps bloqueadas</strong> se eligen en el móvil del menor y <strong>no se suben al servidor</strong>.</p>
+
+  <h2>4. Qué NO recogemos</h2>
+  <p>No leemos los mensajes ni las conversaciones del menor, no usamos el micrófono ni la cámara, no vemos la pantalla del menor ni su historial de navegación, y no pedimos nombre real, correo, teléfono ni contactos.</p>
+
+  <h2>5. Ubicación</h2>
+  <p>La app pide el permiso de ubicación <strong>«Siempre»</strong> en el móvil del menor para poder avisar al padre aunque la app esté en segundo plano. La ubicación se usa <strong>solo para los avisos y las zonas seguras</strong> (salir o llegar a una zona, SOS, caída, señal perdida) y para enseñar al padre la última ubicación conocida en el mapa. No la usamos para publicidad ni analítica.</p>
+
+  <h2>6. Tiempo de uso de Apple</h2>
+  <p>Para medir el bono, bloquear apps y webs y evitar que se borren apps, la app usa <strong>Tiempo de uso de Apple</strong> (Screen Time) en el móvil del menor. Apple procesa esas elecciones <strong>dentro del propio móvil</strong>: la app no recibe qué apps usa el menor ni sus nombres, y no los envía a ningún servidor. Al servidor solo llega cuánto tiempo se ha usado y si el bono sigue activo.</p>
+
+  <h2>7. Anuncios y analítica (solo en el móvil del padre)</h2>
+  <p>El <strong>móvil del padre</strong>, si no tiene Pro, muestra anuncios de <strong>Google AdMob</strong>: un banner y un anuncio bonificado al salir de la ficha de un menor. Antes, la app enseña el formulario de consentimiento de Google y, en iPhone, el aviso de Apple para permitir el seguimiento; si no los aceptas, los anuncios no usan tus datos para personalizarse. Medimos el uso de la app con <strong>Firebase Analytics</strong> (Google) <strong>solo en el móvil del padre, tras tu consentimiento y sin identificador de publicidad</strong>, con eventos como «anuncio visto» o «Pro comprado». <strong>El móvil del menor no lleva anuncios, ni analítica, ni pide el permiso de seguimiento ni el formulario de consentimiento de anuncios.</strong></p>
+
+  <h2>8. Suscripción Control Parental Pro</h2>
+  <p>El pago lo gestiona Apple: nosotros no vemos ni guardamos tu tarjeta. Usamos <strong>RevenueCat</strong> para comprobar si tienes Pro: recibe un identificador de usuario de la app y el estado de tu compra. Si cambias de móvil o reinstalas, recuperas el Pro con «Restaurar compras». Puedes cancelar en Ajustes del iPhone › tu nombre › Suscripciones.</p>
+
+  <h2>9. Notificaciones</h2>
+  <p>Los avisos al padre llegan por notificación push de Apple. Guardamos el identificador de notificaciones del móvil del padre para poder mandarlas, y mandamos un aviso silencioso al móvil del menor para que recoja los cambios de configuración. Puedes desactivar las notificaciones en los ajustes del iPhone.</p>
+
+  <h2>10. Dónde se guardan</h2>
+  <p>Los datos del servidor se guardan con <strong>Supabase</strong>. Google (anuncios y analítica) y RevenueCat son encargados del tratamiento que pueden tratar los datos que se indican arriba, con las garantías que ofrece cada uno. No vendemos tus datos ni los compartimos con terceros para otros fines.</p>
+
+  <h2>11. Cuánto tiempo los guardamos y cómo borrarlos</h2>
+  <ul>
+  <li><strong>Avisos:</strong> se borran a los <strong>90 días</strong>.</li>
+  <li><strong>Dispositivos sin actividad:</strong> un dispositivo que no da señales durante <strong>180 días</strong> se borra del servidor con sus datos.</li>
+  <li><strong>Borrado desde la app:</strong> en los ajustes, <strong>«Borrar mis datos del servidor»</strong> elimina ese móvil del servidor con sus vínculos, su estado, su configuración y, si es un menor, sus avisos. En el móvil del menor se pide el PIN del adulto. No hace falta pedirlo a soporte.</li>
+  </ul>
+
+  <h2>12. Tus derechos</h2>
+  <p>Puedes pedirnos acceso a tus datos, que los corrijamos, que los borremos, que limitemos su uso, recibirlos en un formato portable u oponerte a su tratamiento. Escríbenos a <a href="mailto:gabrielmicovictoria@gmail.com">gabrielmicovictoria@gmail.com</a>. Si crees que no hemos respetado tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos.</p>
+
+  <h2>13. Menores</h2>
+  <p>La app está pensada para que un adulto cuide el móvil de un menor de su familia. El menor no crea cuenta ni da su nombre, correo ni teléfono; los datos del móvil del menor son solo los de la sección 3, y ese móvil no lleva anuncios ni analítica. El padre o tutor puede borrarlos cuando quiera.</p>
+
+  <h2>14. Cambios</h2>
+  <p>Si cambiamos esta política de forma importante, te lo diremos en la app.</p>
+
+  <h2>Resumen: qué datos, para qué y con quién</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th scope="col">Dato</th><th scope="col">Para qué</th><th scope="col">Con quién</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Dispositivo: identificador, rol, nombre, versión, idioma y huella del token</th><td>Reconocer cada móvil sin cuentas</td><td>Supabase</td></tr>
+      <tr><th scope="row">Vínculos y nombre del menor</th><td>Que el padre vea a su menor</td><td>Supabase</td></tr>
+      <tr><th scope="row">Última ubicación del latido</th><td>Mapa y avisos de zonas, SOS y señal perdida</td><td>Supabase</td></tr>
+      <tr><th scope="row">Batería y estado de la protección</th><td>Aviso de batería baja y protección</td><td>Supabase</td></tr>
+      <tr><th scope="row">Estado del bono (concedido, usado, activo o agotado)</th><td>Mostrar y aplicar el bono</td><td>Supabase</td></tr>
+      <tr><th scope="row">Configuración: webs bloqueadas, zonas, AirTag y huella del PIN</th><td>Aplicar las reglas del padre</td><td>Supabase</td></tr>
+      <tr><th scope="row">Avisos (90 días)</th><td>Avisar al padre</td><td>Supabase y Apple (notificaciones)</td></tr>
+      <tr><th scope="row">Identificador de notificaciones</th><td>Mandar los avisos</td><td>Supabase y Apple</td></tr>
+      <tr><th scope="row">Tiempo de uso y apps elegidas</th><td>Medir el bono y bloquear apps</td><td>Solo el móvil del menor (Apple)</td></tr>
+      <tr><th scope="row">Anuncios y uso de la app (solo móvil del padre, con consentimiento)</th><td>Mostrar anuncios y mejorar la app</td><td>Google AdMob y Firebase Analytics</td></tr>
+      <tr><th scope="row">Identificador de usuario y estado de la compra</th><td>Comprobar si tienes Pro</td><td>RevenueCat y Apple</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="aviso">
+    <p><strong>En una frase:</strong> guardamos lo mínimo para que funcione, sin cuentas ni correos; no leemos mensajes ni usamos micrófono o cámara; el móvil del menor no lleva anuncios ni analítica; y puedes borrar tus datos desde la app.</p>
+  </div>
+  <div class="foot"><a href="./">Control Parental Familiar</a> · Gabriel Mico Victoria · Última actualización: 28 de noviembre de 2026</div>
+</div>
+</body>
+</html>
