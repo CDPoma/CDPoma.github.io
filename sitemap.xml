@@ -601,4 +601,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/wildspot/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/wildspot/privacidad.html"/>
   </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/en.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/soporte.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/support.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/privacidad.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cdpoma.github.io/freshmatch/privacy.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdpoma.github.io/freshmatch/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdpoma.github.io/freshmatch/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdpoma.github.io/freshmatch/privacidad.html"/>
+  </url>
 </urlset>
